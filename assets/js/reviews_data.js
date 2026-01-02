@@ -10,7 +10,7 @@ const reviewsData = [
     {
         author: "Senior IT Support",
         company: "Video Mining Corporation",
-        logo: "assets/images/partners/fieldnation.svg",
+        logo: "assets/images/partners/videomining.svg",
         date: "Aug 16, 2024",
         rating: 5,
         text: "Ultimate Security Solutions consistently does excellent work for us. They have proven to be very knowledgeable with electronics, electrical and networking. This project involved various troubleshooting and 'cleanup' of an ISP service's work."
@@ -18,7 +18,7 @@ const reviewsData = [
     {
         author: "Project Coordinator",
         company: "National Wi-Fi",
-        logo: "assets/images/partners/fieldnation.svg",
+        logo: "assets/images/partners/nationalwifi.svg",
         date: "Jul 2, 2024",
         rating: 5,
         text: "Our company has worked with Ultimate Security Solutions on several occasions and they have proven to be a highly knowledgeable and skillful team who is easy to communicate with. They have completed two full installs for us along with site surveys."
@@ -26,7 +26,7 @@ const reviewsData = [
     {
         author: "Operations Manager",
         company: "Video Mining Corporation",
-        logo: "assets/images/partners/fieldnation.svg",
+        logo: "assets/images/partners/videomining.svg",
         date: "Jun 28, 2024",
         rating: 5,
         text: "Ultimate Security Solutions has gone out of their way to accommodate our tight schedule and vast schedule changes. They are a very diligent team, knowledgeable and thorough!"
@@ -42,7 +42,7 @@ const reviewsData = [
     {
         author: "IT Support Lead",
         company: "Video Mining Corporation",
-        logo: "assets/images/partners/fieldnation.svg",
+        logo: "assets/images/partners/videomining.svg",
         date: "Jul 9, 2024",
         rating: 5,
         text: "Ultimate Security Solutions is a great technical partner! Consistent quality and reliability."
@@ -58,7 +58,7 @@ const reviewsData = [
     {
         author: "Site Survey Lead",
         company: "Video Mining Corporation",
-        logo: "assets/images/partners/fieldnation.svg",
+        logo: "assets/images/partners/videomining.svg",
         date: "Jun 5, 2024",
         rating: 5,
         text: "Excellent work on the pre-install site survey. Detailed and accurate reporting from the USS team."
