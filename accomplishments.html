@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Work | Ultimate Security Solutions</title>
+    <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portfolio-section {
+            padding: 4rem 5%;
+            background: var(--color-primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            background: #000;
+            height: 250px;
+            display: none; /* Hidden by default for Load More */
+        }
+
+        .portfolio-item.visible {
+            display: block;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            opacity: 0.8;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1rem;
+            color: var(--color-accent);
+            margin: 0;
+        }
+
+        .load-more-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .btn-load-more {
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-load-more:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .partner-card {
+            height: auto !important;
+            min-height: 250px;
+            padding: 2.5rem 1.5rem !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .partner-card img {
+            height: 100px; /* Increased from 60px */
+            width: auto;
+            max-width: 90%;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1); /* Ensure visibility on dark background */
+        }
+
+        .partner-card p {
+            font-style: italic;
+            margin-top: 1.5rem !important;
+            line-height: 1.4;
+            color: var(--color-text) !important;
+            font-size: 0.85rem !important;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border: 2px solid var(--color-accent);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service_area.html">Service Area</a>
+                <div class="dropdown">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">All Products</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                        <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                        <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                    </div>
+                </div>
+                <a href="accomplishments.html" class="active">Our Work</a>
+                <a href="partners.html">Partners</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="index.html#contact" class="btn-contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header hero" style="padding-bottom: 4rem;">
+        <h1>Proven Track Record</h1>
+        <p>Delivering mission-critical infrastructure for national brands.</p>
+    </header>
+
+    <section class="client-highlights-section" style="padding: 4rem 5%; background: rgba(15, 28, 46, 0.3);">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; margin-bottom: 3rem;">Enterprise Client Highlights</h2>
+            <div class="partners-grid" id="client-grid">
+                <!-- Clients Injected JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <h2 class="section-title" style="text-align:center;">Project Gallery</h2>
+        <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Images Injected JS -->
+        </div>
+        <div class="load-more-container">
+            <button class="btn-load-more" id="btn-load-more">Load More Projects</button>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Project">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const clients = [
+            { name: 'Target', logo: 'target.svg', text: '“Successful execution of multi-day Self Checkout installations and upgrades across regional locations.”' },
+            { name: 'Walmart', logo: 'walmart.svg', text: '“Full-scale store remodels involving structured cabling, AP deployments, and register system overhauls.”' },
+            { name: 'AT&T', logo: 'atandt.svg', text: '“Reliable network infrastructure support and critical hardware deployments for national telecommunications projects.”' },
+            { name: 'Sierra Wireless', logo: 'sierrawireless.svg', text: '“Expert installation and configuration of industrial wireless gateways and cellular failover systems.”' },
+            { name: 'Bosch Security', logo: 'bosch.svg', text: '“Authorized installer of high-performance Bosch security systems and intrusion detection.”' },
+            { name: 'FedEx', logo: 'fedex.svg', text: '“Reliable network infrastructure support and critical kiosk maintenance for logistics operations.”' },
+            { name: 'Loves Travel Stops', logo: 'loves.svg', text: '“Rapid response for high-priority POS and networking troubleshooting to keep lanes open.”' },
+            { name: 'Hikvision', logo: 'hikvision.svg', text: '“Expert configuration of Hikvision CCTV arrays for comprehensive commercial surveillance.”' },
+            { name: 'Harrahs Casino', logo: 'harrahs.svg', text: '“High-security environment cabling and surveillance system maintenance.”' },
+            { name: 'Starlink', logo: 'starlink.svg', text: '“Professional installation of Starlink satellite terminals for reliable remote connectivity.”' },
+            { name: 'Home Depot', logo: 'homedepot.svg', text: '“IT infrastructure upgrades and structured cabling for retail floor operations.”' },
+            { name: 'LTS Security', logo: 'lts.svg', text: '“Preferred partner for LTS Platinum and Pro-X video security solutions.”' },
+            { name: 'Verizon', logo: 'verizon.svg', text: '“Deployment and maintenance of telecommunications equipment and 5G infrastructure.”' },
+            { name: 'Walgreens', logo: 'walgreens.svg', text: '“Network upgrades and pharmacy system cabling projects.”' },
+            { name: 'Assa Abloy', logo: 'assaabloy.svg', text: '“Installation and service of advanced access control hardware and door solutions.”' },
+            { name: 'Pilot Flying J', logo: 'pilot.svg', text: '“Supporting critical fuel desk and retail network systems across the midwest.”' },
+            { name: 'Ameristar Casino', logo: 'ameristar.svg', text: '“Ensuring 24/7 uptime for gaming floor security and surveillance networks.”' },
+            { name: 'Aruba Networks', logo: 'aruba.svg', text: '“Managed replacement of enterprise Aruba Access Points to restore high-performance wireless coverage.”' },
+            { name: 'Cisco Systems', logo: 'cisco.svg', text: '“Complex network infrastructure upgrades and high-security environment cabling.”' },
+            { name: 'Honeywell', logo: 'honeywell.svg', text: '“Installation and maintenance of Honeywell intrusion detection and security systems.”' },
+            { name: 'Ubiquiti', logo: 'ubiquiti.svg', text: '“Strategic deployment of UniFi networking and wireless infrastructure.”' },
+            { name: 'Cradlepoint', logo: 'cradlepoint.svg', text: '“Advanced LTE/5G wireless edge solutions for mission-critical connectivity.”' },
+            { name: 'Fortinet', logo: 'fortinet.svg', text: '“Comprehensive cybersecurity and network security infrastructure deployments.”' },
+            { name: 'Hanwha Vision', logo: 'hanwha.svg', text: '“Strategic implementation of Hanwha Techwin surveillance technology.”' },
+            { name: 'Hy-Vee', logo: 'hy-vee.svg', text: '“Reliable retail system support and infrastructure maintenance.”' },
+            { name: 'Kroger', logo: 'kroger.svg', text: '“Nationwide POS and networking infrastructure rollouts.”' },
+            { name: 'QuikTrip', logo: 'quiktrip.svg', text: '“Critical retail system upgrades and reliable smart-hands service.”' },
+            { name: 'Spectrum', logo: 'spectrum.svg', text: '“Strategic partner for commercial connectivity and telecommunications infrastructure.”' },
+            { name: 'T-Mobile', logo: 't-mobile.svg', text: '“Elite wireless infrastructure and 5G network support.”' },
+            { name: 'Granite', logo: 'granite.svg', text: '“Reliable regional infrastructure support and managed network services.”' },
+            { name: 'Checkpoint', logo: 'checkpoint.svg', text: '“Installation and calibration of Electronic Article Surveillance (EAS) and loss prevention systems.”' },
+            { name: 'PlayNetwork', logo: 'playnetwork.svg', text: '“Deployment of professional AV and multimedia content delivery systems.”' },
+            { name: 'Best Buy', logo: 'bestbuy.svg', text: '“Managed technical services and regional IT infrastructure support for retail operations.”' },
+            { name: 'Apple', logo: 'apple.svg', text: '“High-standard network infrastructure support and specialized device deployments.”' },
+            { name: 'Dollar General', logo: 'dollargeneral.svg', text: '“Nationwide rollout support for networking, security, and POS system maintenance.”' }
+        ];
+
+        const allImages = [
+            '1000000193.jpg', '1000000403.jpg', '1000000417.jpg', '1000000420.jpg',
+            '1000000421.jpg', '1000000422.jpg', '1000000450.jpg', '1000000451.jpg',
+            '1000000459.jpg', '1000000465.jpg', '1000000466.jpg', '1000000468.jpg',
+            '1000000469.jpg', '1000000472.jpg', '1000000476.jpg', '1000000483.jpg',
+            '1000000842.jpg', '1000000843.jpg', '1000000845.jpg', '1000000846.jpg',
+            '1000000847.jpg', '1000000848.jpg', '1000001060.jpg', '1000001061.jpg',
+            '1000001062.jpg', '1000001066.jpg', '1000001307.jpg', '1000001308.jpg',
+            '1000001309.jpg', '1000001310.jpg', '1000001311.jpg', '1000001312.jpg',
+            '1000001313.jpg', '1D3E7803-237B-4CB2-9432-EC13CC7BE23B.jpg', '2551AD29-E74E-453A-9749-37D5B9BE3823.jpg', '59839570633__11AE7CD0-DFA5-4623-8110-D30AEB3ED41E.JPG',
+            '60678569352__3A1259CB-709A-4E7E-9C79-5E8F53A3AAD2.JPG', '60694712752__1CC335DF-195D-4BBA-A48F-90690728EF92.JPG', '71391482199__922D2214-A454-4D55-9EFB-D1729D5D6886.JPEG', '71494704926__0FDCE604-A1E1-4CFF-92CB-C2CFC38C3E6D.JPEG',
+            '71519378053__F27E7588-1BF2-46F7-95F7-DD0D275287CC.JPEG', '71623689163__CB6D082E-8331-4D46-AFC6-564A6AD57EE1.JPEG', '71623731272__3AD6BC03-9E5F-4ADE-8153-CAA51A378A4B.JPEG', '71623781646__0ADE19E9-37FF-471C-B807-8BA26A396D32.JPEG',
+            '71623800165__42EA4C2F-1EBF-4B25-AC05-D06EDC88C9BF.JPEG', '9F99953B-CAA2-451C-986E-EAD35BA163A5.jpg', 'E971C3DC-0F11-4368-BCC7-F27A24EC0CB6.jpg', 'IMG_0007.JPEG',
+            'IMG_0015.JPEG', 'IMG_0016.JPEG', 'IMG_0017.JPEG', 'IMG_0018.JPEG',
+            'IMG_0019.JPEG', 'IMG_0022.JPEG', 'IMG_0025.JPEG', 'IMG_0026.JPEG',
+            'IMG_0027.JPEG', 'IMG_0028.JPEG', 'IMG_0033.JPEG', 'IMG_0034.JPEG',
+            'IMG_0036.JPEG', 'IMG_0037.JPEG', 'IMG_0038.JPEG', 'IMG_0039.JPEG',
+            'IMG_0040.JPEG', 'IMG_0041.JPEG', 'IMG_0047.JPEG', 'IMG_0048.JPEG',
+            'IMG_0049.JPEG', 'IMG_0052.JPEG', 'IMG_0064.JPEG', 'IMG_0065.JPEG',
+            'IMG_0077.JPEG', 'IMG_0078.JPEG', 'IMG_0079.JPEG', 'IMG_0080.JPEG',
+            'IMG_0085.JPEG', 'IMG_0086.JPEG', 'IMG_0088.JPEG', 'IMG_0090.JPEG',
+            'IMG_0092.JPEG', 'IMG_0096.JPEG', 'IMG_0108.JPEG', 'IMG_0113.JPEG',
+            'IMG_0117.JPEG', 'IMG_0118.JPEG', 'IMG_0119.JPEG', 'IMG_0121.JPEG',
+            'IMG_0123.JPEG', 'IMG_0124.JPEG', 'IMG_0125.JPEG', 'IMG_0126.JPEG',
+            'IMG_0127.JPEG', 'IMG_0145.JPEG', 'IMG_0160.JPEG', 'IMG_0189.JPEG',
+            'IMG_0190.JPEG', 'IMG_0191.JPEG', 'IMG_0192.JPEG', 'IMG_0193.JPEG',
+            'IMG_0194.JPEG', 'IMG_0195.JPEG', 'IMG_0196.JPEG', 'IMG_0197.JPEG',
+            'IMG_0200.JPG', 'IMG_0207.JPEG', 'IMG_0208.JPEG', 'IMG_0209.JPEG',
+            'IMG_0210.JPEG', 'IMG_0211.JPEG', 'IMG_0213.JPEG', 'IMG_0214.JPEG',
+            'IMG_0216.JPEG', 'IMG_0217.JPEG', 'IMG_0218.JPEG', 'IMG_0227.JPEG',
+            'IMG_0228.JPEG', 'IMG_0229.JPEG', 'IMG_0230.JPEG', 'IMG_0234.JPEG',
+            'IMG_0235.JPEG', 'IMG_0236.JPEG', 'IMG_0237.JPEG', 'IMG_0239.JPEG',
+            'IMG_0240.JPEG', 'IMG_0297.JPEG', 'IMG_0298.JPEG', 'IMG_0299.JPEG',
+            'IMG_0300.JPEG', 'IMG_0301.JPEG', 'IMG_0321.JPEG', 'IMG_0322.JPEG',
+            'IMG_0323.JPEG', 'IMG_0324.JPEG', 'IMG_0325.JPEG', 'IMG_0326.JPEG',
+            'IMG_0327.JPEG', 'IMG_0328.JPEG', 'IMG_0329.JPEG', 'IMG_0330.JPEG',
+            'IMG_0331.JPEG', 'IMG_0332.JPEG', 'IMG_0333.JPEG', 'IMG_0334.JPEG',
+            'IMG_0335.JPEG', 'IMG_0422.JPEG', 'IMG_0426.JPEG', 'IMG_0427.JPEG',
+            'IMG_0428.JPEG', 'IMG_0430.JPEG', 'IMG_0458.JPEG', 'IMG_0463.JPEG',
+            'IMG_0465.JPG', 'IMG_0466.JPEG', 'IMG_0468.JPEG', 'IMG_0476.JPEG',
+            'IMG_0508.JPEG', 'IMG_0509.JPEG', 'IMG_0510.JPEG', 'IMG_0511.JPEG',
+            'IMG_0585.JPEG', 'IMG_0586.JPEG', 'IMG_0587.JPEG', 'IMG_0588.JPEG',
+            'IMG_0590.JPEG', 'IMG_0592.JPEG', 'IMG_0593.JPEG', 'IMG_0594.JPEG',
+            'IMG_0595.JPEG', 'IMG_0596.JPEG', 'IMG_0597.JPEG', 'IMG_0598.JPEG',
+            'IMG_0599.JPEG', 'IMG_0608.JPEG', 'IMG_0609.JPEG', 'IMG_0610.JPEG',
+            'IMG_0780.JPEG', 'IMG_0782.JPEG', 'IMG_0785.JPEG', 'IMG_0786.JPEG',
+            'IMG_0787.JPEG', 'IMG_0788.JPEG', 'IMG_0789.JPEG', 'IMG_0790.JPEG',
+            'IMG_0791.JPEG', 'IMG_0860.JPEG', 'IMG_0861.JPEG', 'IMG_0863.JPEG',
+            'IMG_0864.JPEG', 'IMG_0865.JPEG', 'IMG_0866.JPEG', 'IMG_0867.JPEG',
+            'IMG_0868.JPEG', 'IMG_0869.JPEG', 'IMG_0870.JPEG', 'IMG_0871.JPEG',
+            'IMG_0883.JPEG', 'IMG_0884.JPEG', 'IMG_0947.JPEG', 'IMG_0948.JPEG',
+            'IMG_0949.JPEG', 'IMG_0950.JPEG', 'IMG_0954.JPEG', 'IMG_0955.JPEG',
+            'IMG_0960.JPEG', 'IMG_0961.JPEG', 'IMG_0962.JPEG', 'IMG_0963.JPEG',
+            'IMG_0964.JPEG', 'IMG_0965.JPEG', 'IMG_0966.JPEG', 'IMG_0967.JPEG',
+            'IMG_0968.JPEG', 'IMG_0971.JPEG', 'IMG_0973.JPEG', 'IMG_0977.JPEG',
+            'IMG_0978.JPEG', 'IMG_0979.JPEG', 'IMG_0980.JPEG', 'IMG_0981.JPEG',
+            'IMG_0985.JPEG', 'IMG_0986.JPEG', 'IMG_0989.JPEG', 'IMG_0993.JPEG',
+            'IMG_0994.JPEG', 'IMG_1002.JPEG', 'IMG_1005.JPEG', 'IMG_1006.JPEG',
+            'IMG_1008.JPG', 'IMG_1009.JPEG', 'IMG_1012.JPEG', 'IMG_1012.JPG',
+            'IMG_1013.JPEG', 'IMG_1013.JPG', 'IMG_1017.JPEG', 'IMG_1018.JPEG',
+            'IMG_1019.JPEG', 'IMG_1021.JPEG', 'IMG_1023.JPEG', 'IMG_1028.JPEG',
+            'IMG_1029.JPEG', 'IMG_1030.JPEG', 'IMG_1049.JPEG', 'IMG_1050.JPEG',
+            'IMG_1051.JPEG', 'IMG_1052.JPEG', 'IMG_1053.JPEG', 'IMG_1072.JPEG',
+            'IMG_1073.JPEG', 'IMG_1074.JPEG', 'IMG_1078.JPEG', 'IMG_1081.JPEG',
+            'IMG_1082.JPEG', 'IMG_1083.JPEG', 'IMG_1084.JPEG', 'IMG_1095.JPEG',
+            'IMG_1097.JPEG', 'IMG_1102.JPEG', 'IMG_1103.JPEG', 'IMG_1104.JPEG',
+            'IMG_1109.JPEG', 'IMG_1111.JPEG', 'IMG_1112.JPEG', 'IMG_1113.JPEG',
+            'IMG_1114.JPEG', 'IMG_1115.JPEG', 'IMG_1131.JPEG', 'IMG_1133.JPEG',
+            'IMG_1134.JPEG', 'IMG_1135.JPEG', 'IMG_1136.JPEG', 'IMG_1137.JPEG',
+            'IMG_1141.JPEG', 'IMG_1142.JPEG', 'IMG_1143.JPEG', 'IMG_1144.JPEG',
+            'IMG_1145.JPEG', 'IMG_1146.JPEG', 'IMG_1147.JPEG', 'IMG_1148.JPEG',
+            'IMG_1149.JPEG', 'IMG_1161.JPEG', 'IMG_1163.JPEG', 'IMG_1164.JPEG',
+            'IMG_1217.JPEG', 'IMG_1219.JPEG', 'IMG_1305.JPEG', 'IMG_1306.JPEG',
+            'IMG_1308.JPEG', 'IMG_1309.JPEG', 'IMG_1310.JPEG', 'IMG_1311.JPEG',
+            'IMG_1312.JPEG', 'IMG_1313.JPEG', 'IMG_1314.JPEG', 'IMG_1315.JPEG',
+            'IMG_1316.JPEG', 'IMG_1324.JPG', 'IMG_1325.JPG', 'IMG_1329.JPEG',
+            'IMG_1334.JPEG', 'IMG_1337.JPEG', 'IMG_1338.JPEG', 'IMG_1341.JPEG',
+            'IMG_1342.JPEG', 'IMG_1349.JPEG', 'IMG_1350.JPEG', 'IMG_1351.JPEG',
+            'IMG_1352.JPEG', 'IMG_1354.JPEG', 'IMG_1356.JPEG', 'IMG_1363.JPEG',
+            'IMG_1364.JPEG', 'IMG_1365.JPEG', 'IMG_1371.JPEG', 'IMG_1384.JPEG',
+            'IMG_1385.JPEG', 'IMG_1390.JPEG', 'IMG_1391.JPEG', 'IMG_1392.JPEG',
+            'IMG_1394.JPEG', 'IMG_1415.JPEG', 'IMG_1416.JPEG', 'IMG_1417.JPEG',
+            'IMG_1418.JPEG', 'IMG_1419.JPEG', 'IMG_1420.JPEG', 'IMG_1421.JPEG',
+            'IMG_1422.JPEG', 'IMG_1423.JPEG', 'IMG_1424.JPEG', 'IMG_1425.JPEG',
+            'IMG_1426.JPEG', 'IMG_1427.JPEG', 'IMG_1428.JPEG', 'IMG_1430.JPEG',
+            'IMG_1431.JPEG', 'IMG_1432.JPEG', 'IMG_1433.JPEG', 'IMG_1434.JPEG',
+            'IMG_1435.JPEG', 'IMG_1436.JPEG', 'IMG_1437.JPEG', 'IMG_1438.JPEG',
+            'IMG_1439.JPEG', 'IMG_1439.JPG', 'IMG_1440.JPEG', 'IMG_1441.JPEG',
+            'IMG_1442.JPEG', 'IMG_1443.JPEG', 'IMG_1447.JPEG', 'IMG_1449.JPEG',
+            'IMG_1472.JPEG', 'IMG_1473.JPEG', 'IMG_1474.JPEG', 'IMG_1475.JPEG',
+            'IMG_1476.JPEG', 'IMG_1477.JPEG', 'IMG_1478.JPEG', 'IMG_1479.JPEG',
+            'IMG_1482.JPEG', 'IMG_1483.JPEG', 'IMG_1484.JPEG', 'IMG_1485.JPEG',
+            'IMG_1486.JPEG', 'IMG_1487.JPEG', 'IMG_1488.JPEG', 'IMG_1489.JPEG',
+            'IMG_1490.JPEG', 'IMG_1491.JPEG', 'IMG_1493.JPEG', 'IMG_1494.JPEG',
+            'IMG_1495.JPEG', 'IMG_1496.JPEG', 'IMG_1497.JPEG', 'IMG_1498.JPEG',
+            'IMG_1499.JPEG', 'IMG_1500.JPEG', 'IMG_1501.JPEG', 'IMG_1502.JPEG',
+            'IMG_1503.JPEG', 'IMG_1504.JPEG', 'IMG_1505.JPEG', 'IMG_1506.JPEG',
+            'IMG_1507.JPEG', 'IMG_1508.JPEG', 'IMG_1509.JPEG', 'IMG_1510.JPEG',
+            'IMG_1511.JPEG', 'IMG_1512.JPEG', 'IMG_1513.JPEG', 'IMG_1514.JPEG',
+            'IMG_1515.JPEG', 'IMG_1516.JPEG', 'IMG_1517.JPEG', 'IMG_1518.JPEG',
+            'IMG_1521.JPEG', 'IMG_1641.JPG', 'IMG_1642.JPG', 'IMG_1643.JPG',
+            'IMG_1648.JPG', 'IMG_1649.JPG', 'IMG_1669.JPEG', 'IMG_1670.JPG',
+            'IMG_1677.JPG', 'IMG_1678.JPG', 'IMG_1679.JPG', 'IMG_1718.JPG',
+            'IMG_1728.JPG', 'IMG_1737.JPG', 'IMG_1761.JPG', 'IMG_1762.JPG',
+            'IMG_1774.JPEG', 'IMG_1777.JPEG', 'IMG_1778.JPEG', 'IMG_1779.JPEG',
+            'IMG_1780.JPEG', 'IMG_1790.JPEG', 'IMG_1794.JPEG', 'IMG_1796.JPEG',
+            'IMG_1801.JPG', 'IMG_1802.JPG', 'IMG_1803.JPG', 'IMG_1805.JPG',
+            'IMG_1808.JPEG', 'IMG_1811.JPG', 'IMG_1812.JPG', 'IMG_1813.JPG',
+            'IMG_1814.JPG', 'IMG_1815.JPEG', 'IMG_1816.JPEG', 'IMG_1817.JPEG',
+            'IMG_1817.JPG', 'IMG_1818.JPEG', 'IMG_1819.JPEG', 'IMG_1820.JPEG',
+            'IMG_1821.JPEG', 'IMG_1821.JPG', 'IMG_1822.JPEG', 'IMG_1822.JPG',
+            'IMG_1823.JPEG', 'IMG_1824.JPEG', 'IMG_1825.JPEG', 'IMG_1826.JPEG',
+            'IMG_1827.JPEG', 'IMG_1829.JPEG', 'IMG_1835.JPEG', 'IMG_1836.JPEG',
+            'IMG_1843.JPEG', 'IMG_1846.JPEG', 'IMG_1850.JPEG', 'IMG_1851.JPEG',
+            'IMG_1852.JPEG', 'IMG_1853.JPEG', 'IMG_1854.JPEG', 'IMG_1855.JPEG',
+            'IMG_1856.JPEG', 'IMG_1857.JPEG', 'IMG_1858.JPEG', 'IMG_1859.JPEG',
+            'IMG_1860.JPEG', 'IMG_1861.JPEG', 'IMG_1868.JPEG', 'IMG_1870.JPEG',
+            'IMG_1871.JPEG', 'IMG_1872.JPEG', 'IMG_1873.JPEG', 'IMG_1882.JPEG',
+            'IMG_2088.JPG', 'IMG_2089.JPG', 'IMG_2090.JPG', 'IMG_2091.JPG',
+            'IMG_2092.JPG', 'IMG_2098.JPG', 'IMG_2584.JPG', 'IMG_2585.JPG',
+            'IMG_2587.JPG', 'IMG_2588.JPG', 'IMG_2589.JPG', 'IMG_2590.JPG',
+            'IMG_2591.JPG', 'IMG_2614.JPG', 'IMG_2626.JPG', 'IMG_2741.JPG',
+            'IMG_2840.JPG', 'IMG_2841.JPG', 'IMG_2843.JPG', 'IMG_2848.JPG',
+            'IMG_2850.JPG', 'IMG_2895.JPG', 'IMG_2896.JPG', 'IMG_2897.JPG',
+            'IMG_3015.JPG', 'IMG_3016.JPG', 'IMG_3017.JPG', 'IMG_3018.JPG',
+            'IMG_3019.JPG', 'IMG_3020.JPG', 'IMG_3021.JPG', 'IMG_3022.JPG',
+            'IMG_3023.JPG', 'IMG_3024.JPG', 'IMG_3048.JPG', 'IMG_3049.JPG',
+            'IMG_3050.JPG', 'IMG_3051.JPG', 'IMG_3052.JPG', 'IMG_3053.JPG',
+            'IMG_3054.JPG', 'IMG_3055.JPG', 'IMG_3056.JPG', 'IMG_3057.JPG',
+            'IMG_3058.JPG', 'IMG_3059.JPG', 'IMG_3060.JPG', 'IMG_3061.JPG',
+            'IMG_3264.JPG', 'IMG_3265.JPG', 'IMG_3266.JPG', 'IMG_3267.JPG',
+            'IMG_3268.JPG', 'IMG_3269.JPG', 'IMG_3270.JPG', 'IMG_3271.JPG',
+            'IMG_3272.JPG', 'IMG_3273.JPG', 'IMG_3274.JPG', 'IMG_3275.JPG',
+            'IMG_3276.JPG', 'IMG_3340.JPG', 'IMG_3341.JPG', 'IMG_3342.JPG',
+            'IMG_3344.JPG', 'IMG_3364.JPG', 'IMG_3365.JPG', 'IMG_3366.JPG',
+            'IMG_3367.JPG', 'IMG_3372.JPG', 'IMG_3376.JPG', 'IMG_3392.JPG',
+            'IMG_3582.JPG', 'IMG_8955.JPG', 'IMG_8956.JPG', 'IMG_8958.JPG',
+            'IMG_8959.JPG', 'IMG_8960.JPG', 'IMG_8961.JPG', 'edb7d13e-6990-4a85-b3a0-bbbd9eddcb48.jpg'
+        ];
+
+        const itemsPerPage = 12;
+        let currentIndex = 0;
+
+        const grid = document.getElementById('portfolio-grid');
+        const loadMoreBtn = document.getElementById('btn-load-more');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        function loadItems() {
+            const nextBatch = allImages.slice(currentIndex, currentIndex + itemsPerPage);
+            nextBatch.forEach(img => {
+                const item = document.createElement('div');
+                item.className = 'portfolio-item visible';
+                item.innerHTML = `
+                    <img src="assets/images/portfolio/${img}" alt="Project Installation" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>Commercial Installation</h3>
+                    </div>
+                `;
+                
+                item.onclick = () => {
+                    lightboxImg.src = `assets/images/portfolio/${img}`;
+                    lightbox.classList.add('active');
+                };
+                
+                grid.appendChild(item);
+            });
+
+            currentIndex += itemsPerPage;
+            if (currentIndex >= allImages.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+
+        loadMoreBtn.onclick = loadItems;
+        closeBtn.onclick = () => lightbox.classList.remove('active');
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        };
+
+        function renderClients() {
+            const clientGrid = document.getElementById('client-grid');
+            
+            // Scaling Rules
+            const scale15 = ['Apple', 'Granite', 'Spectrum', 'Cradlepoint', 'Checkpoint', 'Loves', 'Walgreens', 'Pilot'];
+            const scale10 = ['Assa Abloy', 'Best Buy'];
+
+            clients.forEach(client => {
+                const card = document.createElement('div');
+                card.className = 'partner-card';
+                const logoSrc = `assets/images/partners/${client.logo}`;
+                
+                // Determine scale class or inline style
+                let imgStyle = '';
+                // Check partially matching names (e.g. "Apple" matches "Apple Inc.")
+                if (scale15.some(key => client.name.includes(key))) {
+                    imgStyle = 'transform: scale(1.35);'; // 15% bigger + base scale
+                } else if (scale10.some(key => client.name.includes(key))) {
+                    imgStyle = 'transform: scale(1.20);'; // 10% bigger
+                }
+
+                card.innerHTML = `
+                    <img src="${logoSrc}" alt="${client.name}" style="${imgStyle}" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h3 style=\\'color:var(--color-accent)\\'>${client.name}</h3>')">
+                    <h3>${client.name}</h3>
+                    <p>${client.text}</p>
+                `;
+                clientGrid.appendChild(card);
+            });
+        }
+
+        // Initial load
+        loadItems();
+        renderClients();
+    </script>
+    <script src="assets/js/ai-concierge.js"></script>
+</body>
+</html>

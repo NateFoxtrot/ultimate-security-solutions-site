@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Partners | Ultimate Security Solutions</title>
+    <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Ultra-Light Spotlight Section (Low CPU) */
+        .spotlight-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 20px;
+            min-height: 500px;
+            overflow: hidden;
+            background: transparent;
+            transform: translateZ(0); /* Enable hardware acceleration */
+        }
+
+        .spotlight-box {
+            position: absolute;
+            background: none; /* No box */
+            border: none;     /* No border */
+            padding: 2rem;
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.8s ease;
+            will-change: transform, opacity; /* Low CPU hint */
+        }
+
+        .spotlight-box.visible {
+            opacity: 1;
+        }
+
+        .spotlight-logo {
+            height: 120px; /* Larger logo */
+            width: auto;
+            max-width: 85%;
+            object-fit: contain;
+            margin-bottom: 2rem;
+            /* No complex filters for performance */
+        }
+
+        .spotlight-rating {
+            color: var(--color-accent);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+        }
+
+        .spotlight-review {
+            font-style: italic;
+            color: #ffffff; /* Pure white for contrast */
+            font-size: 1.6rem;
+            line-height: 1.4;
+            font-weight: 500;
+            text-shadow: 0 2px 15px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .spotlight-attribution {
+            margin-top: 1.5rem;
+            color: var(--color-accent);
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        }
+
+        /* Optimized Registry Section */
+        .summary-section {
+            padding: 6rem 20px;
+            background: transparent; /* Show watermark */
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .summary-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            background: rgba(15, 28, 46, 0.4);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .summary-item:hover {
+            border-color: var(--color-accent);
+            background: rgba(15, 28, 46, 0.8);
+            transform: translateY(-5px);
+        }
+
+        .summary-logo {
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            filter: brightness(1.2); /* Ensure visibility */
+        }
+
+        .summary-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-text);
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service_area.html">Service Area</a>
+                <div class="dropdown">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">All Products</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                        <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                        <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                    </div>
+                </div>
+                <a href="accomplishments.html">Our Work</a>
+                <a href="partners.html" class="active">Partners</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="#contact" class="btn-contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header hero" style="padding-bottom: 2rem;">
+        <h1>Strategic Alliances</h1>
+        <p>Partnering with world-class organizations to deliver elite infrastructure.</p>
+    </header>
+
+    <!-- Dynamic Spotlight Section -->
+    <section id="spotlight-container" class="spotlight-container"></section>
+
+    <!-- Registry Section -->
+    <section class="summary-section" style="width: 100%; text-align: center;">
+        <h2 style="color:var(--color-accent); margin-bottom:4rem; letter-spacing:4px; display: block; width: 100%;">VENDOR REGISTRY</h2>
+        <div id="summary-grid" class="summary-grid"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/partners_data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('spotlight-container');
+            const summaryGrid = document.getElementById('summary-grid');
+            let currentIndex = 0;
+
+            // Render Summary Grid
+            partnersData.forEach(partner => {
+                const item = document.createElement('div');
+                item.className = 'summary-item';
+                
+                // Use onerror to fallback to text
+                item.innerHTML = `
+                    <div class="logo-container">
+                        <img src="${partner.logo}" alt="${partner.name}" class="summary-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="text-fallback" style="display:none; height:50px; align-items:center; justify-content:center; color:var(--color-accent); font-weight:800; font-size:1.2rem; text-transform:uppercase;">${partner.name}</div>
+                    </div>
+                    <div class="summary-name" style="margin-top:10px;">${partner.name}</div>
+                `;
+                summaryGrid.appendChild(item);
+            });
+
+            function getStars(rating) {
+                let stars = '';
+                for (let i = 0; i < 5; i++) {
+                    if (i < Math.floor(rating)) stars += '<i class="fas fa-star"></i>';
+                    else if (i < rating) stars += '<i class="fas fa-star-half-alt"></i>';
+                    else stars += '<i class="far fa-star"></i>';
+                }
+                return stars;
+            }
+
+            function animateNext() {
+                // Cleanup
+                const oldBoxes = container.querySelectorAll('.spotlight-box');
+                oldBoxes.forEach(b => { if (!b.classList.contains('visible')) b.remove(); });
+
+                const partner = partnersData[currentIndex];
+                const box = document.createElement('div');
+                box.className = 'spotlight-box';
+                
+                // Add error handling for spotlight as well
+                box.innerHTML = `
+                    <div style="height:120px; display:flex; align-items:center; justify-content:center; margin-bottom:2rem;">
+                        <img src="${partner.logo}" alt="${partner.name}" class="spotlight-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <h2 class="text-fallback-spotlight" style="display:none; color:var(--color-accent); font-size:3rem; text-shadow:0 0 20px rgba(0,0,0,0.8);">${partner.name}</h2>
+                    </div>
+                    <div class="spotlight-rating">${getStars(partner.rating)}</div>
+                    <div class="spotlight-review">"${partner.review}"</div>
+                    <div class="spotlight-attribution">Verified Partner: ${partner.name}</div>
+                `;
+                container.appendChild(box);
+
+                const dirs = [
+                    { x: 0, y: -130 }, // North
+                    { x: 0, y: 130 },  // South
+                    { x: 130, y: 0 },  // East
+                    { x: -130, y: 0 }  // West
+                ];
+                const start = dirs[Math.floor(Math.random() * dirs.length)];
+                
+                // Hardware accelerated position
+                box.style.transform = `translate3d(${start.x}%, ${start.y}%, 0)`;
+                box.offsetHeight; // force reflow
+
+                // Step 1: Pan In
+                box.style.transition = 'transform 2s cubic-bezier(0.1, 0.9, 0.2, 1), opacity 1.2s ease';
+                box.style.transform = `translate3d(0, 0, 0)`;
+                box.classList.add('visible');
+
+                // Step 2: Exit
+                setTimeout(() => {
+                    box.style.transition = 'transform 2s cubic-bezier(0.8, 0, 0.9, 0.1), opacity 1.2s ease';
+                    const exitX = start.x !== 0 ? -start.x : 0;
+                    const exitY = start.y !== 0 ? -start.y : 0;
+                    box.style.transform = `translate3d(${exitX}%, ${exitY}%, 0)`;
+                    box.classList.remove('visible');
+                    setTimeout(() => box.remove(), 2000);
+                }, 5000);
+
+                currentIndex = (currentIndex + 1) % partnersData.length;
+                setTimeout(animateNext, 6000);
+            }
+
+            animateNext();
+        });
+    </script>
+    <script src="assets/js/ai-concierge.js"></script>
+</body>
+</html>

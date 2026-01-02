@@ -1,0 +1,15 @@
+# Ignore large non-essential folders
+Other/
+assets/images/portfolio/
+*.zip
+*.PNG
+*.JPEG
+*.jpg
+*.JPG
+
+# But keep the core gallery images if they are used
+!assets/images/project_gallery_*.JPEG
+!assets/images/project_gallery_*.PNG
+!assets/images/hero_slide_*.JPEG
+!assets/images/logo.jpeg
+!assets/images/partners/
