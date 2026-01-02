@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ultimate Security Solutions</title>
+    <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-section {
+            padding: 6rem 5%;
+            background: var(--color-primary);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            background: rgba(15, 28, 46, 0.6);
+            border: 1px solid var(--color-accent);
+            padding: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-info h2 {
+            color: var(--color-accent);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+            margin-top: 5px;
+        }
+
+        .info-item h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-item p {
+            color: var(--color-muted);
+            line-height: 1.6;
+        }
+
+        .contact-form h3 {
+            color: #fff;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            color: #fff;
+            font-family: inherit;
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            background: rgba(0,0,0,0.5);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            border: none;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #fff;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service_area.html">Service Area</a>
+                <div class="dropdown">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">All Products</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                        <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                        <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                    </div>
+                </div>
+                <a href="accomplishments.html">Our Work</a>
+                <a href="portal.html">FE Portal</a>
+                <a href="system-design.html">System Designer</a>
+                <a href="partners.html">Partners</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html" class="active btn-contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2>Secure Your Assets</h2>
+                <p style="color: var(--color-muted); margin-bottom: 3rem;">
+                    Ready to upgrade your infrastructure? Contact our engineering team for a consultation or rapid response dispatch.
+                </p>
+
+                <div class="info-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h3>24/7 Operations</h3>
+                        <p>816-814-2007</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>General Inquiries</h3>
+                        <p>nate@usstech.net</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Service Area</h3>
+                        <p>Kansas City Metro<br>100-mile Radius Primary Zone</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <h3>Request a Quote</h3>
+                <form name="contact" method="POST" data-netlify="true" action="/success">
+                    <input type="hidden" name="form-name" value="contact" />
+                    
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                    </div>
+
+                    <div class="form-group">
+                        <select name="service" class="form-control" style="background: rgba(0,0,0,0.3);">
+                            <option value="" disabled selected>Service Needed</option>
+                            <option value="Cabling">Structured Cabling</option>
+                            <option value="CCTV">CCTV Surveillance</option>
+                            <option value="Access">Access Control</option>
+                            <option value="Network">Network Engineering</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" rows="5" placeholder="Project Details..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Secure Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+    </footer>
+    <script src="assets/js/ai-concierge.js"></script>
+</body>
+</html>

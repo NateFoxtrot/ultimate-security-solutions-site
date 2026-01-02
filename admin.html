@@ -181,9 +181,25 @@
 
                 <!-- CONTENT EDITOR SECTION -->
                 <div id="section-content" style="display:none;">
-                    <h2>Visual Page Editor</h2>
-                    <p>Launch the site in "Edit Mode". Changes are committed directly to main branch.</p>
-                    <a href="index.html?mode=edit" target="_blank" class="admin-btn" style="display:inline-block; width:auto; text-decoration:none; margin-top:1rem;">LAUNCH VISUAL EDITOR</a>
+                    <h2>Site Customization</h2>
+                    
+                    <div style="background:#222; padding:1.5rem; border:1px solid #444; margin-bottom:2rem;">
+                        <h3 style="color:var(--admin-accent); font-size:1rem; margin-bottom:1rem;">1. LOGO SCALING</h3>
+                        <p style="font-size:0.8rem; margin-bottom:10px;">Adjust the size of partner logos globally (scales by percentage).</p>
+                        <input type="range" id="logo-scale" min="50" max="200" value="100" style="width:100%;">
+                        <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:#888;">
+                            <span>Small (50%)</span>
+                            <span id="scale-val">100%</span>
+                            <span>Massive (200%)</span>
+                        </div>
+                        <button class="admin-btn" style="margin-top:1rem; width:auto;" onclick="applyLogoScale()">UPDATE GLOBAL SCALE</button>
+                    </div>
+
+                    <div style="background:#222; padding:1.5rem; border:1px solid #444;">
+                        <h3 style="color:var(--admin-accent); font-size:1rem; margin-bottom:1rem;">2. VISUAL PAGE EDITOR</h3>
+                        <p>Launch the site in "Edit Mode". Click text to change it, then click "Save to Cloud".</p>
+                        <a href="index.html?mode=edit" target="_blank" class="admin-btn" style="display:inline-block; width:auto; text-decoration:none; margin-top:1rem;">LAUNCH VISUAL EDITOR</a>
+                    </div>
                 </div>
 
                 <!-- DEPLOY STATUS -->
@@ -287,6 +303,11 @@
                         <img src="${f.download_url}" loading="lazy">
                         <div style="font-size:0.7rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${f.name}</div>
                         <div class="file-actions">
+                            <select onchange="moveFile('${f.name}', '${f.sha}', this.value)" style="width:60px; font-size:0.6rem; padding:0; background:#333; color:white; border:none;">
+                                <option value="">Move...</option>
+                                <option value="portfolio">Main</option>
+                                <option value="archive">Archive</option>
+                            </select>
                             <i class="fas fa-trash" style="color:red; cursor:pointer;" onclick="deleteFile('${f.name}', '${f.sha}')"></i>
                         </div>
                     `;
@@ -296,6 +317,34 @@
                 console.error(e);
                 grid.innerHTML = '<p style="color:red;">Failed to load files. Ensure path exists in repo.</p>';
             }
+        }
+
+        async function moveFile(filename, sha, targetFolder) {
+            if(!targetFolder) return;
+            
+            // GitHub "Move" is Copy + Delete
+            // 1. Get Content
+            const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${ASSET_PATH}/${filename}`, {
+                headers: { 'Authorization': `token ${ghToken}` }
+            });
+            const data = await res.json();
+            
+            // 2. Create in new location
+            const newPath = `assets/images/${targetFolder}/${filename}`;
+            await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${newPath}`, {
+                method: 'PUT',
+                headers: { 
+                    'Authorization': `token ${ghToken}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    message: `admin: move ${filename} to ${targetFolder}`,
+                    content: data.content
+                })
+            });
+            
+            // 3. Delete old
+            await deleteFile(filename, sha);
         }
 
         async function handleUpload(e) {
@@ -357,6 +406,55 @@
             
             // Refresh
             setTimeout(loadFiles, 1000);
+        }
+
+        // --- CONTENT CUSTOMIZATION ---
+
+        document.getElementById('logo-scale')?.addEventListener('input', (e) => {
+            document.getElementById('scale-val').innerText = e.target.value + '%';
+        });
+
+        async function applyLogoScale() {
+            const scale = document.getElementById('logo-scale').value;
+            const newPx = Math.round(100 * (scale/100)); // Base was 100px
+            
+            alert(`Uplinking CSS change: .partner-card img { height: ${newPx}px }`);
+
+            try {
+                // 1. Get current styles.css
+                const url = `https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/styles.css`;
+                const res = await fetch(url, {
+                    headers: { 'Authorization': `token ${ghToken}` }
+                });
+                const data = await res.json();
+                let cssContent = atob(data.content);
+
+                // 2. Simple regex replacement for height in .partner-card img
+                // Look for .partner-card img { height: ...px; }
+                const regex = /\.partner-card img\s*\{\s*height:\s*\d+px/g;
+                cssContent = cssContent.replace(regex, `.partner-card img { height: ${newPx}px`);
+
+                // 3. Push update
+                const putRes = await fetch(url, {
+                    method: 'PUT',
+                    headers: { 
+                        'Authorization': `token ${ghToken}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: `admin: set global logo scale to ${scale}%`,
+                        content: btoa(cssContent),
+                        sha: data.sha
+                    })
+                });
+
+                if(putRes.ok) {
+                    alert("CSS Global styles updated! Netlify will redeploy in ~1 minute.");
+                }
+            } catch(e) {
+                console.error(e);
+                alert("Failed to update CSS: " + e.message);
+            }
         }
     </script>
 </body>
