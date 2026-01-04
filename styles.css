@@ -1,10 +1,10 @@
 :root {
-    --color-primary: #0f172a;   /* Slate 900 */
-    --color-secondary: #1e293b; /* Slate 800 */
-    --color-accent: #0ea5e9;    /* Sky 500 */
-    --color-text: #f8fafc;      /* Slate 50 */
-    --color-muted: #94a3b8;     /* Slate 400 */
-    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --color-primary: #050b14;   /* Deepest Navy */
+    --color-secondary: #0f1c2e; /* Dark Command Navy */
+    --color-accent: #ffd700;    /* Precision Gold */
+    --color-text: #e6f1ff;
+    --color-muted: #8892b0;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -198,6 +198,24 @@ h2::after {
     align-items: center;
 }
 
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%; /* Zoomed in */
+    height: 120%;
+    background-image: url('assets/images/logo.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.05; /* Subtle watermark */
+    z-index: 0;
+    pointer-events: none;
+    filter: grayscale(100%);
+}
+
 .hero-container {
     max-width: 1400px;
     margin: 0 auto;
@@ -214,26 +232,9 @@ h2::after {
     max-width: 700px;
 }
 
+/* Graphic removed in favor of logo watermark */
 .hero-graphic {
-    background: var(--color-secondary);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 50%;
-    z-index: 1;
-}
-
-.hero-graphic-text {
-    font-size: 15rem;
-    font-weight: 900;
-    color: var(--color-muted);
-    opacity: 0.1;
-    letter-spacing: -10px;
-    user-select: none;
+    display: none; 
 }
 
 @media (max-width: 1024px) {
@@ -243,9 +244,6 @@ h2::after {
     }
     .hero-content {
         margin: 0 auto;
-    }
-    .hero-graphic {
-        display: none;
     }
 }
 
