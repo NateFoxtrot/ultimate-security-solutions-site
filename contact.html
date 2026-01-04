@@ -121,7 +121,7 @@
                 <a href="about.html">About</a>
                 <a href="service_area.html">Service Area</a>
                 <div class="dropdown">
-                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></span>
+                    <a href="ordering_system.html" class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
                     <div class="dropdown-content">
                         <a href="ordering_system.html">All Products</a>
                         <a href="ordering_system.html?cat=platinum">Platinum Series</a>
@@ -131,11 +131,11 @@
                     </div>
                 </div>
                 <a href="accomplishments.html">Our Work</a>
-                <a href="portal.html">FE Portal</a>
                 <a href="system-design.html">System Designer</a>
                 <a href="partners.html">Partners</a>
                 <a href="reviews.html">Reviews</a>
                 <a href="contact.html" class="active btn-contact">Contact Us</a>
+                <a href="portal.html" class="nav-spacer">FE Portal</a>
             </div>
         </div>
     </nav>
@@ -177,8 +177,7 @@
             <!-- Contact Form -->
             <div class="contact-form">
                 <h3>Request a Quote</h3>
-                <form name="contact" method="POST" data-netlify="true" action="/success">
-                    <input type="hidden" name="form-name" value="contact" />
+                <form action="mailto:nate@usstech.net" method="POST" enctype="text/plain" name="contact">
                     
                     <div class="form-group">
                         <input type="text" name="name" class="form-control" placeholder="Full Name" required>
