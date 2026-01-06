@@ -48,13 +48,14 @@ body::before {
     transform: translate(-50%, -50%);
     width: 100vw;
     height: 100vh;
-    background-image: url('assets/images/logo_circuit.svg');
+    background-image: url('assets/images/logo.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 180%; /* Extremely zoomed in as requested */
-    opacity: 0.08; /* Slightly more visible but still subtle */
-    z-index: -2; /* BEHIND the canvas */
+    background-size: 150%; /* Large, zoomed in */
+    opacity: 0.15; /* Increased opacity for visibility */
+    z-index: -2; /* Behind animation */
     pointer-events: none;
+    filter: grayscale(100%) contrast(1.2); /* High contrast gray for technical look */
 }
 
 /* Re-use hero space for content, logo is now on body */

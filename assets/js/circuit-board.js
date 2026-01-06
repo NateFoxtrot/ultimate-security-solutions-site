@@ -2,148 +2,142 @@ const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 
 let w, h;
-let particles = [];
-let connections = [];
+let grid = 20; // Grid size
+let paths = [];
+let walkers = [];
 
-// Configuration
 const CONFIG = {
-    particleCount: 60,
-    connectionDist: 150,
-    baseColor: 'rgba(14, 165, 233, 0.15)', // Faint Sky Blue traces (Slate theme accent)
-    pulseColor: '#ffd700', // Gold pulses
-    pulseSpeed: 2,
-    nodeSpeed: 0.2
+    traceColor: 'rgba(14, 165, 233, 0.1)', // Faint Blue
+    pulseColor: '#ffd700', // Gold
+    pulseSpeed: 1, // Steps per frame
+    maxWalkers: 50,
+    spawnRate: 0.05
 };
 
 function resize() {
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
+    // Reset on resize
+    ctx.clearRect(0, 0, w, h);
+    paths = [];
+    walkers = [];
 }
 window.addEventListener('resize', resize);
 resize();
 
-class Particle {
-    constructor() {
-        this.x = Math.random() * w;
-        this.y = Math.random() * h;
-        this.vx = (Math.random() - 0.5) * CONFIG.nodeSpeed;
-        this.vy = (Math.random() - 0.5) * CONFIG.nodeSpeed;
-        this.size = Math.random() * 2 + 1;
-    }
-
-    update() {
-        this.x += this.vx;
-        this.y += this.vy;
-
-        // Bounce off edges
-        if (this.x < 0 || this.x > w) this.vx *= -1;
-        if (this.y < 0 || this.y > h) this.vy *= -1;
-    }
-
-    draw() {
-        ctx.fillStyle = CONFIG.baseColor;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-    }
-}
-
-class Pulse {
-    constructor(startNode, endNode) {
-        this.start = startNode;
-        this.end = endNode;
-        this.progress = 0;
-        this.speed = CONFIG.pulseSpeed / this.getDist();
+class Walker {
+    constructor(x, y) {
+        this.x = x || Math.floor(Math.random() * (w / grid)) * grid;
+        this.y = y || Math.floor(Math.random() * (h / grid)) * grid;
+        this.history = [{x: this.x, y: this.y}];
         this.dead = false;
-    }
-
-    getDist() {
-        let dx = this.start.x - this.end.x;
-        let dy = this.start.y - this.end.y;
-        return Math.sqrt(dx * dx + dy * dy);
+        this.dir = Math.floor(Math.random() * 4); // 0: right, 1: down, 2: left, 3: up
+        this.life = Math.random() * 100 + 50;
+        this.color = CONFIG.pulseColor;
     }
 
     update() {
-        this.progress += this.speed;
-        if (this.progress >= 1) {
-            this.progress = 1;
+        if (this.dead) return;
+        this.life--;
+
+        if (this.life <= 0 || this.x < 0 || this.x > w || this.y < 0 || this.y > h) {
             this.dead = true;
+            // Persist the path
+            paths.push([...this.history]);
+            return;
         }
+
+        // Randomly turn
+        if (Math.random() < 0.1) {
+            this.dir = (this.dir + (Math.random() < 0.5 ? 1 : 3)) % 4;
+        }
+
+        switch (this.dir) {
+            case 0: this.x += grid; break;
+            case 1: this.y += grid; break;
+            case 2: this.x -= grid; break;
+            case 3: this.y -= grid; break;
+        }
+
+        this.history.push({x: this.x, y: this.y});
     }
 
-    draw() {
-        let x = this.start.x + (this.end.x - this.start.x) * this.progress;
-        let y = this.start.y + (this.end.y - this.start.y) * this.progress;
-
-        ctx.fillStyle = CONFIG.pulseColor;
-        ctx.beginPath();
-        ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fill();
+    draw(ctx) {
+        if (this.dead) return;
         
-        // Glow effect
+        // Draw Head (Pulse)
+        ctx.fillStyle = this.color;
         ctx.shadowBlur = 10;
-        ctx.shadowColor = CONFIG.pulseColor;
+        ctx.shadowColor = this.color;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.shadowBlur = 0;
+
+        // Draw current trail
+        ctx.strokeStyle = this.color;
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        if (this.history.length > 0) {
+            let start = this.history[this.history.length - 2] || this.history[0];
+            ctx.moveTo(start.x, start.y);
+            ctx.lineTo(this.x, this.y);
+        }
+        ctx.stroke();
     }
 }
 
-let pulses = [];
-
 function init() {
-    particles = [];
-    let count = Math.floor((w * h) / 15000); // Responsive density
-    for (let i = 0; i < count; i++) {
-        particles.push(new Particle());
-    }
+    walkers = [];
+    paths = [];
+    ctx.clearRect(0, 0, w, h);
 }
 
 function animate() {
+    // Fade existing paths slightly to background
+    // We don't clearRect completely to leave trails, but we want old "dead" paths to stay visible as faint traces
+    
+    // 1. Draw Faint Background over everything to fade active pulses, but we want traces to persist?
+    // Strategy: Clear, Draw Saved Paths (Faint), Draw Active Walkers (Bright)
+    
     ctx.clearRect(0, 0, w, h);
 
-    // Update and Draw Particles
-    particles.forEach(p => {
-        p.update();
-        p.draw();
-    });
-
-    // Draw Connections
-    for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-            let p1 = particles[i];
-            let p2 = particles[j];
-            let dx = p1.x - p2.x;
-            let dy = p1.y - p2.y;
-            let dist = Math.sqrt(dx * dx + dy * dy);
-
-            if (dist < CONFIG.connectionDist) {
-                // Draw Trace
-                ctx.strokeStyle = CONFIG.baseColor;
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(p1.x, p1.y);
-                ctx.lineTo(p2.x, p2.y);
-                ctx.stroke();
-
-                // Randomly spawn a pulse
-                if (Math.random() < 0.002) {
-                    pulses.push(new Pulse(p1, p2));
-                }
-            }
+    // Draw Persistent Paths (The "Circuit Board" building up)
+    ctx.strokeStyle = CONFIG.traceColor;
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    paths.forEach(path => {
+        if (path.length < 2) return;
+        ctx.moveTo(path[0].x, path[0].y);
+        for (let i = 1; i < path.length; i++) {
+            ctx.lineTo(path[i].x, path[i].y);
         }
+    });
+    ctx.stroke();
+
+    // Spawn new walkers
+    if (walkers.length < CONFIG.maxWalkers && Math.random() < CONFIG.spawnRate) {
+        walkers.push(new Walker());
     }
 
-    // Update and Draw Pulses
-    for (let i = pulses.length - 1; i >= 0; i--) {
-        pulses[i].update();
-        pulses[i].draw();
-        if (pulses[i].dead) {
-            pulses.splice(i, 1);
+    // Update and Draw Walkers (The "Pulses")
+    for (let i = walkers.length - 1; i >= 0; i--) {
+        let walker = walkers[i];
+        walker.update();
+        walker.draw(ctx);
+        if (walker.dead) {
+            walkers.splice(i, 1);
         }
     }
 
     requestAnimationFrame(animate);
 }
 
-init();
+// Initial Spawn from center
+setTimeout(() => {
+    for(let i=0; i<10; i++) {
+        walkers.push(new Walker(w/2, h/2));
+    }
+}, 100);
+
 animate();
