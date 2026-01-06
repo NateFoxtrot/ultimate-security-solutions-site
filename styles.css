@@ -51,16 +51,21 @@ body::before {
     background-image: url('assets/images/logo.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 85vh; /* Fits within viewport height */
-    opacity: 0.2; /* Visible but background */
+    background-size: 130vh; /* Increased zoom by roughly 50% */
+    opacity: 0.2;
     z-index: -2;
     pointer-events: none;
     filter: grayscale(100%) contrast(1.2);
 }
 
-/* Re-use hero space for content, logo is now on body */
-.hero::before {
-    display: none;
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
 }
 
 /* --- TYPOGRAPHY --- */
@@ -197,7 +202,7 @@ h2::after {
     position: relative;
     padding: 0;
     text-align: left;
-    background: var(--color-primary);
+    background: transparent; /* Made transparent to show logo behind text */
     overflow: hidden;
     min-height: 80vh;
     display: flex;
