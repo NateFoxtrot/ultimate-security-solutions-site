@@ -810,6 +810,265 @@
             }
         }
 
+        function renderGrid() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = '';
+
+            const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
+
+            const filtered = products.filter(series => {
+                const f = series.facets;
+                if (!f) return true;
+                if (activeGroups.length === 0) return true;
+
+                for (const [groupId, selectedOpts] of activeGroups) {
+                    const facetKeys = filterMap[groupId];
+                    for (const key of facetKeys) {
+                        const productValues = f[key] || [];
+                        if (selectedOpts.some(opt => productValues.includes(opt))) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = '<p style="color:var(--color-muted); padding:2rem;">No products match the selected filters. Try broadening your selection.</p>';
+                return;
+            }
+
+            filtered.forEach(series => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                const badge = series.category === 'pro' ? 'PRO SERIES' : 'PLATINUM';
+                
+                let variantsHTML = `
+                    <table class="variants-table">
+                        <thead>
+                            <tr>
+                                <th>Model</th>
+                                <th>Description</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                `;
+                
+                series.variants.forEach(v => {
+                    variantsHTML += `
+                        <tr>
+                            <td class="variant-sku">${v.sku}</td>
+                            <td>${v.description.substring(0, 60)}${v.description.length > 60 ? '...' : ''}</td>
+                            <td class="variant-price">$${v.price.toFixed(2)}</td>
+                            <td>
+                                <button class="btn-add-variant" onclick="addToCart('${series.series_id}', '${v.sku}')">Add</button>
+                            </td>
+                        </tr>
+                    `;
+                });
+                variantsHTML += '</tbody></table>';
+
+                const primarySku = series.variants[0].sku;
+                let imgUrl = series.image && series.image !== 'ASSET_MISSING' ? series.image : `https://media.ltsecurityinc.com/catalog/product/${primarySku.toLowerCase()[0]}/${primarySku.toLowerCase()[1]}/${primarySku.toLowerCase()}.jpg`;
+
+                let learnMoreBtn = '';
+                if (series.long_description) {
+                    learnMoreBtn = `<div class="btn-learn-more" onclick="openModal('${series.series_id}')"><i class="fas fa-info-circle"></i> Learn More & Detailed Specs</div>`;
+                }
+
+                card.innerHTML = `
+                    <div class="product-badge">${badge}</div>
+                    <div class="product-img-container">
+                        <img src="${imgUrl}" 
+                             class="product-img" 
+                             alt="${series.name}" 
+                             onload="validateImage(this)"
+                             onerror="handleImageError(this, '${primarySku}')">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-series-title">${series.name}</h3>
+                        <p class="product-series-desc">${series.description}</p>
+                        ${variantsHTML}
+                        ${learnMoreBtn}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function validateImage(img) {
+            if (img.naturalWidth < 150) { img.onerror(); }
+        }
+
+        function handleImageError(img, sku) {
+            if (!img.dataset.attempts) img.dataset.attempts = 0;
+            const attempts = parseInt(img.dataset.attempts);
+            img.dataset.attempts = attempts + 1;
+
+            const s = sku.toLowerCase();
+            const patterns = [
+                `https://media.ltsecurityinc.com/catalog/product/cache/115d48e57ce8bbb1eb479c9f84dfe6ae/_/c/_${s}.png`,
+                `https://media.ltsecurityinc.com/catalog/product/${s[0]}/${s[1]}/${s}.png`,
+                `https://media.ltsecurityinc.com/catalog/product/${s[0]}/${s[1]}/${s}.jpg`,
+                'https://placehold.co/400x300/eee/333?text=No+Image'
+            ];
+
+            if (attempts < patterns.length) {
+                img.src = patterns[attempts];
+            } else {
+                img.src = 'https://placehold.co/400x300/eee/333?text=No+Image';
+                img.onerror = null; 
+            }
+        }
+
+        function openModal(seriesId) {
+            const series = products.find(s => s.series_id === seriesId);
+            const modal = document.getElementById('product-modal');
+            const modalBody = document.getElementById('modal-body');
+            
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>${series.name}</h2>
+                        <span class="close-modal" onclick="closeModal()">&times;</span>
+                    </div>
+                    <div class="modal-tabs">
+                        <button class="tab-btn active" onclick="switchTab(event, 'tab-details')">Details</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'tab-specs')">Specifications</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'tab-docs')">Documents</button>
+                        <button class="tab-btn" onclick="switchTab(event, 'tab-video')">Videos</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="tab-details" class="tab-panel active">
+                            <div style="display:flex; gap:3rem; align-items:start;">
+                                <img src="${series.image}" style="max-width:300px; background:#fff; padding:1rem;" alt="${series.name}">
+                                <div>${series.long_description || series.description}</div>
+                            </div>
+                        </div>
+                        <div id="tab-specs" class="tab-panel">
+                            <div class="specs-grid">
+                                ${Object.entries(series.specs || {}).map(([k, v]) => `
+                                    <div class="spec-item"><span class="spec-label">${k}</span> <span>${v}</span></div>
+                                `).join('') || '<p>Detailed specifications available upon request.</p>'}
+                            </div>
+                        </div>
+                        <div id="tab-docs" class="tab-panel">
+                            <div class="download-list">
+                                ${(series.downloads || []).map(d => `
+                                    <div class="download-item">
+                                        <a href="${d.url}" target="_blank" class="btn-download">
+                                            <i class="fas fa-file-pdf"></i>
+                                            <span>${d.name}</span>
+                                        </a>
+                                    </div>
+                                `).join('') || '<p>No documentation found for this item.</p>'}
+                            </div>
+                        </div>
+                        <div id="tab-video" class="tab-panel">
+                            ${(series.videos || []).map(v => `
+                                <div class="video-container">
+                                    <iframe src="${v}" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            `).join('') || '<p>No multimedia content available for this series.</p>'}
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            modal.style.display = "block";
+            document.body.style.overflow = "hidden"; 
+        }
+
+        function switchTab(evt, tabId) {
+            const panels = document.querySelectorAll('.tab-panel');
+            const btns = document.querySelectorAll('.tab-btn');
+            panels.forEach(p => p.classList.remove('active'));
+            btns.forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('product-modal');
+            if (event.target == modal) closeModal();
+        }
+
+        function addToCart(seriesId, sku) {
+            const series = products.find(s => s.series_id === seriesId);
+            const variant = series.variants.find(v => v.sku === sku);
+            cart.push(variant);
+            updateCartUI();
+            toggleCart(true);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const itemsContainer = document.getElementById('cart-items');
+            const countBadge = document.getElementById('cart-count');
+            const subtotalEl = document.getElementById('cart-total-price');
+            const hiddenItemsInput = document.getElementById('order-items');
+            const hiddenTotalInput = document.getElementById('order-total');
+            
+            countBadge.innerText = cart.length;
+            itemsContainer.innerHTML = '';
+            
+            let total = 0;
+            cart.forEach((item, index) => {
+                total += item.price;
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <div class="cart-item-info">
+                        <h4>${item.sku}</h4>
+                        <p>$${item.price.toFixed(2)}</p>
+                    </div>
+                    <button class="remove-btn" onclick="removeFromCart(${index})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                itemsContainer.appendChild(div);
+            });
+            
+            subtotalEl.innerText = `$${total.toFixed(2)}`;
+            hiddenItemsInput.value = JSON.stringify(cart.map(i => ({sku: i.sku, price: i.price})));
+            hiddenTotalInput.value = total.toFixed(2);
+            document.getElementById('checkout-total-price').innerText = `$${total.toFixed(2)}`;
+        }
+
+        function toggleCart(open) {
+            const sidebar = document.getElementById('cart-sidebar');
+            if (open) sidebar.classList.add('open');
+            else sidebar.classList.remove('open');
+        }
+
+        function openCheckout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty.");
+                return;
+            }
+            toggleCart(false);
+            document.getElementById('checkout-modal').style.display = 'block';
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').style.display = 'none';
+        }
+
+        function handleOrderSubmit(e) {
+            // Netlify handles
+        }
+
         initFilters();
         handleParams();
         renderGrid();
