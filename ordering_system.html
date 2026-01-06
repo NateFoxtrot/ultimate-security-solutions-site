@@ -622,7 +622,15 @@
         </div>
     </div>
 
-    <div class="store-container">
+    <!-- Main Category Overview (Shown when no filter selected) -->
+    <div id="category-overview" style="max-width: 1400px; margin: 0 auto 4rem; padding: 0 40px; display: none;">
+        <h2 class="section-title" style="margin-bottom: 2rem;">BROWSE BY CATEGORY</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <!-- Category Cards injected by JS -->
+        </div>
+    </div>
+
+    <div class="store-container" id="main-store-container">
         <!-- Sidebar -->
         <aside class="filters-sidebar">
             <h3 class="filter-title">Shop By</h3>
@@ -815,24 +823,39 @@
             const crumb = document.getElementById('current-crumb');
             const splash = document.getElementById('promo-splash');
             const splashImg = document.getElementById('promo-img');
+            const catOverview = document.getElementById('category-overview');
+            const storeContainer = document.getElementById('main-store-container');
             
+            // Define Categories for Overview
+            const categories = [
+                { id: 'ip_solutions', name: 'IP Solutions', img: 'promo_camera.jpg', filter: 'IP SOLUTIONS' },
+                { id: 'tvi_solutions', name: 'HD-TVI Solutions', img: 'promo_pro.jpg', filter: 'HD-TVI SOLUTIONS' },
+                { id: 'access', name: 'Access Control', img: 'promo_access.jpg', filter: 'ACCESS CONTROL' },
+                { id: 'intercoms', name: 'Intercoms', img: 'promo_default.jpg', filter: 'INTERCOMS' },
+                { id: 'accessories', name: 'Accessories', img: 'promo_nvr.jpg', filter: 'ACCESSORIES' },
+                { id: 'ubiquiti', name: 'Ubiquiti', img: 'promo_default.jpg', filter: 'UBIQUITI' }
+            ];
+
             if (cat) {
+                // CATEGORY SELECTED MODE
+                catOverview.style.display = 'none';
+                storeContainer.style.display = 'flex';
+                splash.style.display = 'block';
+
                 // Show Promo Splash if data exists
                 if(typeof promoData !== 'undefined' && promoData[cat]) {
                     splashImg.src = promoData[cat];
-                    splash.style.display = 'block';
                 } else if(typeof promoData !== 'undefined' && promoData['default']) {
-                     // Fallback to default promo
                     splashImg.src = promoData['default'];
-                    splash.style.display = 'block';
                 }
 
-                if (cat === 'platinum') {
-                    activeFilters.series = ['PLATINUM SERIES'];
-                    crumb.innerText = 'Platinum Series';
-                } else if (cat === 'pro') {
-                    activeFilters.series = ['PRO-X', 'PRO-VS'];
-                    crumb.innerText = 'Pro Series';
+                // Map 'cat' param to filters
+                if (cat === 'platinum' || cat === 'ip_solutions') {
+                    activeFilters.category = ['IP SOLUTIONS'];
+                    crumb.innerText = 'IP Solutions';
+                } else if (cat === 'pro' || cat === 'tvi_solutions') {
+                    activeFilters.category = ['HD-TVI SOLUTIONS'];
+                    crumb.innerText = 'HD-TVI Solutions';
                 } else if (cat === 'nvr') {
                     activeFilters.technology = ['IP/NVR'];
                     crumb.innerText = 'NVR Systems';
@@ -842,6 +865,12 @@
                 } else if (cat === 'access') {
                     activeFilters.category = ['ACCESS CONTROL'];
                     crumb.innerText = 'Access Control';
+                } else if (cat === 'intercoms') {
+                    activeFilters.category = ['INTERCOMS'];
+                    crumb.innerText = 'Intercoms';
+                } else if (cat === 'accessories') {
+                    activeFilters.category = ['ACCESSORIES'];
+                    crumb.innerText = 'Accessories';
                 } else if (cat === 'ubiquiti') {
                     activeFilters.category = ['UBIQUITI'];
                     crumb.innerText = 'Ubiquiti Networking';
@@ -854,11 +883,39 @@
                     }
                 });
             } else {
-                // Show default promo on main shop page
-                if(typeof promoData !== 'undefined' && promoData['default']) {
-                    splashImg.src = promoData['default'];
-                    splash.style.display = 'block';
-                }
+                // MAIN OVERVIEW MODE
+                catOverview.style.display = 'block';
+                storeContainer.style.display = 'none';
+                splash.style.display = 'block';
+                splashImg.src = promoData['default']; // Always show default banner on landing
+                crumb.innerText = 'Catalog';
+
+                // Render Overview Cards
+                const catContainer = catOverview.querySelector('div');
+                catContainer.innerHTML = '';
+                
+                categories.forEach(c => {
+                    const card = document.createElement('div');
+                    card.style.cssText = `
+                        background: linear-gradient(rgba(5, 11, 20, 0.7), rgba(5, 11, 20, 0.9)), url('assets/images/promos/${c.img}');
+                        background-size: cover;
+                        background-position: center;
+                        height: 250px;
+                        border: 1px solid var(--color-accent);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: transform 0.3s;
+                    `;
+                    card.innerHTML = `<h3 style="font-size: 1.5rem; text-shadow: 0 2px 10px black;">${c.name}</h3>`;
+                    
+                    card.onmouseenter = () => card.style.transform = 'scale(1.03)';
+                    card.onmouseleave = () => card.style.transform = 'scale(1)';
+                    card.onclick = () => window.location.href = `ordering_system.html?cat=${c.id}`;
+                    
+                    catContainer.appendChild(card);
+                });
             }
         }
 
