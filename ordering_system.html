@@ -754,7 +754,59 @@
             { id: 'color', label: 'Finish', options: ["BLACK", "WHITE", "GRAY"] }
         ];
 
-        // ... [Existing filterMap code] ...
+        // Mapping consolidated filters to actual product facets
+        const filterMap = {
+            category: ['category'],
+            technology: ['camera_technology', 'recorder_technology'],
+            series: ['camera_series', 'recorder_series'],
+            resolution_channel: ['camera_resolution', 'recorder_channel'],
+            housing_case: ['camera_housing', 'recorder_case'],
+            ir_technology: ['ir_technology'],
+            low_light: ['low_light'],
+            color: ['color']
+        };
+
+        function initFilters() {
+            const container = document.getElementById('dynamic-filters');
+            container.innerHTML = '';
+
+            filterConfig.forEach(group => {
+                const groupDiv = document.createElement('div');
+                groupDiv.className = 'filter-group';
+                
+                let optionsHTML = '';
+                group.options.forEach(opt => {
+                    optionsHTML += `
+                        <label class="filter-option">
+                            <input type="checkbox" class="filter-checkbox" 
+                                value="${opt}" 
+                                onchange="toggleFilter('${group.id}', '${opt}')">
+                            ${opt}
+                        </label>
+                    `;
+                });
+
+                groupDiv.innerHTML = `
+                    <div class="filter-header" onclick="this.nextElementSibling.classList.toggle('collapsed')">
+                        ${group.label} <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+                    </div>
+                    <div class="filter-content">
+                        ${optionsHTML}
+                    </div>
+                `;
+                container.appendChild(groupDiv);
+            });
+        }
+
+        function toggleFilter(groupId, value) {
+            const idx = activeFilters[groupId].indexOf(value);
+            if (idx === -1) {
+                activeFilters[groupId].push(value);
+            } else {
+                activeFilters[groupId].splice(idx, 1);
+            }
+            renderGrid();
+        }
 
         // --- URL Parameter Handling ---
         function handleParams() {
@@ -1069,9 +1121,27 @@
             // Netlify handles
         }
 
-        initFilters();
-        handleParams();
-        renderGrid();
+        // Initialize with error handling
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                if (typeof initFilters === 'function') initFilters();
+            } catch (e) { console.error("Filter Init Failed", e); }
+
+            try {
+                if (typeof handleParams === 'function') handleParams();
+            } catch (e) { console.error("Param Handle Failed", e); }
+
+            try {
+                if (typeof renderGrid === 'function') {
+                    if (typeof products !== 'undefined') {
+                        renderGrid();
+                    } else {
+                        console.error("Products data missing!");
+                        document.getElementById('product-grid').innerHTML = "<p style='color:red; padding:2rem;'>Error: Product catalog data failed to load.</p>";
+                    }
+                }
+            } catch (e) { console.error("Grid Render Failed", e); }
+        });
     </script>
     <script src="assets/js/ai-concierge.js"></script>
 <script src="assets/js/circuit-board.js"></script></body>
