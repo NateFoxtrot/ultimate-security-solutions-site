@@ -1,9 +1,9 @@
 const promoData = {
-    "platinum": "assets/images/promos/promo_default.jpg",
-    "pro": "assets/images/promos/promo_default.jpg",
-    "camera": "assets/images/promos/promo_default.jpg",
-    "nvr": "assets/images/promos/promo_default.jpg",
-    "access": "assets/images/promos/promo_default.jpg",
-    "ubiquiti": "assets/images/promos/promo_default.jpg",
-    "default": "assets/images/promos/promo_default.jpg"
+    "platinum": "assets/images/promos/promo_default.jpg?v=2",
+    "pro": "assets/images/promos/promo_default.jpg?v=2",
+    "camera": "assets/images/promos/promo_default.jpg?v=2",
+    "nvr": "assets/images/promos/promo_default.jpg?v=2",
+    "access": "assets/images/promos/promo_default.jpg?v=2",
+    "ubiquiti": "assets/images/promos/promo_default.jpg?v=2",
+    "default": "assets/images/promos/promo_default.jpg?v=2"
 };
