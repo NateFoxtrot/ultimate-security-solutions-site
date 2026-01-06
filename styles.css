@@ -200,20 +200,20 @@ h2::after {
 
 .hero::before {
     content: "";
-    position: absolute;
+    position: fixed; /* Stays centered when scrolling */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 120%; /* Zoomed in */
-    height: 120%;
-    background-image: url('assets/images/logo.jpeg');
+    width: 100vw;
+    height: 100vh;
+    background-image: url('assets/images/logo_circuit.svg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.05; /* Subtle watermark */
+    background-size: 150%; /* Zoomed in to show outlines */
+    opacity: 0.05;
     z-index: 0;
     pointer-events: none;
-    filter: grayscale(100%);
+    /* Removed grayscale to keep original SVG colors if applicable */
 }
 
 .hero-container {
