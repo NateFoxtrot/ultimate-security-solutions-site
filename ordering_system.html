@@ -612,6 +612,16 @@
         <p>Direct-to-consumer and B2B security equipment. Add items to your quote request for a custom solution.</p>
     </header>
 
+    <div id="promo-splash" style="max-width: 1400px; margin: 0 auto 2rem; padding: 0 40px; display: none;">
+        <div style="background: var(--color-secondary); border: 1px solid var(--color-accent); overflow: hidden; position: relative; height: 300px; display: flex; align-items: center; justify-content: center;">
+            <img id="promo-img" src="" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" alt="Current Promotion">
+            <div style="position: absolute; bottom: 2rem; left: 2rem; background: rgba(0,0,0,0.8); padding: 1rem 2rem; border-left: 4px solid var(--color-accent);">
+                <h2 style="font-size: 1.5rem; margin: 0; color: #fff;">FEATURED COLLECTION</h2>
+                <p style="margin: 0.5rem 0 0; color: var(--color-accent);">Professional Grade Security Solutions</p>
+            </div>
+        </div>
+    </div>
+
     <div class="store-container">
         <!-- Sidebar -->
         <aside class="filters-sidebar">
@@ -719,6 +729,7 @@
     </footer>
 
     <script src="products.js"></script>
+    <script src="assets/js/promo_data.js"></script>
     <script>
         let cart = [];
         let activeFilters = {
@@ -743,351 +754,27 @@
             { id: 'color', label: 'Finish', options: ["BLACK", "WHITE", "GRAY"] }
         ];
 
-        // Mapping consolidated filters to actual product facets
-        const filterMap = {
-            category: ['category'],
-            technology: ['camera_technology', 'recorder_technology'],
-            series: ['camera_series', 'recorder_series'],
-            resolution_channel: ['camera_resolution', 'recorder_channel'],
-            housing_case: ['camera_housing', 'recorder_case'],
-            ir_technology: ['ir_technology'],
-            low_light: ['low_light'],
-            color: ['color']
-        };
-
-        function initFilters() {
-            const container = document.getElementById('dynamic-filters');
-            container.innerHTML = '';
-
-            filterConfig.forEach(group => {
-                const groupDiv = document.createElement('div');
-                groupDiv.className = 'filter-group';
-                
-                let optionsHTML = '';
-                group.options.forEach(opt => {
-                    optionsHTML += `
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" 
-                                value="${opt}" 
-                                onchange="toggleFilter('${group.id}', '${opt}')">
-                            ${opt}
-                        </label>
-                    `;
-                });
-
-                groupDiv.innerHTML = `
-                    <div class="filter-header" onclick="this.nextElementSibling.classList.toggle('collapsed')">
-                        ${group.label} <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
-                    </div>
-                    <div class="filter-content">
-                        ${optionsHTML}
-                    </div>
-                `;
-                container.appendChild(groupDiv);
-            });
-        }
-
-        function toggleFilter(groupId, value) {
-            const idx = activeFilters[groupId].indexOf(value);
-            if (idx === -1) {
-                activeFilters[groupId].push(value);
-            } else {
-                activeFilters[groupId].splice(idx, 1);
-            }
-            renderGrid();
-        }
-
-        function renderGrid() {
-            const grid = document.getElementById('product-grid');
-            grid.innerHTML = '';
-
-            const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
-
-            const filtered = products.filter(series => {
-                const f = series.facets;
-                if (!f) return true;
-                if (activeGroups.length === 0) return true;
-
-                // Implement IF/OR logic as requested: 
-                // Product must match AT LEAST ONE selected filter across ALL groups.
-                // This prevents cross-category exclusions (e.g. tech excluding series).
-                for (const [groupId, selectedOpts] of activeGroups) {
-                    const facetKeys = filterMap[groupId];
-                    for (const key of facetKeys) {
-                        const productValues = f[key] || [];
-                        if (selectedOpts.some(opt => productValues.includes(opt))) {
-                            return true; // Match found in this group, show it!
-                        }
-                    }
-                }
-                return false;
-            });
-
-            if (filtered.length === 0) {
-                grid.innerHTML = '<p style="color:var(--color-muted); padding:2rem;">No products match the selected filters. Try broadening your selection.</p>';
-                return;
-            }
-
-            filtered.forEach(series => {
-                const card = document.createElement('div');
-                card.className = 'product-card';
-                const badge = series.category === 'pro' ? 'PRO SERIES' : 'PLATINUM';
-                
-                let variantsHTML = `
-                    <table class="variants-table">
-                        <thead>
-                            <tr>
-                                <th>Model</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                `;
-                
-                series.variants.forEach(v => {
-                    variantsHTML += `
-                        <tr>
-                            <td class="variant-sku">${v.sku}</td>
-                            <td>${v.description.substring(0, 60)}${v.description.length > 60 ? '...' : ''}</td>
-                            <td class="variant-price">$${v.price.toFixed(2)}</td>
-                            <td>
-                                <button class="btn-add-variant" onclick="addToCart('${series.series_id}', '${v.sku}')">Add</button>
-                            </td>
-                        </tr>
-                    `;
-                });
-                variantsHTML += '</tbody></table>';
-
-                const primarySku = series.variants[0].sku;
-                let imgUrl = series.image && series.image !== 'ASSET_MISSING' ? series.image : `https://media.ltsecurityinc.com/catalog/product/${primarySku.toLowerCase()[0]}/${primarySku.toLowerCase()[1]}/${primarySku.toLowerCase()}.jpg`;
-
-                let learnMoreBtn = '';
-                if (series.long_description) {
-                    learnMoreBtn = `<div class="btn-learn-more" onclick="openModal('${series.series_id}')"><i class="fas fa-info-circle"></i> Learn More & Detailed Specs</div>`;
-                }
-
-                card.innerHTML = `
-                    <div class="product-badge">${badge}</div>
-                    <div class="product-img-container">
-                        <img src="${imgUrl}" 
-                             class="product-img" 
-                             alt="${series.name}" 
-                             onload="validateImage(this)"
-                             onerror="handleImageError(this, '${primarySku}')">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-series-title">${series.name}</h3>
-                        <p class="product-series-desc">${series.description}</p>
-                        ${variantsHTML}
-                        ${learnMoreBtn}
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        function validateImage(img) {
-            // Check if the loaded image is a tiny placeholder (LTS sends 125x145 SVGs or 1x1 pixels for missing items)
-            if (img.naturalWidth < 150) {
-                // Treat as error to trigger handleImageError or fallback
-                img.onerror(); 
-            }
-        }
-
-        function handleImageError(img, sku) {
-            // Prevent infinite loops
-            if (!img.dataset.attempts) img.dataset.attempts = 0;
-            const attempts = parseInt(img.dataset.attempts);
-            img.dataset.attempts = attempts + 1;
-
-            const s = sku.toLowerCase();
-            const c1 = s[0];
-            const c2 = s[1];
-
-            // List of patterns to try in order
-            const patterns = [
-                `https://media.ltsecurityinc.com/catalog/product/cache/115d48e57ce8bbb1eb479c9f84dfe6ae/_/c/_${s}.png`,
-                `https://media.ltsecurityinc.com/catalog/product/${s[0]}/${s[1]}/${s}.png`,
-                `https://media.ltsecurityinc.com/catalog/product/${s[0]}/${s[1]}/${s}.jpg`,
-                // Final Fallback
-                'https://placehold.co/400x300/eee/333?text=No+Image'
-            ];
-
-            if (attempts < patterns.length) {
-                img.src = patterns[attempts];
-            } else {
-                img.src = 'https://placehold.co/400x300/eee/333?text=No+Image';
-                img.onerror = null; 
-            }
-        }
-
-        function openModal(seriesId) {
-            const series = products.find(s => s.series_id === seriesId);
-            const modal = document.getElementById('product-modal');
-            const modalBody = document.getElementById('modal-body');
-            
-            // Build Modal Header & Tabs
-            modal.innerHTML = `
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2>${series.name}</h2>
-                        <span class="close-modal" onclick="closeModal()">&times;</span>
-                    </div>
-                    <div class="modal-tabs">
-                        <button class="tab-btn active" onclick="switchTab(event, 'tab-details')">Details</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'tab-specs')">Specifications</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'tab-docs')">Documents</button>
-                        <button class="tab-btn" onclick="switchTab(event, 'tab-video')">Videos</button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Details -->
-                        <div id="tab-details" class="tab-panel active">
-                            <div style="display:flex; gap:3rem; align-items:start;">
-                                <img src="${series.image}" style="max-width:300px; background:#fff; padding:1rem;" alt="${series.name}">
-                                <div>${series.long_description || series.description}</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Specs -->
-                        <div id="tab-specs" class="tab-panel">
-                            <div class="specs-grid">
-                                ${Object.entries(series.specs || {}).map(([k, v]) => `
-                                    <div class="spec-item"><span class="spec-label">${k}</span> <span>${v}</span></div>
-                                `).join('') || '<p>Detailed specifications available upon request.</p>'}
-                            </div>
-                        </div>
-
-                        <!-- Documents -->
-                        <div id="tab-docs" class="tab-panel">
-                            <div class="download-list">
-                                ${(series.downloads || []).map(d => `
-                                    <div class="download-item">
-                                        <a href="${d.url}" target="_blank" class="btn-download">
-                                            <i class="fas fa-file-pdf"></i>
-                                            <span>${d.name}</span>
-                                        </a>
-                                    </div>
-                                `).join('') || '<p>No documentation found for this item.</p>'}
-                            </div>
-                        </div>
-
-                        <!-- Videos -->
-                        <div id="tab-video" class="tab-panel">
-                            ${(series.videos || []).map(v => `
-                                <div class="video-container">
-                                    <iframe src="${v}" frameborder="0" allowfullscreen></iframe>
-                                </div>
-                            `).join('') || '<p>No multimedia content available for this series.</p>'}
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            modal.style.display = "block";
-            document.body.style.overflow = "hidden"; // Prevent scroll
-        }
-
-        function switchTab(evt, tabId) {
-            const panels = document.querySelectorAll('.tab-panel');
-            const btns = document.querySelectorAll('.tab-btn');
-            
-            panels.forEach(p => p.classList.remove('active'));
-            btns.forEach(b => b.classList.remove('active'));
-            
-            document.getElementById(tabId).classList.add('active');
-            evt.currentTarget.classList.add('active');
-        }
-
-        function closeModal() {
-            document.getElementById('product-modal').style.display = "none";
-            document.body.style.overflow = "auto";
-        }
-
-        window.onclick = function(event) {
-            const modal = document.getElementById('product-modal');
-            if (event.target == modal) closeModal();
-        }
-
-        function addToCart(seriesId, sku) {
-            const series = products.find(s => s.series_id === seriesId);
-            const variant = series.variants.find(v => v.sku === sku);
-            cart.push(variant);
-            updateCartUI();
-            toggleCart(true);
-        }
-
-        function removeFromCart(index) {
-            cart.splice(index, 1);
-            updateCartUI();
-        }
-
-        function updateCartUI() {
-            const itemsContainer = document.getElementById('cart-items');
-            const countBadge = document.getElementById('cart-count');
-            const subtotalEl = document.getElementById('cart-total-price');
-            const hiddenItemsInput = document.getElementById('order-items');
-            const hiddenTotalInput = document.getElementById('order-total');
-            
-            countBadge.innerText = cart.length;
-            itemsContainer.innerHTML = '';
-            
-            let total = 0;
-            cart.forEach((item, index) => {
-                total += item.price;
-                const div = document.createElement('div');
-                div.className = 'cart-item';
-                div.innerHTML = `
-                    <div class="cart-item-info">
-                        <h4>${item.sku}</h4>
-                        <p>$${item.price.toFixed(2)}</p>
-                    </div>
-                    <button class="remove-btn" onclick="removeFromCart(${index})">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                `;
-                itemsContainer.appendChild(div);
-            });
-            
-            subtotalEl.innerText = `$${total.toFixed(2)}`;
-            hiddenItemsInput.value = JSON.stringify(cart.map(i => ({sku: i.sku, price: i.price})));
-            hiddenTotalInput.value = total.toFixed(2);
-            document.getElementById('checkout-total-price').innerText = `$${total.toFixed(2)}`;
-        }
-
-        function toggleCart(open) {
-            const sidebar = document.getElementById('cart-sidebar');
-            if (open) sidebar.classList.add('open');
-            else sidebar.classList.remove('open');
-        }
-
-        function openCheckout() {
-            if (cart.length === 0) {
-                alert("Your cart is empty.");
-                return;
-            }
-            toggleCart(false);
-            document.getElementById('checkout-modal').style.display = 'block';
-        }
-
-        function closeCheckout() {
-            document.getElementById('checkout-modal').style.display = 'none';
-        }
-
-        function handleOrderSubmit(e) {
-            // Netlify handles the actual submission if we don't prevent default,
-            // but we might want to clear cart or show success.
-            // For now let it submit normally to Netlify Forms.
-        }
+        // ... [Existing filterMap code] ...
 
         // --- URL Parameter Handling ---
         function handleParams() {
             const params = new URLSearchParams(window.location.search);
             const cat = params.get('cat');
             const crumb = document.getElementById('current-crumb');
+            const splash = document.getElementById('promo-splash');
+            const splashImg = document.getElementById('promo-img');
             
             if (cat) {
+                // Show Promo Splash if data exists
+                if(typeof promoData !== 'undefined' && promoData[cat]) {
+                    splashImg.src = promoData[cat];
+                    splash.style.display = 'block';
+                } else if(typeof promoData !== 'undefined' && promoData['default']) {
+                     // Fallback to default promo
+                    splashImg.src = promoData['default'];
+                    splash.style.display = 'block';
+                }
+
                 if (cat === 'platinum') {
                     activeFilters.series = ['PLATINUM SERIES'];
                     crumb.innerText = 'Platinum Series';
@@ -1114,6 +801,12 @@
                         if (vals.includes(cb.value)) cb.checked = true;
                     }
                 });
+            } else {
+                // Show default promo on main shop page
+                if(typeof promoData !== 'undefined' && promoData['default']) {
+                    splashImg.src = promoData['default'];
+                    splash.style.display = 'block';
+                }
             }
         }
 

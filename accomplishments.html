@@ -212,6 +212,7 @@
         <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
     </footer>
 
+    <script src="assets/js/portfolio_data.js"></script>
     <script>
         const clients = [
             { name: 'Target', logo: 'target.svg', text: '“Successful execution of multi-day Self Checkout installations and upgrades across regional locations.”' },
@@ -233,13 +234,8 @@
             { name: 'Ameristar Casino', logo: 'ameristar.svg', text: '“Ensuring 24/7 uptime for gaming floor security and surveillance networks.”' }
         ];
 
-        const allImages = [
-            'proj_1.jpg', 'proj_2.jpg', 'proj_3.jpg', 'proj_4.jpg',
-            'proj_5.jpg', 'proj_6.jpg', 'proj_7.jpg', 'proj_8.jpg',
-            'proj_9.jpg', 'proj_10.jpg', 'proj_11.jpg', 'proj_12.jpg',
-            'proj_13.jpg', 'proj_14.jpg', 'proj_15.jpg', 'proj_16.jpg',
-            'proj_17.jpg', 'proj_18.jpg', 'proj_19.jpg', 'proj_20.jpg'
-        ];
+        // Use data from portfolio_data.js
+        const allImages = portfolioData;
 
         const itemsPerPage = 12;
         let currentIndex = 0;
@@ -252,18 +248,19 @@
 
         function loadItems() {
             const nextBatch = allImages.slice(currentIndex, currentIndex + itemsPerPage);
-            nextBatch.forEach(img => {
+            nextBatch.forEach(data => {
                 const item = document.createElement('div');
                 item.className = 'portfolio-item visible';
                 item.innerHTML = `
-                    <img src="assets/images/portfolio_core/${img}" alt="Project Installation" loading="lazy">
+                    <img src="assets/images/portfolio_core/${data.src}" alt="${data.client} - ${data.type}" loading="lazy">
                     <div class="portfolio-overlay">
-                        <h3>Commercial Installation</h3>
+                        <h3>${data.client}</h3>
+                        <p style="color:white; font-size:0.8rem;">${data.type}</p>
                     </div>
                 `;
                 
                 item.onclick = () => {
-                    lightboxImg.src = `assets/images/portfolio_core/${img}`;
+                    lightboxImg.src = `assets/images/portfolio_core/${data.src}`;
                     lightbox.classList.add('active');
                 };
                 
