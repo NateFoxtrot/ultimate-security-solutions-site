@@ -51,7 +51,7 @@ body::before {
     background-image: url('assets/images/logo.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 165vh; /* Increased zoom by 25% */
+    background-size: 190vh; /* Increased zoom by another 15% */
     opacity: 0.2;
     z-index: -2;
     pointer-events: none;
