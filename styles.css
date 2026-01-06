@@ -51,11 +51,11 @@ body::before {
     background-image: url('assets/images/logo.jpeg');
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 150%; /* Large, zoomed in */
-    opacity: 0.15; /* Increased opacity for visibility */
-    z-index: -2; /* Behind animation */
+    background-size: 85vh; /* Fits within viewport height */
+    opacity: 0.2; /* Visible but background */
+    z-index: -2;
     pointer-events: none;
-    filter: grayscale(100%) contrast(1.2); /* High contrast gray for technical look */
+    filter: grayscale(100%) contrast(1.2);
 }
 
 /* Re-use hero space for content, logo is now on body */

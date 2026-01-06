@@ -2,142 +2,158 @@ const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 
 let w, h;
-let grid = 20; // Grid size
-let paths = [];
-let walkers = [];
+let grid = 15; // Tighter grid for more detail
+let paths = []; // Fixed paths
+let pulses = [];
 
 const CONFIG = {
-    traceColor: 'rgba(14, 165, 233, 0.1)', // Faint Blue
+    pathColor: 'rgba(14, 165, 233, 0.08)', // Very faint structure
     pulseColor: '#ffd700', // Gold
-    pulseSpeed: 1, // Steps per frame
-    maxWalkers: 50,
-    spawnRate: 0.05
+    nodeCount: 150, // More nodes
+    connectionRadius: 200,
+    pulseSpeed: 3
 };
 
 function resize() {
     w = canvas.width = window.innerWidth;
     h = canvas.height = window.innerHeight;
-    // Reset on resize
-    ctx.clearRect(0, 0, w, h);
-    paths = [];
-    walkers = [];
+    initNetwork();
 }
 window.addEventListener('resize', resize);
-resize();
 
-class Walker {
-    constructor(x, y) {
-        this.x = x || Math.floor(Math.random() * (w / grid)) * grid;
-        this.y = y || Math.floor(Math.random() * (h / grid)) * grid;
-        this.history = [{x: this.x, y: this.y}];
+class Path {
+    constructor(x1, y1, x2, y2) {
+        this.path = [];
+        this.generateOrthogonal(x1, y1, x2, y2);
+    }
+
+    generateOrthogonal(x1, y1, x2, y2) {
+        // Simple L-shape routing
+        this.path.push({x: x1, y: y1});
+        if (Math.random() > 0.5) {
+            this.path.push({x: x2, y: y1}); // Horizontal first
+        } else {
+            this.path.push({x: x1, y: y2}); // Vertical first
+        }
+        this.path.push({x: x2, y: y2});
+    }
+
+    draw() {
+        ctx.strokeStyle = CONFIG.pathColor;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(this.path[0].x, this.path[0].y);
+        for(let i=1; i<this.path.length; i++) {
+            ctx.lineTo(this.path[i].x, this.path[i].y);
+        }
+        ctx.stroke();
+        
+        // Draw nodes
+        ctx.fillStyle = CONFIG.pathColor;
+        ctx.beginPath();
+        ctx.arc(this.path[0].x, this.path[0].y, 2, 0, Math.PI*2);
+        ctx.arc(this.path[this.path.length-1].x, this.path[this.path.length-1].y, 2, 0, Math.PI*2);
+        ctx.fill();
+    }
+}
+
+class Pulse {
+    constructor(path) {
+        this.path = path.path;
+        this.segment = 0;
+        this.progress = 0;
         this.dead = false;
-        this.dir = Math.floor(Math.random() * 4); // 0: right, 1: down, 2: left, 3: up
-        this.life = Math.random() * 100 + 50;
-        this.color = CONFIG.pulseColor;
+        
+        // Calculate total length for speed consistency
+        this.speed = 0.05 + Math.random() * 0.05;
     }
 
     update() {
-        if (this.dead) return;
-        this.life--;
-
-        if (this.life <= 0 || this.x < 0 || this.x > w || this.y < 0 || this.y > h) {
-            this.dead = true;
-            // Persist the path
-            paths.push([...this.history]);
-            return;
+        this.progress += this.speed;
+        if (this.progress >= 1) {
+            this.progress = 0;
+            this.segment++;
+            if (this.segment >= this.path.length - 1) {
+                this.dead = true;
+            }
         }
-
-        // Randomly turn
-        if (Math.random() < 0.1) {
-            this.dir = (this.dir + (Math.random() < 0.5 ? 1 : 3)) % 4;
-        }
-
-        switch (this.dir) {
-            case 0: this.x += grid; break;
-            case 1: this.y += grid; break;
-            case 2: this.x -= grid; break;
-            case 3: this.y -= grid; break;
-        }
-
-        this.history.push({x: this.x, y: this.y});
     }
 
-    draw(ctx) {
+    draw() {
         if (this.dead) return;
         
-        // Draw Head (Pulse)
-        ctx.fillStyle = this.color;
+        let p1 = this.path[this.segment];
+        let p2 = this.path[this.segment + 1];
+        
+        let x = p1.x + (p2.x - p1.x) * this.progress;
+        let y = p1.y + (p2.y - p1.y) * this.progress;
+
+        ctx.fillStyle = CONFIG.pulseColor;
         ctx.shadowBlur = 10;
-        ctx.shadowColor = this.color;
+        ctx.shadowColor = CONFIG.pulseColor;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, 2, 0, Math.PI * 2);
+        ctx.arc(x, y, 2, 0, Math.PI * 2);
         ctx.fill();
         ctx.shadowBlur = 0;
-
-        // Draw current trail
-        ctx.strokeStyle = this.color;
-        ctx.lineWidth = 2;
-        ctx.beginPath();
-        if (this.history.length > 0) {
-            let start = this.history[this.history.length - 2] || this.history[0];
-            ctx.moveTo(start.x, start.y);
-            ctx.lineTo(this.x, this.y);
-        }
-        ctx.stroke();
     }
 }
 
-function init() {
-    walkers = [];
+function initNetwork() {
     paths = [];
-    ctx.clearRect(0, 0, w, h);
+    pulses = [];
+    
+    let nodes = [];
+    // Create nodes concentrated in center
+    for (let i = 0; i < CONFIG.nodeCount; i++) {
+        // Bias towards center
+        let x = w/2 + (Math.random() - 0.5) * w * 0.8;
+        let y = h/2 + (Math.random() - 0.5) * h * 0.8;
+        
+        // Snap to grid
+        x = Math.floor(x / grid) * grid;
+        y = Math.floor(y / grid) * grid;
+        nodes.push({x, y});
+    }
+
+    // Connect nodes
+    nodes.forEach((node, i) => {
+        // Connect to nearest neighbors
+        let neighbors = nodes.filter(n => {
+            let d = Math.sqrt((n.x - node.x)**2 + (n.y - node.y)**2);
+            return d > 0 && d < CONFIG.connectionRadius;
+        });
+        
+        // Limit connections per node
+        neighbors.slice(0, 3).forEach(n => {
+            paths.push(new Path(node.x, node.y, n.x, n.y));
+        });
+    });
 }
 
 function animate() {
-    // Fade existing paths slightly to background
-    // We don't clearRect completely to leave trails, but we want old "dead" paths to stay visible as faint traces
-    
-    // 1. Draw Faint Background over everything to fade active pulses, but we want traces to persist?
-    // Strategy: Clear, Draw Saved Paths (Faint), Draw Active Walkers (Bright)
-    
     ctx.clearRect(0, 0, w, h);
 
-    // Draw Persistent Paths (The "Circuit Board" building up)
-    ctx.strokeStyle = CONFIG.traceColor;
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    paths.forEach(path => {
-        if (path.length < 2) return;
-        ctx.moveTo(path[0].x, path[0].y);
-        for (let i = 1; i < path.length; i++) {
-            ctx.lineTo(path[i].x, path[i].y);
-        }
-    });
-    ctx.stroke();
+    // Draw static background structure
+    paths.forEach(p => p.draw());
 
-    // Spawn new walkers
-    if (walkers.length < CONFIG.maxWalkers && Math.random() < CONFIG.spawnRate) {
-        walkers.push(new Walker());
+    // Spawn pulses
+    if (pulses.length < 30 && Math.random() < 0.1) {
+        let randomPath = paths[Math.floor(Math.random() * paths.length)];
+        pulses.push(new Pulse(randomPath));
     }
 
-    // Update and Draw Walkers (The "Pulses")
-    for (let i = walkers.length - 1; i >= 0; i--) {
-        let walker = walkers[i];
-        walker.update();
-        walker.draw(ctx);
-        if (walker.dead) {
-            walkers.splice(i, 1);
+    // Animate pulses
+    for (let i = pulses.length - 1; i >= 0; i--) {
+        pulses[i].update();
+        pulses[i].draw();
+        if (pulses[i].dead) {
+            pulses.splice(i, 1);
         }
     }
 
     requestAnimationFrame(animate);
 }
 
-// Initial Spawn from center
-setTimeout(() => {
-    for(let i=0; i<10; i++) {
-        walkers.push(new Walker(w/2, h/2));
-    }
-}, 100);
-
+// Start
+resize();
 animate();
