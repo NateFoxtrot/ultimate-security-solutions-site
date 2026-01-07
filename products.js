@@ -1418,16 +1418,32 @@ const products = [
     ],
     "downloads": [
       {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
+        "name": "LTCMIP3C8PW-SDL User Manual (1.36 MB)",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/8790/product/3840/"
+      },
+      {
+        "name": "LTCMIP3C8PW-SDL Quick Installation Guide (1.36 MB)",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/10263/product/3840/"
+      },
+      {
+        "name": "LTCMIP3C8PW-SDL Spec Sheet (Revised) (633.30 kB)",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/10949/product/3840/"
       }
     ],
     "specs": {
-      "Key Features": "\u2022 2 x 4 MP 4 mm Lenses (8 MP total)\n\u2022 5120 x 1440 @ 20 fps or 15fps with WDR\n\u2022 White, supplemental light LEDs, ranging up to 131 feet\n\u2022 Human & vehicle target classification\n\u2022 130 dB True WDR technology\n\u2022 Built-in microphone & speaker\n\u2022 MicroSD card storage up to 256 GB\n\u2022 IP67, IK10 protection ratings",
-      "Camera Resolution": "8MP, 4MP",
-      "Camera Technology": "IP/NETWORK",
-      "Camera Series": "PLATINUM SERIES",
-      "Camera Housing": "TURRET"
+      "Specifications": "Camera Image Sensor: 2 \u00d7 1/1.8\" Progressive Scan CMOS\nMax. Resolution: 5120 \u00d7 1440\nMin. Illumination: Color: 0.0005 Lux @ (f 1.0, AGC ON), 0 Lux with light\nShutter Speed: 1/3 to 1/100,000 sec.\nAngle Adjustment: Pan: -30\u00b0 to 30\u00b0, tilt: -75\u00b0 to 75\u00b0\nCamera Dimensions: \u00d8 6.1 \u00d7 6. 1 in. (\u00d8 155 \u00d7 155.3 mm)\nWeight: Approx. 2.4 lbs\u00a0 (1,110 g)",
+      "Camera Image Sensor": "2 \u00d7 1/1.8\" Progressive Scan CMOS",
+      "Max. Resolution": "5120 \u00d7 1440",
+      "Min. Illumination": "Color: 0.0005 Lux @ (f 1.0, AGC ON), 0 Lux with light",
+      "Shutter Speed": "1/3 to 1/100,000 sec.",
+      "Angle Adjustment": "Pan: -30\u00b0 to 30\u00b0, tilt: -75\u00b0 to 75\u00b0",
+      "Camera Dimensions": "\u00d8 6.1 \u00d7 6. 1 in. (\u00d8 155 \u00d7 155.3 mm)",
+      "Weight": "Approx. 2.4 lbs\u00a0 (1,110 g)",
+      "SKU": "LTCMIP3C8PW-SDL",
+      "Camera Technology": "IP / Network",
+      "Camera Series": "Platinum Series",
+      "Camera Housing": "Turret",
+      "Camera Resolution": "8MP"
     }
   },
   {

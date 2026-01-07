@@ -380,7 +380,7 @@ ${series.description}</p>${variantsHTML}<div class="btn-learn-more" onclick="ope
                                 <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
                                     <caption style="text-align:left; font-size:1.2rem; margin-bottom:1rem; color:var(--color-accent); font-weight:700;">Technical Specifications</caption>
                                     <tbody>
-                                        ${Object.entries(series.specs || {}).map(([k, v], i) => `<tr style="background:${i % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent'}; border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:12px; color:var(--color-muted); width:30%; font-weight:600;">${k}</td><td style="padding:12px; color:#fff;">${v}</td></tr>`).join('')}
+                                        ${Object.entries(series.specs || {}).map(([k, v], i) => `<tr style="background:${i % 2 === 0 ? 'rgba(255,255,255,0.02)' : 'transparent'}; border-bottom:1px solid rgba(255,255,255,0.05);"><td style="padding:12px; color:var(--color-muted); width:30%; font-weight:600;">${k}</td><td style="padding:12px; color:#fff; white-space: pre-line;">${v}</td></tr>`).join('')}
                                     </tbody>
                                 </table>
                             </div>
