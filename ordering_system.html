@@ -569,17 +569,25 @@
 
         function renderGrid() {
             const grid = document.getElementById('product-grid');
+            if(!grid) return;
             grid.innerHTML = '';
 
             const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
 
             const filtered = products.filter(series => {
+                if (!series) return false;
+
                 // 1. Text Search Filter
                 if (searchTerm) {
                     const searchLower = searchTerm.toLowerCase();
-                    const matchName = series.name.toLowerCase().includes(searchLower);
-                    const matchDesc = series.description.toLowerCase().includes(searchLower);
-                    const matchSku = series.variants.some(v => v.sku.toLowerCase().includes(searchLower));
+                    const name = series.name ? series.name.toLowerCase() : '';
+                    const desc = series.description ? series.description.toLowerCase() : '';
+                    
+                    const matchName = name.includes(searchLower);
+                    const matchDesc = desc.includes(searchLower);
+                    const matchSku = series.variants && Array.isArray(series.variants) 
+                        ? series.variants.some(v => v.sku && v.sku.toLowerCase().includes(searchLower))
+                        : false;
                     
                     if (!matchName && !matchDesc && !matchSku) return false;
                 }
@@ -590,7 +598,10 @@
                 if (activeGroups.length === 0) return true;
 
                 for (const [groupId, selectedOpts] of activeGroups) {
+                    if (!filterMap) return true; // Safety check
                     const facetKeys = filterMap[groupId];
+                    if (!facetKeys) continue;
+
                     for (const key of facetKeys) {
                         const productValues = f[key] || [];
                         if (selectedOpts.some(opt => productValues.includes(opt))) {
@@ -602,14 +613,17 @@
             });
 
             if (filtered.length === 0) {
-                grid.innerHTML = '<p style="color:var(--color-muted); padding:2rem;">No products match the selected filters. Try broadening your selection.</p>';
+                grid.innerHTML = '<p style="color:var(--color-muted); padding:2rem;">No products match your search or filters.</p>';
                 return;
             }
 
-            filtered.forEach(series => {
+            // Limit rendering to first 50 items for performance/debugging if list is huge
+            const displaySet = filtered.slice(0, 50);
+
+            displaySet.forEach(series => {
                 const card = document.createElement('div');
                 card.className = 'product-card';
-                const badge = series.category === 'pro' ? 'PRO SERIES' : 'PLATINUM';
+                const badge = (series.category === 'pro' || (series.facets && series.facets.category && series.facets.category.includes('PRO-X'))) ? 'PRO SERIES' : 'PLATINUM';
                 
                 let variantsHTML = `
                     <table class="variants-table">
@@ -624,21 +638,23 @@
                         <tbody>
                 `;
                 
-                series.variants.forEach(v => {
-                    variantsHTML += `
-                        <tr>
-                            <td class="variant-sku">${v.sku}</td>
-                            <td>${v.description.substring(0, 60)}${v.description.length > 60 ? '...' : ''}</td>
-                            <td class="variant-price">$${v.price.toFixed(2)}</td>
-                            <td>
-                                <button class="btn-add-variant" onclick="addToCart('${series.series_id}', '${v.sku}')">Add</button>
-                            </td>
-                        </tr>
-                    `;
-                });
+                if (series.variants && Array.isArray(series.variants)) {
+                    series.variants.forEach(v => {
+                        variantsHTML += `
+                            <tr>
+                                <td class="variant-sku">${v.sku || 'N/A'}</td>
+                                <td>${v.description ? v.description.substring(0, 60) : ''}...</td>
+                                <td class="variant-price">$${v.price ? v.price.toFixed(2) : '0.00'}</td>
+                                <td>
+                                    <button class="btn-add-variant" onclick="addToCart('${series.series_id}', '${v.sku}')">Add</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                }
                 variantsHTML += '</tbody></table>';
 
-                const primarySku = series.variants[0].sku;
+                const primarySku = (series.variants && series.variants[0]) ? series.variants[0].sku : 'UNKNOWN';
                 let imgUrl = series.image && series.image !== 'ASSET_MISSING' ? series.image : `https://media.ltsecurityinc.com/catalog/product/${primarySku.toLowerCase()[0]}/${primarySku.toLowerCase()[1]}/${primarySku.toLowerCase()}.jpg`;
 
                 let learnMoreBtn = '';
@@ -651,13 +667,13 @@
                     <div class="product-img-container">
                         <img src="${imgUrl}" 
                              class="product-img" 
-                             alt="${series.name}" 
+                             alt="${series.name || 'Product'}" 
                              onload="validateImage(this)"
                              onerror="handleImageError(this, '${primarySku}')">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-series-title">${series.name}</h3>
-                        <p class="product-series-desc">${series.description}</p>
+                        <h3 class="product-series-title">${series.name || 'Unnamed Series'}</h3>
+                        <p class="product-series-desc">${series.description || ''}</p>
                         ${variantsHTML}
                         ${learnMoreBtn}
                     </div>
