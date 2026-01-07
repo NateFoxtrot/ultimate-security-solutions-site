@@ -200,6 +200,55 @@
         .tab-panel.active {
             display: block;
         }
+        
+        /* Store Container Styles */
+        .store-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 2rem;
+            padding: 2rem 40px 4rem;
+        }
+
+        .filters-sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 120px;
+            height: fit-content;
+            background: rgba(15, 28, 46, 0.8);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .filter-title { color: var(--color-accent); font-size: 1.1rem; margin-bottom: 1.5rem; }
+        .filter-group { margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .filter-header { display: flex; justify-content: space-between; cursor: pointer; color: #fff; font-weight: 700; font-size: 0.85rem; }
+        .filter-content { display: block; margin-top: 0.5rem; }
+        .filter-content.collapsed { display: none; }
+        .filter-option { display: flex; align-items: center; margin-bottom: 0.5rem; cursor: pointer; color: var(--color-muted); font-size: 0.85rem; }
+        .filter-checkbox { margin-right: 10px; }
+
+        .product-grid { flex-grow: 1; display: flex; flex-direction: column; gap: 1.5rem; }
+        .product-card { background: rgba(15, 28, 46, 0.6); border: 1px solid rgba(255, 215, 0, 0.1); display: flex; position: relative; }
+        .product-badge { position: absolute; top:0; left:0; background: var(--color-accent); color: #000; padding: 4px 8px; font-size: 0.7rem; font-weight: 800; }
+        .product-img-container { width: 260px; background: #fff; padding: 1rem; display: flex; align-items: center; justify-content: center; }
+        .product-img { max-width: 100%; max-height: 200px; object-fit: contain; }
+        .product-info { padding: 1.5rem; flex-grow: 1; }
+        .product-series-title { color: #fff; font-size: 1.3rem; }
+        .product-series-desc { color: var(--color-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        
+        .variants-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; background: rgba(0,0,0,0.2); }
+        .variants-table th { text-align: left; padding: 10px; border-bottom: 1px solid var(--color-accent); color: var(--color-accent); }
+        .variants-table td { padding: 10px; border-bottom: 1px solid rgba(255,215,0,0.1); color: #fff; }
+        .btn-add-variant { background: transparent; border: 1px solid var(--color-accent); color: var(--color-accent); padding: 5px 10px; cursor: pointer; }
+        .btn-add-variant:hover { background: var(--color-accent); color: #000; }
+        
+        .cart-overlay { position: fixed; top: 0; right: -400px; width: 400px; height: 100%; background: var(--color-secondary); z-index: 2000; padding: 2rem; border-left: 1px solid var(--color-accent); transition: right 0.3s; }
+        .cart-overlay.open { right: 0; }
     </style>
 </head>
 <body><canvas id="bg-canvas"></canvas>
@@ -295,7 +344,7 @@
     <!-- Product Detail Modal -->
     <div id="product-modal" class="modal">
         <div class="modal-content">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <span class="close-modal" onclick="closeModal()"> &times;</span>
             <div class="modal-body" id="modal-body">
                 <!-- Data injected by JS -->
             </div>
@@ -424,6 +473,7 @@
 
         function initFilters() {
             const container = document.getElementById('dynamic-filters');
+            if(!container) return;
             container.innerHTML = '';
 
             filterConfig.forEach(group => {
@@ -464,112 +514,9 @@
             renderGrid();
         }
 
-        // --- URL Parameter Handling ---
-        function handleParams() {
-            const params = new URLSearchParams(window.location.search);
-            const cat = params.get('cat');
-            const crumb = document.getElementById('current-crumb');
-            const splash = document.getElementById('promo-splash');
-            const splashImg = document.getElementById('promo-img');
-            const catOverview = document.getElementById('category-overview');
-            const storeContainer = document.getElementById('main-store-container');
-            
-            // Define Categories for Overview
-            const categories = [
-                { id: 'ip_solutions', name: 'IP Solutions', img: 'promo_camera.jpg', filter: 'IP SOLUTIONS' },
-                { id: 'tvi_solutions', name: 'HD-TVI Solutions', img: 'promo_pro.jpg', filter: 'HD-TVI SOLUTIONS' },
-                { id: 'access', name: 'Access Control', img: 'promo_access.jpg', filter: 'ACCESS CONTROL' },
-                { id: 'intercoms', name: 'Intercoms', img: 'promo_default.jpg', filter: 'INTERCOMS' },
-                { id: 'accessories', name: 'Accessories', img: 'promo_nvr.jpg', filter: 'ACCESSORIES' },
-                { id: 'ubiquiti', name: 'Ubiquiti', img: 'promo_default.jpg', filter: 'UBIQUITI' }
-            ];
-
-            if (cat) {
-                // CATEGORY SELECTED MODE
-                catOverview.style.display = 'none';
-                storeContainer.style.display = 'flex';
-                splash.style.display = 'block';
-
-                // Show Promo Splash if data exists
-                if(typeof promoData !== 'undefined' && promoData[cat]) {
-                    splashImg.src = promoData[cat];
-                } else if(typeof promoData !== 'undefined' && promoData['default']) {
-                    splashImg.src = promoData['default'];
-                }
-
-                // Map 'cat' param to filters
-                if (cat === 'platinum' || cat === 'ip_solutions') {
-                    activeFilters.category = ['IP SOLUTIONS'];
-                    crumb.innerText = 'IP Solutions';
-                } else if (cat === 'pro' || cat === 'tvi_solutions') {
-                    activeFilters.category = ['HD-TVI SOLUTIONS'];
-                    crumb.innerText = 'HD-TVI Solutions';
-                } else if (cat === 'nvr') {
-                    activeFilters.technology = ['IP/NVR'];
-                    crumb.innerText = 'NVR Systems';
-                } else if (cat === 'camera') {
-                    activeFilters.technology = ['IP/NETWORK'];
-                    crumb.innerText = 'IP Cameras';
-                } else if (cat === 'access') {
-                    activeFilters.category = ['ACCESS CONTROL'];
-                    crumb.innerText = 'Access Control';
-                } else if (cat === 'intercoms') {
-                    activeFilters.category = ['INTERCOMS'];
-                    crumb.innerText = 'Intercoms';
-                } else if (cat === 'accessories') {
-                    activeFilters.category = ['ACCESSORIES'];
-                    crumb.innerText = 'Accessories';
-                } else if (cat === 'ubiquiti') {
-                    activeFilters.category = ['UBIQUITI'];
-                    crumb.innerText = 'Ubiquiti Networking';
-                }
-                
-                // Update checkboxes in UI
-                document.querySelectorAll('.filter-checkbox').forEach(cb => {
-                    for (const [group, vals] of Object.entries(activeFilters)) {
-                        if (vals.includes(cb.value)) cb.checked = true;
-                    }
-                });
-            } else {
-                // MAIN OVERVIEW MODE
-                catOverview.style.display = 'block';
-                storeContainer.style.display = 'none';
-                splash.style.display = 'block';
-                splashImg.src = promoData['default']; // Always show default banner on landing
-                crumb.innerText = 'Catalog';
-
-                // Render Overview Cards
-                const catContainer = catOverview.querySelector('div');
-                catContainer.innerHTML = '';
-                
-                categories.forEach(c => {
-                    const card = document.createElement('div');
-                    card.style.cssText = `
-                        background: linear-gradient(rgba(5, 11, 20, 0.7), rgba(5, 11, 20, 0.9)), url('assets/images/promos/${c.img}');
-                        background-size: cover;
-                        background-position: center;
-                        height: 250px;
-                        border: 1px solid var(--color-accent);
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        cursor: pointer;
-                        transition: transform 0.3s;
-                    `;
-                    card.innerHTML = `<h3 style="font-size: 1.5rem; text-shadow: 0 2px 10px black;">${c.name}</h3>`;
-                    
-                    card.onmouseenter = () => card.style.transform = 'scale(1.03)';
-                    card.onmouseleave = () => card.style.transform = 'scale(1)';
-                    card.onclick = () => window.location.href = `ordering_system.html?cat=${c.id}`;
-                    
-                    catContainer.appendChild(card);
-                });
-            }
-        }
-
         function renderGrid() {
             const grid = document.getElementById('product-grid');
-            if(!grid) return;
+            if (!grid) return;
             grid.innerHTML = '';
 
             const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
@@ -598,7 +545,7 @@
                 if (activeGroups.length === 0) return true;
 
                 for (const [groupId, selectedOpts] of activeGroups) {
-                    if (!filterMap) return true; // Safety check
+                    if (!filterMap) return true;
                     const facetKeys = filterMap[groupId];
                     if (!facetKeys) continue;
 
@@ -617,7 +564,7 @@
                 return;
             }
 
-            // Limit rendering to first 50 items for performance/debugging if list is huge
+            // Limit rendering to first 50 items for performance
             const displaySet = filtered.slice(0, 50);
 
             displaySet.forEach(series => {
@@ -716,7 +663,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2>${series.name}</h2>
-                        <span class="close-modal" onclick="closeModal()">&times;</span>
+                        <span class="close-modal" onclick="closeModal()"> &times;</span>
                     </div>
                     <div class="modal-tabs">
                         <button class="tab-btn active" onclick="switchTab(event, 'tab-details')">Details</button>
@@ -735,7 +682,7 @@
                             <div class="specs-grid">
                                 ${Object.entries(series.specs || {}).map(([k, v]) => `
                                     <div class="spec-item"><span class="spec-label">${k}</span> <span>${v}</span></div>
-                                `).join('') || '<p>Detailed specifications available upon request.</p>'}
+                                `).join('') || '<p>Detailed specifications available upon request.</p>'} 
                             </div>
                         </div>
                         <div id="tab-docs" class="tab-panel">
@@ -853,58 +800,100 @@
             // Netlify handles
         }
 
-        // Mapping consolidated filters to actual product facets
-        const filterMap = {
-            category: ['category'],
-            technology: ['camera_technology', 'recorder_technology'],
-            series: ['camera_series', 'recorder_series'],
-            resolution_channel: ['camera_resolution', 'recorder_channel'],
-            housing_case: ['camera_housing', 'recorder_case'],
-            ir_technology: ['ir_technology'],
-            low_light: ['low_light'],
-            color: ['color']
-        };
+        // --- URL Parameter Handling ---
+        function handleParams() {
+            const params = new URLSearchParams(window.location.search);
+            const cat = params.get('cat');
+            const crumb = document.getElementById('current-crumb');
+            const splash = document.getElementById('promo-splash');
+            const splashImg = document.getElementById('promo-img');
+            const catOverview = document.getElementById('category-overview');
+            const storeContainer = document.getElementById('main-store-container');
+            
+            const categories = [
+                { id: 'ip_solutions', name: 'IP Solutions', img: 'promo_default.jpg', filter: 'IP SOLUTIONS' },
+                { id: 'tvi_solutions', name: 'HD-TVI Solutions', img: 'promo_default.jpg', filter: 'HD-TVI SOLUTIONS' },
+                { id: 'access', name: 'Access Control', img: 'promo_default.jpg', filter: 'ACCESS CONTROL' },
+                { id: 'intercoms', name: 'Intercoms', img: 'promo_default.jpg', filter: 'INTERCOMS' },
+                { id: 'accessories', name: 'Accessories', img: 'promo_default.jpg', filter: 'ACCESSORIES' },
+                { id: 'ubiquiti', name: 'Ubiquiti', img: 'promo_default.jpg', filter: 'UBIQUITI' }
+            ];
 
-        function initFilters() {
-            const container = document.getElementById('dynamic-filters');
-            container.innerHTML = '';
+            if (cat) {
+                catOverview.style.display = 'none';
+                storeContainer.style.display = 'flex';
+                splash.style.display = 'block';
 
-            filterConfig.forEach(group => {
-                const groupDiv = document.createElement('div');
-                groupDiv.className = 'filter-group';
+                if(typeof promoData !== 'undefined' && promoData[cat]) {
+                    splashImg.src = promoData[cat];
+                } else if(typeof promoData !== 'undefined' && promoData['default']) {
+                    splashImg.src = promoData['default'];
+                }
+
+                if (cat === 'platinum' || cat === 'ip_solutions') {
+                    activeFilters.category = ['IP SOLUTIONS'];
+                    crumb.innerText = 'IP Solutions';
+                } else if (cat === 'pro' || cat === 'tvi_solutions') {
+                    activeFilters.category = ['HD-TVI SOLUTIONS'];
+                    crumb.innerText = 'HD-TVI Solutions';
+                } else if (cat === 'nvr') {
+                    activeFilters.technology = ['IP/NVR'];
+                    crumb.innerText = 'NVR Systems';
+                } else if (cat === 'camera') {
+                    activeFilters.technology = ['IP/NETWORK'];
+                    crumb.innerText = 'IP Cameras';
+                } else if (cat === 'access') {
+                    activeFilters.category = ['ACCESS CONTROL'];
+                    crumb.innerText = 'Access Control';
+                } else if (cat === 'intercoms') {
+                    activeFilters.category = ['INTERCOMS'];
+                    crumb.innerText = 'Intercoms';
+                } else if (cat === 'accessories') {
+                    activeFilters.category = ['ACCESSORIES'];
+                    crumb.innerText = 'Accessories';
+                } else if (cat === 'ubiquiti') {
+                    activeFilters.category = ['UBIQUITI'];
+                    crumb.innerText = 'Ubiquiti Networking';
+                }
                 
-                let optionsHTML = '';
-                group.options.forEach(opt => {
-                    optionsHTML += `
-                        <label class="filter-option">
-                            <input type="checkbox" class="filter-checkbox" 
-                                value="${opt}" 
-                                onchange="toggleFilter('${group.id}', '${opt}')">
-                            ${opt}
-                        </label>
-                    `;
+                document.querySelectorAll('.filter-checkbox').forEach(cb => {
+                    for (const [group, vals] of Object.entries(activeFilters)) {
+                        if (vals.includes(cb.value)) cb.checked = true;
+                    }
                 });
-
-                groupDiv.innerHTML = `
-                    <div class="filter-header" onclick="this.nextElementSibling.classList.toggle('collapsed')">
-                        ${group.label} <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
-                    </div>
-                    <div class="filter-content">
-                        ${optionsHTML}
-                    </div>
-                `;
-                container.appendChild(groupDiv);
-            });
-        }
-
-        function toggleFilter(groupId, value) {
-            const idx = activeFilters[groupId].indexOf(value);
-            if (idx === -1) {
-                activeFilters[groupId].push(value);
             } else {
-                activeFilters[groupId].splice(idx, 1);
+                catOverview.style.display = 'block';
+                storeContainer.style.display = 'none';
+                splash.style.display = 'block';
+                splashImg.src = promoData['default']; 
+                crumb.innerText = 'Catalog';
+
+                const catContainer = catOverview.querySelector('div');
+                catContainer.innerHTML = '';
+                
+                categories.forEach(c => {
+                    const card = document.createElement('div');
+                    card.style.cssText = `
+                        background: linear-gradient(rgba(5, 11, 20, 0.7), rgba(5, 11, 20, 0.9)), url('assets/images/promos/${c.img}');
+                        background-size: cover;
+                        background-position: center;
+                        height: 250px;
+                        border: 1px solid var(--color-accent);
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        transition: transform 0.3s;
+                    `;
+                    card.innerHTML = `<h3 style="font-size: 1.5rem; text-shadow: 0 2px 10px black;">${c.name}</h3>`;
+                    
+                    card.onmouseenter = () => card.style.transform = 'scale(1.03)';
+                    card.onmouseleave = () => card.style.transform = 'scale(1)';
+                    card.onclick = () => window.location.href = `ordering_system.html?cat=${c.id}`;
+                    
+                    catContainer.appendChild(card);
+                });
             }
-            renderGrid();
         }
 
         // --- Search Logic ---
@@ -923,11 +912,9 @@
                     // Switch to Grid View
                     catOverview.style.display = 'none';
                     storeContainer.style.display = 'flex';
-                    splash.style.display = 'none'; // Hide splash on search
+                    splash.style.display = 'none';
                     renderGrid();
                 } else {
-                    // If we were on a category page, stay there. 
-                    // If we were on home, go back to overview.
                     handleParams();
                 }
             });
@@ -935,28 +922,10 @@
 
         // Initialize with error handling
         document.addEventListener('DOMContentLoaded', () => {
-            try {
-                if (typeof initFilters === 'function') initFilters();
-            } catch (e) { console.error("Filter Init Failed", e); }
-
-            try {
-                if (typeof initSearch === 'function') initSearch();
-            } catch (e) { console.error("Search Init Failed", e); }
-
-            try {
-                if (typeof handleParams === 'function') handleParams();
-            } catch (e) { console.error("Param Handle Failed", e); }
-
-            try {
-                if (typeof renderGrid === 'function') {
-                    if (typeof products !== 'undefined') {
-                        renderGrid();
-                    } else {
-                        console.error("Products data missing!");
-                        document.getElementById('product-grid').innerHTML = "<p style='color:red; padding:2rem;'>Error: Product catalog data failed to load.</p>";
-                    }
-                }
-            } catch (e) { console.error("Grid Render Failed", e); }
+            try { if (typeof initFilters === 'function') initFilters(); } catch (e) { console.error(e); }
+            try { if (typeof initSearch === 'function') initSearch(); } catch (e) { console.error(e); }
+            try { if (typeof handleParams === 'function') handleParams(); } catch (e) { console.error(e); }
+            try { if (typeof renderGrid === 'function' && typeof products !== 'undefined') renderGrid(); } catch (e) { console.error(e); }
         });
     </script>
     <script src="assets/js/ai-concierge.js"></script>
