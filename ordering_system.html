@@ -183,7 +183,7 @@
                 <span class="close-modal" onclick="closeCheckout()">&times;</span>
             </div>
             <div class="modal-body">
-                <form data-netlify="true" method="POST" name="quote-request" id="checkout-form" onsubmit="handleOrderSubmit(event)">
+                <form data-netlify="true" method="POST" action="success.html" name="quote-request" id="checkout-form">
                     <input name="form-name" type="hidden" value="quote-request"/>
                     <input id="order-items" name="items" type="hidden"/>
                     <input id="order-total" name="total" type="hidden"/>
