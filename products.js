@@ -2562,14 +2562,9 @@ const products = [
     ],
     "price": 139.0,
     "specs": {
-      "Key Features": "\u2022 HES 5000 Strike with 501 and 501A Faceplates\n\u2022 ANSI Metal Jambs or Aluminum Frames\n\u2022 Dual Voltage 12V/24V DC/AC, UL294 Listed"
+      "SKU": "LTK-5000C-630"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-DL-1",
@@ -2606,14 +2601,9 @@ const products = [
     ],
     "price": 17.0,
     "specs": {
-      "Key Features": "\u2022 Alarm Controls 1 Door / 3 Doors Receiver-Transmitter Kit\n\u2022 Additional LTK-RT-1T for LTK-RT-1 and LTK-RT-1TW for LTK-RT-1 or LTK-RT-3\n\u2022 LTK-RT-1 Contains 1 Receiver and 2 Transmitters"
+      "SKU": "LTK-DL-1"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-1006CS",
@@ -2650,14 +2640,9 @@ const products = [
     ],
     "price": 530.0,
     "specs": {
-      "Key Features": "\u2022 HES 1006 Strike with Faceplates and Deadbolt Brackets\n\u2022 Accomdates Every Lock Designed for 4-7/8\u201d Strike Plate\n\u2022 UL294, UL10C 3 Hours"
+      "SKU": "LTK-1006CS"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-7400-628",
@@ -3053,12 +3038,16 @@ const products = [
     ],
     "price": 462.0,
     "specs": {
-      "Key Features": "\u2022 Protected Outputs with Alarm Interface, Cuts Off Power of Maglocks from the Source when Fire Alarm Triggered\n\u2022 UL294, UL603, ULC-S318, ULC-S533 Listed\n\u2022 RoHS Compliant and REACH Compliant"
+      "SKU": "LTK-AQL6-B100R8E1"
     },
     "downloads": [
       {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
+        "name": "LTK-AQL6-B100R8E1 Quick Start Guide",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/9666/product/3596/"
+      },
+      {
+        "name": "LTK-AQL6-B100R8E1 Installation Instructions",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/9667/product/3596/"
       }
     ]
   },
@@ -3412,14 +3401,9 @@ const products = [
     ],
     "price": 45.0,
     "specs": {
-      "Key Features": "\u2022 Bluetooth Wi-Fi Bridge for Ultraloq\n\u2022 Allows remote access to smart locks\n\u2022 Plug in near the smart lock\n\u2022 Alexa, Google Home, and IFTTT compatible"
+      "SKU": "LTK-UB01"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-RT-1",
@@ -3456,12 +3440,12 @@ const products = [
     ],
     "price": 83.0,
     "specs": {
-      "Key Features": "\u2022 Alarm Controls 1 Door / 3 Doors Receiver-Transmitter Kit\n\u2022 Additional LTK-RT-1T for LTK-RT-1 and LTK-RT-1TW for LTK-RT-1 or LTK-RT-3\n\u2022 LTK-RT-1 Contains 1 Receiver and 2 Transmitters"
+      "SKU": "LTK-RT-1"
     },
     "downloads": [
       {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
+        "name": "User Manual",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/10437/product/2946/"
       }
     ]
   },
@@ -3500,12 +3484,12 @@ const products = [
     ],
     "price": 128.0,
     "specs": {
-      "Key Features": "\u2022 Alarm Controls 3 Doors Receiver-Transmitter Kit\n\u2022 Additiona LTK-RT-1TW LTK-RT-3\n\u2022 LTK-RT-3 Contains 3 Receivers and 1 Transmitter"
+      "SKU": "LTK-RT-3"
     },
     "downloads": [
       {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
+        "name": "User Manual",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/10438/product/2950/"
       }
     ]
   },
@@ -3544,14 +3528,9 @@ const products = [
     ],
     "price": 26.0,
     "specs": {
-      "Key Features": "\u2022 Alarm Controls Filler Plates\n\u2022 Work with All 600 and 1200 Series Maglocks\n\u2022 AM6360 5/8\u201d"
+      "SKU": "LTK-AM6360"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-AM6361",
@@ -3588,14 +3567,9 @@ const products = [
     ],
     "price": 22.0,
     "specs": {
-      "Key Features": "\u2022 Alarm Controls Filler Plates\n\u2022 Work with All 600 and 1200 Series Maglocks\n\u2022 AM6361 1/2\u201d"
+      "SKU": "LTK-AM6361"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-AM6370",
@@ -3632,14 +3606,9 @@ const products = [
     ],
     "price": 126.0,
     "specs": {
-      "Key Features": "\u2022 Z bracket for 1200-Series single magnetic locks\n\u2022 Clear anodized (US28)"
+      "SKU": "LTK-AM6370"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-GDH",
@@ -3678,12 +3647,7 @@ const products = [
     "specs": {
       "SKU": "LTK-GDH"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-1200D",
@@ -3944,12 +3908,7 @@ const products = [
     "specs": {
       "SKU": "LTK-RT-1T"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-TS-2",
@@ -4166,14 +4125,9 @@ const products = [
     ],
     "price": 209.0,
     "specs": {
-      "Key Features": "\u2022 600 lb Holding Force\n\u2022 UL294 and ULC\n\u2022 Magnet size: 9-7/8\" L x 1-11/16\" H x 1\" W\n\u2022 Armature size: 7-1/4\" L x 1-1/2\" H x 1/2\" W\n\u2022 Operates on 12 or 24V DC, switch selectable\n\u2022 Low current draw: 400 mA at 12V DC, 200 mA at 24V DC\n\u2022 Operating temperature: 14 to 131\u00b0 F [-10 to 55\u00b0 C]\n\u2022 UL and Canadian UL listed, R16759\n\u2022 Sensors have SPDT 3A relay contacts\n\u2022 Bond sensor and door status sensor signal a powered and securely locked door\n\u2022 Self-drilling TEC screws\n\u2022 Built-in arc suppression\n\u2022 Instant release, no hysteresis\n\u2022 E-Z mount system, no special tools required\n\u2022 Bi-colored status LED\n\u2022 Limited lifetime warranty\n\u2022 Clear anodized, (US28) finish standard\n\u2022 Duranodic finish available\n\u2022 Dress-up covers in polished chrome and brass are available"
+      "SKU": "LTK-600LB"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-PA-100",
@@ -4256,12 +4210,7 @@ const products = [
     "specs": {
       "SKU": "LTK-1600CS"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-REB-1",
@@ -4343,14 +4292,9 @@ const products = [
     ],
     "price": 80.0,
     "specs": {
-      "Key Features": "\u2022 Alarm Controls adjustable LZ bracket, for mounting electromagnetic locks on in-swinging doors\n\u2022 Z bracket for 600 Series single magnetic locks\n\u2022 Clear anodized (US28)"
+      "SKU": "LTK-AM3370"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-1200S",
@@ -4477,14 +4421,9 @@ const products = [
     ],
     "price": 129.0,
     "specs": {
-      "Key Features": "\u2022 HES 8000 Strike with 801 and 801A Faceplates\n\u2022 Easy Installation with No Cutting on ANSI Frames\n\u2022 Dual Voltage 12V/24V DC/AC, UL294 Listed"
+      "SKU": "LTK-8000C"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-AM3315",
@@ -4566,14 +4505,9 @@ const products = [
     ],
     "price": 119.0,
     "specs": {
-      "Key Features": "\u2022 Flex Mount Kit for Swing Gate"
+      "SKU": "LTK-FMK-SW"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-UL1-BK-UB01",
@@ -4610,12 +4544,12 @@ const products = [
     ],
     "price": 246.0,
     "specs": {
-      "": ""
+      "SKU": "LTK-UL1-BK-UB01"
     },
     "downloads": [
       {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
+        "name": "(5)secu365usermanual201910",
+        "url": "https://ltsecurityinc.com/default/amfile/file/download/file/8916/product/3385/"
       }
     ]
   },
@@ -4833,14 +4767,10 @@ const products = [
     ],
     "price": 732.0,
     "specs": {
-      "SKU": "LTK-SAM2-24"
+      "Specifications": "Product Features\r\n\r\nPatented instant release circuit - no residual magnetism\r\nFully sealed electronics - tamper proof and weatherproof\r\nMounted using steel machine screws\r\nArchitectural brushed stainless steel finish (US32D/630)\r\nAll ferrous metal surfaces plated to MIL specification\r\nHardware accessories available to configure any opening type including mounting brackets\r\nTen feet [3.05m] of jacketed, stranded conductor\r\nAutomatic dual voltage - no field adjustment required\r\nLock options include BondSTAT magnetic bond sensor and integrated door position switch\r\nUL Listed\r\nMagnaCare\u00ae lifetime replacement, no fault warranty\r\n\r\n\r\n\r\n\r\n\r\nSpecification Data\r\n\r\nHolding Force: 1200 lbs. [544 kg]\r\nCurrent Draw and Voltage: 320mA at 12VDC; 170mA at 24VDC\r\nOperating Temperature: -40 to +140F [-40 to +60C]\r\nShipping Weight: 6 lbs.",
+      "SKU": "LTK-SAM"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-KP-100A",
@@ -5056,14 +4986,9 @@ const products = [
     ],
     "price": 93.0,
     "specs": {
-      "Key Features": "\u2022 Securitron Z Bracket with Oversized Dress Cover\n\u2022 For Mounting onto Inward Swinging Doors\n\u2022 Works with Securitron M32F and M62F Models"
+      "SKU": "LTK-ZA-32-62CL"
     },
-    "downloads": [
-      {
-        "name": "Download",
-        "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
-      }
-    ]
+    "downloads": []
   },
   {
     "series_id": "LTK-M32",
