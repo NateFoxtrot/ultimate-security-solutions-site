@@ -387,6 +387,7 @@
     <script src="assets/js/promo_data.js"></script>
     <script>
         let cart = [];
+        let searchTerm = '';
         let activeFilters = {
             category: [],
             technology: [],
@@ -573,6 +574,17 @@
             const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
 
             const filtered = products.filter(series => {
+                // 1. Text Search Filter
+                if (searchTerm) {
+                    const searchLower = searchTerm.toLowerCase();
+                    const matchName = series.name.toLowerCase().includes(searchLower);
+                    const matchDesc = series.description.toLowerCase().includes(searchLower);
+                    const matchSku = series.variants.some(v => v.sku.toLowerCase().includes(searchLower));
+                    
+                    if (!matchName && !matchDesc && !matchSku) return false;
+                }
+
+                // 2. Facet Filter
                 const f = series.facets;
                 if (!f) return true;
                 if (activeGroups.length === 0) return true;
@@ -879,11 +891,41 @@
             renderGrid();
         }
 
+        // --- Search Logic ---
+        function initSearch() {
+            const searchInput = document.getElementById('global-search');
+            if(!searchInput) return;
+
+            searchInput.addEventListener('input', (e) => {
+                searchTerm = e.target.value.trim();
+                
+                const catOverview = document.getElementById('category-overview');
+                const storeContainer = document.getElementById('main-store-container');
+                const splash = document.getElementById('promo-splash');
+
+                if (searchTerm.length > 0) {
+                    // Switch to Grid View
+                    catOverview.style.display = 'none';
+                    storeContainer.style.display = 'flex';
+                    splash.style.display = 'none'; // Hide splash on search
+                    renderGrid();
+                } else {
+                    // If we were on a category page, stay there. 
+                    // If we were on home, go back to overview.
+                    handleParams();
+                }
+            });
+        }
+
         // Initialize with error handling
         document.addEventListener('DOMContentLoaded', () => {
             try {
                 if (typeof initFilters === 'function') initFilters();
             } catch (e) { console.error("Filter Init Failed", e); }
+
+            try {
+                if (typeof initSearch === 'function') initSearch();
+            } catch (e) { console.error("Search Init Failed", e); }
 
             try {
                 if (typeof handleParams === 'function') handleParams();
