@@ -1,0 +1,187 @@
+---
+import Layout from '../../layouts/Page.astro';
+---
+
+<Layout title="Beta Testing Program" currentPage="/beta-tester">
+  <div class="page-header">
+    <h1>Beta Testing Program</h1>
+    <p>Ultimate Security Suite — Early Access &amp; Feedback</p>
+  </div>
+
+  <div class="card" style="border-left: 3px solid var(--accent); margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+      <span style="font-size:24px;">🚀</span>
+      <div>
+        <div style="font-size:16px;font-weight:600;">You've been selected as a lead tester</div>
+        <div style="font-size:13px;color:var(--muted);">The industry's most advanced low-voltage site planning platform.</div>
+      </div>
+    </div>
+    <a href="https://xr3keedn.insforge.site/" class="btn btn-primary" target="_blank" rel="noopener">
+      Open Live App →
+    </a>
+    <span style="font-size:12px;color:var(--muted);margin-left:8px;">Chrome/Edge desktop required for 3D</span>
+  </div>
+
+  <div class="grid-2" style="margin-bottom:24px;">
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Quick Start (5 Minutes)</span>
+      </div>
+      <table>
+        <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Open the <a href="https://xr3keedn.insforge.site/" target="_blank" style="color:var(--accent)">Beta URL</a></td><td>Tactical login screen loads</td></tr>
+          <tr><td>2</td><td>Register a Mission ID (any username + password)</td><td>Dashboard with satellite setup</td></tr>
+          <tr><td>3</td><td>Enter any commercial address in the search bar</td><td>Satellite imagery loads in ~3 sec</td></tr>
+          <tr><td>4</td><td>Place 2-3 cameras from the device palette</td><td>FOV cones appear on the map</td></tr>
+          <tr><td>5</td><td>Click <strong>3D View</strong> button</td><td>Photorealistic 3D tile view launches</td></tr>
+          <tr><td>6</td><td>Open <strong>Settings → Export Quote</strong></td><td>Full BOM and PDF export</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-title">Download the App</span>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Signed release APK for Android. Install directly on your device.</p>
+      <a href="/beta-tester/UltraSecuritySuite-v1.0.apk" download class="btn btn-primary" style="display:block;text-align:center;text-decoration:none;">
+        ↓ Download UltraSecuritySuite-v1.0.apk (15 MB)
+      </a>
+      <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">SHA256 and version info verified April 7, 2026</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header">
+      <span class="card-title">Mission Objectives</span>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;">Your job is to stress-test every major workflow:</p>
+    <div class="grid-2">
+      <div style="margin-bottom:16px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">1. AI Site Recon (OSINT)</h3>
+        <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+          <li>Enter a complex facility address (multi-building campus, warehouse, hospital)</li>
+          <li>Let the AI pull structural metadata</li>
+          <li>Verify: floor count, building material, structural context</li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">2. Tactical Ecosystem Layout</h3>
+        <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+          <li>Place at least one of each: Camera, Node, Access Reader, WiFi AP</li>
+          <li>Verify cable auto-routing connects devices to nearest Node</li>
+          <li>Check footage estimates match real-world expectations</li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">3. 3D Mission Visualizer</h3>
+        <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+          <li>Orbit the building from multiple angles</li>
+          <li>Verify camera FOV cones in correct 3D space</li>
+          <li>Stress test: dense urban area, note rendering latency</li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">4. WiFi Heatmap</h3>
+        <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+          <li>Place 2-3 APs, observe signal propagation</li>
+          <li>Test: adjust antenna gain, confirm coverage radius changes</li>
+        </ul>
+      </div>
+      <div style="margin-bottom:16px;">
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">5. Enterprise Quote Export</h3>
+        <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+          <li>Verify SKUs for placed devices (Hanwha / Axis / Ubiquiti)</li>
+          <li>Confirm labor hours auto-calculated from cable footage</li>
+          <li>Export PDF and confirm formatting</li>
+        </ul>
+      </div>
+      <div>
+        <h3 style="font-size:14px;font-weight:600;margin-bottom:8px;">6. AI Blueprint Extraction</h3>
+        <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+          <li>Navigate to Blueprint tab</li>
+          <li>Upload a photo of any floor plan</li>
+          <li>Verify AI generates structural wireframe</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header">
+      <span class="card-title">Admin Panel (White-Labeling)</span>
+    </div>
+    <p style="font-size:13px;color:var(--text-secondary);margin-bottom:12px;">Enterprise partners can customize USS for their own brand:</p>
+    <ol style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+      <li>Click the small <strong>red lock icon</strong> at the top-right of the login box</li>
+      <li>Login: <code style="background:var(--bg-primary);padding:2px 6px;border-radius:4px;">admin</code> / <code style="background:var(--bg-primary);padding:2px 6px;border-radius:4px;">admin123</code></li>
+      <li>Configure: company name, logo, brand color, product catalog (CSV import)</li>
+    </ol>
+  </div>
+
+  <div class="card" style="margin-bottom:24px;">
+    <div class="card-header">
+      <span class="card-title">Priority Bugs to Watch For</span>
+    </div>
+    <ul style="font-size:13px;color:var(--text-secondary);padding-left:16px;">
+      <li style="margin-bottom:6px;">3D tile rendering gaps or black holes</li>
+      <li style="margin-bottom:6px;">Cable routing that clips through walls</li>
+      <li style="margin-bottom:6px;">Quote SKUs that don't match placed device types</li>
+      <li style="margin-bottom:6px;">AI blueprint extraction misidentifying walls vs. door openings</li>
+    </ul>
+    <p style="font-size:13px;color:var(--text-muted);margin-top:12px;">Report all issues via the in-app <strong>FEEDBACK</strong> button.</p>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <span class="card-title">Full Documentation</span>
+    </div>
+    <div class="grid-3">
+      <a href="/beta-tester/BETA_TESTER_GUIDE.md" class="doc-link" target="_blank">
+        <span class="doc-icon">📋</span>
+        <span>Beta Tester Guide</span>
+      </a>
+      <a href="/beta-tester/ONBOARDING.md" class="doc-link" target="_blank">
+        <span class="doc-icon">🦅</span>
+        <span>Pilot's Manual</span>
+      </a>
+      <a href="/beta-tester/FEATURES_AND_VIDEOS.md" class="doc-link" target="_blank">
+        <span class="doc-icon">📡</span>
+        <span>Feature Showcase</span>
+      </a>
+      <a href="/beta-tester/OUTREACH_TEMPLATES.md" class="doc-link" target="_blank">
+        <span class="doc-icon">✉️</span>
+        <span>Outreach Templates</span>
+      </a>
+      <a href="/beta-tester/LAUNCH_POSTS.md" class="doc-link" target="_blank">
+        <span class="doc-icon">📱</span>
+        <span>Social Launch Posts</span>
+      </a>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .doc-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 13px;
+    transition: all 0.15s ease;
+  }
+  .doc-link:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent);
+  }
+  .doc-icon {
+    font-size: 28px;
+  }
+</style>
