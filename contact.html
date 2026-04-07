@@ -4,124 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Ultimate Security Solutions</title>
-    <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
+    <link rel="stylesheet" href="styles.css?v=V2_MODERN">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .contact-section {
-            padding: 6rem 5%;
-            background: var(--color-primary);
-            min-height: 80vh;
+        .contact-hero {
+            text-align: center;
+            padding: 8rem 2rem 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        .contact-hero h1 { margin-bottom: 0.5rem; }
+        .contact-hero p { color: var(--color-muted); }
+        .form-group { margin-bottom: 1.25rem; }
+        .form-group label {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-muted);
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .social-links a {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border);
             display: flex;
             align-items: center;
             justify-content: center;
-        }
-
-        .contact-container {
-            max-width: 1000px;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            background: rgba(15, 28, 46, 0.6);
-            border: 1px solid var(--color-accent);
-            padding: 3rem;
-            backdrop-filter: blur(10px);
-        }
-
-        .contact-info h2 {
-            color: var(--color-accent);
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .info-item i {
-            font-size: 1.5rem;
-            color: var(--color-accent);
-            margin-top: 5px;
-        }
-
-        .info-item h3 {
-            color: #fff;
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .info-item p {
             color: var(--color-muted);
-            line-height: 1.6;
+            text-decoration: none;
+            transition: var(--transition);
         }
-
-        .contact-form h3 {
-            color: #fff;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(0,0,0,0.3);
-            border: 1px solid rgba(255, 215, 0, 0.3);
-            color: #fff;
-            font-family: inherit;
-            border-radius: 4px;
-            transition: all 0.3s;
-        }
-
-        .form-control:focus {
-            outline: none;
+        .social-links a:hover {
+            color: var(--color-accent);
             border-color: var(--color-accent);
-            background: rgba(0,0,0,0.5);
+            background: var(--color-accent-dim);
         }
-
-        .submit-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--color-accent);
-            color: var(--color-primary);
-            border: none;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-
-        .submit-btn:hover {
-            background: #fff;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
-        }
-
         @media (max-width: 768px) {
-            .contact-container {
-                grid-template-columns: 1fr;
-                padding: 2rem;
-            }
+            .contact-container { grid-template-columns: 1fr !important; padding: 1.5rem !important; }
         }
     </style>
 </head>
-<body><canvas id="bg-canvas"></canvas>
-    
-    <!-- Navigation -->
-    <nav class="main-nav">
+<body>
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="service_area.html">Service Area</a>
                 <div class="dropdown">
-                    <a href="ordering_system.html" class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <a href="ordering_system.html" class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i></a>
                     <div class="dropdown-content">
                         <a href="ordering_system.html">All Products</a>
                         <a href="ordering_system.html?cat=platinum">Platinum Series</a>
@@ -131,24 +72,27 @@
                     </div>
                 </div>
                 <a href="accomplishments.html">Our Work</a>
-                <a href="system-design.html">System Designer</a>
+                <a href="system-design.html">USS Suite</a>
                 <a href="partners.html">Partners</a>
                 <a href="reviews.html">Reviews</a>
-                <a href="contact.html" class="active btn-contact">Contact Us</a>
+                <a href="contact.html" class="active btn-contact">Get a Quote</a>
                 <a href="portal.html" class="nav-spacer">FE Portal</a>
             </div>
         </div>
     </nav>
 
-    <section class="contact-section">
-        <div class="contact-container">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <h2>Secure Your Assets</h2>
-                <p style="color: var(--color-muted); margin-bottom: 3rem;">
-                    Ready to upgrade your infrastructure? Contact our engineering team for a consultation or rapid response dispatch.
-                </p>
+    <div class="contact-hero">
+        <h1>SECURE YOUR <span class="text-accent">ASSETS</span></h1>
+        <p>Ready to upgrade your infrastructure? Reach out for a consultation or rapid response dispatch.</p>
+    </div>
 
+    <section class="contact-section" style="padding-top:0;">
+        <div class="contact-container animate-in">
+            <div class="contact-info">
+                <h2>GET IN TOUCH</h2>
+                <p style="color: var(--color-muted); margin-bottom: 2.5rem; font-size: 0.95rem;">
+                    We respond to all inquiries within 24 hours. For urgent dispatch, call us directly.
+                </p>
                 <div class="info-item">
                     <i class="fas fa-phone-alt"></i>
                     <div>
@@ -156,7 +100,6 @@
                         <p>816-814-2007</p>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <i class="fas fa-envelope"></i>
                     <div>
@@ -164,7 +107,6 @@
                         <p>nate@usstech.net</p>
                     </div>
                 </div>
-
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
@@ -172,28 +114,31 @@
                         <p>Kansas City Metro<br>100-mile Radius Primary Zone</p>
                     </div>
                 </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/ultimate-security-solutions-llc" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://fieldnation.com/provider/nate-follis" target="_blank"><i class="fas fa-globe"></i></a>
+                </div>
             </div>
 
-            <!-- Contact Form -->
             <div class="contact-form">
-                <h3>Request a Quote</h3>
+                <h3 style="color: var(--color-text); margin-bottom: 1.5rem; font-size: 1.25rem;">Request a Quote</h3>
                 <form id="contact-form" onsubmit="handleContact(event)">
-                    
                     <div class="form-group">
-                        <input type="text" id="c-name" class="form-control" placeholder="Full Name" required>
+                        <label>Full Name</label>
+                        <input type="text" id="c-name" class="form-control" placeholder="John Smith" required>
                     </div>
-                    
                     <div class="form-group">
-                        <input type="email" id="c-email" class="form-control" placeholder="Email Address" required>
+                        <label>Email Address</label>
+                        <input type="email" id="c-email" class="form-control" placeholder="john@company.com" required>
                     </div>
-                    
                     <div class="form-group">
-                        <input type="tel" id="c-phone" class="form-control" placeholder="Phone Number">
+                        <label>Phone Number</label>
+                        <input type="tel" id="c-phone" class="form-control" placeholder="(816) 555-0000">
                     </div>
-
                     <div class="form-group">
-                        <select id="c-service" class="form-control" style="background: rgba(0,0,0,0.3);">
-                            <option value="" disabled selected>Service Needed</option>
+                        <label>Service Needed</label>
+                        <select id="c-service" class="form-control">
+                            <option value="" disabled selected>Select a service</option>
                             <option value="Cabling">Structured Cabling</option>
                             <option value="CCTV">CCTV Surveillance</option>
                             <option value="Access">Access Control</option>
@@ -201,12 +146,11 @@
                             <option value="Other">Other</option>
                         </select>
                     </div>
-                    
                     <div class="form-group">
-                        <textarea id="c-message" class="form-control" rows="5" placeholder="Project Details..." required></textarea>
+                        <label>Project Details</label>
+                        <textarea id="c-message" class="form-control" rows="4" placeholder="Tell us about your project..." required></textarea>
                     </div>
-                    
-                    <button type="submit" id="c-btn" class="submit-btn">Send Secure Message</button>
+                    <button type="submit" id="c-btn" class="submit-btn"><i class="fas fa-paper-plane"></i> Send Message</button>
                 </form>
                 <div id="c-status" style="margin-top:1rem; text-align:center; display:none;"></div>
             </div>
@@ -214,53 +158,53 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
     </footer>
     <script>
         async function handleContact(e) {
             e.preventDefault();
             const btn = document.getElementById('c-btn');
             const status = document.getElementById('c-status');
-            
             btn.disabled = true;
-            btn.innerText = "Transmitting...";
-            
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Transmitting...';
             const payload = {
                 name: document.getElementById('c-name').value,
                 email: document.getElementById('c-email').value,
                 phone: document.getElementById('c-phone').value,
                 message: `Service: ${document.getElementById('c-service').value}\n\n${document.getElementById('c-message').value}`
             };
-
             try {
-                // Try Local Backend First
                 const res = await fetch('http://localhost:8000/api/contact/', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(payload)
                 });
-
-                if(res.ok) {
+                if (res.ok) {
                     status.style.display = 'block';
-                    status.style.color = '#00ff00';
-                    status.innerHTML = '<i class="fas fa-check-circle"></i> Message Received. Dispatch notified.';
+                    status.style.color = '#4ade80';
+                    status.innerHTML = '<i class="fas fa-check-circle"></i> Message received. Dispatch notified.';
                     document.getElementById('contact-form').reset();
-                } else {
-                    throw new Error("Server Error");
-                }
-            } catch(err) {
-                // Fallback to Mailto if backend down
-                console.warn("Backend unavailable, using fallback.");
+                } else { throw new Error("Server Error"); }
+            } catch (err) {
                 window.location.href = `mailto:admin@usstech.net?subject=Contact Request: ${payload.name}&body=${encodeURIComponent(payload.message)}`;
                 status.style.display = 'block';
-                status.style.color = '#ffd700';
-                status.innerText = "Secure Uplink Offline. Opening Email Client...";
+                status.style.color = 'var(--color-accent)';
+                status.innerText = 'Opening email client...';
             } finally {
                 btn.disabled = false;
-                btn.innerText = "Send Secure Message";
+                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
             }
         }
+
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
     </script>
-    <script src="assets/js/ai-concierge.v2.js"></script>
-<script src="assets/js/circuit-board.js"></script></body>
+    <script src="assets/js/circuit-board.js"></script>
+</body>
 </html>

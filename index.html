@@ -6,22 +6,15 @@
     <title>Ultimate Security Solutions | Elite Security & IT Infrastructure</title>
     <meta name="description" content="Veteran-Owned Security Integrator in Kansas City. Structured Cabling, CCTV, Access Control, and White-Label MSP Services. Military precision for commercial infrastructure.">
     <meta name="keywords" content="Structured Cabling KC, CCTV Installation, Access Control, MSP Smart Hands, Veteran Owned Business, Network Engineering">
-    
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://usstech.net/">
     <meta property="og:title" content="Ultimate Security Solutions | Mission Critical Infrastructure">
     <meta property="og:description" content="Veteran-Owned. Precision Driven. We provide elite security and IT infrastructure services for commercial clients and MSPs.">
     <meta property="og:image" content="https://usstech.net/assets/images/portfolio/IMG_0036.JPEG">
-
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://usstech.net/">
     <meta property="twitter:title" content="Ultimate Security Solutions">
     <meta property="twitter:description" content="Veteran-Owned Security Integrator. CCTV, Cabling, Access Control.">
-    <meta property="twitter:image" content="https://usstech.net/assets/images/portfolio/IMG_0036.JPEG">
-    
-    <!-- Structured Data: Organization & FAQ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -64,49 +57,91 @@
       }]
     }
     </script>
-
-    <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css?v=V2_MODERN">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Home Specific Styles */
-        .testimonial-grid {
+        .stats-strip {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            position: relative;
+            z-index: 1;
         }
-        .testimonial-card {
-            background: rgba(15, 28, 46, 0.6);
-            border: 1px solid rgba(255, 215, 0, 0.1);
-            padding: 2rem;
+        .stat-block {
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-right: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+        .stat-block:last-child { border-right: none; }
+        .stat-block:hover { background: var(--color-accent-dim); }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--color-accent);
+            font-family: var(--font-mono);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .stat-label {
+            color: var(--color-muted);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 6s ease-in-out infinite;
+        }
+        .hero-shield {
+            width: 320px;
+            height: 320px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 215, 0, 0.1), transparent 60%);
+            border: 2px solid var(--color-border-hover);
+            display: flex;
+            justify-content: center;
+            align-items: center;
             position: relative;
         }
-        .testimonial-card i {
-            color: var(--color-accent);
-            margin-bottom: 1rem;
+        .hero-shield::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border);
+            animation: pulse 3s ease-in-out infinite;
         }
-        .cta-section {
-            text-align: center;
-            padding: 6rem 20px;
-            background: linear-gradient(rgba(5, 11, 20, 0.9), rgba(5, 11, 20, 0.9)), url('assets/images/portfolio/IMG_0036.JPEG');
-            background-size: cover;
-            background-attachment: fixed;
-            border-top: 1px solid var(--color-accent);
-            border-bottom: 1px solid var(--color-accent);
+        .hero-shield i {
+            font-size: 8rem;
+            color: var(--color-accent);
+            opacity: 0.3;
+        }
+        @media (max-width: 1024px) {
+            .hero-visual { display: none; }
+            .stats-strip { grid-template-columns: repeat(2, 1fr); }
+            .stat-block:nth-child(2) { border-right: none; }
+            .stat-block:nth-child(1),
+            .stat-block:nth-child(2) { border-bottom: 1px solid var(--color-border); }
         }
     </style>
 </head>
 <body>
-    <canvas id="bg-canvas" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;"></canvas>
-    <!-- Navigation -->
-    <nav class="main-nav">
+    <canvas id="bg-canvas"></canvas>
+
+    <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
                 <a href="service_area.html">Service Area</a>
                 <div class="dropdown">
-                    <a href="ordering_system.html" class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <a href="ordering_system.html" class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 4px;"></i></a>
                     <div class="dropdown-content">
                         <a href="ordering_system.html">All Products</a>
                         <a href="ordering_system.html?cat=platinum">Platinum Series</a>
@@ -116,135 +151,168 @@
                     </div>
                 </div>
                 <a href="accomplishments.html">Our Work</a>
-                <a href="system-design.html">System Designer</a>
+                <a href="system-design.html">USS Suite</a>
                 <a href="partners.html">Partners</a>
                 <a href="reviews.html">Reviews</a>
-                <a href="contact.html" class="btn-contact">Contact Us</a>
+                <a href="contact.html" class="btn-contact">Get a Quote</a>
                 <a href="portal.html" class="nav-spacer">FE Portal</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-badge" style="display:inline-block; background:rgba(14, 165, 233, 0.1); color:var(--color-accent); padding: 5px 15px; border: 1px solid var(--color-accent); font-weight: 800; font-size: 0.7rem; letter-spacing: 2px; margin-bottom: 1.5rem;">VETERAN OWNED | COMMERCIAL ONLY</div>
-                <h1>ULTIMATE <span class="text-accent">SECURITY</span> <br> SOLUTIONS</h1>
-                <p>Specialized Subcontracting for MSPs & Enterprise Clients. We provide white-label smart hands, structured cabling, and physical security infrastructure.</p>
-                <div class="hero-actions" style="display:flex; gap:1rem;">
-                    <a href="ordering_system.html" class="btn btn-primary">Hardware Catalog</a>
-                    <a href="partners.html" class="btn btn-secondary" style="margin:0;">MSP Partnership</a>
+                <div class="hero-badge">
+                    <i class="fas fa-shield-halved"></i>
+                    VETERAN OWNED &bull; COMMERCIAL ONLY
+                </div>
+                <h1>ULTIMATE<br><span class="text-accent">SECURITY</span><br>SOLUTIONS</h1>
+                <p>Specialized subcontracting for MSPs and enterprise clients. White-label smart hands, structured cabling, and physical security infrastructure with military-grade precision.</p>
+                <div class="hero-actions">
+                    <a href="ordering_system.html" class="btn btn-primary"><i class="fas fa-bolt"></i> Hardware Catalog</a>
+                    <a href="contact.html" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Request a Quote</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-shield">
+                    <i class="fas fa-shield-halved"></i>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Core Capabilities Grid -->
+    <div class="stats-strip">
+        <div class="stat-block">
+            <div class="stat-number">500+</div>
+            <div class="stat-label">Deployments</div>
+        </div>
+        <div class="stat-block">
+            <div class="stat-number">100mi</div>
+            <div class="stat-label">Service Radius</div>
+        </div>
+        <div class="stat-block">
+            <div class="stat-number">99.9%</div>
+            <div class="stat-label">Uptime SLA</div>
+        </div>
+        <div class="stat-block">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Rapid Response</div>
+        </div>
+    </div>
+
     <section class="services section-padding">
-        <div class="container">
-            <h2 class="section-title">CORE CAPABILITIES</h2>
-            <div class="services-grid">
-                <a href="accomplishments.html" class="service-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Structured Cabling</h3>
-                    <p>Cat6 infrastructure with certified testing and labeling for data centers and commercial spaces.</p>
-                </a>
-                <a href="ordering_system.html?cat=camera" class="service-card">
-                    <i class="fas fa-video"></i>
-                    <h3>CCTV Surveillance</h3>
-                    <p>AI-powered analytics, LPR, and commercial NVR deployment for 24/7 asset protection.</p>
-                </a>
-                <a href="ordering_system.html?cat=ubiquiti" class="service-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Network Engineering</h3>
-                    <p>IDF/MDF cleanups, rack stack, and enterprise switching. Smart hands support for MSPs.</p>
-                </a>
-                <a href="ordering_system.html?cat=access" class="service-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Access Control</h3>
-                    <p>Biometric, card-based, and mobile entry systems for secure facilities and gated perimeters.</p>
-                </a>
-            </div>
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title animate-in">CORE CAPABILITIES</h2>
+            <p style="color: var(--color-muted); max-width: 600px; margin: -0.5rem auto 0; font-size: 1rem;">Mission-critical infrastructure services built on discipline, precision, and technical mastery.</p>
+        </div>
+        <div class="services-grid">
+            <a href="accomplishments.html" class="service-card animate-in">
+                <i class="fas fa-network-wired"></i>
+                <h3>Structured Cabling</h3>
+                <p>Cat6 infrastructure with certified testing and TIA-606-C labeling for data centers and commercial spaces.</p>
+            </a>
+            <a href="ordering_system.html?cat=camera" class="service-card animate-in">
+                <i class="fas fa-video"></i>
+                <h3>CCTV Surveillance</h3>
+                <p>AI-powered analytics, LPR, and commercial NVR deployment for 24/7 asset protection.</p>
+            </a>
+            <a href="ordering_system.html?cat=ubiquiti" class="service-card animate-in">
+                <i class="fas fa-server"></i>
+                <h3>Network Engineering</h3>
+                <p>IDF/MDF cleanups, rack stack, and enterprise switching. Smart hands for MSPs.</p>
+            </a>
+            <a href="ordering_system.html?cat=access" class="service-card animate-in">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Access Control</h3>
+                <p>Biometric, card-based, and mobile entry systems for secure facilities.</p>
+            </a>
         </div>
     </section>
 
-    <!-- CTA / Featured Project Teaser -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Upgrade Your Infrastructure?</h2>
-            <p style="max-width: 600px; margin: 1rem auto 2rem; color: #ccc;">From single-site installs to multi-location rollouts, we deliver on time and on budget.</p>
-            <div style="display:flex; justify-content:center; gap:1rem;">
-                <a href="#contact" class="btn btn-primary">Request a Quote</a>
-                <a href="system-design.html" class="btn btn-secondary" style="margin:0;">Launch System Designer</a>
+            <h2 class="animate-in">READY TO UPGRADE?</h2>
+            <p class="animate-in">From single-site installs to multi-location rollouts, we deliver on time and on budget.</p>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <a href="contact.html" class="btn btn-primary animate-in"><i class="fas fa-paper-plane"></i> Get Started</a>
+                <a href="system-design.html" class="btn btn-secondary animate-in"><i class="fas fa-drafting-compass"></i> USS Suite</a>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials -->
     <section class="section-padding">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title animate-in">MISSION SUCCESS</h2>
+        </div>
         <div class="container">
-            <h2 class="section-title">MISSION SUCCESS</h2>
             <div class="testimonial-grid">
-                <div class="testimonial-card">
+                <div class="testimonial-card animate-in">
                     <i class="fas fa-quote-left"></i>
                     <p>"Ultimate Security Solutions was the perfect partner to have on our Access Control project. They went above and beyond with their services."</p>
-                    <p style="margin-top: 1rem; color: var(--color-accent);"><strong>- Zachary Harmison</strong></p>
+                    <p class="author">- Zachary Harmison</p>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card animate-in">
                     <i class="fas fa-quote-left"></i>
-                    <p>"Ultimate Security Solutions consistently does excellent work for us. They have proven to be very knowledgeable with electronics, electrical and networking. They handled various troubleshooting and 'cleanup' tasks with ease."</p>
-                    <p style="margin-top: 1rem; color: var(--color-accent);"><strong>- Senior IT Support (Video Mining Corporation)</strong></p>
+                    <p>"Consistently excellent work. Very knowledgeable with electronics, electrical and networking. Handled troubleshooting and cleanup tasks with ease."</p>
+                    <p class="author">- Senior IT Support, Video Mining Corporation</p>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card animate-in">
                     <i class="fas fa-quote-left"></i>
-                    <p>"Ultimate Security Solutions has gone out of their way to accommodate our tight schedule and vast schedule changes. They are a very diligent team, knowledgeable and thorough!"</p>
-                    <p style="margin-top: 1rem; color: var(--color-accent);"><strong>- Operations Manager</strong></p>
+                    <p>"They have gone out of their way to accommodate our tight schedule and vast changes. A very diligent team, knowledgeable and thorough!"</p>
+                    <p class="author">- Operations Manager</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section-padding">
-        <div class="container">
-            <h2 class="section-title">SECURE YOUR ASSETS</h2>
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <h3>Call Us</h3>
-                            <p>816-814-2007</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email Us</h3>
-                            <p>admin@usstech.net</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Service Area</h3>
-                            <p>Kansas City Metro (100mi Radius)</p>
-                        </div>
-                    </div>
+    <section id="contact" class="section-padding">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title animate-in">SECURE YOUR ASSETS</h2>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem; max-width:800px; margin:3rem auto 0;">
+                <div class="animate-in" style="text-align:center;">
+                    <i class="fas fa-phone-alt" style="font-size:1.5rem; color:var(--color-accent); margin-bottom:0.75rem;"></i>
+                    <h3 style="font-size:0.85rem; margin-bottom:0.25rem;">Call Us</h3>
+                    <p style="color:var(--color-muted); font-size:0.9rem;">816-814-2007</p>
+                </div>
+                <div class="animate-in" style="text-align:center;">
+                    <i class="fas fa-envelope" style="font-size:1.5rem; color:var(--color-accent); margin-bottom:0.75rem;"></i>
+                    <h3 style="font-size:0.85rem; margin-bottom:0.25rem;">Email</h3>
+                    <p style="color:var(--color-muted); font-size:0.9rem;">admin@usstech.net</p>
+                </div>
+                <div class="animate-in" style="text-align:center;">
+                    <i class="fas fa-map-marker-alt" style="font-size:1.5rem; color:var(--color-accent); margin-bottom:0.75rem;"></i>
+                    <h3 style="font-size:0.85rem; margin-bottom:0.25rem;">Service Area</h3>
+                    <p style="color:var(--color-muted); font-size:0.9rem;">KC Metro (100mi)</p>
                 </div>
             </div>
+            <a href="contact.html" class="btn btn-primary animate-in" style="margin-top:2rem;"><i class="fas fa-arrow-right"></i> Request a Quote</a>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
         </div>
     </footer>
-    <script src="products.js"></script>
-    <script src="assets/js/ai-concierge.v2.js"></script>
-    <script src="assets/js/admin-editor.js"></script>
+
     <script src="assets/js/circuit-board.js"></script>
+    <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
