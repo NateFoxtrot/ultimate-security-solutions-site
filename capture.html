@@ -222,37 +222,28 @@
             btn.innerText = "UPLOADING...";
             btn.disabled = true;
 
-            // Prepare form data for Netlify
             const formData = new FormData();
-            formData.append('form-name', 'site-survey');
             formData.append('session_id', session);
             formData.append('direction', steps[currentStep-1].dir);
-            formData.append('photo', selectedFile);
+            formData.append('file', selectedFile);
 
             try {
-                const response = await fetch('/', {
-                    method: 'POST',
-                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-                    body: new URLSearchParams(formData).toString().replace(/\+/g, '%20') // Basic encode attempt
-                });
-                
-                // Netlify File Uploads via AJAX require multipart/form-data but without the header set manually
-                // Let's retry the standard fetch way which works for Netlify Forms
-                const netlifyResponse = await fetch('/', {
+                const response = await fetch('http://localhost:8000/api/upload/', {
                     method: 'POST',
                     body: formData
                 });
 
-                if(netlifyResponse.ok) {
+                if(response.ok) {
                     closePreview();
                     currentStep++;
                     updateUI();
                 } else {
-                    alert("Upload failed. Please try again.");
+                    const err = await response.json();
+                    alert("Upload failed: " + (err.detail || "Server Error"));
                 }
             } catch(e) {
                 console.error(e);
-                alert("Connection error. Ensure internet access.");
+                alert("Connection error. Ensure Backend Server is running on Port 8000.");
             } finally {
                 btn.innerText = "CONFIRM & UPLOAD";
                 btn.disabled = false;

@@ -4,6 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hardware Store | Ultimate Security Solutions</title>
+    <meta name="description" content="Browse our catalog of NDAA-compliant security hardware. IP Cameras, NVRs, Access Control, and Structured Cabling supplies. Professional pricing available.">
+    <meta name="keywords" content="Security Camera Store, Buy CCTV, LTS Platinum, Hikvision NVR, Access Control Parts, Cat6 Cable, Kansas City Tech Supply">
+    
+    <!-- Schema.org Product Collection -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "USS Hardware Catalog",
+      "description": "Professional security infrastructure hardware including IP Cameras, Recorders, and Access Control systems.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Ultimate Security Solutions"
+      }
+    }
+    </script>
     <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -279,84 +295,91 @@
             renderGrid();
         }
 
+        function calculateSearchScore(product, tokens) {
+            let score = 0;
+            const name = (product.name || '').toLowerCase();
+            const desc = (product.description || '').toLowerCase();
+            const skus = (product.variants || []).map(v => v.sku.toLowerCase());
+            const seriesId = (product.series_id || '').toLowerCase();
+
+            tokens.forEach(token => {
+                if (seriesId.includes(token)) score += 20;
+                if (skus.some(sku => sku.includes(token))) score += 15;
+                if (name.includes(token)) score += 10;
+                if (desc.includes(token)) score += 1;
+            });
+
+            return score;
+        }
+
         function renderGrid() {
             const grid = document.getElementById('product-grid');
             if(!grid) return;
             grid.innerHTML = '';
             
             const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
+            const searchTokens = searchTerm ? searchTerm.toLowerCase().split(/\s+/) : [];
             
-            const filtered = products.filter(series => {
-                if (!series) return false;
-                if (searchTerm) {
-                    const s = searchTerm.toLowerCase();
-                    const match = (series.name && series.name.toLowerCase().includes(s)) ||
-                                  (series.description && series.description.toLowerCase().includes(s)) ||
-                                  (series.variants && series.variants.some(v => v.sku.toLowerCase().includes(s)));
-                    if (!match) return false;
-                }
+            let filtered = products.map(series => {
+                // 1. Filter Check
                 const f = series.facets;
-                if (!f) return true;
-                if (activeGroups.length === 0) return true;
-                for (const [groupId, selectedOpts] of activeGroups) {
-                    const facetKeys = filterMap[groupId];
-                    if (!facetKeys) continue;
-                    let groupMatch = false;
-                    for (const key of facetKeys) {
-                        const productValues = f[key] || [];
-                        if (selectedOpts.some(opt => productValues.includes(opt))) { groupMatch = true; break; }
+                if (activeGroups.length > 0 && f) {
+                    for (const [groupId, selectedOpts] of activeGroups) {
+                        const facetKeys = filterMap[groupId];
+                        if (!facetKeys) continue;
+                        let groupMatch = false;
+                        for (const key of facetKeys) {
+                            const productValues = f[key] || [];
+                            if (selectedOpts.some(opt => productValues.includes(opt))) { groupMatch = true; break; }
+                        }
+                        if (!groupMatch) return null; // Filter failed
                     }
-                    if (!groupMatch) return false;
                 }
-                return true;
-            });
+
+                // 2. Search & Scoring
+                let score = 0;
+                if (searchTokens.length > 0) {
+                    score = calculateSearchScore(series, searchTokens);
+                    if (score === 0) return null; // Search failed
+                } else {
+                    score = 1; // Default score to show all if no search
+                }
+
+                return { ...series, searchScore: score };
+            }).filter(item => item !== null);
+
+            // 3. Sort by Score
+            if (searchTokens.length > 0) {
+                filtered.sort((a, b) => b.searchScore - a.searchScore);
+            }
 
             if (filtered.length === 0) {
                 grid.innerHTML = '<p style="color:var(--color-muted); padding:2rem;">No products match your search.</p>';
                 return;
             }
 
-                        filtered.slice(0, 50).forEach(series => {
+            filtered.slice(0, 50).forEach(series => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.onclick = () => openModal(series.series_id);
 
-                            const card = document.createElement('div');
-
-                            card.className = 'product-card';
-
-                            card.onclick = () => openModal(series.series_id); // Make whole card clickable
-
-                            const badge = (series.category === 'pro') ? 'PRO SERIES' : 'PLATINUM';
-
-                            
-
-                            let variantsHTML = '<table class="variants-table"><thead><tr><th>Model</th><th>Desc</th><th>Price</th><th></th></tr></thead><tbody>';
-
-                            if (series.variants) {
-
-                                series.variants.forEach(v => {
-
-                                    variantsHTML += `<tr><td class="variant-sku">${v.sku}</td><td>${v.description ? v.description.substring(0,40)+'...' : ''}</td><td class="variant-price">${v.price.toFixed(2)}</td><td><button class="btn-add-variant" onclick="event.stopPropagation(); addToCart('${series.series_id}', '${v.sku}')">Add</button></td></tr>`;
-
-                                });
-
-                            }
-
-                            variantsHTML += '</tbody></table>';
-
-                            
-
-                            const primarySku = series.variants?.[0]?.sku || 'UNKNOWN';
-
-                            const imgUrl = series.image && series.image !== 'ASSET_MISSING' ? series.image : `https://media.ltsecurityinc.com/catalog/product/${primarySku.toLowerCase()[0]}/${primarySku.toLowerCase()[1]}/${primarySku.toLowerCase()}.jpg`;
-
-                            
-
-                            card.innerHTML = `<div class="product-badge">${badge}</div><div class="product-img-container"><img src="${imgUrl}" class="product-img" onerror="handleImageError(this, '${primarySku}')"></div><div class="product-info"><h3 class="product-series-title">${series.name}</h3><p class="product-series-desc">${series.description}</p>${variantsHTML}<div class="btn-learn-more" onclick="event.stopPropagation(); openModal('${series.series_id}')">Learn More</div></div>`;
-
-                            grid.appendChild(card);
-
-                        });
-
-                    }
+                const badge = (series.category === 'pro') ? 'PRO SERIES' : 'PLATINUM';
+                
+                let variantsHTML = '<table class="variants-table"><thead><tr><th>Model</th><th>Desc</th><th>Price</th><th></th></tr></thead><tbody>';
+                if (series.variants) {
+                    series.variants.forEach(v => {
+                        variantsHTML += `<tr><td class="variant-sku">${v.sku}</td><td>${v.description ? v.description.substring(0,40)+'...' : ''}</td><td class="variant-price">${v.price.toFixed(2)}</td><td><button class="btn-add-variant" onclick="event.stopPropagation(); addToCart('${series.series_id}', '${v.sku}')">Add</button></td></tr>`;
+                    });
+                }
+                variantsHTML += '</tbody></table>';
+                
+                const primarySku = series.variants?.[0]?.sku || 'UNKNOWN';
+                const imgUrl = series.image && series.image !== 'ASSET_MISSING' ? series.image : `https://media.ltsecurityinc.com/catalog/product/${primarySku.toLowerCase()[0]}/${primarySku.toLowerCase()[1]}/${primarySku.toLowerCase()}.jpg`;
+                
+                card.innerHTML = `<div class="product-badge">${badge}</div><div class="product-img-container"><img src="${imgUrl}" class="product-img" onerror="handleImageError(this, '${primarySku}')"></div><div class="product-info"><h3 class="product-series-title">${series.name}</h3><p class="product-series-desc">${series.description}</p>${variantsHTML}<div class="btn-learn-more" onclick="event.stopPropagation(); openModal('${series.series_id}')">Learn More</div></div>`;
+                grid.appendChild(card);
+            });
+        }
 
         function handleImageError(img, sku) {
             if (!img.dataset.attempts) img.dataset.attempts = 0;
@@ -485,24 +508,25 @@
         function handleParams() {
             const params = new URLSearchParams(window.location.search);
             const cat = params.get('cat');
+            const productId = params.get('product'); // New Parameter
             const splashImg = document.getElementById('promo-img');
             const catOverview = document.getElementById('category-overview');
             const storeContainer = document.getElementById('main-store-container');
             
             const categories = [
-                { id: 'ip_solutions', name: 'IP Solutions', img: 'promo_default.jpg?v=2' },
-                { id: 'tvi_solutions', name: 'HD-TVI Solutions', img: 'promo_default.jpg?v=2' },
-                { id: 'access', name: 'Access Control', img: 'promo_default.jpg?v=2' },
-                { id: 'intercoms', name: 'Intercoms', img: 'promo_default.jpg?v=2' },
-                { id: 'accessories', name: 'Accessories', img: 'promo_default.jpg?v=2' },
-                { id: 'ubiquiti', name: 'Ubiquiti', img: 'promo_default.jpg?v=2' }
+                { id: 'ip_solutions', name: 'IP Solutions', img: 'https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip1c42w-28mda_cmip3182w-28sda_59-_-_-_.png' },
+                { id: 'tvi_solutions', name: 'HD-TVI Solutions', img: 'https://media.ltsecurityinc.com/catalog/product/cache/115d48e57ce8bbb1eb479c9f84dfe6ae/l/t/ltcmht1722w-cf.png' },
+                { id: 'access', name: 'Access Control', img: 'promo_access.jpg' },
+                { id: 'intercoms', name: 'Intercoms', img: 'promo_default.jpg' },
+                { id: 'accessories', name: 'Accessories', img: 'promo_default.jpg' },
+                { id: 'ubiquiti', name: 'Ubiquiti', img: 'promo_default.jpg' }
             ];
 
-            if (cat) {
+            if (cat || productId) { // Check for product ID as well
                 catOverview.style.display = 'none';
                 storeContainer.style.display = 'flex';
                 document.getElementById('promo-splash').style.display = 'block';
-                if(typeof promoData !== 'undefined' && promoData[cat]) splashImg.src = promoData[cat];
+                if(cat && typeof promoData !== 'undefined' && promoData[cat]) splashImg.src = promoData[cat];
                 
                 if (cat === 'platinum' || cat === 'ip_solutions') activeFilters.category = ['IP SOLUTIONS'];
                 else if (cat === 'pro' || cat === 'tvi_solutions') activeFilters.category = ['HD-TVI SOLUTIONS'];
@@ -518,6 +542,13 @@
                         if (vals.includes(cb.value)) cb.checked = true;
                     }
                 });
+
+                // Open Product Modal if ID is present
+                if (productId) {
+                    // Small delay to ensure grid is rendered
+                    setTimeout(() => openModal(productId), 500);
+                }
+
             } else {
                 catOverview.style.display = 'block';
                 storeContainer.style.display = 'none';
@@ -527,8 +558,11 @@
                 catContainer.innerHTML = '';
                 categories.forEach(c => {
                     const card = document.createElement('div');
-                    card.style.cssText = `background: linear-gradient(rgba(5, 11, 20, 0.7), rgba(5, 11, 20, 0.9)), url('assets/images/promos/${c.img}'); background-size: cover; background-position: center; height: 250px; border: 1px solid var(--color-accent); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: transform 0.3s;`;
-                    card.innerHTML = `<h3 style="font-size: 1.5rem; text-shadow: 0 2px 10px black;">${c.name}</h3>`;
+                    // Check if it's a full URL or relative
+                    const bgUrl = c.img.startsWith('http') ? c.img : `assets/images/promos/${c.img}`;
+                    
+                    card.style.cssText = `background: linear-gradient(rgba(5, 11, 20, 0.2), rgba(5, 11, 20, 0.9)), url('${bgUrl}'); background-size: contain; background-repeat: no-repeat; background-position: center; background-color: #fff; height: 250px; border: 1px solid var(--color-accent); display: flex; align-items: flex-end; justify-content: center; cursor: pointer; transition: transform 0.3s; padding-bottom: 1rem;`;
+                    card.innerHTML = `<h3 style="font-size: 1.5rem; text-shadow: 0 2px 10px black; background: rgba(0,0,0,0.7); width: 100%; text-align: center; padding: 10px 0;">${c.name}</h3>`;
                     card.onmouseenter = () => card.style.transform = 'scale(1.03)';
                     card.onmouseleave = () => card.style.transform = 'scale(1)';
                     card.onclick = () => window.location.href = `ordering_system.html?cat=${c.id}`;
@@ -537,21 +571,34 @@
             }
         }
 
+        function performSearch() {
+            const searchInput = document.getElementById('global-search');
+            searchTerm = searchInput.value.trim();
+            const catOverview = document.getElementById('category-overview');
+            const storeContainer = document.getElementById('main-store-container');
+            
+            if (searchTerm.length > 0) {
+                catOverview.style.display = 'none';
+                storeContainer.style.display = 'flex';
+                renderGrid();
+            } else {
+                handleParams();
+            }
+        }
+
         function initSearch() {
             const searchInput = document.getElementById('global-search');
+            const searchIcon = document.querySelector('.shop-search i');
             if(!searchInput) return;
-            searchInput.addEventListener('input', (e) => {
-                searchTerm = e.target.value.trim();
-                const catOverview = document.getElementById('category-overview');
-                const storeContainer = document.getElementById('main-store-container');
-                if (searchTerm.length > 0) {
-                    catOverview.style.display = 'none';
-                    storeContainer.style.display = 'flex';
-                    renderGrid();
-                } else {
-                    handleParams();
-                }
+
+            searchInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') performSearch();
             });
+
+            if(searchIcon) {
+                searchIcon.style.cursor = 'pointer';
+                searchIcon.addEventListener('click', performSearch);
+            }
         }
 
         document.addEventListener('DOMContentLoaded', () => {
@@ -560,8 +607,14 @@
             handleParams();
             renderGrid();
         });
+    <script src="assets/js/promo_data.js"></script>
+    <script>
+        let cart = [];
+        let searchTerm = '';
+        let activeFilters = { category: [], technology: [], series: [], resolution_channel: [], housing_case: [], ir_technology: [], low_light: [], color: [] };
+// ... (rest of script)
     </script>
-    <script src="assets/js/ai-concierge.js"></script>
+    <script src="assets/js/ai-concierge.v2.js"></script>
     <script src="assets/js/circuit-board.js"></script>
 </body>
 </html>

@@ -1,11 +1,11 @@
 const promoData = {
-    "platinum": "assets/images/promos/promo_default.jpg?v=2",
-    "pro": "assets/images/promos/promo_default.jpg?v=2",
-    "camera": "assets/images/promos/promo_default.jpg?v=2",
-    "nvr": "assets/images/promos/promo_default.jpg?v=2",
-    "access": "assets/images/promos/promo_default.jpg?v=2",
-    "ubiquiti": "assets/images/promos/promo_default.jpg?v=2",
-    "ip_solutions": "assets/images/promos/promo_default.jpg?v=2",
-    "tvi_solutions": "assets/images/promos/promo_default.jpg?v=2",
-    "default": "assets/images/promos/promo_default.jpg?v=2"
+    "platinum": "assets/images/promos/promo_platinum.jpg",
+    "pro": "assets/images/promos/promo_pro.jpg",
+    "camera": "assets/images/promos/promo_camera.jpg",
+    "nvr": "assets/images/promos/promo_nvr.jpg",
+    "access": "assets/images/promos/promo_access.jpg",
+    "ubiquiti": "assets/images/promos/promo_default.jpg",
+    "ip_solutions": "assets/images/promos/promo_platinum.jpg",
+    "tvi_solutions": "assets/images/promos/promo_pro.jpg",
+    "default": "assets/images/promos/promo_default.jpg"
 };

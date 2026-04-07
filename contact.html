@@ -177,22 +177,22 @@
             <!-- Contact Form -->
             <div class="contact-form">
                 <h3>Request a Quote</h3>
-                <form action="mailto:nate@usstech.net" method="POST" enctype="text/plain" name="contact">
+                <form id="contact-form" onsubmit="handleContact(event)">
                     
                     <div class="form-group">
-                        <input type="text" name="name" class="form-control" placeholder="Full Name" required>
+                        <input type="text" id="c-name" class="form-control" placeholder="Full Name" required>
                     </div>
                     
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Email Address" required>
+                        <input type="email" id="c-email" class="form-control" placeholder="Email Address" required>
                     </div>
                     
                     <div class="form-group">
-                        <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+                        <input type="tel" id="c-phone" class="form-control" placeholder="Phone Number">
                     </div>
 
                     <div class="form-group">
-                        <select name="service" class="form-control" style="background: rgba(0,0,0,0.3);">
+                        <select id="c-service" class="form-control" style="background: rgba(0,0,0,0.3);">
                             <option value="" disabled selected>Service Needed</option>
                             <option value="Cabling">Structured Cabling</option>
                             <option value="CCTV">CCTV Surveillance</option>
@@ -203,11 +203,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <textarea name="message" class="form-control" rows="5" placeholder="Project Details..." required></textarea>
+                        <textarea id="c-message" class="form-control" rows="5" placeholder="Project Details..." required></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">Send Secure Message</button>
+                    <button type="submit" id="c-btn" class="submit-btn">Send Secure Message</button>
                 </form>
+                <div id="c-status" style="margin-top:1rem; text-align:center; display:none;"></div>
             </div>
         </div>
     </section>
@@ -215,6 +216,51 @@
     <footer>
         <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
     </footer>
-    <script src="assets/js/ai-concierge.js"></script>
+    <script>
+        async function handleContact(e) {
+            e.preventDefault();
+            const btn = document.getElementById('c-btn');
+            const status = document.getElementById('c-status');
+            
+            btn.disabled = true;
+            btn.innerText = "Transmitting...";
+            
+            const payload = {
+                name: document.getElementById('c-name').value,
+                email: document.getElementById('c-email').value,
+                phone: document.getElementById('c-phone').value,
+                message: `Service: ${document.getElementById('c-service').value}\n\n${document.getElementById('c-message').value}`
+            };
+
+            try {
+                // Try Local Backend First
+                const res = await fetch('http://localhost:8000/api/contact/', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if(res.ok) {
+                    status.style.display = 'block';
+                    status.style.color = '#00ff00';
+                    status.innerHTML = '<i class="fas fa-check-circle"></i> Message Received. Dispatch notified.';
+                    document.getElementById('contact-form').reset();
+                } else {
+                    throw new Error("Server Error");
+                }
+            } catch(err) {
+                // Fallback to Mailto if backend down
+                console.warn("Backend unavailable, using fallback.");
+                window.location.href = `mailto:admin@usstech.net?subject=Contact Request: ${payload.name}&body=${encodeURIComponent(payload.message)}`;
+                status.style.display = 'block';
+                status.style.color = '#ffd700';
+                status.innerText = "Secure Uplink Offline. Opening Email Client...";
+            } finally {
+                btn.disabled = false;
+                btn.innerText = "Send Secure Message";
+            }
+        }
+    </script>
+    <script src="assets/js/ai-concierge.v2.js"></script>
 <script src="assets/js/circuit-board.js"></script></body>
 </html>

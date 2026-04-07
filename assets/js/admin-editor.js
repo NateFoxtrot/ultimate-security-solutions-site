@@ -1,11 +1,9 @@
 (function() {
     const params = new URLSearchParams(window.location.search);
     const mode = params.get('mode');
-    const token = localStorage.getItem('uss_gh_token');
-    const owner = localStorage.getItem('uss_gh_owner');
-    const repo = localStorage.getItem('uss_gh_repo');
+    const token = localStorage.getItem('uss_token');
 
-    if (mode === 'edit' && token && owner && repo) {
+    if (mode === 'edit' && token) {
         initVisualEditor();
     }
 
@@ -21,18 +19,18 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.5);
         `;
         toolbar.innerHTML = `
-            <span>🔧 USS LIVE EDITOR [ONLINE]</span>
+            <span>🔧 USS LIVE EDITOR [LOCAL SERVER]</span>
             <div id="editor-status" style="font-size:0.7rem; color:#333;">Click any text to edit.</div>
             <div>
-                <button onclick="savePageChanges()" id="save-btn" style="background:black; color:#00ff00; border:1px solid black; padding:5px 15px; cursor:pointer; font-weight:bold;">SAVE TO CLOUD</button>
+                <button onclick="savePageChanges()" id="save-btn" style="background:black; color:#00ff00; border:1px solid black; padding:5px 15px; cursor:pointer; font-weight:bold;">SAVE TO DISK</button>
                 <button onclick="exitEdit()" style="background:transparent; color:black; border:1px solid black; padding:5px 10px; cursor:pointer; margin-left:10px;">EXIT</button>
             </div>
         `;
         document.body.prepend(toolbar);
         document.body.style.marginTop = '50px';
 
-        // 2. Make Elements Editable (Improved Selection)
-        const editableSelectors = 'h1, h2, h3, p, span, .service-card p, .hero-subtitle';
+        // 2. Make Elements Editable
+        const editableSelectors = 'h1, h2, h3, p, span, .service-card p, .hero-subtitle, .value-card p, .review-card p';
         document.querySelectorAll(editableSelectors).forEach(el => {
             if(el.closest('.admin-toolbar')) return;
             
@@ -51,83 +49,61 @@
                 document.getElementById('editor-status').innerText = "Changes pending save...";
             });
         });
-
-        // 3. Image Captioning Logic
-        document.querySelectorAll('img').forEach(img => {
-            if(img.closest('.admin-toolbar')) return;
-            img.style.cursor = 'pointer';
-            img.title = "Click to change caption/alt text";
-            img.addEventListener('click', (e) => {
-                e.preventDefault();
-                const newAlt = prompt("Enter new caption/alt text for this image:", img.alt);
-                if(newAlt !== null) {
-                    img.alt = newAlt;
-                    alert("Caption updated! Click 'Save to Cloud' to commit.");
-                }
-            });
-        });
     }
 
-    // --- REAL GITHUB SAVE LOGIC ---
+    // --- LOCAL SERVER SAVE LOGIC ---
     window.savePageChanges = async function() {
         const btn = document.getElementById('save-btn');
         const status = document.getElementById('editor-status');
         
         btn.disabled = true;
-        btn.innerText = "UPLOADING...";
-        status.innerText = "Connecting to GitHub Uplink...";
+        btn.innerText = "SAVING...";
+        status.innerText = "Syncing with Local Server...";
 
-        // Cleanup DOM before saving
-        const toolbar = document.querySelector('.admin-toolbar');
-        toolbar.remove();
-        document.body.style.marginTop = '0';
+        // Clone current state to clean it
+        const cleanDoc = document.documentElement.cloneNode(true);
         
-        // Remove all contentEditable attributes and editor styles
-        document.querySelectorAll('[contentEditable="true"]').forEach(el => {
+        // Remove Editor UI from clone
+        const toolbar = cleanDoc.querySelector('.admin-toolbar');
+        if(toolbar) toolbar.remove();
+        cleanDoc.body.style.marginTop = '0';
+        
+        // Cleanup editable elements in clone
+        cleanDoc.querySelectorAll('[contentEditable="true"]').forEach(el => {
             el.removeAttribute('contentEditable');
             el.style.outline = "";
             el.style.background = "";
         });
 
-        const fullHTML = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+        const fullHTML = "<!DOCTYPE html>\n" + cleanDoc.outerHTML;
         const filePath = window.location.pathname.split('/').pop() || 'index.html';
         
         try {
-            // 1. Get current file SHA
-            const getUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
-            const getRes = await fetch(getUrl, {
-                headers: { 'Authorization': `token ${token}` }
-            });
-            const getData = await getRes.json();
-            const sha = getData.sha;
-
-            // 2. Push Update
-            const putRes = await fetch(getUrl, {
-                method: 'PUT',
+            const res = await fetch(`http://localhost:8000/api/admin/save_page`, {
+                method: 'POST',
                 headers: { 
-                    'Authorization': `token ${token}`,
+                    'Authorization': `Bearer ${token}`,
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    message: `admin: visual edit of ${filePath}`,
-                    content: btoa(unescape(encodeURIComponent(fullHTML))), // Robust Base64
-                    sha: sha
+                    path: filePath,
+                    content: fullHTML
                 })
             });
 
-            if(putRes.ok) {
-                alert("DEPLOYMENT INITIALIZED. Changes are being pushed to Netlify. The page will reload in 3 seconds.");
-                setTimeout(() => location.reload(), 3000);
+            if(res.ok) {
+                alert("Page Saved Successfully to Disk!");
+                location.reload();
             } else {
-                const err = await putRes.json();
-                throw new Error(err.message);
+                const err = await res.json();
+                throw new Error(err.detail || "Server Error");
             }
 
         } catch(e) {
             console.error(e);
-            alert("Uplink Failed: " + e.message);
-            // Put toolbar back
-            location.reload(); 
+            alert("Save Failed: " + e.message);
+            btn.disabled = false;
+            btn.innerText = "SAVE TO DISK";
         }
     };
 

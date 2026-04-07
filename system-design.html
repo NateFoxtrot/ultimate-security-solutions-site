@@ -777,8 +777,8 @@
             `;
 
             try {
-                // Call Netlify Serverless Function
-                const response = await fetch('/.netlify/functions/send-sms', {
+                // Call Local FastAPI Backend
+                const response = await fetch('http://localhost:8000/api/sms/send', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
@@ -789,7 +789,7 @@
 
                 const data = await response.json();
 
-                if(data.status === 'sent') {
+                if(response.ok) {
                     container.innerHTML = `
                         <h3 style="color:#00ff00;">INSTRUCTIONS SENT</h3>
                         <div style="background:rgba(0,0,0,0.5); padding:1rem; border:1px solid #00ff00; border-radius:8px; margin-top:1rem;">
@@ -799,7 +799,6 @@
                             <p style="font-size:0.8rem; color:#ccc; margin-top:10px;">
                                 Session ID: <span style="font-family:monospace; color:#ff00ff;">${data.session_id}</span>
                             </p>
-                            <a href="${data.link}" target="_blank" style="display:block; margin-top:10px; color:#ff00ff; font-size:0.7rem;">(Debug: Open Capture Link)</a>
                         </div>
                         
                         <div id="photo-progress" style="margin-top:2rem; text-align:center;">
@@ -808,29 +807,32 @@
                         </div>
                     `;
                     
-                    // Start Polling (Simulation for now, as we don't have WebSocket setup yet)
                     startPolling(data.session_id);
+                } else {
+                    throw new Error(data.detail || "SMS Failed");
                 }
 
             } catch(e) {
                 console.error(e);
-                container.innerHTML = `<h3 style="color:red">CONNECTION FAILED</h3><p>Ensure Backend Server is running on Port 8000.</p>`;
+                container.innerHTML = `<h3 style="color:red">CONNECTION FAILED</h3><p>${e.message}</p>`;
             }
         }
 
         function startPolling(sessionId) {
-            // Mock Polling Logic - In production, this would hit /api/status/{sessionId}
-            let photos = 0;
-            const interval = setInterval(() => {
-                photos++;
-                const statusText = document.querySelector('#photo-progress p');
-                if(statusText) statusText.innerText = `Photos Received (${photos}/3)...`;
-                
-                if(photos >= 3) {
-                    clearInterval(interval);
-                    setTimeout(finishPhotoAnchor, 1000);
-                }
-            }, 5000); // Fake update every 5 seconds
+            const interval = setInterval(async () => {
+                try {
+                    const res = await fetch(`http://localhost:8000/api/upload/status/${sessionId}`);
+                    const data = await res.json();
+                    
+                    const statusText = document.querySelector('#photo-progress p');
+                    if(statusText) statusText.innerText = `Photos Received (${data.count}/3)...`;
+                    
+                    if(data.count >= 3) {
+                        clearInterval(interval);
+                        setTimeout(finishPhotoAnchor, 1000);
+                    }
+                } catch(e) { console.error("Polling error:", e); }
+            }, 3000);
         }
 
         function finishPhotoAnchor() {
@@ -1399,7 +1401,7 @@
             document.getElementById('lead-modal').style.display = 'flex';
         }
 
-        function submitLead() {
+        async function submitLead() {
             const lead = {
                 name: document.getElementById('lead-name').value,
                 email: document.getElementById('lead-email').value,
@@ -1416,14 +1418,23 @@
                 return;
             }
 
-            // Simulate API Call / Save
-            console.log("LEAD CAPTURED:", lead);
-            localStorage.setItem('uss_last_lead', JSON.stringify(lead));
+            try {
+                const res = await fetch('http://localhost:8000/api/design/save', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(lead)
+                });
 
-            document.getElementById('lead-modal').style.display = 'none';
-            
-            // Visual Feedback
-            alert(`Success! Project '${lead.project}' has been saved. Check your email (${lead.email}) for the design PDF and formal quote.`);
+                if(res.ok) {
+                    const data = await res.json();
+                    document.getElementById('lead-modal').style.display = 'none';
+                    alert(`Success! Project '${lead.project}' has been saved.\n\nServer ID: ${data.id}\nStatus: Notification dispatched to HQ.\n\nA formal quote has been emailed to ${lead.email}.`);
+                } else {
+                    alert("Failed to save design to server.");
+                }
+            } catch(e) {
+                alert("Error connecting to server for save.");
+            }
         }
 
         function saveDesignLocal() {

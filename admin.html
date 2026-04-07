@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>USS Admin Command Center</title>
-    <link rel="stylesheet" href="styles.css?v=ADMIN_V1">
+    <title>USS Admin Command Center (Local)</title>
+    <link rel="stylesheet" href="styles.css?v=ADMIN_V2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --admin-bg: #0a1018;
             --admin-panel: #111b29;
-            --admin-accent: #00ff00; /* Hacker Green for Admin */
+            --admin-accent: #00ff00;
         }
-        body { background: var(--admin-bg); color: #ccc; }
+        body { background: var(--admin-bg); color: #ccc; font-family: 'Courier New', monospace; }
         
         #login-screen {
             height: 100vh;
@@ -52,7 +52,7 @@
         }
 
         /* Dashboard */
-        #dashboard { display: none; height: 100vh; display: none; flex-direction: column; }
+        #dashboard { display: none; height: 100vh; flex-direction: column; }
         
         .admin-nav {
             background: #000;
@@ -66,6 +66,7 @@
         .admin-layout {
             display: flex;
             flex-grow: 1;
+            overflow: hidden;
         }
 
         .admin-sidebar {
@@ -80,10 +81,12 @@
             cursor: pointer;
             border-bottom: 1px solid #222;
             color: #aaa;
+            margin-bottom: 5px;
         }
         .admin-menu-item:hover, .admin-menu-item.active {
             color: var(--admin-accent);
             background: rgba(0,255,0,0.05);
+            border-left: 3px solid var(--admin-accent);
         }
 
         .admin-content {
@@ -92,123 +95,148 @@
             overflow-y: auto;
         }
 
+        /* Content Editor */
+        .editor-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            height: 100%;
+        }
+        
+        .item-list {
+            background: #111;
+            border: 1px solid #333;
+            overflow-y: auto;
+            max-height: 80vh;
+        }
+        
+        .list-item {
+            padding: 10px;
+            border-bottom: 1px solid #222;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .list-item:hover, .list-item.selected {
+            background: #222;
+            color: var(--admin-accent);
+        }
+
+        .editor-form {
+            background: #111;
+            padding: 2rem;
+            border: 1px solid #333;
+        }
+
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; margin-bottom: 5px; color: var(--admin-accent); font-size: 0.8rem; }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            background: #000;
+            border: 1px solid #333;
+            color: #fff;
+        }
+        .form-group textarea { height: 100px; resize: vertical; }
+
+        .toolbar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 1rem;
+        }
+
         /* File Manager */
         .file-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
             gap: 1rem;
         }
-
         .file-card {
             background: #222;
-            border: 1px solid #444;
-            padding: 10px;
+            padding: 5px;
             text-align: center;
-            position: relative;
+            font-size: 0.7rem;
+            border: 1px solid #333;
         }
-
         .file-card img {
             width: 100%;
-            height: 100px;
-            object-fit: cover;
+            height: 80px;
+            object-fit: contain;
+            background: #000;
             margin-bottom: 5px;
         }
 
-        .file-actions {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 5px;
-        }
-
-        .upload-zone {
-            border: 2px dashed #444;
-            padding: 2rem;
-            text-align: center;
-            margin-bottom: 2rem;
-            cursor: pointer;
-        }
-        .upload-zone:hover { border-color: var(--admin-accent); }
-
     </style>
 </head>
-<body><canvas id="bg-canvas"></canvas>
+<body>
 
     <!-- LOGIN -->
     <div id="login-screen">
         <div class="login-box">
             <h2 style="color:var(--admin-accent);">USS COMMAND</h2>
-            <p style="font-size:0.8rem; margin-bottom:1rem; color:#888;">GITHUB SECURE ACCESS</p>
+            <p style="font-size:0.8rem; margin-bottom:1rem; color:#888;">SECURE LOCAL GATEWAY</p>
             
-            <input type="password" id="gh-token" placeholder="GitHub Personal Access Token">
-            <div style="display:flex; gap:10px;">
-                <input type="text" id="gh-owner" placeholder="Username (e.g. nate-follis)">
-                <input type="text" id="gh-repo" placeholder="Repo Name (e.g. uss-site)">
-            </div>
-            
-            <button class="admin-btn" onclick="login()">INITIALIZE UPLINK</button>
+            <form onsubmit="event.preventDefault(); login();">
+                <input type="text" id="username" placeholder="Username" value="admin">
+                <input type="password" id="password" placeholder="Password" value="uss2025">
+                <button class="admin-btn">INITIALIZE</button>
+            </form>
             <p id="login-msg" style="color:red; margin-top:10px; font-size:0.8rem;"></p>
-            <a href="https://github.com/settings/tokens" target="_blank" style="color:#555; font-size:0.7rem; text-decoration:none; display:block; margin-top:1rem;">Get Token (Scope: repo)</a>
         </div>
     </div>
 
     <!-- DASHBOARD -->
     <div id="dashboard">
         <nav class="admin-nav">
-            <span style="font-weight:bold; color:var(--admin-accent);">USS INTELLIGENCE CORE // GITHUB LINKED</span>
-            <div style="font-size:0.8rem; color:#666;">Connected to: <span id="repo-display" style="color:#ccc;">...</span></div>
+            <span style="font-weight:bold; color:var(--admin-accent);">USS INTELLIGENCE CORE</span>
+            <div style="font-size:0.8rem; color:#666;">SERVER: <span style="color:#fff;">localhost:8000</span></div>
             <button onclick="logout()" style="background:none; border:1px solid #555; color:#aaa; padding:5px 10px; cursor:pointer;">TERMINATE</button>
         </nav>
         <div class="admin-layout">
             <aside class="admin-sidebar">
-                <div class="admin-menu-item active" onclick="showSection('files')"><i class="fas fa-folder"></i> File Manager</div>
-                <div class="admin-menu-item" onclick="showSection('content')"><i class="fas fa-edit"></i> Site Content</div>
-                <div class="admin-menu-item" onclick="showSection('deploy')"><i class="fas fa-rocket"></i> Deployment Status</div>
+                <div class="admin-menu-item active" onclick="showSection('reviews')"><i class="fas fa-star"></i> Review Manager</div>
+                <div class="admin-menu-item" onclick="showSection('partners')"><i class="fas fa-handshake"></i> Partner Manager</div>
+                <div class="admin-menu-item" onclick="showSection('files')"><i class="fas fa-folder"></i> File Browser</div>
             </aside>
             <main class="admin-content">
                 
-                <!-- FILE MANAGER SECTION -->
-                <div id="section-files">
-                    <h2>Asset Management (Portfolio)</h2>
-                    <div class="upload-zone" onclick="document.getElementById('file-input').click()">
-                        <i class="fas fa-cloud-upload-alt" style="font-size:2rem; margin-bottom:10px;"></i>
-                        <p>Click to Upload New Photos (Direct to GitHub)</p>
-                        <input type="file" id="file-input" hidden multiple onchange="handleUpload(event)">
+                <!-- EDITOR SECTION (Shared for Reviews/Partners) -->
+                <div id="editor-ui">
+                    <div class="toolbar">
+                        <h2 id="section-title" style="margin:0; flex-grow:1;">Manager</h2>
+                        <button class="admin-btn" style="width:auto; background:var(--admin-accent); color:black;" onclick="newItem()">+ NEW</button>
+                        <button class="admin-btn" style="width:auto; background:#444; color:white;" onclick="saveAll()">SAVE TO DISK</button>
                     </div>
-                    <div id="file-grid" class="file-grid">
-                        <p style="text-align:center; width:100%;">Connecting to repository...</p>
-                    </div>
-                </div>
 
-                <!-- CONTENT EDITOR SECTION -->
-                <div id="section-content" style="display:none;">
-                    <h2>Site Customization</h2>
-                    
-                    <div style="background:#222; padding:1.5rem; border:1px solid #444; margin-bottom:2rem;">
-                        <h3 style="color:var(--admin-accent); font-size:1rem; margin-bottom:1rem;">1. LOGO SCALING</h3>
-                        <p style="font-size:0.8rem; margin-bottom:10px;">Adjust the size of partner logos globally (scales by percentage).</p>
-                        <input type="range" id="logo-scale" min="50" max="200" value="100" style="width:100%;">
-                        <div style="display:flex; justify-content:space-between; font-size:0.7rem; color:#888;">
-                            <span>Small (50%)</span>
-                            <span id="scale-val">100%</span>
-                            <span>Massive (200%)</span>
+                    <div class="editor-container">
+                        <div class="item-list" id="item-list">
+                            <!-- JS Populated -->
                         </div>
-                        <button class="admin-btn" style="margin-top:1rem; width:auto;" onclick="applyLogoScale()">UPDATE GLOBAL SCALE</button>
-                    </div>
-
-                    <div style="background:#222; padding:1.5rem; border:1px solid #444;">
-                        <h3 style="color:var(--admin-accent); font-size:1rem; margin-bottom:1rem;">2. VISUAL PAGE EDITOR</h3>
-                        <p>Launch the site in "Edit Mode". Click text to change it, then click "Save to Cloud".</p>
-                        <a href="index.html?mode=edit" target="_blank" class="admin-btn" style="display:inline-block; width:auto; text-decoration:none; margin-top:1rem;">LAUNCH VISUAL EDITOR</a>
+                        <div class="editor-form" id="editor-form" style="display:none;">
+                            <input type="hidden" id="edit-index">
+                            <div id="form-fields"></div>
+                            <div style="margin-top:1rem; display:flex; gap:10px;">
+                                <button class="admin-btn" onclick="updateCurrent()">UPDATE ITEM</button>
+                                <button class="admin-btn" style="background:red; color:white;" onclick="deleteCurrent()">DELETE</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- DEPLOY STATUS -->
-                <div id="section-deploy" style="display:none;">
-                    <h2>System Status</h2>
-                    <div style="background:#222; padding:1rem; border:1px solid #444;">
-                        <p>Commits trigger automatic builds on Netlify.</p>
-                        <button class="admin-btn" style="margin-top:1rem; width:auto;" onclick="window.open('https://app.netlify.com', '_blank')">OPEN NETLIFY DASHBOARD</button>
+                <!-- FILE MANAGER SECTION -->
+                <div id="files-ui" style="display:none;">
+                    <h2>Asset Browser</h2>
+                    <div class="toolbar">
+                        <select id="folder-select" onchange="loadFiles(this.value)" style="padding:5px; background:#000; color:#fff; border:1px solid #333;">
+                            <option value="portfolio">Portfolio</option>
+                            <option value="partners">Partners</option>
+                            <option value="reviews">Reviews</option>
+                        </select>
+                        <button class="admin-btn" style="width:auto;" onclick="document.getElementById('upload-input').click()">UPLOAD</button>
+                        <input type="file" id="upload-input" hidden onchange="uploadFile(this)">
                     </div>
+                    <div class="file-grid" id="file-grid"></div>
                 </div>
 
             </main>
@@ -216,246 +244,233 @@
     </div>
 
     <script>
-        // GitHub API Config
-        let ghToken = localStorage.getItem('uss_gh_token');
-        let ghOwner = localStorage.getItem('uss_gh_owner');
-        let ghRepo = localStorage.getItem('uss_gh_repo');
-        
-        // Base Path for Portfolio Images in Repo
-        const ASSET_PATH = 'assets/images/portfolio'; 
+        const API_URL = "http://localhost:8000/api/admin";
+        let TOKEN = localStorage.getItem('uss_token');
+        let CURRENT_DATA = [];
+        let CURRENT_TYPE = 'reviews'; // 'reviews' or 'partners'
 
-        if(ghToken && ghOwner && ghRepo) showDashboard();
+        // Init
+        if(TOKEN) showDashboard();
 
+        // --- AUTH ---
         async function login() {
-            const token = document.getElementById('gh-token').value;
-            const owner = document.getElementById('gh-owner').value;
-            const repo = document.getElementById('gh-repo').value;
+            const formData = new FormData();
+            formData.append('username', document.getElementById('username').value);
+            formData.append('password', document.getElementById('password').value);
 
-            if(!token || !owner || !repo) {
-                document.getElementById('login-msg').innerText = "All fields required.";
-                return;
-            }
-
-            // Test Connection
-            document.getElementById('login-msg').innerText = "Verifying Credentials...";
             try {
-                const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-                    headers: { 'Authorization': `token ${token}` }
-                });
-                
+                const res = await fetch(`${API_URL}/login`, { method: 'POST', body: formData });
                 if(res.ok) {
-                    localStorage.setItem('uss_gh_token', token);
-                    localStorage.setItem('uss_gh_owner', owner);
-                    localStorage.setItem('uss_gh_repo', repo);
-                    
-                    // Update vars
-                    ghToken = token; ghOwner = owner; ghRepo = repo;
+                    const data = await res.json();
+                    TOKEN = data.access_token;
+                    localStorage.setItem('uss_token', TOKEN);
                     showDashboard();
                 } else {
-                    document.getElementById('login-msg').innerText = "Connection Failed. Check Token/Repo permissions.";
+                    document.getElementById('login-msg').innerText = "Access Denied.";
                 }
             } catch(e) {
                 console.error(e);
-                document.getElementById('login-msg').innerText = "Network Error.";
+                document.getElementById('login-msg').innerText = "Server Unreachable.";
             }
+        }
+
+        function logout() {
+            localStorage.removeItem('uss_token');
+            location.reload();
         }
 
         function showDashboard() {
             document.getElementById('login-screen').style.display = 'none';
             document.getElementById('dashboard').style.display = 'flex';
-            document.getElementById('repo-display').innerText = `${ghOwner}/${ghRepo}`;
-            loadFiles();
+            loadContent('reviews');
         }
 
-        function logout() {
-            localStorage.clear();
-            location.reload();
+        function showSection(section) {
+            document.querySelectorAll('.admin-menu-item').forEach(i => i.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            if(section === 'files') {
+                document.getElementById('editor-ui').style.display = 'none';
+                document.getElementById('files-ui').style.display = 'block';
+                loadFiles('portfolio');
+            } else {
+                document.getElementById('files-ui').style.display = 'none';
+                document.getElementById('editor-ui').style.display = 'block';
+                loadContent(section);
+            }
         }
 
-        function showSection(id) {
-            document.querySelectorAll('.admin-content > div').forEach(d => d.style.display = 'none');
-            document.getElementById(`section-${id}`).style.display = 'block';
-        }
+        // --- CONTENT EDITOR ---
 
-        // --- GITHUB FILE OPERATIONS ---
-
-        async function loadFiles() {
-            const grid = document.getElementById('file-grid');
-            grid.innerHTML = '<p style="text-align:center; width:100%; color:#00ff00;">Fetching Assets...</p>';
-
+        async function loadContent(type) {
+            CURRENT_TYPE = type;
+            document.getElementById('section-title').innerText = type.toUpperCase() + " DATABASE";
+            document.getElementById('editor-form').style.display = 'none';
+            
             try {
-                const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${ASSET_PATH}`, {
-                    headers: { 'Authorization': `token ${ghToken}` }
+                const res = await fetch(`${API_URL}/content/${type}`, {
+                    headers: { 'Authorization': `Bearer ${TOKEN}` }
+                });
+                CURRENT_DATA = await res.json();
+                renderList();
+            } catch(e) {
+                alert("Failed to load content.");
+            }
+        }
+
+        function renderList() {
+            const list = document.getElementById('item-list');
+            list.innerHTML = '';
+            
+            CURRENT_DATA.forEach((item, idx) => {
+                const div = document.createElement('div');
+                div.className = 'list-item';
+                // Display logic based on type
+                const label = CURRENT_TYPE === 'reviews' ? `${item.author} (${item.company})` : item.name;
+                div.innerHTML = `<span>${label}</span> <i class="fas fa-chevron-right" style="font-size:0.7rem;"></i>`;
+                div.onclick = () => selectItem(idx);
+                list.appendChild(div);
+            });
+        }
+
+        function selectItem(idx) {
+            const item = CURRENT_DATA[idx];
+            document.getElementById('edit-index').value = idx;
+            document.getElementById('editor-form').style.display = 'block';
+            
+            // Build Form
+            const container = document.getElementById('form-fields');
+            container.innerHTML = '';
+            
+            for(let key in item) {
+                const grp = document.createElement('div');
+                grp.className = 'form-group';
+                
+                const label = document.createElement('label');
+                label.innerText = key.toUpperCase();
+                
+                let input;
+                if(key === 'text' || key === 'review') {
+                    input = document.createElement('textarea');
+                } else {
+                    input = document.createElement('input');
+                    input.type = 'text';
+                }
+                input.id = `field-${key}`;
+                input.value = item[key];
+                
+                grp.appendChild(label);
+                grp.appendChild(input);
+                container.appendChild(grp);
+            }
+            
+            // Highlight list item
+            document.querySelectorAll('.list-item').forEach(i => i.classList.remove('selected'));
+            document.querySelectorAll('.list-item')[idx].classList.add('selected');
+        }
+
+        function newItem() {
+            // Create empty template based on first item
+            const template = { ...CURRENT_DATA[0] };
+            for(let key in template) template[key] = "";
+            CURRENT_DATA.unshift(template);
+            renderList();
+            selectItem(0);
+        }
+
+        function updateCurrent() {
+            const idx = document.getElementById('edit-index').value;
+            const item = CURRENT_DATA[idx];
+            
+            for(let key in item) {
+                const val = document.getElementById(`field-${key}`).value;
+                item[key] = val;
+            }
+            renderList();
+            alert("Item updated in memory. Click SAVE TO DISK to commit.");
+        }
+
+        function deleteCurrent() {
+            if(!confirm("Delete this item?")) return;
+            const idx = document.getElementById('edit-index').value;
+            CURRENT_DATA.splice(idx, 1);
+            renderList();
+            document.getElementById('editor-form').style.display = 'none';
+        }
+
+        async function saveAll() {
+            try {
+                const res = await fetch(`${API_URL}/content/${CURRENT_TYPE}`, {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': `Bearer ${TOKEN}`,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(CURRENT_DATA)
+                });
+                if(res.ok) alert("Database Saved Successfully!");
+                else alert("Save Failed.");
+            } catch(e) {
+                alert("Error saving: " + e);
+            }
+        }
+
+        // --- FILES ---
+
+        async function loadFiles(folder) {
+            const grid = document.getElementById('file-grid');
+            grid.innerHTML = '<p>Loading...</p>';
+            
+            try {
+                const res = await fetch(`${API_URL}/files?path=${folder}`, {
+                    headers: { 'Authorization': `Bearer ${TOKEN}` }
                 });
                 const data = await res.json();
                 
-                if(!Array.isArray(data)) throw new Error("Invalid response from GitHub");
-
                 grid.innerHTML = '';
-                data.forEach(f => {
-                    // GitHub returns all files, filter for images if needed
-                    if(f.type !== 'file') return;
-
-                    const card = document.createElement('div');
-                    card.className = 'file-card';
-                    // Use download_url to display image directly from GitHub raw
-                    card.innerHTML = `
-                        <img src="${f.download_url}" loading="lazy">
-                        <div style="font-size:0.7rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${f.name}</div>
-                        <div class="file-actions">
-                            <select onchange="moveFile('${f.name}', '${f.sha}', this.value)" style="width:60px; font-size:0.6rem; padding:0; background:#333; color:white; border:none;">
-                                <option value="">Move...</option>
-                                <option value="portfolio">Main</option>
-                                <option value="archive">Archive</option>
-                            </select>
-                            <i class="fas fa-trash" style="color:red; cursor:pointer;" onclick="deleteFile('${f.name}', '${f.sha}')"></i>
-                        </div>
+                data.files.forEach(f => {
+                    const div = document.createElement('div');
+                    div.className = 'file-card';
+                    div.innerHTML = `
+                        <img src="assets/images/${folder}/${f}">
+                        <div>${f}</div>
                     `;
-                    grid.appendChild(card);
+                    div.onclick = () => {
+                        // Copy path to clipboard
+                        navigator.clipboard.writeText(`assets/images/${folder}/${f}`);
+                        alert("Path copied: " + `assets/images/${folder}/${f}`);
+                    };
+                    grid.appendChild(div);
                 });
             } catch(e) {
-                console.error(e);
-                grid.innerHTML = '<p style="color:red;">Failed to load files. Ensure path exists in repo.</p>';
+                grid.innerHTML = '<p>Error loading files.</p>';
             }
         }
 
-        async function moveFile(filename, sha, targetFolder) {
-            if(!targetFolder) return;
+        async function uploadFile(input) {
+            const file = input.files[0];
+            const folder = document.getElementById('folder-select').value;
+            if(!file) return;
             
-            // GitHub "Move" is Copy + Delete
-            // 1. Get Content
-            const res = await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${ASSET_PATH}/${filename}`, {
-                headers: { 'Authorization': `token ${ghToken}` }
-            });
-            const data = await res.json();
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('folder', folder);
             
-            // 2. Create in new location
-            const newPath = `assets/images/${targetFolder}/${filename}`;
-            await fetch(`https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${newPath}`, {
-                method: 'PUT',
-                headers: { 
-                    'Authorization': `token ${ghToken}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: `admin: move ${filename} to ${targetFolder}`,
-                    content: data.content
-                })
-            });
-            
-            // 3. Delete old
-            await deleteFile(filename, sha);
-        }
-
-        async function handleUpload(e) {
-            const files = e.target.files;
-            if(!files.length) return;
-
-            const grid = document.getElementById('file-grid');
-            const originalContent = grid.innerHTML;
-            grid.innerHTML = '<p style="text-align:center; width:100%; color:#00ff00;">Uploading... Please wait.</p>';
-
-            for(let file of files) {
-                // Convert to Base64
-                const reader = new FileReader();
-                reader.onload = async function() {
-                    const contentBase64 = reader.result.split(',')[1];
-                    await uploadToGitHub(file.name, contentBase64);
-                };
-                reader.readAsDataURL(file);
-            }
-            
-            // Allow some time for async uploads (simple implementation)
-            setTimeout(loadFiles, 3000); 
-        }
-
-        async function uploadToGitHub(filename, contentBase64) {
-            const path = `${ASSET_PATH}/${filename}`;
-            const url = `https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${path}`;
-            
-            await fetch(url, {
-                method: 'PUT',
-                headers: { 
-                    'Authorization': `token ${ghToken}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: `admin: upload ${filename}`,
-                    content: contentBase64
-                })
-            });
-        }
-
-        async function deleteFile(filename, sha) {
-            if(!confirm(`Delete ${filename} permanently?`)) return;
-            
-            const path = `${ASSET_PATH}/${filename}`;
-            const url = `https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/${path}`;
-
-            await fetch(url, {
-                method: 'DELETE',
-                headers: { 
-                    'Authorization': `token ${ghToken}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    message: `admin: delete ${filename}`,
-                    sha: sha
-                })
-            });
-            
-            // Refresh
-            setTimeout(loadFiles, 1000);
-        }
-
-        // --- CONTENT CUSTOMIZATION ---
-
-        document.getElementById('logo-scale')?.addEventListener('input', (e) => {
-            document.getElementById('scale-val').innerText = e.target.value + '%';
-        });
-
-        async function applyLogoScale() {
-            const scale = document.getElementById('logo-scale').value;
-            const newPx = Math.round(100 * (scale/100)); // Base was 100px
-            
-            alert(`Uplinking CSS change: .partner-card img { height: ${newPx}px }`);
-
             try {
-                // 1. Get current styles.css
-                const url = `https://api.github.com/repos/${ghOwner}/${ghRepo}/contents/styles.css`;
-                const res = await fetch(url, {
-                    headers: { 'Authorization': `token ${ghToken}` }
+                const res = await fetch(`${API_URL}/upload`, {
+                    method: 'POST',
+                    headers: { 'Authorization': `Bearer ${TOKEN}` },
+                    body: formData
                 });
-                const data = await res.json();
-                let cssContent = atob(data.content);
-
-                // 2. Simple regex replacement for height in .partner-card img
-                // Look for .partner-card img { height: ...px; }
-                const regex = /\.partner-card img\s*\{\s*height:\s*\d+px/g;
-                cssContent = cssContent.replace(regex, `.partner-card img { height: ${newPx}px`);
-
-                // 3. Push update
-                const putRes = await fetch(url, {
-                    method: 'PUT',
-                    headers: { 
-                        'Authorization': `token ${ghToken}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        message: `admin: set global logo scale to ${scale}%`,
-                        content: btoa(cssContent),
-                        sha: data.sha
-                    })
-                });
-
-                if(putRes.ok) {
-                    alert("CSS Global styles updated! Netlify will redeploy in ~1 minute.");
-                }
+                if(res.ok) {
+                    alert("Upload Success!");
+                    loadFiles(folder);
+                } else alert("Upload Failed.");
             } catch(e) {
-                console.error(e);
-                alert("Failed to update CSS: " + e.message);
+                alert("Error: " + e);
             }
         }
+
     </script>
-<script src="assets/js/circuit-board.js"></script></body>
+</body>
 </html>
