@@ -2,14 +2,46 @@
 import Page from '../layouts/Page.astro';
 ---
 
-<Page title="Partners" description="Our technology and manufacturing partners.">
-    <div class="container" style="text-align:center; padding:8rem 2rem 3rem;">
-        <h1>INDUSTRY <span class="text-accent">PARTNERS</span></h1>
-        <p style="color:var(--muted);">Trusted by the best in the business.</p>
+<Page title="Partners" description="White-Label Smart Hands services for National MSPs. Reliable, veteran-owned field technicians for structured cabling and security rollouts.">
+    <div class="container" style="text-align:left; padding:8rem 2rem 3rem; max-width:1200px;">
+        <h1>MSP <span class="text-accent">PARTNERSHIP</span></h1>
+        <p style="font-size:1.1rem; color:var(--muted); max-width:700px; border-left:4px solid var(--accent); padding-left:1rem;">White-label smart hands for national MSPs. We show up as your team — your clients never know we're a subcontractor.</p>
     </div>
+
     <section class="section">
-        <div class="container" style="text-align:center;">
-            <p style="color:var(--muted); font-size:1.1rem;">Content migrating to the new platform. Check back soon.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:1.5rem; max-width:1200px; margin:0 auto; padding:0 2rem;">
+            <div class="card anim"><i class="fas fa-user-secret"></i><h3>White-Label</h3><p>We represent your brand on-site. Branded reports, your logo, your company name. Your client never sees USS.</p></div>
+            <div class="card anim"><i class="fas fa-bolt"></i><h3>Rapid Dispatch</h3><p>Same-day KC Metro response. Next-day within 100 miles. Regional project capability with scheduled deployments.</p></div>
+            <div class="card anim"><i class="fas fa-tools"></i><h3>Multi-Discipline</h3><p>Structured cabling, CCTV, access control, WiFi, POS, and network engineering. One call covers the full scope.</p></div>
+            <div class="card anim"><i class="fas fa-clipboard-check"></i><h3>OSHA Compliant</h3><p>Every tech is OSHA 10/30 certified. We carry our own insurance and sign your NDAs before day one.</p></div>
+            <div class="card anim"><i class="fas fa-file-alt"></i><h3>Documented</h3><p>Photo documentation at every milestone. Before/after proof, cable management shots, and testing results.</p></div>
+            <div class="card anim"><i class="fas fa-handshake"></i><h3>Veteran Owned</h3><p>Military-grade discipline and accountability. If we say Tuesday at 8AM, we're there Tuesday at 7:45AM.</p></div>
         </div>
     </section>
+
+    <section class="section section-dark">
+        <div class="container" style="text-align:center;"><h2 class="section-title anim">TRUSTED BY</h2></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(150px,1fr)); gap:1.5rem; max-width:1400px; margin:3rem auto 0; padding:0 2rem;">
+            {['target','walmart','aruba','atandt','cisco','fedex','verizon','starlink','homedepot','hikvision','honeywell','lts','ubiquiti','walgreens','pilot','fortinet','hanwha','hy-vee','kroger','loves','quiktrip','spectrum','t-mobile'].map(p => (
+                <div class="anim" style="background:var(--surface); border:1px solid var(--border); padding:1.5rem; text-align:center; border-radius:var(--radius); transition:var(--ease); min-height:100px; display:flex; align-items:center; justify-content:center;">
+                    <img src={`/assets/images/partners/${p}.svg`} alt={p} style="max-width:80%; max-height:50px; object-fit:contain; filter:brightness(0) invert(1) opacity(0.6); transition:var(--ease);" onerror={`this.style.display='none'`} />
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <section class="section section-glow" style="text-align:center;">
+        <h2 class="anim" style="color:var(--accent);">NEED FIELD SUPPORT?</h2>
+        <p class="anim" style="color:var(--muted); max-width:500px; margin:0 auto 2rem;">Tell us your scope and we'll have boots on the ground within 24 hours.</p>
+        <a href="/contact" class="btn btn-primary anim"><i class="fas fa-paper-plane"></i> Start a Partnership</a>
+    </section>
 </Page>
+
+<style>
+    section.section-dark div > div:hover {
+        border-color:var(--border-hover); transform:translateY(-3px);
+    }
+    section.section-dark div > div:hover img {
+        filter:brightness(0) invert(1) opacity(1);
+    }
+</style>

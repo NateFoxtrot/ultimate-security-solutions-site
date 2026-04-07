@@ -1,15 +1,50 @@
 ---
+const reviews = [
+    {author:"Zachary Harmison", company:"Unified Systems", logo:"unified.svg", date:"Aug 23, 2024", rating:5, text:"Ultimate Security Solutions was the perfect partner to have on our Access Control project. They went above and beyond with their services."},
+    {author:"Senior IT Support", company:"Video Mining Corporation", logo:"videomining.svg", date:"Aug 16, 2024", rating:5, text:"Consistently does excellent work. Very knowledgeable with electronics, electrical and networking. Handled troubleshooting and cleanup tasks with ease."},
+    {author:"Project Coordinator", company:"National Wi-Fi", logo:"nationalwifi.svg", date:"Jul 2, 2024", rating:5, text:"Highly knowledgeable and skillful team who is easy to communicate with. Completed two full installs along with site surveys."},
+    {author:"Operations Manager", company:"Video Mining Corporation", logo:"videomining.svg", date:"Jun 28, 2024", rating:5, text:"They have gone out of their way to accommodate our tight schedule and vast changes. A very diligent team, knowledgeable and thorough!"},
+    {author:"Lead Infrastructure Tech", company:"Retail Technology Group", logo:"retailtech.svg", date:"Jun 26, 2024", rating:5, text:"We have worked with USS at least 3 times now and they have done an excellent job each time. Very knowledgeable and conscientious."},
+    {author:"IT Support Lead", company:"Video Mining Corporation", logo:"videomining.svg", date:"Jul 9, 2024", rating:5, text:"A great technical partner! Consistent quality and reliability."},
+    {author:"Deployment Specialist", company:"Sierra Wireless", logo:"sierrawireless.svg", date:"Jul 3, 2024", rating:5, text:"Excellent work! Successfully handled our CradlePoint SIM card installation."},
+    {author:"Site Survey Lead", company:"Video Mining Corporation", logo:"videomining.svg", date:"Jun 5, 2024", rating:5, text:"Excellent work on the pre-install site survey. Detailed and accurate reporting."},
+    {author:"Implementation Manager", company:"Netview Inc.", logo:"netview.svg", date:"Jun 2, 2024", rating:5, text:"Successfully deployed digital signage and structured cabling solutions. Professional execution and clean cable management."},
+    {author:"Project Manager", company:"Wachter", logo:"wachter.svg", date:"Oct 21, 2025", rating:5, text:"Outstanding work on high-volume structured cabling and POS installations. A reliable partner for our nationwide rollouts."},
+    {author:"Technical Operations", company:"Luxer One", logo:"luxerone.svg", date:"Jan 21, 2025", rating:5, text:"Efficient diagnosis and repair of smart locker systems. Technical proficiency with complex electromechanical components."},
+    {author:"Network Director", company:"WiLine Networks", logo:"wiline.svg", date:"Jun 30, 2025", rating:5, text:"Flawless execution of wireless infrastructure upgrades. Delivered critical 5G site surveys and antenna installations on schedule."},
+];
 import Page from '../layouts/Page.astro';
 ---
 
-<Page title="Reviews" description="What our clients say about Ultimate Security Solutions.">
+<Page title="Reviews" description="Client reviews and testimonials from our security and IT infrastructure deployments.">
     <div class="container" style="text-align:center; padding:8rem 2rem 3rem;">
-        <h1>CLIENT <span class="text-accent">REVIEWS</span></h1>
-        <p style="color:var(--muted);">Trusted by MSPs and enterprise clients across the Midwest.</p>
+        <h1>CLIENT <span class="text-accent">SUCCESS STORIES</span></h1>
+        <p style="color:var(--muted);">See what our partners and clients are saying about our deployments.</p>
     </div>
+
     <section class="section">
-        <div class="container" style="text-align:center;">
-            <p style="color:var(--muted); font-size:1.1rem;">Content migrating to the new platform. Check back soon.</p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(350px,1fr)); gap:2rem; max-width:1200px; margin:0 auto; padding:0 2rem;">
+            {reviews.map(r => (
+                <div class="testimonial anim">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                        <div>
+                            <div style="color:var(--accent); font-size:0.85rem; margin-bottom:4px;">
+                                {Array.from({length:5}, (_, i) => `<i class="fa${i < r.rating ? 's' : 'r'} fa-star"></i>`).join(' ')}
+                            </div>
+                            <span style="color:var(--muted); font-size:0.75rem;">{r.date}</span>
+                        </div>
+                        <img src={`/assets/images/partners/${r.logo}`} alt={r.company} style="height:36px; max-width:110px; object-fit:contain; filter:brightness(0) invert(1);" onerror={`this.style.display='none'`} />
+                    </div>
+                    <p class="quote">"{r.text}"</p>
+                    <p class="author">- {r.author}<br><span style="font-size:0.7rem; opacity:0.6; font-style:normal;">{r.company}</span></p>
+                </div>
+            ))}
         </div>
+    </section>
+
+    <section class="section section-glow" style="text-align:center;">
+        <h2 class="anim" style="color:var(--accent);">5-STAR RATED</h2>
+        <p class="anim" style="color:var(--muted); max-width:500px; margin:0 auto 2rem;">Every deployment. Every client. Every time.</p>
+        <a href="/contact" class="btn btn-primary anim"><i class="fas fa-arrow-right"></i> Work With Us</a>
     </section>
 </Page>

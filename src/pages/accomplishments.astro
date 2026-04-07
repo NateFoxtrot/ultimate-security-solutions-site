@@ -2,14 +2,70 @@
 import Page from '../layouts/Page.astro';
 ---
 
-<Page title="Our Work | Accomplishments" description="See our completed security infrastructure projects and installations.">
+<Page title="Our Work" description="Proven track record delivering mission-critical infrastructure for national brands.">
     <div class="container" style="text-align:center; padding:8rem 2rem 3rem;">
-        <h1>OUR <span class="text-accent">WORK</span></h1>
-        <p style="color:var(--muted);">Completed projects and installations.</p>
+        <h1>PROVEN <span class="text-accent">TRACK RECORD</span></h1>
+        <p style="color:var(--muted);">Delivering mission-critical infrastructure for national brands.</p>
     </div>
-    <section class="section">
-        <div class="container" style="text-align:center;">
-            <p style="color:var(--muted); font-size:1.1rem;">Content migrating to the new platform. Check back soon.</p>
+
+    <section class="section section-dark">
+        <div class="container" style="text-align:center;"><h2 class="section-title anim">ENTERPRISE CLIENT HIGHLIGHTS</h2></div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr)); gap:1.5rem; max-width:1400px; margin:3rem auto 0; padding:0 2rem;">
+            {[
+                {name:'Target', logo:'target.svg', text:'Multi-day Self Checkout installations and upgrades across regional locations.'},
+                {name:'Walmart', logo:'walmart.svg', text:'Full-scale store remodels involving structured cabling, AP deployments, and register overhauls.'},
+                {name:'AT&T', logo:'atandt.svg', text:'Network infrastructure support and critical hardware deployments for national telecom projects.'},
+                {name:'Sierra Wireless', logo:'sierrawireless.svg', text:'Industrial wireless gateways and cellular failover systems.'},
+                {name:'Bosch Security', logo:'bosch.svg', text:'High-performance Bosch security systems and intrusion detection.'},
+                {name:'FedEx', logo:'fedex.svg', text:'Network infrastructure support and kiosk maintenance for logistics operations.'},
+                {name:"Love's", logo:'loves.svg', text:'Rapid response POS and networking troubleshooting.'},
+                {name:'Hikvision', logo:'hikvision.svg', text:'CCTV arrays for comprehensive commercial surveillance.'},
+                {name:'Starlink', logo:'starlink.svg', text:'Professional Starlink satellite terminal installation.'},
+                {name:'Home Depot', logo:'homedepot.svg', text:'IT infrastructure upgrades and structured cabling for retail operations.'},
+                {name:'LTS Security', logo:'lts.svg', text:'LTS Platinum and Pro-X video security solutions.'},
+                {name:'Verizon', logo:'verizon.svg', text:'Telecommunications equipment and 5G infrastructure.'},
+                {name:'Walgreens', logo:'walgreens.svg', text:'Network upgrades and pharmacy system cabling.'},
+                {name:'ASSA ABLOY', logo:'assaabloy.svg', text:'Advanced access control hardware and door solutions.'},
+                {name:'Pilot Flying J', logo:'pilot.svg', text:'Critical fuel desk and retail network systems.'},
+                {name:'Ameristar Casino', logo:'ameristar.svg', text:'24/7 gaming floor security and surveillance networks.'},
+            ].map(c => (
+                <div class="card anim" style="min-height:250px;">
+                    <img src={`/assets/images/partners/${c.logo}`} alt={c.name} style="height:80px; width:auto; max-width:90%; object-fit:contain; filter:brightness(0) invert(1); margin-bottom:1rem;" onerror={`this.style.display='none'`} />
+                    <h3>{c.name}</h3>
+                    <p style="font-style:italic; margin-top:1rem;">"{c.text}"</p>
+                </div>
+            ))}
         </div>
     </section>
+
+    <section class="section">
+        <div class="container" style="text-align:center;"><h2 class="section-title anim">PROJECT GALLERY</h2></div>
+        <div id="gallery" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(300px,1fr)); gap:1.5rem; max-width:1200px; margin:3rem auto 0; padding:0 2rem;">
+            {Array.from({length:20}, (_, i) => (
+                <div class="anim" style="position:relative; overflow:hidden; border:1px solid var(--border); height:250px; cursor:pointer;">
+                    <img src={`/assets/images/portfolio_core/proj_${i+1}.jpg`} alt={`Project ${i+1}`} loading="lazy" style="width:100%; height:100%; object-fit:cover; opacity:0.8; transition:var(--ease);" />
+                </div>
+            ))}
+        </div>
+    </section>
+
+    <div id="lightbox" style="display:none; position:fixed; z-index:2000; inset:0; background:rgba(0,0,0,0.95); justify-content:center; align-items:center;" >
+        <span id="lb-close" style="position:absolute; top:20px; right:30px; color:#fff; font-size:2rem; cursor:pointer;">&times;</span>
+        <img id="lb-img" src="" alt="Project" style="max-width:90%; max-height:90vh; border:2px solid var(--accent);" />
+    </div>
 </Page>
+
+<script>
+    document.querySelectorAll('#gallery > div').forEach(el => {
+        const img = el.querySelector('img');
+        el.addEventListener('mouseenter', () => { img.style.opacity='1'; img.style.transform='scale(1.05)'; });
+        el.addEventListener('mouseleave', () => { img.style.opacity='0.8'; img.style.transform='scale(1)'; });
+        el.addEventListener('click', () => {
+            const lb = document.getElementById('lightbox');
+            (document.getElementById('lb-img')).src = img.src;
+            lb.style.display = 'flex';
+        });
+    });
+    document.getElementById('lb-close').addEventListener('click', () => document.getElementById('lightbox').style.display='none');
+    document.getElementById('lightbox').addEventListener('click', (e) => { if(e.target.id==='lightbox') e.target.style.display='none'; });
+</script>

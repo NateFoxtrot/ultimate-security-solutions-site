@@ -2,14 +2,89 @@
 import Page from '../layouts/Page.astro';
 ---
 
-<Page title="Service Area" description="Ultimate Security Solutions serves the Kansas City Metro area within a 100-mile radius.">
+<Page title="Service Area" description="Ultimate Security Solutions serves the Kansas City Metro area within a 100-mile radius. Same-day response for KC Metro, next-day for regional sites.">
     <div class="container" style="text-align:center; padding:8rem 2rem 3rem;">
-        <h1>SERVICE <span class="text-accent">AREA</span></h1>
-        <p style="color:var(--muted);">Kansas City Metro &bull; 100-mile Primary Zone</p>
+        <h1>MISSION <span class="text-accent">RANGE</span></h1>
+        <p style="color:var(--muted);">Strategic deployment across the Kansas City Metro and surrounding regions.</p>
     </div>
+
     <section class="section">
         <div class="container" style="text-align:center;">
-            <p style="color:var(--muted); font-size:1.1rem;">Content migrating to the new platform. Check back soon.</p>
+            <h2 class="section-title anim">RAPID DEPLOYMENT ZONE</h2>
+            <div id="service-map" style="height:500px; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden;"></div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:start;">
+                <div class="anim">
+                    <h2 style="text-align:left; font-size:1.5rem;">KANSAS CITY HUB</h2>
+                    <p style="color:var(--muted); line-height:1.8; margin-top:1rem;">Centrally located in Kansas City, we provide rapid-response field services and mission-critical installations across Missouri and Kansas.</p>
+                    <div style="margin-top:1.5rem; border-left:2px solid var(--accent); padding-left:1.5rem;">
+                        <p style="font-weight:800; color:var(--accent); margin-bottom:0.5rem; font-size:0.85rem;">STRATEGIC REACH:</p>
+                        <ul style="list-style:none; font-size:0.9rem; color:var(--muted);">
+                            <li style="margin-bottom:0.5rem;"><i class="fas fa-bolt" style="margin-right:10px; color:var(--accent);"></i> Same-Day KC Metro Response</li>
+                            <li style="margin-bottom:0.5rem;"><i class="fas fa-truck" style="margin-right:10px; color:var(--accent);"></i> 100mi Next-Day Deployment</li>
+                            <li><i class="fas fa-plane" style="margin-right:10px; color:var(--accent);"></i> Regional Project Capability</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="anim">
+                    <h3 style="font-size:1rem; color:var(--accent); margin-bottom:1.5rem; letter-spacing:2px;">COVERED LOCATIONS</h3>
+                    <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(170px,1fr)); gap:8px;">
+                        {["Kansas City, MO","Kansas City, KS","Overland Park, KS","Olathe, KS","Lawrence, KS","St. Joseph, MO","Independence, MO","Lee's Summit, MO","Blue Springs, MO","Lenexa, KS","Shawnee, KS","Liberty, MO","Topeka, KS","Raymore, MO","Grandview, MO","Belton, MO","Gladstone, MO","Parkville, MO","Excelsior Springs, MO","Kearney, MO","Maryville, MO","Peculiar, MO","North Kansas City, MO","Riverside, MO"].map(c => (
+                            <span style="display:block; background:var(--accent-dim); border:1px solid rgba(255,215,0,0.2); padding:8px 12px; font-size:0.7rem; color:var(--text); text-transform:uppercase; letter-spacing:1px; font-weight:600; text-align:center; border-radius:var(--radius-sm); transition:var(--ease);">
+                                {c}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="text-align:center;">
+        <h2 class="section-title anim">SERVICE CAPABILITY MATRIX</h2>
+        <div class="anim" style="max-width:700px; margin:2rem auto;">
+            <table style="width:100%; border-collapse:collapse; color:var(--text);">
+                <tr style="border-bottom:2px solid var(--accent);">
+                    <th style="text-align:left; padding:1rem; font-size:0.8rem;">REGION</th>
+                    <th style="text-align:right; padding:1rem; font-size:0.8rem;">CAPABILITY</th>
+                </tr>
+                <tr style="border-bottom:1px solid var(--border);"><td style="padding:1rem;">KC Metro Area</td><td style="text-align:right; padding:1rem; color:var(--accent); font-weight:700;">Priority / Same-Day</td></tr>
+                <tr style="border-bottom:1px solid var(--border);"><td style="padding:1rem;">100-Mile Radius (KS/MO)</td><td style="text-align:right; padding:1rem; font-weight:600;">Next-Day Deployment</td></tr>
+                <tr><td style="padding:1rem;">Regional Midwest</td><td style="text-align:right; padding:1rem; font-weight:600;">Project-Based / Scheduled</td></tr>
+            </table>
         </div>
     </section>
 </Page>
+
+<style>
+    @media (max-width:768px) {
+        section.section-dark .container > div { grid-template-columns:1fr!important; }
+    }
+</style>
+
+<script is:inline>
+    function initMap() {
+        const map = L.map('service-map', { scrollWheelZoom: false }).setView([39.0997, -94.5786], 8);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap &copy; CARTO',
+            subdomains: 'abcd', maxZoom: 20
+        }).addTo(map);
+        L.circle([39.0997, -94.5786], {
+            color: '#ffd700', fillColor: '#ffd700', fillOpacity: 0.05,
+            radius: 100 * 1609.34, weight: 2, dashArray: '10, 10'
+        }).addTo(map);
+        const starIcon = L.divIcon({
+            className: '', html: "<div style='color:#ffd700;font-size:1.2rem;text-shadow:0 0 10px rgba(0,0,0,0.8);'><i class='fas fa-star'></i></div>",
+            iconSize: [20, 20], iconAnchor: [10, 10]
+        });
+        const cities = [[39.0997,-94.5786],[39.1141,-94.6275],[38.9822,-94.6708],[38.8814,-94.8191],[38.9717,-95.2353],[39.7675,-94.8467],[39.0911,-94.4155],[38.9108,-94.3822],[39.0161,-94.2816],[38.9536,-94.7336],[39.0228,-94.7139],[39.2464,-94.4197],[40.3461,-94.8725],[39.3917,-94.3611],[38.7192,-94.4586],[39.3392,-94.2261],[39.1947,-94.6811],[39.1722,-94.6169],[39.1428,-94.5727],[39.0473,-95.6752],[38.8025,-94.4538],[38.8858,-94.5330],[38.8120,-94.5319],[39.2039,-94.5547]];
+        cities.forEach(c => L.marker(c, {icon: starIcon}).addTo(map).bindPopup('Verified Service Area'));
+    }
+    if (typeof L !== 'undefined') initMap();
+    else { const s = document.createElement('script'); s.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js'; s.onload = initMap; document.head.appendChild(s);
+        const l = document.createElement('link'); l.rel='stylesheet'; l.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css'; document.head.appendChild(l); }
+</script>

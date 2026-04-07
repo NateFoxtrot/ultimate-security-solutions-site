@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Work | Ultimate Security Solutions</title>
+    <link rel="stylesheet" href="styles.css?v=FIX_V3_INLINE">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .portfolio-section {
+            padding: 4rem 5%;
+            background: var(--color-primary);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .portfolio-item {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            background: #000;
+            height: 250px;
+            display: none; /* Hidden by default for Load More */
+        }
+
+        .portfolio-item.visible {
+            display: block;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            opacity: 0.8;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            transform: translateY(0);
+        }
+
+        .portfolio-overlay h3 {
+            font-size: 1rem;
+            color: var(--color-accent);
+            margin: 0;
+        }
+
+        .load-more-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .btn-load-more {
+            padding: 1rem 3rem;
+            background: transparent;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-load-more:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+        }
+
+        .partner-card {
+            height: auto !important;
+            min-height: 250px;
+            padding: 2.5rem 1.5rem !important;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .partner-card img {
+            height: 100px; /* Increased from 60px */
+            width: auto;
+            max-width: 90%;
+            object-fit: contain;
+            margin-bottom: 1.5rem;
+            filter: brightness(0) invert(1); /* Ensure visibility on dark background */
+        }
+
+        .partner-card p {
+            font-style: italic;
+            margin-top: 1.5rem !important;
+            line-height: 1.4;
+            color: var(--color-text) !important;
+            font-size: 0.85rem !important;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            border: 2px solid var(--color-accent);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body><canvas id="bg-canvas"></canvas>
+    
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="service_area.html">Service Area</a>
+                <div class="dropdown">
+                    <a href="ordering_system.html" class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">All Products</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                        <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                        <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                    </div>
+                </div>
+                <a href="accomplishments.html" class="active">Our Work</a>
+                <a href="system-design.html">System Designer</a>
+                <a href="partners.html">Partners</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html" class="btn-contact">Contact Us</a>
+                <a href="portal.html" class="nav-spacer">FE Portal</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header hero" style="padding-bottom: 4rem;">
+        <h1>Proven Track Record</h1>
+        <p>Delivering mission-critical infrastructure for national brands.</p>
+    </header>
+
+    <section class="client-highlights-section" style="padding: 4rem 5%; background: rgba(15, 28, 46, 0.3);">
+        <div class="container">
+            <h2 class="section-title" style="text-align:center; margin-bottom: 3rem;">Enterprise Client Highlights</h2>
+            <div class="partners-grid" id="client-grid">
+                <!-- Clients Injected JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section">
+        <h2 class="section-title" style="text-align:center;">Project Gallery</h2>
+        <div class="portfolio-grid" id="portfolio-grid">
+            <!-- Images Injected JS -->
+        </div>
+        <div class="load-more-container">
+            <button class="btn-load-more" id="btn-load-more">Load More Projects</button>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Project">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+    </footer>
+
+    <script src="assets/js/portfolio_data.js"></script>
+    <script>
+        const clients = [
+            { name: 'Target', logo: 'target.svg', text: '“Successful execution of multi-day Self Checkout installations and upgrades across regional locations.”' },
+            { name: 'Walmart', logo: 'walmart.svg', text: '“Full-scale store remodels involving structured cabling, AP deployments, and register system overhauls.”' },
+            { name: 'AT&T', logo: 'atandt.svg', text: '“Reliable network infrastructure support and critical hardware deployments for national telecommunications projects.”' },
+            { name: 'Sierra Wireless', logo: 'sierrawireless.svg', text: '“Expert installation and configuration of industrial wireless gateways and cellular failover systems.”' },
+            { name: 'Bosch Security', logo: 'bosch.svg', text: '“Authorized installer of high-performance Bosch security systems and intrusion detection.”' },
+            { name: 'FedEx', logo: 'fedex.svg', text: '“Reliable network infrastructure support and critical kiosk maintenance for logistics operations.”' },
+            { name: 'Loves Travel Stops', logo: 'loves.svg', text: '“Rapid response for high-priority POS and networking troubleshooting to keep lanes open.”' },
+            { name: 'Hikvision', logo: 'hikvision.svg', text: '“Expert configuration of Hikvision CCTV arrays for comprehensive commercial surveillance.”' },
+            { name: 'Harrahs Casino', logo: 'harrahs.svg', text: '“High-security environment cabling and surveillance system maintenance.”' },
+            { name: 'Starlink', logo: 'starlink.svg', text: '“Professional installation of Starlink satellite terminals for reliable remote connectivity.”' },
+            { name: 'Home Depot', logo: 'homedepot.svg', text: '“IT infrastructure upgrades and structured cabling for retail floor operations.”' },
+            { name: 'LTS Security', logo: 'lts.svg', text: '“Preferred partner for LTS Platinum and Pro-X video security solutions.”' },
+            { name: 'Verizon', logo: 'verizon.svg', text: '“Deployment and maintenance of telecommunications equipment and 5G infrastructure.”' },
+            { name: 'Walgreens', logo: 'walgreens.svg', text: '“Network upgrades and pharmacy system cabling projects.”' },
+            { name: 'Assa Abloy', logo: 'assaabloy.svg', text: '“Installation and service of advanced access control hardware and door solutions.”' },
+            { name: 'Pilot Flying J', logo: 'pilot.svg', text: '“Supporting critical fuel desk and retail network systems across the midwest.”' },
+            { name: 'Ameristar Casino', logo: 'ameristar.svg', text: '“Ensuring 24/7 uptime for gaming floor security and surveillance networks.”' }
+        ];
+
+        // Use data from portfolio_data.js
+        const allImages = portfolioData;
+
+        const itemsPerPage = 12;
+        let currentIndex = 0;
+
+        const grid = document.getElementById('portfolio-grid');
+        const loadMoreBtn = document.getElementById('btn-load-more');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        function loadItems() {
+            const nextBatch = allImages.slice(currentIndex, currentIndex + itemsPerPage);
+            nextBatch.forEach(data => {
+                const item = document.createElement('div');
+                item.className = 'portfolio-item visible';
+                item.innerHTML = `
+                    <img src="assets/images/portfolio_core/${data.src}" alt="${data.client} - ${data.type}" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>${data.client}</h3>
+                        <p style="color:white; font-size:0.8rem;">${data.type}</p>
+                    </div>
+                `;
+                
+                item.onclick = () => {
+                    lightboxImg.src = `assets/images/portfolio_core/${data.src}`;
+                    lightbox.classList.add('active');
+                };
+                
+                grid.appendChild(item);
+            });
+
+            currentIndex += itemsPerPage;
+            if (currentIndex >= allImages.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+
+        loadMoreBtn.onclick = loadItems;
+        closeBtn.onclick = () => lightbox.classList.remove('active');
+        lightbox.onclick = (e) => {
+            if (e.target === lightbox) lightbox.classList.remove('active');
+        };
+
+        function renderClients() {
+            const clientGrid = document.getElementById('client-grid');
+            
+            // Scaling Rules
+            const scale15 = ['Apple', 'Granite', 'Spectrum', 'Cradlepoint', 'Checkpoint', 'Loves', 'Walgreens', 'Pilot'];
+            const scale10 = ['Assa Abloy', 'Best Buy'];
+
+            clients.forEach(client => {
+                const card = document.createElement('div');
+                card.className = 'partner-card';
+                const logoSrc = `assets/images/partners/${client.logo}`;
+                
+                // Determine scale class or inline style
+                let imgStyle = '';
+                // Check partially matching names (e.g. "Apple" matches "Apple Inc.")
+                if (scale15.some(key => client.name.includes(key))) {
+                    imgStyle = 'transform: scale(1.35);'; // 15% bigger + base scale
+                } else if (scale10.some(key => client.name.includes(key))) {
+                    imgStyle = 'transform: scale(1.20);'; // 10% bigger
+                }
+
+                card.innerHTML = `
+                    <img src="${logoSrc}" alt="${client.name}" style="${imgStyle}" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h3 style=\\'color:var(--color-accent)\\'>${client.name}</h3>')">
+                    <h3>${client.name}</h3>
+                    <p>${client.text}</p>
+                `;
+                clientGrid.appendChild(card);
+            });
+        }
+
+        // Initial load
+        loadItems();
+        renderClients();
+    </script>
+    <script src="assets/js/ai-concierge.v2.js"></script>
+<script src="assets/js/circuit-board.js"></script></body>
+</html>

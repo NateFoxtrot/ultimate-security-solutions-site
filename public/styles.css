@@ -74,6 +74,12 @@ h2 { font-size:clamp(1.8rem,4vw,2.5rem); margin-bottom:2rem; }
 .anim.visible { opacity:1; transform:translateY(0); }
 
 /* NAV */
+.nav-logo {
+    display:flex; align-items:center; text-decoration:none; margin-right:1.5rem;
+}
+.nav-logo-img {
+    height:36px; width:auto; border-radius:6px; object-fit:contain;
+}
 .nav {
     background:rgba(5,11,20,0.85);
     backdrop-filter:blur(20px) saturate(180%);
