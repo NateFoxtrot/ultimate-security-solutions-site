@@ -20,7 +20,7 @@ What it does in plain English:
 
 No CAD experience needed. Built for the field, not the back office.
 
-👉 Try it free: https://xr3keedn.insforge.site/
+👉 Try it free: https://uss-app.insforge.site/
 
 Drop your feedback in comments — every report goes directly into the v1.1 roadmap. Android APK and Play Store listing coming next week.
 
@@ -45,8 +45,8 @@ What's new in v1.0:
 ✅ Push notifications for project collaboration (beta)
 
 🏪 Google Play: [PLAY_STORE_LINK]
-📦 Direct APK: https://xr3keedn.insforge.site/ (Download button)
-🌐 Web version still free: https://xr3keedn.insforge.site/
+📦 Direct APK: https://uss-app.insforge.site/ (Download button)
+🌐 Web version still free: https://uss-app.insforge.site/
 
 Tag a tech or PM who'd get use out of this 👇
 
@@ -75,7 +75,7 @@ Same full feature set:
 
 📱 App Store: [APP_STORE_LINK]
 🤖 Google Play: [PLAY_STORE_LINK]
-🌐 Web: https://xr3keedn.insforge.site/
+🌐 Web: https://uss-app.insforge.site/
 
 If you gave us beta feedback — thank you. You're in the credits. 🫡
 
@@ -85,4 +85,4 @@ If you gave us beta feedback — thank you. You're in the credits. 🫡
 
 ## 💬 DM Template — Respond to group comments
 
-"Hey [Name] — yeah it's free to try, no account required just sign up with any email. The 3D view is the thing people always flip out about first. Let me know what you think and if you run into anything weird — we're actively patching based on beta feedback. [https://xr3keedn.insforge.site/]"
+"Hey [Name] — yeah it's free to try, no account required just sign up with any email. The 3D view is the thing people always flip out about first. Let me know what you think and if you run into anything weird — we're actively patching based on beta feedback. [https://uss-app.insforge.site/]"

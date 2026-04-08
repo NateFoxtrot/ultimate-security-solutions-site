@@ -2,7 +2,7 @@
 
 **Welcome, Operator.** You've been selected for the Beta Launch of **Ultimate Security Suite** — the industry's most advanced mission architecture platform for low-voltage professionals.
 
-**🔗 Your Console:** [https://xr3keedn.insforge.site/](https://xr3keedn.insforge.site/)  
+**🔗 Your Console:** [https://uss-app.insforge.site/](https://uss-app.insforge.site/)  
 *Chrome or Edge desktop required. Mobile view available but 3D requires desktop.*
 
 ---

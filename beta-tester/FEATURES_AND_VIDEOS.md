@@ -1,6 +1,6 @@
 # 📡 Ultimate Security Suite — Feature Intel & Mission Modules
 
-**Beta Platform:** [https://xr3keedn.insforge.site/](https://xr3keedn.insforge.site/)
+**Beta Platform:** [https://uss-app.insforge.site/](https://uss-app.insforge.site/)
 
 ---
 
