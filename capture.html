@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>USS Site Survey | Guided Capture</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        
+        .header {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+        
+        .logo {
+            color: #B8953A;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
+
+        .guide-container {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .direction-indicator {
+            font-size: 3rem;
+            color: #B8953A;
+            margin-bottom: 1rem;
+        }
+
+        .instruction {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .camera-btn {
+            background: #B8953A;
+            color: #000;
+            border: none;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+        }
+
+        /* Hidden File Input */
+        #camera-input { display: none; }
+
+        .progress-dots {
+            display: flex;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background: #333;
+            border-radius: 50%;
+        }
+        .dot.active { background: #B8953A; }
+        .dot.done { background: #00ff00; }
+
+        /* Preview Overlay */
+        #preview-modal {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #000;
+            z-index: 100;
+            display: none;
+            flex-direction: column;
+        }
+        
+        #preview-img {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        .preview-actions {
+            height: 20%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #111;
+        }
+
+        .btn-action {
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-retry { background: #333; color: white; }
+        .btn-upload { background: #00ff00; color: black; }
+
+    </style>
+</head>
+
+    <div class="header">
+        <div class="logo">USS FIELD SURVEY</div>
+    </div>
+
+    <div class="guide-container">
+        <div id="step-ui">
+            <div class="direction-indicator"><i class="fas fa-compass"></i></div>
+            <h2 id="step-title" style="margin:0; color:#ccc;">STEP 1 OF 3</h2>
+            <p class="instruction" id="step-instr">Face <strong>NORTH</strong> and take a photo of the room.</p>
+            
+            <button class="camera-btn" onclick="document.getElementById('camera-input').click()">
+                <i class="fas fa-camera"></i>
+            </button>
+        </div>
+
+        <div class="progress-dots">
+            <div class="dot active" id="dot-1"></div>
+            <div class="dot" id="dot-2"></div>
+            <div class="dot" id="dot-3"></div>
+        </div>
+    </div>
+
+    <!-- Netlify Form Definition (Hidden) -->
+    <form name="site-survey" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="session_id" />
+        <input type="text" name="direction" />
+        <input type="file" name="photo" />
+    </form>
+
+    <!-- Native Camera Trigger -->
+    <input type="file" id="camera-input" accept="image/*" capture="environment" onchange="handleFileSelect(event)">
+
+    <!-- Preview Modal -->
+    <div id="preview-modal">
+        <img id="preview-img">
+        <div class="preview-actions">
+            <button class="btn-action btn-retry" onclick="closePreview()">RETAKE</button>
+            <button class="btn-action btn-upload" onclick="uploadPhoto()">CONFIRM & UPLOAD</button>
+        </div>
+    </div>
+
+    <script>
+        // State
+        const urlParams = new URLSearchParams(window.location.search);
+        const session = urlParams.get('session') || 'demo-session';
+        let currentStep = 1;
+        let selectedFile = null;
+
+        const steps = [
+            { dir: 'North', instr: 'Face NORTH' },
+            { dir: 'East', instr: 'Turn 90° Right (Face EAST)' },
+            { dir: 'West', instr: 'Face the Opposite Wall (WEST)' }
+        ];
+
+        function updateUI() {
+            if(currentStep > 3) {
+                document.querySelector('.guide-container').innerHTML = `
+                    <i class="fas fa-check-circle" style="font-size:4rem; color:#00ff00; margin-bottom:1rem;"></i>
+                    <h2>SURVEY COMPLETE</h2>
+                    <p>Photos uploaded successfully. The 3D model is processing.</p>
+                `;
+                return;
+            }
+
+            const stepData = steps[currentStep - 1];
+            document.getElementById('step-title').innerText = `STEP ${currentStep} OF 3`;
+            document.getElementById('step-instr').innerHTML = stepData.instr;
+            
+            // Dots
+            for(let i=1; i<=3; i++) {
+                const dot = document.getElementById(`dot-${i}`);
+                if(i < currentStep) dot.className = 'dot done';
+                else if(i === currentStep) dot.className = 'dot active';
+                else dot.className = 'dot';
+            }
+        }
+
+        function handleFileSelect(e) {
+            const file = e.target.files[0];
+            if(!file) return;
+            selectedFile = file;
+
+            // Show Preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                document.getElementById('preview-img').src = e.target.result;
+                document.getElementById('preview-modal').style.display = 'flex';
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function closePreview() {
+            document.getElementById('preview-modal').style.display = 'none';
+            document.getElementById('camera-input').value = ''; // Reset
+        }
+
+        async function uploadPhoto() {
+            const btn = document.querySelector('.btn-upload');
+            btn.innerText = "UPLOADING...";
+            btn.disabled = true;
+
+            const formData = new FormData();
+            formData.append('session_id', session);
+            formData.append('direction', steps[currentStep-1].dir);
+            formData.append('file', selectedFile);
+
+            try {
+                const response = await fetch('http://localhost:8000/api/upload/', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if(response.ok) {
+                    closePreview();
+                    currentStep++;
+                    updateUI();
+                } else {
+                    const err = await response.json();
+                    alert("Upload failed: " + (err.detail || "Server Error"));
+                }
+            } catch(e) {
+                console.error(e);
+                alert("Connection error. Ensure Backend Server is running on Port 8000.");
+            } finally {
+                btn.innerText = "CONFIRM & UPLOAD";
+                btn.disabled = false;
+            }
+        }
+
+        // Init
+        updateUI();
+    </script>
+<script src="assets/js/circuit-board.js"></script></body>
+</html>

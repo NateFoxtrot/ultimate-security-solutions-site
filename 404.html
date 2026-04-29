@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | Ultimate Security Solutions</title>
+    <meta name="description" content="The page you requested does not exist. Return to the Ultimate Security Solutions homepage or browse our security equipment catalog.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://usstech.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://usstech.net/404.html">
+    <meta property="og:title" content="404 — Page Not Found | Ultimate Security Solutions">
+    <meta property="og:description" content="Perimeter breach — this page does not exist on our network. Return to usstech.net.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ── 404 Page Styles ── */
+        .error-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: calc(var(--nav-height) + 40px) 20px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 600px 400px at 50% 40%, rgba(184, 149, 58, 0.06), transparent),
+                linear-gradient(180deg, var(--color-primary) 0%, rgba(5, 11, 20, 0.95) 100%);
+            pointer-events: none;
+        }
+
+        .error-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .error-code {
+            font-family: var(--font-header);
+            font-size: clamp(7rem, 18vw, 14rem);
+            font-weight: 900;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 2px var(--color-accent);
+            background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-secondary) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            filter: drop-shadow(0 0 60px rgba(184, 149, 58, 0.2));
+            margin-bottom: 0.25em;
+            letter-spacing: -0.02em;
+        }
+
+        @supports not (-webkit-text-stroke: 2px gold) {
+            .error-code {
+                color: var(--color-accent);
+            }
+        }
+
+        .error-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: rgba(211, 47, 47, 0.1);
+            border: 1px solid rgba(211, 47, 47, 0.3);
+            color: var(--color-error);
+            padding: 0.5rem 1.25rem;
+            border-radius: 2px;
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        .error-badge i {
+            font-size: 0.75rem;
+        }
+
+        .error-title {
+            font-family: var(--font-header);
+            font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+            font-weight: 800;
+            color: var(--color-text);
+            margin-bottom: 1rem;
+        }
+
+        .error-subtitle {
+            font-size: 1.1rem;
+            color: var(--color-muted);
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.7;
+        }
+
+        /* ── Navigation Cards ── */
+        .error-nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+        }
+
+        .error-nav-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.5rem 1rem;
+            background: rgba(15, 23, 42, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--color-text);
+            transition: var(--transition);
+        }
+
+        .error-nav-card:hover {
+            background: rgba(30, 41, 59, 0.6);
+            border-color: var(--color-border-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .error-nav-card i {
+            font-size: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .error-nav-card span {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .error-nav-card small {
+            color: var(--color-muted);
+            font-size: 0.8rem;
+        }
+
+        /* ── Search Bar ── */
+        .error-search {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .error-search-label {
+            display: block;
+            color: var(--color-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .error-search-box {
+            display: flex;
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid var(--color-border);
+            border-radius: 2px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .error-search-box:focus-within {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(184, 149, 58, 0.1);
+        }
+
+        .error-search-box input {
+            flex: 1;
+            background: none;
+            border: none;
+            padding: 0.85rem 1rem;
+            color: var(--color-text);
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            outline: none;
+        }
+
+        .error-search-box input::placeholder {
+            color: var(--color-muted);
+        }
+
+        .error-search-box button {
+            background: var(--color-accent);
+            color: var(--color-primary);
+            border: none;
+            padding: 0.85rem 1.25rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .error-search-box button:hover {
+            background: var(--color-accent-secondary);
+        }
+
+        .error-search-box button i {
+            font-size: 0.9rem;
+        }
+
+        /* ── Scanline decoration ── */
+        .error-scanline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--color-accent-glow), transparent);
+            animation: scanline 4s ease-in-out infinite;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        @keyframes scanline {
+            0%, 100% { top: 0%; opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        /* ── Mobile ── */
+        @media (max-width: 640px) {
+            .error-hero {
+                min-height: 60vh;
+                padding-top: calc(var(--nav-height) + 20px);
+            }
+
+            .error-nav-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.75rem;
+            }
+
+            .error-nav-card {
+                padding: 1.25rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img">
+            </a>
+
+            <div class="nav-mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <a href="index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="about.html" class="nav-link-item">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="service_area.html" class="nav-link-item">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="system-design.html" class="nav-link-item">USS Suite
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="msp.html" class="nav-link-item">MSP Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="reviews.html" class="nav-link-item">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="contact.html" class="nav-link-item">Contact
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+            </div>
+
+            <div class="nav-spacer"></div>
+
+            <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        <section class="error-hero">
+            <div class="error-scanline"></div>
+            <div class="error-content animate-in">
+                <div class="error-code">404</div>
+                <div class="error-badge">
+                    <i class="fas fa-triangle-exclamation"></i>
+                    PERIMETER BREACH
+                </div>
+                <h1 class="error-title">This page does not exist on our network.</h1>
+                <p class="error-subtitle">
+                    The coordinates you entered are outside our operational perimeter.
+                    Let us guide you back to a secure location.
+                </p>
+
+                <div class="error-nav-grid animate-in">
+                    <a href="index.html" class="error-nav-card">
+                        <i class="fas fa-house-chimney"></i>
+                        <span>Home</span>
+                        <small>Return to base</small>
+                    </a>
+                    <a href="msp.html" class="error-nav-card">
+                        <i class="fas fa-rocket"></i>
+                        <span>MSP Partners</span>
+                        <small>White-label services</small>
+                    </a>
+                    <a href="ordering_system.html" class="error-nav-card">
+                        <i class="fas fa-video"></i>
+                        <span>Equipment Catalog</span>
+                        <small>NDAA surveillance gear</small>
+                    </a>
+                    <a href="contact.html" class="error-nav-card">
+                        <i class="fas fa-headset"></i>
+                        <span>Contact Us</span>
+                        <small>Request support</small>
+                    </a>
+                </div>
+
+                <div class="error-search animate-in">
+                    <label class="error-search-label">
+                        Or use the navigation bar above to find what you need
+                    </label>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

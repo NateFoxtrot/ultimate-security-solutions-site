@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Area | Ultimate Security Solutions</title>
+    <meta name="description" content="Professional security and IT infrastructure services across the Kansas City Metro, 100-mile radius, and greater Midwest. Same-day and next-day deployment available.">
+    <link rel="canonical" href="https://usstech.net/service_area.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <style>
+        #service-map {
+            height: 500px;
+            width: 100%;
+            background: #050b14;
+            border: 1px solid var(--color-border);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .map-section {
+            padding: 4rem 0;
+            position: relative;
+            z-index: 1;
+        }
+        .city-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 1rem;
+        }
+        .city-tag {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 10px 15px;
+            font-size: 0.75rem;
+            color: var(--color-text);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-align: left;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            border-radius: 4px;
+        }
+        .city-tag::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background: var(--color-accent);
+            margin-right: 12px;
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--color-accent);
+            opacity: 0.5;
+        }
+        .city-tag:hover {
+            border-color: var(--color-accent);
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(5px);
+            color: var(--color-accent);
+        }
+        .city-tag:hover::before {
+            opacity: 1;
+        }
+        .coverage-card {
+            background: rgba(15, 28, 46, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--color-border);
+            padding: 3rem;
+            border-radius: 12px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
+            </a>
+
+            <div class="nav-mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <a href="index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="about.html" class="nav-link-item">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="service_area.html" class="nav-link-item active">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="system-design.html" class="nav-link-item">USS Suite
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="msp.html" class="nav-link-item">MSP Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="reviews.html" class="nav-link-item">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="contact.html" class="nav-link-item">Contact
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+            </div>
+
+            <div class="nav-spacer"></div>
+
+            <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header animate-in">
+        <div class="header-badge">SERVICE COVERAGE</div>
+        <h1>Service Area</h1>
+        <p>Professional security infrastructure deployment across the Kansas City Metro and the greater Midwest region.</p>
+    </header>
+
+    <section class="map-section">
+        <div class="container">
+            <div id="service-map" class="animate-in"></div>
+            
+            <div class="content-grid animate-in" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 4rem; align-items: stretch;">
+                <div class="coverage-card">
+                    <h2 class="section-title" style="text-align: left; font-size: 1.5rem; margin-bottom: 1.5rem;">KANSAS CITY HUB</h2>
+                    <p style="color: var(--color-muted); line-height: 1.7;">Centrally located in Kansas City, we provide rapid-response field services and critical installations across Missouri and Kansas. Our 100-mile primary zone covers both major metros and regional centers.</p>
+                    <div style="margin-top: 2rem; border-left: 2px solid var(--color-accent); padding-left: 1.5rem; background: rgba(255,215,0,0.03); padding-top: 1.5rem; padding-bottom: 1.5rem; border-radius: 0 8px 8px 0;">
+                        <p style="font-weight: 800; color: var(--color-accent); margin-bottom: 1rem; letter-spacing: 1px; font-size: 0.8rem;">REGIONAL COVERAGE:</p>
+                        <ul style="list-style: none; font-size: 0.9rem; color: var(--color-text);">
+                            <li style="margin-bottom: 0.75rem;"><i class="fas fa-bolt" style="margin-right: 12px; color: var(--color-accent);"></i> Same-Day KC Metro Response</li>
+                            <li style="margin-bottom: 0.75rem;"><i class="fas fa-truck" style="margin-right: 12px; color: var(--color-accent);"></i> 100mi Next-Day Deployment</li>
+                            <li><i class="fas fa-plane" style="margin-right: 12px; color: var(--color-accent);"></i> Regional Project Capability</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="coverage-card">
+                    <h3 style="font-size: 1rem; color: var(--color-accent); margin-bottom: 1.5rem; letter-spacing: 2px; font-weight: 800;">COVERED LOCATIONS</h3>
+                    <div class="city-grid" id="city-list">
+                        <!-- Cities Injected -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(15, 28, 46, 0.4); padding: 4rem 0; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+        <div class="container" style="text-align: center;">
+            <div class="header-badge animate-in">RESPONSE MATRIX</div>
+            <h2 class="section-title animate-in" style="text-align: center; display: block; width: 100%; margin-top: 1rem;">SERVICE LOGISTICS</h2>
+            <div class="animate-in" style="max-width: 800px; margin: 3rem auto; background: rgba(5,11,20,0.6); padding: 2rem; border: 1px solid var(--color-border); border-radius: 12px; backdrop-filter: blur(10px);">
+                <table style="width: 100%; border-collapse: collapse; color: var(--color-text);">
+                    <tr style="border-bottom: 2px solid var(--color-accent);">
+                        <th style="text-align: left; padding: 1.5rem; letter-spacing: 2px; color: var(--color-accent);">REGION</th>
+                        <th style="text-align: right; padding: 1.5rem; letter-spacing: 2px; color: var(--color-accent);">CAPABILITY</th>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 215, 0, 0.1);">
+                        <td style="padding: 1.25rem; font-weight: 600;">KC Metro Area</td>
+                        <td style="text-align: right; padding: 1.25rem; color: #fff;">Priority / Same-Day Available</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 215, 0, 0.1);">
+                        <td style="padding: 1.25rem; font-weight: 600;">100-Mile Radius (KS/MO)</td>
+                        <td style="text-align: right; padding: 1.25rem; color: #fff;">Next-Day Deployment</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid rgba(255, 215, 0, 0.1);">
+                        <td style="padding: 1.25rem; font-weight: 600;">Regional Midwest</td>
+                        <td style="text-align: right; padding: 1.25rem; color: #fff;">Project-Based / Scheduled</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const cities = [
+            { name: "Kansas City, MO", lat: 39.0997, lng: -94.5786 },
+            { name: "Kansas City, KS", lat: 39.1141, lng: -94.6275 },
+            { name: "Overland Park, KS", lat: 38.9822, lng: -94.6708 },
+            { name: "Olathe, KS", lat: 38.8814, lng: -94.8191 },
+            { name: "Lawrence, KS", lat: 38.9717, lng: -95.2353 },
+            { name: "St. Joseph, MO", lat: 39.7675, lng: -94.8467 },
+            { name: "Independence, MO", lat: 39.0911, lng: -94.4155 },
+            { name: "Lee's Summit, MO", lat: 38.9108, lng: -94.3822 },
+            { name: "Blue Springs, MO", lat: 39.0161, lng: -94.2816 },
+            { name: "Lenexa, KS", lat: 38.9536, lng: -94.7336 },
+            { name: "Shawnee, KS", lat: 39.0228, lng: -94.7139 },
+            { name: "Liberty, MO", lat: 39.2464, lng: -94.4197 },
+            { name: "Maryville, MO", lat: 40.3461, lng: -94.8725 },
+            { name: "Kearney, MO", lat: 39.3917, lng: -94.3611 },
+            { name: "Peculiar, MO", lat: 38.7192, lng: -94.4586 },
+            { name: "Excelsior Springs, MO", lat: 39.3392, lng: -94.2261 },
+            { name: "Parkville, MO", lat: 39.1947, lng: -94.6811 },
+            { name: "Riverside, MO", lat: 39.1722, lng: -94.6169 },
+            { name: "North Kansas City, MO", lat: 39.1428, lng: -94.5727 },
+            { name: "Topeka, KS", lat: 39.0473, lng: -95.6752 },
+            { name: "Raymore, MO", lat: 38.8025, lng: -94.4538 },
+            { name: "Grandview, MO", lat: 38.8858, lng: -94.5330 },
+            { name: "Belton, MO", lat: 38.8120, lng: -94.5319 },
+            { name: "Gladstone, MO", lat: 39.2039, lng: -94.5547 }
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Map Initialization
+            const map = L.map('service-map', {
+                scrollWheelZoom: false
+            }).setView([39.0997, -94.5786], 8);
+
+            L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                subdomains: 'abcd',
+                maxZoom: 20
+            }).addTo(map);
+
+            const radiusInMeters = 100 * 1609.34; 
+            L.circle([39.0997, -94.5786], {
+                color: '#B8953A',
+                fillColor: '#B8953A',
+                fillOpacity: 0.05,
+                radius: radiusInMeters,
+                weight: 2,
+                dashArray: '10, 10'
+            }).addTo(map);
+
+            const starIcon = L.divIcon({
+                className: 'custom-div-icon',
+                html: "<div style='color: #B8953A; font-size: 1.2rem; text-shadow: 0 0 10px rgba(0,0,0,0.8);'><i class='fas fa-star'></i></div>",
+                iconSize: [20, 20],
+                iconAnchor: [10, 10]
+            });
+
+            const listContainer = document.getElementById('city-list');
+            cities.sort((a, b) => a.name.localeCompare(b.name)).forEach(city => {
+                L.marker([city.lat, city.lng], { icon: starIcon })
+                    .addTo(map)
+                    .bindPopup(`<strong style="color: #000;">${city.name}</strong><br>Verified Service Area`);
+
+                const tag = document.createElement('span');
+                tag.className = 'city-tag';
+                tag.textContent = city.name;
+                listContainer.appendChild(tag);
+            });
+        });
+    </script>
+    <script src="assets/js/feedback.js"></script>
+</body>
+</html>

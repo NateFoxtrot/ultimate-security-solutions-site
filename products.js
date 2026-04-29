@@ -1,5 +1,42 @@
 const products = [
   {
+    "series_id": "LTK6128W-WIFI",
+    "name": "Platinum Network HD Video Doorbell",
+    "description": "2.1 MP High Definition video with 180-degree panoramic ultra-wide lens. True WDR (120 dB) for balanced exposure.",
+    "long_description": "The LTS Platinum Network HD Video Doorbell (LTK6128W-WIFI) provides 1080p high-definition video with a 180-degree ultra-wide angle view. It features two-way audio, motion detection, and night vision up to 16ft. It integrates seamlessly with LTS NVRs and includes four interchangeable faceplate colors (Silver, White, Black, Charcoal) to match any home exterior.",
+    "image": "https://www.securityhardwarestore.com/cdn/shop/products/black_2_large.png?v=1506033264",
+    "facets": {
+      "category": [
+        "DOORBELLS"
+      ],
+      "camera_resolution": [
+        "2MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "LTK6128W-WIFI",
+        "name": "Platinum Network HD Video Doorbell",
+        "description": "Includes 4 Faceplates: White, Silver, Black, Charcoal",
+        "price": 176.3
+      }
+    ],
+    "specs": {
+      "Resolution": "2.1MP (1920x1080)",
+      "Angle of View": "180\u00b0 Vertical, 105\u00b0 Horizontal",
+      "Audio": "Built-in Microphone and Speaker, Two-Way Talk",
+      "Storage": "MicroSD slot (up to 128GB)",
+      "Protection": "IP54 Weatherproof",
+      "Night Vision": "IR up to 16ft"
+    }
+  },
+  {
     "series_id": "LTN8608D",
     "name": "Platinum 8 Channel 86 Series 8K NVR With Direct Search",
     "description": "Compression and Recording H.265+ compression effectively reduces the storage space by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provide independent HDMI and VGA outputs HDMI video output at...",
@@ -36,7 +73,7 @@ const products = [
         "sku": "LTN8608D-P8N",
         "name": "Platinum 8 Channel 86 Series 8K NVR With Direct Search",
         "description": "Compression and Recording H.265+ compression effectively reduces the storage space by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provide independent HDMI and VGA outputs HDMI video output at...",
-        "price": 525.15
+        "price": 652.24
       }
     ],
     "specs": {
@@ -93,13 +130,13 @@ const products = [
         "sku": "LTN8932D-N",
         "name": "LTN8932D-N, Platinum MD 2.0 / VCA NVR",
         "description": "Compression and Recording H.265+ compression effectively reduces the storage space by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provide independent HDMI and VGA outputs HDMI video output at...",
-        "price": 876.15
+        "price": 1088.18
       },
       {
         "sku": "LTN8932D-P16N",
         "name": "LTN8932D-P16N, Platinum MD 2.0 / VCA NVR",
         "description": "Compression and Recording H.265+ compression effectively reduces the storage space by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provide independent HDMI and VGA outputs HDMI video output at...",
-        "price": 1065.15
+        "price": 1322.92
       }
     ],
     "specs": {
@@ -155,7 +192,7 @@ const products = [
         "sku": "LTN8608DV-P8",
         "name": "LTN8608DV-P8, Platinum 8 Ch 4K NEW Semantic Search DeepVision NVR",
         "description": "H.265+/H.265/H.264+/H.264 video formats Intelligent analytics based on Large-Scale AI Models Up to 8-ch DeepVision and Direct Search function Up to 8-ch facial recognition for face picture Up to 8-ch IP camera inputs Up to 8-ch 8MP decoding capabilit...",
-        "price": 619.65
+        "price": 769.61
       }
     ],
     "specs": {
@@ -208,7 +245,7 @@ const products = [
         "sku": "LTN8616DV-P16",
         "name": "LTN8616DV-P16, Platinum 16 Ch 4K NEW Semantic Search DeepVision NVR",
         "description": "H.265+/H.265/H.264+/H.264 video formats Intelligent analytics based on Large-Scale AI Models Up to 16-ch DeepVision and Direct Search function Up to 8-ch facial recognition for face picture Up to 16-ch IP camera inputs Up to 16-ch 4MP decoding capabi...",
-        "price": 822.15
+        "price": 1021.11
       }
     ],
     "specs": {
@@ -261,7 +298,7 @@ const products = [
         "sku": "LTN8932DV-P16",
         "name": "LTN8932DV-P16, Platinum 32 Ch 4K NEW Semantic Search DeepVision NVR",
         "description": "H.265+/H.265/H.264+/H.264 video formats Intelligent analytics based on Large-Scale AI Models Up to 32-ch DeepVision and Direct Search function Up to 8-ch facial recognition for face picture Up to 32-ch IP camera inputs Up to 32-ch 1080p decoding capa...",
-        "price": 1254.15
+        "price": 1557.65
       }
     ],
     "specs": {
@@ -317,7 +354,7 @@ const products = [
         "sku": "LTN8608-P8",
         "name": "Platinum 8-Channel Professional Plus Level 4K NVR",
         "description": "Quad-core 8-Channel Network Video Recorder Live View, Storage, and Playback up to 12.3 MP IP Camera 80 MB Input Bandwidth 8 Built-in PoE 4K (3840 x 2160) HDMI, VGA, CVBS Video Output 2 x SATA up to 12 TB HDD 4 x POS via TCP/IP Supports 6 MP / 12.3 MP...",
-        "price": 548.1
+        "price": 680.74
       }
     ],
     "specs": {
@@ -378,13 +415,13 @@ const products = [
         "sku": "LTN8708K-P8",
         "name": "Platinum 8-Channel Professional Plus Level 4K NVR",
         "description": "8-Channel Network Video Recorder Supports Live View, Storage, Playback up to 4K (8 MP) IP Camera 80 MB Bandwidth 8 x Built-in PoE 4K (3840 x 2160) HDMI Video Output Supports 2 x SATA up to 12 TB (6 TB each) H.265+ / H.265 / H.264 / H.264 Zip+",
-        "price": 417.15
+        "price": 518.1
       },
       {
         "sku": "LTN8708K-HT",
         "name": "Platinum 8-Channel Advanced Level Hybrid NVR, 1U",
         "description": "8-Channel Hybrid Network Video Recorder Supports 4K / 8 MP HD-TVI 4.0 Cameras Supports 8 MP / 4K (3840 x 2160) IP Cameras H.265+ / H.265 / H.264 Zip+ / H.264 Supports 8 Ch. HD-TVI and 8 Ch. IP Cameras",
-        "price": 309.15
+        "price": 383.96
       }
     ],
     "downloads": [
@@ -439,13 +476,13 @@ const products = [
         "sku": "LTN8716K-P16",
         "name": "Platinum 16-Channel Professional Plus Level 4K NVR",
         "description": "Compact 16-Channel Network Video Recorder Supports Live View, Storage, Playback up to 4K (8 MP) IP Camera 160 MB Bandwidth 16 Built-in PoE 4K (3840 x 2160) HDMI Video Output 2 x SATA up to 6 TB each HDD H.264 / H.264 Zip+",
-        "price": 637.2
+        "price": 791.4
       },
       {
         "sku": "LTN8716K-HT",
         "name": "Platinum 16-Channel Advanced Level Hybrid NVR",
         "description": "16 Channel Hybrid Network Video Recorder Support 4K/8MP HD-TVI 4.0 Cameras Support 8MP/4K(3840x2160) IP Cameras HDMI Video Output H.265/H.265+/H.264 Support 16CH HD-TVI and 16CH IP Cameras &nbsp;",
-        "price": 538.65
+        "price": 669.0
       }
     ],
     "downloads": [
@@ -499,7 +536,7 @@ const products = [
         "sku": "LTN07128D-R16",
         "name": "LTN07128D-R16, Platinum 128 Ch 8K Direct Search NVR, H.265+, 16 SATA Up To 20TB Each, 3U",
         "description": "Up to 32\u00d71080p decoding capacity H.265+/H.265/H.264+/H.264 video formats Up to 128-ch IP cameras can be connected Intelligent analytics features facial recognition, perimeter protection, video structuring, and Direct Search for enhanced security and ...",
-        "price": 5128.65
+        "price": 6369.78
       }
     ],
     "specs": {
@@ -521,7 +558,7 @@ const products = [
     "name": "Platinum 8-Channel NVR",
     "description": "Up to 8-ch IP camera inputs, plug &amp; play with 8 power-over-Ethernet (PoE) interfaces H.265+/H.265/H.264+/H.264 video formats Up to 2-ch@12 MP or 3-ch@8 MP or 6-ch@4 MP or 12-ch@1080p decoding capacity Up to 80 Mbps incoming bandwidth and 160 Mbps...",
     "long_description": "\n                <div data-content-type=\"html\" data-appearance=\"default\" data-element=\"main\" data-decoded=\"true\"><ul>\n<li>Up to 8-ch IP camera inputs, plug &amp; play with 8 power-over-Ethernet (PoE) interfaces</li>\n<li>H.265+/H.265/H.264+/H.264 video formats</li>\n<li>Up to 2-ch@12 MP or 3-ch@8 MP or 6-ch@4 MP or 12-ch@1080p decoding capacity</li>\n<li>Up to 80 Mbps incoming bandwidth and 160 Mbps outgoing bandwidth</li>\n<li>Provide MD2.0/VCA function from the NVR</li>\n</ul></div>            ",
-    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/p/r/product_image_templete_19_53.png",
+    "image": "https://media.ltsecurityinc.com/catalog/product/l/t/ltn8708d-p8n.jpg",
     "facets": {
       "category": [
         "IP SOLUTIONS"
@@ -556,7 +593,7 @@ const products = [
         "sku": "LTN8708D-P8N",
         "name": "Platinum 8-Channel NVR",
         "description": "Up to 8-ch IP camera inputs, plug &amp; play with 8 power-over-Ethernet (PoE) interfaces H.265+/H.265/H.264+/H.264 video formats Up to 2-ch@12 MP or 3-ch@8 MP or 6-ch@4 MP or 12-ch@1080p decoding capacity Up to 80 Mbps incoming bandwidth and 160 Mbps...",
-        "price": 430.65
+        "price": 558.40
       }
     ],
     "specs": {
@@ -613,7 +650,7 @@ const products = [
         "sku": "LTN07256-R16(L)",
         "name": "Platinum 256-Channel Enterprise Level NVR-P",
         "description": "Professional and Reliable \t \t\tProfessional embedded hardware and software, and pioneering dual-OS design, ensure high reliability. \t\tSupports redundant power supply to improve stability. \t\tANR technology enhances storage reliability if the network ge...",
-        "price": 7788.15
+        "price": 9672.88
       }
     ],
     "specs": {
@@ -668,7 +705,7 @@ const products = [
         "sku": "LTN8616D-P16N",
         "name": "Platinum 16 Channel 86 Series 8K NVR With Direct Search",
         "description": "Compression and Recording H.265+ compression effectively reduces the storage space by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provide independent HDMI and VGA outputs HDMI video output at...",
-        "price": 700.65
+        "price": 870.21
       }
     ],
     "specs": {
@@ -720,13 +757,13 @@ const products = [
         "sku": "LTN8916D-N",
         "name": "LTN8916D-N, Platinum MD 2.0 / VCA NVR",
         "description": "Compression and Recording H.265+ compression effectively reduces the storage requirements by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provides independent HDMI and VGA outputs HDMI video o...",
-        "price": 660.15
+        "price": 819.91
       },
       {
         "sku": "LTN8916D-P16N",
         "name": "LTN8916D-P16N, Platinum MD 2.0 / VCA NVR",
         "description": "Compression and Recording H.265+ compression effectively reduces storage use by up to 75% Full channel IP cameras connection Compatible to third-party network cameras HD Video Output Provide independent HDMI and VGA outputs HDMI video output at up to...",
-        "price": 876.15
+        "price": 1088.18
       }
     ],
     "specs": {
@@ -785,7 +822,7 @@ const products = [
         "sku": "LTCMHT1782-28LF",
         "name": "Platinum 8 MP Turret HD-TVI Camera",
         "description": "High quality imaging with 4K, 3840 \u00d7 2160 resolution \t2.8 mm fixed focal lens \tUp to 40 m IR distance for covert night imaging \tUp to 20 m white light distance for bright low-light video \tOne port for four switchable signals (TVI / AHD / CVI / CVBS\uff09 ...",
-        "price": 101.25
+        "price": 125.75
       }
     ],
     "specs": {
@@ -838,13 +875,13 @@ const products = [
         "sku": "LTCMIP1C42W-28MDA",
         "name": "CMIP1C42W-28MDA, 4 MP COLOR 247 Fixed Mini Dome Network Camera",
         "description": "High quality imaging with 4 MP resolution H.265+ compression technology Clear imaging against strong back light due to 130 dB WDR technology 24/7 colorful imaging Focus on human and vehicle classification based on deep learning Audio and alarm interf...",
-        "price": 241.65
+        "price": 300.13
       },
       {
         "sku": "LTCMIP1C42WB-28MDA",
         "name": "CMIP1C42WB-28MDA, 4 MP COLOR 247 Fixed Mini Dome Network Camera",
         "description": "High quality imaging with 4 MP resolution H.265+ compression technology Clear imaging against strong back light due to 130 dB WDR technology 24/7 colorful imaging Focus on human and vehicle classification based on deep learning Audio and alarm interf...",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "specs": {
@@ -897,13 +934,13 @@ const products = [
         "sku": "LTCMIP3142NW-28S",
         "name": "Platinum 4 MP Mini Dome IP Camera",
         "description": "2.8 mm Matrix IR WDR DC / PoE MicroSD storage IK08 IP66 Built-in microphone / support for audio &amp; alarm",
-        "price": 201.15
+        "price": 249.83
       },
       {
         "sku": "LTCMIP3142NW-28SWIFI",
         "name": "Platinum 4 MP Mini Dome With Wi-Fi",
         "description": "2.8 mm lens Matrix IR True WDR MicroSD slot Audio &amp; alarm channels I/O IK08 IP67 DC / PoE power options",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "downloads": [
@@ -955,7 +992,7 @@ const products = [
         "sku": "LTCMIP3162NW-28S",
         "name": "Platinum 6 MP IP-P Mini Dome Camera",
         "description": "6 MP resolution 2.8 mm fixed lene Matrix IR WDR for sharp imaging with strong backlight POE for easy installation MicroSD slot for on-board data storage IK08 &amp; IP66 protection ratings Built-in microphone along with support for audio &amp; alarms ...",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "downloads": [
@@ -1008,7 +1045,7 @@ const products = [
         "sku": "LTCMIP8342WB-28M",
         "name": "Platinum 4 MP Mini Bullet IP Camera - Black",
         "description": "4 MP 2.8 mm True WDR Micro SD cards up to 128 GB H.265+ Black housing",
-        "price": 174.15
+        "price": 216.29
       }
     ],
     "downloads": [
@@ -1065,13 +1102,13 @@ const products = [
         "sku": "LTCMHT1722W-CF",
         "name": "Platinum 2.1 MP Turret HD-TVI Camera",
         "description": "2 MP high performance CMOS 1920 \u00d7 1080 resolution Full time color 3.6 mm fixed lens Up to 66 ft (20 m) supplemental white light distance 3D DNR, true WDR 4-signals-in-1 video output (TVI / AHD / CVI / CVBS) IP67 OSD menu via UTC technology with Plati...",
-        "price": 93.15
+        "price": 115.69
       },
       {
         "sku": "LTCMHT1722W-28CF",
         "name": "Platinum 2 MP Color 24/7 Turret HD-TVI Camera",
         "description": "2 MP 1920 \u00d7 1080 Resolution 24-Hour Color Imaging 2.8 mm Fixed Lens Up to 66 ft (20 m) Suppl. Light Range 3D DNR True WDR 4-in-1 Video Output (TVI / AHD / CVI / CVBS) IP67 OSD Menu via UTC Technology with Platinum DVR",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "downloads": [
@@ -1133,7 +1170,7 @@ const products = [
         "sku": "LTCMHD7422B-28",
         "name": "Platinum 2 MP Vandal-Resistant Dome HD-TVI Camera - Black",
         "description": "2.1 MP Full HD 1080p 2.8 mm fixed lens 1920 x 1080 @ 30 fps 18 IR LEDs up to 65 ft, Smart IR IP66, IK10 3-Axis positioning Easy installation",
-        "price": 74.25
+        "price": 92.22
       }
     ],
     "downloads": [
@@ -1190,13 +1227,13 @@ const products = [
         "sku": "LTCMHT1722B-28F",
         "name": "Platinum 2.1 MP 4-In-1 Turret HD-TVI Camera - Black",
         "description": "Platinum TVI-P Turret Camera, 2.1 MP, 1/3\", 2.8 mm Fixed Lens 2.1 MP Full HD 1080p 2.8 mm fixed lens 1920 x 1080p @ 30 fps 0.01 Lux, Smart IR TVI / AHD / CVI / 960H options IP66 Base 4.99\" (127 mm)",
-        "price": 60.75
+        "price": 75.45
       },
       {
         "sku": "LTCMHT1722-28LS",
         "name": "Platinum 2 MP Fixed Turret TVI Camera",
         "description": "High quality imaging with 2 MP, 1920 \u00d7 1080 resolution 2.8 mm fixed focal lens options Up to 40 m IR distance for bright night imaging Up to 40 m visible (white) light distance for bright night imaging Smart-Hybrid Light, optimize your security with ...",
-        "price": 79.65
+        "price": 98.93
       }
     ],
     "downloads": [
@@ -1248,13 +1285,13 @@ const products = [
         "sku": "LTCMIP3C42W-M",
         "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera",
         "description": "Max. 2560 \u00d7 1440 @ 24 fps 4 mm fixed lens H.265+, H.264+ 120 dB WDR 0.0014 @ f 1.0 (1/30 sec., AGC on), 0.002 @ f 1.2 (1/30 sec., AGC on), 0 Lux with LED on 12V DC &amp; PoE (802.3 af, class 3) Built-in MicroSD / SDHC / SDXC slot, up to 128 GB IP67 B...",
-        "price": 214.65
+        "price": 266.6
       },
       {
         "sku": "LTCMIP3C42W-28MDA",
         "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera",
         "description": "High quality imaging with 4 MP resolution Efficient H.265+ compression technology Clear imaging against strong backlight with 130 dB WDR technology Built-in microphone for real-time audio security Focus on human and vehicle classification based on de...",
-        "price": 249.75
+        "price": 310.19
       }
     ],
     "downloads": [
@@ -1306,7 +1343,7 @@ const products = [
         "sku": "LTDHIP3542W-28ISMLC",
         "name": "Platinum 4 MP Fixed-Lens Eyeball IP Camera",
         "description": "H.265+ 2688 x 1520 @ 30 fps SMD (AI) support 2.8 mm fixed lens Min. Illumination - Color: 0.002 lux @ f 1.6; B&amp;W: 0 lux; IR LEDs range up to 66 feet WDR 140 dB, 3D DNR, BLC, IP67 PoE, face detection, perimeter protection, people counting MicroSD ...",
-        "price": 201.15
+        "price": 249.83
       }
     ],
     "specs": {
@@ -1358,7 +1395,7 @@ const products = [
         "sku": "LTDHIP3542NW-28ISMLC",
         "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera",
         "description": "4MP, 1/2.7\u201d CMOS image sensor, low illuminance, high image definition Outputs max. 4MP (2688 \u00d7 1520) @ 30 fps H.265 codec, high compression rate, low bit rate Built-in Warm LED, max. LEDs distance: 30 m ROI, SMART H.264+/H.265+, flexible coding, appl...",
-        "price": 160.65
+        "price": 199.53
       }
     ],
     "downloads": [
@@ -1380,7 +1417,7 @@ const products = [
     "name": "Platinum 8 MP Panoramic Fixed Turret IP Camera",
     "description": "2 x 4 MP 4 mm Lenses (8 MP total) 5120 x 1440 @ 20 fps or 15fps with WDR White, supplemental light LEDs, ranging up to 131 feet Human &amp; vehicle target classification 130 dB True WDR technology Built-in microphone &amp; speaker MicroSD card storag...",
     "long_description": "\n                <div data-content-type=\"html\" data-appearance=\"default\" data-element=\"main\" data-decoded=\"true\"><ul>\n<li>2 x 4 MP 4 mm Lenses (8 MP total) </li>\n<li>5120 x 1440 @ 20 fps or 15fps with WDR </li>\n<li>White, supplemental light LEDs, ranging up to 131 feet </li>\n<li>Human &amp; vehicle target classification </li>\n<li>130 dB True WDR technology </li>\n<li>Built-in microphone &amp; speaker </li>\n<li>MicroSD card storage up to 256 GB </li>\n<li>IP67, IK10 protection ratings </li>\n</ul>\n</div>            ",
-    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/p/r/product_image_templete_5_5.png",
+    "image": "https://media.ltsecurityinc.com/catalog/product/l/t/ltcmip3c8pw-sdl.jpg",
     "facets": {
       "category": [
         "IP SOLUTIONS"
@@ -1413,7 +1450,7 @@ const products = [
         "sku": "LTCMIP3C8PW-SDL",
         "name": "Platinum 8 MP Panoramic Fixed Turret IP Camera",
         "description": "2 x 4 MP 4 mm Lenses (8 MP total) 5120 x 1440 @ 20 fps or 15fps with WDR White, supplemental light LEDs, ranging up to 131 feet Human &amp; vehicle target classification 130 dB True WDR technology Built-in microphone &amp; speaker MicroSD card storag...",
-        "price": 282.15
+        "price": 350.40
       }
     ],
     "downloads": [
@@ -1486,37 +1523,37 @@ const products = [
         "sku": "LTD8316T-ET",
         "name": "Platinum Advanced Level HD-TVI 16 Channel DVR - Efficient Mode",
         "description": "16 Channel Video Recorder Support Live View, Storage, Playback up to 16 HD-TVI / Analog / Analog HD Cameras+ 2 IP Camera Up to 1080P&nbsp; (1920x1080) HDMI Video Output Efficient Mode Recording : 960 x 1080 @30fps CVBS Output 2 SATA up to 12TB HDD H....",
-        "price": 268.65
+        "price": 333.66
       },
       {
         "sku": "LTD8316T-FT",
         "name": "Platinum Advanced 16-Channel HD-TVI DVR",
         "description": "Analog &amp; HD-TVI Video In: 16 chs. IPC Input: 2 chs. 1080p @ 30 fps Video Output: VGA / HDMI up to 1080p Playback Channel: 16 chs. Audio channels In/Out: 1 / 1, RCA Network: 10/100/1000 Mbps Storage: 2 x SATA up to 12 TB USB: 2 x USB 2.0 PTZ: 1 x ...",
-        "price": 268.65
+        "price": 333.66
       },
       {
         "sku": "LTD8316T-FA",
         "name": "Platinum Advanced Level 16 Channel HD-TVI DVR 1U",
         "description": "16 Channel Digital Video Recorder Analog &amp; HD-TVI Video In: 16CH IPC Input: 2CH 1080P@30fps Video Output: VGA/HDMI up to 1080P Playback Channel: 16CH Audio In/Out: 1CH/1CH, RCA Alarm In/Out: 16/4 Network: 10/100/1000M Storage: 2 SATA up to 12TB U...",
-        "price": 282.15
+        "price": 350.43
       },
       {
         "sku": "LTD8316T-EA",
         "name": "Platinum Advanced Level 16 Channel HD-TVI DVR - Efficient Mode",
         "description": "16 Channel Video Recorder Support Live View, Storage, Playback up to 16 HD-TVI / Analog Cameras + 2 IP Cameras Up to 1080P (1920x1080) HDMI Video Output CVBS Output 2 SATA up to 16TB each HDD Up to 1080p@30fps with Efficient mode On H.264/H.264 Zip+ ...",
-        "price": 282.15
+        "price": 350.43
       },
       {
         "sku": "LTD8316T-ET(U)",
         "name": "Platinum Advanced Level HD-TVI 16 Channel DVR - Efficient Mode",
         "description": "16 Channel Video Recorder 1U Support TVI / AHD/ ANALOG / CVI / IP input (5-in-1) 1-4 channel support up to 3M HD-TVI input Support Live View, Storage, Playback up to 16 HD-TVI / Analog Cameras + 2 IP Cameras Up to 4K (3840X2160) HDMI Video Output CVB...",
-        "price": 268.65
+        "price": 333.66
       },
       {
         "sku": "LTD8316T-EA(U)",
         "name": "Platinum Advanced Level 16 Channel HD-TVI DVR - Efficient Mode",
         "description": "16 Channel Video Recorder 1U Support TVI / AHD/ ANALOG / CVI / IP input (5 in 1) 1-4 channel support up to 3M TVI input Support Live View, Storage, Playback up to 16 HD-TVI / Analog Cameras + 2 IP Cameras Up to 4K (3840X2160) HDMI Video Output CVBS O...",
-        "price": 282.15
+        "price": 350.43
       }
     ],
     "specs": {
@@ -1578,7 +1615,7 @@ const products = [
         "sku": "LTD8432M-ST(S)",
         "name": "Platinum 32-Channel 8 MP TVI-P DVR",
         "description": "Up to 32 analog camera inputs, 64 IP camera inputs, and four SATA HDD interfaces @ 12 TB each Single eSATA interface Video compressions from H.264 to H.265 Pro+ Up to 1080p @ 15 fps encoding capability 32 ch + 32 ch IP Alarm / Audio (S) = Audio Over ...",
-        "price": 1410.75
+        "price": 1752.15
       }
     ],
     "specs": {
@@ -1636,7 +1673,7 @@ const products = [
         "sku": "LTD8304D-ET",
         "name": "Platinum 4-Channel TVI DVR",
         "description": "Smart Functions Deep learning-based human and vehicle target classification with Motion Detection 2.0 Deep learning based VCA functionality Compression and Recording H.265 Pro+ can be enabled to improve encoding efficiency and reduce data storage cos...",
-        "price": 114.75
+        "price": 142.52
       }
     ],
     "specs": {
@@ -1694,7 +1731,7 @@ const products = [
         "sku": "LTD8308D-ETC",
         "name": "Platinum 8-Channel HD-TVI DVR",
         "description": "8 chs. + 2 IP or 4 IP (up to 6 MP) 4 MP lite @ 15 fps Supports 2 chs. Facial Recognition or 4 chs. advanced VCA functionality based on Deep Learning algorithm Supports HD-TVI Two-Way Audio technology Efficient H.265 pro+ compression technology Encodi...",
-        "price": 160.65
+        "price": 199.53
       }
     ],
     "specs": {
@@ -1756,7 +1793,7 @@ const products = [
         "sku": "LTD8316D-ET",
         "name": "Platinum 16-Channel TVI DVR",
         "description": "Compression and Recording H.265 Pro+ can be enabled to improve encoding efficiency and reduce data storage costs Recording at up to 8 MP resolution Smart Functions Up to 16 channels (analog) Motion Detection 2.0 Up to 8 channels (advanced model, anal...",
-        "price": 295.65
+        "price": 367.2
       }
     ],
     "specs": {
@@ -1817,7 +1854,7 @@ const products = [
         "sku": "LTD8516D-ST",
         "name": "LTD8516D-ST, Platinum Turbo Smart DVR",
         "description": "Compression and Recording \t \t\tH.265 Pro+ can be enabled to improve encoding efficiency and reduce data storage costs \t\tRecording at up to 8 MP resolution \t Smart Function \t \t Up to 16 channels (analog channel) Motion Detection 2.0 \t\tUp to 8 channels ...",
-        "price": 538.65
+        "price": 669.0
       }
     ],
     "specs": {
@@ -1874,7 +1911,7 @@ const products = [
         "sku": "LTD8504D-ST",
         "name": "LTD8504D-ST, 4-Ch 5 MP 1U H.265 Direct Search DVR",
         "description": "4 channels and 1 HDD 1U Direct Search DVR Support 2-ch Facial Recognition or 4-ch advanced model Perimeter Protection based on Deep Learning algorithm Support 4-ch Direct Search Technology Encoding ability up to 4K/8MP @ 8fps(1-ch); 3K/5MP @12fps Up ...",
-        "price": 174.15
+        "price": 216.29
       }
     ],
     "specs": {
@@ -1932,7 +1969,7 @@ const products = [
         "sku": "LTD8508D-STC",
         "name": "LTD8508D-STC, 8-Ch 5 MP 1U H.265 Direct Search DVR",
         "description": "8 channels and 1 HDD 1U Direct Search DVR Support 4-ch Facial Recognition or 8-ch advanced model Perimeter Protection based on Deep Learning algorithm Support 8-ch Direct Search Technology Encoding ability up to 4K/8MP @ 8fps; 3K/5MP @12fps Up to 16 ...",
-        "price": 309.15
+        "price": 383.96
       }
     ],
     "specs": {
@@ -1989,19 +2026,19 @@ const products = [
         "sku": "LTD8304T-FT",
         "name": "Platinum Advanced Level 4 Channel HD-TVI DVR - Compact Case",
         "description": "4 Channel Digital Video Recorder Analog &amp; HD-TVI Video In: 4CH IPC Input: 1CH 1080P@30fps Video Output: VGA/HDMI up to 1080P Playback Channel: 4CH Audio In/Out: 1CH/1CH, RCA Network: 10/100M Storage: 1 SATA up to 6TB USB: 2 USB 2.0 PTZ: 1 RS485 S...",
-        "price": 93.15
+        "price": 115.69
       },
       {
         "sku": "LTD8304T-FA",
         "name": "Platinum Professional Level 4 Channel HD-TVI DVR - Compact Case",
         "description": "4 Channel Digital Video Recorder Analog &amp; HD-TVI Video In: 4CH IPC Input: 1CH 1080P@30fps Video Output: VGA/HDMI up to 1080P Playback Channel: 4CH Audio In/Out: 1CH/1CH, RCA Alarm In/Out: 4/1 Network: 10/100M Storage: 1 SATA up to 6TB USB: 2 USB ...",
-        "price": 106.65
+        "price": 132.46
       },
       {
         "sku": "LTD8304T-EA",
         "name": "Platinum Advanced Level 4 Channel HD-TVI DVR - Efficient Mode",
         "description": "4 Channel HD-TVI DVR Support Live View, Storage, Playback up to 4 TVI/ Analog Cameras+ 1 IP Camera Up to 1080P (1920x1080) HDMI Video Output / Efficient Mode CVBS Output 1 SATA up to 8TB HDD Up to 1080p@30fps with Efficient mode On H.264, H.264 Zip+ ...",
-        "price": 101.25
+        "price": 125.75
       }
     ],
     "downloads": [
@@ -2064,13 +2101,13 @@ const products = [
         "sku": "LTD8308T-FT",
         "name": "Platinum Advanced Level 8 Channel HD-TVI DVR - Compact Case",
         "description": "8 Channel Digital Video Recorder Analog &amp; HD-TVI Video In: 8CH IPC Input: 2CH 1080P@30fps Video Output: VGA/HDMI up to 1080P Playback Channel: 8CH Audio In/Out: 1CH/1CH, RCA Network: 10/100M Storage: 1 SATA up to 6TB USB: 2 USB 2.0 PTZ: 1 RS485 S...",
-        "price": 147.15
+        "price": 182.76
       },
       {
         "sku": "LTD8308T-FA",
         "name": "Platinum Professional Level 8 Channel HD-TVI DVR - Compact Case",
         "description": "8 Channel Digital Video Recorder Analog &amp; HD-TVI Video In: 8CH IPC Input: 2CH 1080P@30fps Video Output: VGA/HDMI up to 1080P Playback Channel: 8CH Audio In/Out: 1CH/1CH, RCA Alarm In/Out: 8/4 Network: 10/100M Storage: 1 SATA up to 6TB USB: 2 USB ...",
-        "price": 160.65
+        "price": 199.53
       }
     ],
     "downloads": [
@@ -2124,7 +2161,7 @@ const products = [
         "sku": "LTDHCT3622-28F",
         "name": "Sapphire 2 MP Fixed Lens Eyeball HD-CVI Camera",
         "description": "2 MP 1920 x 1080 @ 30 fps 2.8 / 3.6 mm fixed lens Min. Illumination: Color imaging @ 0.02 Lux, B&amp;W imaging @ 0 Lux IR Range up to 98 ft CVI / TVI / AHD / Analog DWDR, 2D DNR, BLC , lP67 12V DC, dual video switchable",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -2183,7 +2220,7 @@ const products = [
         "sku": "LTCMHT2152-28LFA",
         "name": "Platinum 5 MP Dual-Light Turret HD-TVI Camera",
         "description": "High quality imaging with 5 MP, 2960 x 1665 resolution 2.8 mm fixed lens Up to 98 ft (30 m) IR distance for bright night imaging Up to 66 ft (20 m) supplemental white light range for a bright night imaging One switchable port for four signals - TVI /...",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "specs": {
@@ -2205,7 +2242,7 @@ const products = [
     "name": "Platinum 4K Fixed Turret HD-TVI Camera",
     "description": "High-quality imaging with 8 MP, 3840 x 2160 resolution Color imaging 24/7 Clear imaging against strong backlight with 130 dB true WDR technology 3D DNR technology delivers clean and sharp images 2.8 mm fixed focal lens Supplemental lighting reaches u...",
     "long_description": "\n                <div data-content-type=\"html\" data-appearance=\"default\" data-element=\"main\" data-decoded=\"true\">\n\n<ul>\n<li>High-quality imaging with 8 MP, 3840 x 2160 resolution</li>\n<li>Color imaging 24/7  </li>\n<li>Clear imaging against strong backlight with 130 dB true WDR technology</li>\n<li>3D DNR technology delivers clean and sharp images</li>\n<li>2.8 mm fixed focal lens</li>\n<li>Supplemental lighting reaches up to 130 ft for bright night imaging</li>\n<li>Water and dust resistant (IP67)</li>\n</ul></div>            ",
-    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/p/r/product_image_templete_19_42.png",
+    "image": "https://media.ltsecurityinc.com/catalog/product/l/t/ltcmht1782w-28cf.jpg",
     "facets": {
       "category": [
         "HD-TVI SOLUTIONS"
@@ -2236,7 +2273,7 @@ const products = [
         "sku": "LTCMHT1782W-28CF",
         "name": "Platinum 4K Fixed Turret HD-TVI Camera",
         "description": "High-quality imaging with 8 MP, 3840 x 2160 resolution Color imaging 24/7 Clear imaging against strong backlight with 130 dB true WDR technology 3D DNR technology delivers clean and sharp images 2.8 mm fixed focal lens Supplemental lighting reaches u...",
-        "price": 133.65
+        "price": 110.40
       }
     ],
     "specs": {
@@ -2294,7 +2331,7 @@ const products = [
         "sku": "LTCMHT1752-28LS",
         "name": "CMHT1752-28LS, 5 MP TVI Turret Camera With Dual Light",
         "description": "High quality imaging with 5MP 2960 \u00d7 1665 resolution 2.8 mm fixed focal lens Provides bright night imaging with up to 40 meters of white light and 40 meters of IR distance Smart-Hybrid Light: Enhance your security with adaptable lighting options Acti...",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -2352,7 +2389,7 @@ const products = [
         "sku": "LTCMHT3C5PW-28L",
         "name": "CMHT3C5PW-28L, 5 MP 24/7 Color Dual-Lens Turret Camera",
         "description": "Featuring a dual-lens design and a built-in stitching algorithm, it delivers a seamless 180-degree image High quality imaging with 5MP, 3328 \u00d7 1504 resolution 24/7 color with F1.0 aperture Smart-Hybrid Light enhances security with adaptable and flexi...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -2408,7 +2445,7 @@ const products = [
         "sku": "LTCMHR6123DWA",
         "name": "Platinum 2.1 MP Varifocal Bullet HD-TVI Camera",
         "description": "&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;Junction Box Included Junction box included 2.1 MP high definition Full HD 1080p 1920 x 1080p @ 30 fps 5 - 50 mm motorized varifocal lens Auto Focus Matrix IR up to 360 ft (110 m) Indoor / outdoor 12 VDC ...",
-        "price": 255.15
+        "price": 316.9
       }
     ],
     "downloads": [
@@ -2463,7 +2500,7 @@ const products = [
         "sku": "LTCMHT1953N-ZF",
         "name": "Platinum Motorized VF Turret HD-TVI Camera 5MP",
         "description": "&nbsp;&nbsp;&nbsp;&nbsp; High Definition Turret 5MP HD-TVI Camera 2.7-13.5mm Varifocal Motorized Lens 2560x1944@20fps 0.01 Lux, Smart IR 6 Matrix IR LED up to 131ft UTC Control to OSD Menu DC 12V IP67 2D DNR, DWDR 4-in-1 Video Output",
-        "price": 141.75
+        "price": 176.05
       }
     ],
     "downloads": [
@@ -2485,7 +2522,7 @@ const products = [
     "name": "Pendant Mount",
     "description": "Pendant mount for dome camera models: CMIP78xx, CMIP3C8PW-SDL",
     "long_description": "\n                <div data-content-type=\"html\" data-appearance=\"default\" data-element=\"main\" data-decoded=\"true\"><ul>\n<li>Pendant mount for dome camera models: CMIP78xx, CMIP3C8PW-SDL </li>\n</ul>\n</div>            ",
-    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/p/r/product_image_templete_6_2.png",
+    "image": "https://media.ltsecurityinc.com/catalog/product/l/t/ltb781.jpg",
     "facets": {
       "category": [
         "IP SOLUTIONS",
@@ -2512,7 +2549,7 @@ const products = [
         "sku": "LTB781",
         "name": "Pendant Mount",
         "description": "Pendant mount for dome camera models: CMIP78xx, CMIP3C8PW-SDL",
-        "price": 66.15
+        "price": 78.40
       }
     ],
     "specs": {
@@ -2557,7 +2594,7 @@ const products = [
         "sku": "LTK-5000C-630",
         "name": "LTK-5000C-630",
         "description": "HES 5000 Strike with 501 and 501A Faceplates ANSI Metal Jambs or Aluminum Frames Dual Voltage 12V/24V DC/AC, UL294 Listed",
-        "price": 187.65
+        "price": 233.06
       }
     ],
     "price": 139.0,
@@ -2596,7 +2633,7 @@ const products = [
         "sku": "LTK-DL-1",
         "name": "Alarm Controls DOOR LOOP 18 LONG .250 ID PLASTIC END CAPS",
         "description": "18\" long armored door loop, .250 I.D. steel jacket resists abrasion and damage, White and brown end caps match all door frames, Mounting hardware included, Custom lengths available",
-        "price": 22.95
+        "price": 28.5
       }
     ],
     "price": 17.0,
@@ -2635,7 +2672,7 @@ const products = [
         "sku": "LTK-1006CS",
         "name": "HES 1006CS Complete Pac Smart Strike",
         "description": "HES 1006 Strike with Faceplates and Deadbolt Brackets Accomdates Every Lock Designed for 4-7/8\u201d Strike Plate UL294, UL10C 3 Hours",
-        "price": 715.5
+        "price": 888.65
       }
     ],
     "price": 530.0,
@@ -2674,7 +2711,7 @@ const products = [
         "sku": "LTK-7400-628",
         "name": "Adams Rite Ultraline 7400 Strike, 25lbs Preload",
         "description": "The ULTRALINE 7400/7401 premium electric strike is designed for installation on aluminium single or double doors.",
-        "price": 257.85
+        "price": 320.25
       }
     ],
     "price": 191.0,
@@ -2719,7 +2756,7 @@ const products = [
         "sku": "LTK-8300C",
         "name": "HES 8300C Complete Pac For Latchbolt Locks",
         "description": "Cylindrical lockets with a 5/8\" throw latchbolt\tconcealed design, fire-rated",
-        "price": 540.0
+        "price": 670.68
       }
     ],
     "price": 400.0,
@@ -2764,7 +2801,7 @@ const products = [
         "sku": "LTK-9400",
         "name": "HES 9400 Slim-Line, Surface-Mounted Electric Strike",
         "description": "HES Surface Mount Slim-Line Strike for Rim Exit Devices LTK-9400 Accommodates 3/4\u201d Pullman Latch LTK-9400, LTK-9600 UL294 Listed Standard Features .45 Amps at 12VDC continuous duty .25 Amps at 24VDC continuous duty Installs in metal and wood frames C...",
-        "price": 403.65
+        "price": 501.33
       }
     ],
     "price": 299.0,
@@ -2809,7 +2846,7 @@ const products = [
         "sku": "LTK-9500",
         "name": "HES 9500 Fire-Rated Electric Strike",
         "description": "LTK-9600 and LTK-9500 Accommodates \u00be\u201d Pullman Latch LTK-9500: UL294, UL10C 3 Hours Features: 0.45 Amps @ 12V DC continuous duty 0.25 Amps @ 24V DC continuous duty Installs in metal or wood frames Separate base and decorative cover for easy adjustment...",
-        "price": 484.65
+        "price": 601.94
       }
     ],
     "price": 359.0,
@@ -2854,7 +2891,7 @@ const products = [
         "sku": "LTK-9600",
         "name": "HES 9600 Surface Mounted Electric Strike",
         "description": "LTK-9600 and LTK-9500 Accommodates 3/4\u201d Pullman Latch LTK-9400, LTK-9600 UL294 Listed Standard Features: 0.45 Amps at 12 VDC continuous duty 0.25 Amps at 24 VDC continuous duty Installs in metal or wood frames Separate base and cover for easy adjustm...",
-        "price": 403.65
+        "price": 501.33
       }
     ],
     "price": 299.0,
@@ -2899,7 +2936,7 @@ const products = [
         "sku": "LTK-AES-300-12",
         "name": "Alarm Controls AES-300 Strike Kit \u2013 12 V DC / AC",
         "description": "Easy Install on Wood, Metal or ANSI Jambs LTK-AES-300-12 is 12 V DC only",
-        "price": 190.35
+        "price": 236.41
       }
     ],
     "price": 141.0,
@@ -2944,7 +2981,7 @@ const products = [
         "sku": "LTK-AES-300-24",
         "name": "Alarm Controls AES-300 Strike Kit \u2013 24 V DC / AC",
         "description": "Easy Install on Wood, Metal or ANSI Jambs LTK-AES-300-24 is 24 V DC only",
-        "price": 190.35
+        "price": 236.41
       }
     ],
     "price": 141.0,
@@ -2988,7 +3025,7 @@ const products = [
         "sku": "LTK-NTS-1",
         "name": "Alarm Controls NO TOUCH SENSOR Exit Button",
         "description": "No Touch Request to Exit Station",
-        "price": 112.05
+        "price": 139.17
       }
     ],
     "price": 83.0,
@@ -3033,7 +3070,7 @@ const products = [
         "sku": "LTK-AQL6-B100R8E1",
         "name": "Power Supply",
         "description": "Protected Outputs with Alarm Interface, Cuts Off Power of Maglocks from the Source when Fire Alarm Triggered UL294, UL603, ULC-S318, ULC-S533 Listed RoHS Compliant and REACH Compliant",
-        "price": 623.7
+        "price": 774.64
       }
     ],
     "price": 462.0,
@@ -3081,7 +3118,7 @@ const products = [
         "sku": "LTK-SREX-100",
         "name": "Alarm Controls ACTIVE FOCUSED INFRARED REQUEST TO EXIT",
         "description": "Alarm Controls REX Motion Sensor DPDT, UL294 Listed, 1-Year Warranty",
-        "price": 175.5
+        "price": 217.97
       }
     ],
     "price": 130.0,
@@ -3126,7 +3163,7 @@ const products = [
         "sku": "LTK-TS-18",
         "name": "Alarm Controls SURFACE MOUNTED MOMENTARY PUSH BUTTON",
         "description": "Alarm Control Push Button Release 1 H x 1-1/2\" W x 2\" L, UL 636 Listed",
-        "price": 48.6
+        "price": 60.36
       }
     ],
     "price": 36.0,
@@ -3171,7 +3208,7 @@ const products = [
         "sku": "LTK-TS-2-2",
         "name": "Alarm Controls - Green Illuminated \"Push To Exit\" Button",
         "description": "2\u201d sq. illuminated \u201cPush to Exit\u201d button UL294 listed TS-2-2 is DPDT",
-        "price": 82.35
+        "price": 102.28
       }
     ],
     "price": 61.0,
@@ -3216,7 +3253,7 @@ const products = [
         "sku": "LTK-TS-2T",
         "name": "Alarm Controls - Green Illuminated \"Push To Exit\" Button",
         "description": "2\u201d Sq. illuminated \u201cPush to Exit\u201d button UL294 listed SPDT, 2 - 45 sec. timer",
-        "price": 155.25
+        "price": 192.82
       }
     ],
     "price": 115.0,
@@ -3261,7 +3298,7 @@ const products = [
         "sku": "LTK-1200WP",
         "name": "Alarm Controls 1200lbs Weather-Proof Mag Gate Lock",
         "description": "Weather-Proof Mag Gate Lock",
-        "price": 344.25
+        "price": 427.56
       }
     ],
     "price": 255.0,
@@ -3306,7 +3343,7 @@ const products = [
         "sku": "LTK-600S",
         "name": "Alarm Controls 600 Lb Single Mag",
         "description": "600 lbs of holding force UL294 and ULC",
-        "price": 183.6
+        "price": 228.03
       }
     ],
     "price": 136.0,
@@ -3351,7 +3388,7 @@ const products = [
         "sku": "LTK-KP-400",
         "name": "Alarm Controls Weather-Proof Vandal Resistant Keypad IP66",
         "description": "Weather-Proof and Vandal-Proof Digital Keypad",
-        "price": 255.15
+        "price": 316.9
       }
     ],
     "price": 189.0,
@@ -3396,7 +3433,7 @@ const products = [
         "sku": "LTK-UB01",
         "name": "Bluetooth Wi-Fi Bridge",
         "description": "Bluetooth Wi-Fi Bridge for Ultraloq Allows remote access to smart locks Plug in near the smart lock Alexa, Google Home, and IFTTT compatible",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "price": 45.0,
@@ -3435,7 +3472,7 @@ const products = [
         "sku": "LTK-RT-1",
         "name": "Alarm Controls TWO WIRELESS TRANSMITTERS AND RECEIVER",
         "description": "Alarm Controls 1 Door / 3 Doors Receiver-Transmitter Kit Additional LTK-RT-1T for LTK-RT-1 and LTK-RT-1TW for LTK-RT-1 or LTK-RT-3 LTK-RT-1 Contains 1 Receiver and 2 Transmitters",
-        "price": 112.05
+        "price": 139.17
       }
     ],
     "price": 83.0,
@@ -3479,7 +3516,7 @@ const products = [
         "sku": "LTK-RT-3",
         "name": "Alarm Controls RT-3 Three Receivers And One Transmitter Kit",
         "description": "Alarm Controls 3 Doors Receiver-Transmitter Kit Additiona LTK-RT-1TW LTK-RT-3 LTK-RT-3 Contains 3 Receivers and 1 Transmitter",
-        "price": 172.8
+        "price": 214.62
       }
     ],
     "price": 128.0,
@@ -3523,7 +3560,7 @@ const products = [
         "sku": "LTK-AM6360",
         "name": "Alarm Controls FILLER PLATE F/ 600 AND 1200S",
         "description": "Alarm Controls Filler Plates Work with All 600 and 1200 Series Maglocks AM6360 5/8\u201d",
-        "price": 35.1
+        "price": 43.59
       }
     ],
     "price": 26.0,
@@ -3562,7 +3599,7 @@ const products = [
         "sku": "LTK-AM6361",
         "name": "Alarm Controls FILLER PLATE",
         "description": "Alarm Controls Filler Plates Work with All 600 and 1200 Series Maglocks AM6361 1/2\u201d",
-        "price": 29.7
+        "price": 36.89
       }
     ],
     "price": 22.0,
@@ -3601,7 +3638,7 @@ const products = [
         "sku": "LTK-AM6370",
         "name": "Alarm Controls Three-Piece Z Bracket",
         "description": "Z bracket for 1200-Series single magnetic locks Clear anodized (US28)",
-        "price": 170.1
+        "price": 211.26
       }
     ],
     "price": 126.0,
@@ -3640,7 +3677,7 @@ const products = [
         "sku": "LTK-GDH",
         "name": "Alarm Controls Glass Door Holder",
         "description": "Mounts armature plate on frameless glass doors, Accommodates 600 and 1200 series magnetic lock armature plates",
-        "price": 71.55
+        "price": 88.87
       }
     ],
     "price": 53.0,
@@ -3679,7 +3716,7 @@ const products = [
         "sku": "LTK-1200D",
         "name": "Alarm Controls 1,200 Lb Double Mag LED",
         "description": "1,200 lb holding force UL294 and ULC",
-        "price": 499.5
+        "price": 620.38
       }
     ],
     "price": 370.0,
@@ -3724,7 +3761,7 @@ const products = [
         "sku": "LTK-AQD4-4C1R1",
         "name": "Securitron Power Supply 4A",
         "description": "UL294, UL603, ULC-S318, ULC-S533 Listed RoHS Compliant and REACH Compliant",
-        "price": 390.15
+        "price": 484.57
       }
     ],
     "price": 289.0,
@@ -3768,7 +3805,7 @@ const products = [
         "sku": "LTK-AM3305",
         "name": "5/8\" Mounting Plate For 600 Series Single Magnetic Lock",
         "description": "5/8\" spacer for 600 lb. lock, 9-7/8\"L x 1\"W x 5/8\"D\t, Clear anodized (US28)",
-        "price": 43.2
+        "price": 53.65
       }
     ],
     "price": 32.0,
@@ -3812,7 +3849,7 @@ const products = [
         "sku": "LTK-AQD2-4F1R1",
         "name": "Securitron Power Supply 2A",
         "description": "12/24 VDC 4 1A Fuse Outputs Fire Trigger",
-        "price": 264.6
+        "price": 328.63
       }
     ],
     "price": 196.0,
@@ -3856,7 +3893,7 @@ const products = [
         "sku": "LTK-AQD6-8C8R2",
         "name": "Securitron Power Supply 6A",
         "description": "12/24 VDC, 8 2A PTC Outputs, 8 Relays, Fire Trigger",
-        "price": 461.7
+        "price": 573.43
       }
     ],
     "price": 342.0,
@@ -3901,7 +3938,7 @@ const products = [
         "sku": "LTK-RT-1T",
         "name": "Alarm Controls Transmitter For RT-1",
         "description": "Additional Transmitter for RT-1 Kit",
-        "price": 35.1
+        "price": 43.59
       }
     ],
     "price": 26.0,
@@ -3940,7 +3977,7 @@ const products = [
         "sku": "LTK-TS-2",
         "name": "Alarm Controls U.L. 2\u201d SQ.GREEN ILLUMINATED PUSH BUTTON",
         "description": "Alarm Controls Green Push Button 2\u201d SQ Illuminated \u201cPush to Exit\u201d UL294 Listed TS-2 is SPDT",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "price": 45.0,
@@ -3985,7 +4022,7 @@ const products = [
         "sku": "LTK-XMS",
         "name": "Securitron Exit Motion Sensor",
         "description": "Securitron Exit Motion Sensor 1-year Warranty",
-        "price": 230.85
+        "price": 286.72
       }
     ],
     "price": 171.0,
@@ -4030,7 +4067,7 @@ const products = [
         "sku": "LTK-1200LB",
         "name": "Alarm Controls 1200lb Single Mag With LED",
         "description": "Alarm Controls LED &amp; Bond Sensor Maglock 1200lb Holding Force, UL294 and ULC",
-        "price": 363.15
+        "price": 451.03
       }
     ],
     "price": 269.0,
@@ -4075,7 +4112,7 @@ const products = [
         "sku": "LTK-600D",
         "name": "Alarm Controls Magnetic Double-Door Lock - 600 Pounds Of Force",
         "description": "Features: Instant release, no hysteresis Non-aluminum parts are plated to resist corrosion Built-in arc suppression Can be used with any access control system E-Z mount system, no special tools required Self drilling TEC screws 1-year warranty UL294 ...",
-        "price": 305.1
+        "price": 378.93
       }
     ],
     "price": 226.0,
@@ -4120,7 +4157,7 @@ const products = [
         "sku": "LTK-600LB",
         "name": "Alarm Controls 600 Lb Single Mag With LED And Bond Sensor",
         "description": "600 lb Holding Force UL294 and ULC Specifications Magnet size: 9-7/8\" L x 1-11/16\" H x 1\" W Armature size: 7-1/4\" L x 1-1/2\" H x 1/2\" W Operates on 12 or 24V DC, switch selectable Low current draw: 400 mA at 12V DC, 200 mA at 24V DC Operating tempera...",
-        "price": 282.15
+        "price": 350.43
       }
     ],
     "price": 209.0,
@@ -4159,7 +4196,7 @@ const products = [
         "sku": "LTK-PA-100",
         "name": "Piezo Buzzer Mounts In 3/4\" Hole",
         "description": "Piezo buzzer can be flange mounted Sound level 85dB @ 3 feet Operating voltage 3 to 28VDC Terminated with 6\" colored leads Model RP-23 single gang stainless steel wall plate is used for mounting",
-        "price": 22.95
+        "price": 28.5
       }
     ],
     "price": 17.0,
@@ -4203,7 +4240,7 @@ const products = [
         "sku": "LTK-1600CS",
         "name": "HES 1600 Strike With 8 Faceplates And Brackets",
         "description": "The 1600CS offers a dynamic, low profile design with integrated adjustability and field configurable options. Each Complete Pac conveniently pairs the reliabilty of an HES electric strike with the flexibility of multiple faceplates in a single simple...",
-        "price": 588.6
+        "price": 731.04
       }
     ],
     "price": 436.0,
@@ -4242,7 +4279,7 @@ const products = [
         "sku": "LTK-REB-1",
         "name": "Alarm Controls 35\" LONG SATIN ALUMINUM PUSH BAR",
         "description": "Alarm Controls Pushbar &amp; Door Loop 34.5\" Pushbar, 18\" Door Loop Included",
-        "price": 220.05
+        "price": 273.3
       }
     ],
     "price": 163.0,
@@ -4287,7 +4324,7 @@ const products = [
         "sku": "LTK-AM3370",
         "name": "Alarm Controls 3 PIECE Z BRACKET",
         "description": "Alarm Controls adjustable LZ bracket, for mounting electromagnetic locks on in-swinging doors Z bracket for 600 Series single magnetic locks Clear anodized (US28)",
-        "price": 108.0
+        "price": 134.14
       }
     ],
     "price": 80.0,
@@ -4326,7 +4363,7 @@ const products = [
         "sku": "LTK-1200S",
         "name": "Alarm Controls 1200lb Single Mag",
         "description": "Alarm Controls Maglock 1200lb Holding Force, UL294 and ULC",
-        "price": 225.45
+        "price": 280.01
       }
     ],
     "price": 167.0,
@@ -4371,7 +4408,7 @@ const products = [
         "sku": "LTK-600WP",
         "name": "Alarm Control 600WP 600lbs Weatherproof Maglock",
         "description": "Alarm Control 600WP 600lbs Weatherproof Maglock w/ 12\" Armored Cable",
-        "price": 252.45
+        "price": 313.54
       }
     ],
     "price": 187.0,
@@ -4416,7 +4453,7 @@ const products = [
         "sku": "LTK-8000C",
         "name": "HES 8000C Complete Pac With 2 Faceplates",
         "description": "HES 8000 Strike with 801 and 801A Faceplates Easy Installation with No Cutting on ANSI Frames Dual Voltage 12V/24V DC/AC, UL294 Listed",
-        "price": 174.15
+        "price": 216.29
       }
     ],
     "price": 129.0,
@@ -4455,7 +4492,7 @@ const products = [
         "sku": "LTK-AM3315",
         "name": "Alarm Controls 1/4\" THICK ARMATURE SPACER",
         "description": "FOR 600 AND 1200 MAGNETIC LOCKS",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "price": 29.0,
@@ -4500,7 +4537,7 @@ const products = [
         "sku": "LTK-FMK-SW",
         "name": "Flex Mount Kit For Swing Gate",
         "description": "Flex Mount Kit for Swing Gate",
-        "price": 160.65
+        "price": 199.53
       }
     ],
     "price": 119.0,
@@ -4539,7 +4576,7 @@ const products = [
         "sku": "LTK-UL1-BK-UB01",
         "name": "Ultraloq UL1 Black + UB01 Kit",
         "description": "Black (-BK) Finish",
-        "price": 332.1
+        "price": 412.47
       }
     ],
     "price": 246.0,
@@ -4583,7 +4620,7 @@ const products = [
         "sku": "LTK-600L",
         "name": "Alarm Controls 600 Lb Single Door Maglock With LED",
         "description": "Green status LED indicates when lock is energized Non-aluminum parts are plated to resist corrosion Built-in arc suppression Can be used with any access control system Instant release, no hysteresis Self drilling TEC screws Limited lifetime warranty",
-        "price": 225.45
+        "price": 280.01
       }
     ],
     "price": 167.0,
@@ -4627,7 +4664,7 @@ const products = [
         "sku": "LTK-TS-14",
         "name": "Alarm Controls PNEUMATIC Time Delay GREEN PUSH BUTTON",
         "description": "Alarm Controls Pneumatic Push Button 1.5\u201d Green Mushroom Button \u201cPush To Exit\u201d UL294 Listed SPDT with 2-60s Pneumatic Timer",
-        "price": 348.3
+        "price": 432.59
       }
     ],
     "price": 258.0,
@@ -4672,7 +4709,7 @@ const products = [
         "sku": "LTK-TSB-CL",
         "name": "Securitron Touch Sense Bar",
         "description": "36\", Clear Anodized",
-        "price": 464.4
+        "price": 576.78
       }
     ],
     "price": 344.0,
@@ -4717,7 +4754,7 @@ const products = [
         "sku": "LTK-M62",
         "name": "Securitron 1200lb Magnalock",
         "description": "Securitron Water-proof Maglock 1200lb Holding Force, UL294",
-        "price": 496.8
+        "price": 617.03
       }
     ],
     "price": 368.0,
@@ -4762,7 +4799,7 @@ const products = [
         "sku": "LTK-SAM",
         "name": "Securitron SAM Shear Aligning Magnalock",
         "description": "1200lb, UL294, Tamper Proof and Weatherproof",
-        "price": 988.2
+        "price": 1227.34
       }
     ],
     "price": 732.0,
@@ -4802,7 +4839,7 @@ const products = [
         "sku": "LTK-KP-100A",
         "name": "Alarm Controls Access Control Keypad Indoor 3 Yr Warranty",
         "description": "The KP-100A is a self-contained digital access control keypad that can be flush mounted on a single gang box or surface mounted on its plastic mounting box. Easy to install and easy to program, this keypad is ideal for access control and alarm arm/di...",
-        "price": 108.0
+        "price": 134.14
       }
     ],
     "price": 80.0,
@@ -4847,7 +4884,7 @@ const products = [
         "sku": "LTK-AUTOBOLT-BK",
         "name": "Ultraloq AutoBolt Add-On Of UL1 - Black",
         "description": "Deadbolt Add-on for LTK-UL1 Replaces Cylindrical Deadbolts Retracts as UL1 Unlocks Physical Key Backup Included",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "price": 89.0,
@@ -4891,7 +4928,7 @@ const products = [
         "sku": "LTK-PB2E",
         "name": "Securitron Momentary Push Button",
         "description": "PB - Momentary, Single Gang, Green/Red/Handicap",
-        "price": 78.3
+        "price": 97.25
       }
     ],
     "price": 58.0,
@@ -4936,7 +4973,7 @@ const products = [
         "sku": "LTK-GL1-FL",
         "name": "Securitron Gate Lock",
         "description": "Securitron Heavy Duty, Weather-Resistant Gate Lock 2000lb Holding Force, up to 100lb Pre-Load with Key Backup LTK-FMK-SL Sliding Door Bracket Optional LTK-FMK-SW Swinging Door Bracket Avaliable",
-        "price": 407.7
+        "price": 506.36
       }
     ],
     "price": 302.0,
@@ -4981,7 +5018,7 @@ const products = [
         "sku": "LTK-ZA-32-62CL",
         "name": "Securitron Adjustable Z-Bracket",
         "description": "Securitron Z Bracket with Oversized Dress Cover For Mounting onto Inward Swinging Doors Works with Securitron M32F and M62F Models",
-        "price": 125.55
+        "price": 155.93
       }
     ],
     "price": 93.0,
@@ -5020,7 +5057,7 @@ const products = [
         "sku": "LTK-M32",
         "name": "Securitron 600lb Magnalock",
         "description": "Securitron Water-proof Maglock 600lb Holding Force, UL294",
-        "price": 388.8
+        "price": 482.89
       }
     ],
     "price": 288.0,
@@ -5065,7 +5102,7 @@ const products = [
         "sku": "LTK-152",
         "name": "HES 152 Universal Mounting Tabs",
         "description": "Mount inside hollow metal and aluminum jambs",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "price": 19.0,
@@ -5109,7 +5146,7 @@ const products = [
         "sku": "LTK-MM15",
         "name": "Securitron MM15 MEMLOCK",
         "description": "Electromechanical Maglock - 4000lbs indoor, DC/AC 12/24V",
-        "price": 577.8
+        "price": 717.63
       }
     ],
     "price": 428.0,
@@ -5154,7 +5191,7 @@ const products = [
         "sku": "LTK-AM3300",
         "name": "Alarm Controls 1/2\" MOUNTING PLATE",
         "description": "Alarm Controls Drop Down Plates for Dropping 1/2\u201d to Clear the Door Frame AM3300 for 600",
-        "price": 37.8
+        "price": 46.95
       }
     ],
     "price": 28.0,
@@ -5198,7 +5235,7 @@ const products = [
         "sku": "LTK-AM6320",
         "name": "Alarm Controls L Bracket",
         "description": "For 1200 Series Single Mag",
-        "price": 49.95
+        "price": 62.04
       }
     ],
     "price": 37.0,
@@ -5242,7 +5279,7 @@ const products = [
         "sku": "LTK-AQD4-4F1R1",
         "name": "Securitron Power Supply 4A",
         "description": "12/24 VDC, 4 1A Fuse Outputs, Fire Trigger",
-        "price": 411.75
+        "price": 511.39
       }
     ],
     "price": 305.0,
@@ -5286,7 +5323,7 @@ const products = [
         "sku": "LTK-AQD6-8F8R2",
         "name": "Securitron 6A Dual Voltage Power Supply",
         "description": "Securitron 12/24VDC 6A 8 Fuse Power Supply Protected Outputs with Alarm Interface, Cuts Off Power of Maglocks from the Source when Fire Alarm Triggered UL294, UL603, ULC-S318, ULC-S533 Listed RoHS Compliant and REACH Compliant",
-        "price": 487.35
+        "price": 605.29
       }
     ],
     "price": 361.0,
@@ -5330,7 +5367,7 @@ const products = [
         "sku": "LTK-DL-2",
         "name": "Alarm Controls - Heavy Duty Door Cord - 18\"",
         "description": "18-inch long armored door loop Rugged 0.375 ID steel jacket resists abrasion and damage Metal end caps with mounting hardware Custom lengths available",
-        "price": 29.7
+        "price": 36.89
       }
     ],
     "price": 22.0,
@@ -5374,7 +5411,7 @@ const products = [
         "sku": "LTK-1500C",
         "name": "HES 1500C Complete Pac 1500 Strike Body + 4 Faceplates",
         "description": "HES 1500 Strike with Faceplates Stainless Steel, 10-Year SecuriCare Warranty 12V/24V DC/AC, UL294, UL10C 3 Hours",
-        "price": 390.15
+        "price": 484.57
       }
     ],
     "price": 289.0,
@@ -5418,7 +5455,7 @@ const products = [
         "sku": "LTK-EEB-3N",
         "name": "Securitron Emrgency Exit Button EEB3N",
         "description": "Securitron Narrow Stile Push Button Switchable Green and Red Lenses Both Lenses Included UL294 Listed SPDT with 30s Timer",
-        "price": 143.1
+        "price": 177.73
       }
     ],
     "price": 106.0,
@@ -5463,7 +5500,7 @@ const products = [
         "sku": "LTK-RT-3R",
         "name": "Alarm Controls Additional Receiver",
         "description": "Additional Receiver (Allows Expansion of RT-1)",
-        "price": 43.2
+        "price": 53.65
       }
     ],
     "price": 32.0,
@@ -5507,7 +5544,7 @@ const products = [
         "sku": "LTK-AM3320",
         "name": "Alarm Controls L Bracket For 600 Series Single Mag",
         "description": "L bracket for 600 series single magnetic locks, 9-7/8\"L x 1\" x 1-1/2\" x 1/4\" Thick, Clear anodized (US28)",
-        "price": 45.9
+        "price": 57.01
       }
     ],
     "price": 34.0,
@@ -5551,7 +5588,7 @@ const products = [
         "sku": "LTK-AQE30E",
         "name": "Securitron AQE Single Port PoE Extractor",
         "description": "Product Features Allows powering of non-PoE devices from a PoE source 12V DC output power from PoE source Selectable for 13 or 25 W output Reset feature allows PoE shutdown Visual diagnostics by on-board LED MagnaCare\u00ae lifetime replacement, no fault ...",
-        "price": 222.75
+        "price": 276.66
       }
     ],
     "price": 165.0,
@@ -5595,7 +5632,7 @@ const products = [
         "sku": "LTK-KP-300",
         "name": "Alarm Controls MULLION MOUNT KEYPAD",
         "description": "Weather-Proof &amp; Vandal-Proof Digital Keypad",
-        "price": 252.45
+        "price": 313.54
       }
     ],
     "price": 187.0,
@@ -5640,7 +5677,7 @@ const products = [
         "sku": "LTK-UL1-SN",
         "name": "Fingerprint & Key Fob Smart Lock-Silver",
         "description": "Unlock via Fingerprint, Keyfob or APP Replaces Cylindrical Deadbolts LTK-COMBO-BK-UB01 Kit Avaliable 4 AA Batteries Last up to 8000 Entries",
-        "price": 268.65
+        "price": 333.66
       }
     ],
     "price": 199.0,
@@ -5684,7 +5721,7 @@ const products = [
         "sku": "LTK-AM6300",
         "name": "Alarm Controls 1/2\" MOUNTING PLATE",
         "description": "Alarm Controls Drop Down Plates for Dropping 1/2\u201d to Clear the Door Frame AM6300 for 1200 Series",
-        "price": 43.2
+        "price": 53.65
       }
     ],
     "price": 32.0,
@@ -5727,7 +5764,7 @@ const products = [
         "sku": "LTK1101M",
         "name": "MIFARE Card Reader",
         "description": "8 or 10 Digit Selectable (via DIP) IP65 Weatherproof 1 Gang",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -5770,7 +5807,7 @@ const products = [
         "sku": "LTK1101MK",
         "name": "MIFARE Card Reader With Keypad",
         "description": "8 or 10 Digit Selectable (via DIP) IP65 Weatherproof 1 Gang Keypad provides additional or alternative authentication method",
-        "price": 74.25
+        "price": 92.22
       }
     ],
     "specs": {
@@ -5815,7 +5852,7 @@ const products = [
         "sku": "HES 5200C",
         "name": "HES Electric Strike",
         "description": "Each Complete Pac conveniently pairs the reliability of an HES electric strike with the flexibility of multiple faceplates in a single simple package. The 5200C includes a 5200 strike body, the 501 faceplate for cylindrical locksets in ANSI metal jam...",
-        "price": 176.88
+        "price": 219.68
       }
     ],
     "specs": {
@@ -5859,7 +5896,7 @@ const products = [
         "sku": "LTK3607FM",
         "name": "LTS Facial Recognition Intercom & Access Control Terminal",
         "description": "7-inch LCD touchscreen can call software or indoor stations Built-in MIFARE card reader Up to 6,000 profiles with a face and/or MIFARE card TCP/IP and Wi-Fi, 12V DC, IP65 protection Program from software or touchscreen Dimensions: 9.41 x 4.59 x 1.30\"",
-        "price": 768.15
+        "price": 954.04
       }
     ],
     "specs": {
@@ -5902,7 +5939,7 @@ const products = [
         "sku": "AK-C313W",
         "name": "Akuvox Indoor IP Video Station",
         "description": "7\u201d touchscreen with PoE Wi-Fi available on AK-C313W Surface mount included",
-        "price": 263.25
+        "price": 326.96
       }
     ],
     "price": 195.0,
@@ -5946,7 +5983,7 @@ const products = [
         "sku": "AK-C313S",
         "name": "Akuvox Indoor IP Video Station",
         "description": "7\u201d touchscreen with PoE Surface mount included",
-        "price": 229.5
+        "price": 285.04
       }
     ],
     "price": 170.0,
@@ -5990,7 +6027,7 @@ const products = [
         "sku": "AK-R20A",
         "name": "Akuvox R20A IP Video Intercom",
         "description": "Single apartment outdoor station 1 call button and card reader SIP integration and cloud option Surface mount bracket included",
-        "price": 349.65
+        "price": 434.27
       }
     ],
     "price": 259.0,
@@ -6033,7 +6070,7 @@ const products = [
         "sku": "LTK3410MF",
         "name": "Door Intercom & Access Control Terminal",
         "description": "4-inch LCD touchscreen Call software or indoor stations from unit",
-        "price": 459.0
+        "price": 570.08
       }
     ],
     "specs": {
@@ -6073,7 +6110,7 @@ const products = [
         "sku": "DHWD101PURP",
         "name": "Western Digital Purple Pro 10 TB AI Hard Disk Drive, 7,200 RPM Class",
         "description": "Supports up to 550 TB per year workload rate. Designed with tarnish-resistant components for harsh environments, and with additional robustness for multi-bay enclosures. Built for 24/7, always-on, high-definition security systems. With incredible wor...",
-        "price": 363.15
+        "price": 451.03
       }
     ],
     "specs": {
@@ -6112,7 +6149,7 @@ const products = [
         "sku": "DHWD82PURZ",
         "name": "WD Purple 8TB Surveillance Hard Disk Drive, 7200 RPM Class, SATA 6 GB/S, 256 MB Cache, 3.5 Inch",
         "description": "8TB Surveillance Hard Disk Drive 7200 RPM Class SATA 6 GB/S 256 MB Cache 3.5 Inch",
-        "price": 295.65
+        "price": 367.2
       }
     ],
     "specs": {
@@ -6152,7 +6189,7 @@ const products = [
         "sku": "DV-AT1209A-D9",
         "name": "Power Supply - 9 Channels, 9 Amps",
         "description": "Input Power: 115V AC, 60 Hz Output Power: 12V DC, 9-Amp Output Fuse protection and LED indicators on each output Over-voltage and over-current protections Short circuit protection Dimensions (W x H x D): 9.5 x 6.2 x 3.1 inches",
-        "price": 72.9
+        "price": 90.54
       }
     ],
     "price": 54.0,
@@ -6193,7 +6230,7 @@ const products = [
         "sku": "DV-AT1209A-D9",
         "name": "Power Supply - 9 Channels, 9 Amps",
         "description": "Input Power: 115V AC, 60 Hz Output Power: 12V DC, 9-Amp Output Fuse protection and LED indicators on each output Over-voltage and over-current protections Short circuit protection Dimensions (W x H x D): 9.5 x 6.2 x 3.1 inches",
-        "price": 72.9
+        "price": 90.54
       }
     ],
     "price": 54.0,
@@ -6234,7 +6271,7 @@ const products = [
         "sku": "DV-AT1212A-D18P",
         "name": "Power Supply - 18 Ports, 12 Amps",
         "description": "Power supply box for CCTV 12V DC Protection: PTC 18 Ports; 12 Amps Indoor use only",
-        "price": 102.6
+        "price": 127.43
       }
     ],
     "price": 76.0,
@@ -6275,7 +6312,7 @@ const products = [
         "sku": "DV-AC2412A-D10",
         "name": "Power Supply - 18 Ports, 12 Amps",
         "description": "Power supply box for CCTV Protection: PTC 24V AC 18 Ports; 12 Amps Indoor use only",
-        "price": 117.45
+        "price": 145.87
       }
     ],
     "price": 87.0,
@@ -6316,7 +6353,7 @@ const products = [
         "sku": "DV-AT1215A-D10",
         "name": "Power Supply - 18 Ports, 18 Amps",
         "description": "12V DC, fuse 18 Ports; 18 Amps Indoor use only",
-        "price": 132.3
+        "price": 164.32
       }
     ],
     "price": 98.0,
@@ -6357,7 +6394,7 @@ const products = [
         "sku": "DV-AT1220A-D18P",
         "name": "Power Box Supply For CCTV",
         "description": "Protection: PTC DC 12V 18 Port; 20Amp Indoor Only",
-        "price": 132.3
+        "price": 164.32
       }
     ],
     "price": 98.0,
@@ -6398,7 +6435,7 @@ const products = [
         "sku": "DV-AT1232A-D18",
         "name": "Power Supply - 18 Ports, 32 Amps",
         "description": "12V DC, fuse 18 Ports; 32 Amps Indoor use only",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "price": 109.0,
@@ -6439,7 +6476,7 @@ const products = [
         "sku": "DV-AT1212A-D18",
         "name": "12-Amp, 12V DC Power Supply Box With 18 Ports, Fuse",
         "description": "18 Ports 12 Amps Fuse-protected DC 12V",
-        "price": 102.6
+        "price": 127.43
       }
     ],
     "price": 76.0,
@@ -6480,7 +6517,7 @@ const products = [
         "sku": "DV-AT1207M-D09",
         "name": "Power Supply - 9 Ports, 7 Amps",
         "description": "12V DC 7 Amps",
-        "price": 67.5
+        "price": 83.83
       }
     ],
     "price": 50.0,
@@ -6521,7 +6558,7 @@ const products = [
         "sku": "DV-AT1210A-D07",
         "name": "Power Supply - 9 Ports, 10 Amps",
         "description": "12V DC, fuse 9 Ports; 10 Amps Indoor use only",
-        "price": 97.2
+        "price": 120.72
       }
     ],
     "price": 72.0,
@@ -6562,7 +6599,7 @@ const products = [
         "sku": "DV-AT12015-D01",
         "name": "Power Adapter - 1,500 MA",
         "description": "24V AC to 12V DC 1.5 Amp",
-        "price": 13.37
+        "price": 16.61
       }
     ],
     "price": 9.9,
@@ -6603,7 +6640,7 @@ const products = [
         "sku": "DV-AT1210A-D10",
         "name": "Power Supply - 18 Ports, 10 Amps",
         "description": "12V DC, fuse 18 Ports; 10 Amps Indoor use only",
-        "price": 112.05
+        "price": 139.17
       }
     ],
     "price": 83.0,
@@ -6644,7 +6681,7 @@ const products = [
         "sku": "DV-AT1205A-D07",
         "name": "Power Supply - 4 Ports, 5 Amps",
         "description": "4 Ports; 5 Amps Indoor use only",
-        "price": 58.05
+        "price": 72.1
       }
     ],
     "price": 43.0,
@@ -6685,7 +6722,7 @@ const products = [
         "sku": "DV-AT1232A-D27",
         "name": "Power Supply - 27 Ports, 32 Amps",
         "description": "12V DC, fuse 27 Ports; 32 Amps Indoor use only",
-        "price": 176.85
+        "price": 219.65
       }
     ],
     "price": 131.0,
@@ -6726,7 +6763,7 @@ const products = [
         "sku": "DV-AC2408A-D07",
         "name": "Power Supply - 9 Ports, 8 Amps",
         "description": "Protections: PTC 24V AC 9 Ports; 8 Amps Indoor use only",
-        "price": 102.6
+        "price": 127.43
       }
     ],
     "price": 76.0,
@@ -6767,7 +6804,7 @@ const products = [
         "sku": "DV-AT1209A-D9P",
         "name": "CCTV Power Supply",
         "description": "12V DC, fuse 9 Ports; 9 Amps Indoor use only",
-        "price": 72.9
+        "price": 90.54
       }
     ],
     "price": 54.0,
@@ -6808,7 +6845,7 @@ const products = [
         "sku": "DV-RT1224A-D24",
         "name": "Power Supply Rack Mount - 24P;24Amp",
         "description": "24-port 24A rack-mountable power box",
-        "price": 176.85
+        "price": 219.65
       }
     ],
     "price": 131.0,
@@ -6847,7 +6884,7 @@ const products = [
         "sku": "DV-RT1232A-D32",
         "name": "Power Supply - 32 Ports, 32 Amps, Rack Mount",
         "description": "",
-        "price": 236.25
+        "price": 293.42
       }
     ],
     "price": 175.0,
@@ -6886,7 +6923,7 @@ const products = [
         "sku": "DHWD8002PURP",
         "name": "Western Digital Purple Pro 8 TB AI Hard Disk Drive",
         "description": "Supports up to 550 TB per year workload rate. Designed with tarnish-resistant components for harsh environments, and with additional robustness for multi-bay enclosures. Built for 24/7, always-on, high-definition security systems. With incredible wor...",
-        "price": 318.6
+        "price": 395.7
       }
     ],
     "specs": {
@@ -6929,85 +6966,85 @@ const products = [
         "sku": "LTPOE-SWC402G",
         "name": "Platinum 4-Port Cloud Managed Gigabit POE Switch",
         "description": "4 \u00d7 Gigabit PoE port, 2 \u00d7 Gigabit RJ45 port Total PoE Power Budget 60 W Supports 802.1Q VLAN Supports PoE watchdog to detect and restart the cameras that do not respond Supports STP / RSTP loop prevention Supports cable detection to locate failures U...",
-        "price": 87.75
+        "price": 108.99
       },
       {
         "sku": "LTPOE-PTZPI60N",
         "name": "PoE Injector",
         "description": "RoHS compliant Compatible With All IEEE pre 802.3 af, 802.3 at and Legacy Powered Devices Input voltage: 90 ~ 264V AC Supports 300V AC input for long time work Output over current protection Short circuit protection MTBF \u2265 1,000,000 hours Surge prote...",
-        "price": 74.25
+        "price": 92.22
       },
       {
         "sku": "LTPOE-SW1604EG",
         "name": "16-Port PoE Switch",
         "description": "16-Port 10/100/1000Mbps IEEE 802.3 af / at PoE Switch (End-Span PSE) Complies with IEEE 802.3, IEEE 802.3 u, IEEE 802.3 ab, IEEE 802.3 az, IEEE 802.3 af / at standards Supports IEEE 802.3 x full-duplex flow control; supports Auto MDI/MDIX 16 ports su...",
-        "price": 484.65
+        "price": 601.94
       },
       {
         "sku": "LTPOE-SW2404EG",
         "name": "24-Port PoE Switch",
         "description": "24-Port 10/100/1000 Mbps IEEE 802.3 af / at PoE Switch (End-Span PSE) Complies with IEEE 802.3, IEEE 802.3 u, IEEE 802.3 ab, IEEE 802.3 az, IEEE 802.3 af / at standards Supports IEEE 802.3 x full-duplex flow control; supports Auto MDI/MDIX 24 ports s...",
-        "price": 606.15
+        "price": 752.84
       },
       {
         "sku": "LTPOE-SWC1601G",
         "name": "Platinum 16-Port Cloud Managed Gigabit POE Switch",
         "description": "16 x Gigabit PoE RJ45 ports, 1 \u00d7 Gigabit RJ45 port, 1 x Gigabit fiber optic port Total PoE power budget 230 W Unified cloud management for security systems Network topology at your fingertips Remote troubleshooting Visualized topology management Up t...",
-        "price": 344.25
+        "price": 427.56
       },
       {
         "sku": "LTPOE-SW1602EG",
         "name": "16-Port Unmanaged Gigabit POE Switch",
         "description": "12 x Gigabit PoE ports, 4 x Gigabit Hi-PoE ports, 2 x Gigabit RJ45 ports, and 2 x Gigabit fiber optic ports IEEE 802.3 at / af / bt standards for Hi-PoE ports (max. 90 W PoE output) IEEE 802.3 at / af standards for PoE ports (max. 30 W PoE output) IE...",
-        "price": 340.2
+        "price": 422.53
       },
       {
         "sku": "LTPOE-SWC2401G",
         "name": "Platinum 24-Port Cloud Managed Gigabit POE Switch",
         "description": "24 x Gigabit PoE RJ45 ports, 1 \u00d7 Gigabit RJ45 port, 1 x Gigabit fiber optic port Total PoE power budget: 370 W Unified cloud management for security systems Network topology at your fingertips Remote troubleshooting Visualized topology management Up ...",
-        "price": 452.25
+        "price": 561.69
       },
       {
         "sku": "LTPOE-SWC802G",
         "name": "Platinum 8-Port Cloud Managed Gigabit POE Switch",
         "description": "8 \u00d7 Gigabit PoE port, 2 \u00d7 Gigabit RJ45 port Total PoE Power Budget 110 W Supports 802.1Q VLAN Supports PoE watchdog to detect and restart the cameras that do not respond Supports STP / RSTP loop prevention Supports cable detection to locate failure U...",
-        "price": 155.25
+        "price": 192.82
       },
       {
         "sku": "LTPOE-SW401EG",
         "name": "4-Port Gigabit Unmanaged PoE Switch",
         "description": "4 x Gigabit PoE ports, and 1 x Gigabit RJ45 port IEEE 802.3 at/af standard IEEE 802.3, IEEE 802.3 u, IEEE 802.3 x, IEEE 802.3 ab, and IEEE 802.3 z standards 6 KV surge protection for PoE ports PoE power management Gigabit network access Wire-speed fo...",
-        "price": 82.35
+        "price": 102.28
       },
       {
         "sku": "LTPOE-SW801EG",
         "name": "8-Port Gigabit Unmanaged PoE Switch",
         "description": "8 \u00d7 Gigabit PoE ports, 1 \u00d7 Gigabit RJ45 port, and 1 \u00d7 Gigabit SFP fiber optical port. IEEE 802.3at/af standard. IEEE 802.3, IEEE 802.3u, IEEE 802.3x, IEEE 802.3ab, and IEEE 802.3z standard. 6 KV surge protection for PoE ports. PoE power management. G...",
-        "price": 147.15
+        "price": 182.76
       },
       {
         "sku": "LTPOE-SW802EG-1",
         "name": "8-Port PoE Switch",
         "description": "8-Port 10/100/1000 Mbps IEEE 802.3 af/at PoE Switch (End-Span PSE) Complies with IEEE 802.3, 802.3 u, 802.3 ab, 802.3 az, &amp; 802.3 af/at standards Supports IEEE 802.3x full-duplex flow control; supports Auto MDI / MDIX 8 ports support 48 - 56V DC ...",
-        "price": 201.15
+        "price": 249.83
       },
       {
         "sku": "LTPOE-I100GT",
         "name": "Single Port Gigabit Injector",
         "description": "30 W 802.3 af / at 10/100/1000 Mbps",
-        "price": 43.2
+        "price": 53.65
       },
       {
         "sku": "LTPOE-SW881",
         "name": "8-Port PoE + 1 Uplink Switch",
         "description": "10/100 Mbps (1000 Mbps uplink) 115 W max. power (30 W per port) IEEE 802.3 at / af standard Auto Device Detection",
-        "price": 201.15
+        "price": 249.83
       },
       {
         "sku": "LTPOE-SW1600I",
         "name": "16 PoE Port Switch",
         "description": "16-Port 10/100 Base-T(x) PoE Switch 250 W",
-        "price": 309.15
+        "price": 383.96
       }
     ],
     "specs": {
@@ -7053,14 +7090,14 @@ const products = [
         "sku": "LTB03-B",
         "name": "Black Junction Box For Dome Cameras",
         "description": "Aluminum alloy with surface treatment Side and bottom inlet Interchangeable bottom waterproof cover and side nut Waterproof",
-        "price": 20.25,
+        "price": 25.15,
         "image": "https://media.ltsecurityinc.com/catalog/product/l/t/ltb03-b.jpg"
       },
       {
         "sku": "LTB03-W",
         "name": "Junction Box - White",
         "description": "Junction Box Compatible with&nbsp;CMHT27xx&nbsp;",
-        "price": 20.25,
+        "price": 25.15,
         "image": "https://media.ltsecurityinc.com/catalog/product/l/t/ltb03-w.jpg"
       }
     ],
@@ -7104,7 +7141,7 @@ const products = [
         "sku": "LTPE1225-L3",
         "name": "Extension Cord Cable",
         "description": "12/3C SJTW Extension Cord Yellow Cord Triple Outlet Lighted when power is on Weather resistant jacket Outdoor and indoor use UL listed",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -7145,7 +7182,7 @@ const products = [
         "sku": "LTMB1026",
         "name": "Monitor Bracket",
         "description": "Monitor Bracket / Wall Mount for monitors 10 - 26 inches",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -7185,7 +7222,7 @@ const products = [
         "sku": "LTMB1737",
         "name": "Monitor Brackets, Screen Size 17-37 Inch",
         "description": "Screen size: 17--37 Max loading weight: 30kg Distance to wall: 35-380mm Vesa: 200*200",
-        "price": 28.35
+        "price": 35.21
       }
     ],
     "specs": {
@@ -7225,7 +7262,7 @@ const products = [
         "sku": "LTMB2655",
         "name": "Monitor Brackets, Screen Size 26-55 Inch",
         "description": "Screen size: 26-55 Max loading: weight 50 Distance to wall: 7mm Tilt: \u00b115\u00b0 Vesa: 400*600",
-        "price": 37.8
+        "price": 46.95
       }
     ],
     "specs": {
@@ -7269,7 +7306,7 @@ const products = [
         "sku": "LTA-NHS120-P",
         "name": "LTA-NHS120-P, 10 W IP Network Speaker",
         "description": "Adopt high-speed industrial grade dual-core chips, built-in NOR Flash+EMMC dual storage, support dual backup of the system to ensure stable and reliable system performance Support secure startup, user login locking mechanism, and password complexity ...",
-        "price": 538.65
+        "price": 669.0
       }
     ],
     "price": 399.0,
@@ -7315,7 +7352,7 @@ const products = [
         "sku": "LTA-T201WS",
         "name": "Coaxial Cable Stripper",
         "description": "Ergonomically designed from durable Delrin Comes with long life cutting blades to provide consistent performance Spring loaded cable holder lever Rotating ring",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "price": 7.0,
@@ -7361,7 +7398,7 @@ const products = [
         "sku": "LTA-T203MS",
         "name": "Wire Stripper",
         "description": "Strips wire (12- to 22-gauge) with one pull of the trigger Use the built-in ruler to measure the amount of insulation you want to strip Splice into a wire without cutting it Adjusts automatically to solid or stranded wire A second blade cuts your wir...",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "price": 11.0,
@@ -7407,7 +7444,7 @@ const products = [
         "sku": "LTA-AU25S",
         "name": "Multi-Function Network Cable Tester",
         "description": "Testing RJ45=USOC 4/6/8. 10Base-T, ELA/TIA 568 A/B, AT&amp;T258A, Token Ring, BNC, LEDs, USBli&gt; Testing, short, connection, non-parallel 25/50 Ohm, termination, screening each conductor, includes protective leather pouch, Auto shut off",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "price": 8.0,
@@ -7455,7 +7492,7 @@ const products = [
         "sku": "LTA-SLB30",
         "name": "30 Ah Chargeable Lithium Battery For Solar Panels",
         "description": "Lithium battery compatible with CMIP9C82W-28SD-4G",
-        "price": 891.0
+        "price": 1106.62
       }
     ],
     "price": 660.0,
@@ -7501,7 +7538,7 @@ const products = [
         "sku": "LTA-T205CM",
         "name": "Professional Crimping Tool",
         "description": "Simple, fast and reliable terminations Works with most any compression \"F\" type connectors Perfect solution for CATV, DSS, Security and Residential structured wiring installations",
-        "price": 29.7
+        "price": 36.89
       }
     ],
     "price": 22.0,
@@ -7549,7 +7586,7 @@ const products = [
         "sku": "LTCMIP3182W-28SDA",
         "name": "LTCMIP3182W-28SDA, 8 MP Fixed Mini Dome Network Camera",
         "description": "High-quality imaging with 8 MP resolution Clear imaging against strong backlight due to 120 dB WDR technology Efficient H.265+ compression technology AI-based Analytics for Person and Vehicle Classification Audio and alarm interface available Water a...",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "specs": {
@@ -7600,7 +7637,7 @@ const products = [
         "sku": "CM1924T",
         "name": "Platinum 2.1 MP Covert HD-TVI Camera",
         "description": "2.1 MP High Definition Full HD 1080p 1920 x 1080p @ 30 fps 3.7 mm Pinhole Lens 12 V DC",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "downloads": [
@@ -7652,19 +7689,19 @@ const products = [
         "sku": "LTCMIP7382W-MDA",
         "name": "Platinum 8 MP Smart Fixed Dome IP Camera",
         "description": "High quality imaging with 8 MP resolution Clear imaging against strong backlight due to 120 dB true WDR technology High efficiency H.265+ compression technology Focus on human and vehicle classification based on deep learning Built-in microphone for ...",
-        "price": 228.15
+        "price": 283.36
       },
       {
         "sku": "LTCMIP7382W-28MDA",
         "name": "Platinum 8 MP Smart Fixed Dome IP Camera",
         "description": "High quality imaging with 8 MP resolution Clear imaging against strong backlight due to 120 dB true WDR technology High efficiency H.265+ compression technology Focus on human and vehicle classification based on deep learning Built-in microphone for ...",
-        "price": 228.15
+        "price": 283.36
       },
       {
         "sku": "LTCMIP7382WB-28MDA",
         "name": "Platinum 8 MP Fixed Dome IP Camera - Black",
         "description": "High-quality imaging with 8 MP resolution Clear imaging against strong backlight due to 120 dB true WDR technology High efficiency H.265+ compression technology Built-in microphone for real-time audio security Water and dust resistant (IP67) and vand...",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "specs": {
@@ -7717,7 +7754,7 @@ const products = [
         "sku": "LTCMIP3283W-SDZ",
         "name": "Platinum 8 MP Smart Vari-Focal Turret IP Camera",
         "description": "Junction box included High quality imaging with 8 MP resolution Motorized varifocal lens for easy installation and monitoring High efficiency H.265+ compression technology Clear imaging against strong backlight due to 120 dB true WDR technology Focus...",
-        "price": 390.15
+        "price": 484.57
       }
     ],
     "specs": {
@@ -7769,7 +7806,7 @@ const products = [
         "sku": "LTCMIP3C82NW-28MDA",
         "name": "Platinum 8 MP Color 24/7 Turret IP Camera",
         "description": "High quality imaging with 8 MP resolution 24/7 color imaging Clear imaging against strong backlight with 130 dB WDR technology Efficient H.265+ compression technology Focus on human and vehicle target classification based on deep learning Built-in mi...",
-        "price": 295.65
+        "price": 367.2
       }
     ],
     "specs": {
@@ -7824,13 +7861,13 @@ const products = [
         "sku": "LTCMHT1722NW-CF",
         "name": "Platinum 2 MP Full Color Fixed Turret Camera",
         "description": "High quality imaging with 2 MP, 1920 \u00d7 1080 resolution 24/7 color imaging with f 1.0 aperture Clear imaging against strong back light due to 130 dB true WDR technology 3D DNR technology delivers clean and sharp images 3.6 mm fixed focal lens Up to 13...",
-        "price": 93.15
+        "price": 115.69
       },
       {
         "sku": "LTCMHT1722NW-28CF",
         "name": "Platinum 2 MP Fixed Turret HD-TVI Camera",
         "description": "High quality imaging with 2 MP, 1920 x 1080 resolution 24/7 color imaging with f1.0 aperture Clear imaging against strong back light with 130 dB true WDR technology 3D DNR technology delivers clean and sharp images 2.8 mm, 3.6 mm fixed focal lenses U...",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "specs": {
@@ -7884,7 +7921,7 @@ const products = [
         "sku": "LXIP7542W-28SD",
         "name": "Pro-X 4 MP Fixed Dome IP Camera",
         "description": "4 MP, Pro-X IP Camera 2688 x 1520 @ 30 fps Fixed 2.8 mm lens 0.005 Lux @ f 1.6 (Color, 30 IRE), 0 Lux with IR light on H.264 / H.265+ compression 1/3\" Progressive Scan CMOS Matrix IR LED up to 98 feet MD 2.0, true WDR 120 dB 1 channel in/out each for...",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "specs": {
@@ -7940,7 +7977,7 @@ const products = [
         "sku": "LXIP3783W-MDAZ",
         "name": "Pro-X 8 MP Vari-Focal Turret IP Camera",
         "description": "8 MP, Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps with MD 2.0 enabled) 2.7 - 13.5 mm varifocal lens 0.005 Lux @ f 1.5 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 131 fe...",
-        "price": 457.65
+        "price": 568.4
       }
     ],
     "specs": {
@@ -7997,7 +8034,7 @@ const products = [
         "sku": "LTPTZIP4C84W-X25IR",
         "name": "Platinum 8 + 4 MP Panoramic & PTZ IP Camera",
         "description": "1/2.5\" and a 1/2.8\" progressive scan CMOS chips 25x optical zoom and 16x digital zoom 300 ft IR &amp; 100 ft white supplemental light 12V DC &amp; PoE+ MD 2.0 human and vehicle targets classification IP66; 6,000 V Lightning Protection; Surge Protecti...",
-        "price": 984.15
+        "price": 1222.31
       }
     ],
     "specs": {
@@ -8049,7 +8086,7 @@ const products = [
         "sku": "LXWM05B",
         "name": "Pro-X Wall Mount Bracket - Black",
         "description": "Designed for Pro-X IP Camera models Aluminum wall mount bracket Sustains a maximum load capacity of 4.4 lbs. Easy installation Black",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -8099,7 +8136,7 @@ const products = [
         "sku": "LTCMIP9C8PW-SDL",
         "name": "Platinum 8 MP Panoramic Fixed Bullet IP Camera",
         "description": "High quality imaging with 8 MP resolution One image displays the entire area covered by the camera's two lenses / sensors 24/7 color imaging Efficient H.265+ compression technology Clear imaging against strong back light due to 130 dB WDR technology ...",
-        "price": 309.15
+        "price": 383.96
       }
     ],
     "specs": {
@@ -8155,13 +8192,13 @@ const products = [
         "sku": "LTCMIP3C82WIB-28MDA",
         "name": "Platinum 8 MP Turret IP Camera \u2013 Black",
         "description": "High quality imaging with 8 MP resolution Smart Hybrid Light: Advanced technology with long range Clear imaging against strong back light with 130 dB WDR technology Efficient H.265+ compression technology MD 2.0: Focus on human and vehicle classifica...",
-        "price": 309.15
+        "price": 383.96
       },
       {
         "sku": "LTCMIP3C82WI-28MDA",
         "name": "Platinum 8 MP Turret IP Camera",
         "description": "High quality imaging with 8 MP resolution Smart Hybrid Light: Advanced technology with long range Clear imaging against strong back light with 130 dB WDR technology Efficient H.265+ compression technology MD 2.0: Focus on human and vehicle classifica...",
-        "price": 206.55
+        "price": 256.54
       }
     ],
     "specs": {
@@ -8216,7 +8253,7 @@ const products = [
         "sku": "LXPTZIP4C84WI-X25IR",
         "name": "Pro-X 4 MP PTZ & 2 X 4 MP Panoramic IP Camera",
         "description": "Panoramic Sensor: 180-degree, wide-angle spliced images PTZ Sensor: 1/2.8\" 4-Megapixel STARVIS CMOS \tPowerful 25x optical zoom \tMin. Illumination: 0.005 Lux @ f 1.64; 0 Lux with IR LED on \tBuilt-in IR LED, Matrix IR LED up to 328 ft \tH.265 / H.264; f...",
-        "price": 984.15
+        "price": 1222.31
       }
     ],
     "specs": {
@@ -8263,13 +8300,13 @@ const products = [
         "sku": "LXK101-KD",
         "name": "LXK101-KD, Access Card Reader",
         "description": "PC material, tempered glass panel, and IP66, suitable for indoor and outdoor use Contactless reading of IC card (Mifare card) Support RS485 and Wiegand communication protocols Mullion mount design with buzzer and indicator prompt Supports the anti-ta...",
-        "price": 101.25
+        "price": 125.75
       },
       {
         "sku": "LXK101-BD",
         "name": "LXK101-BD, Access Card Reader",
         "description": "PC material, tempered glass panel, and IP66, suitable for indoor and outdoor use Contactless card reading for IC cards (Mifare cards) Unlock through card swiping and Bluetooth Communicates through the RS-485 port, Wiegand port, and Bluetooth Prompts ...",
-        "price": 101.25
+        "price": 125.75
       }
     ],
     "specs": {
@@ -8315,7 +8352,7 @@ const products = [
         "sku": "LXKW302-40",
         "name": "LXKW302-40, 2-Door Web Access Controller",
         "description": "Work in main controller mode or sub controller mode with easy escalation of 20 controllers in total, managing maximum 40 doors Main controller system capacity supports 1000 users, 5000 cards, 3000 fingerprints, and 300,000 records Multiple verificati...",
-        "price": 471.15
+        "price": 585.17
       }
     ],
     "specs": {
@@ -8356,7 +8393,7 @@ const products = [
         "sku": "LTWB-5AC-360",
         "name": "LTWB-5AC-360, 5Ghz 867Mbps 1 Mile 360\u00b0 Wireless AP Bridge",
         "description": "Up to 1 mile wireless transmission distance 867 Mbps 802.11ac wireless bridge Built-in 8dBi 2 x 2 MIMO antenna 802.3af PoE power supply Visualized topology management Real-Time alarm push technology",
-        "price": 349.65
+        "price": 434.27
       }
     ],
     "price": 259.0,
@@ -8395,7 +8432,7 @@ const products = [
         "sku": "LXKCI202-USB",
         "name": "LXKCI202-USB, IC Card Issuer",
         "description": "Supports Mifare card (IC Card) Built-in audible beeper Plug &amp; Play, connection with PC through USB port",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "specs": {
@@ -8440,7 +8477,7 @@ const products = [
         "sku": "LXK3411MF-WIFIP",
         "name": "LXK3411MF-WIFIP, Single Door IC Card & Face Recognition Access Controller",
         "description": "4.3\u201d LCD touch screen and dual-lens 2MP camera Multiple authentication methods, Card, Face, Password Large capacity, up to 6,000 users,6,000passwords,10,000 cards and 300,000 event records Face Recognition Distance is 0.3m to 1.5m, recognition speed ...",
-        "price": 376.65
+        "price": 467.8
       }
     ],
     "specs": {
@@ -8496,7 +8533,7 @@ const products = [
         "sku": "LTN8704K-HT",
         "name": "Platinum 4-Channel Advanced Level Hybrid NVR, 1U",
         "description": "4-Channel Hybrid Network Video Recorder Supports 5 MP HD-TVI 4.0 Cameras Supports 8 MP / 4K (3840 x 2160) IP Cameras HDMI Video Output H.265 / H.265+ / H.264 Supports 4 Ch. HD-TVI and 4 Ch. IP Cameras",
-        "price": 195.75
+        "price": 243.12
       }
     ],
     "downloads": [
@@ -8549,7 +8586,7 @@ const products = [
         "sku": "LTCMIP8382W-28MDA",
         "name": "Platinum 8 MP Fixed Bullet IP Camera",
         "description": "High-quality imaging with 8 MP resolution Efficient H.265+ compression technology Clear imaging against strong backlight due to 120 dB WDR Focusing on human and vehicle classification Built-in microphone for real-time audio security Water and dust re...",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "specs": {
@@ -8605,7 +8642,7 @@ const products = [
         "sku": "LXIP1182W-28MA",
         "name": "Pro-X 8 MP Fixed Turret IP Camera",
         "description": "8 MP Starlight IP Camera 3840 x 2160 @ 15 fps Fixed 2.8 mm lens 0.009 Lux @ f 2.0 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/2.7\" Progressive Scan CMOS Matrix IR LED up to 98 feet IVS, true WDR 120 dB Built-in mic Micro...",
-        "price": 187.65
+        "price": 233.06
       }
     ],
     "specs": {
@@ -8661,7 +8698,7 @@ const products = [
         "sku": "LXIP8182W-28M",
         "name": "Pro-X 8 MP Fixed Bullet IP Camera",
         "description": "8 MP, Starlight IP Camera, 3840 x 2160 @ 15 fps Fixed 2.8 mm lens 0.009 Lux @ f 2.0 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/2.7\" Progressive Scan CMOS Matrix IR LED up to 98 feet True WDR 120 dB MicroSD storage up to...",
-        "price": 187.65
+        "price": 233.06
       }
     ],
     "specs": {
@@ -8717,7 +8754,7 @@ const products = [
         "sku": "LXIP3C42NW-28MDA",
         "name": "Pro-X 4 MP Color 24/7 Fixed Turret IP Camera",
         "description": "4 MP Color 24/7 Camera 2688 x 1520 @ 30 fps Fixed 2.8 mm lens 0.0005 Lux @ f 1.0, 0 Lux with white light Smart H.264 / H.265 1/2.7\" Progressive Scan CMOS Matrix White LED up to 98 feet True WDR 120 dB Built-in mic MicroSD storage up to 256 GB IP67 12...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -8771,13 +8808,13 @@ const products = [
         "sku": "LTCMIP3C42WI-MDA",
         "name": "Platinum 4 MP Fixed Turret IP Camera",
         "description": "High-quality imaging with 4 MP resolution Smart Dual-Light: Advanced technology with extended range Clear imaging against strong backlight with 120 dB WDR technology Efficient H.265+ compression technology Built-in microphone for real-time audio secu...",
-        "price": 228.15
+        "price": 283.36
       },
       {
         "sku": "LTCMIP3C42WI-28MDA",
         "name": "Platinum 4 MP Fixed Turret IP Camera",
         "description": "High-quality imaging with 4 MP resolution Clear imaging against strong backlight with 120 dB WDR technology Efficient H.265+ compression technology Built-in microphone for real-time audio security Water and dust resistant (IP67) Color imaging 24/7 MD...",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "specs": {
@@ -8836,7 +8873,7 @@ const products = [
         "sku": "LXIP3C42WI-28SDL",
         "name": "Pro-X 4 MP Color 24/7 Fixed Turret IP Camera",
         "description": "4 MP Camera, 2688 x 1520 @ 30 fps 2.8 mm 0.001 lux @ f 1.0 (Color, 30 IRE), 0 lux with suppl. light on Smart H.264 / H.265 1/2.7\" Progressive Scan CMOS Suppl. light range up to 98 ft X-Deterrence - Siren and visual warning (red and blue flashing ligh...",
-        "price": 268.65
+        "price": 333.66
       }
     ],
     "specs": {
@@ -8893,25 +8930,25 @@ const products = [
         "sku": "LXIP3C82WI-28SDL",
         "name": "Pro-X 8 MP Color 24/7 Fixed Turret IP Camera",
         "description": "8 MP, 3840 x 2160 @ 30 fps Fixed 2.8 mm lens 0.0005 lux @ f 1.0 (Color, 30 IRE), 0 lux with illuminator on Smart H.264 / H.265 compression 1/2.8\" Progressive Scan CMOS Illuminators up to 98 feet X-Deterrence: Siren and visual alerts (red and blue fla...",
-        "price": 363.15
+        "price": 451.03
       },
       {
         "sku": "LXIP3C82WI-28MDA",
         "name": "LXIP3C82WI-28MDA, 8MP Smart Dual Light Turret Network Camera",
         "description": "Outputs max. 8MP (3840 \u00d7 2160) @30fps 1/1.8\" CMOS image sensor Min. Illumination 0.001 Lux @ F1.0 (Color, 30 IRE), 0 Lux with illuminator on Smart Dual Light configuration with built-in IR LED &amp; warm light LED, Matrix illuminator distance up to 9...",
-        "price": 222.75
+        "price": 276.66
       },
       {
         "sku": "LXIP3C82WIB-28MDA",
         "name": "LXIP3C82WIB-28MDA, 8MP Smart Dual Light Turret Network Camera",
         "description": "Outputs max. 8MP (3840 \u00d7 2160) @30fps 1/1.8\" CMOS image sensor Min. Illumination 0.001 Lux @ F1.0 (Color, 30 IRE), 0 Lux with illuminator on Smart Dual Light configuration with built-in IR LED &amp; warm light LED, Matrix illuminator distance up to 9...",
-        "price": 336.15
+        "price": 417.5
       },
       {
         "sku": "LXIP3C82WIB-28SDL",
         "name": "Pro-X 8 MP Color 24/7 Fixed Turret IP Camera - Black",
         "description": "Black housing 8 MP, 3840 x 2160 @ 30 fps Fixed 2.8 mm lens 0.0005 lux @ f 1.0 (Color, 30 IRE), 0 lux with illuminator on Smart H.264 / H.265 compression 1/2.8\" Progressive Scan CMOS Illuminators up to 98 feet X-Deterrence: Siren and visual alerts (re...",
-        "price": 363.15
+        "price": 451.03
       }
     ],
     "specs": {
@@ -8968,19 +9005,19 @@ const products = [
         "sku": "LXIP3582W-28MDA",
         "name": "Pro-X 8 MP Fixed Turret IP Camera",
         "description": "8 MP Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps with MD 2.0 enabled) Fixed 2.8 mm lens 0.005 Lux @ f 1.4 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 98 feet True WDR 120 dB Built-...",
-        "price": 160.65
+        "price": 199.53
       },
       {
         "sku": "LXIP3582W-MDA",
         "name": "LXIP3582W-MDA, 8 MP Pro-X Intelligent Fixed Lens Series",
         "description": "Resolutions up to 8 MP (3840 \u00d7 2160) @ 30 fps, 8 MP (3840 \u00d7 2160) @ 20 fps with AI enabled 1/2.8\u201d Starlight CMOS image sensor Min. illumination 0.005 Lux @ f1.4 (Color, 30 IRE), 0 Lux with IR light on Built-in IR LED, Matrix IR LED up to 98 feet Smar...",
-        "price": 241.65
+        "price": 300.13
       },
       {
         "sku": "LXIP3582WB-28MDA",
         "name": "Pro-X 8 MP Fixed Turret IP Camera - Black",
         "description": "8 MP Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps with MD 2.0 enabled) Fixed 2.8 mm lens 0.005 Lux @ f 1.4 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 98 feet True WDR 120 dB Built-...",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "specs": {
@@ -9036,7 +9073,7 @@ const products = [
         "sku": "LXIP3542W-28MDA",
         "name": "Pro-X 4 MP Fixed Turret IP Camera",
         "description": "4 MP Starlight IP Camera 2688 x 1520 @ 30 fps Fixed 2.8 mm lens 0.005 Lux @ f 1.6 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/3\" Progressive Scan CMOS Matrix IR LED up to 98 feet True WDR 120 dB Built-in mic MicroSD stor...",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "specs": {
@@ -9094,13 +9131,13 @@ const products = [
         "sku": "LXIP3C82W-28MDA",
         "name": "Pro-X 8 MP Color 24/7 Fixed Turret IP Camera",
         "description": "8 MP Color 24/7 Camera 3840 x 2160 @ 30 fps Fixed 2.8 mm lens 0.0005 Lux @ f 1.0, 0 Lux with white supplemental light Smart H.264 / H.265 compression 1/1.8\" Progressive Scan CMOS Matrix white LED up to 98 feet FD, true WDR 130 dB, X-Search (Requires ...",
-        "price": 336.15
+        "price": 417.5
       },
       {
         "sku": "LXIP3C82WB-28MDA",
         "name": "Pro-X 8 MP Color 24/7 Fixed Turret IP Camera - Black",
         "description": "8 MP Color 24/7 Camera \u2013 Black housing 3840 x 2160 @ 30 fps Fixed 2.8 mm lens 0.0005 Lux @ f 1.0, 0 Lux with white supplemental light Smart H.264 / H.265 compression 1/1.8\" Progressive Scan CMOS Matrix white LED up to 98 feet FD, true WDR 130 dB, X-S...",
-        "price": 336.15
+        "price": 417.5
       }
     ],
     "specs": {
@@ -9154,7 +9191,7 @@ const products = [
         "sku": "LXIP7553W4-SZ12",
         "name": "Pro-X 4 Lens Panoramic Dome IP Camera",
         "description": "4 x 5 MP, 4-Directional Panoramic Dome Pro AI Camera 2.8 - 12 mm focal lengths 0.005 lux @ f 1.7 (Color, 30 IRE)\uff0c0 lux with supplemental light on Smart H.264 / H.265 1/2.7\" Progressive Scan CMOS Supplemental light range up to 98 ft People counting Di...",
-        "price": 1578.15
+        "price": 1960.06
       }
     ],
     "specs": {
@@ -9204,7 +9241,7 @@ const products = [
         "sku": "LTK3411MF",
         "name": "Face Recognition Terminal",
         "description": "4.3-inch touchscreen, 2 MP wide-angle dual-lens Face anti-spoofing Face recognition distance: 1 ft (0.3 m) to 5 ft (1.5 m) Deep learning algorithm 3,000 face capacity, 3,000 card capacity, capacity (should be supported by device model) and 150,000 ev...",
-        "price": 417.15
+        "price": 518.1
       }
     ],
     "specs": {
@@ -9258,7 +9295,7 @@ const products = [
         "sku": "LXIP3C122WI-28MDA",
         "name": "Pro-X 12 MP Smart Dual Light Turret IP Camera",
         "description": "Outputs max. 12 MP (4512 \u00d7 2512) @ 15 fps 1/2.5\u201d CMOS image sensor Min. Illumination: 0.0005 Lux @ f 1.6 Built-in IR and warm supplemental LED Matrix, ranging up to 98.43 ft Smart encoding H.265 / H.264 HDR, 3D DNR, HLC, BLC MD 2.0 focuses on human &...",
-        "price": 249.75
+        "price": 310.19
       }
     ],
     "specs": {
@@ -9316,7 +9353,7 @@ const products = [
         "sku": "LTN8704T-HT",
         "name": "Platinum 4 + 4-Channel Hybrid NVR",
         "description": "4 + 4 Channel Hybrid Network Video Recorder Supports Live View, Storage, Playback up to 5 MP IP Camera Supports 4 Channel HD-TVI 3.0 / AHD / Analog Supports 4 Channel IP Camera @ 40 MB Bandwidth 1080p HDMI / VGA Video Output, CVBS Spot Out 1 x SATA H...",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "downloads": [
@@ -9373,7 +9410,7 @@ const products = [
         "sku": "LXIP8582W-28MDA",
         "name": "Pro-X 8 MP Fixed Bullet IP Camera",
         "description": "8 MP, Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps when MD 2.0 enabled) Fixed 2.8 mm lens 0.005 Lux @ f 1.4 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 164 feet MD 2.0, true WDR 120...",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "specs": {
@@ -9431,7 +9468,7 @@ const products = [
         "sku": "LXIP9C82W-28MDA",
         "name": "Pro-X 8 MP Color 24/7 Fixed Bullet IP Camera",
         "description": "8 MP, Night Vision Camera 3840 x 2160 @ 30 fps Fixed 2.8 mm lens 0.0005 Lux @ f 1.0, 0 Lux with white supplemental light Smart H.264 / H.265 compression 1/1.8\" Progressive Scan CMOS Matrix White LED up to 197 feet FD, True WDR 130 dB, X-Search (requi...",
-        "price": 336.15
+        "price": 417.5
       }
     ],
     "specs": {
@@ -9488,7 +9525,7 @@ const products = [
         "sku": "LXIP75122F-SE",
         "name": "Pro-X 12 MP Fisheye IP Camera",
         "description": "12 MP Fisheye IP Camera Up to 4000 x 3000 @ 25 fps Supports 8 MP (3280 x 2480) @ 30 fps 1.85 mm lens 0.01 Lux @ f 2.0 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/1.7\" Progressive Scan CMOS Matrix IR LED up to 33 feet Hea...",
-        "price": 1024.65
+        "price": 1272.62
       }
     ],
     "specs": {
@@ -9542,7 +9579,7 @@ const products = [
         "sku": "LTCMIP7C82WI-28MDA",
         "name": "Platinum 8 MP Dome IP Camera",
         "description": "High quality imaging with 8 MP resolution Minimum illumination: 0.0008 Lux @ f 1.0 Hybrid Illumination: Advanced technology with extended range Clear imaging against strong back light with 130 dB WDR High efficiency H.265+ compression technology Huma...",
-        "price": 206.55
+        "price": 256.54
       }
     ],
     "specs": {
@@ -9595,7 +9632,7 @@ const products = [
         "sku": "LXWM01B",
         "name": "Pro-X Wall Mount Bracket - Black",
         "description": "Designed for Pro-X IP Camera models Aluminum &amp; SECC wall mount bracket Sustains a maximum load capacity of 2.2 lbs. Easy installation Black",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -9645,7 +9682,7 @@ const products = [
         "sku": "LXJB02B",
         "name": "Pro-X Junction Box - Black",
         "description": "Designed for Pro-X IP camera models Aluminum junction box Sustains a maximum load capacity of 2.2 lbs. Easy installation Black",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -9699,7 +9736,7 @@ const products = [
         "sku": "LTCMIP7112F-SE",
         "name": "Platinum 12 MP Fisheye IP Camera",
         "description": "Heat mapping: Based on deep learning algorithms, the camera counts people and presents an intuitive map Multi de-warping modes: The image can be de-warped for normal viewing Built-in mic and speaker: The camera supports two-way audio for real-time au...",
-        "price": 957.15
+        "price": 1188.78
       }
     ],
     "specs": {
@@ -9744,7 +9781,7 @@ const products = [
         "sku": "LXK102-K",
         "name": "LXK102-K, Access Card Reader",
         "description": "Metal keypad with a backlight and beeping sound High-performance 8-bit processor 3 identity verification modes: Card, password, and a combination of card and password Contactless card reading of Mifare cards (IC card) Works at a frequency of 13.56 MH...",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "specs": {
@@ -9792,7 +9829,7 @@ const products = [
         "sku": "LXPTZ518W-25XR",
         "name": "LXPTZ518W-25XR, 8MP 25X AI PTZ",
         "description": "Outputs max. 8MP (3840\u00d7 2160) @30fps 1/1.8\u201d STARVIS\u2122 CMOS image sensor Powerful 25x optical zoom Min. Illumination 0.005 Lux@F1.6, 0 Lux with IR LED on Built-in IR LED, Matrix IR LED up to 492ft H.265/H.264, flexible coding, smart codec Auto Tracking...",
-        "price": 1348.65
+        "price": 1675.02
       }
     ],
     "specs": {
@@ -9842,7 +9879,7 @@ const products = [
         "sku": "LTB345",
         "name": "Bracket-P Junction Box",
         "description": "Small turret and bullet camera compatibility list: CMHT14XX series: CMHT1422, CMHT1432-28, CMHT1422W-28 CMHT15XX series: CMHT1532, CMHT1532-28 CMHT21XX series: CMHT2122-28, CMHT2132-28B, CMHT2122B, CMHT2122, CMHT2132-28, CMHT2132B, CMHT2132 *CMHR62XX...",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "downloads": [
@@ -9892,13 +9929,13 @@ const products = [
         "sku": "LTCMIP9382W-28MD",
         "name": "Platinum 8 MP Smart Fixed Bullet IP Camera",
         "description": "Junction box included High quality imaging with 8 MP resolution High efficiency H.265+ compression technology Clear imaging against strong backlight due to 120 dB WDR technology Focusing on human and vehicle classification based on deep learning Wate...",
-        "price": 255.15
+        "price": 316.9
       },
       {
         "sku": "LTCMIP9382W-MD",
         "name": "Platinum 8 MP Smart Fixed Bullet IP Camera",
         "description": "Junction box included. High quality imaging with 8 MP resolution High efficiency H.265+ compression technology Clear imaging against strong backlight due to 120 dB WDR technology Focus on human and vehicle classification based on deep learning Water ...",
-        "price": 255.15
+        "price": 316.9
       }
     ],
     "specs": {
@@ -9951,7 +9988,7 @@ const products = [
         "sku": "LTCMIP7283W-SDZ",
         "name": "Platinum 8 MP Smart Vari-Focal Dome IP Camera",
         "description": "Junction box included High quality imaging with 8 MP resolution Motorized varifocal lens for easy installation and monitoring High efficiency H.265+ compression technology Clear imaging against strong backlight due to 120 dB true WDR technology Focus...",
-        "price": 390.15
+        "price": 484.57
       }
     ],
     "specs": {
@@ -10004,7 +10041,7 @@ const products = [
         "sku": "LTCMIP9783W-SDZ",
         "name": "Platinum 8 MP Smart Vari-Focal Bullet IP Camera",
         "description": "Junction box included High quality imaging with 8 MP resolution Motorized varifocal lens for easy installation and monitoring High efficiency H.265+ compression technology Clear imaging against strong backlight due to 120 dB true WDR technology Focus...",
-        "price": 403.65
+        "price": 501.33
       }
     ],
     "specs": {
@@ -10061,7 +10098,7 @@ const products = [
         "sku": "LTPTZIP778NW-X25IR",
         "name": "Platinum 8 MP Speed Dome IP Camera",
         "description": "&nbsp; 1/1.8\" progressive scan CMOS High-quality imaging with 8 MP resolution Excellent low-light performance 25x optical zoom and 16x digital zoom Expansive night view with up to 650-foot (200 m) IR range Face Capture: Up to 5 captured at the same t...",
-        "price": 1564.65
+        "price": 1943.3
       }
     ],
     "specs": {
@@ -10113,7 +10150,7 @@ const products = [
         "sku": "LTCMIP3D82W-28SDA-SL",
         "name": "Platinum 8 MP Fixed Turret IP Camera",
         "description": "High-quality imaging with 8 MP resolution Excellent low-light performance Clear image against strong backlight with 120 dB true WDR Efficient H.265+ compression technology Provides real-time security via built-in two-way audio Water and dust resistan...",
-        "price": 255.15
+        "price": 316.9
       }
     ],
     "specs": {
@@ -10167,7 +10204,7 @@ const products = [
         "sku": "LTCMIP7C42WI-28MDA",
         "name": "Platinum 4 MP Color 24/7 Fixed Dome IP Camera",
         "description": "High-quality imaging with 4 MP resolution Clear imaging against strong backlight due to 120 dB WDR technology Efficient H.265+ compression technology Built-in microphone for real-time audio security Water and dust resistant (IP67) and vandal resistan...",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "specs": {
@@ -10222,7 +10259,7 @@ const products = [
         "sku": "LTCMIP8C42WI-28MDA",
         "name": "Platinum 4 MP Color 24/7 Fixed Bullet IP Camera",
         "description": "High-quality imaging with 4 MP resolution Clear imaging against strong backlight with 120 dB WDR technology Efficient H.265+ compression technology Built-in microphone for real-time audio security Water and dust resistant (IP67) Color imaging 24/7 MD...",
-        "price": 228.15
+        "price": 283.36
       }
     ],
     "specs": {
@@ -10277,7 +10314,7 @@ const products = [
         "sku": "LTCMIP9C42WI-28MD",
         "name": "Platinum 4 MP Color 24/7 Fixed Bullet IP Camera",
         "description": "High-quality imaging with 4 MP resolution Clear imaging against strong backlight with 120 dB WDR technology Efficient H.265+ compression technology Water and dust resistant (IP67) Color imaging 24/7 MD 2.0 - Human and vehicle detection Hybrid illumin...",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "specs": {
@@ -10333,7 +10370,7 @@ const products = [
         "sku": "VSIP75122F-SE",
         "name": "Pro-VS 12 MP Ultra-HD Infrared Fisheye IP Camera",
         "description": "High-quality imaging with 12 MP, 1/1.7\" CMOS sensor Resolutions up to 4000 x 3000 Ultra 265, H.265, H.264, MJPEG codecs Ultra wide angle lens, 360\u00b0 panoramic imaging Embedded infrared light, 360\u00b0 supplemental lighting, up to 49 ft (15 m) IR range Mul...",
-        "price": 990.9
+        "price": 1230.7
       }
     ],
     "specs": {
@@ -10389,7 +10426,7 @@ const products = [
         "sku": "LXIP8542W-28MDA",
         "name": "Pro-X 4 MP Fixed Bullet IP Camera",
         "description": "4 MP, Starlight IP Camera 2688 x 1520 @ 30 fps Fixed 2.8 mm lens 0.005 Lux @ f 1.6 (Color, 30 IRE), 0 Lux with IR light on H.264 / H.265+ 1/3\" Progressive Scan CMOS Matrix IR LED up to 164 feet True WDR 120 dB Built-in mic MicroSD storage up to 256 G...",
-        "price": 187.65
+        "price": 233.06
       }
     ],
     "specs": {
@@ -10445,7 +10482,7 @@ const products = [
         "sku": "LXIP7582W-28SD",
         "name": "Pro-X 8 MP Fixed Dome IP Camera",
         "description": "8 MP, Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps with MD 2.0 enabled) Fixed 2.8 mm lens 0.005 Lux @ f 1.4 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 98 feet True WDR ...",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "specs": {
@@ -10501,7 +10538,7 @@ const products = [
         "sku": "LXIP8783W-SDZ",
         "name": "Pro-X 8 MP Vari-Focal Bullet IP Camera",
         "description": "8 MP, Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps when MD 2.0 enabled) 2.7 - 13.5 mm varifocal lens 0.005 Lux @ f 1.5 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 197 fe...",
-        "price": 457.65
+        "price": 568.4
       }
     ],
     "specs": {
@@ -10555,7 +10592,7 @@ const products = [
         "sku": "LTCMIP1342WE-28MDA",
         "name": "Platinum 4 MP Dual-Light Turret IP Camera",
         "description": "High quality imaging with 4 MP resolution 2.8 mm Fixed lens True WDR MD 2.0 - Human and vehicle detection Smart Hybrid Light: Advanced technology with extended range Built-in microphone for real-time audio security On-board MicroSD storage for cards ...",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -10612,7 +10649,7 @@ const products = [
         "sku": "LTCMIP1382WE-28MDA",
         "name": "Platinum 8 MP Dual-Light Turret IP Camera",
         "description": "High quality imaging with 8 MP resolution Support for Human and Vehicle Detection Smart Hybrid Lighting: Advanced technology with automatic switching between IR &amp; visible supplemental lights High efficiency H.265+ compression technology Support f...",
-        "price": 214.65
+        "price": 266.6
       }
     ],
     "specs": {
@@ -10666,7 +10703,7 @@ const products = [
         "sku": "LXPD03",
         "name": "Pendant Mount",
         "description": "This mount fits the Pro-X LXIP7553W4-SZ12 4 x 5 MP 4-Directional Panoramic Dome IP Camera",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "specs": {
@@ -10713,7 +10750,7 @@ const products = [
         "sku": "Platinum RS485 Secure Module",
         "name": "LTH-SM1",
         "description": "Compatible with LTH-401M-WIFI and LTK3410MF/3411MF",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -10767,7 +10804,7 @@ const products = [
         "sku": "LXN9216D-P16",
         "name": "Pro-X 16-Channel Ultra Intelligent Series NVR",
         "description": "Video Input: 16 IP Channels @ 384 Mbps; 32 MP IPC Access (200 Mbps with backend AI enabled) Video Output: HDMI1 up to 4K / VGA1 up to 1080p, HDMI2 up to 4K / VGA2 up to 1080p Recording Resolutions: Up to 8K, 32 MP Decoding Formats: H.265+ / H.265 / H...",
-        "price": 808.65
+        "price": 1004.34
       }
     ],
     "specs": {
@@ -10824,7 +10861,7 @@ const products = [
         "sku": "LTCMIP3382WI-28SDL",
         "name": "8MP Active Deterrence Turret Network Camera",
         "description": "High quality imaging with 8 MP resolution Focuses on human and vehicle classification using deep learning. Smart Hybrid Light: Integrates IR and White lights, 3 supplemental lighting modes Built-in dual-array microphone for real-time, high-quality au...",
-        "price": 182.25
+        "price": 226.35
       }
     ],
     "specs": {
@@ -10877,7 +10914,7 @@ const products = [
         "sku": "LXIP9C82WI-28MDA",
         "name": "LXIP9C82WI-28MDA, 8MP Smart Dual Light Bullet Network Camera",
         "description": "Outputs max. 8MP (3840 \u00d7 2160) @30fps 1/1.8\" CMOS image sensor Min. Illumination 0.001 Lux @ F1.0 (Color, 30 IRE), 0 Lux with illuminator on Smart Dual Light configuration with built-in IR LED &amp; warm light LED, Matrix illuminator distance up to 9...",
-        "price": 336.15
+        "price": 417.5
       }
     ],
     "specs": {
@@ -10924,7 +10961,7 @@ const products = [
         "sku": "OutdoorBox-03",
         "name": "OutdoorBox-03, LTS Outdoor Surveillance Box",
         "description": "High strength Polymer Material(Flame Proof UL94-V0) IP66 &amp; IK10 Protection Fast Deployment &amp; Easy Installation to be mounted in a pole or a wall Highly adaptable with LTS IPC, PTZ and IP Horn Speakers",
-        "price": 336.15
+        "price": 417.5
       }
     ],
     "specs": {
@@ -10977,7 +11014,7 @@ const products = [
         "sku": "LXIP3142WE-28MDA",
         "name": "LXIP3142WE-28MDA, 4MP, Lite AI, Dual Light, Fixed Mini Dome Network Camera",
         "description": "Max.4MP Resolution Maximum 20fps @ 4MP (2688 \u00d7 1520) 1/2.9\" CMOS large image sensor Min. Illumination 0.007 Lux @ F1.6 (Color), 0.0007 Lux @ F1.6(B/W) Built-in warm white lights and IR lights, and the max. illumination distance is 100 ft Line Crossin...",
-        "price": 201.15
+        "price": 249.83
       }
     ],
     "specs": {
@@ -11025,7 +11062,7 @@ const products = [
         "sku": "LTB301",
         "name": "Wall Mount / Bracket",
         "description": "Compatible with IP Camera models: CMIP3012xx CMIP3022xx CMIP3032xx CMIP3042xx CMIP1112xx CMIP1122xx CMIP1132xx CMIP1142xx Compatible with HD-TVI Camera models: CMHT2722 CMHT2722-28 CMHT2722W CMHT2732 CMHT2732-28 CMHT1623W CMHT1823xx CMHT17xx",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "downloads": [
@@ -11065,7 +11102,7 @@ const products = [
         "sku": "LTSTICKER",
         "name": "Warning Sign - Sticker Decal",
         "description": "Warning Sticker Decal, Weather-Resistant",
-        "price": 1.49
+        "price": 1.85
       }
     ],
     "specs": {
@@ -11104,7 +11141,7 @@ const products = [
         "sku": "PS240V1000",
         "name": "Power Adapter - 1,000 MA",
         "description": "24V AC Power Adaptor, 1 Amp",
-        "price": 13.37
+        "price": 16.61
       }
     ],
     "specs": {
@@ -11144,7 +11181,7 @@ const products = [
         "sku": "LTA1003",
         "name": "Connector - BNC Female To RCA Male",
         "description": "BNC Female to RCA Male Connector (20pcs/pack)",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -11184,7 +11221,7 @@ const products = [
         "sku": "LTA1007",
         "name": "Connector - BNC Male Crimp-On",
         "description": "Comes in 20pcs per pack BNC CRIMP RG59 Connector&nbsp;",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -11224,7 +11261,7 @@ const products = [
         "sku": "LTA1014",
         "name": "Connector - RJ45 8P8C Cat5e Crimp",
         "description": "RJ45 8P8C CAT5e crimp connector",
-        "price": 0.44
+        "price": 0.55
       }
     ],
     "specs": {
@@ -11264,7 +11301,7 @@ const products = [
         "sku": "LTAC2041",
         "name": "Cat5e Cable RJ45 - 100 Ft",
         "description": "Variable lengths available: 1, 2, 3, 5, 7, 10, 14, 20, 25, 50, 100 feet Variable colors &amp; configurations available",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -11304,7 +11341,7 @@ const products = [
         "sku": "LTA2005",
         "name": "DC Power Splitter - 1 Female To 2 Male",
         "description": "DC power 1 female to 2 male Connector / splitter",
-        "price": 1.49
+        "price": 1.85
       }
     ],
     "specs": {
@@ -11344,7 +11381,7 @@ const products = [
         "sku": "LTAC2030W",
         "name": "Siamese Coaxial Cable (No Connectors) - 500 Ft",
         "description": "*Please call for price and availability RG59 Coaxial 95% Braided, Shield-Foil + 18/2 18 AWG Copper Shield (3/7) CM/CL2 Rated PVC Jacket Sequential Foot/ Zone Marking FT-4",
-        "price": 114.75
+        "price": 142.52
       }
     ],
     "downloads": [
@@ -11386,7 +11423,7 @@ const products = [
         "sku": "LTAC2033B",
         "name": "Siamese Coaxial Cable (No Connectors) - 1,000 Ft, Black",
         "description": "*Please call for price and availability RG59 Coaxial 95% Braided, Shield-Foil + 18/2 18 AWG Copper Shield (3/7) CM / CL2 Rated PVC Jacket Sequential Foot / Zone Marking FT-4 Black",
-        "price": 176.85
+        "price": 219.65
       }
     ],
     "downloads": [
@@ -11426,7 +11463,7 @@ const products = [
         "sku": "LTAC2033W",
         "name": "Coaxial Siamese Cable (No Connectors) - 1,000 Ft",
         "description": "RG59 coaxial 95% braided, shield-foil + 18/2 18 AWG copper shield (3/7) CM / CL2-Rated PVC jacket Sequential foot/ zone marking FT-4",
-        "price": 176.85
+        "price": 219.65
       }
     ],
     "downloads": [
@@ -11472,7 +11509,7 @@ const products = [
         "sku": "LTB307",
         "name": "Wire Intake With Junction Box",
         "description": "Wire Intake with Junction Box Aluminum Alloy Compatible with CMIP30xx/11xx/33xx/10xx/32xx and CMHT17xx/18xx/19xx/27xx",
-        "price": 29.7
+        "price": 36.89
       }
     ],
     "downloads": [
@@ -11520,13 +11557,13 @@ const products = [
         "sku": "LTB751-20",
         "name": "Aluminum Pendant Mount / Bracket",
         "description": "Designed for Platinum PTZ / speed dome cameras - 20 cm",
-        "price": 47.25
+        "price": 58.68
       },
       {
         "sku": "LTB751",
         "name": "Aluminum Pendant Mount Bracket For Platinum PTZ - 50cm",
         "description": "Aluminum Pendant Mount Bracket for Platinum PTZ - 50cm",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "downloads": [
@@ -11572,7 +11609,7 @@ const products = [
         "sku": "LTB100",
         "name": "Indoor / Outdoor Camera Wall Mount Bracket",
         "description": "Aluminum alloy Indoor / outdoor Compatible with HD-TVI camera model # LPR100",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "downloads": [
@@ -11616,7 +11653,7 @@ const products = [
         "sku": "LTB342-110",
         "name": "Wall Mount Bracket",
         "description": "Wall Mount Bracket Compatible for CMIP74XX, CMHD74XX series",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "specs": {
@@ -11660,7 +11697,7 @@ const products = [
         "sku": "LTB342-110T",
         "name": "Wall Mount / Bracket",
         "description": "Designed for models: CMHT14XX CMHT15XX CMHT21XX series",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "downloads": [
@@ -11704,7 +11741,7 @@ const products = [
         "sku": "LTB342-135B",
         "name": "Wall Mount Bracket With Junction Box",
         "description": "Aluminum Alloy with junction box Compatible for CMIP7223XX, CMIP7233XX, CMIP7243XX",
-        "price": 56.7
+        "price": 70.42
       }
     ],
     "downloads": [
@@ -11748,7 +11785,7 @@ const products = [
         "sku": "LTB342-135",
         "name": "Wall Mount Bracket",
         "description": "Aluminum Alloy Compatible for CMIP7223XX, CMIP7233XX, CMIP7243XX",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "downloads": [
@@ -11792,7 +11829,7 @@ const products = [
         "sku": "LTB342-JBOX",
         "name": "Wall-Mount Junction Box",
         "description": "Wall mount only",
-        "price": 29.7
+        "price": 36.89
       }
     ],
     "specs": {
@@ -11836,7 +11873,7 @@ const products = [
         "sku": "LTB342-140",
         "name": "Wall Mount / Bracket",
         "description": "This mount is compatible with HD-TVI Camera models: CMHD3423D CMHD3423DW",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "downloads": [
@@ -11880,7 +11917,7 @@ const products = [
         "sku": "LTB342-155",
         "name": "Wall Mount Bracket",
         "description": "Aluminum Alloy Dimensions - \u03a6 6.1 x 7.22 x 9.45\" (\u03a6 155 x 183.5 x 240 mm) Weight - 1.4 lb 9650 g)",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "specs": {
@@ -11921,7 +11958,7 @@ const products = [
         "sku": "LTEL002G",
         "name": "Green LED Exit Sign With Battery Backup",
         "description": "State building and fire code-compliant emergency sign Thermal plastic, compact, lightweight design Double snap-in canopy for easy, durable mounting options UL listed 2-Year warranty Includes double face plate and rechargeable NiCad batteries (up to 8...",
-        "price": 18.9
+        "price": 23.47
       }
     ],
     "specs": {
@@ -11966,13 +12003,13 @@ const products = [
         "sku": "LTB347B",
         "name": "Junction Box",
         "description": "Designed for Dome Camera models: CMIP74xx CMHD74xx CMHD73xx",
-        "price": 20.25
+        "price": 25.15
       },
       {
         "sku": "LTB347",
         "name": "Wire Intake Box",
         "description": "Wire Intake Box Aluminum Alloy Compatible with&nbsp;CMHD7422, CMIP3412xx, CMIP3422xx, CMIP3432xx, CMIP7412xx, CMIP7422xx, CMIP7432xx, CMIP7442xx",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "downloads": [
@@ -12015,7 +12052,7 @@ const products = [
         "sku": "LTK2802",
         "name": "Access Control - 2-Door Controller",
         "description": "Secure metal enclosure with lock Supports 4 Wiegand 26-bit readers Stores up to 10,000 cards and 50,000 events Built-in 12 V DC / 8.5 A power supply Add X-VMS server for app access UL listed",
-        "price": 336.15
+        "price": 417.5
       }
     ],
     "downloads": [
@@ -12055,7 +12092,7 @@ const products = [
         "sku": "LTKE100ME",
         "name": "USB Card Issuer",
         "description": "&nbsp; LTKE100ME LTS USB Card/Fob Issuer Supports NVMS Software Supports X-VMS Web Client UL Listed",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "specs": {
@@ -12095,7 +12132,7 @@ const products = [
         "sku": "LTAC1806G-CMR",
         "name": "99.99% Oxygen-Free Copper 6 Conductor Stranded Shielded Cable - 500 Feet",
         "description": "18 AWG, 6 Wire Shielded, Stranded ETL and CMR Rated",
-        "price": 234.9
+        "price": 291.75
       }
     ],
     "specs": {
@@ -12137,19 +12174,19 @@ const products = [
         "sku": "LTPS0806-A",
         "name": "Power Strip - 6:8 Aluminum Housing",
         "description": "6-foot 14-gauge cord ETL listed 15 A, 1,875 W",
-        "price": 33.75
+        "price": 41.92
       },
       {
         "sku": "LTPS0806-M",
         "name": "Power Strip - 6:8 Metal Housing",
         "description": "Yellow, 8 x outlet, metal housing outlet strip 6ft. cord ETL listed Metal housing 15A, 1875W",
-        "price": 28.35
+        "price": 35.21
       },
       {
         "sku": "LTPS0806",
         "name": "Power Strip - 6:8",
         "description": "8 outlet power strip 6ft. cord White Durable plastic casting 15A, 1875W",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -12190,7 +12227,7 @@ const products = [
         "sku": "LTPE1250-L3",
         "name": "Power Extension Cord - 50ft",
         "description": "50ft.&nbsp; 12/3C SJTW extension cord Yellow cord Triple outlet Illuminates when power is on UL listed",
-        "price": 44.55
+        "price": 55.33
       }
     ],
     "specs": {
@@ -12231,7 +12268,7 @@ const products = [
         "sku": "UBNT-POE-48-24W-G",
         "name": "PoE Adapter",
         "description": "48V DC @ 0.5 A Gigabit LAN port",
-        "price": 21.6
+        "price": 26.83
       }
     ],
     "price": 16.0,
@@ -12272,7 +12309,7 @@ const products = [
         "sku": "UBNT-NBE-5AC-GEN2",
         "name": "NanoBeam AC, Gen2",
         "description": "19 dBi 450+ Mbps 15+ km",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -12313,7 +12350,7 @@ const products = [
         "sku": "UBNT-UCK-G2",
         "name": "UniFi Cloud Key Gen2",
         "description": "(1) 10/100/1000 Mbps Ethernet Port 802.3 af PoE or Micro-USB 5V DC, minimum 1 A Connect up to 1 USG Connect up to 10 USW (UniFi switch) 2,000 connected clients PoE switch not included 1 x 1.8 x 4.7 in. (27.10 x 46.80 x 119.75 mm)",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "price": 179.0,
@@ -12354,7 +12391,7 @@ const products = [
         "sku": "UBNT-ES-24-250W",
         "name": "EdgeSwitch 16-Port Managed PoE Switch",
         "description": "(24) Gigabit RJ45 Ports (2) SFP Ports (1) Serial Console Port Supports POE+ IEEE 802.3 at/af and 24V Passive PoE 250 W",
-        "price": 538.65
+        "price": 669.0
       }
     ],
     "price": 399.0,
@@ -12395,7 +12432,7 @@ const products = [
         "sku": "UBNT-ERLITE-3",
         "name": "Enterprise Gigabit Router",
         "description": "Enterprise Gigabit Router (3) Gigabit routing ports (1) RJ45 Serial Port 7 W 512 MB RAM 2 GB Storage",
-        "price": 174.15
+        "price": 216.29
       }
     ],
     "price": 129.0,
@@ -12436,7 +12473,7 @@ const products = [
         "sku": "UBNT-UB-AM",
         "name": "Universal Antenna Mount",
         "description": "Universal Antenna Mount",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "price": 9.0,
@@ -12477,7 +12514,7 @@ const products = [
         "sku": "UBNT-POE-24-12W-G",
         "name": "24V PoE Injector",
         "description": "Gigabit LAN Port 0.5 A / 1.0 A @ 24 V DC 12 Watts Supports 24 V Passive PoE",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "price": 15.0,
@@ -12518,7 +12555,7 @@ const products = [
         "sku": "UBNT-ETH-SP-G2",
         "name": "Ethernet Surge Protector, Gen 2",
         "description": "Low-Cost Protection and Fast Installation Protects Outdoor Ethernet Devices Compatible with 10/100/1000 Mbps Networks",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "price": 13.0,
@@ -12560,7 +12597,7 @@ const products = [
         "sku": "UBNT-AMO-5G13",
         "name": "AirMAX Omni Antenna",
         "description": "airMAX Omni Antenna 5 GHz 13 dBi 360\u00b0 Coverage 2 x 2 MIMO Performance",
-        "price": 222.75
+        "price": 276.66
       }
     ],
     "price": 165.0,
@@ -12601,7 +12638,7 @@ const products = [
         "sku": "UBNT-US-48-500W",
         "name": "48-Port Managed PoE Switch",
         "description": "(48) Gigabit PoE Ports (2) 1/10 Gbps SFP Ports (2) 1 Gbps SFP Ports 500 W",
-        "price": 1127.25
+        "price": 1400.04
       }
     ],
     "price": 835.0,
@@ -12642,7 +12679,7 @@ const products = [
         "sku": "UBNT-UAP-AC-LITE-US",
         "name": "UniFi AP AC LITE",
         "description": "Unlimited Indoor/Outdoor AP Scalability in a Unified Management System Breakthrough Speeds up to 1300 Mbps in the 5 GHz Band Intuitive UniFi Controller Software UniFi 802.11AC Dual\u2011Radio Access Points (APs) have a refined industrial design and can be...",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "price": 89.0,
@@ -12683,7 +12720,7 @@ const products = [
         "sku": "UBNT-UAP-AC-M-US",
         "name": "UniFi AC Mesh",
         "description": "High-Performance Wide-Area Wi-Fi with UniFi\u00ae Mesh Technology Breakthrough Speeds up to 1300 Mbps in the 5 GHz Band 802.3af PoE Compatibility The UniFi AC Mesh APs have a refined industrial design and can be easily installed using the included mountin...",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -12724,7 +12761,7 @@ const products = [
         "sku": "UBNT-AMO-5G10",
         "name": "5 GHz AirMAX Omni Antenna",
         "description": "High Performance, Long Range Seamlessly Integrates with RocketM 360\u00b0 Coverage 10 dBi",
-        "price": 168.75
+        "price": 209.59
       }
     ],
     "price": 125.0,
@@ -12765,7 +12802,7 @@ const products = [
         "sku": "UBNT-PBE-5AC-GEN2",
         "name": "5 GHz PowerBeam AC, Gen2",
         "description": "Highly Efficient Antenna Beam Performance Up to 450+ Mbps Throughput Dedicated Wi-Fi Radio for Management 25 dBi 450+ Mbps 25+ km",
-        "price": 160.65
+        "price": 199.53
       }
     ],
     "price": 119.0,
@@ -12806,7 +12843,7 @@ const products = [
         "sku": "UBNT-UC-CK",
         "name": "UniFi Cloud Key Controller",
         "description": "(1) 10/100/1000 Mbps Ethernet Port 802.3 af PoE or Micro-USB 5 V, Minimum 1 A Connect up to 1 USG Connect up to 1 USW (UniFi switch) Connect up to 23 access points 1,000 connected clients PoE switch not included",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -12848,7 +12885,7 @@ const products = [
         "sku": "UBNT-POE-24-24W-G",
         "name": "24V PoE Injector",
         "description": "Gigabit LAN Port 0.5 A / 1.0 A @ 24 V DC 24 W Supports 24 V DC Passive PoE",
-        "price": 21.6
+        "price": 26.83
       }
     ],
     "price": 16.0,
@@ -12889,7 +12926,7 @@ const products = [
         "sku": "UBNT-ACB\u2011AC",
         "name": "AirCube AC Home WIFI AP",
         "description": "(4) Gigabit Ethernet Ports 24 V CD PoE Passthrough for airMAX CPE 300 Mbps @ 2.4 GHz 867 Mbps @ 5 GHz Powered by power adapter or PoE 24 V DC In on LAN Port 1 24 V DC, 1 A PoE Adapter Included",
-        "price": 106.65
+        "price": 132.46
       }
     ],
     "price": 79.0,
@@ -12930,7 +12967,7 @@ const products = [
         "sku": "UBNT-NS-WM",
         "name": "Wall Mount Kit",
         "description": "Wall Mount Kit Used for NanoStation",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "price": 19.0,
@@ -12971,7 +13008,7 @@ const products = [
         "sku": "UBNT-LOCOM5-US",
         "name": "5 GHz NanoStation",
         "description": "The low cost, high performance, and small form factor of NanoStationM and NanoStationlocoM make them extremely versatile and economical to&nbsp;deploy. Cost-Effective, High-Performance Compact and Versatile Design Powerful Integrated Antenna",
-        "price": 90.45
+        "price": 112.34
       }
     ],
     "price": 67.0,
@@ -13012,7 +13049,7 @@ const products = [
         "sku": "UBNT-UAP-AC-LR-US",
         "name": "UniFi AP, AC - Long Range",
         "description": "High-Performance Wide-Area Wi-Fi with UniFi\u00ae Mesh Technology Breakthrough Speeds up to 1300 Mbps in the 5 GHz Band Intuitive UniFi Controller Software Easily accessible through any standard web browser and the UniFi mobile app (iOS or Android), the U...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "price": 109.0,
@@ -13053,7 +13090,7 @@ const products = [
         "sku": "UBNT-R5AC-LITE",
         "name": "5 GHz Rocket AC BaseStation",
         "description": "500+ Mbps",
-        "price": 182.25
+        "price": 226.35
       }
     ],
     "price": 135.0,
@@ -13094,7 +13131,7 @@ const products = [
         "sku": "UBNT-LBE-5AC-GEN2",
         "name": "5 GHz LiteBeam AC, Gen2",
         "description": "23 dBi 450+ Mbps 10+ km",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "price": 65.0,
@@ -13135,7 +13172,7 @@ const products = [
         "sku": "UBNT-LOCOM2-US",
         "name": "2.4GHz NanoStation",
         "description": "The low cost, high performance, and small form factor of NanoStationM and NanoStationlocoM make them extremely versatile and economical to&nbsp;deploy. Cost-Effective, High-Performance Compact and Versatile Design Powerful Integrated Antenna",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "price": 49.0,
@@ -13176,7 +13213,7 @@ const products = [
         "sku": "UBNT-ER-X-SFP-US",
         "name": "Advanced Gigabit Router With PoE And SFP",
         "description": "Advanced Gigabit router with PoE and SFP (5) Gigabit Ethernet ports with PoE support (1) Gigabit SFP port for backhaul applications, 50W 256M RAM Size 256M Storage Size",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -13217,7 +13254,7 @@ const products = [
         "sku": "UBNT-NBE-M5-16",
         "name": "5 GHz NanoBeam M5",
         "description": "The NanoBeam directs RF energy in a tighter beamwidth. With the focus in one direction, the NanoBeam blocks or spatially filters out noise, so noise immunity is improved. This feature is especially important in an area crowded with other RF signals o...",
-        "price": 90.45
+        "price": 112.34
       }
     ],
     "price": 67.0,
@@ -13258,7 +13295,7 @@ const products = [
         "sku": "UBNT-NSM5",
         "name": "5 GHz Nanostation M5",
         "description": "The low cost, high performance, and small form factor of NanoStationM and NanoStationlocoM make them extremely versatile and economical to&nbsp;deploy. Cost-Effective, High-Performance Compact and Versatile Design Powerful Integrated Antenna",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "price": 89.0,
@@ -13299,7 +13336,7 @@ const products = [
         "sku": "UBNT-LAP-120-US",
         "name": "5 GHz LiteBeam AC AP, 120\u00b0",
         "description": "High-Performance Sector AP Up To 450+ Mbps Real TCP/IP Throughput Lightweight, Low-Cost Solution",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "price": 89.0,
@@ -13340,7 +13377,7 @@ const products = [
         "sku": "UBNT-UAP-AC-HD-US",
         "name": "UniFi AP AC HD",
         "description": "Easily accessible through any standard web browser and the UniFi app (iOS or Android\u2122), the UniFi Controller software is a powerful software engine ideal for high-density client deployments requiring low latency and high uptime performance. UniFi AP ...",
-        "price": 471.15
+        "price": 585.17
       }
     ],
     "price": 349.0,
@@ -13381,7 +13418,7 @@ const products = [
         "sku": "UBNT-ACB-ISP",
         "name": "AirCube ISP Home Wi-Fi AP",
         "description": "802.11n 2x2 Integrated 24V PoE passthrough UISP support for remote network management",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "price": 29.0,
@@ -13423,7 +13460,7 @@ const products = [
         "sku": "UBNT-ROCKETM2-US",
         "name": "2.4 GHz Rocket M2 BaseStation",
         "description": "2.4 GHz Rocket M2 Base Station 150+ Mbps (1) 10/100 Mbps Ethernet Port 24 V DC, 1 A PoE Adapter Included",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "price": 89.0,
@@ -13464,7 +13501,7 @@ const products = [
         "sku": "UBNT-USG-PRO-4-US",
         "name": "Enterprise Gateway Router",
         "description": "(1) RJ45 Serial Port (2) 10/100/1000 RJ45 Ports (2) 10/100/1000 RJ45 / SFP Combination Ports 40 W, 2 GB DDR3 RAM, 4 GB Memory",
-        "price": 464.4
+        "price": 576.78
       }
     ],
     "price": 344.0,
@@ -13505,7 +13542,7 @@ const products = [
         "sku": "UBNT-UAP-AC-PRO-US",
         "name": "UniFi AP, AC Pro",
         "description": "(2) 10/100/1000 Mbps Ethernet 450 Mbps @ 2.4 GHz 1300 Mbps @ 5 GHz 802.3 af PoE / 802.3 at PoE+ Up to 400 ft, Indoor / Outdoor 250+ Users Approx. 7 3/4 diam. x 1 3/8 in. (196.7 diam. x 35 mm)",
-        "price": 201.15
+        "price": 249.83
       }
     ],
     "price": 149.0,
@@ -13546,7 +13583,7 @@ const products = [
         "sku": "UBNT-UAP-AC-SHD-US",
         "name": "UniFi SHD",
         "description": "(2) 10/100/1000 Mbps Ethernet 800 Mbps @ 2.4 GHz 1733 Mbps @ 5 GHz 802.3 at PoE+ Up to 600 ft Indoor / Outdoor (Covered) 1,000+ Concurrent Clients PoE switch not included 8.7 diam. x 1.9 in. (220 diam. x 48.1 mm)",
-        "price": 741.15
+        "price": 920.51
       }
     ],
     "price": 549.0,
@@ -13587,7 +13624,7 @@ const products = [
         "sku": "UBNT-UMA-D-US",
         "name": "Directional Dual-Band Antenna",
         "description": "Outdoor weather-resistant enclosure High-efficiency directional radiation pattern Dual-band, dual-polarity optimized for 802.11 ac Ball joint 3-axis mount for precise aiming Wall and pole mount included",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -13629,7 +13666,7 @@ const products = [
         "sku": "UBNT-ES\u201148\u2011LITE",
         "name": "48-Port Managed Switch",
         "description": "48 x Gigabit RJ45 Ports 2 x SFP+ Ports 2 x SFP Ports 1 x Serial Console Port 25 W Rack-mountable",
-        "price": 579.15
+        "price": 719.3
       }
     ],
     "price": 429.0,
@@ -13670,7 +13707,7 @@ const products = [
         "sku": "UBNT-US-48",
         "name": "48-Port Managed Switch",
         "description": "48 Gigabit Ethernet Ports 2 SFP+ Ports 2 SFP Ports 1 Serial Console Port 56 W, Rack-mountable",
-        "price": 560.25
+        "price": 695.83
       }
     ],
     "price": 415.0,
@@ -13711,7 +13748,7 @@ const products = [
         "sku": "UBNT-N-SW",
         "name": "NanoSwitch",
         "description": "(3) GbE RJ45 ports with 24V passive PoE 24 W PoE supply Outdoor, weather-resistant enclosure",
-        "price": 54.0
+        "price": 67.07
       }
     ],
     "price": 40.0,
@@ -13752,7 +13789,7 @@ const products = [
         "sku": "UBNT-US-8",
         "name": "8-Port Managed Switch",
         "description": "(8) Gigabit Ethernet Ports (1) PoE Pass-through Port Power via 48 V DC passive PoE or 48 V DC power; 12 W Build and expand your network with Ubiquiti Networks\u00ae UniFi\u00ae Switch, part of the UniFi line of products. The new 8-port models feature Gigabit E...",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -13793,7 +13830,7 @@ const products = [
         "sku": "UBNT-NS-5AC-US",
         "name": "5 GHz NanoStation AC",
         "description": "The NanoStation AC and NanoStation AC loco take the same concept to the future with sleek form factors, along with integrated airMAX (MIMO TDMA protocol) technology and dedicated Wi-Fi management. The radio and antenna are combined to create a more e...",
-        "price": 174.15
+        "price": 216.29
       }
     ],
     "price": 129.0,
@@ -13835,7 +13872,7 @@ const products = [
         "sku": "UBNT-NSM2",
         "name": "2.4 GHz NanoStation M2",
         "description": "The NanoStationM and NanoStationlocoM take the same concept to the future with sleek and elegant form factors, along with integrated airMAX\u00ae (MIMO TDMA protocol) technology. The low cost, high performance, and small form factor of NanoStationM and Na...",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "price": 89.0,
@@ -13876,7 +13913,7 @@ const products = [
         "sku": "UBNT-ER-X-US",
         "name": "Advanced Gigabit Ethernet Router",
         "description": "Advanced Gigabit Ethernet Router (5) Gigabit Ethernet ports Power via 24V passive PoE or 12V DC power; 5W 256M RAM Size 256M Storage Size",
-        "price": 86.4
+        "price": 107.31
       }
     ],
     "price": 64.0,
@@ -13917,7 +13954,7 @@ const products = [
         "sku": "UBNT-US-8-60W",
         "name": "8-Port Managed Switch With 4 PoE Ports",
         "description": "(8) Gigabit Ethernet Ports (4) auto-sensing PoE Ports 15 W output per PoE port",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "price": 109.0,
@@ -13958,7 +13995,7 @@ const products = [
         "sku": "UBNT-ES-16-150W",
         "name": "EdgeSwitch 16-Port Managed PoE Switch",
         "description": "(16) Gigabit RJ45 Ports (2) SFP Ports (1) Serial Console Port Supports POE+ IEEE 802.3a t/af and 24V Passive PoE 150 W",
-        "price": 444.15
+        "price": 551.63
       }
     ],
     "price": 329.0,
@@ -13999,7 +14036,7 @@ const products = [
         "sku": "UBNT-UAP-AC-IW",
         "name": "UniFi AP, AC In-Wall",
         "description": "(3) 10/100/1000 Mbps Ethernet (1) Uplink, (2) switch ports 300 Mbps @ 2.4 GHz 867 Mbps @ 5 GHz 802.3 at PoE+ Indoor design 250+ Concurrent Clients PoE switch not included 5.5 x 3.4 x 1 in. (139.7 x 86.7 x 25.75 mm)",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "price": 99.0,
@@ -14044,7 +14081,7 @@ const products = [
         "sku": "IDEAL-45-605",
         "name": "IDEAL PrepPRO\u00ae Coax/UTP Cable Stripper",
         "description": "1/4\" x 1/4\" industry standard coax preparation strip lengths Works on RG-6/RG-6 Quad/RG-59/RG-59 Quad/RG-6 Plenum coax cables Includes Coax (gray) and UTP/STP (blue) cartridges Supportive spring loaded force for consistent cutting depths Interchangea...",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "price": 18.0,
@@ -14090,7 +14127,7 @@ const products = [
         "sku": "IDEAL-30-793",
         "name": "OmniSeal\u2122 Pro XL Compression Tool",
         "description": "High strength aluminum body for durability, lighter weight Spring loaded handle Textured slip resistant comfort grip Lock nut holds adjustments in place Compresses F-type, RCA and Mini connectors Universal tip for all connectors 7/16\u201d Hex Socket make...",
-        "price": 105.3
+        "price": 130.78
       }
     ],
     "price": 78.0,
@@ -14136,7 +14173,7 @@ const products = [
         "sku": "IDEAL-85-377E",
         "name": "IDEAL Cat6 Feed-Thru Modular Plugs",
         "description": "IDEAL Cat6 feed-thru modular plugs New feed-thru design simplifies connector to the cable assembly Flush cut of excess conductors minimizes inadvertent contact outside of the plug Designed for best performance when used with the IDEAL FT-45 Crimp Too...",
-        "price": 0.81
+        "price": 1.01
       }
     ],
     "price": 0.6,
@@ -14182,7 +14219,7 @@ const products = [
         "sku": "IDEAL-89-1047E",
         "name": "IDEAL InSITE\u2122 RG-59 BNC Compression Connectors",
         "description": "360\u00b0 clear window ensures proper cable insertion Increased compatibility of cable jacket diameter Lower cable insertion force Redesigned funneled pin entry - centers angled pins Accepts 23 - 18 AWG solid center conductor pins Easier mating with socke...",
-        "price": 3.11
+        "price": 3.86
       }
     ],
     "price": 2.3,
@@ -14228,7 +14265,7 @@ const products = [
         "sku": "IDEAL-30-495",
         "name": "IDEAL FT-45\u2122 FeedThru Modular Plug Crimp Tool Crimps Feed-Thru, Standard And Shielded",
         "description": "Crimps Feed-Thru, Standard, and Shielded Designed for IDEAL Feed-Thru RJ-45 Modular Plugs Provides a flush cut - no excess conductor sticking out the face of the plug Crimps industry standard CAT5e/6 RJ-45 (8P8C) and shielded modular plugs Crimps wit...",
-        "price": 81.0
+        "price": 100.6
       }
     ],
     "price": 60.0,
@@ -14274,7 +14311,7 @@ const products = [
         "sku": "IDEAL-85-372E",
         "name": "IDEAL Cat5e Feed-Thru Modular Plugs",
         "description": "New feed-thru design simplifies connection to the cable assembly The flush cut of excess conductors minimizes inadvertent contact outside of the plug Designed for best performance when used with the IDEAL FT-45 Crimp Tool (IDEAL-30-495) 8-position, 8...",
-        "price": 0.67
+        "price": 0.83
       }
     ],
     "price": 0.5,
@@ -14320,7 +14357,7 @@ const products = [
         "sku": "IDEAL-33-632",
         "name": "IDEAL LinearX\u00ae3 Compression Tool",
         "description": "Captive linear stroke for consistent compression results and easy operation. Includes 4 RTQ\u2122 RG6/6Quad Weatherproof F Compression Connectors IDEAL LinearX\u00ae3 Compression Tool Compresses 21mm (industry standard) F compression connectors Durable and rug...",
-        "price": 55.35
+        "price": 68.74
       }
     ],
     "price": 41.0,
@@ -14366,7 +14403,7 @@ const products = [
         "sku": "IDEAL-45-074",
         "name": "IDEAL Data T\u00ae-Cutter",
         "description": "IDEAL Data T\u00ae-Cutter Cuts round communication cables up to 0.5 inches (12.7mm) and coaxial cable up to RG-9/U Curved cutting blades maintain cable geometry for better cable performance Steel reinforced center conductors can be trimmed with bolt cutti...",
-        "price": 36.45
+        "price": 45.27
       }
     ],
     "price": 27.0,
@@ -14412,7 +14449,7 @@ const products = [
         "sku": "IDEAL-35-088",
         "name": "IDEAL Snips With Stripping Notch",
         "description": "For use in telephone and electrical service applications Cuts up to #16 AWG solid and #12 AWG stranded wire Stripping notches, serrated surface on back side of the blade, strips #19 AWG and #23 AWG wire Also available in kits",
-        "price": 31.05
+        "price": 38.56
       }
     ],
     "price": 23.0,
@@ -14454,7 +14491,7 @@ const products = [
         "sku": "LTA1016",
         "name": "RJ45",
         "description": "RJ45 For CAT6, 50U, RJ45 8P8C Cat6",
-        "price": 0.44
+        "price": 0.55
       }
     ],
     "specs": {
@@ -14496,7 +14533,7 @@ const products = [
         "sku": "LT-CT601B",
         "name": "Cable Ties - 6-Inch, Black",
         "description": "6-inch ties Black 100 pcs / pack",
-        "price": 1.35
+        "price": 1.68
       }
     ],
     "price": 1.0,
@@ -14539,7 +14576,7 @@ const products = [
         "sku": "LT-DVRLB18-18-5",
         "name": "Lockbox",
         "description": "Store valuable goods in outdoor locations with this rugged lockbox.",
-        "price": 191.7
+        "price": 238.09
       }
     ],
     "price": 142.0,
@@ -14582,7 +14619,7 @@ const products = [
         "sku": "LT-KY5E110",
         "name": "Connector - Enhanced Cat5e Keystone Jack",
         "description": "Enhanced CAT5E Keystone jack Various colors",
-        "price": 1.47
+        "price": 1.83
       }
     ],
     "price": 1.09,
@@ -14625,7 +14662,7 @@ const products = [
         "sku": "LT-CT1201W",
         "name": "12 Inch Cable Tie-White",
         "description": "12 inch cable tie White 100pcs/pack",
-        "price": 5.94
+        "price": 7.38
       }
     ],
     "price": 4.4,
@@ -14668,7 +14705,7 @@ const products = [
         "sku": "LT-DVRLB21-21-8",
         "name": "Lockbox",
         "description": "Bracket",
-        "price": 221.4
+        "price": 274.98
       }
     ],
     "price": 164.0,
@@ -14711,7 +14748,7 @@ const products = [
         "sku": "LT-DVRLB21-24-8",
         "name": "Lockbox - Bracket",
         "description": "Lockbox",
-        "price": 236.25
+        "price": 293.42
       }
     ],
     "price": 175.0,
@@ -14757,7 +14794,7 @@ const products = [
         "sku": "LTAC3150",
         "name": "HDMI Cable With Ethernet - 50 Ft",
         "description": "HDMI with Ethernet 4.5 / 10 / 25 / 50 feet of cable, hi-speed 1080p / 3D, 100% triple shield 24K Gold-plated with nylon jacket",
-        "price": 35.1
+        "price": 43.59
       }
     ],
     "specs": {
@@ -14810,7 +14847,7 @@ const products = [
         "sku": "LTCMHD7322WE-28F",
         "name": "Platinum 2 MP Fixed Dome HD-TVI Camera",
         "description": "2.1 MP Ultra Low Light 2.8 mm Fixed Lens 1920 x 1080 @ 30 fps 0.005 Lux @ f 2.0 2 Matrix IR 2.0 LED up to 65 ft True WDR 130 dB TVI / AHD / CVI / 960H IP67, IK10",
-        "price": 74.25
+        "price": 92.22
       }
     ],
     "specs": {
@@ -14855,7 +14892,7 @@ const products = [
         "sku": "LTAC1802G-CMR",
         "name": "2-Conductor Access Control Wire",
         "description": "18 AWG, 2 Wires, 1,000 ft Stranded, unshielded UL listed, CMR-rated",
-        "price": 195.75
+        "price": 243.12
       }
     ],
     "specs": {
@@ -14895,7 +14932,7 @@ const products = [
         "sku": "PS120V1000",
         "name": "Power Adapter - 1,000 MA",
         "description": "ROHS Approved Switching Power Supply",
-        "price": 5.94
+        "price": 7.38
       }
     ],
     "specs": {
@@ -14933,7 +14970,7 @@ const products = [
         "sku": "LVA-PUMSD64G-L",
         "name": "LaView 64 GB MicroSD Card",
         "description": "Ultra-Endurance for Continuous Recording",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "price": 11.0,
@@ -14972,7 +15009,7 @@ const products = [
         "sku": "LVA-PUMSD32G-L",
         "name": "LaView 32 GB MicroSD Card",
         "description": "Ultra-Endurance for Continuous Recording",
-        "price": 10.39
+        "price": 12.9
       }
     ],
     "price": 7.7,
@@ -15011,7 +15048,7 @@ const products = [
         "sku": "LVA-PUMSD128G-L",
         "name": "LaView 128 GB MicroSD Card",
         "description": "Ultra-Endurance for Continuous Recording",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "price": 19.0,
@@ -15061,7 +15098,7 @@ const products = [
         "sku": "LTD8504M-ST",
         "name": "Turbo Smart HD-TVI DVR",
         "description": "Deep learning-based motion detection 2.0 for all analog channels Deep learning-based perimeter protection H.264 / H.264+ / H.265 / H.265 / H.265 Pro / H.265 Pro+ video compression HD-TVI / AHD / CVI / CVBS / IP video inputs Audio via coaxial cable Up...",
-        "price": 160.65
+        "price": 199.53
       }
     ],
     "downloads": [
@@ -15115,7 +15152,7 @@ const products = [
         "sku": "LTCMHT2322-28F",
         "name": "Platinum 2 MP 4-In-1 HD-TVI Turret Camera",
         "description": "2 MP Turret 1/3\" Progressive CMOS 2.8 mm fixed lens 2D DNR IR up to 66ft(20m) 4-in-1 video output (switchable among TVI / AHD / CVI / CVBS) IP66",
-        "price": 52.65
+        "price": 65.39
       }
     ],
     "specs": {
@@ -15159,7 +15196,7 @@ const products = [
         "sku": "LTB453",
         "name": "Bracket-P Junction Box",
         "description": "Compatible with camera model CMHD3453D-ZFN",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -15203,7 +15240,7 @@ const products = [
         "sku": "VSWM674",
         "name": "Wall Mount",
         "description": "Wall mount for camera models: VSPTZIP424X25WIR VSPTZIP674X33WIR",
-        "price": 40.5
+        "price": 50.3
       }
     ],
     "specs": {
@@ -15246,7 +15283,7 @@ const products = [
         "sku": "LTB232",
         "name": "Junction Box Bracket",
         "description": "Designed for models: CMHT2322-28F CMHR6322-28F",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "specs": {
@@ -15284,7 +15321,7 @@ const products = [
         "sku": "DHWD64PURZ",
         "name": "Western Digital Purple 6 TB Hard Disk Drive, 5,400 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 216.0
+        "price": 268.27
       }
     ],
     "specs": {
@@ -15326,7 +15363,7 @@ const products = [
         "sku": "LTAC2060B",
         "name": "Pre-Made Siamese Cable With Connectors - 60 Ft, Black",
         "description": "60 feet All-In-One Power and Video Cable BNC / RG59 + DC",
-        "price": 8.1
+        "price": 10.06
       }
     ],
     "specs": {
@@ -15368,13 +15405,13 @@ const products = [
         "sku": "LTAC2125W",
         "name": "Pre-Made Siamese Cable With Connectors - 125 Ft, White",
         "description": "All-in-one Power and Video Cable BNC / RG59 + DC",
-        "price": 22.95
+        "price": 28.5
       },
       {
         "sku": "LTAC2125W-HD",
         "name": "HD Cable, BNC + Power - 125 Feet (Excluded From Free Shipping)",
         "description": "Cable, HD Pre-made BNC + Power, White, 125 ft Excluded from free shipping",
-        "price": 16.2
+        "price": 20.12
       }
     ],
     "specs": {
@@ -15412,7 +15449,7 @@ const products = [
         "sku": "LTSIGNA",
         "name": "Warning Sign",
         "description": "11\"(W) x 18\"(H) x3 / 16\"(D) Plastic Warning Signs",
-        "price": 5.94
+        "price": 7.38
       }
     ],
     "downloads": [
@@ -15448,7 +15485,7 @@ const products = [
         "sku": "PS120V2000",
         "name": "Power Adapter - 2,000 MA",
         "description": "UL Listed, Regulated 12V DC 2.0 Amp",
-        "price": 8.1
+        "price": 10.06
       }
     ],
     "specs": {
@@ -15488,7 +15525,7 @@ const products = [
         "sku": "LTA1005",
         "name": "Connector - BNC Coupler Female To Female",
         "description": "CONNECTOR BNC COUPLER F/F (20pcs/pack)",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -15528,7 +15565,7 @@ const products = [
         "sku": "LTA1006",
         "name": "Connector - BNC Compression For RG59",
         "description": "Comes in 20pcs per pack Compression Type BNC Male Connector",
-        "price": 22.95
+        "price": 28.5
       }
     ],
     "specs": {
@@ -15568,7 +15605,7 @@ const products = [
         "sku": "LTA2004",
         "name": "Adapter Cable - DC Power Male",
         "description": "Power Adapter Cable (Male) with Plug (20pcs/pack)",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -15608,7 +15645,7 @@ const products = [
         "sku": "LTA2001",
         "name": "Microphone - 12\" With Power",
         "description": "12\" audio cable W / Microphone &amp; Amplifier",
-        "price": 8.91
+        "price": 11.07
       }
     ],
     "specs": {
@@ -15650,7 +15687,7 @@ const products = [
         "sku": "LTAC2031B",
         "name": "RG59 + DC Copper Siamese Cable, Pull Box - 500 Ft, Black",
         "description": "RG59 Coaxial 95% Braided, Shield-Foil + 18/2 18 AWG copper shield (3/7) CM / CL2-Rated PVC jacket Sequential foot / zone marking FT-4",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "downloads": [
@@ -15692,19 +15729,19 @@ const products = [
         "sku": "LTAC5366",
         "name": "Cat6 ETL 23 AWG / 4P UTP, All Copper Cable In Pull Box - 1,000 Ft White",
         "description": "Cat6 ETL 23 AWG / 4P UTP 1,000 ft ETL All-copper pull box White",
-        "price": 182.25
+        "price": 226.35
       },
       {
         "sku": "LTAC5366-BL",
         "name": "Cat6 Cable + Pull Box - 1,000 Feet, 100% Copper CMR",
         "description": "Cable, Cat6, 100% Cooper CMR In pull box 1,000 feet Blue UL",
-        "price": 182.25
+        "price": 226.35
       },
       {
         "sku": "LTAC5366-GREY",
         "name": "All Copper Cat6 Cable ETL Listed Pull Box - 1,000 Ft, Gray",
         "description": "All copper 1,000 ft Gray",
-        "price": 182.25
+        "price": 226.35
       }
     ],
     "specs": {
@@ -15749,7 +15786,7 @@ const products = [
         "sku": "LTAB4030TP",
         "name": "Single Channel HD Video & Power Balun",
         "description": "Real-time transmission over UTP Cat5e / Cat6 cable Compatible with all HD-TVI / CVI / AHD / analog cameras Copper pin BNC connector, connectable style Built-in solid state TVS for surge protection Application diagram Push-pin terminal with pigtail Re...",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "downloads": [
@@ -15793,7 +15830,7 @@ const products = [
         "sku": "LTPS0812",
         "name": "Power Strip - 12:8",
         "description": "8-outlet power strip 12\" cord White Durable plastic casting 15 A, 1,875 W",
-        "price": 21.6
+        "price": 26.83
       }
     ],
     "specs": {
@@ -15836,13 +15873,13 @@ const products = [
         "sku": "LTAC5100B-CMR",
         "name": "99.99% Oxygen-Free Copper CMR Rated Network Cable - Cat5e",
         "description": "99.99% OFC (Oxygen-Free Copper)&nbsp; Outdoor Rated&nbsp; RoHS Compliant Pass Fluke Test",
-        "price": 153.9
+        "price": 191.14
       },
       {
         "sku": "LTAC5100B-CMX",
         "name": "99.99% Oxygen-Free Copper CMR Rated Network Cable - Cat5e",
         "description": "99.99% OFC (Oxygen-Free Copper)&nbsp; Outdoor Rated, waterproof in wet location&nbsp; RoHS Compliant Pass Fluke Test 1000 Feet Excluded from Free Shipping",
-        "price": 178.2
+        "price": 221.32
       }
     ],
     "specs": {
@@ -15896,7 +15933,7 @@ const products = [
         "sku": "LTCMHT1752WE-28F",
         "name": "Platinum 5 MP Turret HD-TVI Camera",
         "description": "5 MP high performance CMOS 2560 \u00d7 1944 resolution 2.8 mm fixed lens Matrix IR 2.0, smart IR, up to 197 ft (60 m) IR range 3D DNR, 130 dB true WDR 4-in-1 video output (switchable among TVI / AHD / CVI / CVBS) IP67 OSD Menu via UTC technology with Plat...",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -15941,7 +15978,7 @@ const products = [
         "sku": "LTMB3270",
         "name": "Monitor Bracket",
         "description": "Designed for Monitors / Screens 32 - 70 inches",
-        "price": 58.05
+        "price": 72.1
       }
     ],
     "specs": {
@@ -15986,7 +16023,7 @@ const products = [
         "sku": "LTAC3110",
         "name": "HDMI Cable With Ethernet - 10 Ft",
         "description": "HDMI with Ethernet 4.5 / 10 / 25 / 50 foot lengths, hi-speed cable 1080p / 3D, 100% triple-shield 24K Gold plated with nylon jacket",
-        "price": 6.75
+        "price": 8.38
       }
     ],
     "specs": {
@@ -16042,7 +16079,7 @@ const products = [
         "sku": "LTCMHR9623DWE-ZF",
         "name": "Platinum 2 MP Varifocal Bullet HD-TVI Camera",
         "description": "Junction box included 2 MP high performance CMOS Excellent ultra-low light imaging performance 1920 x 1080 resolution 2.7 to 13.5 mm varifocal lens, auto focus 130 dB true WDR, 3D DNR Smart IR, up to 263 ft (80 m) IR distance 4-signals-in-1 video out...",
-        "price": 182.25
+        "price": 226.35
       }
     ],
     "downloads": [
@@ -16096,7 +16133,7 @@ const products = [
         "sku": "LTD8424K-EA",
         "name": "Turbo HD DVR",
         "description": "Supports H.265 / H.265 Pro / H.265 Pro+ video compression Supports HD-TVI / AHD / CVI / CVBS / IP video input Up to 40 IP camera inputs (up to 6 MP) Up to 2,625 ft (800 m) for 1080p and 3,900 ft (1,200 m) for 720p HD-TVI signal Up to 10 TB capacity p...",
-        "price": 1078.65
+        "price": 1339.68
       }
     ],
     "downloads": [
@@ -16142,7 +16179,7 @@ const products = [
         "sku": "PFA130-E",
         "name": "Junction Box",
         "description": "Designed for IP Camera models: LTDHIP8682 LTDHIP8662 LTDHIP3682 LTDHIP3662 LTDHIP3252 LTDHCT3642",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "specs": {
@@ -16187,7 +16224,7 @@ const products = [
         "sku": "VSPM963",
         "name": "Pro-VS Pole Mount",
         "description": "Pole Mount for VSIP9643W-SZ",
-        "price": 40.5
+        "price": 50.3
       }
     ],
     "specs": {
@@ -16231,7 +16268,7 @@ const products = [
         "sku": "VSJB842",
         "name": "Junction Box",
         "description": "Designed for camera models: VSIP8442W-28MA VSIP8182W-28",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "specs": {
@@ -16278,7 +16315,7 @@ const products = [
         "sku": "VSJB742",
         "name": "Junction Box",
         "description": "Designed for Dome and Turret IP camera models: VSIP74XX, VSIP71XX VSIP34XX, VSIP31XX",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "specs": {
@@ -16318,7 +16355,7 @@ const products = [
         "sku": "TS5-6W",
         "name": "Power Adapter - 5,000 MA",
         "description": "5,000 mA 12V DC",
-        "price": 22.95
+        "price": 28.5
       }
     ],
     "specs": {
@@ -16362,13 +16399,13 @@ const products = [
         "sku": "HU01-SNL",
         "name": "Hugolog Electronic Deadbolt Lock (Satin Nickel)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof",
-        "price": 102.6
+        "price": 127.43
       },
       {
         "sku": "HU01-BLK",
         "name": "Hugolog Electronic Deadbolt Lock (Black)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof",
-        "price": 102.6
+        "price": 127.43
       }
     ],
     "specs": {
@@ -16413,13 +16450,13 @@ const products = [
         "sku": "HU03-ORB",
         "name": "Hugolog Smart Lock With Touchscreen (Rubbed Bronze)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof Remote Wireless Control Avaliable with Free Mobile App and Bluetooth Hub",
-        "price": 162.0
+        "price": 201.2
       },
       {
         "sku": "HU03-SNL",
         "name": "Hugolog Smart Lock With Touchscreen (Satin Nickel)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof Remote Wireless Control Avaliable with Free Mobile App and Bluetooth Hub",
-        "price": 162.0
+        "price": 201.2
       }
     ],
     "specs": {
@@ -16465,13 +16502,13 @@ const products = [
         "sku": "HU04-SNL",
         "name": "Hugolog Keyless Smart Lock With Touchscreen (Satin Nickel)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof Remote Wireless Control Avaliable with Free Mobile App and Bluetooth Hub",
-        "price": 132.3
+        "price": 164.32
       },
       {
         "sku": "HU04-ORB",
         "name": "Hugolog Keyless Smart Lock With Touchscreen (Rubbed Bronze)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof Remote Wireless Control Avaliable with Free Mobile App and Bluetooth Hub",
-        "price": 132.3
+        "price": 164.32
       }
     ],
     "specs": {
@@ -16510,7 +16547,7 @@ const products = [
         "sku": "LTSACS-801",
         "name": "Solar Power (No Battery Needed) Actively Flashing LCD",
         "description": "Material : ABS No battery needed. Perfectly molded. Constantly blinking messages on the LCD. Solar cell operation. Signboard Dimension: 3.15\" x 3.15\"(80mm x 80mm)",
-        "price": 10.39
+        "price": 12.9
       }
     ],
     "specs": {
@@ -16548,7 +16585,7 @@ const products = [
         "sku": "DHWD30PURZ",
         "name": "Western Digital HD Purple 3 TB Hard Disk Drive, 5,400 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 116.1
+        "price": 144.2
       }
     ],
     "specs": {
@@ -16588,7 +16625,7 @@ const products = [
         "sku": "MSDX128GUII3CL10-CA1",
         "name": "ADATA Premier ONE 128 GB MicroSD Card With Adapter",
         "description": "3D MLC NAND Flash for Reliability and Durability UHS-II U3 Class 10 V90 Ultra HD 8K, 4K and 3D/VR Recording R/W: Up to 275 MB / 155 MB per Second Waterproof, Shockproof, X-ray-proof, and Antistatic Temperature Protection Range: -13\u00b0 to 185\u00b0 F (-25\u00b0 t...",
-        "price": 132.3
+        "price": 164.32
       }
     ],
     "specs": {
@@ -16640,7 +16677,7 @@ const products = [
         "sku": "LTD8316M-ET",
         "name": "Platinum 16-Channel TVI-P DVR",
         "description": "Deep learning-based motion detection 2.0 for all analog channels H.264 / H.264+ / H.265 / H.265 Pro / H.265 Pro+ video compression HD-TVI / AHD / CVI / CVBS / IP video inputs Audio via coaxial cable Up to 24 IP camera input channels (up to 6 MP) Up t...",
-        "price": 268.65
+        "price": 333.66
       }
     ],
     "downloads": [
@@ -16695,7 +16732,7 @@ const products = [
         "sku": "LTD8308M-ETC",
         "name": "Platinum 8-Channel Advanced Level HD-TVI DVR",
         "description": "Deep learning-based motion detection 2.0 for all analog channels H.264 / H.264+ / H.265 / H.265 Pro / H.265 Pro+ video compression HD-TVI / AHD / CVI / CVBS / IP video inputs Audio via coaxial cable Up to 12-ch IP camera inputs (up to 6 MP) Up to 10 ...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "downloads": [
@@ -16746,7 +16783,7 @@ const products = [
         "sku": "VSPD643",
         "name": "Pro-VS PTZ Dome Pendant Mount",
         "description": "Pendant Mount for VSPTZIP67xx/42xx 200mm",
-        "price": 35.1
+        "price": 43.59
       }
     ],
     "specs": {
@@ -16795,7 +16832,7 @@ const products = [
         "sku": "VSPM643",
         "name": "Pro-VS Pole Mount Adapter",
         "description": "Pole Mount for VSPTZIP67xx/42xx",
-        "price": 35.1
+        "price": 43.59
       }
     ],
     "specs": {
@@ -16846,13 +16883,13 @@ const products = [
         "sku": "LTD8516M-STN",
         "name": "Turbo Smart TVI DVR",
         "description": "Compression and Recording \t \t\tH.265 Pro+ video compression improves encoding efficiency and reduces data storage requirements \t\tRecords at up to 8 MP resolution \t Storage and Playback \t \t 2 x SATA interfaces \t\tSmart search for efficient playback \t\tSu...",
-        "price": 511.65
+        "price": 635.47
       },
       {
         "sku": "LTD8516M-ST",
         "name": "Turbo Smart DVR - 8 MP",
         "description": "Deep learning-based motion detection 2.0 for all analog&nbsp;channels Deep learning-based perimeter protection H.265 Pro+/H.265 Pro/H.265/H.264+/H.264 video compression HDTVI/AHD/CVI/CVBS/IP video inputs Audio via coaxial cable Up to 32-ch IP camera ...",
-        "price": 511.65
+        "price": 635.47
       }
     ],
     "specs": {
@@ -16898,7 +16935,7 @@ const products = [
         "sku": "LTB722",
         "name": "Junction Box",
         "description": "Designed for camera models: CMIP7283 CMIP3C8P",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -16942,13 +16979,13 @@ const products = [
         "sku": "LTB347HB",
         "name": "Junction Box",
         "description": "Designed for CMIP7042W-28MA CMIP73XXMDA CMIP7382W-28SH",
-        "price": 22.95
+        "price": 28.5
       },
       {
         "sku": "LTB347H",
         "name": "Junction Box",
         "description": "Junction box designed for models: CMIP7042W-28MA CMIP73XXMDA CMIP7382W-28SH",
-        "price": 22.95
+        "price": 28.5
       }
     ],
     "specs": {
@@ -16992,19 +17029,19 @@ const products = [
         "sku": "LTB742-120B",
         "name": "Wall Mount With Junction Box",
         "description": "Wall mount bracket with Junction Box for camera models listed below: CMIP7042W-28MA CMIP73xxMDA CMIP73xxSH CMIP31xx",
-        "price": 66.15
+        "price": 82.16
       },
       {
         "sku": "LTB742-120",
         "name": "Wall Mount",
         "description": "Designed for camera models: CMIP7042W-28MA CMIP73xxMDA CMIP73xxSH CMIP31xx",
-        "price": 47.25
+        "price": 58.68
       },
       {
         "sku": "LTB742",
         "name": "Parapet Wall Mount Bracket",
         "description": "Aluminum Alloy, Parapet Wall Mount Bracket for PTZ High Speed Domes",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -17045,7 +17082,7 @@ const products = [
         "sku": "VSWM-JBOX",
         "name": "Junction Box For Camera Wall Mounts",
         "description": "This junction box is designed for camera wall mounts below: VSWM342 VSWM763",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "specs": {
@@ -17088,13 +17125,13 @@ const products = [
         "sku": "LTB348",
         "name": "Wall Mount",
         "description": "Plastic Wall Mount Does not fit Pole or Corner Mount Compatible with&nbsp;CMHD7422,&nbsp;CMIP3412xx, CMIP3422xx, CMIP3432xx, CMIP7412xx, CMIP7422xx, CMIP7432xx, CMIP7442xx",
-        "price": 12.15
+        "price": 15.09
       },
       {
         "sku": "LTB348B",
         "name": "Plastic Wall Mount For Dome Cameras",
         "description": "Plastic Wall Mount for dome cameras. Does not fit on poles or in corners. Compatible with: CMHD7422 CMIP3412xx CMIP3422xx CMIP3432xx CMIP7412xx CMIP7422xx CMIP7432xx CMIP7442xx",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "downloads": [
@@ -17135,7 +17172,7 @@ const products = [
         "sku": "LTB341",
         "name": "Pendant Mount",
         "description": "This pendant mount is compatible with cameras models: CMHD34XX CMD34XX",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "downloads": [
@@ -17173,7 +17210,7 @@ const products = [
         "sku": "PS240V3000",
         "name": "Power Adapter - 3,000 MA",
         "description": "24V AC 3 Amps",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "specs": {}
@@ -17205,7 +17242,7 @@ const products = [
         "sku": "LTA1001",
         "name": "Connector - BNC Twist-On RG59 Male",
         "description": "Comes in 20pcs per pack Connector - Twist-On Type Male BNC",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -17245,7 +17282,7 @@ const products = [
         "sku": "LTA1004",
         "name": "Connector - BNC Male To RCA Male",
         "description": "BNC-RCA Male to Male Connectors (20pcs/pack)",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -17287,7 +17324,7 @@ const products = [
         "sku": "LTAC2042",
         "name": "Cat5e Cable RJ45 - 50 Ft",
         "description": "Various lengths available: 1, 2, 3, 5, 7, 10, 14, 20, 25, 50, 100 ft Multiple colors and configurations also available",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "specs": {
@@ -17328,7 +17365,7 @@ const products = [
         "sku": "LTA2017",
         "name": "Connector - DC Power Male",
         "description": "CONNECTOR MALE Power Plug-in (20pcs/pack)",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -17368,7 +17405,7 @@ const products = [
         "sku": "LTA2013",
         "name": "Connector - DC Power Female",
         "description": "20 pcs / pack",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -17408,7 +17445,7 @@ const products = [
         "sku": "LTA2008",
         "name": "Pigtail - Female",
         "description": "Female Pigtail Adapter",
-        "price": 0.9
+        "price": 1.12
       }
     ],
     "specs": {
@@ -17448,7 +17485,7 @@ const products = [
         "sku": "DUM-501E",
         "name": "Dummy Camera",
         "description": "Blinking red LED in 2 second intervals Required two 1.5V AA batteries (not included) Plastic housing Fully adjustable wall mounting brackets (0-90\u00b0 vertical, 0-360\u00b0 horizontal)",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "price": 9.0,
@@ -17489,7 +17526,7 @@ const products = [
         "sku": "DUM-301EB",
         "name": "Dummy Camera",
         "description": "Blinking red LED in 2 second intervals Required three 1.5V AA batteries (not included) Plastic housing Fixed 45\u00b0 angle",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "price": 7.0,
@@ -17530,7 +17567,7 @@ const products = [
         "sku": "DUM-101E",
         "name": "Dummy Camera",
         "description": "Blinking red LED in 2 second intervals Built-in motion detection sensor and can move horizontally 45\u00b0 Required three 1.5V AA batteries (not included) Plastic housing Fully adjustable wall mounting brackets (0-90\u00b0 vertical, 0-360\u00b0 horizontal)",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "price": 8.0,
@@ -17571,7 +17608,7 @@ const products = [
         "sku": "DUM-701E",
         "name": "Dummy Camera Bullet Camera",
         "description": "Aluminum housing Fully adjustable (0-90\u00b0 vertical, 0-360\u00b0 horizontal)",
-        "price": 16.2
+        "price": 20.12
       }
     ],
     "price": 12.0,
@@ -17612,7 +17649,7 @@ const products = [
         "sku": "DUM-301E",
         "name": "Dummy Camera",
         "description": "Blinking red LED in 2 second intervals Required three 1.5V AA batteries (not included) Plastic housing Fixed 45\u00b0 angle",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "price": 7.0,
@@ -17653,7 +17690,7 @@ const products = [
         "sku": "DUM-501EB",
         "name": "Dummy Camera",
         "description": "Blinking red LED in 2 second intervals Required two 1.5V AA batteries (not included) Plastic housing Fully adjustable wall mounting brackets (0-90\u00b0 vertical, 0-360\u00b0 horizontal)",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "price": 9.0,
@@ -17694,7 +17731,7 @@ const products = [
         "sku": "LTAC2032W",
         "name": "Coaxial Siamese Cable (No Connectors)",
         "description": "*Please Call For Price and Availability RG59 Coaxial 95% Braided, Shield-Foil + 18/2 18 AWG Copper Shield (3/7) CM / CL2 Rated PVC Jacket Sequential Foot / Zone Marking FT-4 Connectors not included",
-        "price": 220.05
+        "price": 273.3
       }
     ],
     "specs": {
@@ -17735,7 +17772,7 @@ const products = [
         "sku": "LTBHWB",
         "name": "Wall Mount Brackets For Lockbox",
         "description": "Designed to be used for lockboxes",
-        "price": 44.55
+        "price": 55.33
       }
     ],
     "specs": {
@@ -17779,7 +17816,7 @@ const products = [
         "sku": "LTAH5300T",
         "name": "HD-TVI Distributor",
         "description": "HD-TVI Distributor Connect to multiple monitors",
-        "price": 56.7
+        "price": 70.42
       }
     ],
     "specs": {
@@ -17822,7 +17859,7 @@ const products = [
         "sku": "LTAC2100W",
         "name": "Pre-Made Siamese Cable With Connectors - 100 Ft, White",
         "description": "Pre-made high definition Siamese cable B/W with BNC and Power",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "specs": {
@@ -17864,13 +17901,13 @@ const products = [
         "sku": "LTAC6250W-CMR",
         "name": "99.99% Oxygen-Free Copper CMR Rated UL Listed Network Cable - CAT6",
         "description": "**Please Call For Price and Availability Network Cable 99.99% Oxygen-Free Copper CMR Rated UL listed 1000ft RoHS Compliant Pass Fluke Test",
-        "price": 195.75
+        "price": 243.12
       },
       {
         "sku": "LTAC6250W-CMP",
         "name": "U/UTP Category 6 Indoor Plenum CMP Cable",
         "description": "Plenum CMP Rated&nbsp; Oxygen-Free-Copper&nbsp; UL Listed&nbsp; ISO/IEC11801, TIA-568-C.2&nbsp; RoHS Compliant&nbsp; Pass FLUKE test",
-        "price": 380.7
+        "price": 472.83
       }
     ],
     "specs": {
@@ -17916,7 +17953,7 @@ const products = [
         "sku": "LTB376",
         "name": "Pendant Mounting Bracket",
         "description": "Color White Compatible with CMIP73xx/CMIP74xx/CMHD73xx/CMHD74xx",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "specs": {
@@ -17960,7 +17997,7 @@ const products = [
         "sku": "LTK1107MK",
         "name": "Professional MIFARE Card Wiegand Reader With Keypad",
         "description": "&nbsp; &nbsp; &nbsp; 8- or 10-digit selectable (via DIP) IP65 weatherproof UL listed Surface mount Keypad provides additional or alternative authentication method",
-        "price": 79.65
+        "price": 98.93
       }
     ],
     "specs": {
@@ -18002,7 +18039,7 @@ const products = [
         "sku": "LTK2804",
         "name": "Access Control - 4-Door Controller",
         "description": "Secure metal enclosure with lock Supports 4 x Wiegand 34-bit readers Stores up to 10,000 cards and 50,000 events Built-in 12 V DC / 8.5 A power supply Add X-VMS server for app access UL listed &nbsp; &nbsp;",
-        "price": 511.65
+        "price": 635.47
       }
     ],
     "specs": {
@@ -18044,7 +18081,7 @@ const products = [
         "sku": "LTPE1625",
         "name": "Power Extension Cord - 25 Ft",
         "description": "25 feet, 3-prong 16/3C SJTW extension cord Orange Single outlet, AC power UL listed",
-        "price": 16.2
+        "price": 20.12
       }
     ],
     "specs": {
@@ -18088,7 +18125,7 @@ const products = [
         "sku": "LTB412",
         "name": "Wall Mount",
         "description": "Designed for 4-inch PTZ camera model PTZIP41XX",
-        "price": 47.25
+        "price": 58.68
       }
     ],
     "specs": {
@@ -18135,7 +18172,7 @@ const products = [
         "sku": "LTAC3125",
         "name": "HDMI Cable With Ethernet - 25 Ft",
         "description": "HDMI cable with Ethernet 4.5 / 10 / 25 / 50-foot cable lengths available Hi-Speed 1080p / 3D, 100% triple-shield 24K Gold plated with nylon jacket",
-        "price": 13.5
+        "price": 16.77
       }
     ],
     "specs": {
@@ -18177,13 +18214,13 @@ const products = [
         "sku": "LTKF1356M-T",
         "name": "LTS MIFARE Key Fob, Thick",
         "description": "13.56 MIFARE classic 8- and 10-digit # printed",
-        "price": 5.4
+        "price": 6.71
       },
       {
         "sku": "LTKF1356M",
         "name": "MIFARE Key Fob",
         "description": "13.56 MIFARE Classic 8- Digit and 10-digit # printed",
-        "price": 5.4
+        "price": 6.71
       }
     ],
     "specs": {
@@ -18236,7 +18273,7 @@ const products = [
         "sku": "LTCMHD7382-28F",
         "name": "Platinum 8 MP 4-In-1 Dome HD-TVI Camera",
         "description": "8.29 MP high performance CMOS 3840 \u00d7 2160 resolution 2.8 mm fixed lens Matrix IR 2.0, smart IR, up to 98 ft (30 m) IR distance DWDR, DNR 4-in-1 video output (switchable among TVI / AHD / CVI / CVBS) IP67, IK10 OSD Menu via UTC technology with Platinu...",
-        "price": 101.25
+        "price": 125.75
       }
     ],
     "specs": {
@@ -18283,7 +18320,7 @@ const products = [
         "sku": "VSWM342",
         "name": "Wall Mount",
         "description": "Wall Mount for camera models listed below: VSIP3442W-28MA VSIP7442W-28S VSIP3182W-28 VSIP7182W-28",
-        "price": 40.5
+        "price": 50.3
       }
     ],
     "specs": {
@@ -18326,7 +18363,7 @@ const products = [
         "sku": "HU-BLG",
         "name": "Hugolog Smart Lock Bluetooth Gateway",
         "description": "Compatible with HU03 and HU04 Smart Lock Wireless Connection to Smart Lock and Wi-Fi Remote Control Smart Lock over Internet",
-        "price": 52.65
+        "price": 65.39
       }
     ],
     "specs": {
@@ -18377,7 +18414,7 @@ const products = [
         "sku": "LTCMHR9252N-28FN",
         "name": "Platinum 5 MP Fixed Bullet HD-TVI Camera",
         "description": "5 MP, 2560 \u00d7 1944 resolution 2.8 mm, 3.6 mm fixed focal lens Smart IR, up to 131 ft (40 m) IR distance 4-in-1 video output (TVI / AHD / CVI / CVBS) IP67 protection",
-        "price": 79.65
+        "price": 98.93
       }
     ],
     "specs": {
@@ -18423,7 +18460,7 @@ const products = [
         "sku": "VSJB763",
         "name": "Junction Box",
         "description": "Designed for models: VSIP7552FW-SE VSIP7643W-SZ VSIP3C82xx",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "specs": {
@@ -18466,7 +18503,7 @@ const products = [
         "sku": "VSJB973",
         "name": "Junction Box For VSIP83XXMDA",
         "description": "Junction box for VSIP83XXMDA",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "specs": {
@@ -18507,7 +18544,7 @@ const products = [
         "sku": "LTK1108M",
         "name": "MIFARE Card Reader",
         "description": "32-bit high-speed processor Supports RS-485, Wiegand (W26, W34) and OSDP protocols Built-in MIFARE card reader module (frequency: 13.56 mHz); meets ISO 14443-A standard Tamper resistance Built-in buzzer status indicator Online upgrading Accurate data...",
-        "price": 79.65
+        "price": 98.93
       }
     ],
     "specs": {
@@ -18549,7 +18586,7 @@ const products = [
         "sku": "LTB762",
         "name": "LTB762",
         "description": "Wall Mount Bracket for 5 inch PTZ",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -18595,7 +18632,7 @@ const products = [
         "sku": "LTB378",
         "name": "Vertical Pole Mount",
         "description": "Universal Vertical Pole Mount Steel Material 127x143x250mm Compatible with HDTVI Cameras: CMHD3423D, CMHD3423DW, CMHD3433-A, CMHD7422, CMHT2722, CMHT2722-28, CMHT2722W, CMHT2732, CMHT2732-28, CMHT1432xx, CMHT1422xx, CMHT1532xx, CMHT1522xx, CMHT2132xx...",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -18636,7 +18673,7 @@ const products = [
         "sku": "LTB340",
         "name": "In-Ceiling Flush Mount",
         "description": "Designed for models: CMHD3423D CMHD3423DW CMHD3433-A",
-        "price": 31.05
+        "price": 38.56
       }
     ],
     "specs": {
@@ -18678,13 +18715,13 @@ const products = [
         "sku": "LTAC2125B",
         "name": "Pre-Made Siamese Cable With Connectors - 125 Feet, Black",
         "description": "All-In-One Power and Video Cable BNC / RG59 + DC",
-        "price": 17.55
+        "price": 21.8
       },
       {
         "sku": "LTAC2125B-HD",
         "name": "Pre-Made HD BNC + Power Cable - 125 Ft, Black",
         "description": "HD Pre-made BNC + Power 125 feet Black (Excluded from free shipping)",
-        "price": 16.2
+        "price": 20.12
       }
     ],
     "specs": {
@@ -18722,7 +18759,7 @@ const products = [
         "sku": "LTSIGNB",
         "name": "Warning Sign",
         "description": "9\"(W) x11\"(H) x3 / 16\"(D) Plastic Warning Sign",
-        "price": 2.97
+        "price": 3.69
       }
     ],
     "specs": {
@@ -18760,7 +18797,7 @@ const products = [
         "sku": "DVCPA5A",
         "name": "Power Adapter - 5,000 MA",
         "description": "UL listed 12V DC 5 Amp",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -18800,7 +18837,7 @@ const products = [
         "sku": "LTA2003",
         "name": "Terminal Connector",
         "description": "9 Terminal DC &amp; AC Connector",
-        "price": 10.39
+        "price": 12.9
       }
     ],
     "specs": {
@@ -18840,7 +18877,7 @@ const products = [
         "sku": "LTAH2100E",
         "name": "Extender - 2x USB RJ45",
         "description": "2x USB RJ45 Extender Extend Distance to 48m USB2, USB A Female Plug&amp;Play Cable type:CAT5,5E,6,UTP",
-        "price": 31.05
+        "price": 38.56
       }
     ],
     "specs": {
@@ -18882,7 +18919,7 @@ const products = [
         "sku": "LTAC2031W",
         "name": "RG59 + DC Copper Siamese Cable Pull Box - 500 Ft, White",
         "description": "RG59 coaxial 95% braided, shield-foil + 18/2 18 AWG copper shield (3/7) CM / CL2-Rated PVC jacket Sequential foot / zone marking FT-4",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -18924,7 +18961,7 @@ const products = [
         "sku": "LTAC2030B",
         "name": "Coaxial Siamese Cable (No Connectors) - 500 Ft, Black",
         "description": "RG59 Coaxial 95% Braided, Shield-Foil + 18/2 18 AWG copper shield (3/7) CM / CL2-Rated PVC jacket Sequential foot / zone marking FT-4",
-        "price": 114.75
+        "price": 142.52
       }
     ],
     "specs": {
@@ -18966,7 +19003,7 @@ const products = [
         "sku": "LTAC2032B",
         "name": "Coaxial Siamese Cable (No Connectors) - 1,000 Feet",
         "description": "*Please Call For Price and Availability Type RG59 Coaxial 95% Braided, Shield-Foil + 18/2 18 AWG Copper Shield (3/7) CM/CL2 Rated PVC Jacket Sequential Foot/ Zone Marking FT-4 Black",
-        "price": 220.05
+        "price": 273.3
       }
     ],
     "specs": {
@@ -19011,7 +19048,7 @@ const products = [
         "sku": "LTAC3005",
         "name": "HDMI Cable With Ethernet - 4.5 Ft",
         "description": "Hi-speed 1080p / 3D 100% triple shield 24K gold-plated Nylon jacket",
-        "price": 4.05
+        "price": 5.03
       }
     ],
     "specs": {
@@ -19053,7 +19090,7 @@ const products = [
         "sku": "LTEL002R",
         "name": "Red LED Exit Sign With Battery Backup",
         "description": "State building and fire code-compliant emergency sign Thermal plastic compact lightweight design Double snap-in canopy for easy, durable mounting options UL listed 2-Year warranty Includes double face plate and rechargeable NiCad batteries (up to 8 h...",
-        "price": 18.9
+        "price": 23.47
       }
     ],
     "specs": {
@@ -19095,7 +19132,7 @@ const products = [
         "sku": "DHST1000VX005",
         "name": "Seagate Skyhawk 1 TB Hard Disk Drive",
         "description": "1 TB Seagate Skyhawk Surveillance Grade Hard Disk Drive (HDD) ImagePerfect\u2122 Firmware NVR-Ready Design Workload Rating of 180 TB / Year 3.5-inch form factor",
-        "price": 71.55
+        "price": 88.87
       }
     ],
     "specs": {
@@ -19139,7 +19176,7 @@ const products = [
         "sku": "LTAC5100W-CMR",
         "name": "99.99% Oxygen-Free Copper CMR Rated UL Listed Network Cable - CAT5e",
         "description": "99.99% OFC (Oxygen Free Copper) CMR Rated UL Listed 1000ft RoHS Compliant Pass Fluke Test",
-        "price": 153.9
+        "price": 191.14
       }
     ],
     "specs": {
@@ -19182,13 +19219,13 @@ const products = [
         "sku": "LTAC6250BL-CMR",
         "name": "99.99% Oxygen-Free Copper CMR Rated UL Listed Network Cable - Cat6",
         "description": "99.99% OFC (Oxygen-Free Copper)&nbsp; CMR Rated UL Listed RoHS Compliant Pass Fluke Test",
-        "price": 195.75
+        "price": 243.12
       },
       {
         "sku": "LTAC6250BL-CMP",
         "name": "U/UTP Categoty 6 Indoor Plenum CMP Cable",
         "description": "Plenum CMP Rated&nbsp; Oxygen-Free-Copper&nbsp; UL Listed&nbsp; ISO/IEC11801, TIA-568-C.2&nbsp; RoHS Compliant&nbsp; Pass FLUKE test",
-        "price": 380.7
+        "price": 472.83
       }
     ],
     "specs": {
@@ -19231,7 +19268,7 @@ const products = [
         "sku": "LTAC5100BL-CMR",
         "name": "99.99% Oxygen-Free Copper CMR Rated UL Listed Network Cable - Cat5e",
         "description": "99.99% OFC (Oxygen-Free Copper)&nbsp; CMR Rated UL Listed RoHS Compliant Pass Fluke Test",
-        "price": 153.9
+        "price": 191.14
       }
     ],
     "specs": {
@@ -19272,7 +19309,7 @@ const products = [
         "sku": "LTPS0606-M",
         "name": "Power Strip - 6:6 Metal Housing",
         "description": "6 x outlets 6ft. Yellow 14 gauge cord Heavy duty metal housing ETL listed 15A, 1875W",
-        "price": 21.6
+        "price": 26.83
       }
     ],
     "specs": {
@@ -19313,7 +19350,7 @@ const products = [
         "sku": "LTPE1420-3",
         "name": "Power Extension Cord - 20 Ft",
         "description": "20 feet, 3-prong 14/3C indoor extension cord Orange Triple outlet (3 female) Sliding cover feature for enhanced safety UL listed",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -19355,7 +19392,7 @@ const products = [
         "sku": "LTAC1822Y-CMR",
         "name": "Stranded Control Cable - 500 Feet",
         "description": "18/4 for Lock Power Circuits 22/2 and 22/4 for Exit Devices Shielded 22/6 for Reader",
-        "price": 487.35
+        "price": 605.29
       }
     ],
     "specs": {
@@ -19399,7 +19436,7 @@ const products = [
         "sku": "LTB202",
         "name": "Wall Mount Bracket For PTZIP20x",
         "description": "Designed for PTZIP20x video cameras",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -19454,7 +19491,7 @@ const products = [
         "sku": "LTCMHT1722WE-28F",
         "name": "Platinum 2 MP Turret HD-TVI Camera",
         "description": "2 MP high performance CMOS Ultra-low light imaging 1920 x 1080 resolution 2.8 mm fixed focal lens 130 dB true WDR, 3D DNR Matrix IR 2.0, smart IR, up to 197 ft (60 m) IR distance 4-video-signals-in-1 output, switchable among TVI / AHD / CVI / CVBS IP...",
-        "price": 74.25
+        "price": 92.22
       }
     ],
     "specs": {
@@ -19501,7 +19538,7 @@ const products = [
         "sku": "LTK3607-FLOOR",
         "name": "Floor Stand For Temperature Measurement Devices",
         "description": "Floor stand designed for use with LTK3607FM-T or LTK3607FM Power, network and data wires included &amp; partially installed Optional wiring holes on back and bottom",
-        "price": 221.4
+        "price": 274.98
       }
     ],
     "specs": {
@@ -19546,13 +19583,13 @@ const products = [
         "sku": "HU02-SNL",
         "name": "Hugolog Electronic Deadbolt Lock With Handle (Satin Nickel)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof",
-        "price": 147.15
+        "price": 182.76
       },
       {
         "sku": "HU02-BLK",
         "name": "Hugolog Electronic Deadbolt Lock With Handle (Black)",
         "description": "Door Entry with Code/Key Motorized Auto-Locking IP54 Waterproof",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -19595,7 +19632,7 @@ const products = [
         "sku": "LTAC2046W",
         "name": "Cat6 Cable In Pull Box - 1,000 Ft, White",
         "description": "Cable Cat6 23 AWG / 4 Pairs Pull Box White 1,000 Ft",
-        "price": 89.1
+        "price": 110.66
       }
     ],
     "specs": {
@@ -19637,7 +19674,7 @@ const products = [
         "sku": "LTAC2040W",
         "name": "Cat5 Cable, 24 AWG - 1,000 Feet",
         "description": "Cat5 Cable 1,000 ft 24 AWG / 4 Pairs Pull Box White",
-        "price": 68.85
+        "price": 85.51
       }
     ],
     "specs": {
@@ -19690,7 +19727,7 @@ const products = [
         "sku": "LTD3432D-PL",
         "name": "H.265+ 32-Channel Penta-Brid 5 M-N / 1080p AI Digital Video Recorder (DVR)",
         "description": "H.265+ / H.265 dual-stream video compression Supports HDCVI / AHD / TVI / CVBS / IP video inputs Up to 32 channels of IP camera inputs, each channel up to 8 MP; up to 128 Mbps incoming bandwidth Up to 2 channels video stream (analog channel) perimete...",
-        "price": 1024.65
+        "price": 1272.62
       }
     ],
     "specs": {
@@ -19738,7 +19775,7 @@ const products = [
         "sku": "VSWM424",
         "name": "Wall Mount",
         "description": "Wall mount for models: VSPTZIP424X25WIR VSPTZIP674X33WIR",
-        "price": 35.1
+        "price": 43.59
       }
     ],
     "specs": {
@@ -19787,7 +19824,7 @@ const products = [
         "sku": "VSPP643",
         "name": "Pro-VS PTZ Dome Parapet Bracket Mount",
         "description": "Parapet Mount for VSPTZIP67xx/42xx",
-        "price": 83.7
+        "price": 103.96
       }
     ],
     "specs": {
@@ -19833,7 +19870,7 @@ const products = [
         "sku": "LTB331",
         "name": "Pendant Mount",
         "description": "Pendant mount for camera models: CMIP33xxMDA CMIP3CxxMDA CMIP10/13xxMA CMIP1043NW-MZ",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -19882,7 +19919,7 @@ const products = [
         "sku": "LTAB4020NT",
         "name": "Single Channel HD Passive Video Balun",
         "description": "Real-time transmission over UTP Cat5e / Cat6 No power required Compatible with all HD-TVI / CVI / AHD / CVBS analog cameras Please refer to \u201cTransmission Distance Chart\u201d for data on 720p / 960p / 1080p / 3 MP / 4 MP / 5 MP/4K cameras Male BNC connect...",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -19926,7 +19963,7 @@ const products = [
         "sku": "VSPD342",
         "name": "Pendant Mount (For Use With Junction Box VSJB742)",
         "description": "Pendant Mount designed to fit Junction Box model VSJB742 for camera models: VSIP3Cxx VSIP31xx VSIP34xx VSIP71xx VSIP74xx VSIP76xx",
-        "price": 49.95
+        "price": 62.04
       }
     ],
     "specs": {
@@ -19971,7 +20008,7 @@ const products = [
         "sku": "VSPM342",
         "name": "Pro-VS Pole Mount",
         "description": "Designed for these models: VSIP31xx VSIP34xx VSIP71xx VSIP74xx",
-        "price": 40.5
+        "price": 50.3
       }
     ],
     "specs": {
@@ -20011,7 +20048,7 @@ const products = [
         "sku": "DHWD33PURZ",
         "name": "Western Digital Purple 3 TB Hard Disk Drive, 5,400 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 132.3
+        "price": 164.32
       }
     ],
     "specs": {
@@ -20058,7 +20095,7 @@ const products = [
         "sku": "LXPM06",
         "name": "Pro-X Parapet Mount",
         "description": "This mount fits models listed below: LXPTZIP414W-X25IR LXPTZIP514W LXIP7553W4-SZ12 LXIP75122F-SE",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -20104,7 +20141,7 @@ const products = [
         "sku": "LTB349",
         "name": "Angled Ceiling Mount",
         "description": "This plastic ceiling mount is compatible with: CMHD7422 CMIP3412xx CMIP3422xx CMIP3432xx CMIP7412xx CMIP7422xx CMIP7432xx CMIP7442xx",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "specs": {
@@ -20147,7 +20184,7 @@ const products = [
         "sku": "LTB397",
         "name": "Corner Mount",
         "description": "Compatible with PTZ Cameras",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -20195,7 +20232,7 @@ const products = [
         "sku": "LTB379",
         "name": "Corner Mount",
         "description": "Corner mount (external) made of aluminum alloy. Compatible with HD-TVI Cameras listed below: CMHD3423D CMHD3423DW CMHD3433-A CMHT1422xx CMHT1432xx CMHT1522xx CMHT1532xx CMHT1623W CMHT1823xx CMHT2122xx CMHT2132xx CMHT2722 CMHT2722-28 CMHT2722W CMHT273...",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -20246,7 +20283,7 @@ const products = [
         "sku": "LTB371",
         "name": "Pendant Mount For Matrix IR Domes",
         "description": "Pendant Mount Aluminum Alloy 530mm (2x230mm) Compatible with HDTVI Cameras; CMHT2722, CMHT2722-28, CMHT2722W, CMHT2732, CMHT2732-28,&nbsp;CMHT1623W,&nbsp;CMHT1823xx Compatible with IP Cameras; CMIP3012xx, CMIP3022xx, CMIP3032xx, CMIP3042xx, CMIP1112x...",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -20286,7 +20323,7 @@ const products = [
         "sku": "PS120V0800",
         "name": "Power Adapter - 800 MA",
         "description": "UL listed 12V DC 800 mA",
-        "price": 4.45
+        "price": 5.53
       }
     ],
     "specs": {
@@ -20326,7 +20363,7 @@ const products = [
         "sku": "PS120V5-D",
         "name": "Power Supply - 4P;5Amp",
         "description": "4 Port Power Box DC 12V 5Amp PTC output",
-        "price": 43.2
+        "price": 53.65
       }
     ],
     "specs": {
@@ -20366,7 +20403,7 @@ const products = [
         "sku": "LTA2010",
         "name": "Pigtail - Male",
         "description": "Male Pigtail Adaptor",
-        "price": 0.9
+        "price": 1.12
       }
     ],
     "specs": {
@@ -20406,7 +20443,7 @@ const products = [
         "sku": "LTA2011",
         "name": "DC Power Splitter - 1 Female To 4 Male",
         "description": "DC Male x 4 DC Female x 1",
-        "price": 2.7
+        "price": 3.35
       }
     ],
     "specs": {
@@ -20446,7 +20483,7 @@ const products = [
         "sku": "LTA2018",
         "name": "DC Power Splitter - 1 Female To 8 Male",
         "description": "DC Female x 1 DC Male x 8",
-        "price": 2.7
+        "price": 3.35
       }
     ],
     "specs": {
@@ -20486,7 +20523,7 @@ const products = [
         "sku": "LTAH3100E",
         "name": "Extender - VGA / Audio / RJ45",
         "description": "Video Type: VGA Supports resolution up to 1920 x 1440 Cable type: Cat5, Cat5e, Cat6, and UTP Extends transmission up to 600 m",
-        "price": 128.25
+        "price": 159.29
       }
     ],
     "specs": {
@@ -20526,7 +20563,7 @@ const products = [
         "sku": "LTB380D",
         "name": "Mounting Bracket",
         "description": "Suitable for 1U 380 chassis",
-        "price": 6.75
+        "price": 8.38
       }
     ],
     "specs": {
@@ -20568,7 +20605,7 @@ const products = [
         "sku": "LTAC3100",
         "name": "HDMI Cable With Ethernet - 100 Ft",
         "description": "Ethernet transmission Hi-Speed 1080p with USB Booster 26 AWG",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -20611,13 +20648,13 @@ const products = [
         "sku": "LTAC2100B",
         "name": "Pre-Made Siamese Cable With Connectors - 100 Ft, Black",
         "description": "B/W with BNC and Power",
-        "price": 10.8
+        "price": 13.41
       },
       {
         "sku": "LTAC2100B-HD",
         "name": "HD-TVI Cable, Pre-Made BNC + Power - 100 Ft, Black",
         "description": "SDI pre-made BNC + Power UL listed 100 feet Black Excluded from free shipping",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -20659,7 +20696,7 @@ const products = [
         "sku": "LTAC2046",
         "name": "Cat6 Network Cable Commercial Grade - 1,000 Ft",
         "description": "1,000 ft CCA Cat6 Commercial grade",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -20703,7 +20740,7 @@ const products = [
         "sku": "LTK1107M",
         "name": "Professional MIFARE Card Wiegand Reader",
         "description": "&nbsp; &nbsp; &nbsp; 8 or 10 Digit Selectable (via DIP) IP65 Weatherproof UL Listed Surface Mount",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -20746,13 +20783,13 @@ const products = [
         "sku": "LTAC6250B-CMX",
         "name": "99.99% Oxygen-Free Copper CMR Rated Cat6 Network Cable",
         "description": "Outdoor rated, waterproof in wet locations RoHS Compliant Passes fluke test Excluded from free shipping",
-        "price": 234.9
+        "price": 291.75
       },
       {
         "sku": "LTAC6250B-CMR",
         "name": "99.99% Oxygen-Free Copper CMR Rated Network Cable - Cat6",
         "description": "99.99% OFC (Oxygen-Free Copper)&nbsp; Outdoor Rated&nbsp; RoHS Compliant Pass Fluke Test",
-        "price": 195.75
+        "price": 243.12
       }
     ],
     "specs": {
@@ -20795,7 +20832,7 @@ const products = [
         "sku": "LTPS1215-A",
         "name": "Power Strip - 12:15 Aluminum Housing",
         "description": "15-foot cord ETL listed 15 A, 1,875 W",
-        "price": 49.95
+        "price": 62.04
       }
     ],
     "specs": {
@@ -20834,7 +20871,7 @@ const products = [
         "sku": "LTPE1610",
         "name": "Power Extension Cord - 10 Ft",
         "description": "10 feet 16/3C SJTW cord Orange Single outlet UL listed",
-        "price": 12.75
+        "price": 15.84
       }
     ],
     "specs": {
@@ -20872,7 +20909,7 @@ const products = [
         "sku": "LTPE1650",
         "name": "Power Extension Cord - 50 Ft",
         "description": "50 feet 16/3C SJTW cord Orange Single outlet UL listed",
-        "price": 24.3
+        "price": 30.18
       }
     ],
     "specs": {
@@ -20912,7 +20949,7 @@ const products = [
         "sku": "LTKC1356M",
         "name": "MIFARE Card",
         "description": "13.56 MIFARE Classic 8- Digit and 10-digit # printed",
-        "price": 4.05
+        "price": 5.03
       }
     ],
     "specs": {
@@ -20954,7 +20991,7 @@ const products = [
         "sku": "LTAH1070E",
         "name": "HDMI Extender",
         "description": "HD video can reach up 165 feet (50 m) (1080p @ 60 Hz) Supports HDMI 1.3 and HDCP 1.2 LED Status to indicate HDMI Activity Supports audio format DTS-HD / Dolby True HD / PCM / Dolby AC3 / DSD Easy and convenient to use; plug &amp; play, no need to con...",
-        "price": 97.2
+        "price": 120.72
       }
     ],
     "specs": {
@@ -21008,7 +21045,7 @@ const products = [
         "sku": "LTCMHR6422WE-28F",
         "name": "Platinum 2 MP Fixed Bullet HD-TVI Camera",
         "description": "2 MP high performance CMOS \tUltra-low light \t1920 x 1080 resolution \t2.8 mm fixed lens \t130 dB true WDR, 3D DNR \tMatrix IR 2.0, smart IR with range up to 98 ft (30 m) IR distance \t4-in-1 video output (TVI / AHD / CVI / CVBS) \tIP67 protections \tOSD Me...",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -21053,7 +21090,7 @@ const products = [
         "sku": "LTK1108MK",
         "name": "MIFARE Card Reader",
         "description": "32-bit high-speed processor Supports RS-485, Wiegand (W26, W34) and OSDP protocols Build-in MIFARE card reader module (frequency: 13.56 mHz); meets ISO 14443-A standards Tamper resistant Build-in buzzer for status indication Online upgrading Accurate...",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "specs": {
@@ -21093,7 +21130,7 @@ const products = [
         "sku": "DHWD181PURP",
         "name": "Western Digital Purple Pro 18 TB AI Hard Disk Drive, 7,200 RPM Class",
         "description": "Supports up to 550 TB per year workload rate. Designed with tarnish-resistant components for harsh environments, and with additional robustness for multi-bay enclosures. Built for 24/7, always-on, high-definition security systems. With incredible wor...",
-        "price": 538.65
+        "price": 669.0
       }
     ],
     "specs": {
@@ -21139,13 +21176,13 @@ const products = [
         "sku": "LTB701B-A",
         "name": "Junction Box For Dome Camera (Black)",
         "description": "Aluminum alloy material with surface spray treatment Waterproof design Cable hole on bracket makes the feature better Dimensions: \u03a6 137 \u00d7 53.4 \u00d7 164.8 mm",
-        "price": 31.05
+        "price": 38.56
       },
       {
         "sku": "LTB701",
         "name": "Junction Box",
         "description": "Designed for camera models CMIP3CXX",
-        "price": 22.95
+        "price": 28.5
       }
     ],
     "specs": {
@@ -21191,7 +21228,7 @@ const products = [
         "sku": "LTAH014LN",
         "name": "HDMI Splitter - 1-In, 4-Out",
         "description": "Support for: HDMI 1.4b version 3D video format High resolution up to 3840 x 2160 / 30 Hz Highest rate of 3.4 GB and TMDS clock can be up to 340 MHz 8 / 10 / 12-bit deep color AWG 26 HDMI Standard Cable: Input up to 33 ft (10 m), output up to 49 ft (1...",
-        "price": 87.75
+        "price": 108.99
       }
     ],
     "specs": {
@@ -21244,7 +21281,7 @@ const products = [
         "sku": "LTCMHR6322-28F",
         "name": "Platinum 2 MP Fixed Bullet 4-In-1 HD-TVI Camera",
         "description": "NDAA Compliant 2 MP 4-in-1 Bullet Camera 1/3\" Progressive CMOS 2.8 mm fixed lens 2D DNR IR up to 66 ft (20 m) 4-in-1 video output (TVI / AHD / CVI / CVBS) IP66 protection",
-        "price": 43.2
+        "price": 53.65
       }
     ],
     "specs": {
@@ -21286,7 +21323,7 @@ const products = [
         "sku": "DHWD42PURZ",
         "name": "Western Digital Purple 4 TB Hard Disk Drive, 5,400 RPM",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 126.9
+        "price": 157.61
       }
     ],
     "specs": {
@@ -21329,7 +21366,7 @@ const products = [
         "sku": "LTB731",
         "name": "Pendant Mount",
         "description": "Designed for camera models: CMIP73xxMDA CMIP7042W-28MA",
-        "price": 74.25
+        "price": 92.22
       }
     ],
     "specs": {
@@ -21383,7 +21420,7 @@ const products = [
         "sku": "LTCMHT2122-28LF",
         "name": "Platinum 2 MP Turret HD-TVI Camera",
         "description": "High quality imaging with 2 MP, 1920 x 1080 resolution Smart dual light optimizes security with flexible lighting options 2.8 mm fixed focal lens Up to 65 ft (20 m) supplemental white light and IR range for bright night imaging One switchable port fo...",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -21440,7 +21477,7 @@ const products = [
         "sku": "LTCMHT1823",
         "name": "Eco - Platinum HD-TVI Turret Camera 2.1MP - White",
         "description": "&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 2.1MP High Definition Full HD 1080P 1920X1080P@30fps 2.8-12mm Varifocal Lens 42 IR LEDs up to 131ft Outdoor/Indoor DC 12V IP66 UTC &nbsp;",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -21499,7 +21536,7 @@ const products = [
         "sku": "LTCMIP3883NW-SZ",
         "name": "Platinum 8 MP Varifocal Turret IP Camera",
         "description": "8 MP / 4K High Definition, Up to 3840 x 2160 @ 15 fps 2.8 - 12 mm Varifocal Motorize Lens with Smart Focus 0.018 Lux @ f 1.6 Matrix IR 2.0, IR Range up to 100 feet H.265, H.265+, H.264, H.264+ Ready True WDR 120 dB IP67 &amp; IK10 MicroSD Slot for ca...",
-        "price": 376.65
+        "price": 467.8
       }
     ],
     "specs": {
@@ -21560,7 +21597,7 @@ const products = [
         "sku": "LTCMHT1752W-28CF",
         "name": "Platinum 5 MP Fixed HD-TVI Turret Camera",
         "description": "5 MP, 2560 x 1944 resolution Color imaging 24/7 2.8 mm fixed lens 0.0005 Lux @ f1.0 Up to 66 ft(20 m) white light distance 3D DNR, true WDR 4-in-1 video output (switchable among TVI / AHD / CVI / CVBS) IP67 OSD menu via UTC technology with Platinum D...",
-        "price": 101.25
+        "price": 125.75
       }
     ],
     "specs": {
@@ -21617,7 +21654,7 @@ const products = [
         "sku": "LTCMIP3C82W-28MDAL",
         "name": "Platinum 8 MP Color 24/7 Fixed Turret IP Camera",
         "description": "High-quality imaging with 8 MP resolution Efficient H.265+ compression technology Clear imaging against strong backlight with 130 dB WDR technology Real-time security via built-in two-way audio Audio and alarm interface available Water and dust resis...",
-        "price": 322.65
+        "price": 400.73
       }
     ],
     "specs": {
@@ -21673,7 +21710,7 @@ const products = [
         "sku": "LXIP7783W-SDZ",
         "name": "Pro-X 8 MP Vari-Focal Dome IP Camera",
         "description": "8 MP, Starlight IP Camera 3840 x 2160 @ 30 fps (20 fps with MD 2.0 enabled) 2.7 - 13.5 mm varifocal lens 0.005 Lux @ f 1.5 (Color, 30 IRE), 0 Lux with IR light on Smart H.264 / H.265 compression 1/2.8\" Progressive Scan CMOS Matrix IR LED up to 131 fe...",
-        "price": 457.65
+        "price": 568.4
       }
     ],
     "specs": {
@@ -21722,7 +21759,7 @@ const products = [
         "sku": "LTPTZIP688NW-X36",
         "name": "8 MP 36\u00d7 Network Speed Dome",
         "description": "1/1.8\" Progressive Scan CMOS High quality imaging with 8 MP resolution Excellent low-light performance 36\u00d7 optical zoom and 16\u00d7 digital zoom provide close up views over expansive areas Supports rapid focus Water and dust resistant (IP67) and vandal p...",
-        "price": 3373.65
+        "price": 4190.07
       }
     ],
     "specs": {
@@ -21773,7 +21810,7 @@ const products = [
         "sku": "LTCMIP7C82W-28MDA",
         "name": "Platinum 8 MP Color 24/7 Fixed Dome IP Camera",
         "description": "High-quality imaging with 8 MP resolution Efficient H.265+ compression technology Clear imaging against strong backlight due to 130 dB WDR technology Built-in microphone for real-time audio security, audio and alarm interface available Water and dust...",
-        "price": 325.35
+        "price": 404.08
       }
     ],
     "specs": {
@@ -21827,7 +21864,7 @@ const products = [
         "sku": "LTCMIP1382NW-28MA",
         "name": "Platinum 8 MP IR Fixed Turret IP Camera",
         "description": "High quality imaging with 4K resolution High efficiency H.265+ compression technology Clear imaging even with strong back lighting with 120 dB WDR Water and dust resistant (IP67) Matrix IR 2.0: Advanced infrared technology with extended IR range LTS-...",
-        "price": 187.65
+        "price": 233.06
       }
     ],
     "specs": {
@@ -21881,7 +21918,7 @@ const products = [
         "sku": "LXIP3C8PWI-SDL",
         "name": "Pro-X 8 MP E-Tracking Dual-Lens IP Camera",
         "description": "8 MP, 4096 x 1860 @ 20 fps Fixed, dual 2.8 mm lenses Built-in, digital E-Tracking technology keeps targets in the field of view 0.001 lux @ f 1.4 (Color, 30 IRE), 0 lux with supplemental visible light on Supplemental light range up to 98 feet Smart H...",
-        "price": 403.65
+        "price": 501.33
       }
     ],
     "specs": {
@@ -21938,7 +21975,7 @@ const products = [
         "sku": "LTD8416M-ST",
         "name": "Platinum 16-Channel 8 MP DVR",
         "description": "Up to 16 analog camera inputs and 4 SATA interfaces H.264 / H.264+ / H.265 / H.265 Pro / H.265 Pro+ video compression Up to 8 MP @ 8 fps / 5 MP @ 12 fps encoding capability HD-TVI / AHD / CVI / CVBS / IP video inputs Up to 34 network camera inputs PO...",
-        "price": 963.9
+        "price": 1197.16
       }
     ],
     "specs": {
@@ -21989,7 +22026,7 @@ const products = [
         "sku": "LTB308",
         "name": "Cable Management Bracket",
         "description": "Cable Managed Bracket Aluminum/ Beige",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "specs": {
@@ -22033,7 +22070,7 @@ const products = [
         "sku": "LTB303W",
         "name": "Camera Bracket",
         "description": "For indoor use",
-        "price": 2.03
+        "price": 2.52
       }
     ],
     "specs": {
@@ -22074,7 +22111,7 @@ const products = [
         "sku": "LTB303TW",
         "name": "Camera Bracket With T-Bar",
         "description": "",
-        "price": 2.7
+        "price": 3.35
       }
     ],
     "specs": {
@@ -22115,7 +22152,7 @@ const products = [
         "sku": "LTAC3010B",
         "name": "HDMI Ethernet Cable - 10 Ft",
         "description": "10 Ft. HDMI Ver 1.4a Cat2 Certified Audio / Video Cable",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "specs": {
@@ -22157,7 +22194,7 @@ const products = [
         "sku": "LTAS06",
         "name": "Audio Monitor Microphone",
         "description": "Micro-chip design, small noise, high-fidelity. Operating-voltage: 6-12VDC. Frequency range: 100-5500Hz. The adjustable sensitivity. Bug range: 30 square meters.",
-        "price": 5.4
+        "price": 6.71
       }
     ],
     "specs": {
@@ -22198,7 +22235,7 @@ const products = [
         "sku": "LTL281212",
         "name": "Varifocal Lens Box Camera",
         "description": "2.8 - 12 mm varifocal lens 1/2.7\" 2 MP sensor Auto iris",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -22237,7 +22274,7 @@ const products = [
         "sku": "LTL510011",
         "name": "Varifocal Lens Box Camera",
         "description": "1/3\" 5.0 - 100 mm Auto iris Vari-focal lens",
-        "price": 52.65
+        "price": 65.39
       }
     ],
     "specs": {
@@ -22275,7 +22312,7 @@ const products = [
         "sku": "LTLM2812",
         "name": "Varifocal Lens Box Camera",
         "description": "2.1 MP high definition imaging 2.8 - 12 mm varifocal lens",
-        "price": 52.65
+        "price": 65.39
       }
     ],
     "specs": {
@@ -22317,7 +22354,7 @@ const products = [
         "sku": "LTK3300PMK",
         "name": "Outdoor EM & MIFARE Keypad Terminal",
         "description": "MIFARE or EM cards / fobs supported Keypad for programming and entry with code IP65 Outdoor IK10 vandal resistance, metal housing",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "specs": {
@@ -22360,7 +22397,7 @@ const products = [
         "sku": "PFA137",
         "name": "Junction Box For LTDHIP39222W, LTDHIP75XXW",
         "description": "Junction Box for LTDHIP39222W, LTDHIP75XXW",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "specs": {
@@ -22399,7 +22436,7 @@ const products = [
         "sku": "DHWD84PURZ",
         "name": "WD Purple 8 TB Hard Disk Drive, 5,640 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 272.7
+        "price": 338.69
       }
     ],
     "specs": {
@@ -22444,7 +22481,7 @@ const products = [
         "sku": "VSRM72",
         "name": "Rackmount Bracket For 1U Pro-VS NVR",
         "description": "Rackmount bracket for 1U Pro-VS NVR (VSN7208-P8, VSN7216-P16)",
-        "price": 7.08
+        "price": 8.79
       }
     ],
     "specs": {
@@ -22492,13 +22529,13 @@ const products = [
         "sku": "LTAC2150W-HD",
         "name": "HD-TVI Cable, BNC + Power - 150 Feet",
         "description": "Pre-made BNC + Power 150 feet White *Excluded from free shipping",
-        "price": 18.9
+        "price": 23.47
       },
       {
         "sku": "LTAC2150W",
         "name": "Pre-Made Siamese Cable With Connectors - 150 Ft White",
         "description": "All-in-one power and video cable BNC / RG59 + DC",
-        "price": 18.9
+        "price": 23.47
       }
     ],
     "specs": {
@@ -22539,7 +22576,7 @@ const products = [
         "sku": "WM-CEILING-LCD",
         "name": "Ceiling Mount Monitor Bracket",
         "description": "LCD Monitor Ceiling Mount 15.5\u201d-22.8\u201d Ext. Max Ld. 44lbs. Support 10-30\u201d Monitor",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "price": 19.0,
@@ -22580,7 +22617,7 @@ const products = [
         "sku": "WM-LCD",
         "name": "Wall Mount LCD Monitor Bracket",
         "description": "LCD Monitor Wall Mount / Double Arm 2.2\" ~ 14.4\" Ext. 33 lbs Max Load / 180 \u00b0 Swivel / \u00b145 Tilt VESA 75/100mm mounting holes",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "price": 19.0,
@@ -22623,7 +22660,7 @@ const products = [
         "sku": "LTB303S",
         "name": "Camera Bracket - Silver",
         "description": "90\u00b0 Tilt Camera Bracket (Metallic Gray)",
-        "price": 2.03
+        "price": 2.52
       }
     ],
     "specs": {
@@ -22665,7 +22702,7 @@ const products = [
         "sku": "LTIR150",
         "name": "IR Illuminator - 18 IRs",
         "description": "18 pcs. Powerful IR LEDs&nbsp; \u00d810 / 24\u00b5 LED Size&nbsp; 500FT. IR Distance&nbsp; 10\u00b0 Light Angle&nbsp; Ideal for Long Range IR Illumination&nbsp; IP66 Rating for Water Resistance&nbsp; Auto Activated&nbsp; DC 12V, 1,000mA (IR LED On)",
-        "price": 64.8
+        "price": 80.48
       }
     ],
     "specs": {
@@ -22708,7 +22745,7 @@ const products = [
         "sku": "LTIR200R",
         "name": "IR Illuminator - 198 IRs",
         "description": "198 pcs IR LED 400ft. IR distance DC 12V 500mA (IR On) Auto activated IP66 water resistant Indoor/outdoor",
-        "price": 105.3
+        "price": 130.78
       }
     ],
     "specs": {
@@ -22749,7 +22786,7 @@ const products = [
         "sku": "LTAB1011R",
         "name": "Active Balun Transmitter - 1CH DSA",
         "description": "Single Channel Active Video Receiver Long Distance Transmission of PAL /NTSC Real-time Video DSA Transmission of Single Channel Data Exceptional Interference Rejection Options for Distances : Three Levels Red Light for Power ,Green Light for Video Bu...",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -22789,7 +22826,7 @@ const products = [
         "sku": "LTAB1041R",
         "name": "Active Balun Transmitter - 4CH",
         "description": "4 - Channel Video Transceiver Long Distance Transmission of PAL /NTSC Real-time Video DSA Central transmission for 4CH video Exceptional Interference Rejection Built -in Surge Protection ,Lighting Protection and other Protection Settings Convenient W...",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -22829,7 +22866,7 @@ const products = [
         "sku": "LTAB1015P",
         "name": "Passive Video Balun Transceivers - Pigtails",
         "description": "Single Channel Passive Video Transceiver PAL/NTSC Real-time Video Transmission Exceptional Interference Rejection and Built-inProtection Setting Convenient Wiring Installation, Higher Cable Utilization Rate and Lower Composite Wiring Cost Compact Siz...",
-        "price": 5.4
+        "price": 6.71
       }
     ],
     "specs": {
@@ -22869,7 +22906,7 @@ const products = [
         "sku": "LTAB1017DC",
         "name": "Passive Video Balun Transmitter - DC",
         "description": "Single Channel Passive Video Transceiver PAL / NTSC Real-time Video Transmission Power Transmission: DC12V Exceptional Interference Rejection and Built-in Protection Settings Convenient Wiring, Higher Cable Utilization Rate and Lower Composite Wiring...",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -22909,7 +22946,7 @@ const products = [
         "sku": "LTAB1017ACD",
         "name": "Passive Video Balun Transmitter - AC",
         "description": "Single Channel Passive Video Transceiver PAL/NTSC Real-time Video Transmission Power Transmission,Data Signal Exceptional Interference Rejection and built-in Protection Settings Convenient Wiring ,Higher Cable Utilization Rate and Lower Composite Wir...",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -22949,7 +22986,7 @@ const products = [
         "sku": "LTA2006",
         "name": "DC Power Splitter - 1 Male To 2 Female",
         "description": "DC power 1 male to 2 female Connector / splitter",
-        "price": 1.49
+        "price": 1.85
       }
     ],
     "specs": {
@@ -22994,7 +23031,7 @@ const products = [
         "sku": "LTB756",
         "name": "Round Cap Fisheye Bracket",
         "description": "Designed for models CMIP7562F, CMIP7562F-E",
-        "price": 56.7
+        "price": 70.42
       }
     ],
     "specs": {
@@ -23036,7 +23073,7 @@ const products = [
         "sku": "LTKB3LED",
         "name": "Piezoelectric Exit Button With LED (N/O)",
         "description": "LTS 1 Gang LED Exit SPST (NO only) 1 Gang",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "specs": {
@@ -23076,7 +23113,7 @@ const products = [
         "sku": "LTUBNBE-WMK",
         "name": "Wall Mount Kit",
         "description": "Wall Mount Kit Used for NanoBeam",
-        "price": 6.75
+        "price": 8.38
       }
     ],
     "specs": {
@@ -23118,7 +23155,7 @@ const products = [
         "sku": "LTPC6001W-CMR",
         "name": "Cat6 Patch Cable - 1 Foot, White",
         "description": "1 Foot Cat6 50-Micron, 3-prong, snag-less connector CMR Rated UL Listed, RoHS compliant White",
-        "price": 1.35
+        "price": 1.68
       }
     ],
     "specs": {
@@ -23161,7 +23198,7 @@ const products = [
         "sku": "LTAH1070EK",
         "name": "HDMI Extender - 4K",
         "description": "Supports 4K transmission up to 115 feet Supports 1080p transmission up to 230 feet USB 2.0, connect with keyboard / mouse Supports PoE power supply -- no need for extra power at RX side 12V DC / 1 A (power adaptor included)",
-        "price": 221.4
+        "price": 274.98
       }
     ],
     "specs": {
@@ -23204,7 +23241,7 @@ const products = [
         "sku": "VSWM763",
         "name": "Wall Mount",
         "description": "Designed for camera models VSIP7643W-SZ and VSIP3C82W-28MDA",
-        "price": 40.5
+        "price": 50.3
       }
     ],
     "specs": {
@@ -23245,19 +23282,19 @@ const products = [
         "sku": "VSPOE-SW802",
         "name": "8 PoE Port Switch With 2 Uplink Ports",
         "description": "Megabit UL listed Up to 820 feet 10 100-Mbps network ports (RJ45), including 8 PoE ports 100 ~ 240V AC, 50 / 60 Hz PoE: 802.3 at / af Max. capacity: 120 W Max capacity for single port: 30 W",
-        "price": 120.15
+        "price": 149.23
       },
       {
         "sku": "VSPOE-SW1602",
         "name": "16-Port PoE Switch With 2 Combo Ports",
         "description": "Megabit UL Listed Transmission up to 820 ft Sixteen 100-Mbps PoE ports (RJ45) + two 1000-Mbps combo ports 100 ~ 240V AC, 50 / 60 Hz PoE: 802.3 at / af Max. capacity: 250 W Max. capacity for single port: 30 W",
-        "price": 267.3
+        "price": 331.99
       },
       {
         "sku": "VSPOE-SW2402",
         "name": "24-Port PoE Switch With 2 Combo Ports",
         "description": "Megabit UL listed Transmission up to 820 feet 24 100-Mbps PoE ports (RJ45) + 2 1000-Mbps combo ports 100 ~ 240V AC, 50 / 60 Hz PoE: 802.3 at / af Max. capacity: 370 W Max. capacity for single port: 30 W",
-        "price": 352.35
+        "price": 437.62
       }
     ],
     "specs": {
@@ -23302,7 +23339,7 @@ const products = [
         "sku": "LTB688-B",
         "name": "Wall Mount",
         "description": "Designed for model # LTPTZIP688X36",
-        "price": 117.45
+        "price": 145.87
       }
     ],
     "specs": {
@@ -23360,19 +23397,19 @@ const products = [
         "sku": "BF22-1",
         "name": "Video Security Bundle \u2013 Four Pro-VS 4 MP IP Fixed Turret Cameras (VSIP3442W-28MA), One Pro-VS 8-Channel NVR (VSN7208-P8), & One Western Digital Purple 3 TB Hard Drive (DHWD30PURX)",
         "description": "Pro-VS 4 MP IP Fixed Turret Camera - VSIP3442W-28M Resolution: 4 MP, 2688 x 1520 @ 30 fps Fixed Lens: 2.8 mm Lux: 0.01 lux @ f 2.0 Compression: Ultra 265 / H.265 / H.264 / MJPEG IR: Smart IR LED up to 98 ft Features: 120 dB WDR, 2D / 3D DNR, BLC, HLC...",
-        "price": 735.75
+        "price": 913.8
       },
       {
         "sku": "BF22-2",
         "name": "Video Security Bundle \u2013 Ten Pro-VS 4 MP Fixed Turret IP Cameras (VSIP3442W-28MA), One Pro-VS 16-Channel NVR (VSN7216-P16), & One Western Digital Purple 3 TB Hard Drive (DHWD30PURX)",
         "description": "Pro-VS 4 MP Fixed Turret IP Camera - VSIP3442W-28M Resolution: 4 MP, 2688 x 1520 @ 30 fps Fixed Lens: 2.8 mm Lux: 0.01 lux @ f 2.0 Compression: Ultra 265 / H.265 / H.264 / MJPEG IR: Smart IR LED up to 98 ft Features: 120 dB WDR, 2D/3D DNR, BLC, HLC, ...",
-        "price": 1416.15
+        "price": 1758.86
       },
       {
         "sku": "BF22-3",
         "name": "Video Security Bundle \u2013 Twelve Pro-VS 4 MP Fixed Turret IP Cameras (VSIP3442W-28MA), One Pro-VS 32-Channel NVR (VSN7432-P16), & One Western Digital Purple 3 TB Hard Drive (DHWD30PURX)",
         "description": "Pro-VS 4 MP Fixed Turret IP Camera - VSIP3442W-28M Resolution: 4 MP, 2688 x 1520 @ 30 fps Fixed Lens: 2.8 mm Lux: 0.01 lux @ f 2.0 Compression: Ultra 265 / H.265 / H.264 / MJPEG IR: Smart IR LED up to 98 ft Features: 120 dB WDR, 2D/3D DNR, BLC, HLC, ...",
-        "price": 1699.65
+        "price": 2110.97
       }
     ],
     "specs": {
@@ -23420,7 +23457,7 @@ const products = [
         "sku": "DHWD23PURZ",
         "name": "Western Digital Purple 2 TB Hard Disk Drive, 5,400 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 118.8
+        "price": 147.55
       }
     ],
     "specs": {
@@ -23462,7 +23499,7 @@ const products = [
         "sku": "LTAB3010T",
         "name": "HD Passive Video Balun Transceivers",
         "description": "LTAB3010T is a passive high definition TVI transmitter, small size and easy installation, transmission distance up to 650ft, suitable for office building, community, school, hospital...etc.",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "specs": {
@@ -23503,7 +23540,7 @@ const products = [
         "sku": "LTH819",
         "name": "Outdoor Side Open Camera Housing",
         "description": "Outdoor Side Open Camera Housing Nylon + Fiber Glass / Beige",
-        "price": 27.0
+        "price": 33.53
       }
     ],
     "specs": {
@@ -23545,7 +23582,7 @@ const products = [
         "sku": "LTIR40",
         "name": "IR Illuminator - 48 IRs",
         "description": "48 pcs. IR LEDs&nbsp; \u00d85 / 12\u00b5 LED Size&nbsp; 130FT. IR Distance&nbsp; 45\u00b0 Light Angle&nbsp; Ideal for Long Range IR Illumination&nbsp; IP66 Rating for Water Resistance&nbsp; Auto Activated&nbsp; DC 12V, 400mA (IR LED On)",
-        "price": 31.05
+        "price": 38.56
       }
     ],
     "specs": {
@@ -23588,7 +23625,7 @@ const products = [
         "sku": "LTIR100",
         "name": "IR Illuminator - 12 IRs",
         "description": "42 pcs&nbsp; IR LEDs 333FT. IR Distance&nbsp; 15\u00b0 Light Angle&nbsp; &nbsp;Ideal for Medium Range IR Illumination&nbsp; IP66 Rating for Water Resistance&nbsp; Auto Activated&nbsp; DC 12V, 600mA (IR LED On)",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "specs": {
@@ -23629,7 +23666,7 @@ const products = [
         "sku": "LTAB1016",
         "name": "Passive Video Balun Transceivers",
         "description": "Single Channel Passive Video Transceiver PAL/NTSC Real-time Video Transmission Exceptional Interference Rejection and Built-inProtection Setting Convenient Wiring Installation, Higher Cable Utilization Rate and Lower Composite Wiring Cost Compact Siz...",
-        "price": 5.4
+        "price": 6.71
       }
     ],
     "specs": {
@@ -23669,7 +23706,7 @@ const products = [
         "sku": "LTA1010",
         "name": "Passive Video Balun Transceivers - DC",
         "description": "Connector - VIDEO RG59 / CAT5 Conerters Male BNC Connector",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "specs": {
@@ -23709,7 +23746,7 @@ const products = [
         "sku": "LTAB1017AC",
         "name": "Passive Video Balun Transmitter - AC",
         "description": "Single Channel Passive Video Transceiver PAL/NTSC Real-time Video Transmission Power Transmission:AC24V Exceptional Interference Rejection and built-in Protection Settings Convenient Wiring ,Higher Cable Utilization Rate and Lower Composite Wiring Co...",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -23751,7 +23788,7 @@ const products = [
         "sku": "LTAB1160R",
         "name": "16 Channel Video Balun Rack Mount",
         "description": "16-Channel Passive Video Receiver PAL/NTSC Real-time Video Transmission No Power Needed Up to 1200ft",
-        "price": 93.15
+        "price": 115.69
       }
     ],
     "specs": {
@@ -23794,7 +23831,7 @@ const products = [
         "sku": "LTAC3210",
         "name": "HDMI To DVI Cable - 10 Ft",
         "description": "HDMI to DVI-D Male to male 10 feet Premium, gold plated Black",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -23834,7 +23871,7 @@ const products = [
         "sku": "LTA2014",
         "name": "Adapter Cable - DC Power Female",
         "description": "Power Adapter Cable (Female) with Plug",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -23872,7 +23909,7 @@ const products = [
         "sku": "LTLM358",
         "name": "Box Camera Varifocal Lens 3.5-8mm",
         "description": "2.1MP High Definition Varifocal Lens, 3.5-8mm F1.4 Lens",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "specs": {
@@ -23917,7 +23954,7 @@ const products = [
         "sku": "LTB759",
         "name": "Pendant Mounting Bracket",
         "description": "Pendant mount suitable for outdoor fisheye cameras Compatible with; CMIP7562F-E, CMIP75122F-SE",
-        "price": 67.5
+        "price": 83.83
       }
     ],
     "specs": {
@@ -23957,7 +23994,7 @@ const products = [
         "sku": "LTPE16100",
         "name": "Power Extension Cord - 100 Ft",
         "description": "100 feet, 3-prong 16/3C SJTW cord Orange Single outlet, AC power UL listed",
-        "price": 39.15
+        "price": 48.62
       }
     ],
     "specs": {
@@ -23999,7 +24036,7 @@ const products = [
         "sku": "LTPC6003BL-CMR",
         "name": "Cat6 Patch Cable - 3 Ft, Blue",
         "description": "3-foot Cat6 patch cable 50-Micron, 3-prong snag-less connector CMR rated UL listed, RoHS compliant Blue",
-        "price": 2.03
+        "price": 2.52
       }
     ],
     "specs": {
@@ -24046,7 +24083,7 @@ const products = [
         "sku": "LTCMHT1722F",
         "name": "2MP 3.6mm Fixed Lens Turret HD-TVI Camera",
         "description": "\u2022 2.1MP Full HD 1080P\u2022 3.6mm Fixed Lens\u20221920x1080P@30fps\u2022 0.01 Lux, Smart IR\u2022 TVI/AHD/CVI/960H Switchable\u2022 IP66",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "specs": {
@@ -24089,7 +24126,7 @@ const products = [
         "sku": "LTKB1204",
         "name": "Backup Battery - 4AH",
         "description": "Power Kingdom Backup Battery 4Ah, DC12V UL Listed",
-        "price": 14.85
+        "price": 18.44
       }
     ],
     "specs": {
@@ -24133,7 +24170,7 @@ const products = [
         "sku": "VSJB342",
         "name": "Fixed Turret Junction Box",
         "description": "\u03a6117.8mm*36mm (4.64\u201d x1.42\u201d) 0.2kg(0.44lb) Aluminum alloy",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -24186,7 +24223,7 @@ const products = [
         "sku": "LTD8304M-ET",
         "name": "Platinum 4-Channel Advanced Level HD-TVI DVR",
         "description": "H.265 Pro+ / H.265 Pro / H.265 video compression HD-TVI / AHD / CVI / CVBS / IP video input Up to 6 IP camera input channels (up to 6 MP) Up to 10 TB capacity per HDD",
-        "price": 101.25
+        "price": 125.75
       }
     ],
     "specs": {
@@ -24232,7 +24269,7 @@ const products = [
         "sku": "WDD032G1P0A",
         "name": "Western Digital Purple 32 GB MicroSD Card",
         "description": "32 GB Storage",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -24275,7 +24312,7 @@ const products = [
         "sku": "LTH805",
         "name": "Outdoor Back Open Camera Housing",
         "description": "Outdoor Back Open Camera Housing Aluminum/ Beige",
-        "price": 12.15
+        "price": 15.09
       }
     ],
     "specs": {
@@ -24319,7 +24356,7 @@ const products = [
         "sku": "LTB306",
         "name": "Camera Bracket - Plastic Beige",
         "description": "120\u00b0 Tilt Camera Bracket",
-        "price": 4.05
+        "price": 5.03
       }
     ],
     "specs": {
@@ -24367,7 +24404,7 @@ const products = [
         "sku": "LTIR360",
         "name": "IR Illluminator - 48 IRs",
         "description": "48 pcs. Powerful IR LEDs&nbsp; 20\u00b5 LED Size&nbsp; 556SQFT. IR Distance&nbsp; 160\u00b0 Light Angle&nbsp; Suitable for Indoor Wide-scale Illumination, Ceiling Mount&nbsp; IP66 Rating for Water Resistance&nbsp; Auto Activated&nbsp; DC 12V, 850mA (IR LED On)",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "specs": {
@@ -24410,7 +24447,7 @@ const products = [
         "sku": "LTIR120R",
         "name": "IR Illuminator - 114 IRs",
         "description": "114 pcs IR LED 330ft. IR distance DC 12V 500mA (IR On) Auto activated IP66 water resistant Indoor/outdoor",
-        "price": 64.8
+        "price": 80.48
       }
     ],
     "specs": {
@@ -24449,7 +24486,7 @@ const products = [
         "sku": "PS120V3000",
         "name": "Power Adapter - 3,000 MA",
         "description": "12V DC 3 A",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "specs": {
@@ -24489,7 +24526,7 @@ const products = [
         "sku": "LTA1011",
         "name": "Passive Video Balun Transceiver",
         "description": "Connector - VIDEO&nbsp;&nbsp;RG59 / CAT5 Conerters",
-        "price": 5.4
+        "price": 6.71
       }
     ],
     "specs": {
@@ -24529,7 +24566,7 @@ const products = [
         "sku": "LTA1013",
         "name": "Connector - BNC Male To Dual BNC Female",
         "description": "Single BNC Male to dual (2) BNC Female connectors 20 adapters per pack",
-        "price": 17.55
+        "price": 21.8
       }
     ],
     "specs": {
@@ -24569,7 +24606,7 @@ const products = [
         "sku": "LTAC3025B",
         "name": "HDMI Cable With Ethernet - 25 Ft",
         "description": "25 feet HDMI ver. 1.4b Male to male connectors 28 AWG cable Gold plated connectors Supports 3D 1600P HD nylon jacket",
-        "price": 20.25
+        "price": 25.15
       }
     ],
     "specs": {
@@ -24609,7 +24646,7 @@ const products = [
         "sku": "LTAV3100",
         "name": "VGA Extension Cable - 100 Feet",
         "description": "100 feet of SVGA extension cable",
-        "price": 44.55
+        "price": 55.33
       }
     ],
     "specs": {}
@@ -24641,7 +24678,7 @@ const products = [
         "sku": "LTA1012",
         "name": "Converter - RS-232 To RS-485",
         "description": "RS232 to RS485 Converter Interface",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "specs": {}
@@ -24675,7 +24712,7 @@ const products = [
         "sku": "LTAH018L",
         "name": "Splitter - 1 In 8 Out HDMI",
         "description": "Easy to Use: Install in seconds, no need of setting. Cascaded: Large distribution achieved by cascading the HDMI Amplifier Splitter. Support HDMI1.3b. Support highest video resolution 1080p. Support 2.25Gbps per channel bandwidth. Support 8bit per ch...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -24716,7 +24753,7 @@ const products = [
         "sku": "LTAH1100E",
         "name": "Extender - VGA / PS2 KVM RJ45",
         "description": "The PS2 KVM Extender can extend power switch, keyboard, mouse, and video ports of a computer by up to 900 ft (300 m) through a single Cat5e cable. A KVM port on the Sender allows users to control local computer. Video type: VGA 1 x PS / 2 for mouse, ...",
-        "price": 120.15
+        "price": 149.23
       }
     ],
     "specs": {
@@ -24756,7 +24793,7 @@ const products = [
         "sku": "LTAV3010",
         "name": "VGA Extension Cable - 10 Feet",
         "description": "10 ft SVGA extension",
-        "price": 10.8
+        "price": 13.41
       }
     ],
     "specs": {
@@ -24798,7 +24835,7 @@ const products = [
         "sku": "LTAC2150B",
         "name": "Pre-Made Siamese Cable With Connectors - 150 Ft, Black",
         "description": "All-in-one power and video cable BNC / RG59 + DC",
-        "price": 18.9
+        "price": 23.47
       }
     ],
     "specs": {
@@ -24840,7 +24877,7 @@ const products = [
         "sku": "DHST2000VX008",
         "name": "Seagate Skyhawk 2 TB Hard Disk Drive",
         "description": "2 TB Seagate Skyhawk Surveillance Grade Hard Disk Drive (HDD) ImagePerfect\u2122 Firmware NVR-Ready Design Workload Rating of 180 TB / Year 3.5-inch form factor",
-        "price": 95.85
+        "price": 119.05
       }
     ],
     "specs": {
@@ -24880,7 +24917,7 @@ const products = [
         "sku": "LTSIGNOD",
         "name": "Sign Outdoor 10.5\u201d X 10.5\u201d",
         "description": "Sign Outdoor 10.5\u201d x 10.5\u201d",
-        "price": 7.43
+        "price": 9.23
       }
     ],
     "specs": {
@@ -24934,7 +24971,7 @@ const products = [
         "sku": "LTCMHD3523DWE-ZF",
         "name": "Platinum 2 MP Varifocal Dome HD-TVI Camera",
         "description": "Junction box included 2 MP high performance CMOS Ultra-low light 1920 x 1080 resolution 2.7 mm to 13.5 mm varifocal lens, auto focus 130 dB true WDR, 3D DNR Smart IR, up to 197 ft (60 m) IR distance 4-in-1 video output (switchable among TVI / AHD / C...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -24992,7 +25029,7 @@ const products = [
         "sku": "LTCMHT1923WE-ZF",
         "name": "2 MP Ultra-Low Lux Turret Camera",
         "description": "\u25cf&nbsp;&nbsp;&nbsp;&nbsp; 2 MP high performance CMOS\u25cf&nbsp;&nbsp;&nbsp;&nbsp; Ultra-low light\u25cf&nbsp;&nbsp;&nbsp;&nbsp; 1920 \u00d7 1080 resolution\u25cf&nbsp;&nbsp;&nbsp;&nbsp; 2.7 mm to 13.5 mm varifocal lens, auto focus\u25cf&nbsp;&nbsp;&nbsp;&nbsp; 130 dB true W...",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "specs": {
@@ -25046,7 +25083,7 @@ const products = [
         "sku": "LTD8508M-ST",
         "name": "Turbo Smart HD-TVI DVR",
         "description": "H.264 / H.264+ / H.265 / H.265 Pro / H.265 Pro+ video compression HD-TVI / AHD / CVI / CVBS / IP video inputs Audio via coaxial cable Up to 16 IP camera inputs (up to 8 MP) Supports 2 x SATA HDDs up to 10 TB each MD 2.0 Compatible",
-        "price": 295.65
+        "price": 367.2
       }
     ],
     "specs": {
@@ -25100,7 +25137,7 @@ const products = [
         "sku": "LTCMHT2722W-28",
         "name": "Platinum HD-TVI Turret Camera 2.1MP - 2.8mm",
         "description": "&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 2.1MP High Definition Full HD 1080P 1920X1080P@30fps 2.8mm Fixed Lens 1 Matrix IR LED up to 131ft Outdoor/Indoor DC 12V IP66 UTC",
-        "price": 60.75
+        "price": 75.45
       }
     ],
     "specs": {
@@ -25159,7 +25196,7 @@ const products = [
         "sku": "LTCMHR9653D-ZFN",
         "name": "Platinum 5 MP Varifocal Bullet HD-TVI Camera",
         "description": "5 MP, 2560 x 1944 resolution 2.7 to 13.5 mm motorized varifocal lens Up to 131 ft (40 m) IR distance for bright night imaging Four signals in one, switchable among TVI / AHD / CVI / CVBS Water and dust resistant (IP67)",
-        "price": 174.15
+        "price": 216.29
       }
     ],
     "specs": {
@@ -25215,7 +25252,7 @@ const products = [
         "sku": "LTCMHD3453D-ZFN",
         "name": "Platinum 5 MP Vari-Focal Dome HD-TVI Camera",
         "description": "5 MP, 2560 x 1944 resolution 0.01 Lux @ f 1.2, AGC on, 0 Lux with IR 2560 (H) x 1944 (V) 2.7 mm to 13.5 mm motorized varifocal lens Up to 131 ft (40 m) IR distance for bright night imaging One switchable port for four signals (TVI / AHD / CVI / CVBS)...",
-        "price": 128.25
+        "price": 159.29
       }
     ],
     "specs": {
@@ -25262,7 +25299,7 @@ const products = [
         "sku": "LTH805HB",
         "name": "Outdoor Back Open Camera Housing - Heat And Fan",
         "description": "Indoor / Outdoor Aluminum Housing with Heat and Fan Aluminum / Beige 390mA(Heater:250mA/Blower:140mA) Input Voltage 24VAC",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -25304,7 +25341,7 @@ const products = [
         "sku": "LTIR50",
         "name": "IR Illuminator - 60 IRs",
         "description": "60 pcs. IR LEDs&nbsp; \u00d85 / 12\u00b5 LED Size&nbsp; 170FT. IR Distance&nbsp; 45\u00b0 Light Angle&nbsp; Ideal for Long Range IR Illumination&nbsp; IP66 Rating for Water Resistance&nbsp; Auto Activated&nbsp; DC 12V, 500mA (IR LED On)",
-        "price": 37.8
+        "price": 46.95
       }
     ],
     "specs": {
@@ -25347,7 +25384,7 @@ const products = [
         "sku": "LTAB2040H",
         "name": "Active Balun Transmitter - 4CH PVD HUB",
         "description": "4 Cameras can be connected Transmission of 4-Channel Power and Data Centralized Transmission to Rear-end SETTING,FOR 4-Channel Video over UTP CAT5, Convenient and Neat Wiring Decreasing the Cost Transmission of Single Channel Data&nbsp;",
-        "price": 52.65
+        "price": 65.39
       }
     ],
     "specs": {
@@ -25388,7 +25425,7 @@ const products = [
         "sku": "LTAB1015",
         "name": "Passive Video Balun Transceivers",
         "description": "Single Channel Passive Video Transceiver PAL/NTSC Real-time Video Transmission Exceptional Interference Rejection and Built-inProtection Setting Convenient Wiring Installation, Higher Cable Utilization Rate and Lower Composite Wiring Cost Compact Siz...",
-        "price": 5.4
+        "price": 6.71
       }
     ],
     "specs": {
@@ -25428,7 +25465,7 @@ const products = [
         "sku": "LTAV3050",
         "name": "VGA Extension Cable - 50 Ft",
         "description": "VGA male to VGA male",
-        "price": 31.05
+        "price": 38.56
       }
     ],
     "specs": {
@@ -25466,7 +25503,7 @@ const products = [
         "sku": "LTLM550",
         "name": "Box Camera Varifocal Lens 5-50mm",
         "description": "2.1MP High Definition Varifocal Lens",
-        "price": 66.15
+        "price": 82.16
       }
     ],
     "specs": {
@@ -25518,7 +25555,7 @@ const products = [
         "sku": "LTD8308K-ET",
         "name": "Platinum Advanced Level 8 Channel HD-TVI DVR",
         "description": "\u25cf&nbsp; H.265 Pro+/H.265 Pro/H.265 video compression \u25cf&nbsp; HDTVI/AHD/CVI/CVBS/IP video input \u25cf&nbsp; Up to 12/24-ch IP camera inputs (up to 6 MP) \u25cf&nbsp; Max. 800 m for 1080p and 1200 m for 720p HDTVI signal transmission \u25cf&nbsp; Up to 10 TB capacit...",
-        "price": 147.15
+        "price": 182.76
       }
     ],
     "specs": {
@@ -25563,7 +25600,7 @@ const products = [
         "sku": "LTPE12100-L3",
         "name": "Power Extension Cord - 100 Ft",
         "description": "100 ft. 12/3C SJTW cord Yellow Triple outlet Illuminates when power is on UL listed",
-        "price": 79.65
+        "price": 98.93
       }
     ],
     "specs": {
@@ -25606,7 +25643,7 @@ const products = [
         "sku": "LTPC6001BL-CMR",
         "name": "Cat6 Patch Cable - 1 Foot, Blue",
         "description": "1 foot 50-Micron, 3-prong, snag-less connector CMR-rated UL listed, RoHS compliant Blue",
-        "price": 1.35
+        "price": 1.68
       }
     ],
     "specs": {
@@ -25649,7 +25686,7 @@ const products = [
         "sku": "LTK1104M",
         "name": "Vandal-Resistant MIFARE Card Reader",
         "description": "8- or 10-digit selectable (via DIP) IP65 weatherproof, IK10, metal housing UL listed Surface mount, 1 gang",
-        "price": 133.65
+        "price": 165.99
       }
     ],
     "specs": {
@@ -25692,7 +25729,7 @@ const products = [
         "sku": "PFA139",
         "name": "Junction Box For LTDHIP3942W",
         "description": "Junction Box for LTDHIP3942W",
-        "price": 25.65
+        "price": 31.86
       }
     ],
     "specs": {
@@ -25733,7 +25770,7 @@ const products = [
         "sku": "MSDX64GUII3CL10-CA1",
         "name": "ADATA Premier ONE MicroSD 64 GB With Adapter",
         "description": "3D MLC NAND Flash for Reliability and Durability Temperature Protection: -13\u00b0 to 185\u00b0 F (-25\u00b0 to 85\u00b0C) Waterproof, Shockproof, X-ray-proof, and Antistatic R/W: Up to 275 MB / 155 MB per Second UHS-II U3 Class 10 V90 Ultra HD 8K, 4K and 3D/VR Recordin...",
-        "price": 72.9
+        "price": 90.54
       }
     ],
     "specs": {
@@ -25772,7 +25809,7 @@ const products = [
         "sku": "DHWD63PURZ",
         "name": "Western Digital Purple 6 TB Hard Disk Drive, 5,400 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 203.85
+        "price": 253.18
       }
     ],
     "specs": {
@@ -25810,7 +25847,7 @@ const products = [
         "sku": "DHWD43PURZ",
         "name": "Western Digital Purple 4 TB Hard Disk Drive, 5,400 RPM Class",
         "description": "WD Purple drives have been engineered specifically for the extreme demands of high temperature, 24/7 surveillance systems. From a worldwide leader in the storage industry, WD Purple is engineered for quality video playback when you need it most. WD P...",
-        "price": 140.4
+        "price": 174.38
       }
     ],
     "specs": {
@@ -25850,7 +25887,7 @@ const products = [
         "sku": "LTAC3050B",
         "name": "HDMI Cable With Ethernet - 50 Ft",
         "description": "28 AWG cable Gold plated connectors Support for 3D 1600P HD nylon jacket",
-        "price": 33.75
+        "price": 41.92
       }
     ],
     "specs": {
@@ -25888,7 +25925,7 @@ const products = [
         "sku": "ACS-801",
         "name": "Warning Sign - Solar Power Flashing LCD",
         "description": "No battery needed. Solar cell operation. Constantly blinking messages on the LCD. Perfectly molded.",
-        "price": 9.45
+        "price": 11.74
       }
     ],
     "price": 7.0,
@@ -25929,7 +25966,7 @@ const products = [
         "sku": "LTAV3025",
         "name": "VGA Extension Cable - 25 Ft",
         "description": "SVGA male to male extension",
-        "price": 13.5
+        "price": 16.77
       }
     ],
     "specs": {
@@ -25985,7 +26022,7 @@ const products = [
         "sku": "LTCMIP7C43WI-SDLQ",
         "name": "Platinum 4 MP Color 24/7 Vari-Focal IP Camera",
         "description": "Motorized Pan, Tilt, Rotate, Zoom for easy installation and monitoring Vivid imaging every hour via Color 24/7 technology IR, supplemental white light, &amp; Smart Hybrid Light modes Clear imaging against strong back light due to 120 dB WDR technolog...",
-        "price": 249.75
+        "price": 310.19
       }
     ],
     "specs": {
@@ -26028,37 +26065,37 @@ const products = [
         "sku": "M-ACV196HQLAB",
         "name": "18.5\" Display Monitor",
         "description": "18.5\u201d VGA",
-        "price": 162.0
+        "price": 201.2
       },
       {
         "sku": "M-185JPGM8",
         "name": "LED Display Monitor",
         "description": "LED display 18.5\" W HDMI / VGA / BNC-in / out Black Remote control",
-        "price": 214.65
+        "price": 266.6
       },
       {
         "sku": "M-AGN-LA-22",
         "name": "22-Inch 1080p Eye Care Monitor",
         "description": "Full HD 1920 x 1080 resolution Blue-light filter and flicker-free display technology reduces eye discomfort Versatile connectivity: DisplayPort, HDMI, VGA Integrated dual 2 W speakers 100 x 100 mm VESA mount compatible",
-        "price": 133.65
+        "price": 165.99
       },
       {
         "sku": "M-ASUSVE228H",
         "name": "M-ASUSVE228H",
         "description": "21.5\u201d VGA/HDMI",
-        "price": 216.0
+        "price": 268.27
       },
       {
         "sku": "M-AGN-LA-24",
         "name": "24-Inch 1080p Eye Care Monitor",
         "description": "Full HD 1920 x 1080 resolution Versatile connectivity: DisplayPort, HDMI, VGA Integrated dual 2W speakers Blue-light filter and Flicker-free display technology reduces eye discomfort 100 x 100mm VESA mount compatible",
-        "price": 147.15
+        "price": 182.76
       },
       {
         "sku": "M-215JPGM8",
         "name": "LED 21.5\"W Monitor, HDMI/VGA/BNC-In/Out (Black With Remote)",
         "description": "LED 21.5\"W Monitor, HDMI/VGA/BNC-in/out (Black with Remote)",
-        "price": 241.65
+        "price": 300.13
       }
     ],
     "price": 120.0,
@@ -26072,5 +26109,4359 @@ const products = [
         "url": "https://ltsecurityinc.com/upload/Docs/RMA%20Request%20Form.pdf"
       }
     ]
+  },
+  {
+  "series_id": "CMIP3CD42WI-28AISP",
+  "name": "4 MP AI Color 24/7 Turret Camera",
+  "description": "LTS products provide 24/7 vivid colorful images with F1.0 advanced lenses, high-performance sensors, and friendly lighting.",
+  "long_description": "NEW AI Image Signal Processor for excellent noise reduction effect; 24/7 colorful imaging; Scene-adaptive AI WDR; AI-based Analytics for Person and Vehicle classification; Built-in arrayed dual-microphone for real-time high quality audio security; NEMA4X anti-corrosion design; Smart Hybrid Light (IR and White lights); Water and dust resistant (IP67).",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3cd42wi-28aisp.jpg",
+  "facets": {
+    "category": [
+      "DOMES / TURRETS"
+    ],
+    "camera_resolution": [
+      "4 MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3CD42WI-28AISP",
+      "name": "4 MP AI Color 24/7 Turret Camera",
+      "description": "LTS products provide 24/7 vivid colorful images with F1.0 advanced lenses, high-performance sensors, and friendly lighting.",
+      "price": 198.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4 MP",
+    "Lens": "2.8mm",
+    "Sensor": "AI Image Signal Processor",
+    "WDR": "AI WDR",
+    "Protection": "IP67, NEMA4X",
+    "Audio": "Built-in dual-microphone"
+  }
+},
+  {
+  "series_id": "LXIP7C82WI-28MDA",
+  "name": "8MP Smart Dual Light Dome Network Camera",
+  "description": "8MP, 2.8mm fixed-lens, color hybrid Dome, HDR, 3D DNR, MD2.0, VCA, FD, X-Search, built-in MIC, Pro AI.",
+  "long_description": "Outputs max. 8MP (3840 \u00d7 2160) @30fps; 1/1.8\u201d CMOS image sensor; Smart Dual Light configuration; 120dB True WDR; MD2.0 focus on human & vehicle; Intelligent Analysis: VCA, Face Detection, People Counting; Built-in MIC; Micro SD card slot up to 512 GB; IK10, IP67 protection.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/l/x/lxip7c82wi-28mda.jpg",
+  "facets": {
+    "category": [
+      "DOMES"
+    ],
+    "camera_resolution": [
+      "8 MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP7C82WI-28MDA",
+      "name": "8MP Smart Dual Light Dome Network Camera",
+      "description": "8MP, 2.8mm fixed-lens, color hybrid Dome, HDR, 3D DNR, MD2.0, VCA, FD, X-Search, built-in MIC, Pro AI.",
+      "price": 269.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8 MP",
+    "Lens": "2.8mm",
+    "Sensor": "1/1.8\u201d CMOS",
+    "WDR": "120dB True WDR",
+    "Protection": "IP67, IK10",
+    "Audio": "Built-in MIC"
+  }
+},
+  {
+  "series_id": "LTN8704QN-P4",
+  "name": "Platinum 4-Channel Professional Level NVR",
+  "description": "Platinum NVR with up to 4 IP camera input channels, H.265+ video compression, up to 1 ch @ 8 MP / 5 ch @ 1080p decoding capacity, up to 40 Mbps incoming bandwidth.",
+  "long_description": "Up to 4-ch IP camera inputs; H.265+/H.265/H.264+/H.264 video formats; Up to 1-ch@8 MP/5-ch@1080p decoding capacity; Up to 40 Mbps incoming bandwidth; Support 1 SATA up to 8TB; Mini 1U case.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/l/t/ltn8704qn-p4.jpg",
+  "facets": {
+    "category": [
+      "PLATINUM NVRS"
+    ],
+    "camera_resolution": [
+      ""
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTN8704QN-P4",
+      "name": "Platinum 4-Channel Professional Level NVR",
+      "description": "Platinum NVR with up to 4 IP camera input channels, H.265+ video compression, up to 1 ch @ 8 MP / 5 ch @ 1080p decoding capacity, up to 40 Mbps incoming bandwidth.",
+      "price": 187.0
+    }
+  ],
+  "specs": {
+    "Channels": "4-Channel",
+    "Compression": "H.265+",
+    "Bandwidth": "40 Mbps",
+    "Storage": "1 SATA up to 8TB",
+    "Case": "Mini 1U"
+  }
+},
+  {
+  "series_id": "XCPOE-SW402G",
+  "name": "Pro-X 6-Port Gigabit Switch with 4 PoE Ports",
+  "description": "6-Port Cloud Managed Desktop Switch with 4 PoE Ports.",
+  "long_description": "4 x RJ-45 10/100/1000 Mbps (PoE); 2 x RJ-45 10/100/1000 Mbps (Uplink); Power Budget: 60 W; PoE Standard: IEEE 802.3af, IEEE 802.3at; Layer 2 Features: VLAN, STP, Flow Control, PoE watchdog link aggregation.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/x/c/xcpoe-sw402g.jpg",
+  "facets": {
+    "category": [
+      "CLOUD POE"
+    ],
+    "camera_resolution": [
+      ""
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "XCPOE-SW402G",
+      "name": "Pro-X 6-Port Gigabit Switch with 4 PoE Ports",
+      "description": "6-Port Cloud Managed Desktop Switch with 4 PoE Ports.",
+      "price": 75.0
+    }
+  ],
+  "specs": {
+    "Ports": "6-Port (4 PoE, 2 Uplink)",
+    "Speed": "Gigabit",
+    "Power Budget": "60 W",
+    "PoE Standard": "802.3af/at",
+    "Management": "Cloud Managed"
+  }
+},
+{
+  "series_id": "CMIP1042W-28MA",
+  "name": "Platinum 4 MP Fixed Turret IP Camera",
+  "description": "4MP high-definition turret camera with a 2.8mm fixed lens and 120dB True WDR for balanced exposure in challenging light.",
+  "long_description": "The CMIP1042W-28MA is a professional-grade 4MP turret camera featuring Matrix 2.0 infrared technology for night vision up to 98ft. It includes a built-in microphone for real-time audio and supports H.265+ compression to save up to 75% on storage space.",
+  "image": "https://securitytekton.com/cdn/shop/files/LTS-CMIP1042W-28MA-POE-IP-Video-Surveillance-Camera-LTS-160061528.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP1042W-28MA",
+      "name": "Platinum 4 MP Fixed Turret IP Camera",
+      "description": "4MP, 2.8mm, 98ft IR, Built-in Mic, IP67",
+      "price": 124.99
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Lens": "2.8mm Fixed",
+    "IR Range": "Up to 98ft",
+    "WDR": "120dB True WDR",
+    "Audio": "Built-in Microphone",
+    "Storage": "MicroSD slot (up to 256GB)",
+    "Protection": "IP67 Weatherproof",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP1043NW-MZ",
+  "name": "Platinum 4 MP Varifocal Dome IP Camera",
+  "description": "4MP dome camera featuring a 2.8-12mm motorized varifocal lens and IK10 vandal resistance.",
+  "long_description": "The CMIP1043NW-MZ provides flexible 4MP surveillance with a motorized zoom lens. It features 120dB WDR and H.265+ compression, housed in a durable IK10 vandal-proof and IP67 weatherproof enclosure.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/m/b/mb-261-f-lts_2.png",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP1043NW-MZ",
+      "name": "Platinum 4 MP Varifocal Dome IP Camera",
+      "description": "4MP, 2.8-12mm Varifocal, 100ft IR, IK10, IP67",
+      "price": 189.99
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Lens": "2.8-12mm Motorized Varifocal",
+    "IR Range": "Up to 100ft",
+    "WDR": "120dB True WDR",
+    "Storage": "MicroSD slot",
+    "Protection": "IP67, IK10 Vandal-proof",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP1342WE-28MDA",
+  "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera",
+  "description": "Full-color imaging even in total darkness, featuring a 2.8mm lens and built-in microphone.",
+  "long_description": "The CMIP1342WE-28MDA delivers vivid color images 24/7 using advanced sensor technology and white light illumination. It is designed for maximum clarity in low-light environments and includes a built-in mic for audio monitoring.",
+  "image": "/assets/products/placeholder.png",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP1342WE-28MDA",
+      "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera",
+      "description": "4MP, 2.8mm, Color 24/7, Built-in Mic, IP67",
+      "price": 149.99
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Lens": "2.8mm Fixed",
+    "Night Vision": "Color 24/7 (White Light)",
+    "WDR": "120dB True WDR",
+    "Audio": "Built-in Microphone",
+    "Protection": "IP67 Weatherproof",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP3142W-28SDA",
+  "name": "Platinum 4 MP Smart Fixed Mini Dome IP Camera",
+  "description": "Compact mini dome camera with 4MP resolution, MD 2.0 human and vehicle detection, and IK08 impact protection.",
+  "long_description": "The CMIP3142W-28SDA is a smart mini dome that uses Motion Detection 2.0 to focus on human and vehicle targets. It features a built-in microphone, 120dB WDR, and is both IP67 and IK08 rated.",
+  "image": "/assets/products/placeholder.png",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3142W-28SDA",
+      "name": "Platinum 4 MP Smart Fixed Mini Dome IP Camera",
+      "description": "4MP, 2.8mm, MD 2.0, Built-in Mic, IP67, IK08",
+      "price": 159.99
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Lens": "2.8mm Fixed",
+    "WDR": "120dB True WDR",
+    "Smart Features": "Motion Detection 2.0 (Human/Vehicle)",
+    "Audio": "Built-in Microphone",
+    "Storage": "MicroSD slot",
+    "Protection": "IP67, IK08",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP3C42WI-28MDA",
+  "name": "Platinum 4 MP Color 24/7 Hybrid Turret IP Camera",
+  "description": "4MP turret camera with Hybrid Illumination and Color 24/7 technology for superior night-time clarity.",
+  "long_description": "The CMIP3C42WI-28MDA features hybrid illumination, allowing it to switch between IR and white light for optimal performance. It provides color images 24/7 and includes smart Motion Detection 2.0 for reduced false alarms.",
+  "image": "/assets/products/placeholder.png",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3C42WI-28MDA",
+      "name": "Platinum 4 MP Color 24/7 Hybrid Turret IP Camera",
+      "description": "4MP, 2.8mm, Color 24/7 Hybrid Light, MD 2.0, IP67",
+      "price": 174.99
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Lens": "2.8mm Fixed",
+    "Night Vision": "Color 24/7 Hybrid Illumination",
+    "WDR": "120dB True WDR",
+    "Smart Features": "Motion Detection 2.0",
+    "Audio": "Built-in Microphone",
+    "Protection": "IP67 Weatherproof",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP1043W-MDZ",
+  "name": "Platinum 4 MP Varifocal Turret Network Camera",
+  "description": "4MP high-definition turret camera with a 2.8-12mm motorized varifocal lens and human/vehicle detection.",
+  "long_description": "The CMIP1043W-MDZ offers high-quality imaging with 4 MP resolution and supports Human and Vehicle Detection. It features a 2.8 to 12 mm motorized varifocal lens for easy installation and monitoring, 120dB WDR for clear imaging in strong back lighting, and IP67 weather resistance.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip1043w-mdz.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP1043W-MDZ",
+      "name": "Platinum 4 MP Varifocal Turret Network Camera",
+      "description": "4MP, 2.8-12mm Varifocal, 120dB WDR, IP67",
+      "price": 270.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560 \u00d7 1440)",
+    "Lens": "2.8-12mm Motorized Varifocal",
+    "Sensor": "1/3\" Progressive Scan CMOS",
+    "WDR": "120dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Supports Audio & Alarm IO",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP3162W-28SDA",
+  "name": "Platinum 6 MP Smart Fixed Mini Dome IP Camera",
+  "description": "6MP compact mini dome with built-in mic, 2.8mm lens, and advanced human/vehicle detection.",
+  "long_description": "The CMIP3162W-28SDA provides superior 6MP imaging and features a built-in microphone for real-time audio security. It uses Motion Detection 2.0 to focus on human and vehicle targets and is rated IP66 and IK08 for durability.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3162w-28sda.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "DOMES"
+    ],
+    "camera_resolution": [
+      "6MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3162W-28SDA",
+      "name": "Platinum 6 MP Smart Fixed Mini Dome IP Camera",
+      "description": "6MP, 2.8mm, Built-in Mic, IP66, IK08",
+      "price": 239.0
+    }
+  ],
+  "specs": {
+    "Resolution": "6MP (3200 \u00d7 1800)",
+    "Lens": "2.8mm Fixed",
+    "Sensor": "1/2.8\" Progressive Scan CMOS",
+    "WDR": "120dB True WDR",
+    "Protection": "IP66, IK08",
+    "Audio": "Built-in Microphone",
+    "Compression": "H.265+"
+  }
+},
+{
+  "series_id": "CMIP3342WI-28SDL",
+  "name": "Platinum 4 MP Active Deterrence Turret Network Camera",
+  "description": "4MP active deterrence camera with smart hybrid light, strobe alarm, and high-quality audio.",
+  "long_description": "The CMIP3342WI-28SDL is designed for active deterrence, featuring a strobe light and audio alarm to deter intruders. It includes smart hybrid light (IR and White LED), deep learning-based human and vehicle detection, and a dual-array microphone.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3342wi-28sdl.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3342WI-28SDL",
+      "name": "Platinum 4 MP Active Deterrence Turret Network Camera",
+      "description": "4MP, 2.8mm, Active Deterrence, Hybrid Light, IP67",
+      "price": 225.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688 \u00d7 1520)",
+    "Lens": "2.8mm Fixed",
+    "Sensor": "1/3\" Progressive Scan CMOS",
+    "WDR": "120dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Dual-array Mic & Speaker",
+    "Smart Features": "Active Strobe & Audio Alarm"
+  }
+},
+{
+  "series_id": "CMIP3342WIB-28SDL",
+  "name": "Platinum 4 MP Active Deterrence Turret Network Camera (Black)",
+  "description": "4MP active deterrence turret in a sleek black housing with hybrid light and strobe alarm.",
+  "long_description": "The CMIP3342WIB-28SDL offers the same powerful active deterrence features as the white version, including strobe light and audio alarm, but in a discreet black finish. It features smart hybrid light and advanced human/vehicle classification.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3342wib-28sdl.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3342WIB-28SDL",
+      "name": "Platinum 4 MP Active Deterrence Turret Network Camera (Black)",
+      "description": "4MP, 2.8mm, Active Deterrence, Hybrid Light, Black, IP67",
+      "price": 225.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688 \u00d7 1520)",
+    "Lens": "2.8mm Fixed",
+    "Sensor": "1/3\" Progressive Scan CMOS",
+    "WDR": "120dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Dual-array Mic & Speaker",
+    "Color": "Black"
+  }
+},
+{
+  "series_id": "CMIP3382WIB-28SDL",
+  "name": "Platinum 8 MP Active Deterrence Turret Network Camera (Black)",
+  "description": "8MP 4K active deterrence turret with hybrid illumination and deep learning analytics in black.",
+  "long_description": "The CMIP3382WIB-28SDL provides stunning 8MP 4K resolution with active deterrence capabilities. Features include a strobe light, audio alarm, smart hybrid light, and MD 2.0 analytics for precise human and vehicle detection, all in a professional black housing.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3382wib-28sdl.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3382WIB-28SDL",
+      "name": "Platinum 8 MP Active Deterrence Turret Network Camera (Black)",
+      "description": "8MP 4K, 2.8mm, Active Deterrence, Hybrid Light, Black, IP67",
+      "price": 285.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840 \u00d7 2160)",
+    "Lens": "2.8mm Fixed",
+    "Sensor": "1/2.8\" Progressive Scan CMOS",
+    "WDR": "120dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Dual-array Mic & Speaker",
+    "Color": "Black"
+  }
+},
+{
+  "series_id": "CMIP3743W2-DLZ",
+  "name": "Platinum 4 MP Dual-lens Fixed point zoom Turret Network Camera",
+  "description": "Dual-channel camera with one cable design, 2.8/4mm lenses for point-to-point zoom, and smart hybrid light.",
+  "long_description": "This innovative dual-channel camera features two independent 4MP channels over a single IP and cable. It includes 2.8mm and 4mm lenses for point-to-point zoom, Smart Hybrid Light (IR and white lights), and crystal-clear audio with an Arrayed Dual-Mic. Designed with NEMA 4X anti-corrosion and IP67 waterproof standards, it focuses on human and vehicle classification using deep learning.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/l/t/ltcmip3743w2-dlz_1_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3743W2-DLZ",
+      "name": "Platinum 4 MP Dual-lens Fixed point zoom Turret Network Camera",
+      "description": "4MP, 2.8mm/4mm Dual-lens, Hybrid Light, NEMA 4X",
+      "price": 419.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4 MP",
+    "Lens": "2.8 mm / 4 mm (Dual-lens)",
+    "Sensor": "1/3\" Progressive Scan CMOS",
+    "WDR": "120 dB True WDR",
+    "Protection": "IP67, NEMA 4X (Anti-corrosion)",
+    "Audio": "Built-in Dual-Mic, Audio alarm"
+  }
+},
+{
+  "series_id": "CMIP384PW-28SDL",
+  "name": "Platinum 4 MP Panoramic Turret IP Camera",
+  "description": "4 MP Panoramic camera with 180\u00b0 field of view, dual sensors, and active deterrence features.",
+  "long_description": "The Platinum Series 4 MP Panoramic camera utilizes two 1/2.5\" sensors to provide a seamless 180\u00b0 field of view. It features 120 dB true WDR for clear imaging against strong backlight and uses deep learning for human and vehicle classification. It includes an active strobe light and audio alarm to warn off intruders, along with built-in two-way audio and IP67 protection.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/l/t/ltcmip384pw-28sdl_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS",
+      "PANORAMIC"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP384PW-28SDL",
+      "name": "Platinum 4 MP Panoramic Turret IP Camera",
+      "description": "4 MP, 2.8mm, 180 FOV, Active Deterrence, IP67",
+      "price": 229.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4 MP",
+    "Lens": "2.8 mm (Panoramic 180\u00b0)",
+    "Sensor": "2 x 1/2.5\" Progressive Scan CMOS",
+    "WDR": "120 dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in two-way audio, Active Deterrence (Strobe & Audio)"
+  }
+},
+{
+  "series_id": "CMIP398PW-2SDL",
+  "name": "Platinum 8MP Panoramic Active Deterrence Turret Network Camera",
+  "description": "8MP Panoramic camera with 180\u00b0 FOV, Smart Hybrid Light, and Active Deterrence.",
+  "long_description": "This 8MP Panoramic camera offers a wide 180\u00b0 field of view and high-quality imaging. It features Smart Hybrid Light technology for extended range and deep learning-based person and vehicle detection. Equipped with built-in two-way audio and active deterrence (strobe and audio alarm), it provides real-time security. It is IP67 rated and supports on-board storage up to 512 GB.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip398pw-2sdl_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS",
+      "PANORAMIC"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP398PW-2SDL",
+      "name": "Platinum 8MP Panoramic Active Deterrence Turret Network Camera",
+      "description": "8MP, 2.0mm, 180 FOV, Hybrid Light, Active Deterrence",
+      "price": 309.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8 MP",
+    "Lens": "2.0 mm (Panoramic 180\u00b0)",
+    "Sensor": "2 x 1/1.8\" Progressive Scan CMOS",
+    "WDR": "120 dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in two-way audio, Active Strobe & Audio Alarm"
+  }
+},
+{
+  "series_id": "CMIP3C42NWB-28MDA",
+  "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera - Black",
+  "description": "4 MP Color 24/7 turret camera with 130 dB WDR and black housing.",
+  "long_description": "Providing 24/7 colorful imaging even in low-light conditions, this 4MP turret camera is housed in a sleek black casing. It features 130 dB True WDR for exceptional clarity in backlit scenes and focuses on human and vehicle targets using deep learning. It includes a built-in microphone and is IP67 rated for water and dust resistance.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3c42nwb-28mda_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3C42NWB-28MDA",
+      "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera - Black",
+      "description": "4 MP, 2.8mm, Color 24/7, Black, IP67",
+      "price": 229.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4 MP",
+    "Lens": "2.8 mm",
+    "Sensor": "1/3\" Progressive Scan CMOS",
+    "WDR": "130 dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in microphone",
+    "Color": "Black"
+  }
+},
+{
+  "series_id": "CMIP3C42WI-28SDL",
+  "name": "Platinum 4 MP Color 24/7 Turret IP Camera",
+  "description": "4 MP Color 24/7 camera with Smart Hybrid Lighting and 130 dB WDR.",
+  "long_description": "This 4MP turret camera combines Color 24/7 technology with Smart Hybrid Lighting to provide clear, full-color images around the clock. It features 130 dB True WDR and deep learning for advanced human and vehicle classification. The camera also supports active deterrence with a strobe light and audio alarm, includes two-way audio, and is IP67 waterproof.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/l/t/ltcmip3c42wi-28sdl.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3C42WI-28SDL",
+      "name": "Platinum 4 MP Color 24/7 Turret IP Camera",
+      "description": "4 MP, 2.8mm, Color 24/7, Hybrid Light, Active Deterrence",
+      "price": 249.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4 MP",
+    "Lens": "2.8 mm",
+    "Sensor": "1/3\" Progressive Scan CMOS",
+    "WDR": "130 dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in two-way audio, Active Strobe & Audio Alarm"
+  }
+},
+{
+  "series_id": "CMIP3C6PW-28SDL",
+  "name": "Platinum 6 MP Panoramic Fixed Turret IP Camera",
+  "description": "6 MP Panoramic turret providing 180\u00b0 coverage, Color 24/7 imaging, and active deterrence.",
+  "long_description": "The CMIP3C6PW-28SDL delivers high-quality 6MP imaging and captures a wide area that typically requires multiple cameras. It features 24/7 colorful imaging, 130 dB True WDR, and H.265+ compression. Deep learning-based human and vehicle classification, combined with an active strobe light and audio alarm, provide comprehensive security. IP67 rated.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3c6pw-28sdl_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS",
+      "PANORAMIC"
+    ],
+    "camera_resolution": [
+      "6MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3C6PW-28SDL",
+      "name": "Platinum 6 MP Panoramic Fixed Turret IP Camera",
+      "description": "6MP, 2.8mm, 180\u00b0 FOV, Color 24/7, Active Deterrence",
+      "price": 249.0
+    }
+  ],
+  "specs": {
+    "Resolution": "6MP",
+    "Lens": "2.8mm",
+    "Sensor": "2 x 1/2.5\" CMOS",
+    "WDR": "130dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in Mic & Speaker (Active Deterrence)"
+  }
+},
+{
+  "series_id": "CMIP3C82WI-28SDL",
+  "name": "Platinum 8 MP Color 24/7 Fixed Turret IP Camera",
+  "description": "8MP 4K Color 24/7 turret with Smart Hybrid Light and red/blue strobe deterrence.",
+  "long_description": "This 8MP turret camera provides stunning 4K color images 24/7. It features Smart Hybrid Light technology, 130 dB True WDR, and advanced human/vehicle classification. It includes two-way audio and active red/blue strobe lights and an audio alarm to ward off intruders. IP67 weather resistance.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3c82wi-28sdl.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3C82WI-28SDL",
+      "name": "Platinum 8 MP Color 24/7 Fixed Turret IP Camera",
+      "description": "8MP 4K, 2.8mm, Color 24/7, Red & Blue Strobe, Active Deterrence",
+      "price": 269.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP",
+    "Lens": "2.8mm",
+    "Sensor": "1/1.2\" Progressive Scan CMOS",
+    "WDR": "130dB True WDR",
+    "Protection": "IP67",
+    "Audio": "Two-way Audio (Built-in Mic & Speaker)"
+  }
+},
+{
+  "series_id": "CMIP3CD42WI-28LAISP",
+  "name": "Platinum 4 MP AI Color 24/7 Turret Camera with Active Deterrence",
+  "description": "4MP turret featuring AI-ISP for superior noise reduction, Color 24/7 imaging, and NEMA4X anti-corrosion.",
+  "long_description": "The CMIP3CD42WI-28LAISP utilizes a new AI Image Signal Processor for exceptional low-light performance. It offers 24/7 colorful imaging, scene-adaptive AI WDR, and person/vehicle classification. This model includes active deterrence (strobe and audio alarm) and a NEMA4X anti-corrosion design, making it ideal for harsh environments. IP67 rated.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3cd42wi-28laisp.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3CD42WI-28LAISP",
+      "name": "Platinum 4 MP AI Color 24/7 Turret Camera with Active Deterrence",
+      "description": "4MP, AI-ISP, Color 24/7, Active Deterrence, NEMA 4X, IP67",
+      "price": 289.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP",
+    "Lens": "2.8mm",
+    "Sensor": "1/1.8\" Progressive Scan CMOS with AI-ISP",
+    "WDR": "AI-based Scene-adaptive WDR",
+    "Protection": "IP67, NEMA 4X (Anti-corrosion)",
+    "Audio": "Built-in Dual-Mic & Speaker"
+  }
+},
+{
+  "series_id": "CMIP3CD42WI-AISP",
+  "name": "Platinum 4 MP AI Color 24/7 Turret Camera",
+  "description": "4MP camera with AI Image Signal Processor and 24/7 color imaging for maximum clarity.",
+  "long_description": "Featuring the new AI-ISP, this 4MP turret camera provides excellent noise reduction and 24/7 colorful imaging. It includes scene-adaptive AI WDR and deep learning-based analytics for person and vehicle classification. Smart Hybrid Light integrates IR and white lights for versatile lighting options. IP67 rated.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3cd42wi-aisp.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3CD42WI-AISP",
+      "name": "Platinum 4 MP AI Color 24/7 Turret Camera",
+      "description": "4MP, AI-ISP, Color 24/7, Hybrid Light, IP67",
+      "price": 269.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP",
+    "Lens": "Fixed (2.8mm typical)",
+    "Sensor": "1/1.8\" Progressive Scan CMOS with AI-ISP",
+    "WDR": "AI-based Scene-adaptive WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in Microphone"
+  }
+},
+{
+  "series_id": "CMIP3CD42WIB-28AISP",
+  "name": "Platinum 4 MP AI Color 24/7 Turret Camera (Black)",
+  "description": "4MP AI-ISP Color 24/7 turret camera in a discreet black housing.",
+  "long_description": "This black version of the 4MP AI-ISP turret camera offers the same advanced imaging capabilities, including 24/7 color, AI noise reduction, and person/vehicle classification. Its discreet design is perfect for professional installations. Features include scene-adaptive WDR and IP67 weather resistance.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip3cd42wib-28aisp.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS",
+      "CAMERAS",
+      "TURRETS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "CMIP3CD42WIB-28AISP",
+      "name": "Platinum 4 MP AI Color 24/7 Turret Camera (Black)",
+      "description": "4MP, AI-ISP, Color 24/7, Black Housing, IP67",
+      "price": 269.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP",
+    "Lens": "2.8mm",
+    "Sensor": "1/1.8\" Progressive Scan CMOS with AI-ISP",
+    "WDR": "AI-based Scene-adaptive WDR",
+    "Protection": "IP67",
+    "Audio": "Built-in Microphone",
+    "Color": "Black"
+  }
+}
+,
+  {
+    "series_id": "CMIP3CD82WI-28AISP",
+    "name": "8 MP AI Color 24/7 Turret Camera (2.8mm Lens)",
+    "description": "8MP AI Color 24/7 Turret Camera with 2.8mm lens and AI Image Signal Processor.",
+    "long_description": "The Platinum 8MP AI Color 24/7 Turret Camera provides vivid, full-color images even in total darkness. Utilizing a high-performance F1.0 lens and advanced AI-ISP technology, it significantly reduces image noise and enhances clarity. Its smart hybrid lighting allows for flexible night vision options, while AI analytics provide precise detection of people and vehicles to reduce false alarms.",
+    "image": "https://m.media-amazon.com/images/I/51r2X3y4+pL._AC_SL1500_.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3CD82WI-28AISP",
+        "name": "8 MP AI Color 24/7 Turret Camera (2.8mm Lens)",
+        "description": "8MP AI Color 24/7 Turret Camera with 2.8mm lens",
+        "price": 362.6
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP (3840 x 2160)",
+      "Lens": "2.8mm",
+      "Night Vision": "Smart Hybrid Light (IR + White Light)",
+      "Features": "AI-ISP, Full-Color 24/7, Human/Vehicle Analytics",
+      "Protection": "IP67, NEMA 4X"
+    }
+  },
+  {
+    "series_id": "CMIP3CD82WI-28LAISP",
+    "name": "8 MP AI Color 24/7 with Active Deterrence Camera",
+    "description": "8MP AI Color 24/7 camera featuring Active Deterrence with strobe light and audio alarm.",
+    "long_description": "This advanced 8MP camera combines 24/7 colorful surveillance with proactive security. It features \"Active Deterrence\" capabilities, using a flashing strobe light and a customizable audio alarm to warn off intruders before an incident occurs. With high-fidelity two-way audio and AI-driven detection, it offers a complete security solution for sensitive areas.",
+    "image": "https://m.media-amazon.com/images/I/51fXf6v7+pL._AC_SL1500_.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3CD82WI-28LAISP",
+        "name": "8 MP AI Color 24/7 with Active Deterrence Camera",
+        "description": "Active Deterrence with Strobe and Siren",
+        "price": 390.6
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP",
+      "Active Deterrence": "Strobe Light & Audio Alarm",
+      "Audio": "Built-in Speaker & Dual-Microphone",
+      "Night Vision": "Full-Color 24/7",
+      "Protection": "IP67, NEMA 4X"
+    }
+  },
+  {
+    "series_id": "CMIP3CD82WI-AISP",
+    "name": "8 MP AI Color 24/7 Turret Camera",
+    "description": "8MP AI Color 24/7 Turret Camera with Scene-adaptive AI WDR.",
+    "long_description": "A variation of the 8MP AI Color series, this turret camera focuses on providing high-resolution 4K video with exceptional low-light performance. It uses intelligent scene-adaptive WDR to balance lighting in complex environments and features a robust anti-corrosion housing, making it ideal for coastal or harsh industrial environments.",
+    "image": "https://m.media-amazon.com/images/I/51r2X3y4+pL._AC_SL1500_.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3CD82WI-AISP",
+        "name": "8 MP AI Color 24/7 Turret Camera",
+        "description": "8MP AI Color with Scene-adaptive AI WDR",
+        "price": 362.6
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP",
+      "WDR": "Scene-adaptive AI WDR",
+      "Night Vision": "Full-Color 24/7",
+      "Protection": "IP67, NEMA 4X"
+    }
+  },
+  {
+    "series_id": "CMIP3CD82WIB-28AISP",
+    "name": "8 MP AI Color 24/7 Turret Camera (Black Housing)",
+    "description": "8MP AI Color 24/7 Turret Camera in discreet black housing.",
+    "long_description": "This model offers the same high-end 8MP 24/7 color performance and AI analytics as the standard turret but features a sleek black finish. This is ideal for installations where the camera needs to blend into dark soffits, ceilings, or modern architectural designs without sacrificing superior night vision or durability.",
+    "image": "https://m.media-amazon.com/images/I/61N+V3J8+pL._AC_SL1500_.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3CD82WIB-28AISP",
+        "name": "8 MP AI Color 24/7 Turret Camera (Black)",
+        "description": "Black Housing for Discreet Installation",
+        "price": 362.6
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP",
+      "Housing": "Black",
+      "Night Vision": "Smart Hybrid Light (IR + White Light)",
+      "Protection": "IP67, NEMA 4X"
+    }
+  },
+  {
+    "series_id": "CMIP7042W-28MA",
+    "name": "Platinum 4 MP Fixed Dome IP Camera",
+    "description": "4MP Fixed Dome IP Camera with 120dB WDR and IK10 vandal resistance.",
+    "long_description": "The CMIP7042W-28MA is a robust 4MP dome camera designed for both indoor and outdoor security. Its vandal-resistant IK10 rating and IP67 weather protection make it highly durable against physical tampering and elements. With 120dB WDR and H.265+ compression, it delivers efficient, high-quality video even in challenging lighting conditions.",
+    "image": "https://m.media-amazon.com/images/I/51C6X4y3+pL._AC_SL1500_.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7042W-28MA",
+        "name": "Platinum 4 MP Fixed Dome IP Camera",
+        "description": "Vandal-resistant Dome Camera",
+        "price": 91.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Protection": "IP67, IK10 Vandal-resistant",
+      "Compression": "H.265+",
+      "WDR": "120dB",
+      "Storage": "MicroSD up to 256GB"
+    }
+  }
+,
+  {
+    "series_id": "CMIP7043NW-MZ",
+    "name": "4MP Platinum Network Vandal Dome IP Camera (Motorized Zoom)",
+    "description": "4MP Vandal Dome with 2.8-12mm motorized zoom lens and 100ft Matrix IR 2.0.",
+    "long_description": "The LTS CMIP7043NW-MZ is a high-performance 4MP outdoor dome camera featuring a motorized zoom lens for easy remote adjustment of the field of view. It offers superior night vision with Matrix IR 2.0 and is built to withstand harsh environments and physical impact with its IP67 and IK10 ratings. Ideal for commercial and residential surveillance where flexible focal lengths are required.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7043nw-mz.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7043NW-MZ",
+        "name": "4MP Platinum Network Vandal Dome (Motorized Zoom)",
+        "description": "2.8-12mm Motorized Lens, IK10 Vandal-proof",
+        "price": 351.78
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2560 x 1440)",
+      "Lens": "2.8-12mm motorized varifocal",
+      "Night Vision": "Matrix IR 2.0 (up to 100ft)",
+      "Compression": "H.265+",
+      "Protection": "IP67, IK10 Vandal-proof"
+    }
+  },
+  {
+    "series_id": "CMIP7106F-SE",
+    "name": "6MP Platinum Network Fisheye Camera",
+    "description": "6MP Fisheye with 360\u00b0 panoramic view, two-way audio, and multiple viewing modes.",
+    "long_description": "The LTS CMIP7106F-SE provides a comprehensive 360-degree panoramic view, effectively eliminating blind spots in indoor environments. With its 6MP high-resolution sensor and built-in two-way audio, it serves as an all-in-one monitoring solution. The camera supports multiple dewarping modes to provide clear, flat views from its fisheye lens.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7106f-se.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "6MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7106F-SE",
+        "name": "6MP Platinum Network Fisheye Camera",
+        "description": "360\u00b0 Panoramic View with Two-Way Audio",
+        "price": 365.3
+      }
+    ],
+    "specs": {
+      "Resolution": "6MP (3072 x 2048)",
+      "Lens": "1.27mm fixed (360\u00b0 view)",
+      "Night Vision": "Up to 50ft IR",
+      "Audio": "Built-in mic and speaker",
+      "Viewing Modes": "Fisheye, Panorama, PTZ"
+    }
+  },
+  {
+    "series_id": "CMIP7243W-SDZ",
+    "name": "4MP Platinum Network Bullet IP Camera (Motorized Zoom)",
+    "description": "4MP Bullet with 2.8-12mm motorized zoom lens and 165ft Matrix IR 2.0.",
+    "long_description": "The LTS CMIP7243W-SDZ is a rugged 4MP bullet camera designed for long-distance outdoor monitoring. Its motorized 2.8-12mm lens allows for precise zooming, while its powerful Matrix IR 2.0 LEDs provide visibility up to 165 feet in total darkness. The camera is optimized for outdoor use with a high-durability IP67 housing.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7243w-sdz.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7243W-SDZ",
+        "name": "4MP Platinum Network Bullet (Motorized Zoom)",
+        "description": "2.8-12mm Motorized Lens, 165ft IR Range",
+        "price": 323.7
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8-12mm motorized varifocal",
+      "Night Vision": "Matrix IR 2.0 (up to 165ft)",
+      "Protection": "IP67 Weatherproof",
+      "WDR": "120dB True WDR"
+    }
+  },
+  {
+    "series_id": "CMIP7342WI-28MDA",
+    "name": "4MP Platinum Smart Dual Light Fixed Turret IP Camera",
+    "description": "4MP Smart Dual Light Turret with AI Human/Vehicle detection and built-in microphone.",
+    "long_description": "The LTS CMIP7342WI-28MDA features Smart Dual Light technology, which can automatically switch from IR to white light when a human or vehicle is detected, providing color evidence at night. It uses advanced AI to reduce false alarms and includes a built-in microphone, making it a powerful tool for proactive security and classification.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7342wi-28mda.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7342WI-28MDA",
+        "name": "4MP Platinum Smart Dual Light Turret",
+        "description": "AI-driven Human/Vehicle Detection with Built-in Mic",
+        "price": 162.5
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2688 x 1520)",
+      "Night Vision": "Smart Dual Light up to 98ft",
+      "AI": "Human and Vehicle detection",
+      "Audio": "Built-in microphone",
+      "Protection": "IP67 Weatherproof"
+    }
+  },
+  {
+    "series_id": "CMIP7382WI-28MDA",
+    "name": "8MP Platinum Smart Dual Light Fixed Turret IP Camera",
+    "description": "8MP 4K Smart Dual Light Turret with AI analytics and H.265+ compression.",
+    "long_description": "The LTS CMIP7382WI-28MDA delivers ultra-high-definition 4K video resolution combined with Smart Dual Light illumination. This camera provides the ultimate level of detail for identifying subjects and features AI-driven classification to ensure that only relevant events trigger alerts. Its compact turret design is both discreet and weather-resistant.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7382wi-28mda.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7382WI-28MDA",
+        "name": "8MP Platinum Smart Dual Light Turret",
+        "description": "4K UHD with Smart Dual Light and AI Analytics",
+        "price": 232.7
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP (4K)",
+      "Night Vision": "Smart Dual Light up to 98ft",
+      "AI": "Human and Vehicle detection",
+      "Audio": "Built-in microphone",
+      "Compression": "H.265+"
+    }
+  }
+,
+  {
+    "series_id": "CMIP7553W4-SZ8",
+    "name": "Platinum Compact 4 x 5 MP Multi-Lens IP Camera",
+    "description": "20MP Multi-sensor camera with 4 flexible motorized varifocal lenses for 360\u00b0 coverage.",
+    "long_description": "The LTS CMIP7553W4-SZ8 is a 20MP (4 x 5MP) Platinum multi-sensor IP camera featuring four flexible, motorized varifocal lenses (2.8-8 mm) that provide 360\u00b0 coverage. It is designed for comprehensive surveillance in large outdoor areas, offering 120dB WDR and a 30m IR range for exceptional clarity in various lighting conditions.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7553w4-sz8.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "20MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7553W4-SZ8",
+        "name": "Platinum Compact 4x5MP Multi-Lens Camera",
+        "description": "4x 5MP Flexible Lenses for 360\u00b0 View",
+        "price": 1625.0
+      }
+    ],
+    "specs": {
+      "Resolution": "20MP (4 x 5 MP)",
+      "Lenses": "4 flexible motorized varifocal (2.8 - 8 mm)",
+      "Night Vision": "Up to 98 ft IR",
+      "Protection": "IP67, IK10 Vandal-proof",
+      "WDR": "120dB True WDR"
+    }
+  },
+  {
+    "series_id": "CMIP7553W5-SZ8",
+    "name": "Platinum 5-Directional Multi-sensor IP Camera",
+    "description": "5-Lens Multi-sensor camera (4 adjustable + 1 fixed) with AI person/vehicle classification.",
+    "long_description": "The Platinum CMIP7553W5-SZ8 features four adjustable lenses and a single fixed lens that together capture up to 360 degrees, eliminating blind spots. The top/center lens records at up to 5 MP, capturing clear details for video walls. It includes advanced AI for person and vehicle classification across 4 channels.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7553w5-sz8.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "25MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7553W5-SZ8",
+        "name": "Platinum 5-Directional Multi-sensor Camera",
+        "description": "5x 5MP Lenses with AI Person/Vehicle Classification",
+        "price": 1883.7
+      }
+    ],
+    "specs": {
+      "Resolution": "25MP (5 x 5 MP)",
+      "Lenses": "4 adjustable + 1 fixed center lens",
+      "Night Vision": "0.005 Lux low-light performance",
+      "AI": "Human and vehicle classification",
+      "Protection": "IP67, IK10"
+    }
+  },
+  {
+    "series_id": "CMIP7943WLPR-32R",
+    "name": "Platinum 4 MP IR Varifocal LPR Bullet IP Camera",
+    "description": "Specialized License Plate Recognition camera with 8-32mm motorized lens and 328ft IR.",
+    "long_description": "A specialized LPR (License Plate Recognition) camera designed for traffic monitoring and parking management. The CMIP7943WLPR-32R uses a high-performance 1/1.8\" sensor and a powerful 328ft IR to capture legible plates even at night, supported by 140dB WDR to handle headlight glare.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7943wlpr-32r.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7943WLPR-32R",
+        "name": "Platinum 4 MP LPR Bullet Camera",
+        "description": "8-32mm Motorized Lens, 328ft IR LPR",
+        "price": 1040.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2688 x 1520)",
+      "Lens": "8 - 32 mm Motorized Varifocal",
+      "LPR Range": "Up to 328ft (100m) Matrix IR",
+      "WDR": "140dB Extreme WDR",
+      "Protection": "IP67, IK10"
+    }
+  },
+  {
+    "series_id": "CMIP7C43W-SDZ",
+    "name": "Platinum 4 MP Color 24/7 Vari-focal Dome IP Camera",
+    "description": "4MP 24/7 Full Color Dome with 2.8-12mm motorized lens and AI detection.",
+    "long_description": "The CMIP7C43W-SDZ provides 24/7 color imaging using F1.0 advanced lenses and high-performance sensors. Even in extremely low light, it delivers bright, color video. This model includes a motorized varifocal lens and AI-based motion detection (MD 2.0) for reduced false alarms.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7c43w-sdz.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7C43W-SDZ",
+        "name": "Platinum 4 MP Color 24/7 Vari-focal Dome",
+        "description": "2.8-12mm Motorized Lens, 24/7 Color Night Vision",
+        "price": 518.7
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8 - 12 mm Motorized Varifocal",
+      "Night Vision": "Color 24/7 vivid colorful imaging",
+      "Audio": "Built-in Microphone",
+      "WDR": "130dB True WDR"
+    }
+  },
+  {
+    "series_id": "CMIP7CD42WI-28AISP",
+    "name": "Platinum 4 MP AI Color 24/7 Dome Camera",
+    "description": "4MP AI Color 24/7 Dome with AI noise reduction and Smart Hybrid Light.",
+    "long_description": "Part of the latest AI series, the CMIP7CD42WI-28AISP features an AI-enhanced ISP for superior noise reduction and vivid color 24/7. It introduces Smart Hybrid Light technology, allowing the camera to switch between IR and white light intelligently. The NEMA4X rating ensures durability in coastal or corrosive environments.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7cd42wi-28aisp.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7CD42WI-28AISP",
+        "name": "Platinum 4 MP AI Color 24/7 Dome",
+        "description": "AI ISP Noise Reduction, Smart Hybrid Light",
+        "price": 323.7
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Features": "AI ISP Noise Reduction, Smart Hybrid Light",
+      "Audio": "Built-in dual-microphone",
+      "Protection": "NEMA4X anti-corrosion, IP67",
+      "Night Vision": "Full-Color 24/7"
+    }
+  }
+,
+  {
+    "series_id": "CMIP7CD82WI-28AISP",
+    "name": "LTS CMIP7CD82WI-28AISP 8MP AI Dome Camera",
+    "description": "8MP AI-powered dome camera with F1.0 large aperture, Smart Hybrid Light, and dual audio in an IP67/IK10/NEMA 4X housing.",
+    "long_description": "The LTS CMIP7CD82WI-28AISP is a high-performance 8MP (3840 \u00d7 2160) AI dome camera featuring a 2.8mm fixed lens with an ultra-wide F1.0 aperture for outstanding low-light performance. Smart Hybrid Light technology combines IR and white light illumination for adaptive night vision. AI-based person and vehicle classification reduces false alarms, while a built-in dual microphone and speaker enable two-way audio. The rugged IP67 weatherproof, IK10 vandal-resistant, and NEMA 4X anti-corrosion design makes it ideal for demanding outdoor installations.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip7cd82wi-28aisp.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP7CD82WI-28AISP",
+        "name": "LTS CMIP7CD82WI-28AISP 8MP AI Dome Camera",
+        "description": "8MP AI dome with F1.0 aperture, Smart Hybrid Light, dual audio, IP67/IK10/NEMA 4X",
+        "price": 357.5
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP (3840 \u00d7 2160)",
+      "Lens": "2.8mm fixed",
+      "Aperture": "F1.0",
+      "IR Range": "Smart Hybrid Light (IR/White Light)",
+      "WDR": "120dB WDR",
+      "AI Analytics": "Person/Vehicle Classification",
+      "Audio": "Built-in Dual Microphone and Speaker",
+      "Ingress Protection": "IP67 Weatherproof",
+      "Vandal Resistance": "IK10",
+      "Corrosion Resistance": "NEMA 4X",
+      "Storage": "N/A"
+    }
+  },
+  {
+    "series_id": "CMIP8042W-28MA",
+    "name": "LTS CMIP8042W-28MA 4MP Fixed Bullet Camera",
+    "description": "4MP fixed bullet camera with 2.8mm lens, built-in microphone, Matrix IR 2.0 (98ft), and IP67 weatherproof rating.",
+    "long_description": "The LTS CMIP8042W-28MA is a compact 4MP bullet camera equipped with a 2.8mm fixed lens for wide-area coverage. Matrix 2.0 infrared technology provides clear night vision up to approximately 98 feet. A built-in microphone captures ambient audio for enhanced situational awareness. The 120dB WDR ensures balanced images in high-contrast lighting conditions, while the IP67-rated housing protects against dust and water for reliable outdoor deployment.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip8042w-28ma.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP8042W-28MA",
+        "name": "LTS CMIP8042W-28MA 4MP Fixed Bullet Camera",
+        "description": "4MP bullet with 2.8mm fixed lens, built-in mic, Matrix IR 2.0, IP67",
+        "price": 130.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8mm fixed",
+      "IR Range": "Matrix IR 2.0 (up to ~98ft)",
+      "WDR": "120dB WDR",
+      "Audio": "Built-in Microphone",
+      "AI Analytics": "N/A",
+      "Ingress Protection": "IP67",
+      "Vandal Resistance": "N/A",
+      "Storage": "N/A"
+    }
+  },
+  {
+    "series_id": "CMIP8043NW-MZ",
+    "name": "LTS CMIP8043NW-MZ 4MP Motorized Varifocal Bullet Camera",
+    "description": "4MP bullet camera with 2.8\u201312mm motorized varifocal lens, Matrix IR 2.0 (131ft), 120dB WDR, and microSD slot.",
+    "long_description": "The LTS CMIP8043NW-MZ is a versatile 4MP bullet camera featuring a 2.8\u201312mm motorized varifocal lens that allows remote zoom and focus adjustment for flexible installation. Matrix IR 2.0 technology delivers clear night vision up to approximately 131 feet. The 120dB WDR handles challenging high-contrast scenes, and an onboard microSD card slot supports edge storage up to 256GB. The IP67 weatherproof enclosure ensures dependable outdoor performance.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip8043nw-mz.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP8043NW-MZ",
+        "name": "LTS CMIP8043NW-MZ 4MP Motorized Varifocal Bullet Camera",
+        "description": "4MP bullet with 2.8\u201312mm motorized varifocal lens, Matrix IR 2.0, microSD slot, IP67",
+        "price": 234.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8\u201312mm motorized varifocal",
+      "IR Range": "Matrix IR 2.0 (up to ~131ft)",
+      "WDR": "120dB WDR",
+      "Audio": "N/A",
+      "AI Analytics": "N/A",
+      "Ingress Protection": "IP67",
+      "Vandal Resistance": "N/A",
+      "Storage": "microSD up to 256GB"
+    }
+  },
+  {
+    "series_id": "CMIP8043W-MDZ",
+    "name": "LTS CMIP8043W-MDZ 4MP AI Motorized Varifocal Bullet Camera",
+    "description": "4MP AI bullet camera with 2.8\u201312mm motorized varifocal lens, human/vehicle detection, Matrix IR 2.0 (131ft), and IP67 rating.",
+    "long_description": "The LTS CMIP8043W-MDZ combines 4MP resolution with a 2.8\u201312mm motorized varifocal lens for adjustable field-of-view coverage. Onboard AI analytics provide accurate human and vehicle detection to minimize false alerts. Matrix IR 2.0 technology ensures clear night vision up to approximately 131 feet, while 120dB WDR balances scenes with extreme lighting contrast. The IP67 weatherproof housing guarantees reliable operation in harsh outdoor environments.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip8043w-mdz.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP8043W-MDZ",
+        "name": "LTS CMIP8043W-MDZ 4MP AI Motorized Varifocal Bullet Camera",
+        "description": "4MP AI bullet with 2.8\u201312mm motorized varifocal lens, human/vehicle detection, Matrix IR 2.0, IP67",
+        "price": 234.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8\u201312mm motorized varifocal",
+      "IR Range": "Matrix IR 2.0 (up to ~131ft)",
+      "WDR": "120dB WDR",
+      "Audio": "N/A",
+      "AI Analytics": "Human/Vehicle Detection",
+      "Ingress Protection": "IP67",
+      "Vandal Resistance": "N/A",
+      "Storage": "N/A"
+    }
+  },
+  {
+    "series_id": "CMIP8942W-28SDA-WIFI",
+    "name": "LTS CMIP8942W-28SDA-WIFI 4MP Wi-Fi Cube Camera",
+    "description": "4MP Wi-Fi cube camera with 2.8mm lens, two-way audio, PIR motion sensor, AI human/vehicle classification, and microSD edge storage.",
+    "long_description": "The LTS CMIP8942W-28SDA-WIFI is a compact 4MP Wi-Fi cube camera designed for flexible indoor placement. It connects via 2.4GHz Wi-Fi for cable-free installation and features a 2.8mm wide-angle lens for broad coverage. A built-in microphone and speaker enable two-way audio communication, while the PIR motion sensor uses heat-based detection for reliable alerts. AI-based human and vehicle classification reduces false notifications, and 120dB WDR ensures clear imaging in challenging lighting. Edge recording is supported via a microSD card slot accommodating up to 256GB of storage.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/c/m/cmip8942w-28sda-wifi.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "CAMERAS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP8942W-28SDA-WIFI",
+        "name": "LTS CMIP8942W-28SDA-WIFI 4MP Wi-Fi Cube Camera",
+        "description": "4MP Wi-Fi cube with 2.8mm lens, two-way audio, PIR sensor, AI analytics, microSD slot",
+        "price": 234.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8mm wide-angle fixed",
+      "Connectivity": "Wi-Fi 2.4GHz",
+      "WDR": "120dB WDR",
+      "Audio": "Built-in Microphone and Speaker (Two-Way Audio)",
+      "Motion Detection": "PIR Heat-Based Motion Sensor",
+      "AI Analytics": "Human/Vehicle Classification",
+      "Ingress Protection": "N/A (Indoor)",
+      "Vandal Resistance": "N/A",
+      "Storage": "microSD up to 256GB"
+    }
+  }
+,
+  {
+    "series_id": "CMIP8CD42WI-28AISP",
+    "name": "4MP AI Color 24/7 Bullet Camera",
+    "description": "4MP AI Color 24/7 Bullet Camera with 2.8mm lens, 104\u00b0 FOV, 131ft Smart Hybrid Light IR, 24/7 Color, AI ISP, and Dual Microphones.",
+    "long_description": "The CMIP8CD42WI-28AISP is a Platinum Series 4-megapixel IP bullet camera featuring advanced AI ISP technology for 24/7 full-color imaging. Equipped with a 2.8mm fixed lens providing a 104-degree field of view, this camera delivers clear, vibrant footage around the clock. Smart Hybrid Light technology extends night vision up to 131 feet, while built-in dual microphones enable audio capture. Ideal for applications requiring continuous color surveillance with intelligent processing.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/m/cmip8cd42wi-28aisp.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP8CD42WI-28AISP",
+        "name": "4MP AI Color 24/7 Bullet - 2.8mm",
+        "description": "4MP AI Color 24/7 Bullet Camera, 2.8mm lens, 104\u00b0 FOV, 131ft Smart Hybrid Light, AI ISP, Dual Mic",
+        "price": 323.7
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2688 \u00d7 1520)",
+      "Lens": "2.8mm Fixed",
+      "FOV": "104\u00b0",
+      "IR Distance": "131ft (Smart Hybrid Light)",
+      "Key Features": "24/7 Color, AI ISP, Dual Microphones, Smart Hybrid Light"
+    }
+  },
+  {
+    "series_id": "CMIP9243W-SZ",
+    "name": "4MP 25x IR Varifocal Bullet Camera",
+    "description": "4MP 25x IR Varifocal Bullet Camera with 4.7-118mm lens, 57.1-3.1\u00b0 FOV, 656ft IR, 25x Zoom, Face Capture, and 140dB WDR.",
+    "long_description": "The CMIP9243W-SZ is a Platinum Series 4-megapixel IP bullet camera featuring a powerful 25x optical zoom with a motorized varifocal lens (4.7-118mm). Covering a field of view from 57.1 to 3.1 degrees, this camera provides exceptional long-range surveillance capability. IR illumination reaches up to 656 feet, ensuring clear imaging in complete darkness. Advanced features include intelligent face capture technology and 140dB true Wide Dynamic Range for challenging lighting conditions.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/m/cmip9243w-sz.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9243W-SZ",
+        "name": "4MP 25x IR Varifocal Bullet - 4.7-118mm",
+        "description": "4MP 25x IR Varifocal Bullet Camera, 4.7-118mm, 656ft IR, Face Capture, 140dB WDR",
+        "price": 975.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2688 \u00d7 1520)",
+      "Lens": "4.7-118mm Motorized Varifocal (25x Zoom)",
+      "FOV": "57.1\u00b0 - 3.1\u00b0",
+      "IR Distance": "656ft",
+      "Key Features": "25x Optical Zoom, Face Capture, 140dB WDR"
+    }
+  },
+  {
+    "series_id": "CMIP9342WI-28SDL",
+    "name": "4MP Smart Dual Light Active Deterrence Bullet Camera",
+    "description": "4MP Smart Dual Light Active Deterrence Bullet Camera with 2.8mm lens, 104\u00b0 FOV, 131ft Light, Red/Blue Strobe, Siren, and Dual Microphones.",
+    "long_description": "The CMIP9342WI-28SDL is a Platinum Series 4-megapixel IP bullet camera designed for active deterrence. Featuring Smart Dual Light technology with illumination up to 131 feet, this camera combines red and blue strobe lights with an integrated siren to effectively deter intruders. A 2.8mm fixed lens provides a wide 104-degree field of view, while dual microphones enable audio recording and two-way communication. Ideal for perimeter security and proactive threat prevention.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/m/cmip9342wi-28sdl.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9342WI-28SDL",
+        "name": "4MP Smart Dual Light Active Deterrence - 2.8mm",
+        "description": "4MP Smart Dual Light Active Deterrence Bullet, 2.8mm, 104\u00b0 FOV, Red/Blue Strobe, Siren, Dual Mic",
+        "price": 297.7
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2688 \u00d7 1520)",
+      "Lens": "2.8mm Fixed",
+      "FOV": "104\u00b0",
+      "IR Distance": "131ft (Dual Light)",
+      "Key Features": "Active Deterrence, Red/Blue Strobe Light, Siren, Dual Microphones, Smart Dual Light"
+    }
+  },
+  {
+    "series_id": "CMIP9382WI-28SDL",
+    "name": "8MP Smart Dual Light Active Deterrence Bullet Camera",
+    "description": "8MP 4K Smart Dual Light Active Deterrence Bullet Camera with 2.8mm lens, 108\u00b0 FOV, 131ft Light, Strobe/Siren, and Smart Hybrid Light.",
+    "long_description": "The CMIP9382WI-28SDL is a Platinum Series 8-megapixel 4K IP bullet camera featuring advanced active deterrence capabilities. Smart Dual Light technology with Smart Hybrid Light illumination reaches up to 131 feet, while integrated strobe lights and a siren provide proactive intruder deterrence. A 2.8mm fixed lens delivers an ultra-wide 108-degree field of view in stunning 4K resolution. Perfect for high-security applications demanding both ultra-high-definition imaging and active threat deterrence.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/m/cmip9382wi-28sdl.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "8MP (4K)"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9382WI-28SDL",
+        "name": "8MP Smart Dual Light Active Deterrence - 2.8mm",
+        "description": "8MP 4K Smart Dual Light Active Deterrence Bullet, 2.8mm, 108\u00b0 FOV, Strobe/Siren, Smart Hybrid Light",
+        "price": 375.7
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP 4K (3840 \u00d7 2160)",
+      "Lens": "2.8mm Fixed",
+      "FOV": "108\u00b0",
+      "IR Distance": "131ft (Smart Hybrid Light)",
+      "Key Features": "4K Ultra HD, Active Deterrence, Strobe/Siren, Smart Dual Light, Smart Hybrid Light"
+    }
+  },
+  {
+    "series_id": "CMIP9743W-SDZ",
+    "name": "4MP Smart Motorized Varifocal Bullet Camera",
+    "description": "4MP Smart Motorized Varifocal Bullet Camera with 2.8-12mm lens, 108-31\u00b0 FOV, 197ft IR, 4x Zoom, AI Human/Vehicle Detection, and 120dB WDR.",
+    "long_description": "The CMIP9743W-SDZ is a Platinum Series 4-megapixel IP bullet camera equipped with a motorized varifocal lens (2.8-12mm) offering 4x optical zoom. The adjustable field of view ranges from 108 to 31 degrees, providing flexibility for various surveillance scenarios. IR illumination extends up to 197 feet for reliable night vision, while AI-powered human and vehicle detection reduces false alarms. A 120dB Wide Dynamic Range ensures balanced exposure in high-contrast lighting environments.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/c/m/cmip9743w-sdz.png",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9743W-SDZ",
+        "name": "4MP Smart Motorized Varifocal Bullet - 2.8-12mm",
+        "description": "4MP Smart Motorized Varifocal Bullet, 2.8-12mm, 197ft IR, 4x Zoom, AI Human/Vehicle, 120dB WDR",
+        "price": 427.7
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (2688 \u00d7 1520)",
+      "Lens": "2.8-12mm Motorized Varifocal (4x Zoom)",
+      "FOV": "108\u00b0 - 31\u00b0",
+      "IR Distance": "197ft",
+      "Key Features": "4x Motorized Zoom, AI Human/Vehicle Detection, 120dB WDR"
+    }
+  }
+,
+  {
+    "series_id": "CMIP9763W-SDZ",
+    "name": "6MP Motorized Varifocal Bullet Camera",
+    "description": "6MP motorized varifocal bullet camera with 2.8-12mm lens, 106-32\u00b0 FOV, 200ft IR range, IP67 and IK10 rated, featuring AI Human/Vehicle detection.",
+    "long_description": "The CMIP9763W-SDZ is a high-performance 6MP motorized varifocal bullet IP camera designed for demanding surveillance applications. Equipped with a 2.8-12mm motorized lens, it offers a flexible field of view ranging from 106\u00b0 to 32\u00b0. The camera delivers up to 200ft of IR illumination for clear night vision and is built with IP67 weatherproof and IK10 vandal-resistant housing for reliable outdoor deployment. Advanced AI-powered Human and Vehicle detection enables smart, accurate alerts and efficient event management.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip9763w-sdz_1.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "6MP"
+      ],
+      "camera_technology": [
+        "AI",
+        "IR"
+      ],
+      "camera_series": [
+        "CMIP9763W-SDZ"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9763W-SDZ",
+        "name": "6MP Motorized Varifocal Bullet Camera",
+        "description": "6MP bullet camera with motorized 2.8-12mm lens, 200ft IR, IP67, IK10, AI Human/Vehicle detection.",
+        "price": 643.5
+      }
+    ],
+    "specs": {
+      "Resolution": "6MP",
+      "Lens": "2.8-12mm Motorized Varifocal",
+      "FOV": "106\u00b0 - 32\u00b0",
+      "IR Distance": "200ft",
+      "Key Features": "IP67, IK10, AI Human/Vehicle Detection"
+    }
+  },
+  {
+    "series_id": "CMIP9CD42WI-28AISP",
+    "name": "4MP AI Color 24/7 Bullet Camera",
+    "description": "4MP AI Color 24/7 bullet camera with 2.8mm lens, 111.1\u00b0 FOV, 98ft warm light illumination, AI ISP technology, IP67 rated.",
+    "long_description": "The CMIP9CD42WI-28AISP is a 4MP AI-powered Color 24/7 bullet camera that delivers full-color imaging around the clock. Featuring a 2.8mm fixed lens with a wide 111.1\u00b0 field of view and 98ft of warm light supplement illumination, this camera ensures vibrant, detailed footage even in complete darkness. The advanced AI ISP technology optimizes image quality intelligently, while the IP67-rated housing provides robust protection against dust and water for dependable outdoor performance.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip9cd42wi-28aisp_1.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "AI",
+        "Color 24/7",
+        "Warm Light"
+      ],
+      "camera_series": [
+        "CMIP9CD42WI-28AISP"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9CD42WI-28AISP",
+        "name": "4MP AI Color 24/7 Bullet Camera",
+        "description": "4MP Color 24/7 bullet camera with 2.8mm lens, 98ft warm light, AI ISP, IP67.",
+        "price": 356.2
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8mm Fixed",
+      "FOV": "111.1\u00b0",
+      "IR Distance": "98ft Warm Light",
+      "Key Features": "Color 24/7, AI ISP, IP67"
+    }
+  },
+  {
+    "series_id": "CMIP9CD82WI-28AISP",
+    "name": "8MP/4K AI Color 24/7 Bullet Camera",
+    "description": "8MP/4K AI Color 24/7 bullet camera with 2.8mm lens, 108.8\u00b0 FOV, 98ft warm light illumination, AI ISP technology, IP67 rated.",
+    "long_description": "The CMIP9CD82WI-28AISP is an 8MP/4K AI-powered Color 24/7 bullet camera delivering ultra-high-definition, full-color imaging day and night. Equipped with a 2.8mm fixed lens providing a 108.8\u00b0 wide field of view and 98ft of warm light supplement illumination, this camera captures crisp, colorful footage even in zero-light conditions. The AI ISP technology intelligently enhances image processing for superior clarity, and the IP67-rated housing ensures reliable operation in harsh outdoor environments.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/c/m/cmip9cd82wi-28aisp_1.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS"
+      ],
+      "camera_resolution": [
+        "8MP",
+        "4K"
+      ],
+      "camera_technology": [
+        "AI",
+        "Color 24/7",
+        "Warm Light"
+      ],
+      "camera_series": [
+        "CMIP9CD82WI-28AISP"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP9CD82WI-28AISP",
+        "name": "8MP/4K AI Color 24/7 Bullet Camera",
+        "description": "8MP/4K Color 24/7 bullet camera with 2.8mm lens, 98ft warm light, AI ISP, IP67.",
+        "price": 447.2
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP / 4K",
+      "Lens": "2.8mm Fixed",
+      "FOV": "108.8\u00b0",
+      "IR Distance": "98ft Warm Light",
+      "Key Features": "Color 24/7, AI ISP, IP67"
+    }
+  },
+  {
+    "series_id": "LTA1002",
+    "name": "BNC Male to RCA Female Connector (20-Pack)",
+    "description": "High-quality BNC male to RCA female connector 20-pack for reliable signal transmission in video surveillance installations.",
+    "long_description": "The LTA1002 is a 20-pack of BNC male to RCA female adapters designed for high-quality signal transmission in security and video surveillance installations. These connectors provide a dependable interface between BNC-equipped cameras or DVRs and RCA-compatible devices, ensuring minimal signal loss and consistent performance across all connections.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/l/t/lta1002.jpg",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": [
+        "LTA1002"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "LTA1002",
+        "name": "BNC Male to RCA Female Connector (20-Pack)",
+        "description": "20-pack of BNC male to RCA female connectors for high-quality signal transmission.",
+        "price": 25.99
+      }
+    ],
+    "specs": {
+      "Resolution": "N/A",
+      "Lens": "N/A",
+      "FOV": "N/A",
+      "IR Distance": "N/A",
+      "Key Features": "Type: BNC to RCA, Quantity: 20-Pack"
+    }
+  },
+  {
+    "series_id": "LTAC2030",
+    "name": "500ft Siamese Coaxial Cable RG59 + DC Copper Pull Box",
+    "description": "500ft pull box of RG59 Siamese coaxial cable with copper DC power conductor, ideal for CCTV and surveillance installations.",
+    "long_description": "The LTAC2030 is a 500ft pull box of RG59 Siamese coaxial cable combining video and DC power conductors in a single jacket. Built with copper construction for superior signal quality and power transmission, this cable is designed for professional CCTV and surveillance installations. The pull box format allows for clean, efficient cable runs with precise length management, making it an essential component for integrators and installers.",
+    "image": "https://ltsecurityinc.com/media/catalog/product/l/t/ltac2030w.jpg",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": [
+        "LTAC2030"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "LTAC2030",
+        "name": "500ft Siamese Coaxial Cable RG59 + DC Copper Pull Box",
+        "description": "500ft RG59 Siamese coaxial cable with copper DC power in pull box format.",
+        "price": 162.5
+      }
+    ],
+    "specs": {
+      "Resolution": "N/A",
+      "Lens": "N/A",
+      "FOV": "N/A",
+      "IR Distance": "N/A",
+      "Key Features": "Type: RG59 Siamese, Length: 500ft, Material: Copper"
+    }
+  }
+,
+  {
+    "series_id": "LTAC2030B-CMX",
+    "name": "500ft Black Outdoor Direct Burial Siamese Cable (RG59 + 18/2 Power)",
+    "description": "500ft black outdoor direct burial siamese cable featuring RG59 video and 18/2 power in a single jacket. All-copper (BC) construction with CMX rating for outdoor and direct burial applications. Supplied in a convenient pull box for easy installation.",
+    "long_description": "The LTAC2030B-CMX is a professional-grade 500-foot black outdoor direct burial siamese cable combining RG59 video coaxial and 18/2 power conductors in a single durable jacket. Constructed with all-copper (BC) conductors for optimal signal transmission and power delivery. CMX rated for outdoor and direct burial use, making it ideal for perimeter and long-range surveillance installations. The convenient pull box packaging ensures tangle-free deployment on the job site.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/l/t/ltac2030b-cmx.png",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": []
+    },
+    "variants": [
+      {
+        "sku": "LTAC2030B-CMX",
+        "name": "500ft Black Outdoor Direct Burial Siamese Cable - Pull Box",
+        "description": "500ft black outdoor direct burial siamese cable, RG59 + 18/2 power, all-copper (BC), CMX rated, pull box.",
+        "price": 347.1
+      }
+    ],
+    "specs": {
+      "Type": "Siamese Cable (RG59 + 18/2 Power)",
+      "Length": "500ft",
+      "Material": "All-Copper (BC)",
+      "Rating": "CMX (Outdoor / Direct Burial)",
+      "Features": "Pull Box, Direct Burial Rated"
+    }
+  },
+  {
+    "series_id": "LTAC2040",
+    "name": "1000ft Cat5e Network Cable (Gray)",
+    "description": "1000ft gray Cat5e network cable featuring 24 AWG solid bare copper conductors. UTP (unshielded twisted pair) design supplied in a pull box for neat and efficient installation.",
+    "long_description": "The LTAC2040 is a high-quality 1000-foot Cat5e network cable in gray, designed for reliable Ethernet and IP surveillance network infrastructure. Built with 24 AWG solid bare copper conductors for superior signal integrity and PoE (Power over Ethernet) performance. The UTP (unshielded twisted pair) construction is suitable for standard indoor networking applications. Packaged in a convenient pull box for tangle-free deployment during installation.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/l/t/ltac2040.png",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": []
+    },
+    "variants": [
+      {
+        "sku": "LTAC2040",
+        "name": "1000ft Cat5e Network Cable (Gray) - Pull Box",
+        "description": "1000ft gray Cat5e network cable, 24 AWG solid bare copper, UTP, pull box.",
+        "price": 214.5
+      }
+    ],
+    "specs": {
+      "Type": "Cat5e Network Cable (UTP)",
+      "Length": "1000ft",
+      "Material": "24 AWG Solid Bare Copper",
+      "Rating": "Cat5e",
+      "Features": "Pull Box, PoE Compatible"
+    }
+  },
+  {
+    "series_id": "LTAC2060W",
+    "name": "60ft White Pre-made Siamese Cable (BNC + DC Power)",
+    "description": "60ft white pre-made siamese cable with pre-attached BNC video and DC power connectors. Features 95% copper braid shielding for reliable signal quality. Plug-and-play design for quick and easy installation.",
+    "long_description": "The LTAC2060W is a 60-foot white pre-made siamese cable designed for fast, hassle-free surveillance camera installations. Comes equipped with pre-attached BNC video and DC power connectors on both ends, eliminating the need for field terminations. The 95% copper braid shielding ensures excellent signal integrity and minimizes electromagnetic interference. Its plug-and-play design makes it ideal for both professional installers and DIY users seeking a clean, reliable connection.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/l/t/ltac2060w.png",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": []
+    },
+    "variants": [
+      {
+        "sku": "LTAC2060W",
+        "name": "60ft White Pre-made Siamese Cable - BNC + DC Power",
+        "description": "60ft white pre-made siamese cable, BNC + DC power connectors, 95% copper braid, plug-and-play.",
+        "price": 24.7
+      }
+    ],
+    "specs": {
+      "Type": "Pre-made Siamese Cable (BNC + DC Power)",
+      "Length": "60ft",
+      "Material": "95% Copper Braid Shield",
+      "Rating": "Indoor",
+      "Features": "Plug-and-Play, Pre-attached BNC and DC Connectors"
+    }
+  },
+  {
+    "series_id": "LTAC2230B-CMX",
+    "name": "1000ft Black Outdoor Direct Burial Siamese Cable (RG59 + 18/2 Power)",
+    "description": "1000ft black outdoor direct burial siamese cable featuring RG59 video and 18/2 power in a single jacket. All-copper construction with CMX rating for outdoor and direct burial applications. Supplied on a spool for large-scale installations.",
+    "long_description": "The LTAC2230B-CMX is a professional-grade 1000-foot black outdoor direct burial siamese cable combining RG59 video coaxial and 18/2 power conductors in a single robust jacket. Constructed with all-copper conductors for maximum signal fidelity and efficient power delivery. CMX rated for outdoor and direct burial environments, making it the ideal choice for large-scale perimeter surveillance and long-range camera deployments. Supplied on a spool for efficient cable management during extensive installation projects.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/l/t/ltac2230b-cmx.png",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": []
+    },
+    "variants": [
+      {
+        "sku": "LTAC2230B-CMX",
+        "name": "1000ft Black Outdoor Direct Burial Siamese Cable - Spool",
+        "description": "1000ft black outdoor direct burial siamese cable, RG59 + 18/2 power, all-copper, CMX rated, spool.",
+        "price": 728.0
+      }
+    ],
+    "specs": {
+      "Type": "Siamese Cable (RG59 + 18/2 Power)",
+      "Length": "1000ft",
+      "Material": "All-Copper (BC)",
+      "Rating": "CMX (Outdoor / Direct Burial)",
+      "Features": "Spool, Direct Burial Rated"
+    }
+  },
+  {
+    "series_id": "LTAD1210-8P",
+    "name": "12V 10A 8-Port CCTV Power Supply Distribution Box",
+    "description": "12V 10A 8-port CCTV power supply distribution box with 8 individually fused output channels. Housed in a durable metal enclosure with LED status indicators for easy monitoring and troubleshooting.",
+    "long_description": "The LTAD1210-8P is a reliable 12V 10A 8-port power supply distribution box designed specifically for CCTV surveillance systems. Featuring 8 individually fused output channels, it provides centralized and protected power distribution to multiple cameras from a single source. The rugged metal enclosure ensures durability and protection in demanding installation environments. Integrated LED indicators on each channel allow for quick visual status monitoring and simplified troubleshooting, reducing maintenance time and system downtime.",
+    "image": "https://media.ltsecurityinc.com/catalog/product/cache/8e8cda6cad6850c50e2ece5d668419ff/l/t/ltad1210-8p.png",
+    "facets": {
+      "category": [
+        "ACCESSORIES"
+      ],
+      "camera_resolution": [],
+      "camera_technology": [],
+      "camera_series": []
+    },
+    "variants": [
+      {
+        "sku": "LTAD1210-8P",
+        "name": "12V 10A 8-Port CCTV Power Supply Distribution Box",
+        "description": "12V 10A 8-port CCTV power supply distribution box, 8 individually fused channels, metal enclosure, LED indicators.",
+        "price": 71.5
+      }
+    ],
+    "specs": {
+      "Type": "Power Supply Distribution Box",
+      "Length": "N/A",
+      "Material": "Metal Enclosure",
+      "Rating": "12V 10A",
+      "Features": "8 Individually Fused Channels, LED Status Indicators"
+    }
+  }
+,
+  {
+  "series_id": "LTAC6250B-CMP",
+  "name": "Platinum Plenum Rated RG59 Coaxial Cable - 500ft",
+  "description": "High-quality RG59 coaxial cable with plenum rating (CMP) for indoor use in air handling spaces.",
+  "long_description": "The LTAC6250B-CMP is a 500-foot spool of RG59 coaxial cable, specifically designed for professional security camera installations. It features a plenum-rated (CMP) jacket, making it suitable for installation in environmental air spaces such as drop ceilings. This cable ensures optimal signal integrity and durability for HD-TVI, AHD, and CVI analog systems.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltac6250b-cmp.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTAC6250B-CMP",
+      "name": "500ft RG59 Plenum Cable",
+      "description": "Black, CMP Rated",
+      "price": 115.0
+    }
+  ],
+  "specs": {
+    "Type": "RG59 Coaxial",
+    "Length": "500ft",
+    "Rating": "CMP (Plenum)",
+    "Color": "Black",
+    "Application": "CCTV Video Signal"
+  }
+},
+  {
+  "series_id": "LTD8516D",
+  "name": "Platinum Advanced 16 Channel HD-TVI DVR",
+  "description": "16-channel digital video recorder supporting up to 5MP resolution and H.265+ compression.",
+  "long_description": "The LTD8516D is a high-performance 16-channel DVR that supports HD-TVI, AHD, CVI, and CVBS cameras. It offers up to 5MP recording resolution and utilizes H.265+ compression to save up to 75% on storage space. Features include HDMI/VGA output, 2 SATA interfaces for HDDs, and remote access via mobile apps.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltd8516d.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "HD-TVI/ANALOG"
+    ],
+    "recorder_channel": [
+      "16 CHANNEL"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTD8516D-ST",
+      "name": "16 Channel Advanced DVR",
+      "description": "Supports up to 5MP",
+      "price": 350.0
+    }
+  ],
+  "specs": {
+    "Channels": "16-ch",
+    "Resolution": "Up to 5MP",
+    "Compression": "H.265+",
+    "Storage": "2 SATA Interfaces",
+    "Output": "HDMI/VGA up to 4K"
+  }
+},
+  {
+  "series_id": "LTD85xx",
+  "name": "Platinum LTD8500 Series Hybrid DVRs",
+  "description": "Versatile hybrid DVR series supporting multiple analog formats and IP camera integration.",
+  "long_description": "The LTD85xx series represents LTS's advanced line of hybrid DVRs. These recorders are compatible with HD-TVI, AHD, CVI, and traditional analog cameras, while also supporting additional IP camera channels. They feature intelligent search, VCA events, and robust storage options for reliable surveillance recording.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltd8508d.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "HYBRID/TVI"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTD8508D-ST",
+      "name": "8 Channel Hybrid DVR",
+      "description": "LTD8500 Series",
+      "price": 245.0
+    }
+  ],
+  "specs": {
+    "Series": "LTD8500",
+    "Formats": "HD-TVI, AHD, CVI, CVBS, IP",
+    "Compression": "H.265 Pro+",
+    "Smart Function": "VCA Support"
+  }
+},
+  {
+  "series_id": "LTK-1500C-630",
+  "name": "HES 1500 Surface Mounted Electric Strike",
+  "description": "High-security surface mounted electric strike for rim exit devices, 630 finish.",
+  "long_description": "The HES 1500 (LTK-1500C-630) is a heavy-duty surface mounted electric strike designed to accommodate rim exit devices with a 3/4\" throw latchbolt. It features a slim, low-profile design that requires no cutting of the frame, making it ideal for retrofit applications. The 630 Satin Stainless Steel finish provides excellent corrosion resistance and aesthetics.",
+  "image": "https://www.hesinnovations.com/local/hes/products/1500/1500_hero.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "ACCESS CONTROL"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTK-1500C-630",
+      "name": "HES 1500 Electric Strike",
+      "description": "630 Satin Stainless Steel",
+      "price": 320.0
+    }
+  ],
+  "specs": {
+    "Type": "Electric Strike",
+    "Mounting": "Surface Mounted",
+    "Finish": "630 Satin Stainless Steel",
+    "Voltage": "12/24VDC",
+    "Strength": "1500 lbs Static"
+  }
+},
+  {
+  "series_id": "LTK-4900-25-628",
+  "name": "Adams Rite 4900 Heavy Duty Deadlatch - Left Hand",
+  "description": "Heavy-duty deadlatch with 31/32\" backset for aluminum stile doors, Left Hand/LHR.",
+  "long_description": "The Adams Rite 4900-25-628 is a rugged deadlatch designed for high-traffic commercial aluminum doors. It features a 31/32\" backset and is handed for Left Hand (LH) or Left Hand Reverse (LHR) operation. The Satin Aluminum finish (628) ensures a clean, professional look that matches most commercial door hardware.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltk-4900-25-628.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "ACCESS CONTROL"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTK-4900-25-628",
+      "name": "4900 Heavy Duty Deadlatch",
+      "description": "31/32\" Backset, 628 Finish, LH/LHR",
+      "price": 125.0
+    }
+  ],
+  "specs": {
+    "Type": "Deadlatch",
+    "Backset": "31/32\"",
+    "Handing": "LH/LHR",
+    "Finish": "628 Satin Aluminum",
+    "Application": "Aluminum Stile Doors"
+  }
+},
+  {
+  "series_id": "LTK-4900-26-628",
+  "name": "Adams Rite 4900 Heavy Duty Deadlatch - Right Hand",
+  "description": "Heavy-duty deadlatch with 31/32\" backset for aluminum stile doors, Right Hand/RHR.",
+  "long_description": "The Adams Rite 4900-26-628 is a heavy-duty deadlatch designed for high-traffic aluminum stile doors. It provides flexible traffic control during and after business hours, featuring a bolt that can be deadlocked by a key or thumbturn. This specific model features a 31/32\" backset and is handed for Right Hand (RH) or Right Hand Reverse (RHR) operation in a Satin Aluminum finish.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltk-4900-26-628.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "ACCESS CONTROL"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTK-4900-26-628",
+      "name": "4900 Heavy Duty Deadlatch",
+      "description": "31/32\" Backset, 628 Finish, RH/RHR",
+      "price": 128.96
+    }
+  ],
+  "specs": {
+    "Type": "Deadlatch",
+    "Backset": "31/32\"",
+    "Handing": "RH/RHR",
+    "Finish": "628 Satin Aluminum",
+    "Application": "Aluminum Stile Doors"
+  }
+},
+  {
+  "series_id": "LTK-9400-630",
+  "name": "HES 9400 Slim-Line Surface Mounted Electric Strike",
+  "description": "Slim-line surface mounted electric strike for rim exit devices, 630 finish.",
+  "long_description": "The HES 9400 series is a slim-line, surface mounted electric strike designed for easy installation on the frame without the need for cutting. It is made of stainless steel for durability and is compatible with various rim exit devices with a 1/2\" throw latchbolt. Features field-selectable 12/24VDC and a non-handed design.",
+  "image": "https://www.hesinnovations.com/local/hes/products/9400/9400_hero.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "ACCESS CONTROL"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTK-9400-630",
+      "name": "HES 9400 Electric Strike",
+      "description": "630 Satin Stainless Steel",
+      "price": 358.0
+    }
+  ],
+  "specs": {
+    "Type": "Electric Strike",
+    "Mounting": "Surface Mounted",
+    "Finish": "630 Satin Stainless Steel",
+    "Voltage": "12/24VDC",
+    "Strength": "1500 lbs Static"
+  }
+},
+  {
+  "series_id": "LTK-9500-630",
+  "name": "HES 9500 Fire-Rated Surface Mounted Electric Strike",
+  "description": "Heavy-duty, fire-rated surface mounted electric strike for rim exit devices.",
+  "long_description": "The HES 9500 series is a heavy-duty, fire-rated electric strike designed for applications where safety and security are paramount. It is surface-mounted and UL 10C fire-rated for up to 3 hours. Compatible with rim exit devices with a 3/4\" throw latchbolt, it features field-selectable voltage and high-strength stainless steel construction.",
+  "image": "https://www.hesinnovations.com/local/hes/products/9500/9500_hero.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "ACCESS CONTROL"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTK-9500-630",
+      "name": "HES 9500 Electric Strike",
+      "description": "630 Satin Stainless Steel, Fire-Rated",
+      "price": 525.0
+    }
+  ],
+  "specs": {
+    "Type": "Electric Strike",
+    "Rating": "UL 10C Fire-Rated (3 hour)",
+    "Mounting": "Surface Mounted",
+    "Finish": "630 Satin Stainless Steel",
+    "Voltage": "12/24VDC"
+  }
+},
+  {
+  "series_id": "LTK-9600-630",
+  "name": "HES 9600 Windstorm Rated Surface Mounted Electric Strike",
+  "description": "Extreme duty, windstorm rated surface mounted electric strike.",
+  "long_description": "The HES 9600 series is the strongest surface mounted electric strike available, specifically engineered to meet severe windstorm requirements. It offers exceptional durability and strength for high-security applications, exceeding ANSI/SDI-BHMA windstorm testing standards. Non-handed and field selectable 12/24VDC.",
+  "image": "https://www.hesinnovations.com/local/hes/products/9600/9600_hero.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "ACCESS CONTROL"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTK-9600-630",
+      "name": "HES 9600 Electric Strike",
+      "description": "630 Satin Stainless Steel, Windstorm Rated",
+      "price": 475.0
+    }
+  ],
+  "specs": {
+    "Type": "Electric Strike",
+    "Rating": "Windstorm Rated",
+    "Mounting": "Surface Mounted",
+    "Finish": "630 Satin Stainless Steel",
+    "Voltage": "12/24VDC"
+  }
+},
+  {
+  "series_id": "LTN07256-R16",
+  "name": "Platinum Enterprise Level 256 Channel NVR",
+  "description": "Massive 256-channel NVR with RAID support and 16 SATA bays for enterprise storage.",
+  "long_description": "This enterprise-grade NVR is designed for large-scale security deployments, supporting up to 256 IP cameras and 12MP resolution. It features 16 SATA bays for high-capacity storage (up to 160TB), RAID 0, 1, 5, 6, 10 redundancy for data protection, and high-performance decoding for smooth monitoring and playback across multiple 4K monitors.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltn07256-r16.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "256 CHANNEL"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTN07256-R16",
+      "name": "256 Channel Enterprise NVR",
+      "description": "16 SATA Bays, RAID Support",
+      "price": 5109.89
+    }
+  ],
+  "specs": {
+    "Channels": "256 IP Channel Input",
+    "Resolution": "Up to 12MP/4K",
+    "Storage": "16 SATA interfaces (up to 10TB each)",
+    "RAID": "RAID 0, 1, 5, 6, 10",
+    "Network": "4 x RJ45 Gigabit Ethernet",
+    "Chassis": "3U Rack-mountable"
+  }
+}
+,
+  {
+  "series_id": "LTN07256D-R16",
+  "name": "Platinum Enterprise Level 256 Channel 3U NVR",
+  "description": "Enterprise-grade 256-channel 3U NVR with massive storage and RAID redundancy.",
+  "long_description": "Designed for large-scale enterprise deployments, this NVR supports up to 256 IP cameras and 12MP high-resolution recording. It features 16 hot-swappable SATA bays for mission-critical storage and RAID support for data protection.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltn07256d-r16.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "256 CHANNEL"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTN07256D-R16",
+      "name": "256 Channel Enterprise NVR",
+      "description": "16 SATA Bays, RAID Support",
+      "price": 4000.0
+    }
+  ],
+  "specs": {
+    "Channels": "256 IP Channel Input",
+    "Resolution": "Up to 12MP",
+    "Storage": "16 SATA interfaces (Hot-swappable)",
+    "RAID": "RAID 0, 1, 5, 6, 10",
+    "Chassis": "3U"
+  }
+},
+  {
+  "series_id": "LTN8708QN-P8",
+  "name": "Platinum Professional Series 8 Channel 4K NVR",
+  "description": "8-channel 4K NVR with 8 integrated PoE ports for professional surveillance.",
+  "long_description": "This professional-grade NVR offers 4K recording and 8 built-in PoE ports for easy \"plug and play\" camera installation. It supports H.265+ compression to save storage space while maintaining high video quality.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltn8708qn-p8.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "8 CHANNEL"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTN8708QN-P8",
+      "name": "8 Channel 4K PoE NVR",
+      "description": "8 PoE Ports, 2 SATA",
+      "price": 320.0
+    }
+  ],
+  "specs": {
+    "Channels": "8 IP Channel Input",
+    "PoE": "8 Built-in PoE Ports",
+    "Resolution": "4K (8MP)",
+    "Bandwidth": "80Mbps",
+    "Storage": "2 SATA interfaces"
+  }
+},
+  {
+  "series_id": "LTN8716D-P16N",
+  "name": "Platinum Professional Plus 16-Channel 4K NVR",
+  "description": "16-channel 4K NVR with AI Motion Detection 2.0 and 16 PoE ports.",
+  "long_description": "A high-performance 16-channel NVR supporting up to 12MP resolution. It features advanced AI analytics, including Motion Detection 2.0 for human and vehicle filtering, significantly reducing false alarms.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/t/ltn8716d-p16n.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "16 CHANNEL"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTN8716D-P16N",
+      "name": "16 Channel 4K PoE NVR",
+      "description": "16 PoE Ports, AI Motion Detection",
+      "price": 467.0
+    }
+  ],
+  "specs": {
+    "Channels": "16 IP Channel Input",
+    "PoE": "16 Built-in PoE Ports",
+    "Resolution": "Up to 12MP",
+    "AI": "Motion Detection 2.0",
+    "Storage": "2 SATA interfaces"
+  }
+},
+  {
+  "series_id": "LTN8964-RN",
+  "name": "Platinum Series 64-Channel 8K NVR",
+  "description": "Professional 64-channel 8K NVR with RAID support and 8 SATA bays.",
+  "long_description": "An enterprise-level 2U NVR designed for high-density camera deployments. It supports 8K video output, massive storage scalability via 8 SATA ports, and RAID redundancy for critical data security.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/p/l/platinum_64_channel_8k_nvr.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "64 CHANNEL"
+    ],
+    "camera_series": [
+      "PLATINUM SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LTN8964-RN",
+      "name": "64 Channel 8K NVR",
+      "description": "8 SATA Bays, RAID Support",
+      "price": 1725.0
+    }
+  ],
+  "specs": {
+    "Channels": "64 IP Channel Input",
+    "Resolution": "Up to 12MP/8K Output",
+    "Storage": "8 SATA interfaces",
+    "RAID": "RAID 0, 1, 5, 6, 10",
+    "Chassis": "2U"
+  }
+},
+  {
+  "series_id": "LXIP1142W-28MA",
+  "name": "Pro-X Lite Series 4MP Outdoor Turret IP Camera",
+  "description": "4MP Pro-X Lite turret camera with Starlight low-light performance and built-in mic.",
+  "long_description": "This 4MP turret camera provides high-definition surveillance with Starlight technology for color images in low light. It includes a built-in microphone for audio recording and is fully NDAA compliant.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip1142w-28ma.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP1142W-28MA",
+      "name": "4MP Starlight Turret",
+      "description": "2.8mm Lens, Built-in Mic",
+      "price": 129.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688x1520)",
+    "Lens": "2.8mm Fixed",
+    "Low Light": "Starlight (0.008 Lux)",
+    "Audio": "Built-in Microphone",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP1182WE-28MDA",
+  "name": "8MP Dual Light Turret Network Camera",
+  "description": "8MP 4K Dual Light turret camera with AI-powered human and vehicle detection.",
+  "long_description": "Featuring a dual-light system, this 8MP camera can switch to warm light for full-color imaging at night when detection occurs. Its AI capabilities focus on human and vehicle targets to enhance security accuracy.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip1182we-28mda.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP1182WE-28MDA",
+      "name": "8MP Dual Light AI Turret",
+      "description": "2.8mm Lens, Warm Light/IR",
+      "price": 192.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840x2160)",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Dual Light (IR & Warm Light)",
+    "AI": "Human & Vehicle Detection",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP3542W-28MDA",
+  "name": "4MP Pro-X Starlight Turret IP Camera",
+  "description": "4MP Pro-X turret camera with Motion Detection 2.0 and Starlight.",
+  "long_description": "A reliable 4MP turret camera equipped with AI-driven Motion Detection 2.0 to filter out non-human/vehicle movement. Starlight technology ensures clear images even in extremely low light environments.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip3542w-28mda.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3542W-28MDA",
+      "name": "4MP Pro-X Starlight Turret",
+      "description": "2.8mm, Motion Detection 2.0",
+      "price": 137.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688x1520)",
+    "Lens": "2.8mm Fixed",
+    "WDR": "120dB True WDR",
+    "AI": "Motion Detection 2.0",
+    "Audio": "Built-in Mic"
+  }
+},
+  {
+  "series_id": "LXIP3582W-28MDA",
+  "name": "8MP Pro-X Intelligent Turret Camera",
+  "description": "8MP 4K Intelligent turret camera with advanced VCA and person/vehicle detection.",
+  "long_description": "This 8MP camera delivers ultra-high-definition 4K video. It is powered by Pro-X intelligence, offering advanced video content analytics (VCA) and specialized detection for people and vehicles.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip3582w-28mda.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3582W-28MDA",
+      "name": "8MP 4K Intelligent Turret",
+      "description": "2.8mm, Advanced VCA",
+      "price": 208.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840x2160)",
+    "Sensor": "1/2.8\" Starlight",
+    "AI": "Person/Vehicle Detection",
+    "Storage": "256GB SD Slot",
+    "Audio": "Built-in Mic"
+  }
+},
+  {
+  "series_id": "LXIP3783WE-MDAZ",
+  "name": "Pro-X 8MP Vari-focal Turret IP Camera",
+  "description": "8MP motorized varifocal turret camera with 4x zoom and Dual Light technology.",
+  "long_description": "A premium 8MP turret camera featuring a motorized lens for remote zoom and focus adjustments. Its dual-light system provides night color imaging, while the 4x optical zoom allows for detailed observation of distant objects.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip3783we-mdaz.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3783WE-MDAZ",
+      "name": "8MP 4x Zoom Turret",
+      "description": "2.7mm-13.5mm, Dual Light",
+      "price": 434.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (4K)",
+    "Lens": "2.7mm-13.5mm Motorized",
+    "Zoom": "4x Optical",
+    "Lighting": "Dual Light (Warm & IR)",
+    "WDR": "120dB True WDR"
+  }
+}
+,
+  {
+  "series_id": "LXIP3C42NWI-28SDL",
+  "name": "Pro-X 4MP AI ISP Fixed Turret Network Camera",
+  "description": "4MP turret camera with AI-ISP technology for superior color imaging in low light.",
+  "long_description": "The LXIP3C42NWI-28SDL utilizes AI-ISP technology to deliver exceptionally clear and colorful images even in near-total darkness. It features a high-sensitivity 1/1.8\" sensor, F1.0 aperture, and built-in warm light for 24/7 color monitoring.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip3c42nwi-28sdl_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3C42NWI-28SDL",
+      "name": "4MP AI ISP Turret",
+      "description": "2.8mm, Warm Light, MD2.0",
+      "price": 240.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688x1520)",
+    "Sensor": "1/1.8\" CMOS",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Warm Light (98ft)",
+    "AI": "AI-ISP, MD 2.0"
+  }
+},
+  {
+  "series_id": "LXIP3C42W-28AISP",
+  "name": "Pro-X 4MP AI ISP Full-Color Fixed Turret",
+  "description": "4MP full-color turret camera with AI-ISP and F1.0 large aperture lens.",
+  "long_description": "Equipped with a massive F1.0 aperture and AI-ISP enhancement, this 4MP camera provides bright, vivid color video in extreme low-light conditions. It includes smart motion detection and IP67 weather protection.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip3c42w-28aisp_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3C42W-28AISP",
+      "name": "4MP Full-Color Turret",
+      "description": "2.8mm, AI-ISP, F1.0",
+      "price": 240.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688x1520)",
+    "Lens": "2.8mm Fixed (F1.0)",
+    "Lighting": "Warm Light",
+    "Protection": "IP67",
+    "Feature": "AI-ISP Technology"
+  }
+},
+  {
+  "series_id": "LXIP3C82NWI-28SDL",
+  "name": "Pro-X 8MP Color 24/7 X-Deterrence Turret",
+  "description": "8MP 4K Color 24/7 camera with active deterrence (Siren & Red-Blue Lights).",
+  "long_description": "The LXIP3C82NWI-28SDL is a powerful 8MP active deterrence camera. It features Color 24/7 technology for constant color video and \"X-Deterrence\" which triggers a built-in siren and flashing red/blue lights when an intruder is detected.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip3c82nwi-28sdl_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3C82NWI-28SDL",
+      "name": "8MP Active Deterrence Turret",
+      "description": "2.8mm, Siren & Flashing Lights",
+      "price": 335.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840x2160)",
+    "Lens": "2.8mm Fixed",
+    "Deterrence": "Siren & Red/Blue Lights",
+    "Night Vision": "Color 24/7 (F1.0)",
+    "AI": "X-Search & MD 2.0"
+  }
+},
+  {
+  "series_id": "LXIP3C82NWIB-28SDL",
+  "name": "Pro-X 8MP Color 24/7 X-Deterrence Turret (Black)",
+  "description": "Black 8MP 4K Color 24/7 camera with active deterrence (Siren & Red-Blue Lights).",
+  "long_description": "This is the black housing version of the 8MP active deterrence turret. It provides the same high-resolution color 24/7 monitoring and active deterrent features as the white version, but in a discrete black finish.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip3c82nwib-28sdl_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3C82NWIB-28SDL",
+      "name": "8MP Active Deterrence (Black)",
+      "description": "2.8mm, Siren, Black Finish",
+      "price": 335.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840x2160)",
+    "Color": "Black",
+    "Deterrence": "Siren & Red/Blue Lights",
+    "Night Vision": "Color 24/7",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP3C82W-28AISP",
+  "name": "Pro-X 8MP AI ISP Fixed Turret Network Camera",
+  "description": "8MP 4K turret camera with AI-ISP and 100ft warm light for color night vision.",
+  "long_description": "A high-resolution 8MP camera featuring AI-ISP technology for enhanced color imaging in low-light conditions. Its large sensor and F1.0 aperture combined with built-in warm light ensure clear, full-color surveillance around the clock.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip3c82w-28aisp_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3C82W-28AISP",
+      "name": "8MP AI ISP Turret",
+      "description": "2.8mm, 100ft Warm Light",
+      "price": 375.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (4K)",
+    "Sensor": "1/1.8\" CMOS",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Warm Light (100ft)",
+    "AI": "AI-ISP, MD 2.0"
+  }
+},
+  {
+  "series_id": "LXIP3C83WI-MDAZ",
+  "name": "Pro-X 8MP Smart Dual Light Turret Camera",
+  "description": "8MP 4K turret with Smart Dual Light and AI human/vehicle detection.",
+  "long_description": "The LXIP3C83WI-MDAZ uses Smart Dual Light technology to switch between IR and warm light based on events. It features advanced AI analytics to accurately detect and classify humans and vehicles, reducing false alarms.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip3c83wi-mdaz_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP3C83WI-MDAZ",
+      "name": "8MP Smart Dual Light Turret",
+      "description": "2.8mm, AI Detection",
+      "price": 385.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (4K)",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Smart Dual Light (131ft)",
+    "AI": "Human & Vehicle Detection",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP7542WE-28MDA",
+  "name": "Pro-X 4MP Dual Light Lite Fixed Dome",
+  "description": "4MP lite series dome camera with Dual Light and built-in microphone.",
+  "long_description": "A compact 4MP dome camera from the Pro-X Lite series. It features Dual Light technology (IR and Warm Light) and a built-in microphone for synchronized audio-video recording. NDAA compliant and IP67 rated.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip7542we-28mda_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP7542WE-28MDA",
+      "name": "4MP Dual Light Dome",
+      "description": "2.8mm, Built-in Mic",
+      "price": 200.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688x1520)",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Dual Light (Warm/IR)",
+    "Audio": "Built-in Mic",
+    "Protection": "IP67, IK10"
+  }
+},
+  {
+  "series_id": "LXIP7582WE-28MDA",
+  "name": "Pro-X 8MP Dual Light Lite Fixed Dome",
+  "description": "8MP 4K lite series dome camera with Dual Light and built-in microphone.",
+  "long_description": "This 8MP dome camera delivers 4K clarity with Dual Light technology for nighttime monitoring. It includes a built-in microphone and smart motion detection features in a vandal-resistant housing.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip7582we-28mda_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP7582WE-28MDA",
+      "name": "8MP Dual Light Dome",
+      "description": "2.8mm, Built-in Mic",
+      "price": 255.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (4K)",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Dual Light (Warm/IR)",
+    "Audio": "Built-in Mic",
+    "Protection": "IP67, IK10"
+  }
+},
+  {
+  "series_id": "LXIP7742W2-28MDA",
+  "name": "Pro-X 2x4MP Dual-Directional Fixed Dome",
+  "description": "Multi-sensor dome camera with two independent 4MP sensors for dual-direction coverage.",
+  "long_description": "The LXIP7742W2-28MDA features two 4MP sensors in a single dome housing, allowing for monitoring in two directions simultaneously. Ideal for hallways, corners, and wide-area coverage with only one network drop.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip7742w2-28mda_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP7742W2-28MDA",
+      "name": "2x4MP Dual Dome",
+      "description": "Dual 2.8mm Lenses",
+      "price": 375.0
+    }
+  ],
+  "specs": {
+    "Resolution": "2 x 4MP",
+    "Sensors": "Dual 1/2.7\" CMOS",
+    "Lens": "Dual 2.8mm Fixed",
+    "Audio": "Built-in Mic",
+    "AI": "VCA, MD 2.0"
+  }
+},
+  {
+  "series_id": "LXIP7783WE-SDZ",
+  "name": "Pro-X 8MP Dual Light Vari-focal Dome",
+  "description": "8MP 4K motorized varifocal dome with 5x optical zoom and Dual Light.",
+  "long_description": "Equipped with a 2.7-13.5mm motorized lens, this 8MP dome camera offers high flexibility in field of view. It features Dual Light technology for optimized night vision and AI-powered target classification.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/f73e479c72f1092e022b7a32997b1a0e/l/x/lxip7783we-sdz_1.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP7783WE-SDZ",
+      "name": "8MP Vari-focal Dome",
+      "description": "2.7-13.5mm, 5x Optical Zoom",
+      "price": 375.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (4K)",
+    "Lens": "2.7-13.5mm Motorized",
+    "Zoom": "5x Optical",
+    "Lighting": "Dual Light (Warm/IR)",
+    "Protection": "IP67, IK10"
+  }
+}
+,
+  {
+  "series_id": "LXIP8542WE-28MDA",
+  "name": "Pro-X 4 MP Fixed Bullet IP Camera",
+  "description": "4MP Outdoor Bullet IP Camera with Smart Dual Light and AI Detection.",
+  "long_description": "Part of the LTS Pro-X series, this high-performance 4MP bullet camera features Smart Dual Light technology that intelligently switches between IR and warm white light to provide full-color images at night upon detection. Advanced AI-driven MD 2.0 ensures accurate human and vehicle classification, significantly reducing false alarms.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip8542w-28mda.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP8542WE-28MDA",
+      "name": "4MP Dual Light Bullet",
+      "description": "2.8mm, Smart Dual Light, MD 2.0",
+      "price": 189.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Smart Dual Light (164ft)",
+    "WDR": "120dB True WDR",
+    "AI": "Human & Vehicle Detection",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP8582WE-28MDA",
+  "name": "Pro-X 8MP (4K) Dual Light Lite Fixed Bullet",
+  "description": "8MP 4K Bullet IP Camera with Smart Dual Light and AI Analytics.",
+  "long_description": "This 4K resolution bullet camera utilizes Smart Dual Light technology to provide vivid color images even in total darkness. Equipped with advanced AI features for precise monitoring of people and vehicles, it is an ideal solution for high-security residential and commercial environments.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip8582w-28mda.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP8582WE-28MDA",
+      "name": "8MP Dual Light Bullet",
+      "description": "2.8mm, 4K Resolution, AI Analytics",
+      "price": 249.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840x2160)",
+    "Lens": "2.8mm Fixed",
+    "Lighting": "Smart Dual Light (100ft)",
+    "Audio": "Built-in Microphone",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP8783WE-SDZ",
+  "name": "Pro-X 8 MP Vari-focal Bullet IP Camera",
+  "description": "8MP Outdoor Vari-focal Bullet IP Camera with Smart Dual Light.",
+  "long_description": "Featuring a motorized vari-focal lens, this 8MP camera allows for flexible installation with remote zoom and focus capabilities. The Smart Dual Light technology ensures full-color night vision, while AI-powered analytics provide reliable detection of critical events.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip8783w-sdz.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP8783WE-SDZ",
+      "name": "8MP Vari-focal Bullet",
+      "description": "2.7-13.5mm, Motorized Zoom",
+      "price": 389.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (3840x2160)",
+    "Lens": "2.7-13.5mm Motorized",
+    "Lighting": "Smart Dual Light",
+    "WDR": "True WDR",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP9943LPR-50R",
+  "name": "Pro-X 4 MP LPR Vari-focal Bullet IP Camera",
+  "description": "4MP License Plate Recognition (LPR) Vari-focal Bullet Camera.",
+  "long_description": "A professional-grade LPR camera designed specifically for traffic monitoring and automated access control. Its powerful 10-50mm lens and high-sensitivity 1/1.8\" sensor allow it to capture and recognize license plates at significant distances, even in challenging lighting conditions.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip9943lpr-50r.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP9943LPR-50R",
+      "name": "4MP LPR Bullet",
+      "description": "10-50mm Lens, License Plate Recognition",
+      "price": 850.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2688x1520)",
+    "Lens": "10-50mm Motorized",
+    "LPR Range": "Up to 98ft",
+    "Sensor": "1/1.8\" Progressive Scan CMOS",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP9C42W-28AISP",
+  "name": "Pro-X 4MP AI ISP Fixed Bullet IP Camera",
+  "description": "4MP 24/7 Color Bullet IP Camera with AI ISP.",
+  "long_description": "This camera leverages breakthrough AI-ISP technology for superior color image processing. With its ultra-large F1.0 aperture and warm white light illuminators, it delivers vivid, full-color surveillance 24/7, even in near-total darkness.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip9c42w-28aisp.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP9C42W-28AISP",
+      "name": "4MP AI ISP Color Bullet",
+      "description": "2.8mm, 24/7 Color (F1.0)",
+      "price": 279.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP",
+    "Lens": "2.8mm Fixed",
+    "Technology": "AI-ISP",
+    "Lighting": "Warm White Light (164ft)",
+    "Aperture": "F1.0",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXIP9C82W-28AISP",
+  "name": "Pro-X 8MP AI ISP Fixed Bullet IP Camera",
+  "description": "8MP 4K 24/7 Color Bullet IP Camera with AI ISP.",
+  "long_description": "A top-tier 4K bullet camera featuring AI-ISP for unmatched color and clarity in extreme low-light conditions. The combination of high resolution, a large sensor, and proactive AI analytics makes it a powerful tool for comprehensive security.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/l/x/lxip9c82w-28aisp.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "8MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXIP9C82W-28AISP",
+      "name": "8MP AI ISP Color Bullet",
+      "description": "2.8mm, 4K Resolution, AI ISP",
+      "price": 379.0
+    }
+  ],
+  "specs": {
+    "Resolution": "8MP (4K)",
+    "Sensor": "1/1.8\"",
+    "Aperture": "F1.0",
+    "Lighting": "Warm White Light (164ft)",
+    "Audio": "Built-in Mic",
+    "Protection": "IP67"
+  }
+},
+  {
+  "series_id": "LXKJB01",
+  "name": "Pro-X IP66 Waterproof Connector & Junction Box",
+  "description": "Pro-X IP66 Waterproof Connector & Junction Box for Select Bullet Cameras.",
+  "long_description": "Designed for LTS Pro-X series bullet cameras, this junction box provides a secure, weather-resistant enclosure for cable connections, simplifying installation and protecting against the elements.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/l/x/lxkjb01.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXKJB01",
+      "name": "Pro-X Junction Box",
+      "description": "Aluminum Alloy, IP66",
+      "price": 30.0
+    }
+  ],
+  "specs": {
+    "Material": "Aluminum Alloy",
+    "Rating": "IP66 Waterproof",
+    "Dimensions": "124.5 mm \u00d7 124.5 mm \u00d7 41.5 mm",
+    "Color": "White"
+  }
+},
+  {
+  "series_id": "LXKJB03",
+  "name": "Pro-X IP66 Waterproof Connector & Junction Box",
+  "description": "Pro-X IP66 Waterproof Connector & Junction Box for Select Dome/Turret Cameras.",
+  "long_description": "A high-quality, durable junction box tailored for Pro-X series dome and turret cameras. It ensures a clean and professional installation while maintaining an IP66 rating for outdoor use.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/l/x/lxkjb03.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXKJB03",
+      "name": "Pro-X Junction Box",
+      "description": "Aluminum Alloy, \u03a6120 mm",
+      "price": 25.0
+    }
+  ],
+  "specs": {
+    "Material": "Aluminum Alloy",
+    "Rating": "IP66 Waterproof",
+    "Diameter": "\u03a6120 mm",
+    "Color": "White"
+  }
+},
+  {
+  "series_id": "LXKJB05",
+  "name": "Pro-X IP66 Waterproof Connector & Junction Box",
+  "description": "Pro-X IP66 Waterproof Connector & Junction Box for Turret Cameras.",
+  "long_description": "This junction box is specifically designed for Pro-X turret cameras, providing a compact and weatherproof solution for cable management and connector protection.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/l/x/lxkjb05.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXKJB05",
+      "name": "Pro-X Junction Box",
+      "description": "Aluminum Alloy, \u03a6110 mm",
+      "price": 25.0
+    }
+  ],
+  "specs": {
+    "Material": "Aluminum Alloy",
+    "Rating": "IP66 Waterproof",
+    "Dimensions": "\u03a6110 mm \u00d7 45 mm",
+    "Color": "White"
+  }
+},
+  {
+  "series_id": "LXKJBWM04",
+  "name": "Pro-X IP66 Waterproof Wall Mount Bracket & Adapter Plate",
+  "description": "Pro-X IP66 Waterproof Wall Mount Bracket & Adapter Plate.",
+  "long_description": "A sturdy and reliable wall mount bracket for Pro-X series cameras. The included adapter plate ensures compatibility with multiple camera models, while the IP66-rated design guarantees performance in harsh outdoor environments.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/small_image/240x300/beff4985b56e3afdbeabfc89641a4582/l/x/lxkjbwm04.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXKJBWM04",
+      "name": "Pro-X Wall Mount Bracket",
+      "description": "Aluminum Alloy, with Adapter Plate",
+      "price": 55.0
+    }
+  ],
+  "specs": {
+    "Material": "Aluminum Alloy",
+    "Rating": "IP66 Waterproof",
+    "Type": "Wall Mount",
+    "Feature": "Includes Adapter Plate"
+  }
+}
+,
+  {
+  "series_id": "LXKPD01",
+  "name": "Pro-X Adapter Plate & Ceiling Mount",
+  "description": "Durable adapter plate and ceiling mount bracket for Pro-X mini dome and eyeball cameras.",
+  "long_description": "The LXKPD01 is a specialized mounting accessory designed for Pro-X series mini dome and eyeball cameras. It allows for secure ceiling installations and provides a clean, professional finish. Constructed from high-quality aluminum alloy for long-term durability.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxkpd01.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXKPD01",
+      "name": "Pro-X Ceiling Mount",
+      "description": "Aluminum Alloy, White",
+      "price": 45.0
+    }
+  ],
+  "specs": {
+    "Material": "Aluminum Alloy",
+    "Weight": "0.45 kg",
+    "Dimensions": "\u03a6136 mm \u00d7 48 mm",
+    "Application": "Ceiling Mount"
+  }
+},
+  {
+  "series_id": "LXKWM02",
+  "name": "Pro-X Wall Mount Bracket & Adapter",
+  "description": "Professional wall mount bracket with adapter plate for Pro-X series dome cameras.",
+  "long_description": "The LXKWM02 is a robust wall mount bracket designed to support various Pro-X series dome cameras. It features an integrated adapter plate for easy installation and an IP66 rating when used with compatible cameras, ensuring protection against water and dust.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxkwm02.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXKWM02",
+      "name": "Pro-X Wall Mount",
+      "description": "Aluminum Alloy, IP66 compatible",
+      "price": 55.0
+    }
+  ],
+  "specs": {
+    "Material": "Aluminum Alloy",
+    "Rating": "Waterproof design",
+    "Dimensions": "120 mm \u00d7 120 mm \u00d7 120 mm",
+    "Type": "Wall Mount"
+  }
+},
+  {
+  "series_id": "LXN7104-P4",
+  "name": "Pro-X 4-Channel 4K PoE NVR",
+  "description": "Compact 4-channel NVR with 4 PoE ports, supporting up to 8MP resolution.",
+  "long_description": "The LXN7104-P4 is an ideal solution for small-scale surveillance. It supports up to 4 IP cameras with plug-and-play PoE connectivity and 4K resolution recording. Features include H.265+ compression and remote monitoring via the Pro-X mobile app.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxn7104-p4.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "4 CHANNEL"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXN7104-P4",
+      "name": "4 Channel 4K PoE NVR",
+      "description": "4 PoE Ports, 1 SATA",
+      "price": 249.0
+    }
+  ],
+  "specs": {
+    "Channels": "4 IP Channel Input",
+    "PoE": "4 Built-in PoE Ports",
+    "Resolution": "Up to 8MP (4K)",
+    "Compression": "H.265 / H.265+",
+    "Bandwidth": "40Mbps"
+  }
+},
+  {
+  "series_id": "LXN8208D-P8",
+  "name": "Pro-X 8-Channel 4K PoE NVR",
+  "description": "Professional 8-channel 4K NVR with 8 PoE ports and AI Motion Detection 2.0.",
+  "long_description": "A high-performance 8-channel NVR that combines 4K recording with advanced AI analytics. It features Motion Detection 2.0 for accurate human and vehicle filtering, reducing false alarms. Supports up to 2 SATA hard drives for extensive storage.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxn8208d-p8.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "8 CHANNEL"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXN8208D-P8",
+      "name": "8 Channel 4K PoE NVR",
+      "description": "8 PoE Ports, 2 SATA",
+      "price": 435.0
+    }
+  ],
+  "specs": {
+    "Channels": "8 IP Channel Input",
+    "PoE": "8 Built-in PoE Ports",
+    "Resolution": "Up to 8MP (4K)",
+    "AI": "Motion Detection 2.0",
+    "Storage": "2 SATA (up to 32TB total)"
+  }
+},
+  {
+  "series_id": "LXN8216D-P16",
+  "name": "Pro-X 16-Channel 4K PoE NVR",
+  "description": "High-capacity 16-channel 4K NVR with 16 PoE ports and AI intelligence.",
+  "long_description": "Designed for mid-sized business installations, this 16-channel NVR supports 4K recording and high-bandwidth processing. It features 16 integrated PoE ports and advanced AI capabilities, including facial recognition support and perimeter protection when used with Pro-X AI cameras.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxn8216d-p16.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "16 CHANNEL"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXN8216D-P16",
+      "name": "16 Channel 4K PoE NVR",
+      "description": "16 PoE Ports, 2 SATA",
+      "price": 649.0
+    }
+  ],
+  "specs": {
+    "Channels": "16 IP Channel Input",
+    "PoE": "16 Built-in PoE Ports",
+    "Resolution": "Up to 12MP Recording",
+    "Bandwidth": "160Mbps",
+    "AI": "Motion Detection 2.0, VCA"
+  }
+},
+  {
+  "series_id": "LXN8432D-P16",
+  "name": "Pro-X 32-Channel 4K 1.5U PoE NVR",
+  "description": "Enterprise-grade 32-channel NVR with 16 PoE ports and 4 SATA bays.",
+  "long_description": "This powerful 32-channel NVR is built for large-scale security. It features a 1.5U rack-mountable chassis, 16 integrated PoE ports, and support for up to 4 SATA hard drives. It delivers robust performance with high incoming bandwidth and enterprise-level AI analytics.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxn8432d-p16.jpg",
+  "facets": {
+    "category": [
+      "RECORDERS"
+    ],
+    "recorder_technology": [
+      "IP/NVR"
+    ],
+    "recorder_channel": [
+      "32 CHANNEL"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXN8432D-P16",
+      "name": "32 Channel 4K PoE NVR",
+      "description": "16 PoE Ports, 4 SATA",
+      "price": 899.0
+    }
+  ],
+  "specs": {
+    "Channels": "32 IP Channel Input",
+    "PoE": "16 Built-in PoE Ports",
+    "Resolution": "Up to 12MP",
+    "Storage": "4 SATA interfaces",
+    "Chassis": "1.5U"
+  }
+},
+  {
+  "series_id": "LXPTZIP414W-X25IR",
+  "name": "Pro-X 4MP 25x AI IR PTZ Network Camera",
+  "description": "4MP high-speed PTZ with 25x optical zoom, auto-tracking, and 328ft IR.",
+  "long_description": "A high-performance 4MP PTZ camera from the Pro-X series. It features a 25x optical zoom lens and intelligent auto-tracking capabilities to monitor moving targets with high precision. With its 328ft IR range and Starlight technology, it excels in low-light and long-range surveillance.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/l/x/lxptzip414w-x25ir.jpg",
+  "facets": {
+    "category": [
+      "IP SOLUTIONS"
+    ],
+    "camera_resolution": [
+      "4MP"
+    ],
+    "camera_technology": [
+      "IP/NETWORK"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "LXPTZIP414W-X25IR",
+      "name": "4MP 25x AI PTZ",
+      "description": "25x Optical Zoom, Auto-Tracking",
+      "price": 875.0
+    }
+  ],
+  "specs": {
+    "Resolution": "4MP (2560x1440)",
+    "Zoom": "25x Optical, 16x Digital",
+    "IR Range": "Up to 328ft (100m)",
+    "AI": "Auto-tracking, Perimeter Protection",
+    "Protection": "IP66, TVS 6000V"
+  }
+},
+  {
+  "series_id": "XCPOE-SW802G",
+  "name": "Pro-X 10-Port Gigabit Cloud Managed PoE Switch",
+  "description": "Cloud-managed Gigabit PoE switch with 8 PoE ports and 2 Gigabit uplinks.",
+  "long_description": "The XCPOE-SW802G is a high-performance 10-port Gigabit switch designed for Pro-X security systems. It offers 8 PoE ports with a total power budget of 110W and 2 Gigabit uplink ports. Features include cloud management for remote monitoring and PoE watchdog for automated device recovery.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/x/c/xcpoe-sw802g.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "XCPOE-SW802G",
+      "name": "10-Port Gigabit PoE Switch",
+      "description": "8 PoE, 110W Budget",
+      "price": 315.0
+    }
+  ],
+  "specs": {
+    "Ports": "8 x Gigabit PoE, 2 x Gigabit Uplink",
+    "PoE Standard": "IEEE 802.3af/at",
+    "Power Budget": "110W",
+    "Management": "Cloud Managed (Pro-X)"
+  }
+},
+  {
+  "series_id": "XCPOE-SW1602G",
+  "name": "Pro-X 20-Port Gigabit Cloud Managed PoE Switch",
+  "description": "Cloud-managed Gigabit PoE switch with 16 PoE ports and 4 Gigabit uplinks.",
+  "long_description": "A robust 20-port Gigabit PoE switch featuring 16 PoE ports with a 240W power budget and 4 Gigabit uplink ports. It provides reliable power and data for large-scale IP camera systems with centralized cloud management and professional-grade security features.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/x/c/xcpoe-sw1602g.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "XCPOE-SW1602G",
+      "name": "20-Port Gigabit PoE Switch",
+      "description": "16 PoE, 240W Budget",
+      "price": 535.0
+    }
+  ],
+  "specs": {
+    "Ports": "16 x Gigabit PoE, 4 x Gigabit Uplink",
+    "PoE Standard": "IEEE 802.3af/at",
+    "Power Budget": "240W",
+    "Management": "Cloud Managed (Pro-X)"
+  }
+},
+  {
+  "series_id": "XCPOE-SW2402G",
+  "name": "Pro-X 28-Port Gigabit Cloud Managed PoE Switch",
+  "description": "Cloud-managed Gigabit PoE switch with 24 PoE ports and 4 Gigabit uplinks.",
+  "long_description": "Designed for extensive enterprise-level security deployments, this 28-port switch features 24 Gigabit PoE ports and a substantial 360W power budget. It offers seamless integration with the Pro-X cloud platform, providing advanced monitoring and management capabilities for complex networks.",
+  "image": "https://ltsecurityinc.com/media/catalog/product/cache/1/image/600x600/9df78eab33525d08d6e5fb8d27136e95/x/c/xcpoe-sw2402g.jpg",
+  "facets": {
+    "category": [
+      "ACCESSORIES"
+    ],
+    "camera_series": [
+      "PRO-X SERIES"
+    ]
+  },
+  "variants": [
+    {
+      "sku": "XCPOE-SW2402G",
+      "name": "28-Port Gigabit PoE Switch",
+      "description": "24 PoE, 360W Budget",
+      "price": 775.0
+    }
+  ],
+  "specs": {
+    "Ports": "24 x Gigabit PoE, 4 x Gigabit Uplink",
+    "PoE Standard": "IEEE 802.3af/at/bt",
+    "Power Budget": "360W",
+    "Management": "Cloud Managed (Pro-X)"
+  }
+}
+,
+  {
+    "series_id": "CMIP1043W-MDZ",
+    "name": "Platinum 4 MP Varifocal Turret Network Camera",
+    "description": "4MP Outdoor Turret IP Camera with motorized varifocal lens and AI-driven human/vehicle detection.",
+    "long_description": "The LTS CMIP1043W-MDZ is a Platinum Series 4MP outdoor turret IP camera featuring a 2.8 to 12mm motorized varifocal lens, AI-driven human and vehicle detection, 120 dB WDR, and H.265+ compression. Rated IP67 for harsh outdoor environments.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip1043w-mdz_1.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP1043W-MDZ",
+        "name": "Platinum 4 MP Varifocal Turret Network Camera",
+        "description": "4MP Outdoor Turret IP Camera with motorized varifocal lens and AI-driven human/vehicle detection.",
+        "price": 270.6
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Sensor": "1/3\" CMOS",
+      "Lens": "2.8-12mm Motorized Varifocal",
+      "IR Distance": "98 ft",
+      "WDR": "120 dB",
+      "Compression": "H.265+",
+      "Weatherproof": "IP67"
+    }
+  },
+  {
+    "series_id": "CMIP3162W-28SDA",
+    "name": "Platinum 6 MP Smart Fixed Mini Dome IP Camera",
+    "description": "6MP Smart Fixed Mini Dome IP Camera with 120 dB WDR and built-in microphone. Discontinued.",
+    "long_description": "The LTS CMIP3162W-28SDA is a Platinum Series 6MP smart fixed mini dome IP camera featuring a 1/2.4\" CMOS sensor, 120 dB WDR, built-in microphone, IP67 weatherproof rating, and IK08 vandal-resistant housing. This product has been discontinued.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip3162w-28sda.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "DOME"
+      ],
+      "camera_resolution": [
+        "6MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3162W-28SDA",
+        "name": "Platinum 6 MP Smart Fixed Mini Dome IP Camera",
+        "description": "6MP Smart Fixed Mini Dome IP Camera with 120 dB WDR and built-in microphone. Discontinued.",
+        "price": 185.0
+      }
+    ],
+    "specs": {
+      "Resolution": "6MP",
+      "Sensor": "1/2.4\" CMOS",
+      "Lens": "2.8mm Fixed",
+      "IR Distance": "98 ft",
+      "WDR": "120 dB",
+      "Audio": "Built-in Microphone",
+      "Weatherproof": "IP67",
+      "Vandal Resistance": "IK08"
+    }
+  },
+  {
+    "series_id": "CMIP3342WI-28SDL",
+    "name": "Platinum 4MP Active Deterrence Turret Network Camera",
+    "description": "4MP Active Deterrence Turret with strobe light, audio alarm, and Smart Hybrid Light.",
+    "long_description": "The LTS Platinum Series 4MP Active Deterrence Turret Network Camera features a strobe light and audio alarm for active deterrence, Smart Hybrid Light technology, and a dual-array microphone for audio recording. Available in white and black housing options.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip3342wi-28sdl.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3342WI-28SDL",
+        "name": "Platinum 4MP Active Deterrence Turret Network Camera - White",
+        "description": "4MP Active Deterrence Turret with strobe light, audio alarm, and Smart Hybrid Light.",
+        "price": 189.0
+      },
+      {
+        "sku": "CMIP3342WIB-28SDL",
+        "name": "Platinum 4MP Active Deterrence Turret Network Camera - Black",
+        "description": "4MP Active Deterrence Turret with strobe light, audio alarm, and Smart Hybrid Light. Black housing.",
+        "price": 189.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lens": "2.8mm Fixed",
+      "Lighting": "Smart Hybrid Light",
+      "Deterrence": "Strobe Light & Audio Alarm",
+      "Audio": "Dual-Array Microphone"
+    }
+  },
+  {
+    "series_id": "CMIP3382WIB-28SDL",
+    "name": "Platinum 8MP Active Deterrence Turret Network Camera",
+    "description": "8MP (4K) Active Deterrence Turret with strobe light, audio alarm, and hybrid light. Black housing.",
+    "long_description": "The LTS CMIP3382WIB-28SDL is a Platinum Series 8MP (4K) active deterrence turret network camera in black. It features a strobe light and audio alarm for active deterrence, Smart Hybrid Light technology, and a 2.8mm fixed lens for wide-angle coverage.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip3342wi-28sdl.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3382WIB-28SDL",
+        "name": "Platinum 8MP Active Deterrence Turret Network Camera - Black",
+        "description": "8MP (4K) Active Deterrence Turret with strobe light, audio alarm, and hybrid light.",
+        "price": 235.0
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP (4K)",
+      "Lens": "2.8mm Fixed",
+      "Lighting": "Smart Hybrid Light",
+      "Deterrence": "Strobe Light & Audio Alarm"
+    }
+  },
+  {
+    "series_id": "CMIP3743W2-DLZ",
+    "name": "Platinum 4 MP Dual-lens Fixed Point Zoom Turret Network Camera",
+    "description": "4MP Dual-lens turret with point-to-point zoom, active deterrence, and dual-microphone. NEMA 4X rated.",
+    "long_description": "The LTS CMIP3743W2-DLZ is a Platinum Series 4MP dual-lens fixed point zoom turret network camera featuring dual 2.8mm and 4mm lenses for point-to-point zoom capability, active deterrence, dual-microphone audio, and a rugged NEMA 4X enclosure for harsh environments.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip3743w2-dlz.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3743W2-DLZ",
+        "name": "Platinum 4 MP Dual-lens Fixed Point Zoom Turret Network Camera",
+        "description": "4MP Dual-lens turret with point-to-point zoom, active deterrence, and dual-microphone.",
+        "price": 369.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP Dual-Channel",
+      "Lenses": "2.8mm + 4mm Dual-Lens",
+      "Zoom": "Point-to-Point Zoom",
+      "Deterrence": "Active Deterrence",
+      "Audio": "Dual Microphone",
+      "Enclosure": "NEMA 4X"
+    }
+  },
+  {
+    "series_id": "CMIP384PW-28SDL",
+    "name": "Platinum 4 MP Panoramic Turret IP Camera",
+    "description": "4MP Panoramic Turret with 180\u00b0 FOV, dual sensors, and 120 dB WDR.",
+    "long_description": "The LTS CMIP384PW-28SDL is a Platinum Series 4MP panoramic turret IP camera featuring dual sensors for a 180\u00b0 field of view, 120 dB WDR for challenging lighting conditions, and a resolution of 5120x1440 for wide-area surveillance coverage.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip384pw-28sdl.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET",
+        "PANORAMIC"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP384PW-28SDL",
+        "name": "Platinum 4 MP Panoramic Turret IP Camera",
+        "description": "4MP Panoramic Turret with 180\u00b0 FOV, dual sensors, and 120 dB WDR.",
+        "price": 234.38
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP (5120x1440)",
+      "FOV": "180\u00b0",
+      "Sensors": "Dual Sensor",
+      "WDR": "120 dB"
+    }
+  },
+  {
+    "series_id": "CMIP398PW-2SDL",
+    "name": "Platinum 8MP Panoramic Active Deterrence Turret Network Camera",
+    "description": "8MP 180\u00b0 Panoramic Active Deterrence Turret with strobe/audio alarm and hybrid light.",
+    "long_description": "The LTS CMIP398PW-2SDL is a Platinum Series 8MP panoramic active deterrence turret network camera featuring a 180\u00b0 field of view with 5120x2160 resolution, strobe light and audio alarm for active deterrence, and Smart Hybrid Light technology for comprehensive wide-area surveillance.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip398pw-2sdl.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET",
+        "PANORAMIC"
+      ],
+      "camera_resolution": [
+        "8MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP398PW-2SDL",
+        "name": "Platinum 8MP Panoramic Active Deterrence Turret Network Camera",
+        "description": "8MP 180\u00b0 Panoramic Active Deterrence Turret with strobe/audio alarm and hybrid light.",
+        "price": 329.0
+      }
+    ],
+    "specs": {
+      "Resolution": "8MP (5120x2160)",
+      "FOV": "180\u00b0",
+      "Deterrence": "Strobe Light & Audio Alarm",
+      "Lighting": "Smart Hybrid Light"
+    }
+  },
+  {
+    "series_id": "CMIP3C42NWB-28MDA",
+    "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera - Black",
+    "description": "4MP Color 24/7 turret with F1.0 lens, 130 dB WDR, and built-in microphone. Discontinued.",
+    "long_description": "The LTS CMIP3C42NWB-28MDA is a Platinum Series 4MP Color 24/7 fixed turret IP camera in black. It features a 1/1.8\" CMOS sensor for full-color 24/7 imaging, an F1.0 large-aperture lens, 130 dB WDR, and a built-in microphone. This product has been discontinued.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip3c42nwb-28mda.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3C42NWB-28MDA",
+        "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera - Black",
+        "description": "4MP Color 24/7 turret with F1.0 lens, 130 dB WDR, and built-in microphone. Discontinued.",
+        "price": 229.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Sensor": "1/1.8\" CMOS (Color 24/7)",
+      "Lens": "2.8mm F1.0",
+      "WDR": "130 dB",
+      "Audio": "Built-in Microphone",
+      "Color Technology": "24/7 Full Color"
+    }
+  },
+  {
+    "series_id": "CMIP3C42WI-28SDL",
+    "name": "Platinum 4 MP Color 24/7 Turret IP Camera",
+    "description": "4MP Color 24/7 turret with smart hybrid lighting and 130 dB WDR.",
+    "long_description": "The LTS CMIP3C42WI-28SDL is a Platinum Series 4MP Color 24/7 turret IP camera featuring full-color 24/7 imaging, Smart Hybrid Light technology for supplemental illumination, and 130 dB WDR for superior performance in challenging lighting conditions.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/c/m/cmip3c42wi-28sdl.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PLATINUM SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "CMIP3C42WI-28SDL",
+        "name": "Platinum 4 MP Color 24/7 Turret IP Camera",
+        "description": "4MP Color 24/7 turret with smart hybrid lighting and 130 dB WDR.",
+        "price": 239.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4MP",
+      "Lighting": "Smart Hybrid Light (Color 24/7)",
+      "WDR": "130 dB",
+      "Color Technology": "24/7 Full Color"
+    }
+  }
+,
+  {
+    "series_id": "LXIP3542WE-28MDA",
+    "name": "LTS 4MP Starlight IP Camera with Built-in Mic & MD 2.0 (2.8mm)",
+    "description": "4MP IP turret camera featuring Starlight technology, Matrix IR illumination up to 98ft, Motion Detection 2.0 (Human/Vehicle), built-in microphone, MicroSD card slot (up to 256GB), IP67 weather-rated housing, and 120dB WDR.",
+    "long_description": "The LTS LXIP3542WE-28MDA is a high-performance 4-megapixel IP network turret camera from the Pro-X series, designed for reliable 24/7 surveillance. Powered by Starlight technology, it delivers exceptional low-light performance down to 0.005 Lux, ensuring clear, full-color imagery in near-darkness. Equipped with a fixed 2.8mm wide-angle lens, the camera provides an expansive field of view ideal for monitoring broad areas such as retail stores, offices, and residential perimeters. Matrix IR technology provides up to 98 feet of uniform infrared illumination for complete darkness conditions. The built-in intelligent Motion Detection 2.0 algorithm accurately classifies human and vehicle targets, significantly reducing false alarms and enabling more efficient event response. A built-in microphone captures ambient audio for enhanced situational awareness. On-board storage via MicroSD card (up to 256GB) enables edge recording for standalone or backup operation. The camera's IP67-rated housing ensures robust protection against dust and water, while 120dB true WDR technology balances high-contrast scenes for clear, usable footage in challenging lighting. The 'E' designation denotes the international/export variant of the LXIP3542W-28MDA.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/l/x/lxip3542w-28mda.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "4MP"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PRO-X SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "LXIP3542WE-28MDA",
+        "name": "LTS 4MP Starlight IP Camera - 2.8mm Lens, Built-in Mic, MD 2.0 (Export/International)",
+        "description": "4MP Starlight IP turret camera, 2.8mm fixed lens, Matrix IR 98ft, MD 2.0 Human/Vehicle, Built-in Mic, MicroSD 256GB, IP67, 120dB WDR. International/export variant.",
+        "price": 149.0
+      }
+    ],
+    "specs": {
+      "Resolution": "4 Megapixel (2688 x 1520)",
+      "Sensor": "1/1.8\" CMOS Starlight (0.005 Lux min. illumination)",
+      "Lens": "2.8mm fixed focal length, wide-angle",
+      "IR Range": "Up to 98 ft (30m) Matrix IR",
+      "WDR": "120dB True WDR",
+      "Audio": "Built-in microphone",
+      "Storage": "MicroSD card slot, up to 256GB",
+      "Intelligence": "Motion Detection 2.0 (Human & Vehicle classification)",
+      "Protection": "IP67 (dust and waterproof)",
+      "Power": "PoE (802.3af)",
+      "Compression": "H.265+ / H.265 / H.264+ / H.264"
+    }
+  },
+  {
+    "series_id": "LXIP3582WE-28MDA",
+    "name": "LTS 8MP/4K Starlight IP Camera with Built-in Mic & MD 2.0 (2.8mm)",
+    "description": "8MP/4K IP turret camera featuring Starlight technology, Matrix IR illumination up to 98ft, Motion Detection 2.0 (Human/Vehicle), built-in microphone, MicroSD card slot (up to 256GB), IP67 weather-rated housing, and 120dB WDR.",
+    "long_description": "The LTS LXIP3582WE-28MDA is a premium 8-megapixel (4K) IP network turret camera from the Pro-X series, engineered for ultra-high-definition surveillance in demanding environments. Leveraging advanced Starlight technology with a minimum illumination of 0.005 Lux, it captures vivid, full-color detail even in extremely low-light conditions\u2014well before switching to infrared mode. The fixed 2.8mm wide-angle lens delivers a generous field of view, making it suitable for applications requiring broad coverage with 4K clarity, such as commercial facades, parking lots, building entrances, and large retail spaces. Matrix IR technology provides up to 98 feet of even infrared illumination for pitch-dark environments. Intelligent Motion Detection 2.0 leverages deep learning to differentiate between human and vehicle targets, minimizing nuisance alerts from animals, foliage, or weather. The integrated microphone provides real-time audio monitoring for comprehensive situational awareness. Edge recording via MicroSD card (up to 256GB) supports standalone operation or serves as a reliable backup to NVR recording. The IP67-rated enclosure guarantees durability against harsh outdoor conditions, and 120dB true WDR ensures balanced exposure in high-contrast scenes. The 'E' designation denotes the international/export variant of the LXIP3582W-28MDA.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/l/x/lxip3582w-28mda.jpg",
+    "facets": {
+      "category": [
+        "IP SOLUTIONS",
+        "TURRET"
+      ],
+      "camera_resolution": [
+        "8MP",
+        "4K"
+      ],
+      "camera_technology": [
+        "IP/NETWORK"
+      ],
+      "camera_series": [
+        "PRO-X SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "LXIP3582WE-28MDA",
+        "name": "LTS 8MP/4K Starlight IP Camera - 2.8mm Lens, Built-in Mic, MD 2.0 (Export/International)",
+        "description": "8MP/4K Starlight IP turret camera, 2.8mm fixed lens, Matrix IR 98ft, MD 2.0 Human/Vehicle, Built-in Mic, MicroSD 256GB, IP67, 120dB WDR. International/export variant.",
+        "price": 199.0
+      }
+    ],
+    "specs": {
+      "Resolution": "8 Megapixel / 4K (3840 x 2160)",
+      "Sensor": "1/1.8\" CMOS Starlight (0.005 Lux min. illumination)",
+      "Lens": "2.8mm fixed focal length, wide-angle",
+      "IR Range": "Up to 98 ft (30m) Matrix IR",
+      "WDR": "120dB True WDR",
+      "Audio": "Built-in microphone",
+      "Storage": "MicroSD card slot, up to 256GB",
+      "Intelligence": "Motion Detection 2.0 (Human & Vehicle classification)",
+      "Protection": "IP67 (dust and waterproof)",
+      "Power": "PoE (802.3af)",
+      "Compression": "H.265+ / H.265 / H.264+ / H.264"
+    }
+  },
+  {
+    "series_id": "LTAC2032B-CMX",
+    "name": "LTS 2MP TVI Analog Bullet Camera with EXIR IR",
+    "description": "2MP HD-TVI analog bullet camera with EXIR IR illumination up to 80ft, 3.6mm fixed lens, IP66 weather-rated housing, and OSD via coaxial cable.",
+    "long_description": "The LTS AC-series cameras are part of the analog/TVI product line, offering high-definition video over standard coaxial cabling for cost-effective surveillance upgrades. This 2-megapixel bullet camera delivers 1080p resolution footage with EXIR 2.0 infrared technology, providing up to 80 feet of clear night vision illumination with a more uniform beam pattern than conventional IR. The 3.6mm fixed lens offers a balanced field of view for general-purpose monitoring. On-Screen Display (OSD) menus accessible via coaxial cable allow for in-field configuration adjustments. The IP66-rated metal housing provides reliable protection against dust, rain, and snow for outdoor deployment.",
+    "image": "https://media.ltsecurityinc.com/media/catalog/product/l/t/ltac2032b.jpg",
+    "facets": {
+      "category": [
+        "TVI SOLUTIONS",
+        "BULLET"
+      ],
+      "camera_resolution": [
+        "2MP"
+      ],
+      "camera_technology": [
+        "ANALOG",
+        "TVI"
+      ],
+      "camera_series": [
+        "AC SERIES"
+      ]
+    },
+    "variants": [
+      {
+        "sku": "LTAC2032B-CMX",
+        "name": "LTS 2MP TVI Bullet Camera - 3.6mm Lens, EXIR IR 80ft, IP66",
+        "description": "2MP HD-TVI analog bullet camera, 3.6mm fixed lens, EXIR IR up to 80ft, IP66, OSD via coax.",
+        "price": 59.0
+      }
+    ],
+    "specs": {
+      "Resolution": "2 Megapixel (1920 x 1080)",
+      "Sensor": "1/2.9\" CMOS",
+      "Lens": "3.6mm fixed focal length",
+      "IR Range": "Up to 80 ft (25m) EXIR 2.0",
+      "WDR": "Digital WDR",
+      "Audio": "None",
+      "Protection": "IP66 (dust and rain resistant)",
+      "Power": "12V DC",
+      "Video Output": "HD-TVI / CVI / AHD / CVBS"
+    }
   }
 ];

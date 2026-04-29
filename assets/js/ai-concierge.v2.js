@@ -1,9 +1,9 @@
 (function() {
     // USS AI Concierge - Enhanced Knowledge-driven Security Assistant
     const conciergeHTML = `
-        <div id="uss-concierge" style="position:fixed; bottom:2rem; left:2rem; z-index:5000; font-family:'Segoe UI', Tahoma, sans-serif;">
-            <div id="concierge-chat" style="display:none; width:350px; height:500px; background:#0f1c2e; border:1px solid #ffd700; flex-direction:column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
-                <div style="background:#ffd700; color:#050b14; padding:1rem; font-weight:800; display:flex; justify-content:space-between; align-items:center;">
+        <div id="uss-concierge" style="position:fixed; bottom:2rem; right:2rem; z-index:5000; font-family:'Segoe UI', Tahoma, sans-serif;">
+            <div id="concierge-chat" style="display:none; width:350px; height:500px; background:#0f1c2e; border:1px solid #B8953A; flex-direction:column; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-radius: 8px; overflow: hidden;">
+                <div style="background:#B8953A; color:#050b14; padding:1rem; font-weight:800; display:flex; justify-content:space-between; align-items:center;">
                     <div style="display:flex; align-items:center; gap:10px;">
                         <i class="fas fa-microchip"></i>
                         <span>USS INTELLIGENCE CORE</span>
@@ -11,19 +11,19 @@
                     <i class="fas fa-times" onclick="toggleConcierge(false)" style="cursor:pointer;"></i>
                 </div>
                 <div id="concierge-messages" style="flex-grow:1; overflow-y:auto; padding:1rem; color:#e6f1ff; font-size:0.9rem; background: rgba(5, 11, 20, 0.5);">
-                    <div style="margin-bottom:1rem; border-left:2px solid #ffd700; padding-left:10px; font-style: italic; opacity: 0.8;">
+                    <div style="margin-bottom:1rem; border-left:2px solid #B8953A; padding-left:10px; font-style: italic; opacity: 0.8;">
                         [SYSTEM ONLINE] USS Intelligence Core initialized. Awaiting technical query...
                     </div>
-                    <div style="margin-bottom:1rem; border-left:2px solid #ffd700; padding-left:10px;">
+                    <div style="margin-bottom:1rem; border-left:2px solid #B8953A; padding-left:10px;">
                         Hello Engineer. I am your Design Assistant. I have access to our full hardware catalog and tactical deployment standards. How can I assist?
                     </div>
                 </div>
                 <div style="padding:1rem; border-top:1px solid rgba(255,215,0,0.2); display:flex; gap:10px; background: #0f1c2e;">
-                    <input type="text" id="concierge-input" placeholder="Ask about products, pricing, or specs..." style="flex:1; background:rgba(0,0,0,0.3); border:1px solid #ffd700; color:white; padding:0.5rem; border-radius:4px;">
-                    <button onclick="handleConciergeMessage()" style="background:#ffd700; border:none; padding:0.5rem 1rem; cursor:pointer; border-radius:4px;"><i class="fas fa-paper-plane"></i></button>
+                    <input type="text" id="concierge-input" placeholder="Ask about products, pricing, or specs..." style="flex:1; background:rgba(0,0,0,0.3); border:1px solid #B8953A; color:white; padding:0.5rem; border-radius:4px;">
+                    <button onclick="handleConciergeMessage()" style="background:#B8953A; border:none; padding:0.5rem 1rem; cursor:pointer; border-radius:4px;"><i class="fas fa-paper-plane"></i></button>
                 </div>
             </div>
-            <div id="concierge-trigger" onclick="toggleConcierge(true)" style="width:60px; height:60px; background:#ffd700; color:#050b14; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 20px rgba(0,0,0,0.4); border: 2px solid #050b14;">
+            <div id="concierge-trigger" onclick="toggleConcierge(true)" style="width:60px; height:60px; background:#B8953A; color:#050b14; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 5px 20px rgba(0,0,0,0.4); border: 2px solid #050b14;">
                 <i class="fas fa-robot" style="font-size:1.5rem;"></i>
             </div>
         </div>
@@ -46,7 +46,7 @@
             div.style.textAlign = 'right';
             div.innerHTML = `<span style="background:rgba(14, 165, 233, 0.2); padding:8px 12px; border-radius:12px 12px 0 12px; display:inline-block; border: 1px solid rgba(14, 165, 233, 0.3);">${text}</span>`;
         } else {
-            div.style.borderLeft = '2px solid #ffd700';
+            div.style.borderLeft = '2px solid #B8953A';
             div.style.paddingLeft = '10px';
             div.style.background = 'rgba(255, 215, 0, 0.03)';
             div.style.padding = '10px';
@@ -61,11 +61,11 @@
     const knowledgeBase = [
         {
             keywords: ['install', 'setup', 'deploy', 'wiring', 'cabling'],
-            response: "USS executes full-lifecycle deployment. From structured cabling (Cat6/Fiber) to hardware mounting and final configuration. We adhere to TIA-606-C labeling standards.<br><a href='accomplishments.html' style='color:#ffd700;'>Mission Archive (Our Work)</a>"
+            response: "USS executes full-lifecycle deployment. From structured cabling (Cat6/Fiber) to hardware mounting and final configuration. We adhere to TIA-606-C labeling standards.<br><a href='accomplishments.html' style='color:#B8953A;'>Mission Archive (Our Work)</a>"
         },
         {
             keywords: ['service area', 'location', 'where', 'coverage', 'kansas city', 'kc'],
-            response: "Primary Operations Area: Kansas City Metro + 100mi radius. We also support National MSPs with white-label smart hands across the Midwest.<br><a href='service_area.html' style='color:#ffd700;'>View Coverage Map</a>"
+            response: "Primary Operations Area: Kansas City Metro + 100mi radius. We also support National MSPs with white-label smart hands across the Midwest.<br><a href='service_area.html' style='color:#B8953A;'>View Coverage Map</a>"
         },
         {
             keywords: ['warranty', 'guarantee', 'return', 'rma'],
@@ -73,15 +73,15 @@
         },
         {
             keywords: ['support', 'help', 'broken', 'offline', 'error', 'fix', 'repair'],
-            response: "<strong>Priority Support:</strong><br>For critical infrastructure failures, call Operations Command at <strong>816-814-2007</strong>.<br>For non-urgent tickets, use the <a href='contact.html' style='color:#ffd700;'>Contact Form</a>."
+            response: "<strong>Priority Support:</strong><br>For critical infrastructure failures, call Operations Command at <strong>816-814-2007</strong>.<br>For non-urgent tickets, use the <a href='contact.html' style='color:#B8953A;'>Contact Form</a>."
         },
         {
             keywords: ['msp', 'partner', 'subcontract', 'white label', 'vendor'],
-            response: "We are the preferred 'Boots on the Ground' for National MSPs. We carry our own COI, use your ticketing system, and respect client ownership.<br><a href='partners.html' style='color:#ffd700;'>Vendor Onboarding</a>"
+            response: "We are the preferred 'Boots on the Ground' for National MSPs. We carry our own COI, use your ticketing system, and respect client ownership.<br><a href='partners.html' style='color:#B8953A;'>Vendor Onboarding</a>"
         },
         {
             keywords: ['system design', 'blueprint', 'layout', 'plan'],
-            response: "Initiate the <strong>USS Blueprint</strong> tool to generate a visual security layout for your facility. It includes budget estimation and FOV calculation.<br><a href='system-design.html' style='color:#ffd700;'>Launch System Designer</a>"
+            response: "Initiate the <strong>USS Blueprint</strong> tool to generate a visual security layout for your facility. It includes budget estimation and FOV calculation.<br><a href='system-design.html' style='color:#B8953A;'>Launch System Designer</a>"
         },
         {
             keywords: ['contact', 'email', 'phone', 'call', 'reach'],
@@ -101,7 +101,7 @@
         const loadingDiv = document.createElement('div');
         loadingDiv.innerHTML = '<i class="fas fa-sync fa-spin"></i> Analyzing core data...';
         loadingDiv.style.fontSize = '0.7rem';
-        loadingDiv.style.color = '#ffd700';
+        loadingDiv.style.color = '#B8953A';
         document.getElementById('concierge-messages').appendChild(loadingDiv);
 
         setTimeout(() => {
@@ -131,7 +131,7 @@
                         const p = item.product;
                         const price = p.variants[0] && p.variants[0].price ? '$' + p.variants[0].price.toFixed(2) : 'Contact for Quote';
                         response += `<div style="margin-bottom:10px; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:5px;">
-                                        <span style="color:#ffd700; font-weight:bold;">${p.name}</span><br>
+                                        <span style="color:#B8953A; font-weight:bold;">${p.name}</span><br>
                                         <span style="font-size:0.8rem; opacity:0.8;">SKU: ${p.series_id} | ${price}</span><br>
                                         <a href="ordering_system.html?product=${p.series_id}" style="color:#fff; text-decoration:underline; font-size:0.8rem;">View in Catalog</a>
                                      </div>`;
@@ -152,11 +152,11 @@
             // 3. Category & Vague Term Handling
             if(!response) {
                 if(lowQuery.includes('camera') || lowQuery.includes('cctv')) {
-                    response = "Accessing Surveillance Database...<br><strong>Quick Link:</strong> Browse our full <a href='ordering_system.html?cat=camera' style='color:#ffd700;'>IP Camera Catalog</a>.";
+                    response = "Accessing Surveillance Database...<br><strong>Quick Link:</strong> Browse our full <a href='ordering_system.html?cat=camera' style='color:#B8953A;'>IP Camera Catalog</a>.";
                 } else if(lowQuery.includes('nvr') || lowQuery.includes('recorder') || lowQuery.includes('dvr')) {
-                    response = "Accessing Storage Solutions...<br><strong>Quick Link:</strong> Browse our <a href='ordering_system.html?cat=nvr' style='color:#ffd700;'>Recording Solutions</a>.";
+                    response = "Accessing Storage Solutions...<br><strong>Quick Link:</strong> Browse our <a href='ordering_system.html?cat=nvr' style='color:#B8953A;'>Recording Solutions</a>.";
                 } else if(lowQuery.includes('access') || lowQuery.includes('door') || lowQuery.includes('card')) {
-                    response = "Accessing Entry Control Systems...<br><strong>Quick Link:</strong> View <a href='ordering_system.html?cat=access' style='color:#ffd700;'>Access Control Systems</a>.";
+                    response = "Accessing Entry Control Systems...<br><strong>Quick Link:</strong> View <a href='ordering_system.html?cat=access' style='color:#B8953A;'>Access Control Systems</a>.";
                 }
             }
 
@@ -168,16 +168,16 @@
             
             // 5. Lead Gen
             if(lowQuery.includes('quote') || lowQuery.includes('price') || lowQuery.includes('cost')) {
-                response += "<br><br>Would you like me to initiate a quote request? You can also use our <a href='contact.html' style='color:#ffd700;'>Contact Form</a>.";
+                response += "<br><br>Would you like me to initiate a quote request? You can also use our <a href='contact.html' style='color:#B8953A;'>Contact Form</a>.";
             }
 
             // 6. Default Fallback
             if (!response) {
                 response = `<strong>Query Unrecognized.</strong><br>
                             My database does not have a direct match. How should we proceed?<br><br>
-                            1. <a href="ordering_system.html" style="color:#ffd700;">Search Hardware Catalog</a><br>
-                            2. <a href="system-design.html" style="color:#ffd700;">Start a System Design</a><br>
-                            3. <a href="contact.html" style="color:#ffd700;">Contact an Engineer</a>`;
+                            1. <a href="ordering_system.html" style="color:#B8953A;">Search Hardware Catalog</a><br>
+                            2. <a href="system-design.html" style="color:#B8953A;">Start a System Design</a><br>
+                            3. <a href="contact.html" style="color:#B8953A;">Contact an Engineer</a>`;
             }
 
             addMessage(response);

@@ -7,9 +7,9 @@ let paths = []; // Fixed paths
 let pulses = [];
 
 const CONFIG = {
-    pathColor: 'rgba(14, 165, 233, 0.08)', // Very faint structure
-    pulseColor: '#ffd700', // Gold
-    nodeCount: 150, // More nodes
+    pathColor: 'rgba(196, 122, 58, 0.08)', // Faint copper circuit traces
+    pulseColor: '#00B0F0', // Cyan from logo circuit board
+    nodeCount: 150,
     connectionRadius: 200,
     pulseSpeed: 3
 };

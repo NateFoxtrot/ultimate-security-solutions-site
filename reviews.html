@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Ultimate Security Solutions</title>
+    <meta name="description" content="Client reviews and testimonials for Ultimate Security Solutions. See what partners and clients say about our security and IT infrastructure deployments.">
+    <link rel="canonical" href="https://usstech.net/reviews.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .reviews-container {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: rgba(15, 28, 46, 0.6);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-card:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-5px);
+            background: rgba(15, 28, 46, 0.8);
+        }
+
+        .review-header {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .stars {
+            color: var(--color-accent);
+            font-size: 0.9rem;
+            margin-right: 2px;
+        }
+
+        .review-card p {
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            color: var(--color-text);
+        }
+
+        .review-card strong {
+            color: var(--color-accent);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
+            </a>
+
+            <div class="nav-mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <a href="index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="about.html" class="nav-link-item">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="service_area.html" class="nav-link-item">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="system-design.html" class="nav-link-item">USS Suite
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="msp.html" class="nav-link-item">MSP Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="reviews.html" class="nav-link-item active">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="contact.html" class="nav-link-item">Contact
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+            </div>
+
+            <div class="nav-spacer"></div>
+
+            <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Client Success Stories</h1>
+        <p>See what our partners and clients are saying about our deployments.</p>
+    </header>
+
+    <div class="reviews-container" id="reviews-container">
+        <!-- Reviews Injected JS -->
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/reviews_data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('reviews-container');
+            
+            function getStars(rating) {
+                let stars = '';
+                for (let i = 0; i < 5; i++) {
+                    if (i < rating) stars += '<i class="fas fa-star stars"></i>';
+                    else stars += '<i class="far fa-star stars"></i>';
+                }
+                return stars;
+            }
+
+            reviewsData.forEach(review => {
+                const card = document.createElement('div');
+                card.className = 'review-card';
+                card.innerHTML = `
+                    <div class="review-header">
+                        <div style="display: flex; flex-direction: column; flex: 1;">
+                            <div style="margin-bottom: 5px;">${getStars(review.rating)}</div>
+                            <span style="color: var(--color-muted); font-size: 0.8rem;">${review.date}</span>
+                        </div>
+                        ${review.logo ? `<img src="${review.logo}" alt="${review.company}" style="height: 40px; max-width: 120px; object-fit: contain;" onerror="this.style.display='none'">` : ''}
+                    </div>
+                    <p>"${review.text}"</p>
+                    <p><strong>- ${review.author}</strong>${review.company ? `<br><span style="font-size: 0.7rem; opacity: 0.7;">${review.company}</span>` : ''}</p>
+                `;
+                container.appendChild(card);
+            });
+        });
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | Ultimate Security Solutions</title>
+    <meta name="description" content="Project portfolio showcasing completed security, cabling, and IT infrastructure deployments by Ultimate Security Solutions.">
+    <link rel="canonical" href="https://usstech.net/accomplishments.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
+            </a>
+
+            <div class="nav-mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <a href="index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="about.html" class="nav-link-item">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="service_area.html" class="nav-link-item">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="system-design.html" class="nav-link-item">USS Suite
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="msp.html" class="nav-link-item">MSP Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="reviews.html" class="nav-link-item">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="contact.html" class="nav-link-item">Contact
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+            </div>
+
+            <div class="nav-spacer"></div>
+
+            <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header animate-in">
+        <div class="header-badge">Project Portfolio</div>
+        <h1>Our Work</h1>
+        <p>Delivering professional security and IT infrastructure solutions for national enterprise brands.</p>
+    </header>
+
+    <section class="client-highlights-section" style="padding: 6rem 5%; position: relative; z-index: 2;">
+        <div class="container">
+            <h2 class="section-title animate-in" style="text-align:center; margin-bottom: 4rem;">Our Partners</h2>
+            <div class="partners-grid animate-in" id="client-grid">
+                <!-- Clients Injected JS -->
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio-section" style="padding: 6rem 5%; position: relative; z-index: 2;">
+        <h2 class="section-title animate-in" style="text-align:center; margin-bottom: 4rem;">Project Gallery</h2>
+        <div class="portfolio-grid animate-in" id="portfolio-grid">
+            <!-- Images Injected JS -->
+        </div>
+        <div class="load-more-container animate-in" style="margin-top: 4rem; text-align: center;">
+            <button class="btn btn-primary" id="btn-load-more" style="padding: 1rem 3rem;">LOAD MORE PROJECTS</button>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-overlay"></div>
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content premium-surface">
+            <img id="lightbox-img" src="" alt="Project">
+            <div id="lightbox-caption" style="padding: 1rem; border-top: 1px solid var(--color-accent); color: var(--color-text); font-size: 0.9rem;"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/portfolio_data.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        const clients = [
+            { name: 'Target', logo: 'target.svg', text: '“Successful execution of multi-day Self Checkout installations and upgrades across regional locations.”' },
+            { name: 'Walmart', logo: 'walmart.svg', text: '“Full-scale store remodels involving structured cabling, AP deployments, and register system overhauls.”' },
+            { name: 'AT&T', logo: 'atandt.svg', text: '“Reliable network infrastructure support and critical hardware deployments for national telecommunications projects.”' },
+            { name: 'Sierra Wireless', logo: 'sierrawireless.svg', text: '“Expert installation and configuration of industrial wireless gateways and cellular failover systems.”' },
+            { name: 'Bosch Security', logo: 'bosch.svg', text: '“Authorized installer of high-performance Bosch security systems and intrusion detection.”' },
+            { name: 'FedEx', logo: 'fedex.svg', text: '“Reliable network infrastructure support and critical kiosk maintenance for logistics operations.”' },
+            { name: 'Loves Travel Stops', logo: 'loves.svg', text: '“Rapid response for high-priority POS and networking troubleshooting to keep lanes open.”' },
+            { name: 'Hikvision', logo: 'hikvision.svg', text: '“Expert configuration of Hikvision CCTV arrays for comprehensive commercial surveillance.”' },
+            { name: 'Harrahs Casino', logo: 'harrahs.svg', text: '“High-security environment cabling and surveillance system maintenance.”' },
+            { name: 'Starlink', logo: 'starlink.svg', text: '“Professional installation of Starlink satellite terminals for reliable remote connectivity.”' },
+            { name: 'Home Depot', logo: 'homedepot.svg', text: '“IT infrastructure upgrades and structured cabling for retail floor operations.”' },
+            { name: 'LTS Security', logo: 'lts.svg', text: '“Preferred partner for LTS Platinum and Pro-X video security solutions.”' },
+            { name: 'Verizon', logo: 'verizon.svg', text: '“Deployment and maintenance of telecommunications equipment and 5G infrastructure.”' },
+            { name: 'Walgreens', logo: 'walgreens.svg', text: '“Network upgrades and pharmacy system cabling projects.”' },
+            { name: 'Assa Abloy', logo: 'assaabloy.svg', text: '“Installation and service of advanced access control hardware and door solutions.”' },
+            { name: 'Pilot Flying J', logo: 'pilot.svg', text: '“Supporting critical fuel desk and retail network systems across the midwest.”' },
+            { name: 'Ameristar Casino', logo: 'ameristar.svg', text: '“Ensuring 24/7 uptime for gaming floor security and surveillance networks.”' }
+        ];
+
+        const allImages = portfolioData;
+        const itemsPerPage = 12;
+        let currentIndex = 0;
+
+        const grid = document.getElementById('portfolio-grid');
+        const loadMoreBtn = document.getElementById('btn-load-more');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        function loadItems() {
+            const nextBatch = allImages.slice(currentIndex, currentIndex + itemsPerPage);
+            nextBatch.forEach(data => {
+                const item = document.createElement('div');
+                item.className = 'portfolio-item glass-panel animate-in';
+                item.innerHTML = `
+                    <div class="portfolio-img-container">
+                        <img src="assets/images/portfolio_core/${data.src}" alt="${data.client} - ${data.type}" loading="lazy">
+                    </div>
+                    <div class="portfolio-overlay">
+                        <h3>${data.client}</h3>
+                        <p>${data.type}</p>
+                        <div class="item-id">#${Math.random().toString(36).substr(2, 6).toUpperCase()}</div>
+                    </div>
+                `;
+                
+                item.onclick = () => {
+                    lightboxImg.src = `assets/images/portfolio_core/${data.src}`;
+                    lightboxCaption.innerText = `${data.client} // ${data.type}`;
+                    lightbox.classList.add('active');
+                };
+                
+                grid.appendChild(item);
+                if (window.animationObserver) window.animationObserver.observe(item);
+            });
+
+            currentIndex += itemsPerPage;
+            if (currentIndex >= allImages.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        }
+
+        function renderClients() {
+            const clientGrid = document.getElementById('client-grid');
+            const scale15 = ['Apple', 'Granite', 'Spectrum', 'Cradlepoint', 'Checkpoint', 'Loves', 'Walgreens', 'Pilot'];
+            const scale10 = ['Assa Abloy', 'Best Buy'];
+
+            clients.forEach(client => {
+                const card = document.createElement('div');
+                card.className = 'partner-card glass-panel animate-in';
+                const logoSrc = `assets/images/partners/${client.logo}`;
+                
+                let imgStyle = '';
+                if (scale15.some(key => client.name.includes(key))) {
+                    imgStyle = 'transform: scale(1.35);';
+                } else if (scale10.some(key => client.name.includes(key))) {
+                    imgStyle = 'transform: scale(1.20);';
+                }
+
+                card.innerHTML = `
+                    <div class="partner-logo-wrapper">
+                        <img src="${logoSrc}" alt="${client.name}" style="${imgStyle}" onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<h3 style=\\'color:var(--color-accent)\\'>${client.name}</h3>')">
+                    </div>
+                    <div class="partner-content">
+                        <h3>${client.name}</h3>
+                        <p>${client.text}</p>
+                    </div>
+                `;
+                clientGrid.appendChild(card);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderClients();
+            loadItems();
+            loadMoreBtn.addEventListener('click', loadItems);
+            closeBtn.onclick = () => lightbox.classList.remove('active');
+            lightbox.onclick = (e) => {
+                if (e.target === lightbox || e.target.classList.contains('lightbox-overlay')) {
+                    lightbox.classList.remove('active');
+                }
+            };
+        });
+    </script>
+
+</body>
+</html>

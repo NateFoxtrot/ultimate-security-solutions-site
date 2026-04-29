@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Ordering System | Premium Security Solutions</title>
+    <meta name="description" content="Browse NDAA compliant security equipment. Platinum Series and Pro-X cameras, NVRs, and access control hardware for professional installations.">
+    <link rel="canonical" href="https://usstech.net/ordering_system.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
+            </a>
+
+            <div class="nav-mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <a href="index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="about.html" class="nav-link-item">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="service_area.html" class="nav-link-item">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item active">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="system-design.html" class="nav-link-item">USS Suite
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="msp.html" class="nav-link-item">MSP Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="reviews.html" class="nav-link-item">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="contact.html" class="nav-link-item">Contact
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+            </div>
+
+            <div class="nav-spacer"></div>
+
+            <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
+
+            <button class="btn btn-primary" id="open-cart-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-left: 1rem; border-radius: 4px; font-weight: 900;">
+                <i class="fas fa-shopping-cart"></i> <span id="cart-count-badge" class="cart-badge" style="display: none; position: static; margin-left: 5px;">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container hero-banner-container">
+            <div class="header-content">
+                <div class="header-badge animate-in visible"><i class="fas fa-shield-check"></i> VETERAN-OWNED SECURITY SOLUTIONS</div>
+                <h1 class="animate-in stagger-1">Security Equipment <span class="text-accent">Catalog</span></h1>
+                <p class="animate-in stagger-2">Industrial-grade security hardware engineered for professional installations. Browse our NDAA compliant Pro-X and Platinum series equipment.</p>
+            </div>
+            <div class="hero-feature-image animate-in stagger-3">
+                <img src="assets/images/hero_equipment.png" alt="Tactical Security Hardware Catalog" class="hero-image" width="1920" height="1080">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container section-padding">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <i class="fas fa-search"></i>
+                <input type="text" id="product-search" class="search-bar" placeholder="Search by model, SKU, or name (e.g. Platinum, TVI, NVR)...">
+            </div>
+        </div>
+
+        <button class="mobile-filter-toggle" id="mobile-filter-toggle" aria-label="Toggle filters" aria-expanded="false">
+            <i class="fas fa-sliders"></i>
+            <span>Filters</span>
+            <i class="fas fa-chevron-down"></i>
+        </button>
+
+        <div class="ordering-grid">
+            <aside class="sidebar-filters" id="sidebar-filters">
+                <div class="system-status-monitor">
+                    <div class="status-header">
+                        <span id="terminal-title">Catalog Status: Active</span>
+                        <div class="auth-badge">
+                            <i class="fas fa-check-circle"></i> VERIFIED
+                        </div>
+                    </div>
+                    
+                    <div class="status-indicators">
+                        <span class="indicator online" id="terminal-status-1">Server Online</span>
+                        <span class="indicator sync" id="terminal-status-2">Inventory Synced</span>
+                    </div>
+
+                    <div class="terminal-output" id="status-terminal">
+                        <div class="term-line">> INITIALIZING CATALOG...</div>
+                        <div class="term-line">> LOADING NDAA EQUIPMENT...</div>
+                        <div class="term-line">> STATUS: OPERATIONAL</div>
+                    </div>
+
+                    <div class="scan-line"></div>
+                    <div class="glitch-overlay"></div>
+                </div>
+
+                <div class="filter-group">
+                    <h3 class="filter-title">Equipment Categories</h3>
+                    <ul class="category-list" id="category-list">
+                        <li class="category-item active" data-category="all">
+                            <span class="cat-icon"><i class="fas fa-globe"></i></span>
+                            <span class="cat-label">All Assets</span>
+                        </li>
+                        <li class="category-item" data-category="Platinum">
+                            <span class="cat-icon"><i class="fas fa-crown"></i></span>
+                            <span class="cat-label">Platinum Series</span>
+                        </li>
+                        <li class="category-item" data-category="Pro">
+                            <span class="cat-icon"><i class="fas fa-shield-halved"></i></span>
+                            <span class="cat-label">Pro Series</span>
+                        </li>
+                        <li class="category-item" data-category="Camera">
+                            <span class="cat-icon"><i class="fas fa-video"></i></span>
+                            <span class="cat-label">Surveillance</span>
+                        </li>
+                        <li class="category-item" data-category="NVR">
+                            <span class="cat-icon"><i class="fas fa-server"></i></span>
+                            <span class="cat-label">Data Storage</span>
+                        </li>
+                        <li class="category-item" data-category="Access">
+                            <span class="cat-icon"><i class="fas fa-key"></i></span>
+                            <span class="cat-label">Access Control</span>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <section class="products-section">
+                <div class="services-grid" id="products-grid" style="margin-top: 0;">
+                    <!-- Products will be injected here -->
+                </div>
+                <div id="no-results" style="display: none; text-align: center; padding: 4rem;">
+                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-muted); margin-bottom: 1rem;"></i>
+                    <p>No products found matching your search.</p>
+                </div>
+                <div id="load-more-container" style="display: none; text-align: center; margin-top: 3rem;">
+                    <button class="btn btn-secondary" id="load-more-btn">Load More Products</button>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-header">
+            <h2>Order Summary</h2>
+            <span class="cart-count" id="drawer-count">0 Items</span>
+            <button class="close-cart" id="close-cart-btn"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items-list">
+            <!-- Cart items will be injected here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Grand Total</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+
+            <button class="submit-btn" id="checkout-btn">Request Quote / Checkout</button>
+        </div>
+    </div>
+
+
+    <!-- Product Modal -->
+    <div id="product-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; overflow-y: auto;">
+        <div class="modal-content" style="background: var(--color-surface); margin: 5% auto; padding: 2rem; max-width: 800px; border-radius: 8px; position: relative;">
+            <button onclick="closeProductModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: var(--color-text); cursor: pointer;"><i class="fas fa-times"></i></button>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Core Scripts -->
+    <script>/* products.js retained on disk for create-checkout.js serverless function; client fetches via catalog API */ window.products = window.products || [];</script>
+    <script src="assets/js/quote-service.js"></script>
+    <script src="assets/js/main.js"></script>
+    <!-- Consolidated Script Module -->
+    <script type="module">
+        // --- GLOBAL STATE & CONFIG ---
+        let cart = JSON.parse(localStorage.getItem('uss_cart')) || [];
+        let productCache = new Map(); // sku -> {name, price, image} for cart lookups
+        let currentFilter = 'all';
+        let currentSearch = '';
+        let currentPage = 1;
+        let hasMore = false;
+        let isLoading = false;
+        const PAGE_LIMIT = 24;
+        let searchDebounceTimer;
+        const API_BASE = '/.netlify/functions/catalog-api';
+
+        // --- TERMINAL ENGINE ---
+        const categoryMetadata = {
+            'all': {
+                title: 'Full Catalog: Active',
+                status1: 'System Ready',
+                status2: 'Catalog Synchronized',
+                lines: [
+                    '> ACCESSING PRODUCT DATABASE...',
+                    '> PRO-X NDAA ASSETS VERIFIED...',
+                    '> LOADING SECURITY STANDARDS...'
+                ]
+            },
+            'Platinum': {
+                title: 'Category: Platinum',
+                status1: 'Premium Tier',
+                status2: 'Maximum Performance',
+                lines: [
+                    '> FILTERING PLATINUM ASSETS...',
+                    '> 4K RESOLUTION OPTIMIZED...',
+                    '> STALKER-SERIES ENABLED...'
+                ]
+            },
+            'Pro': {
+                title: 'Category: Pro Series',
+                status1: 'Enterprise Tier',
+                status2: 'NDAA Compliant',
+                lines: [
+                    '> ACCESSING PRO-X DATASET...',
+                    '> NDAA COMPLIANCE VERIFIED...',
+                    '> MULTI-SITE COMPATIBLE...'
+                ]
+            },
+            'Camera': {
+                title: 'Category: Surveillance',
+                status1: 'Sight Active',
+                status2: 'AI Analytics',
+                lines: [
+                    '> SCANNING OPTICAL ASSETS...',
+                    '> HUMAN/VEHICLE DETECTION ON...',
+                    '> NIGHT-VISION SYNCED...'
+                ]
+            },
+            'NVR': {
+                title: 'Category: Storage',
+                status1: 'Storage Linked',
+                status2: 'RAID Operational',
+                lines: [
+                    '> ACCESSING STORAGE SERVERS...',
+                    '> ENCRYPTING DATA STREAMS...',
+                    '> ARCHIVE SYSTEM: STABLE...'
+                ]
+            },
+            'Access': {
+                title: 'Category: Access',
+                status1: 'Secure Entry',
+                status2: 'Biometric Sync',
+                lines: [
+                    '> SCANNING ACCESS NODES...',
+                    '> LOCK PROTOCOLS ACTIVE...',
+                    '> AUTHENTICATING ENTRIES...'
+                ]
+            }
+        };
+
+        function updateTerminal(category, search = '') {
+            let meta;
+            
+            if (search && search.trim() !== '') {
+                meta = {
+                    title: 'Search Mode: Active',
+                    status1: 'Query Processing',
+                    status2: 'Scrubbing Data...',
+                    lines: [
+                        `> INITIATING SEARCH: ${search.toUpperCase()}...`,
+                        '> ACCESSING SECURE REPOSITORY...',
+                        '> FILTERING MATCHING ASSETS...'
+                    ]
+                };
+            } else {
+                meta = categoryMetadata[category] || categoryMetadata['all'];
+            }
+
+            const titleEl = document.getElementById('terminal-title');
+            const status1El = document.getElementById('terminal-status-1');
+            const status2El = document.getElementById('terminal-status-2');
+            const terminal = document.getElementById('status-terminal');
+
+            if (titleEl) titleEl.textContent = meta.title;
+            if (status1El) status1El.textContent = meta.status1;
+            if (status2El) status2El.textContent = meta.status2;
+
+            if (terminal) {
+                terminal.innerHTML = '';
+                meta.lines.forEach((line, i) => {
+                    const div = document.createElement('div');
+                    div.className = 'term-line';
+                    div.textContent = line;
+                    // Reset animation
+                    div.style.animation = 'none';
+                    div.offsetHeight; // trigger reflow
+                    div.style.animation = null;
+                    div.style.animationDelay = `${i * 0.5}s`;
+                    terminal.appendChild(div);
+                });
+            }
+        }
+
+        // --- DEBOUNCE UTILITY ---
+        function debounce(func, wait) {
+            return function(...args) {
+                clearTimeout(searchDebounceTimer);
+                searchDebounceTimer = setTimeout(() => func.apply(this, args), wait);
+            };
+        }
+
+        // --- CART ENGINE ---
+        function saveCart() {
+            localStorage.setItem('uss_cart', JSON.stringify(cart));
+            updateCartUI();
+        }
+
+        function addToCart(product) {
+            const existing = cart.find(item => item.sku === product.sku);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            saveCart();
+            openCart();
+            
+            // System Feedback
+            const terminal = document.getElementById('status-terminal');
+            if (terminal) {
+                const line = document.createElement('div');
+                line.className = 'term-line';
+                line.style.color = 'var(--color-accent)';
+                line.textContent = `> ITEM ADDED: ${product.sku}`;
+                terminal.appendChild(line);
+                terminal.scrollTop = terminal.scrollHeight;
+            }
+        }
+
+        function removeFromCart(sku) {
+            cart = cart.filter(item => item.sku !== sku);
+            saveCart();
+        }
+
+        function updateQuantity(sku, delta) {
+            const item = cart.find(i => i.sku === sku);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) removeFromCart(sku);
+                else saveCart();
+            }
+        }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-items-list');
+            const totalEl = document.getElementById('cart-total-amount');
+            const countBadge = document.getElementById('cart-count-badge');
+            const drawerCount = document.getElementById('drawer-count');
+            
+            if (!list) return;
+
+            // Maintain the scanner line
+            if (!list.querySelector('.drawer-scanner')) {
+                list.innerHTML = '<div class="drawer-scanner"></div>';
+            } else {
+                // Clear items but keep scanner
+                const items = list.querySelectorAll('.cart-item');
+                items.forEach(i => i.remove());
+            }
+
+            let total = 0;
+            let count = 0;
+
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                count += item.quantity;
+
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    <div class="cart-item-img">
+                        <img src="${item.image}" alt="${item.name}" width="80" height="80" loading="lazy">
+                    </div>
+                    <div class="cart-item-info">
+                        <div class="deployment-status"><i class="fas fa-check-circle"></i> READY FOR DEPLOYMENT</div>
+                        <h4>${item.name}</h4>
+                        <div class="cart-item-price">$${item.price.toFixed(2)}</div>
+                    </div>
+                    <div class="cart-item-qty">
+                        <button class="qty-btn" onclick="window.updateQuantity('${item.sku}', -1)"><i class="fas fa-minus"></i></button>
+                        <span>${item.quantity}</span>
+                        <button class="qty-btn" onclick="window.updateQuantity('${item.sku}', 1)"><i class="fas fa-plus"></i></button>
+                    </div>
+                `;
+                list.appendChild(div);
+            });
+
+            totalEl.textContent = `$${total.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+            countBadge.textContent = count;
+            countBadge.style.display = count > 0 ? 'flex' : 'none';
+            drawerCount.textContent = `${count} Item${count !== 1 ? 's' : ''}`;
+        }
+
+        // --- PRODUCT RENDERING ---
+        const productsGrid = document.getElementById('products-grid');
+        const noResults = document.getElementById('no-results');
+        const loadMoreContainer = document.getElementById('load-more-container');
+        const loadMoreBtn = document.getElementById('load-more-btn');
+
+        async function renderProducts(append = false) {
+            if (isLoading) return;
+            if (!append) currentPage = 1;
+
+            if (!append) {
+                productsGrid.innerHTML = `
+                    <div class="decipher-overlay">
+                        <div class="decipher-text">> LOADING CATALOG DATA...</div>
+                    </div>
+                `;
+                updateTerminal(currentFilter, currentSearch);
+            }
+
+            isLoading = true;
+
+            try {
+                const params = new URLSearchParams({
+                    page: currentPage,
+                    limit: PAGE_LIMIT,
+                    cat: currentFilter,
+                    q: currentSearch
+                });
+
+                const response = await fetch(`${API_BASE}?${params}`);
+                if (!response.ok) throw new Error(`API ${response.status}`);
+
+                const data = await response.json();
+                const { products, pagination } = data;
+
+                if (!append) {
+                    // Small delay for tactical loading feel
+                    await new Promise(r => setTimeout(r, 300));
+                    productsGrid.innerHTML = '';
+                }
+
+                if (products.length === 0 && !append) {
+                    noResults.style.display = 'block';
+                    loadMoreContainer.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    renderProductCards(products);
+                    hasMore = pagination.hasMore;
+                    loadMoreContainer.style.display = hasMore ? 'block' : 'none';
+                }
+            } catch (err) {
+                console.error('Catalog API error:', err);
+                if (!append) {
+                    productsGrid.innerHTML = `
+                        <div style="text-align: center; padding: 3rem; color: var(--color-text-muted);">
+                            <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                            <p>Failed to load catalog. Please refresh the page.</p>
+                        </div>
+                    `;
+                }
+            } finally {
+                isLoading = false;
+            }
+        }
+
+        function renderProductCards(products) {
+            products.forEach((p, index) => {
+                const variant = p.variant || { price: 0, sku: 'N/A' };
+
+                // Cache for cart lookups
+                productCache.set(variant.sku, {
+                    name: p.name,
+                    price: variant.price,
+                    image: p.image || 'assets/images/placeholder.jpg'
+                });
+
+                const card = document.createElement('div');
+                const staggerIdx = (index % 8) + 1;
+                card.className = `product-card animate-in stagger-${staggerIdx}`;
+
+                const resolution = p.specs?.Resolution || p.facets?.camera_resolution?.[0] || 'STANDARD';
+                const tech = p.facets?.camera_technology?.[0] || 'IP/SYSTEM';
+                const series = p.facets?.camera_series?.[0] || 'ENTERPRISE';
+
+                const isNDAA = p.is_ndaa_compliant || series.includes('PRO-X') || p.name.includes('Pro-X');
+                const isProX = series.includes('PRO-X') || p.name.includes('Pro-X');
+
+                card.innerHTML = `
+                    ${isNDAA ? '<div class="ndaa-badge">NDAA</div>' : ''}
+                    ${isProX ? '<div class="pro-x-indicator">PRO-X</div>' : ''}
+                    <div class="product-image">
+                        <img src="${p.image || 'assets/images/placeholder.jpg'}" alt="${p.name}" loading="lazy" width="300" height="300">
+                        <div class="product-data-overlay">
+                            <div class="overlay-stat"><span>TYPE:</span> <span>${tech}</span></div>
+                            <div class="overlay-stat"><span>SERIES:</span> <span>${series}</span></div>
+                            <div class="overlay-stat"><span>SPEC:</span> <span>${resolution}</span></div>
+                            <div class="overlay-stat"><span>STATUS:</span> <span style="color: var(--color-tactical-success)">OPERATIONAL</span></div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-sku">${variant.sku}</div>
+                        <h3>${p.name}</h3>
+                        <div class="product-meta">
+                            <span class="product-price">$${variant.price.toFixed(2)}</span>
+                            <div style="display: flex; gap: 0.5rem; position: relative; z-index: 20;">
+                                <button class="btn btn-secondary info-btn" data-id="${p.series_id || variant.sku}" onclick="window.openProductModal('${p.series_id || variant.sku}')">
+                                    <i class="fas fa-microscope"></i>
+                                </button>
+                                <button class="btn btn-primary add-to-cart-btn" data-sku="${variant.sku}">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(card);
+
+                requestAnimationFrame(() => {
+                    card.classList.add('visible');
+                });
+            });
+
+            initProductInteractions();
+        }
+
+        // --- INTERACTION ENGINES ---
+        function initProductInteractions() {
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    
+                    // Spatial Tilt Logic
+                    const centerX = rect.width / 2;
+                    const centerY = rect.height / 2;
+                    const rotateX = (centerY - y) / 12;
+                    const rotateY = (x - centerX) / 12;
+                    
+                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+                    
+                    // Glow following mouse
+                    const glowX = (x / rect.width) * 100;
+                    const glowY = (y / rect.height) * 100;
+                    card.style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, var(--color-surface-hover), var(--color-surface))`;
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
+                    card.style.background = 'var(--color-surface)';
+                });
+            });
+        }
+
+        function initHeroParallax() {
+            const header = document.querySelector('.page-header');
+            if (!header) return;
+            window.addEventListener('mousemove', (e) => {
+                const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+                const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+                
+                const content = header.querySelector('.header-content');
+                const image = header.querySelector('.hero-feature-image');
+                
+                if (content) content.style.transform = `translate3d(${moveX * 1.5}px, ${moveY * 1.5}px, 0)`;
+                if (image) image.style.transform = `translate3d(${-moveX * 2}px, ${-moveY * 2}px, 0)`;
+            });
+        }
+
+
+
+        function initIntersectionObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+        }
+
+        // --- EVENT HANDLERS ---
+        function openCart() { document.getElementById('cart-drawer').classList.add('open'); }
+        function closeCart() { document.getElementById('cart-drawer').classList.remove('open'); }
+
+        // Modal functions
+        async function openProductModal(id) {
+            const modal = document.getElementById('product-modal');
+            const body = document.getElementById('modal-body');
+
+            // Show loading spinner immediately
+            body.innerHTML = `<div style="text-align: center; padding: 3rem;">
+                <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--color-accent);"></i>
+                <p style="margin-top: 1rem; color: var(--color-text-muted);">Loading specifications...</p>
+            </div>`;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+
+            try {
+                const params = new URLSearchParams({ detail: 'true', page: '1', q: id });
+                const response = await fetch(`${API_BASE}?${params}`);
+                if (!response.ok) throw new Error(`API ${response.status}`);
+                const data = await response.json();
+                const product = data.products?.[0];
+
+                if (!product) {
+                    body.innerHTML = '<p style="text-align:center;padding:2rem;">Product details not found.</p>';
+                    return;
+                }
+
+                const firstVariant = product.variants?.[0] || product.variant || { sku: 'N/A', price: 0 };
+
+                // Variant selector when multiple variants exist
+                let variantsHtml = '';
+                if (product.variants && product.variants.length > 1) {
+                    variantsHtml = `<div style="margin-bottom:1rem;">
+                        <label style="font-size:0.85rem;color:var(--color-text-muted);">Select Variant:</label>
+                        <select id="modal-variant-select" style="width:100%;padding:0.5rem;margin-top:0.25rem;background:var(--color-background);color:var(--color-text);border:1px solid var(--color-border);border-radius:4px;">
+                            ${product.variants.map((v, i) => `<option value="${i}">${v.sku} - $${v.price.toFixed(2)}</option>`).join('')}
+                        </select>
+                    </div>`;
+                }
+
+                // Specs table
+                let specsHtml = '';
+                if (product.specs) {
+                    specsHtml = '<h4>Specifications</h4><ul class="modal-specs-list" style="list-style:none;padding:0;">';
+                    for (const [key, value] of Object.entries(product.specs)) {
+                        if (value && value.toString().trim() !== '') {
+                            specsHtml += `<li style="margin-bottom:0.5rem;padding-bottom:0.5rem;border-bottom:1px solid var(--color-border);font-size:0.85rem;"><strong style="color:var(--color-accent);">${key}:</strong> <span style="float:right;color:var(--color-text-muted);">${value}</span></li>`;
+                        }
+                    }
+                    specsHtml += '</ul>';
+                }
+
+                body.innerHTML = `
+                    <div class="modal-layout" style="display:flex;gap:2rem;flex-wrap:wrap;">
+                        <div class="modal-image-container" style="flex:1;min-width:300px;display:flex;align-items:center;justify-content:center;background:white;padding:1.5rem;border-radius:8px;border:1px solid var(--color-border);">
+                            <img src="${product.image || 'assets/images/placeholder.jpg'}" alt="${product.name}" style="max-width:100%;max-height:400px;object-fit:contain;" width="400" height="400" loading="lazy">
+                        </div>
+                        <div class="modal-details" style="flex:1.5;min-width:300px;">
+                            <div class="product-sku" id="modal-sku" style="margin-bottom:0.5rem;">${firstVariant.sku}</div>
+                            <h2 style="margin-top:0;color:var(--color-text);line-height:1.2;">${product.name}</h2>
+                            <div id="modal-price" style="font-size:1.75rem;color:var(--color-accent);font-weight:800;margin:1rem 0;">$${firstVariant.price.toFixed(2)}</div>
+                            <div style="line-height:1.6;margin-bottom:1.5rem;color:var(--color-text-muted);font-size:0.95rem;">${product.long_description || product.description || 'Professional-grade security hardware asset.'}</div>
+                            ${variantsHtml}
+                            ${specsHtml}
+                            <button class="btn btn-primary" id="modal-add-btn" style="width:100%;margin-top:1.5rem;padding:1rem;font-weight:900;"><i class="fas fa-plus"></i> ADD TO ORDER</button>
+                        </div>
+                    </div>
+                `;
+
+                // Update displayed SKU/price when variant is changed
+                const selectEl = document.getElementById('modal-variant-select');
+                if (selectEl && product.variants) {
+                    selectEl.addEventListener('change', () => {
+                        const v = product.variants[parseInt(selectEl.value)];
+                        document.getElementById('modal-price').textContent = `$${v.price.toFixed(2)}`;
+                        document.getElementById('modal-sku').textContent = v.sku;
+                    });
+                }
+
+                // Add-to-cart button uses selected variant
+                document.getElementById('modal-add-btn').addEventListener('click', () => {
+                    const idx = selectEl ? parseInt(selectEl.value) : 0;
+                    const v = product.variants?.[idx] || product.variant || firstVariant;
+                    addToCart({
+                        name: product.name,
+                        sku: v.sku,
+                        price: v.price,
+                        image: product.image || 'assets/images/placeholder.jpg'
+                    });
+                    closeProductModal();
+                });
+
+            } catch (err) {
+                console.error('Modal fetch error:', err);
+                body.innerHTML = '<p style="text-align:center;padding:2rem;color:var(--color-text-muted);">Failed to load product details. Please try again.</p>';
+            }
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // --- INITIALIZATION ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // UI Init
+            updateCartUI();
+            initHeroParallax();
+            initIntersectionObserver();
+
+            // Check URL Params
+            const urlParams = new URLSearchParams(window.location.search);
+            const catParam = urlParams.get('cat');
+            if (catParam) {
+                currentFilter = catParam;
+                document.querySelectorAll('.category-item').forEach(el => {
+                    if(el.dataset.category.toLowerCase() === catParam.toLowerCase()) {
+                        document.querySelectorAll('.category-item').forEach(i => i.classList.remove('active'));
+                        el.classList.add('active');
+                    }
+                });
+            }
+
+            renderProducts();
+
+            // Event Listeners
+            document.getElementById('open-cart-btn')?.addEventListener('click', openCart);
+            document.getElementById('close-cart-btn')?.addEventListener('click', closeCart);
+
+            loadMoreBtn?.addEventListener('click', () => {
+                currentPage++;
+                renderProducts(true);
+            });
+
+            // Search with Debounce
+            const searchInput = document.getElementById('product-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', debounce((e) => {
+                    currentSearch = e.target.value;
+                    renderProducts();
+                }, 300));
+
+                searchInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        const query = searchInput.value.trim().toLowerCase();
+                        if (query === 'caps' || query === 'capabilities') window.location.href = 'about.html';
+                        else if (query === 'ops' || query === 'operations') window.location.href = 'service_area.html';
+                    }
+                });
+            }
+
+            // Mobile Filter Toggle
+            const mobileFilterToggle = document.getElementById('mobile-filter-toggle');
+            const sidebarFilters = document.getElementById('sidebar-filters');
+            if (mobileFilterToggle && sidebarFilters) {
+                mobileFilterToggle.addEventListener('click', () => {
+                    const isOpen = sidebarFilters.classList.toggle('mobile-open');
+                    mobileFilterToggle.classList.toggle('active', isOpen);
+                    mobileFilterToggle.setAttribute('aria-expanded', isOpen);
+                });
+
+                // Close sidebar when a category is selected on mobile
+                document.getElementById('category-list')?.addEventListener('click', () => {
+                    if (window.innerWidth < 768) {
+                        sidebarFilters.classList.remove('mobile-open');
+                        mobileFilterToggle.classList.remove('active');
+                        mobileFilterToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // Category Filtering
+            document.getElementById('category-list')?.addEventListener('click', (e) => {
+                const item = e.target.closest('.category-item');
+                if (item) {
+                    document.querySelectorAll('.category-item').forEach(el => el.classList.remove('active'));
+                    item.classList.add('active');
+                    currentFilter = item.dataset.category;
+                    renderProducts();
+                }
+            });
+
+            // Add to Cart Delegation (uses productCache populated by API responses)
+            productsGrid?.addEventListener('click', (e) => {
+                const btn = e.target.closest('.add-to-cart-btn');
+                if (btn) {
+                    const sku = btn.dataset.sku;
+                    const cached = productCache.get(sku);
+                    if (cached) {
+                        addToCart({
+                            name: cached.name,
+                            sku: sku,
+                            price: cached.price,
+                            image: cached.image
+                        });
+                    }
+                }
+            });
+
+            // Checkout
+            document.getElementById('checkout-btn')?.addEventListener('click', async () => {
+                if (cart.length === 0) return alert('Your cart is empty.');
+
+                const submitBtn = document.getElementById('checkout-btn');
+                const originalText = submitBtn.innerHTML;
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SYNCING WITH STRIPE...';
+
+                try {
+                    const result = await window.QuoteEngine.submitCheckout({
+                        cart: cart,
+                        source: 'Ordering System'
+                    });
+
+                    if (result.success && result.method === 'FALLBACK') {
+                        window.location.href = result.mailtoUrl;
+                    }
+                } catch (err) {
+                    alert('SECURE LINK FAILED. TRIGGERING FALLBACK UPLINK.');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            });
+        });
+
+        // Global Exports
+        window.updateQuantity = updateQuantity;
+        window.openProductModal = openProductModal;
+        window.closeProductModal = closeProductModal;
+        window.addToCartFromModal = (sku) => {
+            const cached = productCache.get(sku);
+            if (cached) {
+                addToCart({
+                    name: cached.name,
+                    sku: sku,
+                    price: cached.price,
+                    image: cached.image
+                });
+            }
+        };
+    </script>
+
+</body>
+</html>

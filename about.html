@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capabilities | Ultimate Security Solutions</title>
+    <meta name="description" content="Veteran-owned security and IT infrastructure capabilities. Structured cabling, surveillance, access control, network engineering, and smart hands field services.">
+    <link rel="canonical" href="https://usstech.net/about.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://js.stripe.com">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .mission-banner {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+            border-top: 1px solid var(--color-border);
+            border-bottom: 1px solid var(--color-border);
+            position: relative;
+            z-index: 1;
+        }
+        .mission-quote {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+            font-weight: 300;
+            color: var(--color-text);
+            font-style: italic;
+        }
+        .mission-quote::before {
+            content: '\201C';
+            font-size: 4rem;
+            color: var(--color-accent);
+            opacity: 0.3;
+            display: block;
+            line-height: 1;
+            margin-bottom: -1rem;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .value-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+        .value-card:hover {
+            border-color: var(--color-border-hover);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+        .value-card i {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1.25rem;
+        }
+        .value-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 1px;
+        }
+        .value-card p {
+            color: var(--color-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-text h2 {
+            text-align: left;
+        }
+        .about-text h2::after {
+            margin-left: 0;
+        }
+        .about-text p {
+            color: var(--color-muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 768px) {
+            .about-split { grid-template-columns: 1fr; }
+            .values-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
+            </a>
+
+            <div class="nav-mobile-toggle" id="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="nav-links-wrapper">
+                <a href="index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="about.html" class="nav-link-item active">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="service_area.html" class="nav-link-item">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="system-design.html" class="nav-link-item">USS Suite
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="msp.html" class="nav-link-item">MSP Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="reviews.html" class="nav-link-item">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="contact.html" class="nav-link-item">Contact
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+            </div>
+
+            <div class="nav-spacer"></div>
+
+            <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <div class="header-badge animate-in"><i class="fas fa-microchip"></i> TECHNICAL MASTERY</div>
+            <h1 class="animate-in">TECHNICAL <span class="text-accent">EXCELLENCE</span></h1>
+            <p class="animate-in">Veteran-Owned. Precision-Driven. Proven Reliability.</p>
+        </div>
+    </header>
+
+    <section class="mission-banner">
+        <div class="container">
+            <h2 class="section-title animate-in">OUR CORE VALUES</h2>
+            <p class="mission-quote animate-in">To provide elite security and IT infrastructure services with the integrity, technical mastery, and discipline inherent in military service.</p>
+        </div>
+    </section>
+
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-split">
+                <div class="about-text animate-in">
+                    <h2>OUR STORY</h2>
+                    <p>Ultimate Security Solutions LLC was forged from a singular vision: to bring the relentless discipline, technical precision, and unwavering integrity of military service to the private security and IT infrastructure sector. With decades of combined field experience, our founders recognized a critical gap in the industry—the need for a client-focused partner that truly understands the stakes of infrastructure reliability.</p>
+                    <p>We don't just "install equipment." We architect solutions. Our passion for problem-solving is matched only by our technical mastery of the systems we deploy. From the Kansas City Metro to national-scale sub-contracting, we treat every cable run and every camera mount as a critical component of a larger project objective.</p>
+                    <p>Headquartered in Blue Springs, MO, we serve as the "Technical Partner" for top-tier Managed Service Providers across the Midwest, delivering consistent, high-fidelity field services that national firms can rely on without hesitation.</p>
+                    <a href="contact.html" class="btn btn-primary" style="margin-top:1rem;"><i class="fas fa-arrow-right"></i> Get Started</a>
+                </div>
+                <div class="values-grid" style="margin-top:0;">
+                    <div class="value-card animate-in">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>PRECISION</h3>
+                        <p>Military-grade exactness in every deployment. If it's not square, level, and properly dressed, it's not finished.</p>
+                    </div>
+                    <div class="value-card animate-in">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>INTEGRITY</h3>
+                        <p>Our word is our bond. Transparent reporting and honest consultation are the bedrock of our partnerships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(205, 127, 50, 0.03);">
+        <div class="container">
+            <h2 class="section-title animate-in">OUR GUIDING PRINCIPLES</h2>
+            <div class="values-grid">
+                <div class="value-card animate-in">
+                    <i class="fas fa-eye"></i>
+                    <h3>FOCUS</h3>
+                    <p>Unwavering concentration on the client's core objectives and the technical details that ensure success.</p>
+                </div>
+                <div class="value-card animate-in">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>VISION</h3>
+                    <p>Anticipating future infrastructure needs today, ensuring systems scale alongside your business growth.</p>
+                </div>
+                <div class="value-card animate-in">
+                    <i class="fas fa-medal"></i>
+                    <h3>DEDICATION</h3>
+                    <p>Relentless pursuit of excellence. We don't leave the site until the project is 100% complete.</p>
+                </div>
+                <div class="value-card animate-in">
+                    <i class="fas fa-award"></i>
+                    <h3>PRIDE</h3>
+                    <p>We take deep personal ownership in the quality of our work, leaving every site better than we found it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: var(--color-secondary);">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title animate-in">WHY PARTNER WITH USS?</h2>
+            <p class="animate-in" style="color: var(--color-muted); max-width: 700px; margin: -1rem auto 2rem;">Beyond standard security, we specialize in niche systems that require advanced technical proficiency.</p>
+        </div>
+        <div class="container">
+            <div class="services-grid">
+                <div class="service-card animate-in">
+                    <i class="fas fa-satellite"></i>
+                    <h3>Advanced Connectivity</h3>
+                    <p>Expert deployments of Starlink, Wireless Bridges, and specialized Mesh Networks for remote assets.</p>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-broadcast-tower"></i>
+                    <h3>Niche Wireless Systems</h3>
+                    <p>Implementation and optimization of DAS (Distributed Antenna Systems), LORA, and SDR technologies.</p>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-handshake"></i>
+                    <h3>High-Fidelity Field Svc</h3>
+                    <p>The Midwest's preferred Smart Hands partner for national MSPs who demand military-grade execution.</p>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-microchip"></i>
+                    <h3>RF Optimization</h3>
+                    <p>Signal analysis and optimization to ensure your wireless infrastructure performs at peak efficiency.</p>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-clock"></i>
+                    <h3>24/7 Reliability</h3>
+                    <p>Our systems are architected for enterprise-grade uptime, ensuring protection never wavers.</p>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-check-double"></i>
+                    <h3>NDAA Compliance</h3>
+                    <p>We exclusively deploy equipment that meets federal security standards for absolute peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/feedback.js"></script>
+</body>
+</html>
