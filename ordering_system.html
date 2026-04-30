@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ultimate Ordering System | Premium Security Solutions</title>
+    <title>Security Equipment Catalog | Ultimate Security Solutions</title>
     <meta name="description" content="Browse NDAA compliant security equipment. Platinum Series and Pro-X cameras, NVRs, and access control hardware for professional installations.">
     <link rel="canonical" href="https://usstech.net/ordering_system.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,13 +12,383 @@
     <link rel="preconnect" href="https://js.stripe.com">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* ============================================
+           PAGE-SPECIFIC CATALOG THEME
+           LTS-style layout with USS bronze/copper palette
+           ============================================ */
+
+        /* --- Page Body --- */
+        body {
+            background: #0d1117 !important;
+            color: var(--color-text) !important;
+        }
+
+        /* --- Hero Header --- */
+        .page-header {
+            background: linear-gradient(135deg, rgba(13,17,23,0.95) 0%, rgba(30,42,58,0.8) 100%) !important;
+            border-bottom: 1px solid var(--color-border) !important;
+            box-shadow: none !important;
+            padding: 2.5rem 0 !important;
+        }
+        .page-header .header-content {
+            text-align: left !important;
+        }
+        .page-header .header-badge {
+            background: var(--color-accent-dim) !important;
+            color: var(--color-accent) !important;
+            border: 1px solid var(--color-border) !important;
+            box-shadow: none !important;
+            text-shadow: none !important;
+            font-family: 'Inter', sans-serif !important;
+            letter-spacing: 0.05em !important;
+        }
+        .page-header .header-badge i { color: var(--color-accent) !important; }
+        .page-header h1 {
+            color: var(--color-text) !important;
+            text-shadow: none !important;
+            font-weight: 800 !important;
+        }
+        .page-header h1 .text-accent {
+            color: var(--color-accent) !important;
+        }
+        .page-header p, .page-header .header-content > p {
+            color: var(--color-text-muted) !important;
+            text-shadow: none !important;
+        }
+        .page-header .hero-feature-image {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+            border-radius: 12px !important;
+            overflow: hidden !important;
+            background: var(--color-surface) !important;
+            border: 1px solid var(--color-border) !important;
+        }
+        .page-header .hero-feature-image img {
+            filter: none !important;
+            mix-blend-mode: normal !important;
+            opacity: 1 !important;
+        }
+        .page-header .hero-overlay {
+            display: none !important;
+        }
+        .hero-banner-container {
+            align-items: center !important;
+        }
+
+        /* --- Search Bar --- */
+        .search-container {
+            background: var(--color-surface) !important;
+            border: 1px solid var(--color-border) !important;
+            border-radius: 8px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2) !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+        .search-container:focus-within {
+            border-color: var(--color-accent) !important;
+            box-shadow: 0 2px 12px rgba(184,149,58,0.2) !important;
+            background: var(--color-surface-hover) !important;
+        }
+        .search-input-wrapper i { color: var(--color-text-muted) !important; }
+        .search-bar {
+            color: var(--color-text) !important;
+        }
+        .search-bar::placeholder { color: var(--color-text-muted) !important; }
+
+        /* --- Mobile Filter Toggle --- */
+        .mobile-filter-toggle {
+            background: var(--color-surface) !important;
+            border: 1px solid var(--color-border) !important;
+            color: var(--color-text) !important;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1) !important;
+        }
+        .mobile-filter-toggle i { color: var(--color-accent) !important; }
+        .mobile-filter-toggle span { color: var(--color-text) !important; }
+
+        /* --- Sidebar --- */
+        .sidebar-filters {
+            background: var(--color-surface) !important;
+            border: 1px solid var(--color-border) !important;
+            border-radius: 12px !important;
+            padding: 1.5rem !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04) !important;
+        }
+
+        /* --- Filter Group --- */
+        .filter-group { margin-bottom: 1.5rem !important; }
+        .filter-title {
+            color: var(--color-text) !important;
+            font-size: 0.8rem !important;
+            text-transform: uppercase !important;
+            letter-spacing: 0.1em !important;
+            font-weight: 700 !important;
+            border-bottom: 2px solid var(--color-accent) !important;
+            padding-bottom: 0.75rem !important;
+            margin-bottom: 1rem !important;
+        }
+        .filter-title::before { display: none !important; }
+
+        /* --- Category Items --- */
+        .category-list {
+            gap: 0.25rem !important;
+        }
+        .category-item {
+            background: transparent !important;
+            color: var(--color-text-muted) !important;
+            border: none !important;
+            border-radius: 6px !important;
+            padding: 0.65rem 1rem !important;
+            font-size: 0.85rem !important;
+            text-transform: none !important;
+            letter-spacing: 0 !important;
+            transition: all 0.2s ease !important;
+            font-weight: 500 !important;
+        }
+        .category-item:hover {
+            background: var(--color-accent-dim) !important;
+            color: var(--color-accent) !important;
+            transform: none !important;
+        }
+        .category-item.active {
+            background: var(--color-accent-dim) !important;
+            color: var(--color-accent) !important;
+            font-weight: 600 !important;
+            border: none !important;
+            box-shadow: none !important;
+        }
+        .cat-icon {
+            color: var(--color-accent) !important;
+            opacity: 0.6 !important;
+            font-size: 0.85rem !important;
+        }
+        .category-item.active .cat-icon { opacity: 1 !important; }
+        .cat-label {
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        /* --- Product Cards --- */
+        .product-card {
+            background: var(--color-surface) !important;
+            border: 1px solid var(--color-border) !important;
+            border-radius: 8px !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2) !important;
+            transition: all 0.25s ease !important;
+        }
+        .product-card:hover {
+            border-color: var(--color-border-hover) !important;
+            background: var(--color-surface-hover) !important;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.3) !important;
+            transform: translateY(-2px) !important;
+        }
+        .product-card:hover .product-image img {
+            transform: scale(1.03) !important;
+        }
+
+        /* --- Product Image Area --- */
+        .product-image {
+            background: rgba(20,28,40,0.5) !important;
+            border-bottom: 1px solid var(--color-border) !important;
+            padding: 1.25rem !important;
+        }
+        .product-image::after { display: none !important; }
+        .product-image img {
+            filter: none !important;
+            drop-shadow: none !important;
+        }
+
+        /* --- Product Info --- */
+        .product-info { padding: 1.25rem !important; }
+        .product-sku {
+            color: var(--color-accent) !important;
+            font-family: 'Inter', monospace !important;
+            font-size: 0.7rem !important;
+            opacity: 0.7 !important;
+            letter-spacing: 0.05em !important;
+        }
+        .product-card h3 {
+            color: var(--color-text) !important;
+            font-weight: 600 !important;
+        }
+        .product-meta {
+            border-top: 1px solid var(--color-border) !important;
+        }
+        .product-price {
+            color: var(--color-accent) !important;
+            font-family: 'Inter', sans-serif !important;
+            text-shadow: none !important;
+            font-weight: 700 !important;
+        }
+
+        /* --- Badges --- */
+        .ndaa-badge {
+            background: rgba(184,149,58,0.15) !important;
+            color: var(--color-accent) !important;
+            box-shadow: none !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700 !important;
+            border-radius: 4px !important;
+            font-size: 0.6rem !important;
+        }
+        .pro-x-indicator {
+            background: rgba(196,122,58,0.2) !important;
+            color: var(--color-accent-secondary) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-weight: 700 !important;
+            border-radius: 4px !important;
+            font-size: 0.6rem !important;
+        }
+
+        /* --- Data Overlay (spec hover) --- */
+        .product-data-overlay {
+            background: rgba(13,17,23,0.95) !important;
+            color: var(--color-text) !important;
+            font-family: 'Inter', sans-serif !important;
+            backdrop-filter: none !important;
+        }
+        .overlay-stat {
+            color: var(--color-text) !important;
+            border-bottom: 1px solid var(--color-border) !important;
+        }
+        .overlay-stat span:first-child {
+            color: var(--color-text-muted) !important;
+            font-weight: 600 !important;
+        }
+
+        /* --- Buttons --- */
+        .add-to-cart-btn, .info-btn {
+            font-family: 'Inter', sans-serif !important;
+        }
+        .btn-primary {
+            background: var(--color-accent) !important;
+            border-color: var(--color-accent) !important;
+            color: #0d1117 !important;
+        }
+        .btn-primary:hover {
+            background: #C47A3A !important;
+        }
+        .btn-secondary {
+            background: var(--color-accent-dim) !important;
+            border-color: var(--color-border) !important;
+            color: var(--color-accent) !important;
+        }
+        .btn-secondary:hover {
+            background: rgba(184,149,58,0.15) !important;
+        }
+
+        /* --- Cart Drawer --- */
+        .cart-drawer {
+            background: var(--color-surface) !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+            border-left: 1px solid var(--color-border) !important;
+            box-shadow: -4px 0 20px rgba(0,0,0,0.3) !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        .drawer-scanner { display: none !important; }
+        .cart-header {
+            border-bottom: 1px solid var(--color-border) !important;
+        }
+        .cart-header h2 {
+            color: var(--color-text) !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+        .cart-count { color: var(--color-text-muted) !important; }
+        .close-cart { color: var(--color-text-muted) !important; }
+        .cart-item {
+            border-bottom: 1px solid var(--color-border) !important;
+        }
+        .cart-item h4 { color: var(--color-text) !important; }
+        .cart-item-price { color: var(--color-accent) !important; }
+        .deployment-status {
+            color: var(--color-accent) !important;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.7rem !important;
+        }
+        .cart-item-qty .qty-btn {
+            background: var(--color-accent-dim) !important;
+            border-color: var(--color-border) !important;
+            color: var(--color-accent) !important;
+        }
+        .cart-footer {
+            border-top: 1px solid var(--color-border) !important;
+        }
+        .cart-total-label { color: var(--color-text-muted) !important; }
+        .cart-total { color: var(--color-accent) !important; }
+        .btn-checkout {
+            background: var(--color-accent) !important;
+            color: #0d1117 !important;
+        }
+
+        /* --- Loading State --- */
+        .decipher-overlay {
+            background: rgba(13,17,23,0.9) !important;
+            backdrop-filter: none !important;
+        }
+        .decipher-text {
+            color: var(--color-accent) !important;
+            text-shadow: none !important;
+            font-family: 'Inter', sans-serif !important;
+            letter-spacing: 0.05em !important;
+        }
+
+        /* --- No Results --- */
+        #no-results { color: var(--color-text-muted) !important; }
+        #no-results i { color: var(--color-border) !important; }
+
+        /* --- Product Modal --- */
+        #product-modal .modal-content {
+            background: var(--color-surface) !important;
+            color: var(--color-text) !important;
+            border-radius: 12px !important;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.4) !important;
+        }
+        #product-modal .modal-close { color: var(--color-text-muted) !important; }
+        #product-modal h2 { color: var(--color-text) !important; }
+        #product-modal .modal-price { color: var(--color-accent) !important; }
+        #product-modal .modal-desc { color: #555 !important; }
+        #product-modal .modal-sku { color: var(--color-accent) !important; }
+        #product-modal label { color: #333 !important; }
+        #product-modal select {
+            background: #fff !important;
+            color: #333 !important;
+            border: 1px solid #ddd !important;
+        }
+        #product-modal .spec-row { color: #555 !important; border-color: #eee !important; }
+        #product-modal .spec-label { color: #888 !important; }
+
+        /* --- Product Grid Area Background --- */
+        .products-section {
+            perspective: none !important;
+        }
+        .services-grid {
+            min-height: 200px !important;
+        }
+
+        /* --- Remove glow / tactical effects --- */
+        .product-card::before,
+        .product-card::after,
+        .sidebar-filters::before,
+        .sidebar-filters::after {
+            display: none !important;
+            content: none !important;
+        }
+
+        /* --- Section padding --- */
+        .section-padding {
+            padding-top: 2rem !important;
+            padding-bottom: 2rem !important;
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
-                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
             </a>
 
             <div class="nav-mobile-toggle" id="mobile-toggle">
@@ -47,10 +417,7 @@
                 <a href="system-design.html" class="nav-link-item">USS Suite
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
-                <a href="msp.html" class="nav-link-item">MSP Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
+                <a href="msp.html" class="nav-link-item">Hire Us
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
                 <a href="reviews.html" class="nav-link-item">Reviews
@@ -74,13 +441,12 @@
     <header class="page-header">
         <div class="container hero-banner-container">
             <div class="header-content">
-                <div class="header-badge animate-in visible"><i class="fas fa-shield-check"></i> VETERAN-OWNED SECURITY SOLUTIONS</div>
-                <h1 class="animate-in stagger-1">Security Equipment <span class="text-accent">Catalog</span></h1>
-                <p class="animate-in stagger-2">Industrial-grade security hardware engineered for professional installations. Browse our NDAA compliant Pro-X and Platinum series equipment.</p>
+                <div class="header-badge animate-in visible"><i class="fas fa-shield-halved"></i> LTS Security Equipment</div>
+                <h1 class="animate-in stagger-1">Product <span class="text-accent">Catalog</span></h1>
+                <p class="animate-in stagger-2">Browse our full line of NDAA-compliant security hardware. Platinum Series and Pro-X cameras, NVRs, and access control for professional installations.</p>
             </div>
             <div class="hero-feature-image animate-in stagger-3">
-                <img src="assets/images/hero_equipment.png" alt="Tactical Security Hardware Catalog" class="hero-image" width="1920" height="1080">
-                <div class="hero-overlay"></div>
+                <img src="https://media.ltsecurityinc.com/catalog/product/cache/c050f45f3a58009f26e243bf427ddbc2/a/4/a43c3858b6265dd716b957fbf5054822.png" alt="LTS Platinum Series NVR" class="hero-image" width="600" height="400">
             </div>
         </div>
     </header>
@@ -101,35 +467,12 @@
 
         <div class="ordering-grid">
             <aside class="sidebar-filters" id="sidebar-filters">
-                <div class="system-status-monitor">
-                    <div class="status-header">
-                        <span id="terminal-title">Catalog Status: Active</span>
-                        <div class="auth-badge">
-                            <i class="fas fa-check-circle"></i> VERIFIED
-                        </div>
-                    </div>
-                    
-                    <div class="status-indicators">
-                        <span class="indicator online" id="terminal-status-1">Server Online</span>
-                        <span class="indicator sync" id="terminal-status-2">Inventory Synced</span>
-                    </div>
-
-                    <div class="terminal-output" id="status-terminal">
-                        <div class="term-line">> INITIALIZING CATALOG...</div>
-                        <div class="term-line">> LOADING NDAA EQUIPMENT...</div>
-                        <div class="term-line">> STATUS: OPERATIONAL</div>
-                    </div>
-
-                    <div class="scan-line"></div>
-                    <div class="glitch-overlay"></div>
-                </div>
-
                 <div class="filter-group">
-                    <h3 class="filter-title">Equipment Categories</h3>
+                    <h3 class="filter-title">Categories</h3>
                     <ul class="category-list" id="category-list">
                         <li class="category-item active" data-category="all">
-                            <span class="cat-icon"><i class="fas fa-globe"></i></span>
-                            <span class="cat-label">All Assets</span>
+                            <span class="cat-icon"><i class="fas fa-th-large"></i></span>
+                            <span class="cat-label">All Products</span>
                         </li>
                         <li class="category-item" data-category="Platinum">
                             <span class="cat-icon"><i class="fas fa-crown"></i></span>
@@ -141,11 +484,11 @@
                         </li>
                         <li class="category-item" data-category="Camera">
                             <span class="cat-icon"><i class="fas fa-video"></i></span>
-                            <span class="cat-label">Surveillance</span>
+                            <span class="cat-label">Cameras</span>
                         </li>
                         <li class="category-item" data-category="NVR">
                             <span class="cat-icon"><i class="fas fa-server"></i></span>
-                            <span class="cat-label">Data Storage</span>
+                            <span class="cat-label">Recorders / NVR</span>
                         </li>
                         <li class="category-item" data-category="Access">
                             <span class="cat-icon"><i class="fas fa-key"></i></span>
@@ -160,7 +503,7 @@
                     <!-- Products will be injected here -->
                 </div>
                 <div id="no-results" style="display: none; text-align: center; padding: 4rem;">
-                    <i class="fas fa-search" style="font-size: 3rem; color: var(--color-muted); margin-bottom: 1rem;"></i>
+                    <i class="fas fa-search" style="font-size: 3rem; color: #ccc; margin-bottom: 1rem;"></i>
                     <p>No products found matching your search.</p>
                 </div>
                 <div id="load-more-container" style="display: none; text-align: center; margin-top: 3rem;">
@@ -193,9 +536,9 @@
 
 
     <!-- Product Modal -->
-    <div id="product-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.8); z-index: 1000; overflow-y: auto;">
-        <div class="modal-content" style="background: var(--color-surface); margin: 5% auto; padding: 2rem; max-width: 800px; border-radius: 8px; position: relative;">
-            <button onclick="closeProductModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: var(--color-text); cursor: pointer;"><i class="fas fa-times"></i></button>
+    <div id="product-modal" class="modal-overlay" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 1000; overflow-y: auto;">
+        <div class="modal-content" style="background: #fff; margin: 5% auto; padding: 2rem; max-width: 800px; border-radius: 12px; position: relative; box-shadow: 0 8px 40px rgba(0,0,0,0.15);">
+            <button onclick="closeProductModal()" style="position: absolute; top: 1rem; right: 1rem; background: none; border: none; font-size: 1.5rem; color: #666; cursor: pointer;"><i class="fas fa-times"></i></button>
             <div id="modal-body"></div>
         </div>
     </div>
@@ -225,112 +568,8 @@
         let searchDebounceTimer;
         const API_BASE = '/.netlify/functions/catalog-api';
 
-        // --- TERMINAL ENGINE ---
-        const categoryMetadata = {
-            'all': {
-                title: 'Full Catalog: Active',
-                status1: 'System Ready',
-                status2: 'Catalog Synchronized',
-                lines: [
-                    '> ACCESSING PRODUCT DATABASE...',
-                    '> PRO-X NDAA ASSETS VERIFIED...',
-                    '> LOADING SECURITY STANDARDS...'
-                ]
-            },
-            'Platinum': {
-                title: 'Category: Platinum',
-                status1: 'Premium Tier',
-                status2: 'Maximum Performance',
-                lines: [
-                    '> FILTERING PLATINUM ASSETS...',
-                    '> 4K RESOLUTION OPTIMIZED...',
-                    '> STALKER-SERIES ENABLED...'
-                ]
-            },
-            'Pro': {
-                title: 'Category: Pro Series',
-                status1: 'Enterprise Tier',
-                status2: 'NDAA Compliant',
-                lines: [
-                    '> ACCESSING PRO-X DATASET...',
-                    '> NDAA COMPLIANCE VERIFIED...',
-                    '> MULTI-SITE COMPATIBLE...'
-                ]
-            },
-            'Camera': {
-                title: 'Category: Surveillance',
-                status1: 'Sight Active',
-                status2: 'AI Analytics',
-                lines: [
-                    '> SCANNING OPTICAL ASSETS...',
-                    '> HUMAN/VEHICLE DETECTION ON...',
-                    '> NIGHT-VISION SYNCED...'
-                ]
-            },
-            'NVR': {
-                title: 'Category: Storage',
-                status1: 'Storage Linked',
-                status2: 'RAID Operational',
-                lines: [
-                    '> ACCESSING STORAGE SERVERS...',
-                    '> ENCRYPTING DATA STREAMS...',
-                    '> ARCHIVE SYSTEM: STABLE...'
-                ]
-            },
-            'Access': {
-                title: 'Category: Access',
-                status1: 'Secure Entry',
-                status2: 'Biometric Sync',
-                lines: [
-                    '> SCANNING ACCESS NODES...',
-                    '> LOCK PROTOCOLS ACTIVE...',
-                    '> AUTHENTICATING ENTRIES...'
-                ]
-            }
-        };
-
-        function updateTerminal(category, search = '') {
-            let meta;
-            
-            if (search && search.trim() !== '') {
-                meta = {
-                    title: 'Search Mode: Active',
-                    status1: 'Query Processing',
-                    status2: 'Scrubbing Data...',
-                    lines: [
-                        `> INITIATING SEARCH: ${search.toUpperCase()}...`,
-                        '> ACCESSING SECURE REPOSITORY...',
-                        '> FILTERING MATCHING ASSETS...'
-                    ]
-                };
-            } else {
-                meta = categoryMetadata[category] || categoryMetadata['all'];
-            }
-
-            const titleEl = document.getElementById('terminal-title');
-            const status1El = document.getElementById('terminal-status-1');
-            const status2El = document.getElementById('terminal-status-2');
-            const terminal = document.getElementById('status-terminal');
-
-            if (titleEl) titleEl.textContent = meta.title;
-            if (status1El) status1El.textContent = meta.status1;
-            if (status2El) status2El.textContent = meta.status2;
-
-            if (terminal) {
-                terminal.innerHTML = '';
-                meta.lines.forEach((line, i) => {
-                    const div = document.createElement('div');
-                    div.className = 'term-line';
-                    div.textContent = line;
-                    // Reset animation
-                    div.style.animation = 'none';
-                    div.offsetHeight; // trigger reflow
-                    div.style.animation = null;
-                    div.style.animationDelay = `${i * 0.5}s`;
-                    terminal.appendChild(div);
-                });
-            }
-        }
+        // --- TERMINAL ENGINE (removed — clean catalog UI) ---
+        function updateTerminal() { /* no-op */ }
 
         // --- DEBOUNCE UTILITY ---
         function debounce(func, wait) {
@@ -355,17 +594,6 @@
             }
             saveCart();
             openCart();
-            
-            // System Feedback
-            const terminal = document.getElementById('status-terminal');
-            if (terminal) {
-                const line = document.createElement('div');
-                line.className = 'term-line';
-                line.style.color = 'var(--color-accent)';
-                line.textContent = `> ITEM ADDED: ${product.sku}`;
-                terminal.appendChild(line);
-                terminal.scrollTop = terminal.scrollHeight;
-            }
         }
 
         function removeFromCart(sku) {
@@ -390,11 +618,10 @@
             
             if (!list) return;
 
-            // Maintain the scanner line
-            if (!list.querySelector('.drawer-scanner')) {
-                list.innerHTML = '<div class="drawer-scanner"></div>';
+            // Clear existing items
+            if (!list.querySelector('.cart-item')) {
+                list.innerHTML = '';
             } else {
-                // Clear items but keep scanner
                 const items = list.querySelectorAll('.cart-item');
                 items.forEach(i => i.remove());
             }
@@ -414,7 +641,7 @@
                         <img src="${item.image}" alt="${item.name}" width="80" height="80" loading="lazy">
                     </div>
                     <div class="cart-item-info">
-                        <div class="deployment-status"><i class="fas fa-check-circle"></i> READY FOR DEPLOYMENT</div>
+                        <div class="deployment-status"><i class="fas fa-check-circle"></i> In Stock</div>
                         <h4>${item.name}</h4>
                         <div class="cart-item-price">$${item.price.toFixed(2)}</div>
                     </div>
@@ -446,7 +673,7 @@
             if (!append) {
                 productsGrid.innerHTML = `
                     <div class="decipher-overlay">
-                        <div class="decipher-text">> LOADING CATALOG DATA...</div>
+                        <div class="decipher-text">Loading products...</div>
                     </div>
                 `;
                 updateTerminal(currentFilter, currentSearch);
@@ -469,7 +696,7 @@
                 const { products, pagination } = data;
 
                 if (!append) {
-                    // Small delay for tactical loading feel
+                    // Brief loading transition
                     await new Promise(r => setTimeout(r, 300));
                     productsGrid.innerHTML = '';
                 }
@@ -487,8 +714,8 @@
                 console.error('Catalog API error:', err);
                 if (!append) {
                     productsGrid.innerHTML = `
-                        <div style="text-align: center; padding: 3rem; color: var(--color-text-muted);">
-                            <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+                        <div style="text-align: center; padding: 3rem; color: #888;">
+                            <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem; color: #ccc;"></i>
                             <p>Failed to load catalog. Please refresh the page.</p>
                         </div>
                     `;
@@ -521,15 +748,14 @@
                 const isProX = series.includes('PRO-X') || p.name.includes('Pro-X');
 
                 card.innerHTML = `
-                    ${isNDAA ? '<div class="ndaa-badge">NDAA</div>' : ''}
+                    ${isNDAA ? '<div class="ndaa-badge">NDAA Compliant</div>' : ''}
                     ${isProX ? '<div class="pro-x-indicator">PRO-X</div>' : ''}
                     <div class="product-image">
                         <img src="${p.image || 'assets/images/placeholder.jpg'}" alt="${p.name}" loading="lazy" width="300" height="300">
                         <div class="product-data-overlay">
-                            <div class="overlay-stat"><span>TYPE:</span> <span>${tech}</span></div>
-                            <div class="overlay-stat"><span>SERIES:</span> <span>${series}</span></div>
-                            <div class="overlay-stat"><span>SPEC:</span> <span>${resolution}</span></div>
-                            <div class="overlay-stat"><span>STATUS:</span> <span style="color: var(--color-tactical-success)">OPERATIONAL</span></div>
+                            <div class="overlay-stat"><span>Type:</span> <span>${tech}</span></div>
+                            <div class="overlay-stat"><span>Series:</span> <span>${series}</span></div>
+                            <div class="overlay-stat"><span>Resolution:</span> <span>${resolution}</span></div>
                         </div>
                     </div>
                     <div class="product-info">
@@ -539,10 +765,10 @@
                             <span class="product-price">$${variant.price.toFixed(2)}</span>
                             <div style="display: flex; gap: 0.5rem; position: relative; z-index: 20;">
                                 <button class="btn btn-secondary info-btn" data-id="${p.series_id || variant.sku}" onclick="window.openProductModal('${p.series_id || variant.sku}')">
-                                    <i class="fas fa-microscope"></i>
+                                    <i class="fas fa-info-circle"></i>
                                 </button>
                                 <button class="btn btn-primary add-to-cart-btn" data-sku="${variant.sku}">
-                                    <i class="fas fa-plus"></i>
+                                    <i class="fas fa-cart-plus"></i> Add
                                 </button>
                             </div>
                         </div>
@@ -566,24 +792,17 @@
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    
-                    // Spatial Tilt Logic
+
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
-                    const rotateX = (centerY - y) / 12;
-                    const rotateY = (x - centerX) / 12;
-                    
-                    card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-                    
-                    // Glow following mouse
-                    const glowX = (x / rect.width) * 100;
-                    const glowY = (y / rect.height) * 100;
-                    card.style.background = `radial-gradient(circle at ${glowX}% ${glowY}%, var(--color-surface-hover), var(--color-surface))`;
+                    const rotateX = (centerY - y) / 40;
+                    const rotateY = (x - centerX) / 40;
+
+                    card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-2px)`;
                 });
-                
+
                 card.addEventListener('mouseleave', () => {
-                    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)';
-                    card.style.background = 'var(--color-surface)';
+                    card.style.transform = 'perspective(800px) rotateX(0) rotateY(0) translateY(0)';
                 });
             });
         }
@@ -629,7 +848,7 @@
             // Show loading spinner immediately
             body.innerHTML = `<div style="text-align: center; padding: 3rem;">
                 <i class="fas fa-spinner fa-spin" style="font-size: 2rem; color: var(--color-accent);"></i>
-                <p style="margin-top: 1rem; color: var(--color-text-muted);">Loading specifications...</p>
+                <p style="margin-top: 1rem; color: #888;">Loading specifications...</p>
             </div>`;
             modal.style.display = 'block';
             document.body.style.overflow = 'hidden';
@@ -652,8 +871,8 @@
                 let variantsHtml = '';
                 if (product.variants && product.variants.length > 1) {
                     variantsHtml = `<div style="margin-bottom:1rem;">
-                        <label style="font-size:0.85rem;color:var(--color-text-muted);">Select Variant:</label>
-                        <select id="modal-variant-select" style="width:100%;padding:0.5rem;margin-top:0.25rem;background:var(--color-background);color:var(--color-text);border:1px solid var(--color-border);border-radius:4px;">
+                        <label style="font-size:0.85rem;color:#555;">Select Variant:</label>
+                        <select id="modal-variant-select" style="width:100%;padding:0.5rem;margin-top:0.25rem;background:#fff;color:#333;border:1px solid #ddd;border-radius:4px;">
                             ${product.variants.map((v, i) => `<option value="${i}">${v.sku} - $${v.price.toFixed(2)}</option>`).join('')}
                         </select>
                     </div>`;
@@ -673,17 +892,17 @@
 
                 body.innerHTML = `
                     <div class="modal-layout" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="modal-image-container" style="flex:1;min-width:300px;display:flex;align-items:center;justify-content:center;background:white;padding:1.5rem;border-radius:8px;border:1px solid var(--color-border);">
+                        <div class="modal-image-container" style="flex:1;min-width:300px;display:flex;align-items:center;justify-content:center;background:rgba(20,28,40,0.5);padding:1.5rem;border-radius:8px;border:1px solid var(--color-border);">
                             <img src="${product.image || 'assets/images/placeholder.jpg'}" alt="${product.name}" style="max-width:100%;max-height:400px;object-fit:contain;" width="400" height="400" loading="lazy">
                         </div>
                         <div class="modal-details" style="flex:1.5;min-width:300px;">
                             <div class="product-sku" id="modal-sku" style="margin-bottom:0.5rem;">${firstVariant.sku}</div>
                             <h2 style="margin-top:0;color:var(--color-text);line-height:1.2;">${product.name}</h2>
                             <div id="modal-price" style="font-size:1.75rem;color:var(--color-accent);font-weight:800;margin:1rem 0;">$${firstVariant.price.toFixed(2)}</div>
-                            <div style="line-height:1.6;margin-bottom:1.5rem;color:var(--color-text-muted);font-size:0.95rem;">${product.long_description || product.description || 'Professional-grade security hardware asset.'}</div>
+                            <div style="line-height:1.6;margin-bottom:1.5rem;color:#555;font-size:0.95rem;">${product.long_description || product.description || 'Professional security equipment.'}</div>
                             ${variantsHtml}
                             ${specsHtml}
-                            <button class="btn btn-primary" id="modal-add-btn" style="width:100%;margin-top:1.5rem;padding:1rem;font-weight:900;"><i class="fas fa-plus"></i> ADD TO ORDER</button>
+                            <button class="btn btn-primary" id="modal-add-btn" style="width:100%;margin-top:1.5rem;padding:1rem;font-weight:700;"><i class="fas fa-cart-plus"></i> Add to Cart</button>
                         </div>
                     </div>
                 `;
@@ -713,7 +932,7 @@
 
             } catch (err) {
                 console.error('Modal fetch error:', err);
-                body.innerHTML = '<p style="text-align:center;padding:2rem;color:var(--color-text-muted);">Failed to load product details. Please try again.</p>';
+                body.innerHTML = '<p style="text-align:center;padding:2rem;color:#888;">Failed to load product details. Please try again.</p>';
             }
         }
 
@@ -837,7 +1056,7 @@
                         window.location.href = result.mailtoUrl;
                     }
                 } catch (err) {
-                    alert('SECURE LINK FAILED. TRIGGERING FALLBACK UPLINK.');
+                    alert('Checkout unavailable. Please try again or contact us directly.');
                 } finally {
                     submitBtn.disabled = false;
                     submitBtn.innerHTML = originalText;

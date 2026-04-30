@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MSP Smart Hands & Security Integration | Ultimate Security Solutions</title>
-    <meta name="description" content="White-label field services for MSPs. Veteran-owned smart hands, structured cabling, CCTV rollouts, and access control deployment in Kansas City. Your reliable local subcontractor.">
-    <meta name="keywords" content="MSP Smart Hands, White Label IT Services, Field Technician Kansas City, Structured Cabling Subcontractor, CCTV Installation MSP, Access Control Deployment">
+    <title>MSP Field Services & Partnerships | Ultimate Security Solutions</title>
+    <meta name="description" content="White-label field services for MSPs in Kansas City. 23 years of experience providing smart hands, structured cabling, surveillance rollouts, and access control. Your reliable local subcontractor.">
+    <meta name="keywords" content="MSP Smart Hands, White Label IT Services, Field Technician Kansas City, Structured Cabling Subcontractor, CCTV Installation MSP">
     <link rel="canonical" href="https://usstech.net/msp.html">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://usstech.net/msp.html">
-    <meta property="og:title" content="MSP Smart Hands & Security Integration | USS">
-    <meta property="og:description" content="Your white-label field team in Kansas City. Veteran-owned smart hands for structured cabling, surveillance, and access control rollouts.">
+    <meta property="og:title" content="MSP Field Services & Partnerships | USS">
+    <meta property="og:description" content="Your white-label field team in Kansas City. 23 years of experience providing smart hands for structured cabling, surveillance, and access control rollouts.">
     <meta property="og:image" content="https://usstech.net/assets/images/portfolio/IMG_0036.JPEG">
     <meta property="twitter:card" content="summary_large_image">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
     <style>
         .msp-hero {
             position: relative;
-            min-height: 85vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             padding: 120px 20px 80px;
@@ -64,12 +64,6 @@
             padding-left: 1.5rem;
             margin-bottom: 2rem;
         }
-        .msp-hero-actions {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
         .msp-trust-bar {
             display: flex;
             gap: 2rem;
@@ -86,7 +80,7 @@
         }
         .msp-trust-item i { color: var(--color-accent); font-size: 0.9rem; }
 
-        /* Stats Section */
+        /* Stats */
         .msp-stats {
             background: rgba(184, 149, 58, 0.03);
             border-top: 1px solid rgba(184, 149, 58, 0.1);
@@ -116,79 +110,45 @@
             letter-spacing: 1px;
         }
 
-        /* Service Tiers */
-        .tier-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .tier-card {
-            background: rgba(15, 28, 46, 0.6);
-            border: 1px solid rgba(255, 215, 0, 0.1);
-            border-radius: var(--radius);
-            padding: 2.5rem 2rem;
-            transition: all 0.3s var(--ease-out);
-            position: relative;
-            overflow: hidden;
-        }
-        .tier-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .tier-card:hover {
-            border-color: var(--color-accent);
-            transform: translateY(-4px);
-        }
-        .tier-card:hover::before { opacity: 1; }
-        .tier-card.featured {
-            border-color: var(--color-accent);
-            background: rgba(184, 149, 58, 0.05);
-        }
-        .tier-card.featured::before { opacity: 1; }
-        .tier-badge {
-            display: inline-block;
-            background: var(--color-accent);
-            color: var(--color-primary);
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            padding: 3px 10px;
-            margin-bottom: 1rem;
-        }
-        .tier-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
-        .tier-card .tier-desc {
-            color: var(--color-muted);
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
-        .tier-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 2rem 0;
-        }
-        .tier-card ul li {
-            padding: 0.4rem 0;
-            font-size: 0.9rem;
-            color: var(--color-text);
+        /* Services List */
+        .services-list { max-width: 900px; margin: 0 auto; }
+        .service-row {
             display: flex;
             align-items: flex-start;
-            gap: 8px;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid rgba(184, 149, 58, 0.1);
         }
-        .tier-card ul li i {
+        .service-row:last-child { border-bottom: none; }
+        .service-row i {
             color: var(--color-accent);
-            margin-top: 3px;
-            font-size: 0.7rem;
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+            width: 40px;
+            text-align: center;
         }
+        .service-row h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
+        .service-row p { color: var(--color-muted); font-size: 0.9rem; line-height: 1.6; }
+
+        /* Partner Logos */
+        .partner-logos {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .partner-logos img {
+            height: 60px;
+            width: auto;
+            opacity: 0.7;
+            filter: grayscale(100%) brightness(0.7);
+            transition: all 0.3s;
+        }
+        .partner-logos img:hover { opacity: 1; filter: none; }
 
         /* Process Section */
         .process-grid {
@@ -198,16 +158,10 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        .process-step {
-            text-align: center;
-            padding: 2rem 1.5rem;
-        }
+        .process-step { text-align: center; padding: 2rem 1.5rem; }
         .process-step .step-num {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 50px; height: 50px;
+            display: flex; align-items: center; justify-content: center;
             border: 2px solid var(--color-accent);
             border-radius: 50%;
             font-family: var(--font-header);
@@ -216,63 +170,85 @@
             font-size: 1.2rem;
             margin: 0 auto 1rem;
         }
-        .process-step h3 {
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-        .process-step p {
-            color: var(--color-muted);
-            font-size: 0.9rem;
-        }
+        .process-step h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .process-step p { color: var(--color-muted); font-size: 0.9rem; }
 
-        /* FAQ */
-        .faq-list {
+        /* Contact Options */
+        .contact-options {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
             max-width: 800px;
             margin: 0 auto;
         }
-        .faq-item {
-            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
-            padding: 1.5rem 0;
+        .contact-option {
+            flex: 1;
+            min-width: 200px;
+            max-width: 240px;
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+            background: rgba(15, 28, 46, 0.6);
+            border: 1px solid rgba(184, 149, 58, 0.1);
+            border-radius: var(--radius);
+            transition: all 0.3s var(--ease-out);
+            text-decoration: none;
+            color: var(--color-text);
         }
+        .contact-option:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+        }
+        .contact-option i {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .contact-option h3 { font-size: 1.2rem; margin-bottom: 0.3rem; }
+        .contact-option p { color: var(--color-muted); font-size: 0.85rem; }
+
+        /* SLA Grid */
+        .sla-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .sla-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(15, 28, 46, 0.4);
+            border: 1px solid rgba(184, 149, 58, 0.08);
+            border-radius: var(--radius);
+        }
+        .sla-card i { font-size: 2rem; color: var(--color-accent); margin-bottom: 1rem; }
+        .sla-card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .sla-card p { color: var(--color-muted); font-size: 0.85rem; }
+
+        /* FAQ */
+        .faq-list { max-width: 800px; margin: 0 auto; }
+        .faq-item { border-bottom: 1px solid rgba(184, 149, 58, 0.1); padding: 1.5rem 0; }
         .faq-item:last-child { border-bottom: none; }
         .faq-q {
-            font-weight: 700;
-            font-size: 1rem;
-            color: var(--color-text);
-            margin-bottom: 0.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            font-weight: 700; font-size: 1rem; color: var(--color-text);
+            margin-bottom: 0.5rem; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
         }
         .faq-q i { color: var(--color-accent); font-size: 0.8rem; transition: transform 0.3s; }
         .faq-q.open i { transform: rotate(180deg); }
         .faq-a {
-            color: var(--color-muted);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s var(--ease-out);
+            color: var(--color-muted); font-size: 0.9rem; line-height: 1.7;
+            max-height: 0; overflow: hidden; transition: max-height 0.3s var(--ease-out);
         }
         .faq-a.open { max-height: 300px; }
-
-        /* CTA Band */
-        .msp-cta-band {
-            background: linear-gradient(135deg, rgba(184, 149, 58, 0.08), rgba(184, 149, 58, 0.02));
-            border-top: 1px solid var(--color-accent);
-            border-bottom: 1px solid var(--color-accent);
-            padding: 5rem 20px;
-            text-align: center;
-        }
-        .msp-cta-band h2 { margin-bottom: 1rem; }
-        .msp-cta-band p { color: var(--color-muted); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto; }
 
         @media (max-width: 768px) {
             .msp-hero { min-height: auto; padding: 100px 20px 60px; }
             .msp-hero h1 { font-size: 2rem; }
             .msp-trust-bar { gap: 1rem; }
-            .tier-grid { grid-template-columns: 1fr; }
+            .contact-options { flex-direction: column; align-items: center; }
         }
     </style>
 </head>
@@ -281,7 +257,6 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
-                <img src="assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img" width="160" height="48">
             </a>
             <div class="nav-mobile-toggle" id="mobile-toggle">
                 <span></span><span></span><span></span>
@@ -308,10 +283,7 @@
                 <a href="system-design.html" class="nav-link-item">USS Suite
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
-                <a href="msp.html" class="nav-link-item active">MSP Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
+                <a href="msp.html" class="nav-link-item active">Hire Us
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
                 <a href="reviews.html" class="nav-link-item">Reviews
@@ -330,17 +302,13 @@
         <!-- Hero -->
         <header class="msp-hero">
             <div class="container">
-                <div class="msp-hero-badge animate-in"><i class="fas fa-handshake"></i> FOR MANAGED SERVICE PROVIDERS</div>
-                <h1 class="animate-in">YOUR WHITE-LABEL<br><span>FIELD TEAM.</span></h1>
+                <div class="msp-hero-badge animate-in"><i class="fas fa-handshake"></i> FIELD SERVICES FOR MSPs & COMMERCIAL PARTNERS</div>
+                <h1 class="animate-in">YOUR WHITE-LABEL<br><span>FIELD TEAM IN KC.</span></h1>
                 <p class="msp-hero-sub animate-in">We deploy as your local boots on the ground in Kansas City. Structured cabling, surveillance rollouts, access control, and smart hands — all under your brand.</p>
-                <div class="msp-hero-actions animate-in">
-                    <a href="contact.html?ref=msp" class="btn btn-primary"><i class="fas fa-rocket"></i> Start Onboarding</a>
-                    <a href="tel:8168142007" class="btn btn-secondary"><i class="fas fa-phone"></i> (816) 814-2007</a>
-                </div>
                 <div class="msp-trust-bar animate-in">
                     <div class="msp-trust-item"><i class="fas fa-shield-alt"></i> $2M General Liability</div>
                     <div class="msp-trust-item"><i class="fas fa-file-contract"></i> Workers' Comp Covered</div>
-                    <div class="msp-trust-item"><i class="fas fa-flag-usa"></i> Veteran-Owned</div>
+                    <div class="msp-trust-item"><i class="fas fa-clock"></i> 23 Years Experience</div>
                     <div class="msp-trust-item"><i class="fas fa-clock"></i> Any Shift Availability</div>
                 </div>
             </div>
@@ -349,66 +317,100 @@
         <!-- Stats -->
         <section class="msp-stats">
             <div class="msp-stats-grid">
-                <div class="msp-stat-item animate-in">
-                    <div class="stat-num">100%</div>
-                    <div class="stat-desc">Subcontractor Fidelity</div>
-                </div>
-                <div class="msp-stat-item animate-in">
-                    <div class="stat-num">24/7</div>
-                    <div class="stat-desc">Dispatch Availability</div>
-                </div>
-                <div class="msp-stat-item animate-in">
-                    <div class="stat-num">100mi</div>
-                    <div class="stat-desc">KC Metro Coverage</div>
-                </div>
-                <div class="msp-stat-item animate-in">
-                    <div class="stat-num">0</div>
-                    <div class="stat-desc">Hand-Holding Required</div>
+                <div class="msp-stat-item animate-in"><div class="stat-num">100%</div><div class="stat-desc">Subcontractor Fidelity</div></div>
+                <div class="msp-stat-item animate-in"><div class="stat-num">24/7</div><div class="stat-desc">Dispatch Availability</div></div>
+                <div class="msp-stat-item animate-in"><div class="stat-num">100mi</div><div class="stat-desc">KC Metro Coverage</div></div>
+                <div class="msp-stat-item animate-in"><div class="stat-num">0</div><div class="stat-desc">Hand-Holding Required</div></div>
+            </div>
+        </section>
+
+        <!-- What We Do -->
+        <section class="section-padding">
+            <div class="container">
+                <h2 class="section-title animate-in">WHAT WE DO</h2>
+                <div class="services-list">
+                    <div class="service-row animate-in">
+                        <i class="fas fa-tools"></i>
+                        <div>
+                            <h3>Smart Hands & Field Tech</h3>
+                            <p>On-demand dispatch for rack & stack, cable runs, terminations, demarc extensions, circuit turn-ups, troubleshooting, and diagnostics. After-hours and weekend availability.</p>
+                        </div>
+                    </div>
+                    <div class="service-row animate-in">
+                        <i class="fas fa-network-wired"></i>
+                        <div>
+                            <h3>Structured Cabling</h3>
+                            <p>Cat6 and fiber optic cabling for new construction, tenant buildouts, and retrofits. Fully tested, labeled, and documented with photo closeout packages.</p>
+                        </div>
+                    </div>
+                    <div class="service-row animate-in">
+                        <i class="fas fa-video"></i>
+                        <div>
+                            <h3>Surveillance System Installs</h3>
+                            <p>End-to-end CCTV and IP camera deployments — mounting, aiming, cable runs, NVR setup, and client handoff. Multi-site rollouts our specialty.</p>
+                        </div>
+                    </div>
+                    <div class="service-row animate-in">
+                        <i class="fas fa-key"></i>
+                        <div>
+                            <h3>Access Control Deployment</h3>
+                            <p>Card readers, controllers, electric strikes, magnetic locks, and full system commissioning. We follow your SOPs and documentation standards.</p>
+                        </div>
+                    </div>
+                    <div class="service-row animate-in">
+                        <i class="fas fa-wifi"></i>
+                        <div>
+                            <h3>Wireless & Network Infrastructure</h3>
+                            <p>Wireless site surveys, AP mounting and configuration, switch installs, and network closet cleanup. Full infrastructure support.</p>
+                        </div>
+                    </div>
+                    <div class="service-row animate-in">
+                        <i class="fas fa-box"></i>
+                        <div>
+                            <h3>Equipment Supply</h3>
+                            <p>NDAA-compliant LTS/Hikvision cameras, NVRs, access control hardware, and networking gear at distributor pricing. Drop-ship or hand-deliver.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Service Tiers -->
+        <!-- Partner Logos -->
+        <section class="section-padding" style="background: rgba(5, 11, 20, 0.4);">
+            <div class="container">
+                <h2 class="section-title animate-in">TRUSTED BY</h2>
+                <div class="partner-logos animate-in">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Hikvision_logo.svg/320px-Hikvision_logo.svg.png" alt="Hikvision" style="height:40px;">
+                    <img src="https://www.ltsecurityinc.com/media/logo/stores/1/new-logo.png" alt="LTS Security" style="height:50px;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Wachter_logo.svg/200px-Wachter_logo.svg.png" alt="Wachter" style="height:45px;">
+                </div>
+            </div>
+        </section>
+
+        <!-- SLA Commitments -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="section-title animate-in">HOW WE SERVE MSPs</h2>
-                <div class="tier-grid">
-                    <div class="tier-card animate-in">
-                        <h3>Smart Hands</h3>
-                        <p class="tier-desc">On-demand field tech for your ticket queue</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> Rack & stack, cable runs, terminations</li>
-                            <li><i class="fas fa-check"></i> Demarc extensions & circuit turn-ups</li>
-                            <li><i class="fas fa-check"></i> Troubleshooting & diagnostics</li>
-                            <li><i class="fas fa-check"></i> After-hours & weekend dispatch</li>
-                            <li><i class="fas fa-check"></i> Photo-documented closeout packages</li>
-                        </ul>
-                        <a href="contact.html?ref=msp-smart-hands" class="btn btn-secondary" style="width:100%;">Request Smart Hands</a>
+                <h2 class="section-title animate-in">OUR COMMITMENTS TO YOU</h2>
+                <div class="sla-grid">
+                    <div class="sla-card animate-in">
+                        <i class="fas fa-clock"></i>
+                        <h3>24-Hour Response</h3>
+                        <p>Vendor packets returned within 24 hours. Scheduling confirmations same business day.</p>
                     </div>
-                    <div class="tier-card featured animate-in">
-                        <div class="tier-badge">MOST POPULAR</div>
-                        <h3>Project Rollouts</h3>
-                        <p class="tier-desc">Full deployment team for multi-site builds</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> CCTV & surveillance system installs</li>
-                            <li><i class="fas fa-check"></i> Structured cabling (Cat6/Fiber)</li>
-                            <li><i class="fas fa-check"></i> Access control deployment</li>
-                            <li><i class="fas fa-check"></i> Wireless site surveys & AP installs</li>
-                            <li><i class="fas fa-check"></i> We follow YOUR SOPs and branding</li>
-                        </ul>
-                        <a href="contact.html?ref=msp-rollouts" class="btn btn-primary" style="width:100%;">Plan a Rollout</a>
+                    <div class="sla-card animate-in">
+                        <i class="fas fa-camera"></i>
+                        <h3>Photo Documentation</h3>
+                        <p>Every project includes before/after photos and detailed closeout packages for your records.</p>
                     </div>
-                    <div class="tier-card animate-in">
-                        <h3>Equipment Supply</h3>
-                        <p class="tier-desc">NDAA-compliant hardware at distributor pricing</p>
-                        <ul>
-                            <li><i class="fas fa-check"></i> LTS/Hikvision platinum & pro series</li>
-                            <li><i class="fas fa-check"></i> Access control hardware</li>
-                            <li><i class="fas fa-check"></i> Networking & infrastructure</li>
-                            <li><i class="fas fa-check"></i> Bulk & project pricing available</li>
-                            <li><i class="fas fa-check"></i> Drop-ship or hand-deliver</li>
-                        </ul>
-                        <a href="ordering_system.html?ref=msp" class="btn btn-secondary" style="width:100%;">Browse Catalog</a>
+                    <div class="sla-card animate-in">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Professional Conduct</h3>
+                        <p>Uniformed technicians, professional communication. We represent your brand on-site.</p>
+                    </div>
+                    <div class="sla-card animate-in">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>$2M Insured</h3>
+                        <p>General Liability + Workers' Comp. COI naming your company as additionally insured on request.</p>
                     </div>
                 </div>
             </div>
@@ -427,12 +429,12 @@
                     <div class="process-step animate-in">
                         <div class="step-num">2</div>
                         <h3>Capabilities Call</h3>
-                        <p>15-minute call to align on your service standards, SOPs, documentation requirements, and communication preferences.</p>
+                        <p>15-minute call to align on your service standards, SOPs, and communication preferences.</p>
                     </div>
                     <div class="process-step animate-in">
                         <div class="step-num">3</div>
                         <h3>COI & Documentation</h3>
-                        <p>We provide Certificate of Insurance, W-9, and any additional compliance documentation your procurement team requires.</p>
+                        <p>We provide Certificate of Insurance, W-9, and any compliance docs your procurement team requires.</p>
                     </div>
                     <div class="process-step animate-in">
                         <div class="step-num">4</div>
@@ -443,10 +445,10 @@
             </div>
         </section>
 
-        <!-- MSP Testimonials -->
+        <!-- Testimonials -->
         <section class="section-padding">
             <div class="container">
-                <h2 class="section-title animate-in">FROM OUR MSP PARTNERS</h2>
+                <h2 class="section-title animate-in">FROM OUR PARTNERS</h2>
                 <div class="testimonial-grid">
                     <div class="testimonial-card animate-in">
                         <i class="fas fa-quote-left"></i>
@@ -474,62 +476,59 @@
                 <div class="faq-list">
                     <div class="faq-item animate-in">
                         <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-                            What insurance do you carry?
-                            <i class="fas fa-chevron-down"></i>
+                            What insurance do you carry? <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="faq-a">
-                            We carry $2M General Liability and full Workers' Compensation coverage. We'll provide a Certificate of Insurance (COI) naming your company as additionally insured upon request.
-                        </div>
+                        <div class="faq-a">We carry $2M General Liability and full Workers' Compensation coverage. We'll provide a Certificate of Insurance (COI) naming your company as additionally insured upon request.</div>
                     </div>
                     <div class="faq-item animate-in">
                         <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-                            Can you work under our brand?
-                            <i class="fas fa-chevron-down"></i>
+                            Can you work under our brand? <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="faq-a">
-                            Yes. We operate as a white-label extension of your team — wearing your branded PPE, using your documentation templates, and representing your company on-site.
-                        </div>
+                        <div class="faq-a">Yes. We operate as a white-label extension of your team — wearing your branded PPE, using your documentation templates, and representing your company on-site.</div>
                     </div>
                     <div class="faq-item animate-in">
                         <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-                            What's your service area?
-                            <i class="fas fa-chevron-down"></i>
+                            What's your service area? <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="faq-a">
-                            Primary coverage is the Kansas City metro area within a 100-mile radius. We travel for multi-site rollouts — contact us for project-based coverage outside KC.
-                        </div>
+                        <div class="faq-a">Primary coverage is the Kansas City metro area within a 100-mile radius. We travel for multi-site rollouts — contact us for project-based coverage outside KC.</div>
                     </div>
                     <div class="faq-item animate-in">
                         <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-                            How quickly can you dispatch?
-                            <i class="fas fa-chevron-down"></i>
+                            How quickly can you dispatch? <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="faq-a">
-                            For established partners, same-day dispatch is available for urgent requests. Standard scheduling is typically 24-48 hours. We also support after-hours and weekend deployments.
-                        </div>
+                        <div class="faq-a">For established partners, same-day dispatch is available for urgent requests. Standard scheduling is typically 24-48 hours. We also support after-hours and weekend deployments.</div>
                     </div>
                     <div class="faq-item animate-in">
                         <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
-                            Do you provide your own tools and equipment?
-                            <i class="fas fa-chevron-down"></i>
+                            Do you provide your own tools? <i class="fas fa-chevron-down"></i>
                         </div>
-                        <div class="faq-a">
-                            Yes. Our vans are fully stocked with ladders, cable testers, termination tools, power tools, and consumables. We arrive job-ready.
-                        </div>
+                        <div class="faq-a">Yes. Our vans are fully stocked with ladders, cable testers, termination tools, power tools, and consumables. We arrive job-ready.</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Final CTA -->
-        <section class="msp-cta-band">
+        <!-- Contact -->
+        <section class="section-padding">
             <div class="container">
-                <h2 class="animate-in">READY TO ADD USS TO YOUR VENDOR LIST?</h2>
-                <p class="animate-in">Send your vendor packet, schedule a capabilities call, or just pick up the phone.</p>
-                <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;" class="animate-in">
-                    <a href="mailto:admin@usstech.net?subject=MSP%20Partnership%20Inquiry&body=Hi%20USS%20Team%2C%0A%0AWe%27d%20like%20to%20add%20you%20to%20our%20vendor%20list.%20Please%20find%20our%20onboarding%20packet%20attached.%0A%0ACompany%3A%20%0AContact%3A%20%0APhone%3A%20" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Vendor Packet</a>
-                    <a href="contact.html?ref=msp-bottom" class="btn btn-secondary"><i class="fas fa-calendar-check"></i> Schedule a Call</a>
-                    <a href="tel:8168142007" class="btn btn-secondary"><i class="fas fa-phone"></i> (816) 814-2007</a>
+                <h2 class="section-title animate-in">GET IN TOUCH</h2>
+                <p style="text-align:center; color:var(--color-muted); margin-bottom:3rem; max-width:600px; margin-left:auto; margin-right:auto;" class="animate-in">Ready to add USS to your vendor list? Reach out however you prefer.</p>
+                <div class="contact-options animate-in">
+                    <a href="tel:8168142007" class="contact-option">
+                        <i class="fas fa-phone"></i>
+                        <h3>Call Now</h3>
+                        <p>(816) 814-2007</p>
+                    </a>
+                    <a href="mailto:admin@usstech.net?subject=MSP%20Partnership%20Inquiry&body=Hi%20USS%20Team%2C%0A%0AWe%27d%20like%20to%20add%20you%20to%20our%20vendor%20list.%20Please%20find%20our%20onboarding%20packet%20attached.%0A%0ACompany%3A%20%0AContact%3A%20%0APhone%3A%20" class="contact-option">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email Us</h3>
+                        <p>admin@usstech.net</p>
+                    </a>
+                    <a href="sms:8168142007?body=Hi%20USS%20-%20I%27d%20like%20to%20discuss%20a%20partnership." class="contact-option">
+                        <i class="fas fa-comment-dots"></i>
+                        <h3>Text Message</h3>
+                        <p>(816) 814-2007</p>
+                    </a>
                 </div>
             </div>
         </section>
@@ -557,12 +556,7 @@
         "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 39.0997, "longitude": -94.5786 },
         "geoRadius": "160934"
       },
-      "serviceType": "Smart Hands, Structured Cabling, CCTV Installation, Access Control",
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "12"
-      }
+      "serviceType": "Smart Hands, Structured Cabling, CCTV Installation, Access Control"
     }
     </script>
 </body>
