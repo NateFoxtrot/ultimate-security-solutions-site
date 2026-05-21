@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Dashboard | Ultimate Security Solutions</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --bg-dashboard: #0f172a;
+            --panel-bg: #1e293b;
+            --accent: #B8953A;
+        }
+
+        body {
+            background-color: var(--bg-dashboard);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 250px;
+            background: #020617;
+            border-right: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-item {
+            padding: 12px 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-item:hover {
+            background: #1e293b;
+        }
+
+        .nav-item.active {
+            background: var(--accent);
+            color: black;
+            font-weight: bold;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            overflow-y: auto;
+        }
+
+        .tab-panel {
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: block;
+        }
+
+        /* Image Grid */
+        .image-manager-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            height: calc(100vh - 150px);
+        }
+
+        .portfolio-pool {
+            background: var(--panel-bg);
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pool-scroll {
+            flex: 1;
+            overflow-y: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            padding-right: 10px;
+        }
+
+        .thumb {
+            aspect-ratio: 1;
+            background-size: cover;
+            background-position: center;
+            border-radius: 4px;
+            cursor: move;
+            border: 2px solid transparent;
+            transition: border 0.2s;
+        }
+
+        .thumb:hover {
+            border-color: var(--accent);
+        }
+
+        .page-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            overflow-y: auto;
+        }
+
+        .section-box {
+            background: var(--panel-bg);
+            border-radius: 12px;
+            padding: 20px;
+            min-height: 200px;
+            border: 2px dashed #475569;
+        }
+
+        .section-box.drag-over {
+            border-color: var(--accent);
+            background: #334155;
+        }
+
+        .section-box h3 {
+            margin-top: 0;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+
+        .assigned-images {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        /* Comments List */
+        .comment-card {
+            background: var(--panel-bg);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .comment-meta {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .comment-page {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .save-bar {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--accent);
+            color: black;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: bold;
+            box-shadow: 0 10px 25px -5px rgba(251, 191, 36, 0.4);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        .save-bar:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>USS Tools</h2>
+        <div class="nav-item active" onclick="showTab('images')">Image Manager</div>
+        <div class="nav-item" onclick="showTab('comments')">Site Comments</div>
+        <div class="nav-item" onclick="window.open('index.html?dev=true', '_blank')">Preview Site</div>
+    </div>
+
+    <div class="main-content">
+        <!-- Image Manager -->
+        <div id="images" class="tab-panel active">
+            <div class="image-manager-layout">
+                <div class="portfolio-pool">
+                    <h3 style="margin-top:0">Portfolio Pool</h3>
+                    <input type="text" id="imgSearch" placeholder="Search images..." style="background:#0f172a; border:1px solid #334155; color:white; padding:8px; border-radius:4px; margin-bottom:15px;">
+                    <div class="pool-scroll" id="poolGrid">
+                        <!-- Loaded via JS -->
+                    </div>
+                </div>
+                <div class="page-sections" id="sectionGrid">
+                    <div class="section-box" data-section="index_hero">
+                        <h3>Index Hero</h3>
+                        <div class="assigned-images"></div>
+                    </div>
+                    <div class="section-box" data-section="index_commercial">
+                        <h3>Index Commercial</h3>
+                        <div class="assigned-images"></div>
+                    </div>
+                    <div class="section-box" data-section="retail_hero">
+                        <h3>Retail Hero</h3>
+                        <div class="assigned-images"></div>
+                    </div>
+                    <div class="section-box" data-section="logistics_hero">
+                        <h3>Logistics Hero</h3>
+                        <div class="assigned-images"></div>
+                    </div>
+                    <div class="section-box" data-section="estates_hero">
+                        <h3>Estates Hero</h3>
+                        <div class="assigned-images"></div>
+                    </div>
+                    <div class="section-box" data-section="infrastructure_hero">
+                        <h3>IT Infra Hero</h3>
+                        <div class="assigned-images"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comments -->
+        <div id="comments" class="tab-panel">
+            <h1 style="margin-top:0">Site Feedback</h1>
+            <div id="commentsList">
+                <!-- Loaded via JS -->
+            </div>
+        </div>
+    </div>
+
+    <div class="save-bar" onclick="saveChanges()">
+        <span>💾</span> SAVE ALL CHANGES
+    </div>
+
+    <script>
+        let imageMap = {};
+        let portfolioImages = [];
+
+        async function init() {
+            // Fetch Images
+            const imgRes = await fetch('/api/images');
+            portfolioImages = await imgRes.json();
+            
+            // Fetch Map
+            const mapRes = await fetch('/api/image-map');
+            imageMap = await mapRes.json();
+
+            // Fetch Comments
+            const commRes = await fetch('/api/comments');
+            const comments = await commRes.json();
+
+            renderPool();
+            renderSections();
+            renderComments(comments);
+        }
+
+        function renderPool() {
+            const grid = document.getElementById('poolGrid');
+            grid.innerHTML = '';
+            portfolioImages.forEach(img => {
+                const div = document.createElement('div');
+                div.className = 'thumb';
+                div.style.backgroundImage = `url('assets/images/portfolio/${img}')`;
+                div.draggable = true;
+                div.ondragstart = (e) => e.dataTransfer.setData('text/plain', img);
+                grid.appendChild(div);
+            });
+        }
+
+        function renderSections() {
+            document.querySelectorAll('.section-box').forEach(box => {
+                const section = box.dataset.section;
+                const container = box.querySelector('.assigned-images');
+                container.innerHTML = '';
+                
+                if (imageMap[section]) {
+                    imageMap[section].forEach(img => {
+                        const div = document.createElement('div');
+                        div.className = 'thumb';
+                        div.style.backgroundImage = `url('assets/images/portfolio/${img}')`;
+                        div.title = img;
+                        div.onclick = () => {
+                            imageMap[section] = imageMap[section].filter(i => i !== img);
+                            renderSections();
+                        };
+                        container.appendChild(div);
+                    });
+                }
+
+                box.ondragover = (e) => { e.preventDefault(); box.classList.add('drag-over'); };
+                box.ondragleave = () => box.classList.remove('drag-over');
+                box.ondrop = (e) => {
+                    e.preventDefault();
+                    box.classList.remove('drag-over');
+                    const img = e.dataTransfer.getData('text/plain');
+                    if (!imageMap[section]) imageMap[section] = [];
+                    if (!imageMap[section].includes(img)) imageMap[section].push(img);
+                    renderSections();
+                };
+            });
+        }
+
+        function renderComments(comments) {
+            const list = document.getElementById('commentsList');
+            list.innerHTML = comments.length ? '' : '<p>No comments yet.</p>';
+            comments.reverse().forEach(c => {
+                const card = document.createElement('div');
+                card.className = 'comment-card';
+                card.innerHTML = `
+                    <div class="comment-meta">
+                        <span><span class="comment-page">${c.page}</span> &bull; ${new Date(c.timestamp).toLocaleString()}</span>
+                        <span>Selector: <code>${c.selector}</code></span>
+                    </div>
+                    <div class="comment-text">${c.text}</div>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        function showTab(id) {
+            document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+            document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        async function saveChanges() {
+            const res = await fetch('/api/image-map', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(imageMap)
+            });
+            if (res.ok) alert('Successfully saved image mappings!');
+        }
+
+        init();
+    </script>
+</body>
+</html>

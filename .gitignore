@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build/cache/runtime
+dist/
+build/
+.cache/
+*.log
+__pycache__/
+*.pyc
+*.db
+
+# Environment/secrets
+.env
+.env.*
+!.env.example
+
+# Local agent/editor state
+.aionrs/
+.claude/
+.claude-flow/
+.cursor/
+.mcp.json
+.openclaude/
+.openclaude-profile.json
+.swarm/
+.vibecheck/
+
+# Backups/generated scratch
+*.bak
+*.bak_*
+*.zip
+# Bulky scratch/alternate workspaces not in release baseline
+Other/
+marketing/
+workflows/
+uss-astro/
+lts-catalog-tool/data/
+lts-catalog-tool/lts_live_page.html
+lts-catalog-tool/lts_page_*.html

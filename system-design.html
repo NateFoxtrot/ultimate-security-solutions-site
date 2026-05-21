@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Designer | Project Estimator 2.0</title>
-    <meta name="description" content="Ultimate Security Suite - Professional-grade system design, cable estimation, and labor calculation for commercial security integrators.">
+    <title>USS Suite | Tactical Site Intelligence Platform</title>
+    <meta name="description" content="Ultimate Security Suite - The Mission Architect's OS for Modern Integrator. AI-powered site reconnaissance, 3D simulation, and professional quoting.">
     <link rel="canonical" href="https://usstech.net/system-design.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,12 +18,26 @@
             padding: 8rem 2rem 5rem;
             position: relative;
             z-index: 1;
+            background: transparent;
+        }
+        .suite-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(5, 11, 20, 0.8) 0%, rgba(15, 23, 42, 0.6) 100%);
+            z-index: -1;
         }
         .suite-hero h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-size: clamp(2rem, 5vw, 3.2rem);
             color: var(--color-accent);
+            line-height: 1.1;
             margin-bottom: 0.5rem;
             letter-spacing: 3px;
+            position: relative;
+            z-index: 1;
         }
         .suite-hero .version-tag {
             display: inline-block;
@@ -35,6 +49,8 @@
             letter-spacing: 2px;
             border-radius: 100px;
             margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
         }
         .suite-hero p {
             font-size: 1.1rem;
@@ -200,6 +216,177 @@
             .stat-item:nth-child(2) { border-bottom: 1px solid var(--color-border); }
             .download-row { flex-direction: column; align-items: center; }
         }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            align-items: start;
+        }
+        .pricing-card {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius);
+            padding: 2rem 1.5rem;
+            position: relative;
+            transition: var(--transition);
+        }
+        .pricing-card.pricing-popular {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 40px rgba(184, 149, 58, 0.15), 0 0 80px rgba(184, 149, 58, 0.05);
+            transform: scale(1.03);
+            z-index: 1;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            right: 0;
+            background: var(--color-accent);
+            color: var(--color-primary);
+            text-align: center;
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            padding: 0.4rem;
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .tier-label {
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: var(--color-muted);
+            margin-bottom: 0.5rem;
+        }
+        .tier-price {
+            margin: 0.5rem 0;
+        }
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--color-text);
+        }
+        .price-currency {
+            font-size: 1.5rem;
+            font-weight: 600;
+            vertical-align: super;
+            color: var(--color-muted);
+        }
+        .price-period {
+            font-size: 1rem;
+            color: var(--color-muted);
+            font-weight: 400;
+        }
+        .pricing-popular .price-amount {
+            color: var(--color-accent);
+        }
+        .tier-sub {
+            font-size: 0.8rem;
+            color: var(--color-muted);
+        }
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pricing-features li {
+            padding: 0.4rem 0;
+            font-size: 0.82rem;
+            color: var(--color-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            line-height: 1.4;
+        }
+        .pricing-features li i {
+            margin-top: 0.15rem;
+            font-size: 0.75rem;
+            flex-shrink: 0;
+        }
+        .pricing-features li.included i { color: var(--color-accent); }
+        .pricing-features li.excluded i { color: var(--color-muted); opacity: 0.4; }
+        .pricing-features li.excluded { opacity: 0.4; }
+        .pricing-features li.highlight {
+            color: var(--color-text);
+            font-weight: 500;
+            background: rgba(184, 149, 58, 0.06);
+            margin: 0.15rem -0.5rem;
+            padding: 0.5rem 0.5rem;
+            border-radius: 4px;
+            border-left: 2px solid var(--color-accent);
+        }
+        .pricing-features li.highlight i { color: var(--color-accent); }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .comparison-table th,
+        .comparison-table td {
+            padding: 0.7rem 1rem;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .comparison-table th {
+            background: var(--color-surface);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-muted);
+        }
+        .comparison-table td:first-child {
+            text-align: left;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+        .comparison-table .col-uss {
+            background: rgba(184, 149, 58, 0.04);
+            font-weight: 600;
+        }
+        .comparison-table .pricing-row {
+            background: var(--color-surface);
+        }
+        .comparison-table .pricing-row td {
+            font-size: 0.9rem;
+            padding: 0.8rem 1rem;
+        }
+        .badge-uss {
+            font-size: 0.65rem;
+            background: rgba(184, 149, 58, 0.15);
+            color: var(--color-accent);
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            margin-left: 0.3rem;
+            font-weight: 600;
+        }
+        .badge-no {
+            font-size: 0.65rem;
+            color: var(--color-muted);
+            opacity: 0.6;
+        }
+
+        @media (max-width: 900px) {
+            .pricing-grid { grid-template-columns: 1fr; max-width: 400px; }
+            .pricing-card.pricing-popular { transform: none; }
+        }
+        @media (max-width: 768px) {
+            .comparison-table { font-size: 0.75rem; }
+            .comparison-table th, .comparison-table td { padding: 0.5rem 0.5rem; }
+            .badge-uss, .badge-no { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -224,12 +411,75 @@
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
                 <div class="dropdown nav-link-item">
-                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                    <div class="dropdown-content">
-                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
-                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
-                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    <div class="dropdown-content mega-dropdown">
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CAMERAS</div>
+                            <a href="ordering_system.html?cat=platinum&type=camera">Platinum Series</a>
+                            <a href="ordering_system.html?cat=pro&type=camera">Pro-X Series</a>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">IP Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=ip">Platinum IP Cameras</a>
+                                    <a href="ordering_system.html?cat=pro&type=ip">Pro-X IP Cameras</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">HD-TVI Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=tvi">Platinum HD-TVI</a>
+                                    <a href="ordering_system.html?cat=pro&type=tvi">Pro-X HD-TVI</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">PTZ Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=ptz">Platinum PTZ</a>
+                                    <a href="ordering_system.html?cat=pro&type=ptz">Pro-X PTZ</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">Multisensor <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=multisensor">Platinum Multisensor</a>
+                                    <a href="ordering_system.html?cat=pro&type=multisensor">Pro-X Multisensor</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">RECORDERS</div>
+                            <a href="ordering_system.html?cat=platinum&type=nvr">Platinum NVRs</a>
+                            <a href="ordering_system.html?cat=pro&type=nvr">Pro-X NVRs</a>
+                            <a href="ordering_system.html?cat=platinum&type=hvr">Platinum HVRs</a>
+                            <a href="ordering_system.html?cat=pro&type=hvr">Pro-X HVRs</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">STORAGE</div>
+                            <a href="ordering_system.html?type=hdd">Hard Drives</a>
+                            <a href="ordering_system.html?type=ssd">SSD Storage</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">ACCESS CONTROL</div>
+                            <a href="ordering_system.html?type=access">Access Controllers</a>
+                            <a href="ordering_system.html?type=reader">Card Readers</a>
+                            <a href="ordering_system.html?type=lock">Electric Locks</a>
+                            <a href="ordering_system.html?type=credential">Credentials</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">NETWORKING</div>
+                            <a href="ordering_system.html?type=switch">Network Switches</a>
+                            <a href="ordering_system.html?type=poe">PoE Injectors</a>
+                            <a href="ordering_system.html?type=transceiver">Transceivers</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CABLING & ACCESSORIES</div>
+                            <a href="ordering_system.html?type=cable">Cable & Wire</a>
+                            <a href="ordering_system.html?type=connector">Connectors</a>
+                            <a href="ordering_system.html?type=power">Power Supplies</a>
+                            <a href="ordering_system.html?type=mount">Camera Mounts</a>
+                            <a href="ordering_system.html?type=housing">Camera Housings</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">View Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                        </div>
                     </div>
                 </div>
                 <a href="system-design.html" class="nav-link-item active">USS Suite
@@ -253,23 +503,23 @@
     </nav>
 
     <section class="suite-hero">
-        <img src="assets/images/logo_nav.jpg" alt="System Designer" class="suite-icon" style="filter: brightness(0) invert(1);" width="140" height="140">
-        <span class="version-tag">PROJECT ESTIMATOR</span>
+        <img src="assets/images/logo_nav.jpg" alt="USS Suite" class="suite-icon" style="filter: brightness(0) invert(1);" width="140" height="140">
+        <span class="version-tag">ULTIMATE SECURITY SUITE</span>
         <h1>ULTIMATE SECURITY <br><span class="text-accent">SUITE</span></h1>
-        <p>Professional-grade system design, cable estimation, and labor calculation built for commercial security integrators. Tablet-first. Field-tested.</p>
+        <p>The Mission Architect's OS for Modern Integrator.<br>AI-powered site reconnaissance, 3D simulation, and professional quoting &mdash; in one platform.</p>
         <div class="download-row">
-            <a href="#" class="download-btn google-play" onclick="alert('Play Store link coming soon after approval.'); return false;">
-                <i class="fab fa-google-play"></i>
-                <div>
-                    <div class="btn-sub">Get It On</div>
-                    <div>Google Play</div>
-                </div>
-            </a>
-            <a href="https://xr3keedn.insforge.site" class="download-btn web-app" target="_blank">
-                <i class="fas fa-globe"></i>
+            <a href="https://uss-app.insforge.site" target="_blank" class="download-btn google-play">
+                <i class="fas fa-rocket"></i>
                 <div>
                     <div class="btn-sub">Launch</div>
-                    <div>Web App</div>
+                    <div>Live Web App</div>
+                </div>
+            </a>
+            <a href="/beta-tester/" class="download-btn web-app">
+                <i class="fas fa-download"></i>
+                <div>
+                    <div class="btn-sub">Download</div>
+                    <div>Android APK</div>
                 </div>
             </a>
         </div>
@@ -277,98 +527,279 @@
 
     <div class="stats-bar">
         <div class="stat-item">
-            <div class="stat-number">500+</div>
-            <div class="stat-label">Devices</div>
+            <div class="stat-number">AI</div>
+            <div class="stat-label">OSINT Recon</div>
         </div>
         <div class="stat-item">
             <div class="stat-number">3D</div>
-            <div class="stat-label">Visualization</div>
+            <div class="stat-label">Mission View</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">AI</div>
-            <div class="stat-label">Powered</div>
+            <div class="stat-number">1st</div>
+            <div class="stat-label">Person Walk</div>
         </div>
         <div class="stat-item">
-            <div class="stat-number">$0</div>
-            <div class="stat-label">Subscription</div>
+            <div class="stat-number">PDF</div>
+            <div class="stat-label">Quote Export</div>
         </div>
     </div>
 
-    <section class="screenshots-section">
+    <section class="section section-dark" id="pricing">
+        <div style="text-align:center;">
+            <h2 class="section-title animate-in">TACTICAL TIERS</h2>
+            <p class="animate-in" style="color: var(--color-muted); max-width: 600px; margin: 0 auto 0.5rem;">Two weapons systems. One mission.</p>
+            <p class="animate-in" style="color: var(--color-muted); max-width: 600px; margin: 0 auto 3rem; font-size: 0.85rem;">D-Tools charges $150-300/mo per seat. System Surveyor requires a $200+ license. We built something better at a fraction of the cost.</p>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card animate-in">
+                <div class="pricing-header">
+                    <div class="tier-label">STANDARD</div>
+                    <div class="tier-price"><span class="price-amount">Free</span></div>
+                    <div class="tier-sub">Forever. No credit card.</div>
+                </div>
+                <ul class="pricing-features">
+                    <li class="included"><i class="fas fa-check"></i> Interactive 2D Planning Canvas</li>
+                    <li class="included"><i class="fas fa-check"></i> Manual Site Entry & Blueprint Upload</li>
+                    <li class="included"><i class="fas fa-check"></i> Drag-and-Drop Device Placement</li>
+                    <li class="included"><i class="fas fa-check"></i> Basic BOM Export (CSV)</li>
+                    <li class="included"><i class="fas fa-check"></i> Standard Hardware Library</li>
+                    <li class="included"><i class="fas fa-check"></i> Tactical Tethering</li>
+                    <li class="included"><i class="fas fa-check"></i> Cloud Sync & Project Save</li>
+                    <li class="excluded"><i class="fas fa-times"></i> AI Site Intelligence (OSINT)</li>
+                    <li class="excluded"><i class="fas fa-times"></i> 3D Mission Visualizer</li>
+                    <li class="excluded"><i class="fas fa-times"></i> First-Person Walkthrough</li>
+                    <li class="excluded"><i class="fas fa-times"></i> WiFi Heatmapping</li>
+                    <li class="excluded"><i class="fas fa-times"></i> Enterprise PDF Branding</li>
+                    <li class="excluded"><i class="fas fa-times"></i> B2B Blitz Marketing Engine</li>
+                </ul>
+                <a href="https://uss-app.insforge.site" target="_blank" class="download-btn web-app" style="width:100%; text-align:center; margin-top:1.5rem;">Start Free</a>
+            </div>
+
+            <div class="pricing-card pricing-popular animate-in">
+                <div class="popular-badge">MOST POPULAR</div>
+                <div class="pricing-header">
+                    <div class="tier-label" style="color: var(--color-accent);">PRO</div>
+                    <div class="tier-price"><span class="price-currency">$</span><span class="price-amount">99</span><span class="price-period">/mo</span></div>
+                    <div class="tier-sub">Per seat. Cancel anytime.</div>
+                </div>
+                <ul class="pricing-features">
+                    <li class="included"><i class="fas fa-check"></i> <strong>Everything in Standard, plus:</strong></li>
+                    <li class="highlight"><i class="fas fa-satellite-dish"></i> AI Site Intelligence (OSINT) &mdash; Address-based autonomous recon that pre-populates building metrics, saving 70% on pre-sale visits</li>
+                    <li class="highlight"><i class="fas fa-cube"></i> 3D Mission Visualizer &mdash; Real-world geospatial rendering with FOV volumes, not simulated 3D models</li>
+                    <li class="highlight"><i class="fas fa-eye"></i> First-Person Walkthrough &mdash; Experience the site from the camera's lens before a single hole is drilled</li>
+                    <li class="highlight"><i class="fas fa-wifi"></i> WiFi Heatmapping &mdash; Physics-based signal propagation with wall attenuation (concrete, drywall, glass, wood)</li>
+                    <li class="highlight"><i class="fas fa-file-pdf"></i> Professional Quote Engine &mdash; Branded PDF exports with device SKUs, cable BOM, and labor totals</li>
+                    <li class="included"><i class="fas fa-check"></i> Global Asset Sync</li>
+                    <li class="included"><i class="fas fa-check"></i> Priority Support</li>
+                </ul>
+                <a href="https://uss-app.insforge.site" target="_blank" class="download-btn google-play" style="width:100%; text-align:center; margin-top:1.5rem;">Start 14-Day Free Trial</a>
+            </div>
+
+            <div class="pricing-card animate-in">
+                <div class="pricing-header">
+                    <div class="tier-label">ENTERPRISE</div>
+                    <div class="tier-price"><span class="price-amount">Custom</span></div>
+                    <div class="tier-sub">Multi-seat. White-label. Your brand.</div>
+                </div>
+                <ul class="pricing-features">
+                    <li class="included"><i class="fas fa-check"></i> <strong>Everything in Pro, plus:</strong></li>
+                    <li class="included"><i class="fas fa-check"></i> Custom White-Label Branding</li>
+                    <li class="included"><i class="fas fa-check"></i> B2B Blitz Marketing Engine</li>
+                    <li class="included"><i class="fas fa-check"></i> Multi-Campus Global Sync</li>
+                    <li class="included"><i class="fas fa-check"></i> Dedicated Account Manager</li>
+                    <li class="included"><i class="fas fa-check"></i> Custom Hardware Libraries</li>
+                    <li class="included"><i class="fas fa-check"></i> API Access</li>
+                    <li class="included"><i class="fas fa-check"></i> SSO & Team Management</li>
+                </ul>
+                <a href="contact.html" class="download-btn web-app" style="width:100%; text-align:center; margin-top:1.5rem;">Contact Sales</a>
+            </div>
+        </div>
+
+        <div style="text-align:center; margin-top:3rem; padding:0 2rem;">
+            <p class="animate-in" style="color: var(--color-muted); font-size: 0.85rem; font-style: italic;">
+                The AI OSINT Recon alone saves a $200-500 pre-sale site visit on your first use. Pro pays for itself on day one.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="comparison">
+        <div style="text-align:center;">
+            <h2 class="section-title animate-in">WHY INTEGRATORS SWITCH</h2>
+            <p class="animate-in" style="color: var(--color-muted); max-width: 600px; margin: 0 auto 3rem;">We don't compete with D-Tools' back office. We own <span style="color: var(--color-accent); font-weight: 600;">Digital Twin Pre-Sale</span> &mdash; most lucrative part of the project lifecycle.</p>
+        </div>
+
+        <div style="overflow-x:auto;">
+            <table class="comparison-table animate-in">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th class="col-uss">USS Suite Pro</th>
+                        <th>D-Tools Cloud</th>
+                        <th>System Surveyor</th>
+                        <th>JVSG Design Tool</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AI Site Intelligence (OSINT)</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>3D Geospatial Visualization</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i> <span class="badge-uss">Real-World</span></td>
+                        <td><span class="badge-no">Diagrams</span></td>
+                        <td><span class="badge-no">2D Arcs</span></td>
+                        <td><span class="badge-no">3D Models</span></td>
+                    </tr>
+                    <tr>
+                        <td>First-Person Walkthrough</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>WiFi Heatmapping</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i> <span class="badge-uss">Physics</span></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>BOM / Quote Export</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                    </tr>
+                    <tr>
+                        <td>B2B Lead Generation</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                    </tr>
+                    <tr>
+                        <td>Native Android App</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-check-circle" style="color: var(--color-accent);"></i> <span class="badge-no">iPad Only</span></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i> <span class="badge-no">Windows</span></td>
+                    </tr>
+                    <tr>
+                        <td>AI Blueprint Extraction</td>
+                        <td class="col-uss"><i class="fas fa-check-circle" style="color: var(--color-accent);"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                        <td><i class="fas fa-times-circle" style="color: var(--color-muted); opacity: 0.4;"></i></td>
+                    </tr>
+                    <tr class="pricing-row">
+                        <td><strong>Price</strong></td>
+                        <td class="col-uss"><strong style="color: var(--color-accent);">$99/mo</strong></td>
+                        <td><span class="badge-no">$150-300/mo</span></td>
+                        <td><span class="badge-no">$200+ license</span></td>
+                        <td><span class="badge-no">$200+ license</span></td>
+                    </tr>
+                    <tr class="pricing-row">
+                        <td><strong>Per Seat</strong></td>
+                        <td class="col-uss"><strong style="color: var(--color-accent);">$99</strong></td>
+                        <td><span class="badge-no">$150-300</span></td>
+                        <td><span class="badge-no">$200+</span></td>
+                        <td><span class="badge-no">$200+</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align:center; margin-top:1rem; padding:0 2rem;">
+            <p class="animate-in" style="color: var(--color-muted); font-size: 0.8rem;">D-Tools owns back-office finance. System Surveyor owns iPad walkthroughs. USS Suite owns <strong style="color: var(--color-text);">Digital Twin Pre-Sale</strong> &mdash; where deals are won.</p>
+        </div>
+    </section>
+
+    <section class="section section-dark">
         <div style="text-align:center;">
             <h2 class="section-title animate-in">SEE IT IN ACTION</h2>
-            <p style="color: var(--color-muted); max-width: 500px; margin: 0 auto; font-size: 0.95rem;">Real tools, real results. Built from the field up by security integrators.</p>
+            <p class="animate-in" style="color: var(--color-muted); max-width: 500px; margin: 0 auto;">Real tools, real results. Built from the field up.</p>
         </div>
         <div class="screenshots-grid">
             <div class="screenshot-card animate-in">
-                <img src="assets/images/uss-screen-3.png" alt="System Designer Floorplan Designer" loading="lazy" width="600" height="400">
+                <img src="assets/images/uss-screen-3.png" alt="Floorplan Designer" loading="lazy" width="600" height="400">
                 <div class="screen-label"><span>Floorplan Designer</span> &mdash; Interactive site layout</div>
             </div>
             <div class="screenshot-card animate-in">
-                <img src="assets/images/uss-screen-2.png" alt="System Designer Device Placement" loading="lazy" width="600" height="400">
+                <img src="assets/images/uss-screen-2.png" alt="Device Placement" loading="lazy" width="600" height="400">
                 <div class="screen-label"><span>Device Placement</span> &mdash; Camera & sensor layout</div>
             </div>
             <div class="screenshot-card animate-in">
-                <img src="assets/images/uss-screen-4.png" alt="System Designer Cable Estimation" loading="lazy" width="600" height="400">
+                <img src="assets/images/uss-screen-4.png" alt="Cable Estimation" loading="lazy" width="600" height="400">
                 <div class="screen-label"><span>Cable Estimation</span> &mdash; Auto-run calculations</div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
-        <div style="text-align:center;">
-            <h2 class="section-title animate-in">BUILT FOR THE FIELD</h2>
-        </div>
+    <section class="section">
+        <div style="text-align:center;"><h2 class="section-title animate-in">BUILT FOR THE FIELD</h2></div>
         <div class="services-grid">
+            <div class="service-card animate-in">
+                <i class="fas fa-satellite-dish"></i>
+                <h3>AI Site Intelligence</h3>
+                <p>Enter any commercial address. Ultimate Security Suite automatically pulls building metrics, materials, and satellite imagery. No site visit needed.</p>
+            </div>
+            <div class="service-card animate-in">
+                <i class="fas fa-cube"></i>
+                <h3>3D Mission Visualizer</h3>
+                <p>Real-world geospatial rendering on Google Photorealistic 3D Tiles. Not simulated models &mdash; actual terrain.</p>
+            </div>
+            <div class="service-card animate-in">
+                <i class="fas fa-eye"></i>
+                <h3>First-Person View</h3>
+                <p>Experience the site from the camera's lens. Verify line-of-sight and coverage before a single hole is drilled.</p>
+            </div>
+            <div class="service-card animate-in">
+                <i class="fas fa-wifi"></i>
+                <h3>WiFi Heatmapping</h3>
+                <p>Physics-based signal propagation with wall attenuation modeling for concrete, drywall, glass, and wood.</p>
+            </div>
             <div class="service-card animate-in">
                 <i class="fas fa-drafting-compass"></i>
                 <h3>System Designer</h3>
-                <p>Interactive canvas with drag-and-drop camera placement, FOV visualization, and real-time coverage mapping.</p>
-            </div>
-            <div class="service-card animate-in">
-                <i class="fas fa-network-wired"></i>
-                <h3>Cable Estimator</h3>
-                <p>Auto-calculate cable runs with accurate distance mapping. Cat6, fiber, coax, and conduit.</p>
-            </div>
-            <div class="service-card animate-in">
-                <i class="fas fa-calculator"></i>
-                <h3>Labor Calculator</h3>
-                <p>Realistic labor estimates based on device count, cable runs, and complexity factors.</p>
+                <p>Interactive canvas with drag-and-drop camera placement, FOV visualization, and auto-route cable calculations.</p>
             </div>
             <div class="service-card animate-in">
                 <i class="fas fa-file-invoice-dollar"></i>
-                <h3>Bid Generator</h3>
-                <p>Professional proposals and BOMs exported to PDF. Send to clients on the spot.</p>
-            </div>
-            <div class="service-card animate-in">
-                <i class="fas fa-map-marked-alt"></i>
-                <h3>Satellite Imagery</h3>
-                <p>Import satellite imagery and floorplans directly into the designer.</p>
-            </div>
-            <div class="service-card animate-in">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <h3>Cloud Sync</h3>
-                <p>Projects saved and synced across devices. Your data, anywhere.</p>
+                <h3>Quote Engine</h3>
+                <p>Branded PDF exports with device SKUs, cable BOM, and labor totals. Send to clients on the spot.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-bottom">
-        <h2 class="animate-in">DESIGN WITH CONFIDENCE</h2>
-        <p class="animate-in">Stop guessing on bids. Start winning more jobs.</p>
+        <h2 class="animate-in">DEPLOY WITH CONFIDENCE</h2>
+        <p class="animate-in">Stop guessing on bids. Start winning more jobs with intelligence-driven design.</p>
+        <p class="animate-in" style="color: var(--color-muted); max-width: 550px; margin: 0 auto 2rem; font-size: 0.9rem;">Your first AI recon pays for an entire year of Pro. That's ROI nobody else offers.</p>
         <div class="download-row animate-in">
-            <a href="#" class="download-btn google-play" onclick="alert('Play Store link coming soon after approval.'); return false;">
-                <i class="fab fa-google-play"></i>
-                <div>
-                    <div class="btn-sub">Get It On</div>
-                    <div>Google Play</div>
-                </div>
-            </a>
-            <a href="https://xr3keedn.insforge.site" class="download-btn web-app" target="_blank">
-                <i class="fas fa-globe"></i>
+            <a href="https://uss-app.insforge.site" target="_blank" class="download-btn google-play">
+                <i class="fas fa-rocket"></i>
                 <div>
                     <div class="btn-sub">Launch</div>
-                    <div>Web App</div>
+                    <div>Live Web App</div>
+                </div>
+            </a>
+            <a href="/beta-tester/" class="download-btn web-app">
+                <i class="fas fa-download"></i>
+                <div>
+                    <div class="btn-sub">Download</div>
+                    <div>Android APK</div>
+                </div>
+            </a>
+            <a href="contact.html" class="download-btn web-app">
+                <i class="fas fa-building"></i>
+                <div>
+                    <div class="btn-sub">Multi-Seat</div>
+                    <div>Enterprise</div>
                 </div>
             </a>
         </div>
@@ -382,5 +813,20 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/feedback.js"></script>
+    <script>
+        function toggleSubmenu(trigger) {
+            // Only toggle on mobile devices
+            if (window.innerWidth <= 768) {
+                const submenu = trigger.parentElement;
+                submenu.classList.toggle('active');
+                const icon = trigger.querySelector('i');
+                if (submenu.classList.contains('active')) {
+                    icon.style.transform = 'rotate(90deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        }
+    </script>
 </body>
 </html>

@@ -92,6 +92,42 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Desktop Dropdown Handling - Close when clicking outside
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth > 1024) {
+            const clickedDropdown = e.target.closest('.dropdown');
+            const clickedNavLink = e.target.closest('.nav-link-item');
+
+            // Close all dropdowns if clicking outside any dropdown
+            if (!clickedDropdown) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+
+            // Close other dropdowns when clicking a different nav link
+            if (clickedNavLink && !clickedDropdown) {
+                dropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        }
+    });
+
+    // Add active class for desktop dropdown hover state
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', () => {
+            if (window.innerWidth > 1024) {
+                dropdown.classList.add('active');
+            }
+        });
+        dropdown.addEventListener('mouseleave', () => {
+            if (window.innerWidth > 1024) {
+                dropdown.classList.remove('active');
+            }
+        });
+    });
+
     // Trace Animation Trigger Logic (if present)
     const jobButtons = document.querySelectorAll('.job-type-btn');
     jobButtons.forEach(btn => {

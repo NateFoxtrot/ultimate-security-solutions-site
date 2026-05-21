@@ -135,20 +135,45 @@
         .partner-logos {
             display: flex;
             justify-content: center;
-            gap: 3rem;
+            gap: 2.5rem;
             flex-wrap: wrap;
             align-items: center;
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .partner-logos img {
-            height: 60px;
+            height: 50px;
             width: auto;
             opacity: 0.7;
-            filter: grayscale(100%) brightness(0.7);
-            transition: all 0.3s;
+            filter: grayscale(30%) brightness(0.9);
+            transition: all 0.3s ease;
+            max-width: 140px;
+            object-fit: contain;
         }
-        .partner-logos img:hover { opacity: 1; filter: none; }
+        .partner-logos img:hover {
+            opacity: 1;
+            filter: grayscale(0%) brightness(1.1);
+            transform: scale(1.05);
+        }
+
+        /* Fix specific logo visibility issues */
+        .partner-logos img[alt*="Panduit"] {
+            filter: brightness(0.7) contrast(1.3) grayscale(30%);
+        }
+
+        .partner-logos img[alt*="Axis"],
+        .partner-logos img[alt*="Hanwha"] {
+            filter: brightness(1.1) contrast(1.1) grayscale(30%);
+        }
+
+        .partner-logos img[alt*="Panduit"]:hover {
+            filter: brightness(0.9) contrast(1.4) grayscale(0%);
+        }
+
+        .partner-logos img[alt*="Axis"]:hover,
+        .partner-logos img[alt*="Hanwha"]:hover {
+            filter: brightness(1.2) contrast(1.2) grayscale(0%);
+        }
 
         /* Process Section */
         .process-grid {
@@ -272,12 +297,75 @@
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
                 <div class="dropdown nav-link-item">
-                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                    <div class="dropdown-content">
-                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
-                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
-                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    <div class="dropdown-content mega-dropdown">
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CAMERAS</div>
+                            <a href="ordering_system.html?cat=platinum&type=camera">Platinum Series</a>
+                            <a href="ordering_system.html?cat=pro&type=camera">Pro-X Series</a>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">IP Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=ip">Platinum IP Cameras</a>
+                                    <a href="ordering_system.html?cat=pro&type=ip">Pro-X IP Cameras</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">HD-TVI Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=tvi">Platinum HD-TVI</a>
+                                    <a href="ordering_system.html?cat=pro&type=tvi">Pro-X HD-TVI</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">PTZ Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=ptz">Platinum PTZ</a>
+                                    <a href="ordering_system.html?cat=pro&type=ptz">Pro-X PTZ</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-submenu">
+                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">Multisensor <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
+                                <div class="dropdown-submenu-content">
+                                    <a href="ordering_system.html?cat=platinum&type=multisensor">Platinum Multisensor</a>
+                                    <a href="ordering_system.html?cat=pro&type=multisensor">Pro-X Multisensor</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">RECORDERS</div>
+                            <a href="ordering_system.html?cat=platinum&type=nvr">Platinum NVRs</a>
+                            <a href="ordering_system.html?cat=pro&type=nvr">Pro-X NVRs</a>
+                            <a href="ordering_system.html?cat=platinum&type=hvr">Platinum HVRs</a>
+                            <a href="ordering_system.html?cat=pro&type=hvr">Pro-X HVRs</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">STORAGE</div>
+                            <a href="ordering_system.html?type=hdd">Hard Drives</a>
+                            <a href="ordering_system.html?type=ssd">SSD Storage</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">ACCESS CONTROL</div>
+                            <a href="ordering_system.html?type=access">Access Controllers</a>
+                            <a href="ordering_system.html?type=reader">Card Readers</a>
+                            <a href="ordering_system.html?type=lock">Electric Locks</a>
+                            <a href="ordering_system.html?type=credential">Credentials</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">NETWORKING</div>
+                            <a href="ordering_system.html?type=switch">Network Switches</a>
+                            <a href="ordering_system.html?type=poe">PoE Injectors</a>
+                            <a href="ordering_system.html?type=transceiver">Transceivers</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CABLING & ACCESSORIES</div>
+                            <a href="ordering_system.html?type=cable">Cable & Wire</a>
+                            <a href="ordering_system.html?type=connector">Connectors</a>
+                            <a href="ordering_system.html?type=power">Power Supplies</a>
+                            <a href="ordering_system.html?type=mount">Camera Mounts</a>
+                            <a href="ordering_system.html?type=housing">Camera Housings</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">View Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                        </div>
                     </div>
                 </div>
                 <a href="system-design.html" class="nav-link-item">USS Suite
@@ -380,9 +468,18 @@
             <div class="container">
                 <h2 class="section-title animate-in">TRUSTED BY</h2>
                 <div class="partner-logos animate-in">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Hikvision_logo.svg/320px-Hikvision_logo.svg.png" alt="Hikvision" style="height:40px;">
-                    <img src="https://www.ltsecurityinc.com/media/logo/stores/1/new-logo.png" alt="LTS Security" style="height:50px;">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Wachter_logo.svg/200px-Wachter_logo.svg.png" alt="Wachter" style="height:45px;">
+                    <img src="assets/images/partners/wachter.svg" alt="Wachter">
+                    <img src="assets/images/partners/netview.svg" alt="Netview Inc.">
+                    <img src="assets/images/partners/verizon.svg" alt="Verizon">
+                    <img src="assets/images/partners/videomining.svg" alt="Video Mining Corp">
+                    <img src="assets/images/partners/sierrawireless.svg" alt="Sierra Wireless">
+                    <img src="assets/images/partners/starlink.svg" alt="Starlink">
+                    <img src="assets/images/partners/fieldnation.svg" alt="Field Nation">
+                    <img src="assets/images/partners/wiline.svg" alt="WiLine Networks">
+                    <img src="assets/images/partners/luxerone.svg" alt="Luxer One">
+                    <img src="assets/images/partners/retailtech.svg" alt="Retail Technology Group">
+                    <img src="assets/images/partners/nationalwifi.svg" alt="National Wi-Fi">
+                    <img src="assets/images/partners/unified.svg" alt="Unified Systems">
                 </div>
             </div>
         </section>
@@ -541,6 +638,21 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script>
+        function toggleSubmenu(trigger) {
+            // Only toggle on mobile devices
+            if (window.innerWidth <= 768) {
+                const submenu = trigger.parentElement;
+                submenu.classList.toggle('active');
+                const icon = trigger.querySelector('i');
+                if (submenu.classList.contains('active')) {
+                    icon.style.transform = 'rotate(90deg)';
+                } else {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        }
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",

@@ -181,21 +181,30 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 .stats-strip {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0;
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
     position: relative;
     z-index: 1;
     background: rgba(15, 23, 42, 0.3);
+    padding: 3rem 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .stat-block {
     text-align: center;
-    padding: 3rem 1.5rem;
+    padding: 0 2rem;
     border-right: 1px solid var(--color-border);
     transition: var(--transition);
+    flex: 1;
 }
 
 .stat-block:last-child { border-right: none; }
@@ -219,9 +228,11 @@
 }
 
 @media (max-width: 1024px) {
-    .stats-strip { grid-template-columns: repeat(2, 1fr); }
+    .stats-container { flex-wrap: wrap; }
+    .stat-block { flex: 1 1 50%; border-bottom: 1px solid var(--color-border); }
     .stat-block:nth-child(2) { border-right: none; }
     .stat-block:nth-child(1), .stat-block:nth-child(2) { border-bottom: 1px solid var(--color-border); }
+    .stat-block:nth-child(3) { border-top: none; }
 }
 
 html {
@@ -700,7 +711,7 @@ h2 {
     z-index: 1000;
     flex-direction: column;
     padding: 0.5rem 0;
-    margin-top: 0.5rem;
+    margin-top: 0;
     backdrop-filter: blur(10px);
 }
 
@@ -726,12 +737,249 @@ h2 {
     padding-left: 25px;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown.active .dropdown-content {
     display: flex;
 }
 
-.dropdown:hover .dropdown-trigger {
+.dropdown:hover .dropdown-trigger,
+.dropdown.active .dropdown-trigger {
     color: var(--color-accent);
+}
+
+/* Prevent dropdown from getting stuck - clear active state on mouse leave */
+.dropdown:not(:hover):not(.active) .dropdown-content {
+    display: none;
+}
+
+/* Mega Dropdown Styles */
+.mega-dropdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    min-width: 900px;
+    max-width: 1400px;
+    max-height: 85vh;
+    padding: 1.5rem 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow-y: auto;
+    overflow-x: visible;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-accent) var(--color-surface);
+    width: auto;
+}
+
+/* Custom scrollbar for mega-dropdown */
+.mega-dropdown::-webkit-scrollbar {
+    width: 8px;
+}
+
+.mega-dropdown::-webkit-scrollbar-track {
+    background: var(--color-surface);
+    border-radius: 4px;
+}
+
+.mega-dropdown::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 4px;
+}
+
+.mega-dropdown::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-hover);
+}
+
+.mega-dropdown-column {
+    padding: 0 1rem;
+    border-right: 1px solid var(--color-border);
+    min-height: fit-content;
+    min-width: 200px;
+    max-width: 280px;
+    overflow: visible;
+}
+
+.mega-dropdown-column:last-child {
+    border-right: none;
+}
+
+.dropdown-header {
+    color: var(--color-accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-accent);
+}
+
+.mega-dropdown a {
+    border-bottom: none !important;
+    padding: 8px 0 !important;
+    font-size: 0.8rem !important;
+    text-transform: none !important;
+    letter-spacing: 0.5px !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+}
+
+.dropdown-submenu {
+    position: relative;
+    margin: 0.5rem 0;
+}
+
+.dropdown-submenu-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
+    padding: 8px 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.dropdown-submenu-trigger i {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-submenu-trigger:hover {
+    color: var(--color-accent);
+    padding-left: 5px;
+}
+
+.dropdown-submenu-content {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    background: var(--color-secondary);
+    min-width: 200px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    z-index: 1001;
+    padding: 0.5rem 0;
+    margin-left: 0.5rem;
+}
+
+.dropdown-submenu:hover .dropdown-submenu-content {
+    display: block;
+}
+
+.dropdown-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.dropdown-link:hover {
+    color: var(--color-accent);
+}
+
+/* Ensure dropdown stays within viewport */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    max-height: 85vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Add scrollbar styling for dropdown content */
+.dropdown-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: var(--color-surface);
+    border-radius: 3px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 3px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover {
+    background: var(--color-border-hover);
+}
+
+/* Handle viewport edge cases */
+@media (max-height: 700px) {
+    .mega-dropdown {
+        max-height: 70vh;
+        padding: 1rem 1.5rem;
+    }
+
+    .dropdown-header {
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.3rem;
+    }
+
+    .mega-dropdown a {
+        padding: 6px 0 !important;
+        font-size: 0.75rem !important;
+    }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+    .mega-dropdown {
+        grid-template-columns: repeat(2, 1fr);
+        min-width: 600px;
+        max-width: 90vw;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .mega-dropdown-column:nth-child(2) {
+        border-right: none;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .mega-dropdown {
+        grid-template-columns: 1fr;
+        min-width: 280px;
+        max-width: 280px;
+        left: auto;
+        right: 0;
+        transform: none;
+        max-height: 75vh;
+    }
+
+    .mega-dropdown-column {
+        border-right: none;
+        border-bottom: 1px solid var(--color-border);
+        padding: 1rem 0;
+    }
+
+    .mega-dropdown-column:last-child {
+        border-bottom: none;
+    }
+
+    .dropdown-submenu-content {
+        position: static;
+        display: none;
+        margin-left: 0;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--color-accent);
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+        background: transparent;
+    }
+
+    .dropdown-submenu.active .dropdown-submenu-content {
+        display: block;
+    }
 }
 
 .nav-spacer {
@@ -1389,6 +1637,105 @@ section {
     opacity: 1;
     filter: grayscale(0%);
     transform: scale(1.08);
+}
+
+/* Fix specific logo issues in equipment sections */
+.equipment-logos img[alt*="Axis"],
+.equipment-logos img[alt*="Hanwha"] {
+    filter: brightness(1.1) contrast(1.1) grayscale(30%);
+}
+
+.equipment-logos img[alt*="Panduit"] {
+    filter: brightness(0.7) contrast(1.3) grayscale(40%);
+}
+
+.equipment-logos img[alt*="Axis"]:hover,
+.equipment-logos img[alt*="Hanwha"]:hover {
+    filter: brightness(1.2) contrast(1.2) grayscale(0%);
+}
+
+.equipment-logos img[alt*="Panduit"]:hover {
+    filter: brightness(0.9) contrast(1.4) grayscale(0%);
+}
+
+/* Auto-scrolling Equipment Partners Section */
+.equipment-partners-section {
+    background: rgba(5, 11, 20, 0.4);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+}
+
+.partners-scroll-wrapper {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.partners-scroll-track {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    animation: scrollPartners 30s linear infinite;
+    padding: 2rem 0;
+}
+
+.partners-scroll-track:hover {
+    animation-play-state: paused;
+}
+
+.partner-logo {
+    height: 50px;
+    width: auto;
+    opacity: 0.7;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.1);
+}
+
+/* Fix specific logo issues */
+.partner-logo[alt*="Axis"],
+.partner-logo[alt*="Hanwha"] {
+    filter: brightness(1.1) contrast(1.1);
+    background: transparent;
+}
+
+.partner-logo[alt*="Panduit"] {
+    filter: brightness(0.7) contrast(1.3) grayscale(20%);
+}
+
+.partner-logo[alt*="Axis"]:hover,
+.partner-logo[alt*="Hanwha"]:hover {
+    filter: brightness(1.2) contrast(1.2);
+}
+
+.partner-logo[alt*="Panduit"]:hover {
+    filter: brightness(0.9) contrast(1.4) grayscale(0%);
+}
+
+@keyframes scrollPartners {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-scroll-track {
+        gap: 2rem;
+    }
+    .partner-logo {
+        height: 40px;
+    }
 }
 
 .service-card-wrapper {

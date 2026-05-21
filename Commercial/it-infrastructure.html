@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Infrastructure & Structured Cabling | Ultimate Security Solutions</title>
+    <meta name="description" content="Critical IT infrastructure, structured cabling, and network standards. Fiber-optic backbones and enterprise server room security.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: float 6s ease-in-out infinite;
+        }
+        .hero-logo-wrapper {
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        .hero-logo-wrapper:hover {
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 30px var(--color-accent-glow));
+        }
+        .hero-logo {
+            width: 450px; /* Increased size */
+            height: auto;
+        }
+        
+        .service-card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 320px;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background: var(--color-surface-hover);
+            border-color: var(--color-accent);
+            box-shadow: var(--shadow-glow);
+        }
+        
+        .card-btn {
+            margin-top: auto;
+            align-self: flex-start;
+            padding: 0.6rem 1.2rem;
+            font-size: 0.8rem;
+            background: transparent;
+            border: 1px solid var(--color-accent);
+            color: var(--color-accent);
+            border-radius: var(--radius-sm);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: var(--transition);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .card-btn:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+            box-shadow: 0 0 15px var(--color-accent-glow);
+        }
+
+        @media (max-width: 1024px) {
+            .hero-visual { display: none; }
+            .hero-logo { width: 300px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="main-nav" id="main-nav">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-brand">
+                <img src="../assets/images/logo_nav.jpg" alt="Ultimate Security Solutions" class="nav-logo-img">
+            </a>
+            
+            <div class="nav-links-wrapper">
+                <a href="../index.html" class="nav-link-item">Home
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="../about.html" class="nav-link-item">Capabilities
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="../service_area.html" class="nav-link-item">Service Area
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <div class="dropdown nav-link-item active">
+                    <span class="dropdown-trigger">Sectors <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="retail.html">Retail & Commercial</a>
+                        <a href="logistics.html">Logistics & Warehousing</a>
+                        <a href="estates.html">Managed Estates</a>
+                        <a href="it-infrastructure.html" class="active">IT Infrastructure</a>
+                    </div>
+                </div>
+                <div class="dropdown nav-link-item">
+                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                    <div class="dropdown-content">
+                        <a href="../ordering_system.html">NDAA Equipment Catalog</a>
+                        <a href="../ordering_system.html?cat=platinum">Platinum Series</a>
+                        <a href="../ordering_system.html?cat=pro">Pro Series</a>
+                    </div>
+                </div>
+                <a href="../accomplishments.html" class="nav-link-item">Our Work
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="../system-design.html" class="nav-link-item">Designer
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="../partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                <a href="../reviews.html" class="nav-link-item">Reviews
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
+                
+                <div class="nav-spacer"></div>
+                
+                <a href="../portal.html" class="nav-link-item portal-link">Technical Portal</a>
+                <a href="../contact.html" class="btn btn-quote-nav">GET A QUOTE</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-bg-overlay">
+            <div class="hero-slide active" style="background-image: url('../assets/images/portfolio/IMG_0036.JPEG');"></div>
+        </div>
+        <div class="container hero-container" style="position: relative; z-index: 10;">
+            <div class="hero-content">
+                <div class="hero-badge animate-in"><i class="fas fa-network-wired"></i> IT INFRASTRUCTURE</div>
+                <h1 class="animate-in">CRITICAL FABRIC. <br><span class="text-accent">ENGINEERED BACKBONES.</span></h1>
+                <p class="animate-in">Designing and deploying high-bandwidth structured cabling and optical networks that form the foundation of elite security systems. Veteran-led engineering standards.</p>
+                <div class="hero-actions">
+                    <a href="../contact.html" class="btn btn-primary animate-in">Request Network Audit</a>
+                    <a href="../about.html" class="btn btn-secondary animate-in">View Capabilities</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-logo-wrapper">
+                    <img src="../assets/images/logo_circuit.svg" alt="USS Professional Grade Security" class="hero-logo" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-in">INFRASTRUCTURE EXCELLENCE</h2>
+            <div class="services-grid">
+                <div class="service-card animate-in">
+                    <i class="fas fa-ethernet"></i>
+                    <h3>Structured Cabling</h3>
+                    <p>CAT6A/CAT7 precision-terminated copper runs for POE++ devices, workstations, and high-density access points.</p>
+                    <a href="../contact.html?subject=Cabling" class="card-btn">Request Specs</a>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Optical Backbones</h3>
+                    <p>Single-mode and multi-mode fiber-optic links for high-speed inter-IDF connectivity and long-haul perimeter defense.</p>
+                    <a href="../contact.html?subject=Fiber" class="card-btn">View Standards</a>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </div>
+                <div class="service-card animate-in">
+                    <i class="fas fa-server"></i>
+                    <h3>Server Room Security</h3>
+                    <p>OSDP-encrypted access control and biometric locks for enterprise server rooms and critical IT closets.</p>
+                    <a href="../contact.html?subject=ServerRoom" class="card-btn">Secure My Rack</a>
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background: rgba(10, 22, 40, 0.4);">
+        <div class="container">
+            <div class="content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                <div class="text-block animate-in">
+                    <h2 class="section-title" style="text-align: left;">RACK OPTIMIZATION</h2>
+                    <p style="margin-bottom: 2rem;">Messy rack systems are a major point of failure. Our team provides detailed auditing and remediation of existing IT closets to restore organization and cooling efficiency.</p>
+                    <div style="margin-top: 2rem;">
+                        <div style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--color-accent); margin-top: 0.25rem;"></i>
+                            <div>
+                                <h4 style="color: var(--color-accent); margin-bottom: 0.25rem; font-size: 1rem; text-transform: uppercase;">Cable Management</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Restoring order to existing infrastructure for better airflow and easier maintenance.</p>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--color-accent); margin-top: 0.25rem;"></i>
+                            <div>
+                                <h4 style="color: var(--color-accent); margin-bottom: 0.25rem; font-size: 1rem; text-transform: uppercase;">Power Redundancy</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">UPS and backup planning to keep critical systems online during outages.</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; gap: 1rem;">
+                            <i class="fas fa-check-circle" style="color: var(--color-accent); margin-top: 0.25rem;"></i>
+                            <div>
+                                <h4 style="color: var(--color-accent); margin-bottom: 0.25rem; font-size: 1rem; text-transform: uppercase;">Physical Security</h4>
+                                <p style="font-size: 0.9rem; opacity: 0.7;">Biometric and encrypted access control for the core of your network.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-block animate-in">
+                    <img src="../assets/images/portfolio/IMG_1008.JPG" alt="IT Infrastructure Audit" style="width: 100%; border-radius: 12px; border: 1px solid rgba(255,215,0,0.2); box-shadow: 0 40px 80px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="animate-in">ENGINEER YOUR BACKBONE</h2>
+            <p class="animate-in">Deploy a physical layer that can handle the future of security.</p>
+            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+                <a href="../contact.html" class="btn btn-primary animate-in"><i class="fas fa-paper-plane"></i> Get Audit</a>
+                <a href="../about.html" class="btn btn-secondary animate-in"><i class="fas fa-info-circle"></i> View Standards</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section-padding" style="border-top: 1px solid var(--color-border);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <div>
+                    <img src="../assets/images/logo_circuit.svg" alt="USS" style="width: 150px; margin-bottom: 1rem; filter: brightness(0) invert(1);">
+                    <p style="font-size: 0.9rem; opacity: 0.6;">Precision-driven infrastructure and security solutions for commercial enterprise.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-accent); margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.9rem;">Quick Links</h4>
+                    <ul style="list-style: none; display: grid; gap: 0.75rem;">
+                        <li><a href="../about.html" class="nav-link-item" style="padding: 0; display: inline;">Capabilities</a></li>
+                        <li><a href="../service_area.html" class="nav-link-item" style="padding: 0; display: inline;">Service Area</a></li>
+                        <li><a href="../accomplishments.html" class="nav-link-item" style="padding: 0; display: inline;">Our Work</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: var(--color-accent); margin-bottom: 1.5rem; text-transform: uppercase; font-size: 0.9rem;">Contact</h4>
+                    <ul style="list-style: none; display: grid; gap: 0.75rem;">
+                        <li><a href="mailto:nate@usstech.net" class="nav-link-item" style="padding: 0; display: inline;">nate@usstech.net</a></li>
+                        <li><a href="tel:8168142007" class="nav-link-item" style="padding: 0; display: inline;">(816) 814-2007</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p style="text-align: center; font-size: 0.8rem; opacity: 0.4; border-top: 1px solid var(--color-border); padding-top: 2rem;">&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/feedback.js"></script>
+</body>
+</html>

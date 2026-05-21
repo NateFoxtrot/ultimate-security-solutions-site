@@ -1,0 +1,7 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <rect fill="#2d3748" x="0" y="0" width="200" height="200" rx="20" ry="20"/>
+  <path fill="#4fd1c5" d="M100 30L40 60v80l60 30 60-30V60L100 30zm0 15l45 22.5-45 22.5-45-22.5L100 45zm-50 97.5V75l45 22.5v67.5L50 142.5zm100 0l-45 22.5V97.5l45-22.5v67.5z"/>
+  <text x="50%" y="85%" text-anchor="middle" fill="white" font-family="Arial" font-weight="bold" font-size="24">LTS TOOL</text>
+ </g>
+</svg>
