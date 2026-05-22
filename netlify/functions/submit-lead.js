@@ -7,7 +7,7 @@
  *   LEAD_API_URL  - (optional) Insforge leads endpoint URL
  */
 
-const DEFAULT_API_URL = 'https://j2mp6xb5.us-east.insforge.app/rest/v1/leads';
+const DEFAULT_API_URL = 'https://j2mp6xb5.us-east.insforge.app/api/database/records/leads';
 
 exports.handler = async (event, context) => {
     // CORS preflight — MUST come before method check
@@ -51,10 +51,10 @@ exports.handler = async (event, context) => {
     const apiUrl = process.env.LEAD_API_URL || DEFAULT_API_URL;
 
     try {
-        const payload = JSON.parse(event.body);
+        const rawPayload = JSON.parse(event.body);
 
         // Basic validation
-        if (!payload.contact && !payload.email) {
+        if (!rawPayload.contact && !rawPayload.email) {
             return {
                 statusCode: 400,
                 headers: {
@@ -65,15 +65,27 @@ exports.handler = async (event, context) => {
             };
         }
 
+        // Map payload fields to schema supported by Insforge Database (id, company, contact, email, phone, status, source, notes, addedAt)
+        const dbPayload = {
+            id: 'lead-' + Math.random().toString(36).substr(2, 9),
+            company: rawPayload.company || 'Direct Web Inquiry',
+            contact: rawPayload.contact || 'Web Visitor',
+            email: rawPayload.email || '',
+            phone: rawPayload.phone || null,
+            status: 'new',
+            source: 'web_lead',
+            notes: rawPayload.message || rawPayload.notes || null,
+            addedAt: new Date().toISOString()
+        };
+
         const response = await fetch(apiUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'apikey': apiKey,
                 'Authorization': `Bearer ${apiKey}`,
-                'Prefer': 'return=minimal'
+                'Prefer': 'return=representation'
             },
-            body: JSON.stringify(payload)
+            body: JSON.stringify([dbPayload])
         });
 
         if (response.ok) {
@@ -83,7 +95,7 @@ exports.handler = async (event, context) => {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*'
                 },
-                body: JSON.stringify({ success: true })
+                body: JSON.stringify({ success: true, leadId: dbPayload.id })
             };
         } else {
             const errorText = await response.text().catch(() => 'Unknown error');
@@ -94,7 +106,7 @@ exports.handler = async (event, context) => {
                     'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*'
                 },
-                body: JSON.stringify({ error: `Upstream API returned status ${response.status}` })
+                body: JSON.stringify({ error: `Upstream API returned status ${response.status}: ${errorText.slice(0, 100)}` })
             };
         }
     } catch (error) {
