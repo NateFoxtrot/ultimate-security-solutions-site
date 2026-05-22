@@ -39,3 +39,9 @@ uss-astro/
 lts-catalog-tool/data/
 lts-catalog-tool/lts_live_page.html
 lts-catalog-tool/lts_page_*.html
+
+# Local Netlify folder
+.netlify
+
+# Deno
+deno.lock

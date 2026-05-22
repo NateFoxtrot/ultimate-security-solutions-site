@@ -10,24 +10,28 @@
 const DEFAULT_API_URL = 'https://j2mp6xb5.us-east.insforge.app/rest/v1/leads';
 
 exports.handler = async (event, context) => {
-    // Only allow POST
-    if (event.httpMethod !== 'POST') {
-        return {
-            statusCode: 405,
-            body: JSON.stringify({ error: 'Method Not Allowed' })
-        };
-    }
-
-    // CORS preflight
+    // CORS preflight — MUST come before method check
     if (event.httpMethod === 'OPTIONS') {
         return {
-            statusCode: 200,
+            statusCode: 204,
             headers: {
                 'Access-Control-Allow-Origin': '*',
                 'Access-Control-Allow-Headers': 'Content-Type',
                 'Access-Control-Allow-Methods': 'POST, OPTIONS'
             },
             body: ''
+        };
+    }
+
+    // Only allow POST
+    if (event.httpMethod !== 'POST') {
+        return {
+            statusCode: 405,
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            body: JSON.stringify({ error: 'Method Not Allowed' })
         };
     }
 

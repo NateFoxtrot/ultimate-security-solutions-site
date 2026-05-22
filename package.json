@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "products.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node --check netlify/functions/submit-lead.js && node --check netlify/functions/dropship-agent.js && node --check tools/catalog-updater.js",
+    "test": "npm run build",
+    "catalog:update": "node tools/catalog-updater.js",
+    "deploy": "netlify deploy --prod --dir=. --functions=netlify/functions"
   },
   "keywords": [],
   "author": "",
