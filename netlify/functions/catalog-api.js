@@ -126,6 +126,13 @@ exports.handler = async (event) => {
 
     const { products: all } = loadAndIndex();
 
+    const id = (params.id || '').trim();
+    if (id) {
+      const found = all.find(p => (p.series_id || '').toLowerCase() === id.toLowerCase());
+      if (!found) return jsonBody({ error: 'Not Found' }, 404);
+      return jsonBody({ product: { ...fullProduct(found), price_range: priceRange(found) } });
+    }
+
     let filtered = filterByCategory(all, cat);
     filtered = filterBySearch(filtered, q);
 

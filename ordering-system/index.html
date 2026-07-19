@@ -1,1 +1,321 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Hardware Catalog</title><meta name="description" content="Browse our full catalog of security cameras, NVR systems, access control, and network equipment."><meta property="og:type" content="website"><meta property="og:title" content="Hardware Catalog"><meta property="og:description" content="Browse our full catalog of security cameras, NVR systems, access control, and network equipment."><meta property="og:image" content="https://usstech.net/assets/images/portfolio/IMG_0036.JPEG"><meta property="og:url" content="https://usstech.net/ordering-system"><meta property="twitter:card" content="summary_large_image"><link rel="canonical" href="https://usstech.net/ordering-system"><link rel="icon" type="image/jpeg" href="/assets/images/logo.jpeg"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="/styles.css"></head> <body> <nav class="nav" id="main-nav"> <div class="nav-inner"> <ul class="nav-links"> <li> <a href="/"> Home </a> </li><li> <a href="/about"> About </a> </li><li> <a href="/service-area"> Service Area </a> </li><li class="dropdown"> <a href="/ordering-system" class="active"> Hardware <i class="fas fa-chevron-down"></i> </a> <div class="dropdown-menu"> <a href="/ordering-system">All Products</a><a href="/ordering-system?cat=platinum">Platinum Series</a><a href="/ordering-system?cat=pro">Pro Series</a><a href="/ordering-system?cat=nvr">NVR Systems</a><a href="/ordering-system?cat=camera">IP Cameras</a> </div> </li><li> <a href="/accomplishments"> Our Work </a> </li><li> <a href="/system-design"> USS Suite </a> </li><li> <a href="/partners"> Partners </a> </li><li> <a href="/reviews"> Reviews </a> </li> <li><a href="/contact">Get a Quote</a></li> <li><a href="/portal" class="nav-right">FE Portal</a></li> </ul> </div> </nav> <script type="module">const n=document.getElementById("main-nav");window.addEventListener("scroll",()=>n.classList.toggle("scrolled",window.scrollY>50));</script> <main> <div class="container" style="text-align:center; padding:8rem 2rem 3rem;"> <h1>HARDWARE <span class="text-accent">CATALOG</span></h1> <p style="color:var(--muted);">Security cameras, NVR systems, access control, and network equipment.</p> </div> <section class="section"> <div class="container" style="text-align:center;"> <p style="color:var(--muted); font-size:1.1rem;">Full catalog migrating to the new platform. Check back soon.</p> </div> </section> </main> <footer class="footer"> <div class="container"> <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p> </div> </footer> <script type="module">const s=new IntersectionObserver(e=>{e.forEach(r=>{r.isIntersecting&&(r.target.classList.add("visible"),s.unobserve(r.target))})},{threshold:.1});document.querySelectorAll(".anim").forEach(e=>s.observe(e));</script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardware Catalog</title>
+<meta name="description" content="Browse our full catalog of security cameras, NVR systems, access control, and network equipment.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hardware Catalog">
+<meta property="og:description" content="Browse our full catalog of security cameras, NVR systems, access control, and network equipment.">
+<meta property="og:image" content="https://usstech.net/assets/images/portfolio/IMG_0036.JPEG">
+<meta property="og:url" content="https://usstech.net/ordering-system">
+<meta property="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://usstech.net/ordering-system">
+<link rel="icon" type="image/jpeg" href="/assets/images/logo.jpeg">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.cat-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center;padding:6rem 2rem 2rem;text-align:left}
+.cat-hero-img{width:100%;max-width:460px;justify-self:end;filter:drop-shadow(0 12px 32px rgba(0,0,0,.5)) drop-shadow(0 0 40px rgba(184,149,58,.12))}
+@media(max-width:820px){.cat-hero{grid-template-columns:1fr;text-align:center;padding-top:7rem}.cat-hero-img{justify-self:center;max-width:340px}}
+.cat-controls{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;justify-content:space-between;margin-bottom:1.5rem}
+.cat-search{flex:1 1 280px;display:flex;align-items:center;gap:.6rem;background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius);padding:.7rem 1rem}
+.cat-search i{color:var(--color-muted)}
+.cat-search input{flex:1;background:none;border:none;outline:none;color:var(--color-text);font-family:var(--font-main);font-size:.95rem}
+.cat-pills{display:flex;flex-wrap:wrap;gap:.5rem}
+.cat-pills button{background:var(--color-surface);border:1px solid var(--color-border);color:var(--color-muted);padding:.5rem 1rem;border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.5px;cursor:pointer;transition:all .25s ease;font-family:var(--font-main)}
+.cat-pills button:hover{border-color:var(--color-border-hover);color:var(--color-text)}
+.cat-pills button.active{background:var(--color-accent);border-color:var(--color-accent);color:var(--color-primary)}
+.cat-status{color:var(--color-muted);font-size:.85rem;margin-bottom:1rem;min-height:1.2em}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:1.25rem}
+.cat-card{background:#fff;border:1px solid rgba(10,15,26,.14);border-radius:var(--radius);overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;display:flex;flex-direction:column}
+.cat-card:hover{transform:translateY(-4px);border-color:rgba(184,149,58,.65);box-shadow:0 14px 34px rgba(0,0,0,.45)}
+.cat-card-img{background:#fff;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;padding:1rem;cursor:pointer}
+.cat-card-img img{max-width:100%;max-height:100%;object-fit:contain}
+.cat-card-body{padding:1rem;display:flex;flex-direction:column;gap:.55rem;flex:1;border-top:1px solid rgba(10,15,26,.08)}
+.cat-badges{display:flex;flex-wrap:wrap;gap:.35rem}
+.cat-badge{font-size:.62rem;font-weight:700;letter-spacing:1px;color:#8a6d24;background:rgba(184,149,58,.12);border:1px solid rgba(184,149,58,.35);padding:.2rem .5rem;border-radius:2px;text-transform:uppercase}
+.cat-card h3{font-family:var(--font-header);font-size:.92rem;line-height:1.35;color:#16202e;margin:0;font-weight:700;cursor:pointer}
+.cat-card h3:hover{color:#96762b}
+.cat-card-foot{margin-top:auto;display:flex;align-items:baseline;justify-content:space-between;gap:.5rem}
+.cat-price{color:#96762b;font-weight:800;font-size:1.05rem;font-family:var(--font-header)}
+.cat-sku{font-family:var(--font-mono);font-size:.68rem;color:#5b6b7f}
+.cat-more-wrap{text-align:center;margin-top:2rem}
+.cat-more{background:var(--color-accent);color:var(--color-primary);border:none;padding:.8rem 2.2rem;font-weight:800;letter-spacing:1px;border-radius:var(--radius);cursor:pointer;font-family:var(--font-header);font-size:.85rem;transition:box-shadow .25s ease}
+.cat-more:hover{box-shadow:var(--shadow-glow)}
+.cat-more:disabled{opacity:.6;cursor:default}
+.cat-state{text-align:center;color:var(--color-muted);padding:3rem 1rem}
+.cat-state .fas{font-size:2rem;color:var(--color-accent);margin-bottom:1rem;display:block}
+.cat-skel{background:rgba(255,255,255,.12);border:1px solid var(--color-border);border-radius:var(--radius);aspect-ratio:.85/1;animation:cat-pulse 1.4s ease-in-out infinite}
+@keyframes cat-pulse{0%,100%{opacity:.45}50%{opacity:.9}}
+@media(max-width:640px){.cat-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:.75rem}}
+.pmodal-overlay{position:fixed;inset:0;background:rgba(5,10,18,.78);backdrop-filter:blur(4px);z-index:2000;display:none;align-items:flex-start;justify-content:center;overflow-y:auto;padding:4vh 1rem}
+.pmodal-overlay.open{display:flex}
+.pmodal{background:#fff;color:#1a2433;max-width:920px;width:100%;border-radius:8px;position:relative;padding:2rem;box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.pmodal-close{position:absolute;top:.6rem;right:.9rem;background:none;border:none;font-size:1.8rem;color:#5b6b7f;cursor:pointer;line-height:1;padding:.3rem}
+.pmodal-close:hover{color:#16202e}
+.pmodal-grid{display:grid;grid-template-columns:minmax(240px,1fr) 1.5fr;gap:2rem}
+.pmodal-img{border:1px solid #e3e7ec;border-radius:6px;display:flex;align-items:center;justify-content:center;padding:1rem;background:#fff}
+.pmodal-img img{max-width:100%;max-height:360px;object-fit:contain}
+.pmodal h2{font-family:var(--font-header);color:#16202e;font-size:1.35rem;margin:.4rem 2rem .25rem 0;line-height:1.25}
+.pmodal-series{font-family:var(--font-mono);font-size:.72rem;color:#5b6b7f}
+.pmodal-price-lg{font-size:1.5rem;color:#96762b;font-weight:800;font-family:var(--font-header);margin:.6rem 0}
+.pmodal-desc{color:#3d4a5c;font-size:.9rem;line-height:1.65;margin:.5rem 0 0;white-space:pre-line}
+.pmodal-desc p{margin:.5rem 0}
+.pmodal-desc ul,.pmodal-desc ol{margin:.4rem 0 .8rem 1.3rem}
+.pmodal-desc li{margin-bottom:.25rem}
+.pmodal-desc strong{color:#16202e}
+.pmodal-sec{font-family:var(--font-header);font-size:.8rem;letter-spacing:1.5px;color:#16202e;text-transform:uppercase;margin:1.4rem 0 .5rem;border-bottom:2px solid #B8953A;padding-bottom:.35rem}
+.pmodal-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.pmodal-table td,.pmodal-table th{padding:.45rem .6rem;border-bottom:1px solid #edf0f4;vertical-align:top;text-align:left}
+.pmodal-table td:first-child{font-weight:700;color:#4a5768;width:38%}
+.pmodal-table td:last-child{color:#22303f}
+.pmodal-table th{font-family:var(--font-header);font-size:.7rem;letter-spacing:1px;text-transform:uppercase;color:#8a6d24;border-bottom:1px solid #e3e7ec}
+.pmodal-state{text-align:center;color:#5b6b7f;padding:3rem 1rem}
+@media(max-width:720px){.pmodal-grid{grid-template-columns:1fr}.pmodal{padding:1.25rem}}
+</style>
+</head>
+<body>
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/service-area">Service Area</a></li>
+      <li class="dropdown"><a href="/ordering-system" class="active">Hardware <i class="fas fa-chevron-down"></i></a>
+        <div class="dropdown-menu">
+          <a href="/ordering-system">All Products</a>
+          <a href="/ordering-system?cat=platinum">Platinum Series</a>
+          <a href="/ordering-system?cat=pro">Pro Series</a>
+          <a href="/ordering-system?cat=nvr">NVR Systems</a>
+          <a href="/ordering-system?cat=camera">IP Cameras</a>
+        </div>
+      </li>
+      <li><a href="/accomplishments">Our Work</a></li>
+      <li><a href="/system-design">USS Suite</a></li>
+      <li><a href="/partners">Partners</a></li>
+      <li><a href="/reviews">Reviews</a></li>
+      <li><a href="/contact">Get a Quote</a></li>
+      <li><a href="/portal" class="nav-right">FE Portal</a></li>
+    </ul>
+  </div>
+</nav>
+<script>const n=document.getElementById("main-nav");window.addEventListener("scroll",()=>n.classList.toggle("scrolled",window.scrollY>50));const d=n.querySelector(".dropdown");if(d){d.addEventListener("mouseenter",()=>d.classList.add("open"));d.addEventListener("mouseleave",()=>d.classList.remove("open"));d.querySelectorAll(".dropdown-menu a").forEach(a=>a.addEventListener("click",()=>d.classList.remove("open")))}</script>
+<main>
+  <div class="container cat-hero">
+    <div class="cat-hero-text">
+      <h1>HARDWARE <span class="text-accent">CATALOG</span></h1>
+      <p style="color:var(--muted);">Security cameras, NVR systems, access control, and network equipment.</p>
+    </div>
+    <img class="cat-hero-img" src="/assets/images/lts-prox-equipment.png" alt="LTS Pro-X cameras and NVR equipment lineup" width="830" height="535">
+  </div>
+  <section class="section" style="padding-top:1rem;">
+    <div class="container">
+      <div class="cat-controls">
+        <div class="cat-search">
+          <i class="fas fa-search"></i>
+          <input id="cat-q" type="search" placeholder="Search by name or SKU&hellip;" aria-label="Search products">
+        </div>
+        <div class="cat-pills" id="cat-pills">
+          <button type="button" data-cat="" class="active">All Products</button>
+          <button type="button" data-cat="platinum">Platinum Series</button>
+          <button type="button" data-cat="pro">Pro Series</button>
+          <button type="button" data-cat="nvr">NVR Systems</button>
+          <button type="button" data-cat="camera">IP Cameras</button>
+        </div>
+      </div>
+      <p class="cat-status" id="cat-status" aria-live="polite"></p>
+      <div class="cat-grid" id="cat-grid"></div>
+      <div class="cat-more-wrap"><button id="cat-more" class="cat-more" type="button" hidden>Load More</button></div>
+      <div class="cat-state" id="cat-state" hidden></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+  </div>
+</footer>
+<div class="pmodal-overlay" id="pmodal-overlay" role="dialog" aria-modal="true" aria-label="Product details">
+  <div class="pmodal">
+    <button class="pmodal-close" id="pmodal-close" type="button" aria-label="Close">&times;</button>
+    <div id="pmodal-body"></div>
+  </div>
+</div>
+<script>const s=new IntersectionObserver(e=>{e.forEach(r=>{r.isIntersecting&&(r.target.classList.add("visible"),s.unobserve(r.target))})},{threshold:.1});document.querySelectorAll(".anim").forEach(e=>s.observe(e));</script>
+<script>
+(function(){
+  const API='/.netlify/functions/catalog-api', LIMIT=24;
+  const grid=document.getElementById('cat-grid'), statusEl=document.getElementById('cat-status'),
+        moreBtn=document.getElementById('cat-more'), stateEl=document.getElementById('cat-state'),
+        qInput=document.getElementById('cat-q'), pills=document.getElementById('cat-pills');
+  const PLACEHOLDER='data:image/svg+xml;utf8,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="200" height="200" fill="#1E2A3A"/><g fill="none" stroke="#B8953A" stroke-width="6"><circle cx="100" cy="100" r="40"/><circle cx="100" cy="100" r="14"/></g></svg>');
+  const state={cat:'',q:'',page:1,hasMore:false,loading:false};
+
+  const params=new URLSearchParams(location.search);
+  state.cat=(params.get('cat')||'').toLowerCase();
+  state.q=params.get('q')||'';
+  qInput.value=state.q;
+  [...pills.querySelectorAll('button')].forEach(b=>b.classList.toggle('active',b.dataset.cat===state.cat));
+
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function skeletons(n){grid.innerHTML=Array.from({length:n},()=>'<div class="cat-skel"></div>').join('')}
+  function setState(html){if(html){stateEl.innerHTML=html;stateEl.hidden=false}else{stateEl.hidden=true}}
+  function card(p){
+    const facets=p.facets||{};
+    const series=(facets.camera_series&&facets.camera_series[0])||(facets.recorder_series&&facets.recorder_series[0])||'';
+    const category=(facets.category&&facets.category[0])||'';
+    const badges=[series&&series!==category?series:'',category].filter(Boolean).slice(0,2);
+    const price=p.price_range||(p.variant&&p.variant.price!=null?'$'+Number(p.variant.price).toFixed(2):'Call for pricing');
+    return '<article class="cat-card" data-id="'+esc(p.series_id||'')+'">'+
+      '<div class="cat-card-img" tabindex="0" role="button" aria-label="View details for '+esc(p.name)+'"><img loading="lazy" src="'+esc(p.image||'')+'" alt="'+esc(p.name)+'" onerror="this.onerror=null;this.src=\''+PLACEHOLDER+'\'"></div>'+
+      '<div class="cat-card-body">'+
+        (badges.length?'<div class="cat-badges">'+badges.map(b=>'<span class="cat-badge">'+esc(b)+'</span>').join('')+'</div>':'')+
+        '<h3 tabindex="0" role="button">'+esc(p.name)+'</h3>'+
+        '<div class="cat-card-foot"><span class="cat-price">'+esc(price)+'</span><span class="cat-sku">'+esc((p.variant&&p.variant.sku)||'')+'</span></div>'+
+        (p.variants_count>1?'<span class="cat-sku">'+p.variants_count+' variants available</span>':'')+
+      '</div></article>';
+  }
+  function syncURL(){
+    const p=new URLSearchParams(location.search);
+    p.delete('product');
+    if(state.cat)p.set('cat',state.cat);else p.delete('cat');
+    if(state.q)p.set('q',state.q);else p.delete('q');
+    const qs=p.toString();
+    history.replaceState(null,'',location.pathname+(qs?'?'+qs:''));
+  }
+  async function load(append){
+    if(state.loading)return;
+    state.loading=true;
+    setState('');
+    moreBtn.disabled=true;
+    if(!append)skeletons(8);
+    try{
+      const p=new URLSearchParams({page:String(state.page),limit:String(LIMIT)});
+      if(state.cat)p.set('cat',state.cat);
+      if(state.q)p.set('q',state.q);
+      const res=await fetch(API+'?'+p.toString());
+      if(!res.ok)throw new Error('HTTP '+res.status);
+      const data=await res.json();
+      const items=data.products||[];
+      if(!append)grid.innerHTML='';
+      grid.insertAdjacentHTML('beforeend',items.map(card).join(''));
+      state.hasMore=!!(data.pagination&&data.pagination.hasMore);
+      moreBtn.hidden=!state.hasMore;
+      const total=(data.pagination&&data.pagination.total)!=null?data.pagination.total:items.length;
+      statusEl.textContent=total?(total+' product'+(total===1?'':'s')+(state.cat?' in this category':'')+(state.q?' matching \u201C'+state.q+'\u201D':'')):'';
+      if(!total)setState('<i class="fas fa-box-open"></i><p>No products match. Try a different search or category.</p>');
+    }catch(err){
+      console.error(err);
+      if(!append)grid.innerHTML='';
+      statusEl.textContent='';
+      setState('<i class="fas fa-triangle-exclamation"></i><p>Catalog failed to load. Please try again.</p><button class="cat-more" id="cat-retry" type="button">Retry</button>');
+      const r=document.getElementById('cat-retry');
+      if(r)r.addEventListener('click',()=>load(append));
+    }finally{
+      state.loading=false;
+      moreBtn.disabled=false;
+    }
+  }
+
+  /* ---- Product detail modal ---- */
+  const overlay=document.getElementById('pmodal-overlay'), modalBody=document.getElementById('pmodal-body');
+  async function openProduct(id){
+    if(!id)return;
+    overlay.classList.add('open');
+    document.body.style.overflow='hidden';
+    modalBody.innerHTML='<div class="pmodal-state"><i class="fas fa-circle-notch fa-spin"></i> Loading product&hellip;</div>';
+    const p=new URLSearchParams(location.search);
+    p.set('product',id);
+    history.replaceState(null,'',location.pathname+'?'+p.toString());
+    try{
+      const res=await fetch(API+'?id='+encodeURIComponent(id));
+      if(!res.ok)throw new Error('HTTP '+res.status);
+      const data=await res.json();
+      renderProduct(data.product||{});
+    }catch(err){
+      console.error(err);
+      modalBody.innerHTML='<div class="pmodal-state"><i class="fas fa-triangle-exclamation"></i> Product failed to load. Please try again.</div>';
+    }
+  }
+  function closeModal(){
+    overlay.classList.remove('open');
+    document.body.style.overflow='';
+    const p=new URLSearchParams(location.search);
+    p.delete('product');
+    const qs=p.toString();
+    history.replaceState(null,'',location.pathname+(qs?'?'+qs:''));
+  }
+  function richHTML(s){
+    const doc=new DOMParser().parseFromString(String(s),'text/html');
+    const ALLOWED=new Set(['P','UL','OL','LI','STRONG','B','EM','I','BR','TABLE','THEAD','TBODY','TR','TD','TH','H3','H4','H5','DIV','SPAN']);
+    function clean(node){
+      const out=[];
+      node.childNodes.forEach(ch=>{
+        if(ch.nodeType===3){out.push(esc(ch.textContent));return}
+        if(ch.nodeType!==1)return;
+        const inner=clean(ch);
+        if(ALLOWED.has(ch.tagName))out.push('<'+ch.tagName.toLowerCase()+'>'+inner+'</'+ch.tagName.toLowerCase()+'>');
+        else out.push(inner);
+      });
+      return out.join('');
+    }
+    return clean(doc.body);
+  }
+  function renderProduct(p){
+    const facets=p.facets||{};
+    const series=(facets.camera_series&&facets.camera_series[0])||(facets.recorder_series&&facets.recorder_series[0])||'';
+    const category=(facets.category&&facets.category[0])||'';
+    const badges=[series&&series!==category?series:'',category].filter(Boolean).slice(0,2);
+    let price=p.price_range||'';
+    if(!price&&Array.isArray(p.variants)&&p.variants[0]&&p.variants[0].price!=null)price='$'+Number(p.variants[0].price).toFixed(2);
+    if(!price)price='Call for pricing';
+    const specs=(p.specs&&typeof p.specs==='object')?Object.entries(p.specs).filter(([k,v])=>k&&String(v).trim()):[];
+    const variants=Array.isArray(p.variants)?p.variants:[];
+    modalBody.innerHTML=
+      '<div class="pmodal-grid">'+
+        '<div class="pmodal-img"><img src="'+esc(p.image||'')+'" alt="'+esc(p.name)+'" onerror="this.onerror=null;this.src=\''+PLACEHOLDER+'\'"></div>'+
+        '<div>'+
+          (badges.length?'<div class="cat-badges">'+badges.map(b=>'<span class="cat-badge">'+esc(b)+'</span>').join('')+'</div>':'')+
+          '<h2>'+esc(p.name)+'</h2>'+
+          '<div class="pmodal-series">'+esc(p.series_id||'')+'</div>'+
+          '<div class="pmodal-price-lg">'+esc(price)+'</div>'+
+          (p.long_description?'<div class="pmodal-desc">'+richHTML(p.long_description)+'</div>':'')+
+          (specs.length?'<h3 class="pmodal-sec">Full Specifications</h3><table class="pmodal-table">'+specs.map(([k,v])=>'<tr><td>'+esc(k)+'</td><td>'+esc(typeof v==='object'?JSON.stringify(v):v)+'</td></tr>').join('')+'</table>':'')+
+          (variants.length>1?'<h3 class="pmodal-sec">Variants</h3><table class="pmodal-table"><tr><th>SKU</th><th>Description</th><th>Price</th></tr>'+variants.map(v=>'<tr><td>'+esc(v.sku||'')+'</td><td>'+esc(v.description||v.name||'')+'</td><td>'+(v.price!=null?'$'+Number(v.price).toFixed(2):'')+'</td></tr>').join('')+'</table>':'')+
+        '</div>'+
+      '</div>';
+  }
+  document.getElementById('pmodal-close').addEventListener('click',closeModal);
+  overlay.addEventListener('click',e=>{if(e.target===overlay)closeModal()});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('open'))closeModal()});
+  function detailIdFromEvent(e){
+    const zone=e.target.closest('.cat-card-img,.cat-card h3');
+    if(!zone)return null;
+    const c=e.target.closest('.cat-card');
+    return c?c.dataset.id:null;
+  }
+  grid.addEventListener('click',e=>{const id=detailIdFromEvent(e);if(id)openProduct(id)});
+  grid.addEventListener('keydown',e=>{if(e.key!=='Enter')return;const id=detailIdFromEvent(e);if(id){e.preventDefault();openProduct(id)}});
+
+  pills.addEventListener('click',e=>{
+    const b=e.target.closest('button');
+    if(!b)return;
+    [...pills.querySelectorAll('button')].forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    state.cat=b.dataset.cat;
+    state.page=1;
+    syncURL();
+    load(false);
+  });
+  let t;
+  qInput.addEventListener('input',()=>{clearTimeout(t);t=setTimeout(()=>{state.q=qInput.value.trim();state.page=1;syncURL();load(false)},350)});
+  moreBtn.addEventListener('click',()=>{state.page+=1;load(true)});
+  load(false);
+  const deepId=params.get('product');
+  if(deepId)openProduct(deepId);
+})();
+</script>
+</body>
+</html>

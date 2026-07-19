@@ -41,7 +41,7 @@ exports.handler = async (event, context) => {
         const lineItems = cart.map(item => {
             const catalogItem = catalog.find(ci => ci.sku === item.sku);
             if (!catalogItem) {
-                throw new Error(`Item ${item.sku} not found found in catalog`);
+                throw new Error(`Item ${item.sku} not found in catalog`);
             }
             
             return {
