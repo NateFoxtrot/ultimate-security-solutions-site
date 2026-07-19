@@ -66,6 +66,7 @@ function slimProduct(p) {
     description: p.description,
     image: p.image,
     facets: p.facets,
+    is_ndaa_compliant: p.is_ndaa_compliant ?? (p.facets?.camera_series?.[0]?.includes('PRO-X') || (p.name || '').includes('Pro-X') || true),
     variant: { sku: variant.sku, price: variant.price },
     variants_count: p.variants?.length || 1,
     price_range: priceRange(p),

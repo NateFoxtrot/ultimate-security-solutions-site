@@ -1046,13 +1046,20 @@
                     specsHtml += '</ul>';
                 }
 
+                const modalIsNDAA = product.is_ndaa_compliant ?? true;
+                const modalIsProX = product.facets?.camera_series?.[0]?.includes('PRO-X') || (product.name || '').includes('Pro-X');
+
                 body.innerHTML = `
                     <div class="modal-layout" style="display:flex;gap:2rem;flex-wrap:wrap;">
-                        <div class="modal-image-container" style="flex:1;min-width:300px;display:flex;align-items:center;justify-content:center;background:rgba(20,28,40,0.5);padding:1.5rem;border-radius:8px;border:1px solid var(--color-border);">
+                        <div class="modal-image-container" style="flex:1;min-width:300px;display:flex;align-items:center;justify-content:center;background:rgba(20,28,40,0.5);padding:1.5rem;border-radius:8px;border:1px solid var(--color-border);position:relative;">
+                            ${modalIsNDAA ? '<div class="ndaa-badge" style="top:1rem;left:1rem;"><i class="fas fa-shield-alt"></i> NDAA Compliant</div>' : ''}
                             <img src="${product.image || 'assets/images/partners/placeholder.svg'}" alt="${product.name}" style="max-width:100%;max-height:400px;object-fit:contain;" width="400" height="400" loading="lazy" onerror="this.src='assets/images/partners/placeholder.svg'">
                         </div>
                         <div class="modal-details" style="flex:1.5;min-width:300px;">
-                            <div class="product-sku" id="modal-sku" style="margin-bottom:0.5rem;">${firstVariant.sku}</div>
+                            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                                <span class="product-sku" id="modal-sku">${firstVariant.sku}</span>
+                                ${modalIsProX ? '<span class="pro-x-indicator" style="position:static;display:inline-block;">PRO-X</span>' : ''}
+                            </div>
                             <h2 style="margin-top:0;color:var(--color-text);line-height:1.2;">${product.name}</h2>
                             <div id="modal-price" style="font-size:1.75rem;color:var(--color-accent);font-weight:800;margin:1rem 0;">$${firstVariant.price.toFixed(2)}</div>
                             <div style="line-height:1.6;margin-bottom:1.5rem;color:#555;font-size:0.95rem;">${product.long_description || product.description || 'Professional security equipment.'}</div>
