@@ -692,7 +692,7 @@
     </footer>
 
     <!-- Core Scripts -->
-    <script>/* products.js retained on disk for create-checkout.js serverless function; client fetches via catalog API */ window.products = window.products || [];</script>
+    <script src="products.js"></script>
     <script src="assets/js/quote-service.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
@@ -867,8 +867,34 @@
                     loadMoreContainer.style.display = hasMore ? 'block' : 'none';
                 }
             } catch (err) {
-                console.error('Catalog API error:', err);
-                if (!append) {
+                console.warn('Catalog API offline or DNS propagating, using client-side fallback:', err);
+                if (window.products && window.products.length > 0) {
+                    let filtered = window.products;
+                    if (currentFilter && currentFilter !== 'all') {
+                        const searchCat = currentFilter.toLowerCase().replace(/_/g, ' ');
+                        filtered = filtered.filter(p => {
+                            const cats = (p.facets?.category || []).map(c => c.toLowerCase());
+                            const nameLower = (p.name || '').toLowerCase();
+                            return cats.some(c => c.includes(searchCat)) || nameLower.includes(searchCat);
+                        });
+                    }
+                    if (currentSearch) {
+                        const q = currentSearch.toLowerCase();
+                        filtered = filtered.filter(p => {
+                            const name = (p.name || '').toLowerCase();
+                            const desc = (p.description || '').toLowerCase();
+                            const sku = (p.variants?.[0]?.sku || '').toLowerCase();
+                            return name.includes(q) || desc.includes(q) || sku.includes(q);
+                        });
+                    }
+                    const start = (currentPage - 1) * PAGE_LIMIT;
+                    const paginated = filtered.slice(start, start + PAGE_LIMIT);
+                    if (!append) productsGrid.innerHTML = '';
+                    renderProductCards(paginated);
+                    hasMore = start + PAGE_LIMIT < filtered.length;
+                    loadMoreContainer.style.display = hasMore ? 'block' : 'none';
+                    noResults.style.display = filtered.length === 0 ? 'block' : 'none';
+                } else if (!append) {
                     productsGrid.innerHTML = `
                         <div style="text-align: center; padding: 3rem; color: #888;">
                             <i class="fas fa-exclamation-triangle" style="font-size: 2rem; margin-bottom: 1rem; color: #ccc;"></i>
