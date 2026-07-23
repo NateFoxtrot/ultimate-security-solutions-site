@@ -20,7 +20,7 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div className="ml-3 text-base text-gray-300">
-                  <p>816-814-2007</p>
+                  <p>816-787-2061</p>
                 </div>
               </div>
               <div className="mt-6 flex">
