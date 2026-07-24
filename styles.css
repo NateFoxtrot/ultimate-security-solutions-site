@@ -598,7 +598,6 @@ h2 {
 
 .nav-brand {
     display: none !important;
-    display: flex;
     align-items: center;
     flex: 0 0 156px;
     height: 50px;
