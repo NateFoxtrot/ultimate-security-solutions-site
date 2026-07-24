@@ -62,7 +62,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
@@ -87,82 +87,44 @@
                 <a href="service_area.html" class="nav-link-item">Service Area
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
+                <a href="partners.html" class="nav-link-item">Partners
+                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                </a>
                 <div class="dropdown nav-link-item">
                     <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                     <div class="dropdown-content mega-dropdown">
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">CAMERAS</div>
-                            <a href="ordering_system.html?cat=platinum&type=camera">Platinum Series</a>
-                            <a href="ordering_system.html?cat=pro&type=camera">Pro-X Series</a>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">IP Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=ip">Platinum IP Cameras</a>
-                                    <a href="ordering_system.html?cat=pro&type=ip">Pro-X IP Cameras</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">HD-TVI Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=tvi">Platinum HD-TVI</a>
-                                    <a href="ordering_system.html?cat=pro&type=tvi">Pro-X HD-TVI</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">PTZ Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=ptz">Platinum PTZ</a>
-                                    <a href="ordering_system.html?cat=pro&type=ptz">Pro-X PTZ</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">Multisensor <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=multisensor">Platinum Multisensor</a>
-                                    <a href="ordering_system.html?cat=pro&type=multisensor">Pro-X Multisensor</a>
-                                </div>
-                            </div>
+                            <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                            <a href="ordering_system.html?cat=tvi">HD-TVI Cameras</a>
+                            <a href="ordering_system.html?cat=ptz">PTZ Cameras</a>
+                            <a href="ordering_system.html?cat=multisensor">Multisensor Cameras</a>
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">RECORDERS</div>
-                            <a href="ordering_system.html?cat=platinum&type=nvr">Platinum NVRs</a>
-                            <a href="ordering_system.html?cat=pro&type=nvr">Pro-X NVRs</a>
-                            <a href="ordering_system.html?cat=platinum&type=hvr">Platinum HVRs</a>
-                            <a href="ordering_system.html?cat=pro&type=hvr">Pro-X HVRs</a>
-                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <div class="dropdown-header">STORAGE</div>
-                            <a href="ordering_system.html?type=hdd">Hard Drives</a>
-                            <a href="ordering_system.html?type=ssd">SSD Storage</a>
+                            <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                            <a href="ordering_system.html?cat=dvr">DVR Systems</a>
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">ACCESS CONTROL</div>
-                            <a href="ordering_system.html?type=access">Access Controllers</a>
-                            <a href="ordering_system.html?type=reader">Card Readers</a>
-                            <a href="ordering_system.html?type=lock">Electric Locks</a>
-                            <a href="ordering_system.html?type=credential">Credentials</a>
+                            <a href="ordering_system.html?cat=access">All Access Control</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
                             <div class="dropdown-header">NETWORKING</div>
-                            <a href="ordering_system.html?type=switch">Network Switches</a>
-                            <a href="ordering_system.html?type=poe">PoE Injectors</a>
-                            <a href="ordering_system.html?type=transceiver">Transceivers</a>
+                            <a href="ordering_system.html?cat=network">Network Equipment</a>
                         </div>
                         <div class="mega-dropdown-column">
-                            <div class="dropdown-header">CABLING & ACCESSORIES</div>
-                            <a href="ordering_system.html?type=cable">Cable & Wire</a>
-                            <a href="ordering_system.html?type=connector">Connectors</a>
-                            <a href="ordering_system.html?type=power">Power Supplies</a>
-                            <a href="ordering_system.html?type=mount">Camera Mounts</a>
-                            <a href="ordering_system.html?type=housing">Camera Housings</a>
+                            <div class="dropdown-header">PERIPHERALS</div>
+                            <a href="ordering_system.html?cat=peripherals">Power & Accessories</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">View Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
                         </div>
                     </div>
                 </div>
                 <a href="system-design.html" class="nav-link-item">USS Suite
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
-                <a href="msp.html" class="nav-link-item">Hire Us
+                <a href="msp.html" class="nav-link-item">Hire Us (MSP)
                     <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                 </a>
                 <a href="reviews.html" class="nav-link-item">Reviews
@@ -224,7 +186,7 @@
     <section class="section-padding">
         <div class="container">
             <h2 class="section-title animate-in">WHAT WE DO</h2>
-            <div class="services-grid scroll-row">
+            <div class="services-grid">
                 <a href="#service-cabling" class="service-card-wrapper">
                     <div class="service-card animate-in">
                         <i class="fas fa-network-wired"></i>
@@ -273,35 +235,6 @@
                         <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                     </div>
                 </a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-padding equipment-partners-section">
-        <div class="container">
-            <h2 class="section-title animate-in" style="text-align:center;">EQUIPMENT PARTNERS</h2>
-            <div class="partners-scroll-wrapper animate-in">
-                <div class="partners-scroll-track" id="partners-scroll-track">
-                    <img src="assets/images/partners/lts.svg" alt="LTS Security" class="partner-logo">
-                    <img src="assets/images/partners/hikvision.svg" alt="Hikvision" class="partner-logo">
-                    <img src="assets/images/partners/axis.svg" alt="Axis Communications" class="partner-logo">
-                    <img src="assets/images/partners/hanwha_vision.svg" alt="Hanwha Vision" class="partner-logo">
-                    <img src="assets/images/partners/bosch.svg" alt="Bosch" class="partner-logo">
-                    <img src="assets/images/partners/cisco.svg" alt="Cisco" class="partner-logo">
-                    <img src="assets/images/partners/fortinet.svg" alt="Fortinet" class="partner-logo">
-                    <img src="assets/images/partners/ubiquiti.svg" alt="Ubiquiti" class="partner-logo">
-                    <img src="assets/images/partners/aruba.svg" alt="Aruba" class="partner-logo">
-                    <img src="assets/images/partners/panduit.svg" alt="Panduit" class="partner-logo">
-                    <img src="assets/images/partners/sierrawireless.svg" alt="Sierra Wireless" class="partner-logo">
-                    <img src="assets/images/partners/cradlepoint.svg" alt="Cradlepoint" class="partner-logo">
-                    <img src="assets/images/partners/assaabloy.svg" alt="ASSA ABLOY" class="partner-logo">
-                    <img src="assets/images/partners/honeywell.svg" alt="Honeywell" class="partner-logo">
-                    <img src="assets/images/partners/starlink.svg" alt="Starlink" class="partner-logo">
-                    <!-- Duplicate first 3 for seamless loop -->
-                    <img src="assets/images/partners/lts.svg" alt="LTS Security" class="partner-logo">
-                    <img src="assets/images/partners/hikvision.svg" alt="Hikvision" class="partner-logo">
-                    <img src="assets/images/partners/axis.svg" alt="Axis Communications" class="partner-logo">
-                </div>
             </div>
         </div>
     </section>
@@ -365,14 +298,6 @@
                     <p>23 years in the field. We've wired hospitals, data centers, multi-story office buildings, industrial facilities, retail chains, and government buildings across the Kansas City metro and beyond. We're product-agnostic — we install what your project specifies, sourced through distribution partners like ADI and SES for competitive pricing and availability. We show up on time, label everything, test every run, and deliver clean as-built documentation.</p>
                     <h3>What We Install</h3>
                     <p>Copper (Cat5e, Cat6, Cat6A) and fiber optic (single-mode, multi-mode, OM3/OM4/OM5) with LC, SC, and MTP terminations. Full cable infrastructure: patch panels, cable trays, J-hooks, conduit, rack-and-stack, grounding and bonding. Backbone and horizontal distribution for new construction, renovations, and multi-site rollouts.</p>
-                    <h3>Equipment & Partners</h3>
-                    <div class="equipment-logos">
-                        <img src="assets/images/partners/cisco.svg" alt="Cisco" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/panduit.svg" alt="Panduit" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/honeywell.svg" alt="Honeywell" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/sierrawireless.svg" alt="Sierra Wireless" loading="lazy" width="80" height="40">
-                    </div>
                 </div>
                 <div class="service-detail-cta animate-in">
                     <div class="service-detail-stat">
@@ -396,14 +321,6 @@
                     <p>23 years deploying surveillance across every environment — small businesses, enterprise campuses, retail chains, industrial facilities, healthcare, and government. We are product-agnostic and design around the best fit for your project. Through our distribution partnerships with ADI and SES, we have access to every major manufacturer at competitive pricing with fast fulfillment. Every system is NDAA-compliant and built for remote management.</p>
                     <h3>What We Install</h3>
                     <p>IP cameras from 2MP to 4K, PTZ, thermal, license plate recognition (LPR), and AI-powered analytics. NVRs from 8 to 256+ channels with RAID storage configurations. Video management systems (VMS), remote viewing apps, and cloud-managed platforms. Full network infrastructure to support your surveillance backbone.</p>
-                    <h3>Equipment & Partners</h3>
-                    <div class="equipment-logos">
-                        <img src="assets/images/partners/lts.svg" alt="LTS Security" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/hikvision.svg" alt="Hikvision" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/axis.svg" alt="Axis Communications" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/hanwha_vision.svg" alt="Hanwha Vision" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/bosch.svg" alt="Bosch" loading="lazy" width="80" height="40">
-                    </div>
                 </div>
                 <div class="service-detail-cta animate-in">
                     <div class="service-detail-stat">
@@ -427,15 +344,6 @@
                     <p>23 years of hands-on network engineering. Hundreds of deployments across corporate offices, retail locations, warehouses, healthcare facilities, and industrial sites. We're product-agnostic — we design around what works for your environment and budget, sourced through ADI and SES for competitive pricing. We don't just plug things in and leave — we engineer networks that are reliable, documented, and scalable.</p>
                     <h3>What We Install</h3>
                     <p>Enterprise switching and routing, wireless LAN controllers and access points, firewall and security appliances, fiber distribution systems, and WAN/LAN infrastructure. Wireless site surveys, heat mapping, and performance optimization. Full rack-and-stack, cable management, and labeling.</p>
-                    <h3>Equipment & Partners</h3>
-                    <div class="equipment-logos">
-                        <img src="assets/images/partners/cisco.svg" alt="Cisco" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/ubiquiti.svg" alt="Ubiquiti" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/aruba.svg" alt="Aruba" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/fortinet.svg" alt="Fortinet" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/cradlepoint.svg" alt="Cradlepoint" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/sierrawireless.svg" alt="Sierra Wireless" loading="lazy" width="80" height="40">
-                    </div>
                 </div>
                 <div class="service-detail-cta animate-in">
                     <div class="service-detail-stat">
@@ -459,14 +367,6 @@
                     <p>23 years of experience integrating access control with buildings, IT networks, surveillance systems, and security policies. We handle the full picture — door hardware, locking systems, wiring infrastructure, controller programming, credential enrollment, and system integration. Product-agnostic with access to every major manufacturer through ADI and SES distribution.</p>
                     <h3>What We Install</h3>
                     <p>Card readers, fob systems, mobile credentials, biometric readers, keypad entry, electromagnetic locks, electric strikes, panic hardware, door position sensors, and request-to-exit devices. Cloud-managed and on-premise platforms. Integration with video surveillance for event-triggered recording and visual verification.</p>
-                    <h3>Equipment & Partners</h3>
-                    <div class="equipment-logos">
-                        <img src="assets/images/partners/assaabloy.svg" alt="ASSA ABLOY" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/honeywell.svg" alt="Honeywell" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/dsc.svg" alt="DSC" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/lts.svg" alt="LTS" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/bosch.svg" alt="Bosch" loading="lazy" width="80" height="40">
-                    </div>
                 </div>
                 <div class="service-detail-cta animate-in">
                     <div class="service-detail-stat">

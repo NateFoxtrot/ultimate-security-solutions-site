@@ -47,8 +47,32 @@ function buildCatKey(p) {
 }
 
 function filterByCategory(products, cat) {
-  if (!cat) return products;
+  if (!cat || cat === 'all') return products;
   const term = cat.toLowerCase();
+  if (term === 'access') {
+    return products.filter(p => {
+      const catKey = p._catKey;
+      const nameLower = (p.name || '').toLowerCase();
+      return (catKey.includes('access control') || nameLower.includes('access control') || nameLower.includes('card reader') || nameLower.includes('credential') || nameLower.includes('door controller')) && !nameLower.includes('camera');
+    });
+  }
+  if (term === 'network') {
+    return products.filter(p => {
+      const nameLower = (p.name || '').toLowerCase();
+      const catKey = p._catKey;
+      return catKey.includes('ubiquiti') || catKey.includes('switch') || catKey.includes('poe') || catKey.includes('transceiver') || nameLower.includes('switch') || nameLower.includes('router') || nameLower.includes('access point') || nameLower.includes('poe');
+    });
+  }
+  if (term === 'peripherals') {
+    return products.filter(p => {
+      const catKey = p._catKey;
+      const nameLower = (p.name || '').toLowerCase();
+      return catKey.includes('accessories') || nameLower.includes('power supply') || nameLower.includes('connector') || nameLower.includes('mount') || nameLower.includes('housing') || nameLower.includes('cable') || nameLower.includes('bracket');
+    });
+  }
+  if (term === 'dvr') {
+    return products.filter(p => (p._catKey.includes('dvr') || p._catKey.includes('hvr') || (p.facets?.recorder_technology || []).some(r => r.includes('DVR'))) && !p.name.includes('Camera') && !p.name.includes('Turret') && !p.name.includes('Dome'));
+  }
   return products.filter(p => p._catKey.includes(term));
 }
 
