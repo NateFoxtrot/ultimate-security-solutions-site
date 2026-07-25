@@ -11,7 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles-modern.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .msp-hero {
@@ -22,7 +23,7 @@
         }
         .msp-hero h1 { font-size: 3rem; margin-bottom: 1rem; }
         .msp-hero p { font-size: 1.2rem; color: var(--color-muted); max-width: 700px; border-left: 4px solid var(--color-accent); padding-left: 1rem; }
-        
+
         .value-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -53,6 +54,29 @@
             border-bottom: 1px solid var(--color-accent);
             margin-top: 4rem;
         }
+
+        /* Page-specific tweaks on top of .m- components */
+        .m-card.center { text-align: center; }
+        .m-card-body .card-icon {
+            display: block;
+            font-size: 2rem;
+            color: var(--color-accent);
+            margin-bottom: 1rem;
+        }
+        .hardware-partners {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+        .hardware-partners span { color: #fff; font-weight: 700; }
+        #partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -60,6 +84,11 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                <span class="nav-brand-text">
+                    <span class="b1">ULTIMATE SECURITY SOLUTIONS</span>
+                    <span class="b2">Engineers for the AI Age</span>
+                </span>
             </a>
 
             <div class="nav-mobile-toggle" id="mobile-toggle">
@@ -67,39 +96,44 @@
             </div>
 
             <div class="nav-links-wrapper">
-                <a href="index.html" class="nav-link-item">Home
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="about.html" class="nav-link-item">Capabilities
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="service_area.html" class="nav-link-item">Service Area
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="index.html" class="nav-link-item">Home</a>
+                <a href="about.html" class="nav-link-item">Capabilities</a>
+                <a href="service_area.html" class="nav-link-item">Service Area</a>
+                <a href="partners.html" class="nav-link-item active">Partners</a>
                 <div class="dropdown nav-link-item">
-                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                    <div class="dropdown-content">
-                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
-                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
-                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
+                    <div class="dropdown-content mega-dropdown">
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CAMERAS</div>
+                            <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                            <a href="ordering_system.html?cat=tvi">HD-TVI Cameras</a>
+                            <a href="ordering_system.html?cat=ptz">PTZ Cameras</a>
+                            <a href="ordering_system.html?cat=multisensor">Multisensor Cameras</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">RECORDERS</div>
+                            <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                            <a href="ordering_system.html?cat=dvr">DVR Systems</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">ACCESS CONTROL</div>
+                            <a href="ordering_system.html?cat=access">All Access Control</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">NETWORKING</div>
+                            <a href="ordering_system.html?cat=network">Network Equipment</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">PERIPHERALS</div>
+                            <a href="ordering_system.html?cat=peripherals">Power &amp; Accessories</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                        </div>
                     </div>
                 </div>
-                <a href="system-design.html" class="nav-link-item">USS Suite
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="msp.html" class="nav-link-item">Hire Us
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item active">Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="reviews.html" class="nav-link-item">Reviews
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="contact.html" class="nav-link-item">Contact
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="system-design.html" class="nav-link-item">USS Suite</a>
+                <a href="msp.html" class="nav-link-item">Hire Us (MSP)</a>
+                <a href="reviews.html" class="nav-link-item">Reviews</a>
+                <a href="contact.html" class="nav-link-item">Contact</a>
             </div>
 
             <div class="nav-spacer"></div>
@@ -108,113 +142,209 @@
         </div>
     </nav>
 
-    <header class="msp-hero">
-        <div style="display:inline-block; background:rgba(184, 149, 58, 0.1); color:var(--color-accent); padding: 5px 15px; border: 1px solid var(--color-accent); font-weight: 800; font-size: 0.8rem; letter-spacing: 2px; margin-bottom: 1rem;">TRUSTED PARTNERS</div>
-        <h1>YOUR BOOTS ON THE GROUND. <br><span style="color:var(--color-accent)">OUR EXPERTISE.</span></h1>
-        <p>We provide white-label smart hands, structured cabling, and physical security deployment for National MSPs and IT Directors. Insured, with 23 years of experience, and ready to deploy.</p>
+    <!-- ============ PAGE BANNER ============ -->
+    <header class="m-pagebanner">
+        <div class="m-pagebanner-bg">
+            <img src="assets/images/stock/handshake.jpg" alt="Business handshake partnership" fetchpriority="high">
+        </div>
+        <div class="m-pagebanner-overlay"></div>
+        <div class="container">
+            <div class="header-badge animate-in"><i class="fas fa-handshake"></i> Trusted Partners</div>
+            <h1 class="animate-in">YOUR BOOTS ON THE GROUND. <br><span class="text-accent">OUR EXPERTISE.</span></h1>
+            <p class="animate-in">We provide white-label smart hands, structured cabling, and physical security deployment for National MSPs and IT Directors. Insured, with 23 years of experience, and ready to deploy.</p>
+        </div>
     </header>
 
-    <div class="value-grid">
-        <div class="value-card">
-            <i class="fas fa-user-secret"></i>
-            <h3>White Label Service</h3>
-            <p>We represent YOUR brand. Our technicians act as an extension of your team, using your paperwork and following your specific protocols on-site.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-file-contract"></i>
-            <h3>Fully Insured</h3>
-            <p>We carry comprehensive General Liability and Workers' Comp insurance. COI available upon request for immediate vendor onboarding.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-flag-usa"></i>
-            <h3>23 Years Experience</h3>
-            <p>Decades of field-tested precision and discipline. We show up on time, communicate clearly, and execute the Scope of Work without excuses.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-network-wired"></i>
-            <h3>Core Competencies</h3>
-            <p>Rack & Stack, Demarc Extensions, Cat6/Fiber Termination, CCTV Rollouts, Access Control, and Wireless Surveys.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-tools"></i>
-            <h3>Self-Sufficient</h3>
-            <p>Our vans are fully stocked with ladders, testers, termination tools, and consumables. We don't need hand-holding.</p>
-        </div>
-        <div class="value-card">
-            <i class="fas fa-map-marked-alt"></i>
-            <h3>Coverage Area</h3>
-            <p>Primary coverage in Kansas City Metro + 100 mile radius. Willing to travel for multi-site rollouts.</p>
-        </div>
-    </div>
-
-    <!-- SLA Commitments -->
-    <section class="section-padding" style="background: rgba(5, 11, 20, 0.4);">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px;">
-            <h2 style="text-align:center; color:#fff; margin-bottom:3rem; font-size:1.5rem; letter-spacing:2px;">OUR COMMITMENTS TO YOU</h2>
-            <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem;">
-                <div class="value-card" style="text-align:center;">
-                    <i class="fas fa-clock" style="font-size:2.5rem;"></i>
-                    <h3>24-Hour Response</h3>
-                    <p>Vendor packets returned within 24 hours. Scheduling confirmations same business day.</p>
+    <!-- ============ VALUE PROPS ============ -->
+    <section class="m-section" id="main-content">
+        <div class="container">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">White-Label Field Services</span>
+                <h2>Why Partner With USS</h2>
+                <p>An extension of your team in Kansas City — insured, experienced, and ready to deploy under your brand.</p>
+            </div>
+            <div class="m-cards">
+                <div class="m-card animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-user-secret card-icon"></i>
+                        <h3>White Label Service</h3>
+                        <p>We represent YOUR brand. Our technicians act as an extension of your team, using your paperwork and following your specific protocols on-site.</p>
+                    </div>
                 </div>
-                <div class="value-card" style="text-align:center;">
-                    <i class="fas fa-camera" style="font-size:2.5rem;"></i>
-                    <h3>Photo Documentation</h3>
-                    <p>Every project includes before/after photos and detailed closeout packages for your records.</p>
+                <div class="m-card animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-file-contract card-icon"></i>
+                        <h3>Fully Insured</h3>
+                        <p>We carry comprehensive General Liability and Workers' Comp insurance. COI available upon request for immediate vendor onboarding.</p>
+                    </div>
                 </div>
-                <div class="value-card" style="text-align:center;">
-                    <i class="fas fa-user-tie" style="font-size:2.5rem;"></i>
-                    <h3>Professional Conduct</h3>
-                    <p>Uniformed technicians, clean-shaven, professional communication. We represent your brand.</p>
+                <div class="m-card animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-flag-usa card-icon"></i>
+                        <h3>23 Years Experience</h3>
+                        <p>Decades of field-tested precision and discipline. We show up on time, communicate clearly, and execute the Scope of Work without excuses.</p>
+                    </div>
                 </div>
-                <div class="value-card" style="text-align:center;">
-                    <i class="fas fa-shield-alt" style="font-size:2.5rem;"></i>
-                    <h3>$2M Insured</h3>
-                    <p>General Liability + Workers' Comp. COI naming your company as additionally insured, on request.</p>
+                <div class="m-card animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-network-wired card-icon"></i>
+                        <h3>Core Competencies</h3>
+                        <p>Rack &amp; Stack, Demarc Extensions, Cat6/Fiber Termination, CCTV Rollouts, Access Control, and Wireless Surveys.</p>
+                    </div>
+                </div>
+                <div class="m-card animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-tools card-icon"></i>
+                        <h3>Self-Sufficient</h3>
+                        <p>Our vans are fully stocked with ladders, testers, termination tools, and consumables. We don't need hand-holding.</p>
+                    </div>
+                </div>
+                <div class="m-card animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-map-marked-alt card-icon"></i>
+                        <h3>Coverage Area</h3>
+                        <p>Primary coverage in Kansas City Metro + 100 mile radius. Willing to travel for multi-site rollouts.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="cta-box">
-        <h2 style="color:#fff; margin-bottom:1rem;">READY TO ONBOARD US?</h2>
-        <p style="color:var(--color-muted); margin-bottom:2rem;">Send us your vendor packet or schedule a capabilities call.</p>
-        <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-            <a href="mailto:admin@usstech.net?subject=MSP%20Partnership%20Inquiry&body=Hi%20USS%20Team%2C%0A%0AWe%27d%20like%20to%20add%20you%20to%20our%20vendor%20list.%20Please%20find%20our%20onboarding%20packet%20attached.%0A%0ACompany%3A%20%0AContact%3A%20%0APhone%3A%20" class="btn btn-primary"><i class="fas fa-envelope"></i> Email Vendor Packet</a>
-            <a href="contact.html?ref=partners" class="btn btn-secondary">Schedule a Call</a>
-            <a href="msp.html" class="btn btn-secondary"><i class="fas fa-rocket"></i> Full MSP Program</a>
+    <!-- ============ SLA COMMITMENTS ============ -->
+    <section class="m-section alt">
+        <div class="container">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Service Level</span>
+                <h2>Our Commitments To You</h2>
+            </div>
+            <div class="m-cards commitments-grid">
+                <div class="m-card center animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-clock card-icon" style="font-size:2.5rem;"></i>
+                        <h3>24-Hour Response</h3>
+                        <p>Vendor packets returned within 24 hours. Scheduling confirmations same business day.</p>
+                    </div>
+                </div>
+                <div class="m-card center animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-camera card-icon" style="font-size:2.5rem;"></i>
+                        <h3>Photo Documentation</h3>
+                        <p>Every project includes before/after photos and detailed closeout packages for your records.</p>
+                    </div>
+                </div>
+                <div class="m-card center animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-user-tie card-icon" style="font-size:2.5rem;"></i>
+                        <h3>Professional Conduct</h3>
+                        <p>Uniformed technicians, clean-shaven, professional communication. We represent your brand.</p>
+                    </div>
+                </div>
+                <div class="m-card center animate-in">
+                    <div class="m-card-body">
+                        <i class="fas fa-shield-alt card-icon" style="font-size:2.5rem;"></i>
+                        <h3>$2M Insured</h3>
+                        <p>General Liability + Workers' Comp. COI naming your company as insured, on request.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+    <!-- ============ ONBOARD CTA BAND ============ -->
+    <section class="m-cta">
+        <div class="m-cta-bg"><img src="assets/images/stock/office-building.jpg" alt="Corporate office towers" loading="lazy"></div>
+        <div class="m-cta-overlay"></div>
+        <div class="container">
+            <h2 class="animate-in">READY TO ONBOARD US?</h2>
+            <p class="animate-in">Send us your vendor packet or schedule a capabilities call.</p>
+            <div class="m-hero-actions animate-in">
+                <a href="mailto:admin@usstech.net?subject=MSP%20Partnership%20Inquiry&body=Hi%20USS%20Team%2C%0A%0AWe%27d%20like%20to%20add%20you%20to%20our%20vendor%20list.%20Please%20find%20our%20onboarding%20packet%20attached.%0A%0ACompany%3A%20%0AContact%3A%20%0APhone%3A%20" class="m-btn m-btn-primary"><i class="fas fa-envelope"></i> Email Vendor Packet</a>
+                <a href="contact.html?ref=partners" class="m-btn m-btn-ghost">Schedule a Call</a>
+                <a href="msp.html" class="m-btn m-btn-ghost"><i class="fas fa-rocket"></i> Full MSP Program</a>
+            </div>
+        </div>
+    </section>
 
-    <!-- Dynamic Partner Showcase -->
-    <section class="section-padding" style="background: rgba(5, 11, 20, 0.4);">
-        <div class="container" style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align:center; color:#fff; margin-bottom:3rem; font-size:1.5rem; letter-spacing:2px;">ENTERPRISE PARTNERS & CLIENTS</h2>
-            <div id="partners-grid" style="display:grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap:2rem; align-items:center;">
+    <!-- ============ DYNAMIC PARTNER SHOWCASE ============ -->
+    <section class="m-section">
+        <div class="container">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Proven At Scale</span>
+                <h2>Enterprise Partners &amp; Clients</h2>
+            </div>
+            <div id="partners-grid">
                 <!-- JS Injected -->
             </div>
         </div>
     </section>
 
-    <!-- Certified Hardware Partners (Static/Fallback) -->
-    <section class="section-padding" style="text-align:center; border-top: 1px solid rgba(255, 215, 0, 0.1);">
-        <h3 style="color:var(--color-muted); font-size:0.9rem; letter-spacing:2px; margin-bottom:2rem;">CERTIFIED HARDWARE PARTNERS</h3>
-        <div style="display:flex; justify-content:center; gap:3rem; flex-wrap:wrap; opacity:0.6;">
-            <span style="color:#fff; font-weight:700;">HIKVISION</span>
-            <span style="color:#fff; font-weight:700;">LTS SECURITY</span>
-            <span style="color:#fff; font-weight:700;">UBIQUITI</span>
-            <span style="color:#fff; font-weight:700;">ASSA ABLOY</span>
+    <!-- ============ CERTIFIED HARDWARE PARTNERS ============ -->
+    <section class="m-section alt" style="text-align:center; border-top: 1px solid rgba(255, 215, 0, 0.1);">
+        <div class="container">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Authorized Installers</span>
+                <h2>Certified Hardware Partners</h2>
+            </div>
+            <div class="hardware-partners animate-in">
+                <span>HIKVISION</span>
+                <span>LTS SECURITY</span>
+                <span>UBIQUITI</span>
+                <span>ASSA ABLOY</span>
+            </div>
         </div>
     </section>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="m-footer">
         <div class="container">
-            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+            <div class="m-footer-grid">
+                <div class="m-footer-brand">
+                    <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                    <p>Veteran-owned security &amp; IT integrator serving the Kansas City metro for over two decades. Structured cabling, surveillance, access control, networking, and white-label field services.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#service-cabling">Structured Cabling</a></li>
+                        <li><a href="index.html#service-surveillance">Surveillance Systems</a></li>
+                        <li><a href="index.html#service-networking">Network Engineering</a></li>
+                        <li><a href="index.html#service-access">Access Control</a></li>
+                        <li><a href="index.html#service-smart-hands">Smart Hands</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Capabilities</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service_area.html">Service Area</a></li>
+                        <li><a href="ordering_system.html">Equipment Catalog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="m-footer-contact">
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:8167872061">(816) 787-2061</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:nate@usstech.net">nate@usstech.net</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i>Kansas City Metro — 100mi radius</li>
+                        <li><i class="fas fa-clock"></i>24/7 Dispatch Availability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-footer-bottom">
+                <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+                <div class="m-footer-badges">
+                    <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+                    <span><i class="fas fa-flag-usa"></i> Veteran Owned</span>
+                    <span><i class="fas fa-check-circle"></i> NDAA Compliant</span>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="assets/js/partners_data.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modern.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('partners-grid');

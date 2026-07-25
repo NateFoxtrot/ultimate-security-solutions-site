@@ -10,14 +10,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles-modern.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .asym-item { cursor: zoom-in; }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to content</a>
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                <span class="nav-brand-text">
+                    <span class="b1">ULTIMATE SECURITY SOLUTIONS</span>
+                    <span class="b2">Engineers for the AI Age</span>
+                </span>
             </a>
 
             <div class="nav-mobile-toggle" id="mobile-toggle">
@@ -25,39 +34,44 @@
             </div>
 
             <div class="nav-links-wrapper">
-                <a href="index.html" class="nav-link-item">Home
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="about.html" class="nav-link-item">Capabilities
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="service_area.html" class="nav-link-item">Service Area
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="index.html" class="nav-link-item">Home</a>
+                <a href="about.html" class="nav-link-item">Capabilities</a>
+                <a href="service_area.html" class="nav-link-item">Service Area</a>
+                <a href="partners.html" class="nav-link-item">Partners</a>
                 <div class="dropdown nav-link-item">
-                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                    <div class="dropdown-content">
-                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
-                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
-                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
+                    <div class="dropdown-content mega-dropdown">
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CAMERAS</div>
+                            <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                            <a href="ordering_system.html?cat=tvi">HD-TVI Cameras</a>
+                            <a href="ordering_system.html?cat=ptz">PTZ Cameras</a>
+                            <a href="ordering_system.html?cat=multisensor">Multisensor Cameras</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">RECORDERS</div>
+                            <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                            <a href="ordering_system.html?cat=dvr">DVR Systems</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">ACCESS CONTROL</div>
+                            <a href="ordering_system.html?cat=access">All Access Control</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">NETWORKING</div>
+                            <a href="ordering_system.html?cat=network">Network Equipment</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">PERIPHERALS</div>
+                            <a href="ordering_system.html?cat=peripherals">Power &amp; Accessories</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                        </div>
                     </div>
                 </div>
-                <a href="system-design.html" class="nav-link-item">USS Suite
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="msp.html" class="nav-link-item">Hire Us (MSP)
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="reviews.html" class="nav-link-item">Reviews
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="contact.html" class="nav-link-item">Contact
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="system-design.html" class="nav-link-item">USS Suite</a>
+                <a href="msp.html" class="nav-link-item">Hire Us (MSP)</a>
+                <a href="reviews.html" class="nav-link-item">Reviews</a>
+                <a href="contact.html" class="nav-link-item">Contact</a>
             </div>
 
             <div class="nav-spacer"></div>
@@ -66,28 +80,135 @@
         </div>
     </nav>
 
-    <header class="page-header animate-in">
-        <div class="header-badge">Project Portfolio</div>
-        <h1>Our Work</h1>
-        <p>Delivering professional security and IT infrastructure solutions for national enterprise brands.</p>
+    <!-- ============ PAGE BANNER ============ -->
+    <header class="m-pagebanner">
+        <div class="m-pagebanner-bg"><img src="assets/images/stock/warehouse.jpg" alt="Warehouse facility infrastructure" fetchpriority="high"></div>
+        <div class="m-pagebanner-overlay"></div>
+        <div class="container">
+            <div class="header-badge animate-in">Project Portfolio</div>
+            <h1 class="animate-in">Our Work</h1>
+            <p class="animate-in">Delivering professional security and IT infrastructure solutions for national enterprise brands.</p>
+        </div>
     </header>
 
-    <section class="client-highlights-section" style="padding: 6rem 5%; position: relative; z-index: 2;">
+    <!-- ============ FEATURED PROJECTS — asymmetric editorial grid ============ -->
+    <section class="m-section">
         <div class="container">
-            <h2 class="section-title animate-in" style="text-align:center; margin-bottom: 4rem;">Our Partners</h2>
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Recent Work</span>
+                <h2>From the Field</h2>
+                <p>Real photos from recent USS job sites — shot by our own technicians, no stock imagery. Click any photo to enlarge.</p>
+            </div>
+            <div class="m-asym animate-in" id="featured-grid">
+                <figure class="asym-item wide" data-full="assets/images/work/warehousecablerunlift1.jpg">
+                    <img src="assets/images/work/warehousecablerunlift1.jpg" alt="Technician pulling cable from a lift in a warehouse" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Structured Cabling</span><h3>Warehouse Cable Runs</h3><p>High-bay structured cabling pulled from the lift across active distribution warehouse ceilings.</p></figcaption>
+                </figure>
+                <figure class="asym-item tall" data-full="assets/images/work/testernetworkrackred.jpg">
+                    <img src="assets/images/work/testernetworkrackred.jpg" alt="Cable certifier testing drops on a network rack" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Certification</span><h3>Tested &amp; Documented</h3><p>Every drop certified and labeled — full test reports handed over with the keys.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/commercialmaglocks1.jpg">
+                    <img src="assets/images/work/commercialmaglocks1.jpg" alt="Mag-lock and crash bar installed on a commercial door" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Access Control</span><h3>Access Control Doors</h3><p>Mag-lock and crash bar installs — code-compliant egress, clean wiring.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/menuboardinstall1.jpg">
+                    <img src="assets/images/work/menuboardinstall1.jpg" alt="Drive-thru menu board AV installation" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Commercial AV</span><h3>Drive-Thru Menu Boards</h3><p>Outdoor-rated AV installs for quick-service drive-thru lanes.</p></figcaption>
+                </figure>
+                <figure class="asym-item half" data-full="assets/images/work/newconstructioncabling3.jpg">
+                    <img src="assets/images/work/newconstructioncabling3.jpg" alt="Low-voltage rough-in on new construction framing" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">New Construction</span><h3>Rough-In During Framing</h3><p>Low-voltage pathways in before the drywall goes up.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/newconstructionwiring1.jpg">
+                    <img src="assets/images/work/newconstructionwiring1.jpg" alt="Rough-in wiring on new construction studs" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">New Construction</span><h3>Stud-Stage Wiring</h3><p>Clean rough-in on open framing.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/newconstructionwiring2.jpg">
+                    <img src="assets/images/work/newconstructionwiring2.jpg" alt="Bundled rough-in cabling at the panel location" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">New Construction</span><h3>Panel-Ready Bundles</h3><p>Rough-in cabling staged at the panel location.</p></figcaption>
+                </figure>
+                <figure class="asym-item half" data-full="assets/images/work/Largesiteplanning1.jpg">
+                    <img src="assets/images/work/Largesiteplanning1.jpg" alt="System planning over blueprints for a large site" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Design</span><h3>Large-Site Planning</h3><p>Camera placement, pathways, and headend layout planned before a single cable is pulled.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/DIYMULTISENSORCAM1.jpg">
+                    <img src="assets/images/work/DIYMULTISENSORCAM1.jpg" alt="Multisensor camera assembled and ready for deployment" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Surveillance</span><h3>Multisensor Builds</h3><p>Multi-head panoramic cameras built and configured in-house.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/warehousecablinglift2.jpg">
+                    <img src="assets/images/work/warehousecablinglift2.jpg" alt="Cable run across warehouse racking from the lift" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Structured Cabling</span><h3>Overhead Pathways</h3><p>Cable runs across warehouse racking and trusses.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/testergreen1.jpg">
+                    <img src="assets/images/work/testergreen1.jpg" alt="Cable tester showing passing certification results" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Certification</span><h3>Passing Results</h3><p>Certifier-verified performance on every drop.</p></figcaption>
+                </figure>
+                <figure class="asym-item" data-full="assets/images/work/menuboardinstall2.jpg">
+                    <img src="assets/images/work/menuboardinstall2.jpg" alt="Menu board install detail at the drive-thru" loading="lazy">
+                    <figcaption class="asym-cap"><span class="tag">Commercial AV</span><h3>Menu Board Detail</h3><p>Display, speaker, and cabling detail at the lane.</p></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ BEFORE & AFTER ============ -->
+    <section class="m-section alt">
+        <div class="container">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Before &amp; After</span>
+                <h2>The USS Cleanup Standard</h2>
+                <p>Drag the handle to compare. Every "after" is the standard we leave behind on every rack we touch.</p>
+            </div>
+            <div class="m-ba-grid animate-in">
+                <div class="m-ba">
+                    <img src="assets/images/work/messyrack2.jpg" alt="Before">
+                    <img class="after" src="assets/images/work/messyrack2-after.jpg" alt="After">
+                    <span class="ba-tag before">Before</span>
+                    <span class="ba-tag after">After</span>
+                    <div class="ba-handle"></div>
+                </div>
+                <div class="m-ba">
+                    <img src="assets/images/work/messyrack3.jpg" alt="Before">
+                    <img class="after" src="assets/images/work/messyrack3-after.jpg" alt="After">
+                    <span class="ba-tag before">Before</span>
+                    <span class="ba-tag after">After</span>
+                    <div class="ba-handle"></div>
+                </div>
+                <div class="m-ba">
+                    <img src="assets/images/work/messyrack4.jpg" alt="Before">
+                    <img class="after" src="assets/images/work/messyrack4-after.jpg" alt="After">
+                    <span class="ba-tag before">Before</span>
+                    <span class="ba-tag after">After</span>
+                    <div class="ba-handle"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PARTNERS ============ -->
+    <section class="m-section alt" id="main-content">
+        <div class="container">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Client Highlights</span>
+                <h2>Our Partners</h2>
+            </div>
             <div class="partners-grid animate-in" id="client-grid">
                 <!-- Clients Injected JS -->
             </div>
         </div>
     </section>
 
-    <section class="portfolio-section" style="padding: 6rem 5%; position: relative; z-index: 2;">
-        <h2 class="section-title animate-in" style="text-align:center; margin-bottom: 4rem;">Project Gallery</h2>
-        <div class="portfolio-grid animate-in" id="portfolio-grid">
-            <!-- Images Injected JS -->
-        </div>
-        <div class="load-more-container animate-in" style="margin-top: 4rem; text-align: center;">
-            <button class="btn btn-primary" id="btn-load-more" style="padding: 1rem 3rem;">LOAD MORE PROJECTS</button>
+    <!-- ============ CTA ============ -->
+    <section class="m-cta">
+        <div class="m-cta-bg"><img src="assets/images/stock/office-building.jpg" alt="Corporate office towers" loading="lazy"></div>
+        <div class="m-cta-overlay"></div>
+        <div class="container">
+            <h2 class="animate-in">Ready to Start Your Project?</h2>
+            <p class="animate-in">Join the national brands that trust USS with their security and IT infrastructure. Most site surveys are scheduled within 48 hours.</p>
+            <div class="m-hero-actions animate-in">
+                <a href="contact.html" class="m-btn m-btn-primary"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+            </div>
         </div>
     </section>
 
@@ -101,14 +222,57 @@
         </div>
     </div>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="m-footer">
         <div class="container">
-            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+            <div class="m-footer-grid">
+                <div class="m-footer-brand">
+                    <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                    <p>Veteran-owned security &amp; IT integrator serving the Kansas City metro for over two decades. Structured cabling, surveillance, access control, networking, and white-label field services.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#service-cabling">Structured Cabling</a></li>
+                        <li><a href="index.html#service-surveillance">Surveillance Systems</a></li>
+                        <li><a href="index.html#service-networking">Network Engineering</a></li>
+                        <li><a href="index.html#service-access">Access Control</a></li>
+                        <li><a href="index.html#service-smart-hands">Smart Hands</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Capabilities</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service_area.html">Service Area</a></li>
+                        <li><a href="ordering_system.html">Equipment Catalog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="m-footer-contact">
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:8167872061">(816) 787-2061</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:nate@usstech.net">nate@usstech.net</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i>Kansas City Metro — 100mi radius</li>
+                        <li><i class="fas fa-clock"></i>24/7 Dispatch Availability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-footer-bottom">
+                <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+                <div class="m-footer-badges">
+                    <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+                    <span><i class="fas fa-flag-usa"></i> Veteran Owned</span>
+                    <span><i class="fas fa-check-circle"></i> NDAA Compliant</span>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="assets/js/portfolio_data.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modern.js"></script>
     <script>
         const clients = [
             { name: 'Target', logo: 'target.svg', text: '“Successful execution of multi-day Self Checkout installations and upgrades across regional locations.”' },
@@ -130,48 +294,23 @@
             { name: 'Ameristar Casino', logo: 'ameristar.svg', text: '“Ensuring 24/7 uptime for gaming floor security and surveillance networks.”' }
         ];
 
-        const allImages = portfolioData;
-        const itemsPerPage = 12;
-        let currentIndex = 0;
-
-        const grid = document.getElementById('portfolio-grid');
-        const loadMoreBtn = document.getElementById('btn-load-more');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxCaption = document.getElementById('lightbox-caption');
         const closeBtn = document.querySelector('.lightbox-close');
 
-        function loadItems() {
-            const nextBatch = allImages.slice(currentIndex, currentIndex + itemsPerPage);
-            nextBatch.forEach(data => {
-                const item = document.createElement('div');
-                item.className = 'portfolio-item glass-panel animate-in';
-                item.innerHTML = `
-                    <div class="portfolio-img-container">
-                        <img src="assets/images/portfolio_core/${data.src}" alt="${data.client} - ${data.type}" loading="lazy">
-                    </div>
-                    <div class="portfolio-overlay">
-                        <h3>${data.client}</h3>
-                        <p>${data.type}</p>
-                        <div class="item-id">#${Math.random().toString(36).substr(2, 6).toUpperCase()}</div>
-                    </div>
-                `;
-                
-                item.onclick = () => {
-                    lightboxImg.src = `assets/images/portfolio_core/${data.src}`;
-                    lightboxCaption.innerText = `${data.client} // ${data.type}`;
-                    lightbox.classList.add('active');
-                };
-                
-                grid.appendChild(item);
-                if (window.animationObserver) window.animationObserver.observe(item);
+        /* Featured grid -> lightbox */
+        document.querySelectorAll('#featured-grid .asym-item').forEach(item => {
+            item.style.cursor = 'zoom-in';
+            item.addEventListener('click', () => {
+                const full = item.getAttribute('data-full');
+                const title = item.querySelector('.asym-cap h3')?.textContent || '';
+                const sub = item.querySelector('.asym-cap p')?.textContent || '';
+                lightboxImg.src = full;
+                lightboxCaption.innerText = sub ? `${title} — ${sub}` : title;
+                lightbox.classList.add('active');
             });
-
-            currentIndex += itemsPerPage;
-            if (currentIndex >= allImages.length) {
-                loadMoreBtn.style.display = 'none';
-            }
-        }
+        });
 
         function renderClients() {
             const clientGrid = document.getElementById('client-grid');
@@ -182,7 +321,7 @@
                 const card = document.createElement('div');
                 card.className = 'partner-card glass-panel animate-in';
                 const logoSrc = `assets/images/partners/${client.logo}`;
-                
+
                 let imgStyle = '';
                 if (scale15.some(key => client.name.includes(key))) {
                     imgStyle = 'transform: scale(1.35);';
@@ -205,8 +344,6 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             renderClients();
-            loadItems();
-            loadMoreBtn.addEventListener('click', loadItems);
             closeBtn.onclick = () => lightbox.classList.remove('active');
             lightbox.onclick = (e) => {
                 if (e.target === lightbox || e.target.classList.contains('lightbox-overlay')) {

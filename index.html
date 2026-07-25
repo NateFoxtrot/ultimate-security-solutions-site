@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://usstech.net/">
     <meta property="og:title" content="Ultimate Security Solutions | Commercial IT & Security Infrastructure">
     <meta property="og:description" content="Kansas City's commercial IT infrastructure and security integrator. Structured cabling, surveillance, access control, network engineering. 23 years of field experience.">
-    <meta property="og:image" content="https://usstech.net/assets/images/portfolio/IMG_0036.JPEG">
+    <meta property="og:image" content="https://usstech.net/assets/images/stock/server-room.jpg">
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://usstech.net/">
     <meta property="twitter:title" content="Ultimate Security Solutions">
@@ -31,10 +31,11 @@
         "availableLanguage": "en"
       },
       "sameAs": [
-        "https://www.linkedin.com/company/ultimate-security-solutions-llc",
-        "https://fieldnation.com/provider/nate-follis"
+        "https://app.fieldnation.com/company/profile/505896",
+        "https://app.fieldnation.com/p/869346",
+        "https://www.linkedin.com/company/ultimate-security-solutions-llc"
       ],
-      "knowsAbout": ["CCTV", "Structured Cabling", "Access Control", "Network Engineering", "OSHA Safety"]
+      "knowsAbout": ["CCTV", "Structured Cabling", "Access Control", "Network Engineering", "Fiber Optics"]
     }
     </script>
     <script type="application/ld+json">
@@ -62,7 +63,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles-modern.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
@@ -71,6 +73,11 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                <span class="nav-brand-text">
+                    <span class="b1">ULTIMATE SECURITY SOLUTIONS</span>
+                    <span class="b2">Engineers for the AI Age</span>
+                </span>
             </a>
 
             <div class="nav-mobile-toggle" id="mobile-toggle">
@@ -78,21 +85,12 @@
             </div>
 
             <div class="nav-links-wrapper">
-                <a href="index.html" class="nav-link-item active">Home
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="about.html" class="nav-link-item">Capabilities
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="service_area.html" class="nav-link-item">Service Area
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="index.html" class="nav-link-item active">Home</a>
+                <a href="about.html" class="nav-link-item">Capabilities</a>
+                <a href="service_area.html" class="nav-link-item">Service Area</a>
+                <a href="partners.html" class="nav-link-item">Partners</a>
                 <div class="dropdown nav-link-item">
                     <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                     <div class="dropdown-content mega-dropdown">
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">CAMERAS</div>
@@ -115,24 +113,16 @@
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">PERIPHERALS</div>
-                            <a href="ordering_system.html?cat=peripherals">Power & Accessories</a>
+                            <a href="ordering_system.html?cat=peripherals">Power &amp; Accessories</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
                             <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
                         </div>
                     </div>
                 </div>
-                <a href="system-design.html" class="nav-link-item">USS Suite
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="msp.html" class="nav-link-item">Hire Us (MSP)
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="reviews.html" class="nav-link-item">Reviews
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="contact.html" class="nav-link-item">Contact
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="system-design.html" class="nav-link-item">USS Suite</a>
+                <a href="msp.html" class="nav-link-item">Hire Us (MSP)</a>
+                <a href="reviews.html" class="nav-link-item">Reviews</a>
+                <a href="contact.html" class="nav-link-item">Contact</a>
             </div>
 
             <div class="nav-spacer"></div>
@@ -142,317 +132,414 @@
     </nav>
 
 
-    <header class="hero">
-        <div class="hero-logo-watermark">
-            <img src="assets/images/logo_transparent.png" alt="" aria-hidden="true">
+    <!-- ============ HERO ============ -->
+    <header class="m-hero">
+        <div class="m-hero-bg">
+            <img src="assets/images/stock/server-room.jpg" alt="Server room infrastructure" fetchpriority="high">
         </div>
-        <div class="container hero-container">
-            <div class="hero-content">
-                <div class="hero-badge animate-in"><i class="fas fa-bolt"></i> MORE THAN 2 DECADES OF FIELD EXPERIENCE</div>
-                <h1 class="animate-in">WE BUILD THE INFRASTRUCTURE<br><span class="text-accent">YOUR BUSINESS RUNS ON</span></h1>
-                <p class="animate-in">Kansas City's full-service integrator for structured cabling, surveillance, network engineering, access control, and smart hands field services — with more than two decades of experience across every environment.</p>
-                <div class="hero-actions">
-                    <a href="msp.html" class="btn btn-primary animate-in"><i class="fas fa-building"></i> MSP Partners</a>
-                    <a href="contact.html" class="btn btn-secondary animate-in">Schedule a Site Survey</a>
+        <div class="m-hero-overlay"></div>
+        <div class="m-hero-inner">
+            <div class="m-hero-content">
+                <div class="m-hero-badge animate-in"><i class="fas fa-bolt"></i> More Than 2 Decades of Field Experience</div>
+                <h1 class="animate-in">We Build the Infrastructure<br><span class="text-accent">Your Business Runs On</span></h1>
+                <p class="m-hero-sub animate-in">Kansas City's full-service integrator for structured cabling, surveillance, network engineering, access control, and smart hands field services — with more than two decades of experience across every environment.</p>
+                <div class="m-hero-actions animate-in">
+                    <a href="contact.html" class="m-btn m-btn-primary"><i class="fas fa-clipboard-check"></i> Schedule a Site Survey</a>
+                    <a href="msp.html" class="m-btn m-btn-ghost"><i class="fas fa-building"></i> MSP Partners</a>
                 </div>
-                <div class="hero-job-types animate-in">
-                    <a href="#service-cabling" class="job-type-btn" data-trace="1">Structured Cabling</a>
-                    <a href="#service-surveillance" class="job-type-btn" data-trace="2">Surveillance</a>
-                    <a href="#service-networking" class="job-type-btn" data-trace="3">Network Engineering</a>
-                    <a href="#service-access" class="job-type-btn" data-trace="4">Access Control</a>
+                <div class="m-hero-stats animate-in">
+                    <div class="m-hero-stat">
+                        <div class="num" data-count="23">23</div>
+                        <div class="lbl">Years Experience</div>
+                    </div>
+                    <div class="m-hero-stat">
+                        <div class="num">TIA-568</div>
+                        <div class="lbl">Standards Compliant</div>
+                    </div>
+                    <div class="m-hero-stat">
+                        <div class="num">NDAA</div>
+                        <div class="lbl">Compliant Equipment</div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-
-    <section class="stats-strip" id="main-content">
-        <div class="stats-container">
-            <div class="stat-block animate-in">
-                <div class="stat-number">23</div>
-                <div class="stat-label">Years of Experience</div>
-            </div>
-            <div class="stat-block animate-in">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Dispatch Availability</div>
-            </div>
-            <div class="stat-block animate-in">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Fully Insured & Retained</div>
-            </div>
+    <!-- ============ TRUST STRIP ============ -->
+    <section class="m-trust" id="main-content">
+        <div class="m-trust-label">Trusted by national brands &amp; MSPs</div>
+        <div class="m-trust-logos">
+            <img src="assets/images/partners/fieldnation.svg" alt="Field Nation" loading="lazy">
+            <img src="assets/images/partners/wachter.svg" alt="Wachter" loading="lazy">
+            <img src="assets/images/partners/walmart.svg" alt="Walmart" loading="lazy">
+            <img src="assets/images/partners/target.svg" alt="Target" loading="lazy">
+            <img src="assets/images/partners/homedepot.svg" alt="Home Depot" loading="lazy">
         </div>
     </section>
 
-    <section class="section-padding">
+    <!-- ============ MARQUEE STRIP ============ -->
+    <div class="m-marquee" aria-hidden="true">
+        <div class="m-marquee-track">
+            <span>Structured Cabling</span><span>Surveillance Systems</span><span>Access Control</span><span>Network Engineering</span><span>Smart Hands</span><span>Cellular &amp; Starlink</span><span>Commercial AV</span><span>Telecom &amp; VoIP</span>
+            <span>Structured Cabling</span><span>Surveillance Systems</span><span>Access Control</span><span>Network Engineering</span><span>Smart Hands</span><span>Cellular &amp; Starlink</span><span>Commercial AV</span><span>Telecom &amp; VoIP</span>
+        </div>
+    </div>
+
+    <!-- ============ WHAT WE DO ============ -->
+    <section class="m-section">
         <div class="container">
-            <h2 class="section-title animate-in">WHAT WE DO</h2>
-            <div class="services-grid">
-                <a href="#service-cabling" class="service-card-wrapper">
-                    <div class="service-card animate-in">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Full-Service Integration</span>
+                <h2>What We Do</h2>
+                <p>One team for every low-voltage and IT discipline — designed, installed, and supported by career field technicians.</p>
+            </div>
+            <div class="m-cards">
+                <a href="#service-cabling" class="m-card animate-in">
+                    <div class="m-card-img">
+                        <img src="assets/images/gen/cabling-rack2c.jpg" alt="Neatly organized network cabling routed into a server rack patch panel" loading="lazy">
                         <i class="fas fa-network-wired"></i>
+                    </div>
+                    <div class="m-card-body">
                         <h3>Structured Cabling</h3>
                         <p>Cat6/Cat6A and fiber optic infrastructure for commercial environments.</p>
-                        <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                        <span class="m-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="#service-surveillance" class="service-card-wrapper">
-                    <div class="service-card animate-in">
+                <a href="#service-surveillance" class="m-card animate-in">
+                    <div class="m-card-img">
+                        <img src="assets/images/gen/cctv-dome-install.jpg" alt="Dome security camera cleanly flush-mounted on a commercial ceiling" loading="lazy">
                         <i class="fas fa-video"></i>
+                    </div>
+                    <div class="m-card-body">
                         <h3>Surveillance Systems</h3>
                         <p>NDAA-compliant CCTV with AI analytics and remote management.</p>
-                        <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                        <span class="m-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="#service-networking" class="service-card-wrapper">
-                    <div class="service-card animate-in">
+                <a href="#service-networking" class="m-card animate-in">
+                    <div class="m-card-img">
+                        <img src="assets/images/stock/network-switch.jpg" alt="Network switching equipment" loading="lazy">
                         <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="m-card-body">
                         <h3>Network Engineering</h3>
                         <p>Enterprise WiFi, switching, firewalls, and fiber for high-density sites.</p>
-                        <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                        <span class="m-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="#service-access" class="service-card-wrapper">
-                    <div class="service-card animate-in">
+                <a href="#service-access" class="m-card animate-in">
+                    <div class="m-card-img">
+                        <img src="assets/images/gen/access-reader2.jpg" alt="Wall-mounted access control card reader beside a commercial glass door" loading="lazy">
                         <i class="fas fa-door-open"></i>
+                    </div>
+                    <div class="m-card-body">
                         <h3>Access Control</h3>
                         <p>Cloud-managed entry systems with mobile credentialing and audit trails.</p>
-                        <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                        <span class="m-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="#service-smart-hands" class="service-card-wrapper">
-                    <div class="service-card animate-in">
+                <a href="#service-smart-hands" class="m-card animate-in">
+                    <div class="m-card-img">
+                        <img src="assets/images/gen/smart-hands3.jpg" alt="Technician terminating network cables on a patch panel" loading="lazy">
                         <i class="fas fa-headset"></i>
+                    </div>
+                    <div class="m-card-body">
                         <h3>Smart Hands</h3>
                         <p>White-label field support for national MSPs. Your brand, our technicians.</p>
-                        <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                        <span class="m-card-link">Learn More <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
-                <a href="ordering_system.html" class="service-card-wrapper">
-                    <div class="service-card animate-in">
+                <a href="ordering_system.html" class="m-card animate-in">
+                    <div class="m-card-img">
+                        <img src="assets/images/gen/equipment-catalog.jpg" alt="LTS turret camera, 8K NVR, mini dome camera and PoE switch from the USS equipment catalog" loading="lazy">
                         <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="m-card-body">
                         <h3>Equipment Sales</h3>
                         <p>Shop NDAA-compliant cameras, NVRs, access control, and networking gear — shipped to your door.</p>
-                        <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
+                        <span class="m-card-link">View Catalog <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
             </div>
         </div>
     </section>
 
-    <section class="section-padding diy-section">
+    <!-- ============ DIY / DIRECT SALES ============ -->
+    <section class="m-section alt">
         <div class="container">
-            <div class="diy-grid">
-                <div class="diy-content animate-in">
+            <div class="m-overlap">
+                <div class="m-overlap-media animate-in">
+                    <img src="assets/images/gen/diy-unbox5.jpg" alt="Business owner unboxing a turret security camera at a desk" loading="lazy">
+                </div>
+                <div class="m-overlap-card animate-in">
+                    <span class="m-kicker left">Direct Equipment Sales</span>
                     <h2>Prefer to Install It Yourself?</h2>
                     <p>We sell professional-grade security equipment direct — and we back every purchase with real support from people who complete professional installs as a career. No call centers, no scripts.</p>
-                    <div class="diy-features">
-                        <div class="diy-feature">
-                            <i class="fas fa-laptop-house"></i>
-                            <div>
-                                <h4>Remote System Design</h4>
-                                <p>Our design software lets us engineer a complete system for your property without ever setting foot on-site. Send us your floor plan or address and we'll spec the right cameras, cable runs, NVR, and access points — tailored to your actual layout, not a generic package.</p>
-                            </div>
-                        </div>
-                        <div class="diy-feature">
-                            <i class="fas fa-file-invoice-dollar"></i>
-                            <div>
-                                <h4>Virtual Quoting</h4>
-                                <p>Get a detailed, itemized quote without waiting for a site visit. We use satellite imagery, floor plans, and our design tools to build your quote remotely — fast, accurate, and free.</p>
-                            </div>
-                        </div>
-                        <div class="diy-feature">
-                            <i class="fas fa-headset"></i>
-                            <div>
-                                <h4>Phone & Remote Support</h4>
-                                <p>Purchased equipment from us? We'll walk you through installation, configuration, and troubleshooting over the phone or screen share. We want your system working right — whether installed by us or you.</p>
-                            </div>
-                        </div>
+                    <div class="m-checkgrid" style="grid-template-columns: 1fr;">
+                        <div class="chk"><i class="fas fa-laptop-house"></i><span><strong>Remote System Design</strong> — we engineer the complete system from your floor plan or address.</span></div>
+                        <div class="chk"><i class="fas fa-file-invoice-dollar"></i><span><strong>Virtual Quoting</strong> — itemized quotes built from satellite imagery and our design tools. Fast and free.</span></div>
+                        <div class="chk"><i class="fas fa-headset"></i><span><strong>Phone &amp; Remote Support</strong> — install, config, and troubleshooting over phone or screen share.</span></div>
+                        <div class="chk"><i class="fas fa-box-open"></i><span><strong>Pro-Grade Equipment</strong> — the same NDAA-compliant gear we install professionally.</span></div>
                     </div>
-                </div>
-                <div class="diy-cta animate-in">
-                    <div class="diy-cta-card">
-                        <i class="fas fa-box-open"></i>
-                        <h3>Shop Equipment</h3>
-                        <p>Browse our full catalog of LTS cameras, NVRs, access control, cabling, and networking equipment.</p>
-                        <a href="ordering_system.html" class="btn btn-primary">View Catalog</a>
-                    </div>
-                    <div class="diy-cta-card">
-                        <i class="fas fa-drafting-compass"></i>
-                        <h3>Get a Custom Design</h3>
-                        <p>Tell us about your property and we'll design a complete system with an itemized quote — no site visit required.</p>
-                        <a href="contact.html" class="btn btn-secondary">Request a Design</a>
+                    <div class="m-split-actions">
+                        <a href="ordering_system.html" class="m-btn m-btn-primary"><i class="fas fa-box-open"></i> View Catalog</a>
+                        <a href="contact.html" class="m-btn m-btn-outline"><i class="fas fa-drafting-compass"></i> Request a Design</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding service-detail-section" id="service-cabling">
+    <!-- ============ USS SUITE ============ -->
+    <section class="m-section" id="uss-suite">
         <div class="container">
-            <h2 class="section-title animate-in"><i class="fas fa-network-wired"></i> Structured Cabling</h2>
-            <div class="service-detail-grid">
-                <div class="service-detail-content animate-in">
-                    <h3>Our Process</h3>
-                    <p>Every cabling project starts with a comprehensive site survey and path analysis. We map cable routes, identify IDF/MDF locations, calculate load requirements, and specify materials before pulling a single foot of cable. Our installations comply with TIA-568 standards — proper bend radius, fire stopping, cable management, and labeling on every run. We test with Fluke DSX-series analyzers and deliver documented certification results.</p>
-                    <h3>Why USS</h3>
-                    <p>23 years in the field. We've wired hospitals, data centers, multi-story office buildings, industrial facilities, retail chains, and government buildings across the Kansas City metro and beyond. We're product-agnostic — we install what your project specifies, sourced through distribution partners like ADI and SES for competitive pricing and availability. We show up on time, label everything, test every run, and deliver clean as-built documentation.</p>
-                    <h3>What We Install</h3>
-                    <p>Copper (Cat5e, Cat6, Cat6A) and fiber optic (single-mode, multi-mode, OM3/OM4/OM5) with LC, SC, and MTP terminations. Full cable infrastructure: patch panels, cable trays, J-hooks, conduit, rack-and-stack, grounding and bonding. Backbone and horizontal distribution for new construction, renovations, and multi-site rollouts.</p>
-                </div>
-                <div class="service-detail-cta animate-in">
-                    <div class="service-detail-stat">
-                        <div class="stat-number">1M+</div>
-                        <div class="stat-label">Feet of Cable Professionally Ran</div>
+            <div class="m-suite animate-in">
+                <div class="m-suite-grid">
+                    <div>
+                        <span class="m-kicker left">Built By Us, For The Field</span>
+                        <img src="assets/images/uss-suite-logo.png" alt="USS Suite" style="height: 84px; width: auto; margin-bottom: 1rem; display: block;">
+                        <h2 style="color:#fff; text-align:left; margin-bottom:1rem;">USS Suite</h2>
+                        <p style="color:#c6cfdb; line-height:1.8;">The tactical mission architect for low-voltage security integrators. Design commercial security systems on satellite maps, verify coverage in 3D, and generate complete quotes — all before stepping on site. We built USS because the tools we needed didn't exist.</p>
+                        <div class="m-suite-feats">
+                            <div class="m-suite-feat"><i class="fas fa-satellite"></i><div><h4>Satellite-Based Design</h4><p>Drag-and-drop cameras, access control, and cable paths onto any building.</p></div></div>
+                            <div class="m-suite-feat"><i class="fas fa-brain"></i><div><h4>AI Site Intelligence</h4><p>Footprint detection, material ID, entry points, and risk assessment.</p></div></div>
+                            <div class="m-suite-feat"><i class="fas fa-route"></i><div><h4>Automatic Cable Routing</h4><p>Optimal paths with penetrations, conduit fills, and exact footage.</p></div></div>
+                            <div class="m-suite-feat"><i class="fas fa-cube"></i><div><h4>3D Verification</h4><p>Orbit the building, check camera FOVs, toggle WiFi heatmaps.</p></div></div>
+                            <div class="m-suite-feat"><i class="fas fa-file-invoice-dollar"></i><div><h4>Instant Quoting</h4><p>Auto-generated BOM with labor — export as PDF, CSV, or proposal.</p></div></div>
+                            <div class="m-suite-feat"><i class="fas fa-mobile-screen"></i><div><h4>Mobile Site Surveys</h4><p>Full tablet interface for on-site surveys and verification.</p></div></div>
+                        </div>
+                        <a href="system-design.html" class="m-btn m-btn-primary"><i class="fas fa-rocket"></i> Explore USS Suite</a>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Request a Site Survey</a>
+                    <div class="m-suite-shots">
+                        <img src="assets/images/uss-suite/hero-dashboard-opt.jpg" alt="USS Suite design dashboard" loading="lazy">
+                        <img src="assets/images/uss-suite/3d-mockup-opt.jpg" alt="USS Suite 3D building verification" loading="lazy">
+                        <img src="assets/images/uss-suite/site-intel.jpg" alt="USS Suite AI site intelligence" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding service-detail-section alt" id="service-surveillance">
+    <!-- ============ STRUCTURED CABLING — full-bleed band ============ -->
+    <section class="m-bleed" id="service-cabling">
+        <div class="m-bleed-bg"><img src="assets/images/gen/cabling-rack2c.jpg" alt="Neatly organized network cabling routed into a server rack" loading="lazy"></div>
         <div class="container">
-            <h2 class="section-title animate-in"><i class="fas fa-video"></i> Surveillance Systems</h2>
-            <div class="service-detail-grid">
-                <div class="service-detail-content animate-in">
-                    <h3>Our Process</h3>
+            <div class="m-bleed-content animate-in">
+                <span class="m-kicker left">01 / Infrastructure</span>
+                <h2><i class="fas fa-network-wired"></i> Structured Cabling</h2>
+                <p>Every cabling project starts with a comprehensive site survey and path analysis. We map cable routes, identify IDF/MDF locations, calculate load requirements, and specify materials before pulling a single foot of cable. TIA-568 compliant, Fluke DSX certified, documented on every run.</p>
+                <div class="m-checkgrid">
+                    <div class="chk"><i class="fas fa-check"></i><span>Cat5e / Cat6 / Cat6A copper</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Single &amp; multi-mode fiber (OM3/OM4/OM5)</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Patch panels, trays, J-hooks, conduit</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Rack-and-stack, cable management &amp; labeling</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Fluke DSX certification &amp; documentation</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>New construction &amp; multi-site rollouts</span></div>
+                </div>
+                <div class="m-floatcard">
+                    <div class="fc"><div class="num">23</div><div class="lbl">Years in the Field</div></div>
+                    <div class="fc"><div class="num">TIA-568</div><div class="lbl">Standards Compliant</div></div>
+                    <div class="fc"><div class="num">Fluke DSX</div><div class="lbl">Certified Testing</div></div>
+                </div>
+                <div class="m-split-actions">
+                    <a href="contact.html" class="m-btn m-btn-primary">Request a Site Survey</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SURVEILLANCE ============ -->
+    <section class="m-section" id="service-surveillance">
+        <div class="container">
+            <div class="m-feature-band">
+                <div class="m-feature-media animate-in">
+                    <img src="assets/images/gen/cctv-dome-install.jpg" alt="Dome security camera cleanly flush-mounted on a commercial ceiling" loading="lazy">
+                    <div class="m-media-stat">
+                        <div class="num">NDAA</div>
+                        <div class="lbl">Compliant Equipment</div>
+                    </div>
+                </div>
+                <div class="m-split-body animate-in">
+                    <span class="m-kicker left">02 / Video Security</span>
+                    <h2><i class="fas fa-video"></i> Surveillance Systems</h2>
                     <p>We design surveillance systems around your actual security posture and operational requirements — not a pre-packaged bundle. Camera placement, lens selection, NVR sizing, network bandwidth, and storage retention are all engineered for your specific site, risk profile, and compliance needs. Full lifecycle delivery: site assessment, system design, installation, configuration, user training, and ongoing support.</p>
-                    <h3>Why USS</h3>
-                    <p>23 years deploying surveillance across every environment — small businesses, enterprise campuses, retail chains, industrial facilities, healthcare, and government. We are product-agnostic and design around the best fit for your project. Through our distribution partnerships with ADI and SES, we have access to every major manufacturer at competitive pricing with fast fulfillment. Every system is NDAA-compliant and built for remote management.</p>
-                    <h3>What We Install</h3>
-                    <p>IP cameras from 2MP to 4K, PTZ, thermal, license plate recognition (LPR), and AI-powered analytics. NVRs from 8 to 256+ channels with RAID storage configurations. Video management systems (VMS), remote viewing apps, and cloud-managed platforms. Full network infrastructure to support your surveillance backbone.</p>
-                </div>
-                <div class="service-detail-cta animate-in">
-                    <div class="service-detail-stat">
-                        <div class="stat-number">2,500+</div>
-                        <div class="stat-label">Cameras Deployed</div>
+                    <p>23 years deploying surveillance across every environment — small businesses, enterprise campuses, retail chains, industrial facilities, healthcare, and government. Every system is NDAA-compliant and built for remote management.</p>
+                    <div class="m-checkgrid">
+                        <div class="chk"><i class="fas fa-check"></i><span>IP cameras 2MP–4K, dome, bullet &amp; turret</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>PTZ, thermal &amp; license plate recognition (LPR)</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>AI-powered analytics &amp; alerts</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>NVRs 8–256+ channels with RAID storage</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>VMS, remote viewing &amp; cloud platforms</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>Full surveillance network backbone</span></div>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Request an Assessment</a>
+                    <div class="m-split-actions">
+                        <a href="contact.html" class="m-btn m-btn-primary">Request an Assessment</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding service-detail-section" id="service-networking">
+    <!-- ============ NETWORK ENGINEERING ============ -->
+    <section class="m-section alt" id="service-networking">
         <div class="container">
-            <h2 class="section-title animate-in"><i class="fas fa-microchip"></i> Network Engineering</h2>
-            <div class="service-detail-grid">
-                <div class="service-detail-content animate-in">
-                    <h3>Our Process</h3>
+            <div class="m-feature-band flip">
+                <div class="m-feature-media animate-in">
+                    <img src="assets/images/stock/network-switch.jpg" alt="Enterprise network switch with fiber uplinks" loading="lazy">
+                    <div class="m-media-stat">
+                        <div class="num">TIA-568</div>
+                        <div class="lbl">Standards Compliant</div>
+                    </div>
+                </div>
+                <div class="m-split-body animate-in">
+                    <span class="m-kicker left">03 / Connectivity</span>
+                    <h2><i class="fas fa-microchip"></i> Network Engineering</h2>
                     <p>We plan, deploy, and troubleshoot enterprise network infrastructure — from switching and routing to wireless mesh and fiber backbones. Every deployment starts with a network assessment and ends with documented configurations, testing results, and handoff documentation. We handle new builds, renovations, and multi-site rollouts.</p>
-                    <h3>Why USS</h3>
-                    <p>23 years of hands-on network engineering. Hundreds of deployments across corporate offices, retail locations, warehouses, healthcare facilities, and industrial sites. We're product-agnostic — we design around what works for your environment and budget, sourced through ADI and SES for competitive pricing. We don't just plug things in and leave — we engineer networks that are reliable, documented, and scalable.</p>
-                    <h3>What We Install</h3>
-                    <p>Enterprise switching and routing, wireless LAN controllers and access points, firewall and security appliances, fiber distribution systems, and WAN/LAN infrastructure. Wireless site surveys, heat mapping, and performance optimization. Full rack-and-stack, cable management, and labeling.</p>
-                </div>
-                <div class="service-detail-cta animate-in">
-                    <div class="service-detail-stat">
-                        <div class="stat-number">500+</div>
-                        <div class="stat-label">Networks Engineered</div>
+                    <div class="m-steps">
+                        <div class="m-step"><span class="step-num">STEP 01</span><h4>Assess</h4><p>Network assessment, wireless site survey, and heat mapping of your environment.</p></div>
+                        <div class="m-step"><span class="step-num">STEP 02</span><h4>Engineer</h4><p>Switching, routing, firewalls, and WiFi designed around your density and budget.</p></div>
+                        <div class="m-step"><span class="step-num">STEP 03</span><h4>Deploy</h4><p>Rack-and-stack, cable management, labeling, and clean installation.</p></div>
+                        <div class="m-step"><span class="step-num">STEP 04</span><h4>Document</h4><p>Tested configs, performance results, and full handoff documentation.</p></div>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Request an Assessment</a>
+                    <div class="m-split-actions">
+                        <a href="contact.html" class="m-btn m-btn-primary">Request an Assessment</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding service-detail-section alt" id="service-access">
+    <!-- ============ ACCESS CONTROL ============ -->
+    <section class="m-section" id="service-access">
         <div class="container">
-            <h2 class="section-title animate-in"><i class="fas fa-door-open"></i> Access Control</h2>
-            <div class="service-detail-grid">
-                <div class="service-detail-content animate-in">
-                    <h3>Our Process</h3>
+            <div class="m-feature-band">
+                <div class="m-feature-media animate-in">
+                    <img src="assets/images/gen/access-reader2.jpg" alt="Wall-mounted access control card reader beside a commercial glass door" loading="lazy">
+                    <div class="m-media-stat">
+                        <div class="num">250+</div>
+                        <div class="lbl">Locations Secured</div>
+                    </div>
+                </div>
+                <div class="m-split-body animate-in">
+                    <span class="m-kicker left">04 / Entry Systems</span>
+                    <h2><i class="fas fa-door-open"></i> Access Control</h2>
                     <p>We design, install, and configure electronic access control systems that let you manage who enters your facility, when, and through which doors. From single-door standalone readers to multi-site cloud-managed platforms with hundreds of doors, we engineer around your operational requirements, compliance needs, and growth plans.</p>
-                    <h3>Why USS</h3>
-                    <p>23 years of experience integrating access control with buildings, IT networks, surveillance systems, and security policies. We handle the full picture — door hardware, locking systems, wiring infrastructure, controller programming, credential enrollment, and system integration. Product-agnostic with access to every major manufacturer through ADI and SES distribution.</p>
-                    <h3>What We Install</h3>
-                    <p>Card readers, fob systems, mobile credentials, biometric readers, keypad entry, electromagnetic locks, electric strikes, panic hardware, door position sensors, and request-to-exit devices. Cloud-managed and on-premise platforms. Integration with video surveillance for event-triggered recording and visual verification.</p>
-                </div>
-                <div class="service-detail-cta animate-in">
-                    <div class="service-detail-stat">
-                        <div class="stat-number">250+</div>
-                        <div class="stat-label">Locations Audited, Secured & Monitored</div>
+                    <p>23 years of experience integrating access control with buildings, IT networks, surveillance systems, and security policies. We handle the full picture — door hardware, locking systems, wiring infrastructure, controller programming, credential enrollment, and system integration.</p>
+                    <div class="m-checkgrid">
+                        <div class="chk"><i class="fas fa-check"></i><span>Card readers, fobs &amp; mobile credentials</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>Biometric &amp; keypad entry</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>Mag-locks, electric strikes, crash bars</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>Door position &amp; request-to-exit sensors</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>Cloud-managed &amp; on-premise platforms</span></div>
+                        <div class="chk"><i class="fas fa-check"></i><span>Video integration &amp; visual verification</span></div>
                     </div>
-                    <a href="contact.html" class="btn btn-primary">Request a Site Survey</a>
+                    <div class="m-split-actions">
+                        <a href="contact.html" class="m-btn m-btn-primary">Request a Site Survey</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="section-padding service-detail-section" id="service-smart-hands">
+    <!-- ============ SMART HANDS — full-bleed band (right) ============ -->
+    <section class="m-bleed right" id="service-smart-hands">
+        <div class="m-bleed-bg"><img src="assets/images/gen/smart-hands3.jpg" alt="Field technician terminating network cables on a patch panel" loading="lazy"></div>
         <div class="container">
-            <h2 class="section-title animate-in"><i class="fas fa-headset"></i> Smart Hands & Field Services</h2>
-            <div class="service-detail-grid">
-                <div class="service-detail-content animate-in">
-                    <h3>Our Process</h3>
-                    <p>National MSPs and technology companies trust us as their local field team in Kansas City. We respond to dispatch requests within your SLA windows, execute site-specific scopes of work, document everything with photos and detailed notes, and report back through your ticketing system — your brand, our technicians.</p>
-                    <h3>Why USS</h3>
-                    <p>23 years of field experience across every low-voltage discipline. When an MSP dispatches a local tech, that tech represents your brand. We take that seriously. Our technicians are professional, punctual, and technically competent across structured cabling, networking, surveillance, access control, and general IT infrastructure. This is a service no other local integrator in KC offers at our scale.</p>
-                    <h3>What We Cover</h3>
-                    <p>Equipment installation, replacement, and decommissioning. Troubleshooting and diagnostics. Cable testing and certification. Site surveys and as-built documentation. Rack-and-stack, patch panel termination, AP mounting, camera repositioning, door hardware adjustments, and general IT field work. Multi-site rollout coordination.</p>
-                    <h3>Trusted By</h3>
-                    <div class="equipment-logos">
-                        <img src="assets/images/partners/fieldnation.svg" alt="Field Nation" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/wachter.svg" alt="Wachter" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/walmart.svg" alt="Walmart" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/target.svg" alt="Target" loading="lazy" width="80" height="40">
-                        <img src="assets/images/partners/homedepot.svg" alt="Home Depot" loading="lazy" width="80" height="40">
-                    </div>
+            <div class="m-bleed-content animate-in">
+                <span class="m-kicker left">05 / Field Services</span>
+                <h2><i class="fas fa-headset"></i> Smart Hands &amp; Field Services</h2>
+                <p>National MSPs and technology companies trust us as their local field team in Kansas City. We respond inside your SLA windows, execute site-specific scopes, document with photos and detailed notes, and report back through your ticketing system — your brand, our technicians.</p>
+                <div class="m-checkgrid">
+                    <div class="chk"><i class="fas fa-check"></i><span>Structured cabling &amp; certification</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Surveillance &amp; access control</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Cellular systems &amp; Starlink installs</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>EAS &amp; self-checkout systems</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Commercial AV &amp; menu boards</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Telecom, POTS &amp; VoIP</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Equipment install, swap &amp; decommission</span></div>
+                    <div class="chk"><i class="fas fa-check"></i><span>Multi-site rollout coordination</span></div>
                 </div>
-                <div class="service-detail-cta animate-in">
-                    <div class="service-detail-stat">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-label">Dispatch Ready</div>
-                    </div>
-                    <a href="msp.html" class="btn btn-primary">MSP Partnership Info</a>
+                <div class="m-split-actions">
+                    <a href="msp.html" class="m-btn m-btn-primary">MSP Partnership Info</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="cta-section">
+    <!-- ============ STATS — edge-to-edge strip ============ -->
+    <section class="m-section" style="padding: 0;">
+        <div class="m-strip animate-in">
+        <div class="cell lead">Proven in the field — credentials that verify.</div>
+        <div class="cell"><div class="num" data-count="23">23</div><div class="lbl">Years of Experience</div></div>
+        <div class="cell"><div class="num">$2M</div><div class="lbl">General Liability</div></div>
+        <div class="cell"><div class="num">NDAA</div><div class="lbl">Compliant Equipment</div></div>
+        </div>
+    </section>
+
+    <!-- ============ MSP CTA BAND ============ -->
+    <section class="m-cta">
+        <div class="m-cta-bg"><img src="assets/images/stock/office-building.jpg" alt="Corporate office towers" loading="lazy"></div>
+        <div class="m-cta-overlay"></div>
         <div class="container">
-            <h2 class="animate-in">ARE YOU AN MSP?</h2>
-            <p class="animate-in">We deploy as your white-label field team in Kansas City. Structured cabling, surveillance, access control — all under your brand.</p>
-            <div style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
-                <a href="msp.html" class="btn btn-primary animate-in"><i class="fas fa-rocket"></i> MSP Partnership Info</a>
-                <a href="contact.html" class="btn btn-secondary animate-in"><i class="fas fa-paper-plane"></i> Get a Quote</a>
+            <h2 class="animate-in">Are You An MSP?</h2>
+            <p class="animate-in">We deploy as your white-label field team in Kansas City. Structured cabling, surveillance, and access control — plus cellular systems, Starlink, EAS, self-checkout, commercial AV, telecom, POTS, and VoIP — all under your brand.</p>
+            <div class="m-chips animate-in">
+                <span class="chip">Structured Cabling</span>
+                <span class="chip">Surveillance</span>
+                <span class="chip">Access Control</span>
+                <span class="chip">Cellular Systems</span>
+                <span class="chip">Starlink</span>
+                <span class="chip">EAS</span>
+                <span class="chip">Self-Checkout</span>
+                <span class="chip">Commercial AV</span>
+                <span class="chip">Telecom</span>
+                <span class="chip">POTS</span>
+                <span class="chip">VoIP</span>
+            </div>
+            <div class="m-hero-actions animate-in" style="margin-top:2.2rem;">
+                <a href="msp.html" class="m-btn m-btn-primary"><i class="fas fa-rocket"></i> MSP Partnership Info</a>
+                <a href="contact.html" class="m-btn m-btn-ghost"><i class="fas fa-paper-plane"></i> Get a Quote</a>
             </div>
         </div>
     </section>
 
-    <section class="section-padding">
-        <div class="container" style="text-align:center;">
-            <h2 class="section-title animate-in">CLIENT SUCCESS</h2>
-        </div>
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="m-section">
         <div class="container">
-            <div class="testimonial-grid">
-                <div class="testimonial-card animate-in">
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Client Success</span>
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="m-quotes">
+                <div class="m-quote animate-in">
                     <i class="fas fa-quote-left"></i>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p>"Ultimate Security Solutions was the perfect partner to have on our Access Control project. They went above and beyond with their services."</p>
-                    <p class="author">- Zachary Harmison</p>
+                    <p class="author">— Zachary Harmison</p>
                 </div>
-                <div class="testimonial-card animate-in">
+                <div class="m-quote animate-in">
                     <i class="fas fa-quote-left"></i>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p>"Consistently excellent work. Very knowledgeable with electronics, electrical and networking. Handled troubleshooting and cleanup tasks with ease."</p>
-                    <p class="author">- Senior IT Support, Video Mining Corporation</p>
+                    <p class="author">— Senior IT Support, Video Mining Corporation</p>
                 </div>
-                <div class="testimonial-card animate-in">
+                <div class="m-quote animate-in">
                     <i class="fas fa-quote-left"></i>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     <p>"They have gone out of their way to accommodate our tight schedule and vast changes. A very diligent team, knowledgeable and thorough!"</p>
-                    <p class="author">- Operations Manager</p>
+                    <p class="author">— Operations Manager</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section-padding">
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="m-section alt">
         <div class="container" style="text-align:center;">
-            <div class="cta-massive-wrapper animate-in">
-                <a href="contact.html" class="btn btn-massive-cta">
-                    <span class="cta-label">PROFESSIONAL SECURITY SOLUTIONS</span>
-                    <i class="fas fa-shield-check"></i>
-                </a>
+            <div class="m-section-head animate-in">
+                <span class="m-kicker">Get Started</span>
+                <h2>Professional Security Solutions</h2>
+                <p>Call, email, or request a quote — most site surveys are scheduled within 48 hours.</p>
             </div>
             <div class="contact-strip animate-in">
                 <a href="tel:8167872061" class="contact-info-block">
@@ -471,17 +558,61 @@
                     <p>KC Metro (100mi)</p>
                 </a>
             </div>
-            <a href="contact.html" class="btn btn-primary animate-in" style="margin-top:3rem;"><i class="fas fa-arrow-right"></i> REQUEST A QUOTE</a>
+            <a href="contact.html" class="m-btn m-btn-primary animate-in" style="margin-top:3rem;"><i class="fas fa-arrow-right"></i> Request a Quote</a>
         </div>
     </section>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="m-footer">
         <div class="container">
-            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+            <div class="m-footer-grid">
+                <div class="m-footer-brand">
+                    <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                    <p>Veteran-owned security &amp; IT integrator headquartered in Independence, MO — serving the Kansas City metro for over two decades. Structured cabling, surveillance, access control, networking, and white-label field services.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#service-cabling">Structured Cabling</a></li>
+                        <li><a href="index.html#service-surveillance">Surveillance Systems</a></li>
+                        <li><a href="index.html#service-networking">Network Engineering</a></li>
+                        <li><a href="index.html#service-access">Access Control</a></li>
+                        <li><a href="index.html#service-smart-hands">Smart Hands</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Capabilities</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service_area.html">Service Area</a></li>
+                        <li><a href="ordering_system.html">Equipment Catalog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="m-footer-contact">
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:8167872061">(816) 787-2061</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:nate@usstech.net">nate@usstech.net</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i>Independence, MO — KC Metro (100mi)</li>
+                        <li><i class="fas fa-clock"></i>24/7 Dispatch Availability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-footer-bottom">
+                <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+                <div class="m-footer-badges">
+                    <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+                    <span><i class="fas fa-flag-usa"></i> Veteran Owned</span>
+                    <span><i class="fas fa-check-circle"></i> NDAA Compliant</span>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modern.js"></script>
     <script src="assets/js/feedback.js"></script>
     <script>
         function toggleSubmenu(trigger) {

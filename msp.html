@@ -17,58 +17,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles-modern.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .msp-hero {
-            position: relative;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 20px 80px;
-            overflow: hidden;
-        }
-        .msp-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(2, 6, 23, 0.95) 0%, rgba(15, 23, 42, 0.9) 50%, rgba(2, 6, 23, 0.95) 100%);
-            z-index: 0;
-        }
-        .msp-hero .container { position: relative; z-index: 1; }
-        .msp-hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(184, 149, 58, 0.1);
-            border: 1px solid var(--color-accent);
-            color: var(--color-accent);
-            padding: 6px 16px;
-            font-weight: 700;
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            margin-bottom: 1.5rem;
-        }
-        .msp-hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-        .msp-hero h1 span { color: var(--color-accent); }
-        .msp-hero-sub {
-            font-size: 1.2rem;
-            color: var(--color-muted);
-            max-width: 600px;
-            line-height: 1.7;
-            border-left: 4px solid var(--color-accent);
-            padding-left: 1.5rem;
-            margin-bottom: 2rem;
-        }
+        .m-pagebanner h1 span { color: var(--color-accent); }
+        .m-pagebanner .msp-trust-bar { justify-content: center; }
+
         .msp-trust-bar {
             display: flex;
             gap: 2rem;
             flex-wrap: wrap;
             padding-top: 2rem;
+            margin-top: 2rem;
             border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         .msp-trust-item {
@@ -79,57 +40,6 @@
             font-size: 0.85rem;
         }
         .msp-trust-item i { color: var(--color-accent); font-size: 0.9rem; }
-
-        /* Stats */
-        .msp-stats {
-            background: rgba(184, 149, 58, 0.03);
-            border-top: 1px solid rgba(184, 149, 58, 0.1);
-            border-bottom: 1px solid rgba(184, 149, 58, 0.1);
-            padding: 3rem 20px;
-        }
-        .msp-stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .msp-stat-item .stat-num {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--color-accent);
-            font-family: var(--font-header);
-            line-height: 1;
-            margin-bottom: 0.3rem;
-        }
-        .msp-stat-item .stat-desc {
-            font-size: 0.85rem;
-            color: var(--color-muted);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Services List */
-        .services-list { max-width: 900px; margin: 0 auto; }
-        .service-row {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid rgba(184, 149, 58, 0.1);
-        }
-        .service-row:last-child { border-bottom: none; }
-        .service-row i {
-            color: var(--color-accent);
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
-            flex-shrink: 0;
-            width: 40px;
-            text-align: center;
-        }
-        .service-row h3 { font-size: 1.1rem; margin-bottom: 0.3rem; }
-        .service-row p { color: var(--color-muted); font-size: 0.9rem; line-height: 1.6; }
 
         /* Partner Logos */
         .partner-logos {
@@ -270,8 +180,6 @@
         .faq-a.open { max-height: 300px; }
 
         @media (max-width: 768px) {
-            .msp-hero { min-height: auto; padding: 100px 20px 60px; }
-            .msp-hero h1 { font-size: 2rem; }
             .msp-trust-bar { gap: 1rem; }
             .contact-options { flex-direction: column; align-items: center; }
         }
@@ -282,184 +190,190 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                <span class="nav-brand-text">
+                    <span class="b1">ULTIMATE SECURITY SOLUTIONS</span>
+                    <span class="b2">Engineers for the AI Age</span>
+                </span>
             </a>
+
             <div class="nav-mobile-toggle" id="mobile-toggle">
                 <span></span><span></span><span></span>
             </div>
+
             <div class="nav-links-wrapper">
-                <a href="index.html" class="nav-link-item">Home
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="about.html" class="nav-link-item">Capabilities
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="service_area.html" class="nav-link-item">Service Area
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="index.html" class="nav-link-item">Home</a>
+                <a href="about.html" class="nav-link-item">Capabilities</a>
+                <a href="service_area.html" class="nav-link-item">Service Area</a>
+                <a href="partners.html" class="nav-link-item">Partners</a>
                 <div class="dropdown nav-link-item">
                     <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                     <div class="dropdown-content mega-dropdown">
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">CAMERAS</div>
-                            <a href="ordering_system.html?cat=platinum&type=camera">Platinum Series</a>
-                            <a href="ordering_system.html?cat=pro&type=camera">Pro-X Series</a>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">IP Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=ip">Platinum IP Cameras</a>
-                                    <a href="ordering_system.html?cat=pro&type=ip">Pro-X IP Cameras</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">HD-TVI Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=tvi">Platinum HD-TVI</a>
-                                    <a href="ordering_system.html?cat=pro&type=tvi">Pro-X HD-TVI</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">PTZ Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=ptz">Platinum PTZ</a>
-                                    <a href="ordering_system.html?cat=pro&type=ptz">Pro-X PTZ</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">Multisensor <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=multisensor">Platinum Multisensor</a>
-                                    <a href="ordering_system.html?cat=pro&type=multisensor">Pro-X Multisensor</a>
-                                </div>
-                            </div>
+                            <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                            <a href="ordering_system.html?cat=tvi">HD-TVI Cameras</a>
+                            <a href="ordering_system.html?cat=ptz">PTZ Cameras</a>
+                            <a href="ordering_system.html?cat=multisensor">Multisensor Cameras</a>
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">RECORDERS</div>
-                            <a href="ordering_system.html?cat=platinum&type=nvr">Platinum NVRs</a>
-                            <a href="ordering_system.html?cat=pro&type=nvr">Pro-X NVRs</a>
-                            <a href="ordering_system.html?cat=platinum&type=hvr">Platinum HVRs</a>
-                            <a href="ordering_system.html?cat=pro&type=hvr">Pro-X HVRs</a>
-                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <div class="dropdown-header">STORAGE</div>
-                            <a href="ordering_system.html?type=hdd">Hard Drives</a>
-                            <a href="ordering_system.html?type=ssd">SSD Storage</a>
+                            <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                            <a href="ordering_system.html?cat=dvr">DVR Systems</a>
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">ACCESS CONTROL</div>
-                            <a href="ordering_system.html?type=access">Access Controllers</a>
-                            <a href="ordering_system.html?type=reader">Card Readers</a>
-                            <a href="ordering_system.html?type=lock">Electric Locks</a>
-                            <a href="ordering_system.html?type=credential">Credentials</a>
+                            <a href="ordering_system.html?cat=access">All Access Control</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
                             <div class="dropdown-header">NETWORKING</div>
-                            <a href="ordering_system.html?type=switch">Network Switches</a>
-                            <a href="ordering_system.html?type=poe">PoE Injectors</a>
-                            <a href="ordering_system.html?type=transceiver">Transceivers</a>
+                            <a href="ordering_system.html?cat=network">Network Equipment</a>
                         </div>
                         <div class="mega-dropdown-column">
-                            <div class="dropdown-header">CABLING & ACCESSORIES</div>
-                            <a href="ordering_system.html?type=cable">Cable & Wire</a>
-                            <a href="ordering_system.html?type=connector">Connectors</a>
-                            <a href="ordering_system.html?type=power">Power Supplies</a>
-                            <a href="ordering_system.html?type=mount">Camera Mounts</a>
-                            <a href="ordering_system.html?type=housing">Camera Housings</a>
+                            <div class="dropdown-header">PERIPHERALS</div>
+                            <a href="ordering_system.html?cat=peripherals">Power &amp; Accessories</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">View Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
                         </div>
                     </div>
                 </div>
-                <a href="system-design.html" class="nav-link-item">USS Suite
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="msp.html" class="nav-link-item active">Hire Us
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="reviews.html" class="nav-link-item">Reviews
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="contact.html" class="nav-link-item">Contact
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="system-design.html" class="nav-link-item">USS Suite</a>
+                <a href="msp.html" class="nav-link-item active">Hire Us (MSP)</a>
+                <a href="reviews.html" class="nav-link-item">Reviews</a>
+                <a href="contact.html" class="nav-link-item">Contact</a>
             </div>
+
             <div class="nav-spacer"></div>
+
             <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
         </div>
     </nav>
 
     <main id="main-content">
-        <!-- Hero -->
-        <header class="msp-hero">
+        <!-- Page Banner -->
+        <header class="m-pagebanner">
+            <div class="m-pagebanner-bg"><img src="assets/images/stock/server-room.jpg" alt="Server room infrastructure" fetchpriority="high"></div>
+            <div class="m-pagebanner-overlay"></div>
             <div class="container">
-                <div class="msp-hero-badge animate-in"><i class="fas fa-handshake"></i> FIELD SERVICES FOR MSPs & COMMERCIAL PARTNERS</div>
+                <div class="header-badge animate-in"><i class="fas fa-handshake"></i> FIELD SERVICES FOR MSPs & COMMERCIAL PARTNERS</div>
                 <h1 class="animate-in">YOUR WHITE-LABEL<br><span>FIELD TEAM IN KC.</span></h1>
-                <p class="msp-hero-sub animate-in">We deploy as your local boots on the ground in Kansas City. Structured cabling, surveillance rollouts, access control, and smart hands — all under your brand.</p>
+                <p class="animate-in">We deploy as your local boots on the ground in Kansas City. Structured cabling, surveillance rollouts, access control, and smart hands — plus cellular systems, Starlink, EAS, self-checkout, commercial AV, telecom, POTS, and VoIP — all under your brand.</p>
                 <div class="msp-trust-bar animate-in">
                     <div class="msp-trust-item"><i class="fas fa-shield-alt"></i> $2M General Liability</div>
                     <div class="msp-trust-item"><i class="fas fa-file-contract"></i> Workers' Comp Covered</div>
                     <div class="msp-trust-item"><i class="fas fa-clock"></i> 23 Years Experience</div>
                     <div class="msp-trust-item"><i class="fas fa-clock"></i> Any Shift Availability</div>
                 </div>
+                <div class="m-chips animate-in">
+                    <span class="chip">Structured Cabling</span>
+                    <span class="chip">Surveillance</span>
+                    <span class="chip">Access Control</span>
+                    <span class="chip">Cellular Systems</span>
+                    <span class="chip">Starlink</span>
+                    <span class="chip">EAS</span>
+                    <span class="chip">Self-Checkout</span>
+                    <span class="chip">Commercial AV</span>
+                    <span class="chip">Telecom</span>
+                    <span class="chip">POTS</span>
+                    <span class="chip">VoIP</span>
+                </div>
             </div>
         </header>
 
-        <!-- Stats -->
-        <section class="msp-stats">
-            <div class="msp-stats-grid">
-                <div class="msp-stat-item animate-in"><div class="stat-num">100%</div><div class="stat-desc">Subcontractor Fidelity</div></div>
-                <div class="msp-stat-item animate-in"><div class="stat-num">24/7</div><div class="stat-desc">Dispatch Availability</div></div>
-                <div class="msp-stat-item animate-in"><div class="stat-num">100mi</div><div class="stat-desc">KC Metro Coverage</div></div>
-                <div class="msp-stat-item animate-in"><div class="stat-num">0</div><div class="stat-desc">Hand-Holding Required</div></div>
+        <!-- Stats — edge-to-edge strip -->
+        <section class="m-section alt" style="padding: 0;">
+            <div class="m-strip animate-in">
+                <div class="cell lead">Your brand. Our technicians. Zero hand-holding.</div>
+                <div class="cell"><div class="num" data-count="100" data-suffix="%">100%</div><div class="lbl">Subcontractor Fidelity</div></div>
+                <div class="cell"><div class="num">24/7</div><div class="lbl">Dispatch Availability</div></div>
+                <div class="cell"><div class="num" data-count="100" data-suffix="mi">100mi</div><div class="lbl">KC Metro Coverage</div></div>
             </div>
         </section>
 
-        <!-- What We Do -->
-        <section class="section-padding">
+        <!-- What We Do: Smart Hands & Wireless -->
+        <section class="m-bleed" style="min-height: 560px;">
+            <div class="m-bleed-bg"><img src="assets/images/gen/smart-hands3.jpg" alt="Technician terminating network cables on a patch panel" loading="lazy"></div>
             <div class="container">
-                <h2 class="section-title animate-in">WHAT WE DO</h2>
-                <div class="services-list">
-                    <div class="service-row animate-in">
-                        <i class="fas fa-tools"></i>
-                        <div>
-                            <h3>Smart Hands & Field Tech</h3>
-                            <p>On-demand dispatch for rack & stack, cable runs, terminations, demarc extensions, circuit turn-ups, troubleshooting, and diagnostics. After-hours and weekend availability.</p>
+                <div class="m-bleed-content animate-in">
+                    <span class="m-kicker left">01 / Field Services</span>
+                    <h2><i class="fas fa-tools"></i> Smart Hands &amp; Field Services</h2>
+                    <p><strong style="color:#fff;">Smart Hands &amp; Field Tech</strong> — on-demand dispatch for rack &amp; stack, cable runs, terminations, demarc extensions, circuit turn-ups, troubleshooting, and diagnostics. After-hours and weekend availability.</p>
+                    <p><strong style="color:#fff;">Wireless &amp; Network Infrastructure</strong> — wireless site surveys, AP mounting and configuration, switch installs, and network closet cleanup.</p>
+                    <p><strong style="color:#fff;">Cellular, Starlink &amp; Telecom</strong> — cellular signal systems, Starlink installs, POTS line replacement, VoIP deployments, and carrier handoffs.</p>
+                    <div class="m-split-actions">
+                        <a href="contact.html" class="m-btn m-btn-primary">Request a Dispatch</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Structured Cabling & Equipment -->
+        <section class="m-section alt">
+            <div class="container">
+                <div class="m-split reverse">
+                    <div class="m-split-media animate-in">
+                        <img src="assets/images/gen/cabling-rack2c.jpg" alt="Neatly organized network cabling routed into a server rack" loading="lazy">
+                        <div class="m-media-stat">
+                            <div class="num">100%</div>
+                            <div class="lbl">Tested & Documented</div>
                         </div>
                     </div>
-                    <div class="service-row animate-in">
-                        <i class="fas fa-network-wired"></i>
-                        <div>
-                            <h3>Structured Cabling</h3>
-                            <p>Cat6 and fiber optic cabling for new construction, tenant buildouts, and retrofits. Fully tested, labeled, and documented with photo closeout packages.</p>
+                    <div class="m-split-body animate-in">
+                        <span class="m-kicker left">02 / Infrastructure</span>
+                        <h2><i class="fas fa-network-wired"></i> Cabling & Equipment</h2>
+                        <h3>Structured Cabling</h3>
+                        <p>Cat6 and fiber optic cabling for new construction, tenant buildouts, and retrofits. Fully tested, labeled, and documented with photo closeout packages.</p>
+                        <h3>Equipment Supply</h3>
+                        <p>NDAA-compliant LTS/Hikvision cameras, NVRs, access control hardware, and networking gear at distributor pricing. Drop-ship or hand-deliver.</p>
+                        <div class="m-split-actions">
+                            <a href="contact.html" class="m-btn m-btn-primary">Request a Quote</a>
                         </div>
                     </div>
-                    <div class="service-row animate-in">
-                        <i class="fas fa-video"></i>
-                        <div>
-                            <h3>Surveillance System Installs</h3>
-                            <p>End-to-end CCTV and IP camera deployments — mounting, aiming, cable runs, NVR setup, and client handoff. Multi-site rollouts our specialty.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Surveillance & Access Control -->
+        <section class="m-section">
+            <div class="container">
+                <div class="m-split">
+                    <div class="m-split-media animate-in">
+                        <img src="assets/images/gen/access-reader2.jpg" alt="Wall-mounted access control card reader beside a commercial door" loading="lazy">
+                        <div class="m-media-stat">
+                            <div class="num">Multi-Site</div>
+                            <div class="lbl">Rollout Specialty</div>
                         </div>
                     </div>
-                    <div class="service-row animate-in">
-                        <i class="fas fa-key"></i>
-                        <div>
-                            <h3>Access Control Deployment</h3>
-                            <p>Card readers, controllers, electric strikes, magnetic locks, and full system commissioning. We follow your SOPs and documentation standards.</p>
+                    <div class="m-split-body animate-in">
+                        <span class="m-kicker left">03 / Security Systems</span>
+                        <h2><i class="fas fa-video"></i> Surveillance & Access Control</h2>
+                        <h3>Surveillance System Installs</h3>
+                        <p>End-to-end CCTV and IP camera deployments — mounting, aiming, cable runs, NVR setup, and client handoff. Multi-site rollouts our specialty.</p>
+                        <h3>Access Control Deployment</h3>
+                        <p>Card readers, controllers, electric strikes, magnetic locks, and full system commissioning. We follow your SOPs and documentation standards.</p>
+                        <h3>EAS & Loss Prevention</h3>
+                        <p>Electronic article surveillance (EAS) pedestal installs, tagging systems, and retail loss-prevention hardware — deployed and maintained under your brand.</p>
+                        <div class="m-split-actions">
+                            <a href="contact.html" class="m-btn m-btn-primary">Start a Rollout</a>
                         </div>
                     </div>
-                    <div class="service-row animate-in">
-                        <i class="fas fa-wifi"></i>
-                        <div>
-                            <h3>Wireless & Network Infrastructure</h3>
-                            <p>Wireless site surveys, AP mounting and configuration, switch installs, and network closet cleanup. Full infrastructure support.</p>
-                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retail Technology & Commercial AV — overlap layout -->
+        <section class="m-section alt">
+            <div class="container">
+                <div class="m-overlap">
+                    <div class="m-overlap-media animate-in">
+                        <img src="assets/images/gen/menuboard3.jpg" alt="Digital menu board installation at a quick-service drive-thru" loading="lazy">
                     </div>
-                    <div class="service-row animate-in">
-                        <i class="fas fa-box"></i>
-                        <div>
-                            <h3>Equipment Supply</h3>
-                            <p>NDAA-compliant LTS/Hikvision cameras, NVRs, access control hardware, and networking gear at distributor pricing. Drop-ship or hand-deliver.</p>
+                    <div class="m-overlap-card animate-in">
+                        <span class="m-kicker left">04 / Retail &amp; AV</span>
+                        <h2><i class="fas fa-tv"></i> Retail Tech &amp; Commercial AV</h2>
+                        <p><strong style="color:#fff;">Commercial AV &amp; Menu Boards</strong> — menu board and digital display installs for QSR, retail, and commercial spaces: mounting, cabling, media players, and clean closeouts.</p>
+                        <p><strong style="color:#fff;">Self-Checkout Systems</strong> — kiosk deployment, cabling, networking, and ongoing field support for grocery, retail, and convenience rollouts.</p>
+                        <div class="m-split-actions">
+                            <a href="contact.html" class="m-btn m-btn-primary">Plan a Deployment</a>
                         </div>
                     </div>
                 </div>
@@ -467,9 +381,12 @@
         </section>
 
         <!-- Partner Logos -->
-        <section class="section-padding" style="background: rgba(5, 11, 20, 0.4);">
+        <section class="m-section">
             <div class="container">
-                <h2 class="section-title animate-in">TRUSTED BY</h2>
+                <div class="m-section-head animate-in">
+                    <span class="m-kicker">Proven Partnerships</span>
+                    <h2>Trusted By</h2>
+                </div>
                 <div class="partner-logos animate-in">
                     <img src="assets/images/partners/wachter.svg" alt="Wachter">
                     <img src="assets/images/partners/netview.svg" alt="Netview Inc.">
@@ -488,9 +405,12 @@
         </section>
 
         <!-- SLA Commitments -->
-        <section class="section-padding">
+        <section class="m-section alt">
             <div class="container">
-                <h2 class="section-title animate-in">OUR COMMITMENTS TO YOU</h2>
+                <div class="m-section-head animate-in">
+                    <span class="m-kicker">Service Level Commitments</span>
+                    <h2>Our Commitments To You</h2>
+                </div>
                 <div class="sla-grid">
                     <div class="sla-card animate-in">
                         <i class="fas fa-clock"></i>
@@ -517,9 +437,12 @@
         </section>
 
         <!-- Onboarding Process -->
-        <section class="section-padding" style="background: rgba(5, 11, 20, 0.4);">
+        <section class="m-section">
             <div class="container">
-                <h2 class="section-title animate-in">ONBOARDING IN 4 STEPS</h2>
+                <div class="m-section-head animate-in">
+                    <span class="m-kicker">Fast Vendor Onboarding</span>
+                    <h2>Onboarding In 4 Steps</h2>
+                </div>
                 <div class="process-grid">
                     <div class="process-step animate-in">
                         <div class="step-num">1</div>
@@ -546,21 +469,24 @@
         </section>
 
         <!-- Testimonials -->
-        <section class="section-padding">
+        <section class="m-section alt">
             <div class="container">
-                <h2 class="section-title animate-in">FROM OUR PARTNERS</h2>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card animate-in">
+                <div class="m-section-head animate-in">
+                    <span class="m-kicker">Partner Feedback</span>
+                    <h2>From Our Partners</h2>
+                </div>
+                <div class="m-quotes">
+                    <div class="m-quote animate-in">
                         <i class="fas fa-quote-left"></i>
                         <p>"We've used USS for over a dozen structured cabling projects across the KC metro. They show up on time, dress professionally, and their work is clean. Our clients never know they're a subcontractor."</p>
                         <p class="author">- Operations Director, National MSP</p>
                     </div>
-                    <div class="testimonial-card animate-in">
+                    <div class="m-quote animate-in">
                         <i class="fas fa-quote-left"></i>
                         <p>"Consistently excellent work. Very knowledgeable with electronics, electrical and networking. Handled troubleshooting and cleanup tasks with ease."</p>
                         <p class="author">- Senior IT Support, Video Mining Corporation</p>
                     </div>
-                    <div class="testimonial-card animate-in">
+                    <div class="m-quote animate-in">
                         <i class="fas fa-quote-left"></i>
                         <p>"They have gone out of their way to accommodate our tight schedule and vast changes. A very diligent team, knowledgeable and thorough!"</p>
                         <p class="author">- Operations Manager</p>
@@ -570,9 +496,12 @@
         </section>
 
         <!-- FAQ -->
-        <section class="section-padding" style="background: rgba(5, 11, 20, 0.4);">
+        <section class="m-section">
             <div class="container">
-                <h2 class="section-title animate-in">COMMON QUESTIONS</h2>
+                <div class="m-section-head animate-in">
+                    <span class="m-kicker">Before You Ask</span>
+                    <h2>Common Questions</h2>
+                </div>
                 <div class="faq-list">
                     <div class="faq-item animate-in">
                         <div class="faq-q" onclick="this.classList.toggle('open'); this.nextElementSibling.classList.toggle('open');">
@@ -609,10 +538,13 @@
         </section>
 
         <!-- Contact -->
-        <section class="section-padding">
+        <section class="m-section alt">
             <div class="container">
-                <h2 class="section-title animate-in">GET IN TOUCH</h2>
-                <p style="text-align:center; color:var(--color-muted); margin-bottom:3rem; max-width:600px; margin-left:auto; margin-right:auto;" class="animate-in">Ready to add USS to your vendor list? Reach out however you prefer.</p>
+                <div class="m-section-head animate-in">
+                    <span class="m-kicker">Get In Touch</span>
+                    <h2>Add USS To Your Vendor List</h2>
+                    <p>Ready to add USS to your vendor list? Reach out however you prefer.</p>
+                </div>
                 <div class="contact-options animate-in">
                     <a href="tel:8167872061" class="contact-option">
                         <i class="fas fa-phone"></i>
@@ -634,13 +566,57 @@
         </section>
     </main>
 
-    <footer>
+    <!-- ============ FOOTER ============ -->
+    <footer class="m-footer">
         <div class="container">
-            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+            <div class="m-footer-grid">
+                <div class="m-footer-brand">
+                    <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                    <p>Veteran-owned security &amp; IT integrator serving the Kansas City metro for over two decades. Structured cabling, surveillance, access control, networking, and white-label field services.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#service-cabling">Structured Cabling</a></li>
+                        <li><a href="index.html#service-surveillance">Surveillance Systems</a></li>
+                        <li><a href="index.html#service-networking">Network Engineering</a></li>
+                        <li><a href="index.html#service-access">Access Control</a></li>
+                        <li><a href="index.html#service-smart-hands">Smart Hands</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Capabilities</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service_area.html">Service Area</a></li>
+                        <li><a href="ordering_system.html">Equipment Catalog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="m-footer-contact">
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:8167872061">(816) 787-2061</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:nate@usstech.net">nate@usstech.net</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i>Kansas City Metro — 100mi radius</li>
+                        <li><i class="fas fa-clock"></i>24/7 Dispatch Availability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-footer-bottom">
+                <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+                <div class="m-footer-badges">
+                    <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+                    <span><i class="fas fa-flag-usa"></i> Veteran Owned</span>
+                    <span><i class="fas fa-check-circle"></i> NDAA Compliant</span>
+                </div>
+            </div>
         </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modern.js"></script>
     <script>
         function toggleSubmenu(trigger) {
             // Only toggle on mobile devices

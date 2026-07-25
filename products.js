@@ -26340,7 +26340,7 @@ const products = [
   "name": "Platinum 4 MP Color 24/7 Fixed Turret IP Camera",
   "description": "Full-color imaging even in total darkness, featuring a 2.8mm lens and built-in microphone.",
   "long_description": "The CMIP1342WE-28MDA delivers vivid color images 24/7 using advanced sensor technology and white light illumination. It is designed for maximum clarity in low-light environments and includes a built-in mic for audio monitoring.",
-  "image": "/assets/products/placeholder.png",
+  "image": "/assets/products/CMIP1342WE-28MDA.png",
   "facets": {
     "category": [
       "IP SOLUTIONS",
@@ -26379,7 +26379,7 @@ const products = [
   "name": "Platinum 4 MP Smart Fixed Mini Dome IP Camera",
   "description": "Compact mini dome camera with 4MP resolution, MD 2.0 human and vehicle detection, and IK08 impact protection.",
   "long_description": "The CMIP3142W-28SDA is a smart mini dome that uses Motion Detection 2.0 to focus on human and vehicle targets. It features a built-in microphone, 120dB WDR, and is both IP67 and IK08 rated.",
-  "image": "/assets/products/placeholder.png",
+  "image": "/assets/products/CMIP3142W-28SDA.png",
   "facets": {
     "category": [
       "IP SOLUTIONS",
@@ -26419,7 +26419,7 @@ const products = [
   "name": "Platinum 4 MP Color 24/7 Hybrid Turret IP Camera",
   "description": "4MP turret camera with Hybrid Illumination and Color 24/7 technology for superior night-time clarity.",
   "long_description": "The CMIP3C42WI-28MDA features hybrid illumination, allowing it to switch between IR and white light for optimal performance. It provides color images 24/7 and includes smart Motion Detection 2.0 for reduced false alarms.",
-  "image": "/assets/products/placeholder.png",
+  "image": "/assets/products/CMIP3C42WI-28MDA.png",
   "facets": {
     "category": [
       "IP SOLUTIONS",
@@ -30465,3 +30465,5 @@ const products = [
     }
   }
 ];
+// Expose catalog data for the offline fallback path in ordering_system.html
+window.products = products;

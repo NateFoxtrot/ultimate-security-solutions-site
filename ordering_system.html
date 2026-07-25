@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css?v=2">
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles-modern.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* ============================================
@@ -26,13 +27,36 @@
 
         /* --- Hero Header --- */
         .page-header {
-            background: linear-gradient(135deg, rgba(13,17,23,0.95) 0%, rgba(30,42,58,0.8) 100%) !important;
+            position: relative !important;
+            background: #0d1117 !important;
             border-bottom: 1px solid var(--color-border) !important;
             box-shadow: none !important;
-            padding: 2.5rem 0 !important;
+            padding: 0 !important;
+            overflow: hidden !important;
+        }
+        .page-header .catalog-banner-bg {
+            position: absolute;
+            inset: 0;
+            background: url('assets/images/gen/catalog-hero-wide.jpg') center / cover no-repeat;
+            opacity: 0.55;
+        }
+        .page-header::before { content: none !important; }
+        .page-header .catalog-banner-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(13,17,23,0.97) 0%, rgba(13,17,23,0.75) 45%, rgba(13,17,23,0.35) 100%);
+        }
+        .page-header .hero-banner-container {
+            position: relative;
+            z-index: 1;
+            padding: 6rem 2rem 4.5rem;
+            max-width: var(--container-width);
+            margin: 0 auto;
         }
         .page-header .header-content {
-            text-align: center !important;
+            text-align: left !important;
+            max-width: 640px;
         }
         .page-header .header-badge {
             background: var(--color-accent-dim) !important;
@@ -63,11 +87,15 @@
             background: var(--color-surface) !important;
             border: 1px solid var(--color-border) !important;
             display: block !important;
+            max-width: 460px !important;
+            margin-left: auto !important;
         }
         .page-header .hero-feature-image img {
             filter: none !important;
             mix-blend-mode: normal !important;
-            opacity: 1 !important;
+            width: 100% !important;
+            height: auto !important;
+            display: block !important;
         }
         .page-header .hero-overlay {
             display: none !important;
@@ -400,6 +428,11 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                <span class="nav-brand-text">
+                    <span class="b1">ULTIMATE SECURITY SOLUTIONS</span>
+                    <span class="b2">Engineers for the AI Age</span>
+                </span>
             </a>
 
             <div class="nav-mobile-toggle" id="mobile-toggle">
@@ -407,114 +440,59 @@
             </div>
 
             <div class="nav-links-wrapper">
-                <a href="index.html" class="nav-link-item">Home
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="about.html" class="nav-link-item">Capabilities
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="service_area.html" class="nav-link-item">Service Area
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <div class="dropdown nav-link-item active">
+                <a href="index.html" class="nav-link-item">Home</a>
+                <a href="about.html" class="nav-link-item">Capabilities</a>
+                <a href="service_area.html" class="nav-link-item">Service Area</a>
+                <a href="partners.html" class="nav-link-item">Partners</a>
+                <div class="dropdown nav-link-item current-page">
                     <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
                     <div class="dropdown-content mega-dropdown">
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">CAMERAS</div>
-                            <a href="ordering_system.html?cat=platinum&type=camera">Platinum Series</a>
-                            <a href="ordering_system.html?cat=pro&type=camera">Pro-X Series</a>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">IP Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=ip">Platinum IP Cameras</a>
-                                    <a href="ordering_system.html?cat=pro&type=ip">Pro-X IP Cameras</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">HD-TVI Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=tvi">Platinum HD-TVI</a>
-                                    <a href="ordering_system.html?cat=pro&type=tvi">Pro-X HD-TVI</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">PTZ Cameras <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=ptz">Platinum PTZ</a>
-                                    <a href="ordering_system.html?cat=pro&type=ptz">Pro-X PTZ</a>
-                                </div>
-                            </div>
-                            <div class="dropdown-submenu">
-                                <span class="dropdown-submenu-trigger" onclick="toggleSubmenu(this)">Multisensor <i class="fas fa-chevron-right" style="font-size: 0.5rem;"></i></span>
-                                <div class="dropdown-submenu-content">
-                                    <a href="ordering_system.html?cat=platinum&type=multisensor">Platinum Multisensor</a>
-                                    <a href="ordering_system.html?cat=pro&type=multisensor">Pro-X Multisensor</a>
-                                </div>
-                            </div>
+                            <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                            <a href="ordering_system.html?cat=tvi">HD-TVI Cameras</a>
+                            <a href="ordering_system.html?cat=ptz">PTZ Cameras</a>
+                            <a href="ordering_system.html?cat=multisensor">Multisensor Cameras</a>
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">RECORDERS</div>
-                            <a href="ordering_system.html?cat=platinum&type=nvr">Platinum NVRs</a>
-                            <a href="ordering_system.html?cat=pro&type=nvr">Pro-X NVRs</a>
-                            <a href="ordering_system.html?cat=platinum&type=dvr">Platinum DVRs</a>
-                            <a href="ordering_system.html?cat=pro&type=dvr">Pro-X DVRs</a>
-                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <div class="dropdown-header">STORAGE</div>
-                            <a href="ordering_system.html?type=hdd">Hard Drives</a>
-                            <a href="ordering_system.html?type=ssd">SSD Storage</a>
+                            <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                            <a href="ordering_system.html?cat=dvr">DVR Systems</a>
                         </div>
                         <div class="mega-dropdown-column">
                             <div class="dropdown-header">ACCESS CONTROL</div>
                             <a href="ordering_system.html?cat=access">All Access Control</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <div class="dropdown-header">NETWORK EQUIPMENT</div>
-                            <a href="ordering_system.html?cat=network">Network Switches & Gear</a>
+                            <div class="dropdown-header">NETWORKING</div>
+                            <a href="ordering_system.html?cat=network">Network Equipment</a>
                         </div>
                         <div class="mega-dropdown-column">
-                            <div class="dropdown-header">CABLING & PERIPHERALS</div>
-                            <a href="ordering_system.html?cat=peripherals">Power, Connectors & Accessories</a>
+                            <div class="dropdown-header">PERIPHERALS</div>
+                            <a href="ordering_system.html?cat=peripherals">Power &amp; Accessories</a>
                             <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
-                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">View Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
                         </div>
                     </div>
                 </div>
-                <a href="system-design.html" class="nav-link-item">USS Suite
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="msp.html" class="nav-link-item">Hire Us (MSP)
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="reviews.html" class="nav-link-item">Reviews
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="contact.html" class="nav-link-item">Contact
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="system-design.html" class="nav-link-item">USS Suite</a>
+                <a href="msp.html" class="nav-link-item">Hire Us (MSP)</a>
+                <a href="reviews.html" class="nav-link-item">Reviews</a>
+                <a href="contact.html" class="nav-link-item">Contact</a>
             </div>
 
             <div class="nav-spacer"></div>
 
             <a href="contact.html" class="btn-quote-nav">Get A Quote</a>
-
-            <button class="btn btn-primary" id="open-cart-btn" style="padding: 0.5rem 1rem; font-size: 0.8rem; margin-left: 1rem; border-radius: 4px; font-weight: 900;">
-                <i class="fas fa-shopping-cart"></i> <span id="cart-count-badge" class="cart-badge" style="display: none; position: static; margin-left: 5px;">0</span>
-            </button>
         </div>
     </nav>
 
     <header class="page-header">
+        <div class="catalog-banner-bg"></div>
         <div class="container hero-banner-container">
             <div class="header-content">
                 <div class="header-badge animate-in visible"><i class="fas fa-shield-halved"></i> Professional Equipment Catalog</div>
                 <h1 class="animate-in stagger-1">Product <span class="text-accent">Catalog</span></h1>
                 <p class="animate-in stagger-2">Browse our full line of NDAA-compliant security hardware and professional IT equipment. Platinum Series and Pro-X cameras, NVRs, access control, networking gear, and infrastructure for professional installations.</p>
-            </div>
-            <div class="hero-feature-image animate-in stagger-3">
-                <img src="/assets/images/uss-screen-1.png" alt="LTS Platinum Series Equipment" class="hero-image" width="600" height="400">
             </div>
         </div>
     </header>
@@ -643,9 +621,10 @@
     </footer>
 
     <!-- Core Scripts -->
-    <script src="products.js"></script>
+    <script src="products.js?v=5"></script>
     <script src="assets/js/quote-service.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modern.js"></script>
     <script>
         function toggleSubmenu(trigger) {
             // Only toggle on mobile devices
@@ -662,7 +641,7 @@
         }
     </script>
     <!-- Consolidated Script Module -->
-    <script type="module">
+    <script>
         // --- GLOBAL STATE & CONFIG ---
         let cart = JSON.parse(localStorage.getItem('uss_cart')) || [];
         let productCache = new Map(); // sku -> {name, price, image} for cart lookups
@@ -761,10 +740,12 @@
                 list.appendChild(div);
             });
 
-            totalEl.textContent = `$${total.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
-            countBadge.textContent = count;
-            countBadge.style.display = count > 0 ? 'flex' : 'none';
-            drawerCount.textContent = `${count} Item${count !== 1 ? 's' : ''}`;
+            if (totalEl) totalEl.textContent = `$${total.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
+            if (countBadge) {
+                countBadge.textContent = count;
+                countBadge.style.display = count > 0 ? 'flex' : 'none';
+            }
+            if (drawerCount) drawerCount.textContent = `${count} Item${count !== 1 ? 's' : ''}`;
         }
 
         // --- PRODUCT RENDERING ---
@@ -823,23 +804,37 @@
                     let filtered = window.products;
                     if (currentFilter && currentFilter !== 'all') {
                         const searchCat = currentFilter.toLowerCase().replace(/_/g, ' ');
-                        filtered = filtered.filter(p => {
-                            const cats = (p.facets?.category || []).map(c => c.toLowerCase());
-                            const nameLower = (p.name || '').toLowerCase();
-                            if (searchCat === 'access') {
-                                return (cats.some(c => c.includes('access control')) || nameLower.includes('access control') || nameLower.includes('card reader') || nameLower.includes('credential') || nameLower.includes('door controller')) && !nameLower.includes('camera');
-                            }
-                            if (searchCat === 'network') {
-                                return cats.some(c => c.includes('ubiquiti') || c.includes('switch') || c.includes('poe') || c.includes('transceiver')) || nameLower.includes('switch') || nameLower.includes('router') || nameLower.includes('access point') || nameLower.includes('poe');
-                            }
-                            if (searchCat === 'peripherals') {
-                                return cats.some(c => c.includes('accessories')) || nameLower.includes('power supply') || nameLower.includes('connector') || nameLower.includes('mount') || nameLower.includes('housing') || nameLower.includes('cable') || nameLower.includes('bracket');
-                            }
-                            if (searchCat === 'dvr') {
-                                return cats.some(c => c.includes('tvi') || c.includes('dvr') || c.includes('hvr'));
-                            }
-                            return cats.some(c => c.includes(searchCat)) || nameLower.includes(searchCat);
-                        });
+                        // Name+facet classifier — facets alone are unreliable (NVRs filed under
+                        // ACCESSORIES, speakers under UBIQUITI in the source data).
+                        const classify = (p) => {
+                            const n = (p.name || '').toLowerCase();
+                            const s = ((p.facets?.camera_series) || []).join(' ').toLowerCase();
+                            const c = ((p.facets?.category) || []).join(' ').toLowerCase();
+                            const isPtz = n.includes('ptz') || n.includes('speed dome');
+                            const isMulti = n.includes('multisensor') || n.includes('multi-sensor') || n.includes('dual-lens') || n.includes('pano') || c.includes('panoramic');
+                            const isNvr = n.includes('nvr') || n.includes('network video recorder');
+                            const isDvr = n.includes('dvr') || n.includes('digital video recorder') || n.includes(' hvr');
+                            const isCamera = n.includes('camera') || n.includes('doorbell') || c.includes('turret') || c.includes('dome') || c.includes('bullet');
+                            const isAccess = c.includes('access control') || ['card reader','keypad','maglock','magnetic lock','electric strike','door controller','request to exit','request-to-exit','exit button','prox reader','credential','door loop','intercom','no touch sensor','push button'].some(k => n.includes(k));
+                            const isNetwork = c.includes('ubiquiti') || ['switch','poe','router','access point','transceiver','sfp','wireless bridge','antenna'].some(k => n.includes(k));
+                            const isAccessory = ['mount','bracket','junction box','housing','adapter','power supply','power box','battery','hard disk','hard drive','cable stripper','stripper','crimping','tester','connector','rack','cabinet','lockbox','microphone','speaker','ups '].some(k => n.includes(k));
+                            if (isNvr) return 'nvr';
+                            if (isDvr) return 'dvr';
+                            if (isAccessory && !isAccess) return 'peripherals';
+                            if (isPtz) return 'ptz';
+                            if (isMulti) return 'multisensor';
+                            if (isAccess && !isCamera) return 'access';
+                            if (isNetwork && !isCamera) return 'network';
+                            if (isCamera) return (n.includes('tvi') || c.includes('tvi')) ? 'tvi' : 'camera';
+                            return 'peripherals';
+                        };
+                        if (searchCat === 'platinum') {
+                            filtered = filtered.filter(p => ((p.facets?.camera_series) || []).join(' ').toLowerCase().includes('platinum') || (p.name || '').toLowerCase().includes('platinum'));
+                        } else if (searchCat === 'pro') {
+                            filtered = filtered.filter(p => ((p.facets?.camera_series) || []).join(' ').toLowerCase().includes('pro-x') || (p.name || '').toLowerCase().includes('pro-x'));
+                        } else {
+                            filtered = filtered.filter(p => classify(p) === searchCat);
+                        }
                     }
                     if (currentSearch) {
                         const q = currentSearch.toLowerCase();
@@ -1094,7 +1089,7 @@
         }
 
         // --- INITIALIZATION ---
-        document.addEventListener('DOMContentLoaded', () => {
+        function initCatalog() {
             // UI Init
             updateCartUI();
             initHeroParallax();
@@ -1214,7 +1209,14 @@
                     submitBtn.innerHTML = originalText;
                 }
             });
-        });
+        }
+
+        // Fire immediately if DOM already parsed (script is at end of body), else wait
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCatalog);
+        } else {
+            initCatalog();
+        }
 
         // Global Exports
         window.updateQuantity = updateQuantity;

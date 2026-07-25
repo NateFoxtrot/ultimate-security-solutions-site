@@ -10,7 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://js.stripe.com">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=9">
+    <link rel="stylesheet" href="styles-modern.css?v=9">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .contact-hero {
@@ -63,6 +64,11 @@
     <nav class="main-nav" id="main-nav">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
+                <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                <span class="nav-brand-text">
+                    <span class="b1">ULTIMATE SECURITY SOLUTIONS</span>
+                    <span class="b2">Engineers for the AI Age</span>
+                </span>
             </a>
 
             <div class="nav-mobile-toggle" id="mobile-toggle">
@@ -70,39 +76,44 @@
             </div>
 
             <div class="nav-links-wrapper">
-                <a href="index.html" class="nav-link-item">Home
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="about.html" class="nav-link-item">Capabilities
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="service_area.html" class="nav-link-item">Service Area
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="partners.html" class="nav-link-item">Partners
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="index.html" class="nav-link-item">Home</a>
+                <a href="about.html" class="nav-link-item">Capabilities</a>
+                <a href="service_area.html" class="nav-link-item">Service Area</a>
+                <a href="partners.html" class="nav-link-item">Partners</a>
                 <div class="dropdown nav-link-item">
-                    <span class="dropdown-trigger">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem;"></i></span>
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                    <div class="dropdown-content">
-                        <a href="ordering_system.html">NDAA Equipment Catalog</a>
-                        <a href="ordering_system.html?cat=platinum">Platinum Series</a>
-                        <a href="ordering_system.html?cat=pro">Pro Series</a>
+                    <a href="ordering_system.html" class="dropdown-link">Hardware <i class="fas fa-chevron-down" style="font-size: 0.6rem; margin-left: 0.3rem;"></i></a>
+                    <div class="dropdown-content mega-dropdown">
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">CAMERAS</div>
+                            <a href="ordering_system.html?cat=camera">IP Cameras</a>
+                            <a href="ordering_system.html?cat=tvi">HD-TVI Cameras</a>
+                            <a href="ordering_system.html?cat=ptz">PTZ Cameras</a>
+                            <a href="ordering_system.html?cat=multisensor">Multisensor Cameras</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">RECORDERS</div>
+                            <a href="ordering_system.html?cat=nvr">NVR Systems</a>
+                            <a href="ordering_system.html?cat=dvr">DVR Systems</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">ACCESS CONTROL</div>
+                            <a href="ordering_system.html?cat=access">All Access Control</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <div class="dropdown-header">NETWORKING</div>
+                            <a href="ordering_system.html?cat=network">Network Equipment</a>
+                        </div>
+                        <div class="mega-dropdown-column">
+                            <div class="dropdown-header">PERIPHERALS</div>
+                            <a href="ordering_system.html?cat=peripherals">Power &amp; Accessories</a>
+                            <div style="border-top: 1px solid var(--color-border); margin: 0.5rem 0;"></div>
+                            <a href="ordering_system.html" style="color: var(--color-accent); font-weight: 600;">Full Catalog <i class="fas fa-arrow-right" style="font-size: 0.7rem; margin-left: 0.3rem;"></i></a>
+                        </div>
                     </div>
                 </div>
-                <a href="system-design.html" class="nav-link-item">USS Suite
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="msp.html" class="nav-link-item">Hire Us
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="reviews.html" class="nav-link-item">Reviews
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
-                <a href="contact.html" class="nav-link-item active">Contact
-                    <div class="nav-trace-container"><div class="nav-trace-light"></div></div>
-                </a>
+                <a href="system-design.html" class="nav-link-item">USS Suite</a>
+                <a href="msp.html" class="nav-link-item">Hire Us (MSP)</a>
+                <a href="reviews.html" class="nav-link-item">Reviews</a>
+                <a href="contact.html" class="nav-link-item active">Contact</a>
             </div>
 
             <div class="nav-spacer"></div>
@@ -111,12 +122,21 @@
         </div>
     </nav>
 
-    <div class="contact-hero">
-        <h1>PROFESSIONAL <span class="text-accent">SECURITY SOLUTIONS</span></h1>
-        <p>Ready to upgrade your infrastructure? Reach out for a consultation or rapid response dispatch.</p>
-    </div>
+    <!-- ============ PAGE BANNER ============ -->
+    <header class="m-pagebanner">
+        <div class="m-pagebanner-bg">
+            <img src="assets/images/gen/cctv-dome-install.jpg" alt="Dome security camera mounted on a commercial ceiling" fetchpriority="high">
+        </div>
+        <div class="m-pagebanner-overlay"></div>
+        <div class="container">
+            <div class="header-badge animate-in">Get A Quote</div>
+            <h1 class="animate-in">PROFESSIONAL <span class="text-accent">SECURITY SOLUTIONS</span></h1>
+            <p class="animate-in">Ready to upgrade your infrastructure? Reach out for a consultation or rapid response dispatch.</p>
+        </div>
+    </header>
 
-    <section class="contact-section" style="padding-top:0;">
+    <!-- ============ CONTACT ============ -->
+    <section class="contact-section" id="main-content">
         <div class="contact-container animate-in">
             <div class="contact-info">
                 <h2>GET IN TOUCH</h2>
@@ -187,13 +207,72 @@
         </div>
     </section>
 
-    <footer>
+    <!-- ============ CTA BAND ============ -->
+    <section class="m-cta">
+        <div class="m-cta-bg"><img src="assets/images/stock/smart-hands.jpg" alt="Field technician servicing equipment" loading="lazy"></div>
+        <div class="m-cta-overlay"></div>
         <div class="container">
-            <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+            <h2 class="animate-in">Need Urgent Dispatch?</h2>
+            <p class="animate-in">Our field technicians are available 24/7 across the Kansas City metro. Call now for rapid response — most site surveys are scheduled within 48 hours.</p>
+            <div class="m-hero-actions animate-in">
+                <a href="tel:8167872061" class="m-btn m-btn-primary"><i class="fas fa-phone-alt"></i> Call (816) 787-2061</a>
+                <a href="msp.html" class="m-btn m-btn-ghost"><i class="fas fa-building"></i> MSP Partners</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="m-footer">
+        <div class="container">
+            <div class="m-footer-grid">
+                <div class="m-footer-brand">
+                    <img src="assets/images/logo_transparent.png" alt="Ultimate Security Solutions">
+                    <p>Veteran-owned security &amp; IT integrator serving the Kansas City metro for over two decades. Structured cabling, surveillance, access control, networking, and white-label field services.</p>
+                </div>
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#service-cabling">Structured Cabling</a></li>
+                        <li><a href="index.html#service-surveillance">Surveillance Systems</a></li>
+                        <li><a href="index.html#service-networking">Network Engineering</a></li>
+                        <li><a href="index.html#service-access">Access Control</a></li>
+                        <li><a href="index.html#service-smart-hands">Smart Hands</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">Capabilities</a></li>
+                        <li><a href="partners.html">Partners</a></li>
+                        <li><a href="reviews.html">Reviews</a></li>
+                        <li><a href="service_area.html">Service Area</a></li>
+                        <li><a href="ordering_system.html">Equipment Catalog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul class="m-footer-contact">
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:8167872061">(816) 787-2061</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:nate@usstech.net">nate@usstech.net</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i>Kansas City Metro — 100mi radius</li>
+                        <li><i class="fas fa-clock"></i>24/7 Dispatch Availability</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="m-footer-bottom">
+                <p>&copy; 2026 Ultimate Security Solutions LLC. All Rights Reserved.</p>
+                <div class="m-footer-badges">
+                    <span><i class="fas fa-shield-halved"></i> Fully Insured</span>
+                    <span><i class="fas fa-flag-usa"></i> Veteran Owned</span>
+                    <span><i class="fas fa-check-circle"></i> NDAA Compliant</span>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="assets/js/quote-service.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/modern.js"></script>
     <script>
         async function handleContact(e) {
             e.preventDefault();
