@@ -933,6 +933,9 @@ h1, h2, h3, .m-hero h1, .m-pagebanner h1 {
 
 .nav-trace-container { display: none !important; }
 
+/* Kill legacy duplicate hamburger from styles.css (real toggle is #mobile-toggle) */
+.nav-container::after { content: none !important; }
+
 /* Dropdown */
 .dropdown.nav-link-item { overflow: visible; }
 
@@ -1493,6 +1496,14 @@ h1, h2, h3, h4,
     text-transform: uppercase;
     letter-spacing: 1.6px;
     margin-top: 0.35rem;
+}
+
+/* Full-bleed band + floatcard — mobile fallbacks */
+@media (max-width: 768px) {
+    .m-bleed { min-height: 0; }
+    .m-bleed-content { max-width: 100%; padding: 3.5rem 0; }
+    .m-bleed-content .m-checkgrid { grid-template-columns: 1fr; }
+    .m-floatcard { flex-direction: column; gap: 1.2rem; padding: 1.2rem 1.4rem; }
 }
 
 /* ---------- Asymmetric editorial grid (portfolio) ---------- */
