@@ -36,6 +36,7 @@ Other/
 marketing/
 workflows/
 uss-astro/
+# NOTE: uss-astro/ is the CANONICAL site but its own git repo — edit/commit inside uss-astro/ directly.
 lts-catalog-tool/data/
 lts-catalog-tool/lts_live_page.html
 lts-catalog-tool/lts_page_*.html
