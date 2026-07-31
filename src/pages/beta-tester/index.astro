@@ -8,41 +8,132 @@ import Layout from '../../layouts/Page.astro';
     <p>Ultimate Security Suite — Early Access &amp; Feedback</p>
   </div>
 
-  <div class="card" style="border-left: 3px solid var(--accent); margin-bottom:24px;">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
-      <span style="font-size:24px;">🚀</span>
-      <div>
-        <div style="font-size:16px;font-weight:600;">You've been selected as a lead tester</div>
-        <div style="font-size:13px;color:var(--muted);">The industry's most advanced low-voltage site planning platform.</div>
+    <div class="card" style="border-left: 3px solid var(--accent); margin-bottom:24px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+        <span style="font-size:24px;">🚀</span>
+        <div>
+          <div style="font-size:16px;font-weight:600;">You've been selected as a lead tester</div>
+          <div style="font-size:13px;color:var(--muted);">The industry's most advanced low-voltage site planning platform.</div>
+        </div>
+      </div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <a href="https://uss-app.insforge.site/" class="btn btn-primary" target="_blank" rel="noopener">
+          Open Live App →
+        </a>
+        <span style="font-size:12px;color:var(--muted);display:flex;align-items:center;">Chrome/Edge desktop required for 3D</span>
       </div>
     </div>
-    <a href="https://xr3keedn.insforge.site/" class="btn btn-primary" target="_blank" rel="noopener">
-      Open Live App →
-    </a>
-    <span style="font-size:12px;color:var(--muted);margin-left:8px;">Chrome/Edge desktop required for 3D</span>
-  </div>
 
-  <div class="grid-2" style="margin-bottom:24px;">
-    <div class="card">
+    <div class="card" style="margin-bottom:24px;">
       <div class="card-header">
-        <span class="card-title">Quick Start (5 Minutes)</span>
+        <span class="card-title">Tutorial Video — Full Workflow Demo</span>
       </div>
-      <table>
-        <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td>Open the <a href="https://xr3keedn.insforge.site/" target="_blank" style="color:var(--accent)">Beta URL</a></td><td>Tactical login screen loads</td></tr>
-          <tr><td>2</td><td>Register a Mission ID (any username + password)</td><td>Dashboard with satellite setup</td></tr>
-          <tr><td>3</td><td>Enter any commercial address in the search bar</td><td>Satellite imagery loads in ~3 sec</td></tr>
-          <tr><td>4</td><td>Place 2-3 cameras from the device palette</td><td>FOV cones appear on the map</td></tr>
-          <tr><td>5</td><td>Click <strong>3D View</strong> button</td><td>Photorealistic 3D tile view launches</td></tr>
-          <tr><td>6</td><td>Open <strong>Settings → Export Quote</strong></td><td>Full BOM and PDF export</td></tr>
-        </tbody>
-      </table>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">45-second walkthrough: Login → Satellite Search → Vector Outlines → Grid Alignment → Capture → Crop → AI Wireframe → Settings &amp; Save.</p>
+      <video controls preload="metadata" style="width:100%;border-radius:8px;border:1px solid var(--border);background:#000;">
+        <source src="/videos/uss_tutorial.mp4" type="video/mp4" />
+        Your browser does not support video playback.
+      </video>
     </div>
 
-    <div class="card">
+    <div class="card" style="margin-bottom:24px;">
       <div class="card-header">
-        <span class="card-title">Download the App</span>
+        <span class="card-title">Quick Start — Full Walkthrough</span>
+      </div>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Follow these steps in order. Each step builds on the previous one. Budget 15-20 minutes for your first full run-through.</p>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 1: GET IN</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Open the <a href="https://uss-app.insforge.site/" target="_blank" style="color:var(--accent)">Beta URL</a> in Chrome or Edge</td><td>Tactical login screen loads</td></tr>
+            <tr><td>2</td><td><strong>Create a new Mission ID</strong> — enter any username + password and click Register. Or login with existing credentials.</td><td>Account created / authenticated, redirected to the Site Intel &amp; Setup panel</td></tr>
+            <tr><td>3</td><td>Click <strong>"New Mission"</strong> to start a fresh project, or click the folder icon to import an existing project from cloud storage</td><td>New blank site plan created (or loaded project appears)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 2: SATELLITE LOCK-ON</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>4</td><td>Type a commercial address into the <strong>"Satellite Locator"</strong> search bar (e.g. a warehouse, hospital, or multi-building campus)</td><td>Address autocomplete fills in; click the search arrow to lock on</td></tr>
+            <tr><td>5</td><td>The satellite imagery loads centered on the target. Use the <strong>zoom slider</strong> (left side) to get the right level of detail.</td><td>High-res Esri satellite tiles render around the target</td></tr>
+            <tr><td>6</td><td><em>(Optional)</em> Toggle <strong>"Vector Outlines"</strong> ON (right panel) to superimpose a geometric street/property map — helps the AI identify building boundaries later</td><td>Semi-transparent vector overlay appears on top of satellite imagery</td></tr>
+            <tr><td>7</td><td>Use the <strong>"Grid Alignment Rotation"</strong> tool at the <strong>bottom-left</strong> to rotate the map so the building walls align with the grid. Click <strong>"Reset North"</strong> if you need to start over.</td><td>Building edges align to horizontal/vertical grid lines</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 3: CAPTURE &amp; CROP</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>8</td><td>Once the satellite view is aligned, click the <strong>"CAPTURE SATELLITE"</strong> button on the right panel</td><td>The full satellite view is captured as a static image. The overlay switches to image editing mode.</td></tr>
+            <tr><td>9</td><td>Click <strong>"START CROPPING"</strong> to enter crop mode</td><td>Crop handles appear on the captured image</td></tr>
+            <tr><td>10</td><td>Drag the crop handles to frame just the building or site area you want to plan. You can also use the <strong>Rotation slider</strong> to fine-tune alignment before cropping.</td><td>Selection box tightens around the target building perimeter</td></tr>
+            <tr><td>11</td><td>Click <strong>"APPLY CROP"</strong></td><td>The image is trimmed to your selection. You now see the cropped satellite view with alignment controls.</td></tr>
+            <tr><td>12</td><td><em>(Pro tip)</em> You can click <strong>"Save Progress"</strong> at any time to save your work as a draft. The <strong>"Settings"</strong> button is also available here to configure API keys without leaving the workflow.</td><td>Draft saved to local storage; Settings modal accessible from within the overlay</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 4: AI WIREFRAME GENERATION</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>13</td><td>Click <strong>"GENERATE AI WIREFRAME"</strong> (the purple button). <em>Note: If you haven't configured Google API credentials yet, a warning will appear prompting you to open Settings first.</em></td><td>Gemini Vision processes the cropped satellite image and generates a dark-mode tactical wireframe with extracted geometry (walls, zones)</td></tr>
+            <tr><td>14</td><td>Review the AI-generated wireframe. Use the <strong>fine-tune rotation slider</strong> to adjust if needed, or the <strong>Eraser Tool</strong> to clean up false-positive walls the AI picked up</td><td>Clean wireframe with only the correct structural elements visible</td></tr>
+            <tr><td>15</td><td>Click <strong>"INITIATE PLANNING PHASE"</strong> to lock in the wireframe and proceed to device placement</td><td>App transitions to the PLAN phase with the wireframe as the background canvas</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 5: ALTERNATIVE — BLUEPRINT SCANNER</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>16</td><td><em>Instead of satellite</em> — click the <strong>"Blueprint Scanner"</strong> card on the main setup page</td><td>File picker opens</td></tr>
+            <tr><td>17</td><td>Upload a photo of any floor plan (hand-drawn sketch, printed plan, or architectural drawing)</td><td>Image appears in the overlay, ready for cropping and AI processing</td></tr>
+            <tr><td>18</td><td>Follow the same crop → AI wireframe flow (Steps 9-15 above)</td><td>AI processes the blueprint image and extracts structural geometry</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 6: DEVICE PLACEMENT &amp; PLANNING</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>19</td><td>Select <strong>Camera</strong> from the device palette and click on the wireframe to place it</td><td>Camera icon placed on map, FOV cone appears automatically</td></tr>
+            <tr><td>20</td><td>Drag the FOV cone handle to adjust direction and field of view</td><td>Cone rotates smoothly, coverage area updates in real-time</td></tr>
+            <tr><td>21</td><td>Place additional cameras, Nodes (IDF/MDF), WiFi APs, and Access Readers</td><td>Multiple devices placed, cable auto-routes to nearest Node</td></tr>
+            <tr><td>22</td><td>Calibrate scale: use the CALIBRATE tool to set a known distance on the plan (e.g. a wall known to be 50ft)</td><td>Scale locks in, cable footage calculations become accurate in real-world feet</td></tr>
+            <tr><td>23</td><td>Review total cable footage in the sidebar — verify it matches your estimate of the runs</td><td>Running cable total displayed per run and as a project sum</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="qs-phase">
+        <h3 style="font-size:14px;font-weight:800;color:var(--accent);margin-bottom:12px;">PHASE 7: 3D &amp; ADVANCED FEATURES</h3>
+        <table>
+          <thead><tr><th>Step</th><th>Action</th><th>Expected Result</th></tr></thead>
+          <tbody>
+            <tr><td>24</td><td>Click the <strong>3D View</strong> button — map transitions to photorealistic Google 3D Tiles</td><td>Devices and FOV cones rendered in 3D space against real building geometry</td></tr>
+            <tr><td>25</td><td>Toggle <strong>Heatmap View</strong> to see WiFi signal propagation from placed APs</td><td>Color-coded signal overlay (green/yellow/red)</td></tr>
+            <tr><td>26</td><td>Click <strong>BOM EXPORT</strong> to generate the Bill of Materials, then <strong>SAVE</strong> to persist the project to cloud storage</td><td>BOM downloads; project saved to InsForge cloud</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header">
+        <span class="card-title">Download the Android App</span>
       </div>
       <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Signed release APK for Android. Enable "Install from unknown sources" in your device settings before installing.</p>
       <a href="/beta-tester/UltraSecuritySuite-v1.0.apk" download class="btn btn-primary" style="display:block;text-align:center;text-decoration:none;">
@@ -50,11 +141,10 @@ import Layout from '../../layouts/Page.astro';
       </a>
       <p style="font-size:11px;color:var(--text-muted);margin-top:8px;">Signed release build — April 7, 2026</p>
     </div>
-  </div>
 
-  <div class="card" style="margin-bottom:24px;">
-    <div class="card-header">
-      <span class="card-title">Mission Objectives</span>
+    <div class="card" style="margin-bottom:24px;">
+      <div class="card-header">
+        <span class="card-title">Mission Objectives</span>
     </div>
     <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;">Your job is to stress-test every major workflow:</p>
     <div class="grid-2">
@@ -183,5 +273,42 @@ import Layout from '../../layouts/Page.astro';
   }
   .doc-icon {
     font-size: 28px;
+  }
+  .qs-phase {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .qs-phase:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  .qs-phase table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .qs-phase th {
+    text-align: left;
+    padding: 8px 10px;
+    background: rgba(0,0,0,0.3);
+    border-bottom: 2px solid var(--accent);
+    color: var(--accent);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .qs-phase td {
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    vertical-align: top;
+  }
+  .qs-phase td:first-child {
+    width: 40px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--accent);
   }
 </style>

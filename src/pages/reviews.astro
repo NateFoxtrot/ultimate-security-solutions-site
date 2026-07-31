@@ -29,7 +29,9 @@ import Page from '../layouts/Page.astro';
                     <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
                         <div>
                             <div style="color:var(--accent); font-size:0.85rem; margin-bottom:4px;">
-                                {Array.from({length:5}, (_, i) => `<i class="fa${i < r.rating ? 's' : 'r'} fa-star"></i>`).join(' ')}
+                                {Array.from({length:5}, (_, i) => (
+                                    <i class={`fa${i < r.rating ? 's' : 'r'} fa-star`} style="margin-right: 2px;"></i>
+                                ))}
                             </div>
                             <span style="color:var(--muted); font-size:0.75rem;">{r.date}</span>
                         </div>

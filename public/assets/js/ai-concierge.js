@@ -73,7 +73,7 @@
         },
         {
             keywords: ['support', 'help', 'broken', 'offline', 'error', 'fix', 'repair'],
-            response: "<strong>Priority Support:</strong><br>For critical infrastructure failures, call Operations Command at <strong>816-814-2007</strong>.<br>For non-urgent tickets, use the <a href='contact.html' style='color:#ffd700;'>Contact Form</a>."
+            response: "<strong>Priority Support:</strong><br>For critical infrastructure failures, call Operations Command at <strong>816-787-2061</strong>.<br>For non-urgent tickets, use the <a href='contact.html' style='color:#ffd700;'>Contact Form</a>."
         },
         {
             keywords: ['msp', 'partner', 'subcontract', 'white label', 'vendor'],
@@ -85,7 +85,7 @@
         },
         {
             keywords: ['contact', 'email', 'phone', 'call', 'reach'],
-            response: "<strong>Communicate:</strong><br>• Phone: 816-814-2007<br>• Email: admin@usstech.net<br>• HQ: Kansas City, MO"
+            response: "<strong>Communicate:</strong><br>• Phone: 816-787-2061<br>• Email: admin@usstech.net<br>• HQ: Kansas City, MO"
         }
     ];
 

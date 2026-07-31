@@ -2,7 +2,7 @@
 
 > **You've been selected as a lead tester for the industry's most advanced low-voltage site planning platform.**
 
-**🔗 Live App:** [https://xr3keedn.insforge.site/](https://xr3keedn.insforge.site/)  
+**🔗 Live App:** [https://uss-app.insforge.site/](https://uss-app.insforge.site/)  
 *Chrome or Edge desktop required for 3D Rendering.*
 
 ---
@@ -11,7 +11,7 @@
 
 | Step | Action | Expected Result |
 |------|--------|-----------------|
-| 1 | Open the [Beta URL](https://xr3keedn.insforge.site/) | Tactical login screen loads |
+| 1 | Open the [Beta URL](https://uss-app.insforge.site/) | Tactical login screen loads |
 | 2 | Register a Mission ID (any username + password) | Dashboard with satellite setup |
 | 3 | Enter any commercial address in the search bar | Satellite imagery loads in ~3 sec |
 | 4 | Place 2-3 cameras from the device palette | FOV cones appear on the map |

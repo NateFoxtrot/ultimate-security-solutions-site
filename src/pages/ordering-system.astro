@@ -2,14 +2,1061 @@
 import Page from '../layouts/Page.astro';
 ---
 
-<Page title="Hardware Catalog" description="Browse our full catalog of security cameras, NVR systems, access control, and network equipment.">
-    <div class="container" style="text-align:center; padding:8rem 2rem 3rem;">
-        <h1>HARDWARE <span class="text-accent">CATALOG</span></h1>
-        <p style="color:var(--muted);">Security cameras, NVR systems, access control, and network equipment.</p>
-    </div>
-    <section class="section">
-        <div class="container" style="text-align:center;">
-            <p style="color:var(--muted); font-size:1.1rem;">Full catalog migrating to the new platform. Check back soon.</p>
+<Page title="Hardware Catalog" description="Browse our catalog of NDAA-compliant security hardware. IP Cameras, NVRs, Access Control, and Structured Cabling supplies. Professional pricing available.">
+    <header class="shop-header">
+        <div class="shop-header-top">
+            <span class="breadcrumb"><a href="/">Home</a> <span class="bc-sep">/</span> <span id="current-crumb">Hardware Catalog</span></span>
+            <span class="shop-phone"><i class="fas fa-headset"></i> Expert Support: 816-787-2061</span>
         </div>
-    </section>
+        <div class="shop-header-main">
+            <div class="shop-title">
+                <h1>HARDWARE <span class="text-accent">CATALOG</span></h1>
+            </div>
+            <div class="shop-search">
+                <input type="text" id="global-search" placeholder="Search by SKU, Name, or Feature...">
+                <i class="fas fa-search" id="search-icon"></i>
+            </div>
+            <div class="shop-actions">
+                <button class="btn btn-secondary" id="quote-btn">
+                    <i class="fas fa-file-invoice-dollar"></i> Request Quote (<span id="cart-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div id="promo-splash" style="max-width:1400px;margin:2rem auto;padding:0 2rem;">
+        <div class="promo-banner">
+            <div class="promo-overlay">
+                <h2>FEATURED COLLECTION</h2>
+                <p>Professional Grade Security Solutions</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="category-overview" style="max-width:1400px;margin:0 auto 4rem;padding:0 2rem;">
+        <h2 class="section-title" style="margin-bottom:2rem;">BROWSE BY CATEGORY</h2>
+        <div id="category-grid" class="category-grid"></div>
+    </div>
+
+    <div class="store-container" id="main-store-container" style="display:none;">
+        <aside class="filters-sidebar">
+            <h3 class="filter-title">Shop By</h3>
+            <div id="dynamic-filters"></div>
+        </aside>
+        <main id="product-grid" class="product-grid"></main>
+    </div>
+
+    <div id="product-modal" class="modal-overlay" style="display:none;"></div>
+
+    <div id="cart-sidebar" class="cart-overlay">
+        <h2 class="cart-title">Your Quote Request</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+            <div class="cart-summary-row"><span>Subtotal:</span><span id="cart-total-price">$0.00</span></div>
+        </div>
+        <div class="cart-actions">
+            <button class="btn btn-primary" id="checkout-btn" style="width:100%;justify-content:center;">Proceed to Checkout</button>
+            <button class="btn btn-secondary" id="close-cart-btn" style="width:100%;justify-content:center;margin-top:0.5rem;">Continue Shopping</button>
+        </div>
+    </div>
+
+    <div id="checkout-modal" class="modal-overlay" style="display:none;">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h2>Secure Checkout</h2>
+                <span class="close-modal" id="close-checkout">&times;</span>
+            </div>
+            <div class="modal-body">
+                <form id="checkout-form" name="quote-request">
+                    <input name="form-name" type="hidden" value="quote-request"/>
+                    <input id="order-items" name="items" type="hidden"/>
+                    <input id="order-total" name="total" type="hidden"/>
+                    <div class="checkout-section">
+                        <h4>1. Shipping Information</h4>
+                        <input name="name" placeholder="Full Name" required type="text"/>
+                        <input name="email" placeholder="Email Address" required type="email"/>
+                        <input name="address" placeholder="Shipping Address" required type="text"/>
+                        <div class="address-row">
+                            <input name="city" placeholder="City" required type="text"/>
+                            <input name="state" placeholder="State" required type="text"/>
+                            <input name="zip" placeholder="ZIP" required type="text"/>
+                        </div>
+                    </div>
+                    <div class="checkout-section">
+                        <h4>2. Payment Method</h4>
+                        <label class="payment-option">
+                            <input type="radio" name="pay_method" value="invoice" checked> Digital Invoice (Credit Card/ACH)
+                        </label>
+                    </div>
+                    <div class="checkout-total">
+                        <span>Order Total:</span>
+                        <span id="checkout-total-price" class="checkout-price">$0.00</span>
+                    </div>
+                    <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center;">Place Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </Page>
+
+<style>
+    .shop-header {
+        background: var(--secondary);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border);
+        position: relative;
+        z-index: 1;
+    }
+
+    .shop-header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        color: var(--muted);
+    }
+
+    .breadcrumb a {
+        color: var(--muted);
+        text-decoration: none;
+    }
+
+    .breadcrumb a:hover { color: var(--accent); }
+    .bc-sep { color: var(--accent); margin: 0 6px; }
+    .shop-phone { color: var(--muted); }
+    .shop-phone i { color: var(--accent); margin-right: 5px; }
+
+    .shop-header-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    .shop-title h1 {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .shop-search {
+        flex-grow: 1;
+        max-width: 500px;
+        position: relative;
+    }
+
+    .shop-search input {
+        width: 100%;
+        padding: 12px 20px;
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--border);
+        background: rgba(0, 0, 0, 0.3);
+        color: var(--text);
+        font-family: var(--font);
+        font-size: 0.95rem;
+    }
+
+    .shop-search input:focus {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+    }
+
+    .shop-search i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        color: var(--muted);
+        cursor: pointer;
+    }
+
+    .promo-banner {
+        height: 300px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        background: var(--secondary);
+        position: relative;
+    }
+
+    .promo-overlay {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 1.5rem 2rem;
+        border-left: 4px solid var(--accent);
+        position: relative;
+        z-index: 2;
+    }
+
+    .promo-overlay h2 {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .promo-overlay p {
+        color: var(--accent);
+        font-size: 0.9rem;
+    }
+
+    .category-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .category-card {
+        height: 200px;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        cursor: pointer;
+        transition: var(--ease);
+        background: var(--secondary);
+        overflow: hidden;
+    }
+
+    .category-card:hover {
+        transform: scale(1.03);
+        border-color: var(--accent);
+    }
+
+    .category-card h3 {
+        width: 100%;
+        text-align: center;
+        padding: 12px 0;
+        background: rgba(0, 0, 0, 0.7);
+        font-size: 1.1rem;
+    }
+
+    .store-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 2rem;
+        padding: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .filters-sidebar {
+        width: 260px;
+        flex-shrink: 0;
+        position: sticky;
+        top: 80px;
+        height: fit-content;
+        background: var(--surface);
+        border: 1px solid var(--border);
+        padding: 1.5rem;
+        max-height: 80vh;
+        overflow-y: auto;
+        border-radius: var(--radius);
+    }
+
+    .filter-title {
+        color: var(--accent);
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 2px;
+    }
+
+    .filter-group {
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+        color: var(--text);
+        font-weight: 700;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .filter-content { margin-top: 0.5rem; }
+    .filter-content.collapsed { display: none; }
+
+    .filter-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.4rem;
+        cursor: pointer;
+        color: var(--muted);
+        font-size: 0.8rem;
+    }
+
+    .filter-checkbox { margin-right: 8px; accent-color: var(--accent); }
+
+    .product-grid {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        display: flex;
+        position: relative;
+        cursor: pointer;
+        transition: var(--ease);
+        border-radius: var(--radius);
+        overflow: hidden;
+    }
+
+    .product-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    .product-badge {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: var(--accent);
+        color: var(--primary);
+        padding: 4px 10px;
+        font-size: 0.65rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 2;
+        border-radius: 0 0 4px 0;
+    }
+
+    .product-img-container {
+        width: 220px;
+        background: #fff;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .product-img {
+        max-width: 100%;
+        max-height: 180px;
+        object-fit: contain;
+    }
+
+    .product-info {
+        padding: 1.25rem;
+        flex-grow: 1;
+        min-width: 0;
+    }
+
+    .product-series-title {
+        color: var(--text);
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-series-desc {
+        color: var(--muted);
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .variants-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+    }
+
+    .variants-table th {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid var(--accent);
+        color: var(--accent);
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .variants-table td {
+        padding: 6px 8px;
+        border-bottom: 1px solid var(--border);
+        color: var(--text);
+    }
+
+    .btn-add-variant {
+        background: transparent;
+        border: 1px solid var(--accent);
+        color: var(--accent);
+        padding: 3px 8px;
+        cursor: pointer;
+        font-size: 0.7rem;
+        font-family: var(--font);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 4px;
+        transition: var(--ease);
+    }
+
+    .btn-add-variant:hover {
+        background: var(--accent);
+        color: var(--primary);
+    }
+
+    .btn-learn-more {
+        cursor: pointer;
+        color: var(--accent);
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        margin-top: 0.75rem;
+        display: inline-block;
+    }
+
+    .btn-learn-more:hover { text-decoration: underline; }
+
+    .modal-overlay {
+        position: fixed;
+        z-index: 3000;
+        inset: 0;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+    }
+
+    .modal-box {
+        background: var(--secondary);
+        margin: 5% auto;
+        border: 1px solid var(--accent);
+        width: 90%;
+        max-width: 1100px;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+    }
+
+    .modal-header {
+        padding: 1.5rem 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-bottom: 1px solid var(--border);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .modal-header h2 { margin: 0; font-size: 1.3rem; }
+
+    .close-modal {
+        color: var(--muted);
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .close-modal:hover { color: var(--accent); }
+
+    .modal-body { padding: 2rem; max-height: 70vh; overflow-y: auto; }
+
+    .modal-tabs {
+        display: flex;
+        background: rgba(0, 0, 0, 0.2);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .tab-btn {
+        padding: 0.8rem 1.5rem;
+        background: none;
+        border: none;
+        color: var(--muted);
+        cursor: pointer;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        transition: var(--ease);
+        border-bottom: 3px solid transparent;
+        font-family: var(--font);
+    }
+
+    .tab-btn:hover { color: var(--text); }
+
+    .tab-btn.active {
+        color: var(--accent);
+        border-bottom-color: var(--accent);
+        background: var(--accent-dim);
+    }
+
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    .cart-overlay {
+        position: fixed;
+        top: 0;
+        right: -400px;
+        width: 400px;
+        height: 100%;
+        background: var(--secondary);
+        z-index: 2000;
+        padding: 2rem;
+        border-left: 1px solid var(--accent);
+        transition: right 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cart-overlay.open { right: 0; }
+
+    .cart-title {
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    #cart-items {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-bottom: 1rem;
+    }
+
+    .cart-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .cart-item-info h4 { font-size: 0.85rem; margin-bottom: 0.15rem; }
+    .cart-item-info p { font-size: 0.75rem; color: var(--muted); }
+
+    .remove-btn {
+        background: none;
+        border: none;
+        color: #ff4d4d;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .cart-summary {
+        padding: 1rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-top: 1px solid var(--accent);
+        border-radius: var(--radius-sm);
+        margin-bottom: 1rem;
+    }
+
+    .cart-summary-row {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+    }
+
+    .checkout-section {
+        margin-bottom: 1.5rem;
+    }
+
+    .checkout-section h4 {
+        color: var(--accent);
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .checkout-section input {
+        width: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        border: 1px solid var(--border);
+        color: var(--text);
+        padding: 0.7rem;
+        margin-bottom: 0.5rem;
+        border-radius: var(--radius-sm);
+        font-family: var(--font);
+    }
+
+    .checkout-section input:focus {
+        outline: none;
+        border-color: var(--accent);
+    }
+
+    .address-row { display: flex; gap: 0.5rem; }
+    .address-row input:nth-child(1) { flex: 2; }
+    .address-row input:nth-child(2),
+    .address-row input:nth-child(3) { flex: 1; }
+
+    .payment-option {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+    }
+
+    .checkout-total {
+        background: var(--secondary);
+        padding: 1rem 1.5rem;
+        border: 1px solid var(--accent);
+        border-radius: var(--radius-sm);
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .checkout-price {
+        font-weight: 800;
+        color: var(--accent);
+        font-size: 1.1rem;
+    }
+
+    .specs-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.85rem;
+    }
+
+    .specs-table caption {
+        text-align: left;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        color: var(--accent);
+        font-weight: 700;
+    }
+
+    .specs-table td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .specs-table td:first-child {
+        color: var(--muted);
+        width: 30%;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+
+    .specs-table td:last-child {
+        color: var(--text);
+        white-space: pre-line;
+    }
+
+    .specs-table tr:nth-child(even) td:first-child { background: rgba(255, 255, 255, 0.02); }
+
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+    .related-card {
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 1rem;
+        border: 1px solid var(--border);
+        border-radius: var(--radius-sm);
+        text-align: center;
+        transition: var(--ease);
+    }
+
+    .related-card:hover {
+        border-color: var(--accent);
+        transform: translateY(-4px);
+    }
+
+    .related-card-img {
+        height: 120px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.75rem;
+        border-radius: 4px;
+    }
+
+    .related-card-img img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+    }
+
+    .related-card h4 { font-size: 0.8rem; margin-bottom: 0.3rem; }
+    .related-card .price { color: var(--accent); font-weight: 700; font-size: 0.85rem; }
+
+    @media (max-width: 768px) {
+        .shop-header-main { flex-direction: column; align-items: stretch; }
+        .shop-search { max-width: 100%; }
+        .store-container { flex-direction: column; }
+        .filters-sidebar { width: 100%; position: relative; top: 0; max-height: none; }
+        .product-card { flex-direction: column; }
+        .product-img-container { width: 100%; height: 200px; }
+        .cart-overlay { width: 100%; right: -100%; }
+        .modal-box { width: 95%; margin: 2% auto; }
+    }
+</style>
+
+<script is:inline src="/products.js"></script>
+<script is:inline src="/assets/js/promo_data.js"></script>
+<script is:inline>
+    let cart = [];
+    let searchTerm = '';
+    let activeFilters = { category: [], technology: [], series: [], resolution_channel: [], housing_case: [], ir_technology: [], low_light: [], color: [] };
+
+    const filterConfig = [
+        { id: 'category', label: 'Solution Type', options: ["IP SOLUTIONS", "HD-TVI SOLUTIONS", "ACCESS CONTROL", "INTERCOMS", "ACCESSORIES", "NDAA COMPLIANT SOLUTIONS", "UBIQUITI"] },
+        { id: 'technology', label: 'Hardware Tech', options: ["IP/NETWORK", "IP/NVR", "HD-TVI", "TVI DVR", "ANALOG", "DVR", "HYBRID NVR"] },
+        { id: 'series', label: 'Product Series', options: ["PLATINUM SERIES", "PRO-X", "PRO-VS", "SAPPHIRE", "PROFESSIONAL", "TURBOHD"] },
+        { id: 'resolution_channel', label: 'Performance / Scale', options: ["4K", "12MP", "8MP", "5MP", "4MP", "2MP", "4 CHANNEL", "8 CHANNEL", "16 CHANNEL", "32 CHANNEL", "256 CHANNEL"] },
+        { id: 'housing_case', label: 'Physical Style', options: ["BULLET", "DOME", "TURRET", "PTZ", "FISHEYE", "1U CASE", "1.5U CASE", "3U CASE", "COMPACT CASE"] },
+        { id: 'ir_technology', label: 'IR Technology', options: ["IR", "EXIR", "EXIR 2.0"] },
+        { id: 'low_light', label: 'Special Features', options: ["DARKFIGHTER"] },
+        { id: 'color', label: 'Finish', options: ["BLACK", "WHITE", "GRAY"] }
+    ];
+
+    const filterMap = {
+        category: ['category'],
+        technology: ['camera_technology', 'recorder_technology'],
+        series: ['camera_series', 'recorder_series'],
+        resolution_channel: ['camera_resolution', 'recorder_channel'],
+        housing_case: ['camera_housing', 'recorder_case'],
+        ir_technology: ['ir_technology'],
+        low_light: ['low_light'],
+        color: ['color']
+    };
+
+    const categories = [
+        { id: 'platinum', name: 'Platinum Series' },
+        { id: 'pro', name: 'Pro Series' },
+        { id: 'nvr', name: 'NVR Systems' },
+        { id: 'camera', name: 'IP Cameras' },
+        { id: 'access', name: 'Access Control' },
+        { id: 'intercoms', name: 'Intercoms' },
+        { id: 'accessories', name: 'Accessories' },
+        { id: 'ubiquiti', name: 'Ubiquiti' },
+    ];
+
+    function initFilters() {
+        const container = document.getElementById('dynamic-filters');
+        if (!container) return;
+        container.innerHTML = '';
+        filterConfig.forEach(group => {
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'filter-group';
+            let optionsHTML = '';
+            group.options.forEach(opt => {
+                optionsHTML += `<label class="filter-option"><input type="checkbox" class="filter-checkbox" value="${opt}" onchange="toggleFilter('${group.id}', '${opt}')"> ${opt}</label>`;
+            });
+            groupDiv.innerHTML = `<div class="filter-header" onclick="this.nextElementSibling.classList.toggle('collapsed')">
+                    ${group.label} <i class="fas fa-chevron-down" style="font-size:0.6rem;"></i>
+                </div>
+                <div class="filter-content">
+                    ${optionsHTML}
+                </div>`;
+            container.appendChild(groupDiv);
+        });
+    }
+
+    function toggleFilter(groupId, value) {
+        const idx = activeFilters[groupId].indexOf(value);
+        if (idx === -1) activeFilters[groupId].push(value);
+        else activeFilters[groupId].splice(idx, 1);
+        renderGrid();
+    }
+
+    function calculateSearchScore(product, tokens) {
+        let score = 0;
+        const name = (product.name || '').toLowerCase();
+        const desc = (product.description || '').toLowerCase();
+        const skus = (product.variants || []).map(v => v.sku.toLowerCase());
+        const seriesId = (product.series_id || '').toLowerCase();
+        tokens.forEach(token => {
+            if (seriesId.includes(token)) score += 20;
+            if (skus.some(sku => sku.includes(token))) score += 15;
+            if (name.includes(token)) score += 10;
+            if (desc.includes(token)) score += 1;
+        });
+        return score;
+    }
+
+    function renderGrid() {
+        const grid = document.getElementById('product-grid');
+        if (!grid) return;
+        grid.innerHTML = '';
+
+        const activeGroups = Object.entries(activeFilters).filter(([k, v]) => v.length > 0);
+        const searchTokens = searchTerm ? searchTerm.toLowerCase().split(/\s+/) : [];
+
+        let filtered = products.map(series => {
+            const f = series.facets;
+            if (activeGroups.length > 0 && f) {
+                for (const [groupId, selectedOpts] of activeGroups) {
+                    const facetKeys = filterMap[groupId];
+                    if (!facetKeys) continue;
+                    let groupMatch = false;
+                    for (const key of facetKeys) {
+                        const productValues = f[key] || [];
+                        if (selectedOpts.some(opt => productValues.includes(opt))) { groupMatch = true; break; }
+                    }
+                    if (!groupMatch) return null;
+                }
+            }
+
+            let score = 0;
+            if (searchTokens.length > 0) {
+                score = calculateSearchScore(series, searchTokens);
+                if (score === 0) return null;
+            } else {
+                score = 1;
+            }
+
+            return { ...series, searchScore: score };
+        }).filter(item => item !== null);
+
+        if (searchTokens.length > 0) {
+            filtered.sort((a, b) => b.searchScore - a.searchScore);
+        }
+
+        if (filtered.length === 0) {
+            grid.innerHTML = '<p style="color:var(--muted);padding:2rem;">No products match your search.</p>';
+            return;
+        }
+
+        filtered.slice(0, 50).forEach(series => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.onclick = () => openModal(series.series_id);
+
+            const badge = (series.category === 'pro') ? 'PRO SERIES' : 'PLATINUM';
+
+            let variantsHTML = '<table class="variants-table"><thead><tr><th>Model</th><th>Price</th><th></th></tr></thead><tbody>';
+            if (series.variants) {
+                series.variants.slice(0, 3).forEach(v => {
+                    variantsHTML += `<tr><td style="font-family:var(--mono);font-size:0.8rem;">${v.sku}</td><td>$${v.price.toFixed(2)}</td><td><button class="btn-add-variant" onclick="event.stopPropagation();addToCart('${series.series_id}','${v.sku}')">Add</button></td></tr>`;
+                });
+            }
+            variantsHTML += '</tbody></table>';
+
+            const primarySku = series.variants?.[0]?.sku || 'UNKNOWN';
+            const imgUrl = series.image && series.image !== 'ASSET_MISSING' ? series.image : `https://media.ltsecurityinc.com/catalog/product/${primarySku.toLowerCase()[0]}/${primarySku.toLowerCase()[1]}/${primarySku.toLowerCase()}.jpg`;
+
+            card.innerHTML = `<div class="product-badge">${badge}</div><div class="product-img-container"><img src="${imgUrl}" class="product-img" onerror="handleImageError(this,'${primarySku}')"></div><div class="product-info"><h3 class="product-series-title">${series.name}</h3><p class="product-series-desc">${series.description}</p>${variantsHTML}<div class="btn-learn-more" onclick="event.stopPropagation();openModal('${series.series_id}')">Learn More</div></div>`;
+            grid.appendChild(card);
+        });
+    }
+
+    function handleImageError(img, sku) {
+        if (!img.dataset.attempts) img.dataset.attempts = 0;
+        const attempts = parseInt(img.dataset.attempts);
+        img.dataset.attempts = attempts + 1;
+        const s = sku.toLowerCase();
+        const patterns = [
+            `https://media.ltsecurityinc.com/catalog/product/cache/115d48e57ce8bbb1eb479c9f84dfe6ae/_/c/_${s}.png`,
+            `https://media.ltsecurityinc.com/catalog/product/${s[0]}/${s[1]}/${s}.png`,
+            'https://placehold.co/400x300/eee/333?text=No+Image'
+        ];
+        if (attempts < patterns.length) img.src = patterns[attempts];
+    }
+
+    function openModal(seriesId) {
+        const series = products.find(s => s.series_id === seriesId);
+        if (!series) return;
+        const modal = document.getElementById('product-modal');
+        const related = products.filter(p => p.series_id !== seriesId && p.category === series.category).sort(() => 0.5 - Math.random()).slice(0, 4);
+
+        let specsHTML = '';
+        if (series.specs) {
+            specsHTML = '<table class="specs-table"><caption>Technical Specifications</caption><tbody>';
+            Object.entries(series.specs).forEach(([k, v]) => {
+                specsHTML += `<tr><td>${k}</td><td>${v}</td></tr>`;
+            });
+            specsHTML += '</tbody></table>';
+        }
+
+        let relatedHTML = '';
+        related.forEach(r => {
+            relatedHTML += `<div class="related-card" onclick="openModal('${r.series_id}')">
+                <div class="related-card-img"><img src="${r.image}" onerror="this.style.display='none'"></div>
+                <h4>${r.name}</h4>
+                <span class="price">${r.variants[0] ? '$' + r.variants[0].price.toFixed(2) : 'View'}</span>
+            </div>`;
+        });
+
+        modal.innerHTML = `
+            <div class="modal-box" style="max-width:1400px;width:95%;height:90vh;display:flex;flex-direction:column;">
+                <div class="modal-header" style="flex-shrink:0;">
+                    <div><h2 style="font-size:1.5rem;">${series.name}</h2><p style="color:var(--accent);font-family:var(--mono);margin-top:4px;font-size:0.8rem;">SKU: ${series.series_id}</p></div>
+                    <span class="close-modal" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="modal-body" style="flex-grow:1;overflow-y:auto;padding:0;">
+                    <div style="display:flex;gap:2rem;padding:2rem;border-bottom:1px solid var(--border);flex-wrap:wrap;">
+                        <div style="flex:1;min-width:280px;background:#fff;padding:1.5rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-sm);">
+                            <img src="${series.image}" style="max-width:100%;max-height:350px;object-fit:contain;" onerror="this.style.display='none'">
+                        </div>
+                        <div style="flex:1;min-width:280px;">
+                            <h3 style="color:var(--accent);margin-bottom:1rem;border-bottom:1px solid var(--accent);display:inline-block;padding-bottom:0.5rem;font-size:1rem;">KEY FEATURES</h3>
+                            <div style="color:var(--text);line-height:1.6;margin-bottom:1.5rem;font-size:0.9rem;">${series.long_description || series.description}</div>
+                            <div style="background:var(--accent-dim);padding:1.25rem;border-left:4px solid var(--accent);border-radius:0 var(--radius-sm) var(--radius-sm) 0;">
+                                <h4 style="margin-bottom:0.75rem;font-size:0.85rem;">Pricing</h4>
+                                ${(series.variants || []).map(v => `<div style="display:flex;justify-content:space-between;margin-bottom:0.5rem;align-items:center;"><span style="font-family:var(--mono);font-size:0.85rem;">${v.sku}</span><div style="display:flex;gap:0.75rem;align-items:center;"><span style="font-weight:700;">$${v.price.toFixed(2)}</span><button class="btn-add-variant" onclick="addToCart('${series.series_id}','${v.sku}')">ADD TO QUOTE</button></div></div>`).join('')}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-tabs" style="position:sticky;top:0;background:var(--secondary);z-index:10;">
+                        <button class="tab-btn active" onclick="switchTab(event,'tab-specs')">Specifications</button>
+                        <button class="tab-btn" onclick="switchTab(event,'tab-related')">Related Products</button>
+                    </div>
+                    <div style="padding:2rem;">
+                        <div id="tab-specs" class="tab-panel active">${specsHTML}</div>
+                        <div id="tab-related" class="tab-panel"><div class="related-grid">${relatedHTML}</div></div>
+                    </div>
+                </div>
+            </div>
+        `;
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    }
+
+    function switchTab(evt, tabId) {
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(tabId).classList.add('active');
+        evt.currentTarget.classList.add('active');
+    }
+
+    function closeModal() {
+        document.getElementById('product-modal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    function addToCart(seriesId, sku) {
+        const series = products.find(s => s.series_id === seriesId);
+        const variant = series.variants.find(v => v.sku === sku);
+        cart.push(variant);
+        updateCartUI();
+        toggleCart(true);
+    }
+
+    function removeFromCart(index) {
+        cart.splice(index, 1);
+        updateCartUI();
+    }
+
+    function updateCartUI() {
+        const container = document.getElementById('cart-items');
+        container.innerHTML = '';
+        let total = 0;
+        cart.forEach((item, index) => {
+            total += item.price;
+            container.innerHTML += `<div class="cart-item"><div class="cart-item-info"><h4>${item.sku}</h4><p>$${item.price.toFixed(2)}</p></div><button class="remove-btn" onclick="removeFromCart(${index})"><i class="fas fa-trash"></i></button></div>`;
+        });
+        document.getElementById('cart-count').innerText = cart.length;
+        document.getElementById('cart-total-price').innerText = `$${total.toFixed(2)}`;
+        document.getElementById('checkout-total-price').innerText = `$${total.toFixed(2)}`;
+        document.getElementById('order-items').value = JSON.stringify(cart);
+        document.getElementById('order-total').value = total.toFixed(2);
+    }
+
+    function toggleCart(open) {
+        const sidebar = document.getElementById('cart-sidebar');
+        if (open) sidebar.classList.add('open');
+        else sidebar.classList.remove('open');
+    }
+
+    document.getElementById('quote-btn').addEventListener('click', () => toggleCart(true));
+    document.getElementById('close-cart-btn').addEventListener('click', () => toggleCart(false));
+
+    document.getElementById('checkout-btn').addEventListener('click', () => {
+        if (cart.length === 0) { alert('Your cart is empty.'); return; }
+        toggleCart(false);
+        document.getElementById('checkout-modal').style.display = 'block';
+    });
+
+    document.getElementById('close-checkout').addEventListener('click', () => {
+        document.getElementById('checkout-modal').style.display = 'none';
+    });
+
+    function handleParams() {
+        const params = new URLSearchParams(window.location.search);
+        const cat = params.get('cat');
+        const catOverview = document.getElementById('category-overview');
+        const storeContainer = document.getElementById('main-store-container');
+        const crumb = document.getElementById('current-crumb');
+
+        if (cat) {
+            catOverview.style.display = 'none';
+            storeContainer.style.display = 'flex';
+
+            if (cat === 'platinum' || cat === 'ip_solutions') { activeFilters.category = ['IP SOLUTIONS']; if (crumb) crumb.textContent = 'Platinum Series'; }
+            else if (cat === 'pro' || cat === 'tvi_solutions') { activeFilters.category = ['HD-TVI SOLUTIONS']; if (crumb) crumb.textContent = 'Pro Series'; }
+            else if (cat === 'nvr') { activeFilters.technology = ['IP/NVR']; if (crumb) crumb.textContent = 'NVR Systems'; }
+            else if (cat === 'camera') { activeFilters.technology = ['IP/NETWORK']; if (crumb) crumb.textContent = 'IP Cameras'; }
+            else if (cat === 'access') { activeFilters.category = ['ACCESS CONTROL']; if (crumb) crumb.textContent = 'Access Control'; }
+            else if (cat === 'accessories') { activeFilters.category = ['ACCESSORIES']; if (crumb) crumb.textContent = 'Accessories'; }
+            else if (cat === 'ubiquiti') { activeFilters.category = ['UBIQUITI']; if (crumb) crumb.textContent = 'Ubiquiti'; }
+
+            document.querySelectorAll('.filter-checkbox').forEach(cb => {
+                for (const [group, vals] of Object.entries(activeFilters)) {
+                    if (vals.includes(cb.value)) cb.checked = true;
+                }
+            });
+        } else {
+            catOverview.style.display = 'block';
+            storeContainer.style.display = 'none';
+
+            const catContainer = document.getElementById('category-grid');
+            catContainer.innerHTML = '';
+            categories.forEach(c => {
+                const card = document.createElement('div');
+                card.className = 'category-card';
+                card.innerHTML = `<h3>${c.name}</h3>`;
+                card.onclick = () => window.location.href = `/ordering-system?cat=${c.id}`;
+                catContainer.appendChild(card);
+            });
+        }
+    }
+
+    function performSearch() {
+        const searchInput = document.getElementById('global-search');
+        searchTerm = searchInput.value.trim();
+        const catOverview = document.getElementById('category-overview');
+        const storeContainer = document.getElementById('main-store-container');
+
+        if (searchTerm.length > 0) {
+            catOverview.style.display = 'none';
+            storeContainer.style.display = 'flex';
+            renderGrid();
+        } else {
+            activeFilters = { category: [], technology: [], series: [], resolution_channel: [], housing_case: [], ir_technology: [], low_light: [], color: [] };
+            handleParams();
+        }
+    }
+
+    document.getElementById('global-search').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') performSearch();
+    });
+
+    document.getElementById('search-icon').addEventListener('click', performSearch);
+
+    initFilters();
+    handleParams();
+    renderGrid();
+</script>

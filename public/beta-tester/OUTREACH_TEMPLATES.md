@@ -28,7 +28,7 @@ We just hit public beta. I have 5 seats reserved for integrators who want early 
 
 No commitment. No credit card. Just install and break it.
 
-**Beta URL:** https://xr3keedn.insforge.site/
+**Beta URL:** https://uss-app.insforge.site/
 *(Chrome/Edge desktop recommended for 3D rendering)*
 
 Worth a demo call this week?
@@ -51,7 +51,7 @@ From a finished site plan, you get a full itemized BOM — Hanwha, Axis, Ubiquit
 
 Attaching a couple screenshots. Happy to walk you through it live whenever works for you.
 
-**Beta URL:** https://xr3keedn.insforge.site/
+**Beta URL:** https://uss-app.insforge.site/
 
 — [Your Name]
 
@@ -65,7 +65,7 @@ Attaching a couple screenshots. Happy to walk you through it live whenever works
 
 We just launched the beta for **Ultimate Security Suite** — a mission-control interface for low-voltage field teams. 3D site mapping, AI blueprint extraction, cable auto-routing, instant BOM quotes.
 
-It's free to access right now: https://xr3keedn.insforge.site/
+It's free to access right now: https://uss-app.insforge.site/
 
 If your team is walking sites more than once a week, I'd love 15 minutes of your feedback. Happy to set up a walkthrough.
 
@@ -87,7 +87,7 @@ We just launched the beta for **Ultimate Security Suite**, a tactical mission-co
 ✅ **WiFi Heatmap & RF Propagation** — Raycasted signal modeling through concrete, drywall, glass
 ✅ **One-Click Quote Export** — Itemized BOM with Hanwha / Axis / Ubiquiti SKUs, labor hours, branded PDF
 
-**Beta URL (free access):** https://xr3keedn.insforge.site/
+**Beta URL (free access):** https://uss-app.insforge.site/
 *Chrome/Edge desktop required for 3D Tiles*
 
 Looking for "tactical friction" feedback. If it doesn't help you close bigger deals, I want to know why.
@@ -110,7 +110,7 @@ We built **Ultimate Security Suite** to put the entire workflow in one tab:
 → Auto-cable routing with real footage counts  
 → BOM + branded quote PDF exported on-site
 
-Beta is free to access now: https://xr3keedn.insforge.site/
+Beta is free to access now: https://uss-app.insforge.site/
 
 Who's doing commercial security quotes weekly? Drop a 🔐 below — I'll send the onboarding guide direct.
 
@@ -131,7 +131,7 @@ After 3 years of watching low-voltage integrators use Excel, PowerPoint, and Goo
 
 The beta is live now. If you're running a team doing $500K+ in annual security installs, I'd specifically like your feedback.
 
-→ https://xr3keedn.insforge.site/
+→ https://uss-app.insforge.site/
 
 What's the most painful step in your current estimating workflow? Let me know in the comments.
 
@@ -152,7 +152,7 @@ Hey all — long-time lurker. We build commercial surveillance and network infra
 - AI reads your hand-drawn sketch and generates a wireframe
 - Exports a full BOM with labor hours and cost as a branded PDF
 
-Beta is free: https://xr3keedn.insforge.site/ (Chrome/Edge for 3D)
+Beta is free: https://uss-app.insforge.site/ (Chrome/Edge for 3D)
 
 Happy to answer questions on how any of the algorithms work. The RF propagation model especially was a fun build.
 
@@ -162,11 +162,11 @@ Happy to answer questions on how any of the algorithms work. The RF propagation 
 
 ### Twitter/X DM — Cold
 
-Hey [name], saw you post about [security install / low-voltage work]. We just launched the beta for Ultimate Security Suite — satellite-based planning + AI blueprinting + instant BOM quotes. It's free to try: https://xr3keedn.insforge.site/ — would love your feedback.
+Hey [name], saw you post about [security install / low-voltage work]. We just launched the beta for Ultimate Security Suite — satellite-based planning + AI blueprinting + instant BOM quotes. It's free to try: https://uss-app.insforge.site/ — would love your feedback.
 
 ### Facebook DM — After Group Post Response
 
-Hey [name] — thanks for the comment! Here's your onboarding guide to get started: https://xr3keedn.insforge.site/
+Hey [name] — thanks for the comment! Here's your onboarding guide to get started: https://uss-app.insforge.site/
 
 A few tips to hit the highlights fast:
 1. Enter any address in the Site Setup screen — it pulls satellite imagery automatically

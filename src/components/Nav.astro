@@ -28,8 +28,8 @@ const links = [
         <ul class="nav-links">
             {links.map(link => (
                 link.dropdown ? (
-                    <li class="dropdown">
-                        <a href={link.href} class:list={[{active: currentPath.startsWith(link.href)}]}>
+                    <li class="dropdown" data-dropdown>
+                        <a href={link.href} class="dropdown-trigger" class:list={[{active: currentPath.startsWith(link.href)}]} data-dropdown-trigger>
                             {link.label} <i class="fas fa-chevron-down"></i>
                         </a>
                         <div class="dropdown-menu">
@@ -55,4 +55,28 @@ const links = [
 <script>
     const nav = document.getElementById('main-nav');
     window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+
+    document.querySelectorAll('[data-dropdown]').forEach(dd => {
+        const trigger = dd.querySelector('[data-dropdown-trigger]');
+        let closeTimer;
+
+        const open = () => { clearTimeout(closeTimer); dd.classList.add('open'); };
+        const close = () => { closeTimer = setTimeout(() => dd.classList.remove('open'), 150); };
+
+        dd.addEventListener('mouseenter', open);
+        dd.addEventListener('mouseleave', close);
+
+        if (trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                dd.classList.toggle('open');
+            });
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('[data-dropdown]')) {
+            document.querySelectorAll('[data-dropdown]').forEach(dd => dd.classList.remove('open'));
+        }
+    });
 </script>
