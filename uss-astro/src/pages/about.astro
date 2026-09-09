@@ -1,0 +1,53 @@
+---
+import Page from '../layouts/Page.astro';
+---
+
+<Page title="About Us" description="Ultimate Security Solutions: Veteran-Owned, Precision-Driven security and IT infrastructure firm.">
+    <div class="container" style="text-align:center; padding:8rem 2rem 3rem;">
+        <h1>MISSION READY <span class="text-accent">EXCELLENCE</span></h1>
+        <p style="color:var(--muted);">Veteran-Owned. Precision-Driven. Battle-Tested.</p>
+    </div>
+
+    <section class="section section-glow" style="text-align:center; padding:4rem 2rem;">
+        <div class="container">
+            <h2 class="section-title anim">THE MISSION</h2>
+            <p class="anim" style="font-size:clamp(1.1rem,2.5vw,1.6rem); max-width:800px; margin:0 auto; line-height:1.5; font-weight:300; font-style:italic; color:var(--text);">
+                "To provide elite security and IT infrastructure services with the integrity, technical mastery, and discipline inherent in military service."
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+            <div class="anim">
+                <h2 style="text-align:left;">OUR STORY</h2>
+                <p style="color:var(--muted); line-height:1.8; margin-bottom:1rem;">
+                    Ultimate Security Solutions LLC was founded on the principles of integrity, discipline, and technical mastery. As a veteran-owned and operated entity, we bring a mission-first mindset to every deployment.
+                </p>
+                <p style="color:var(--muted); line-height:1.8;">
+                    Headquartered in the Kansas City Metro area, we serve a 100-mile radius, providing "Smart Hands" field services for Managed Service Providers and turn-key infrastructure solutions for commercial clients.
+                </p>
+                <a href="/contact" class="btn btn-primary" style="margin-top:1.5rem;"><i class="fas fa-arrow-right"></i> Work With Us</a>
+            </div>
+            <div class="anim" style="display:grid; gap:1.5rem;">
+                <div class="card"><i class="fas fa-crosshairs"></i><h3>PRECISION</h3><p>Every cable run and camera mount executed with military exactness. Labeling, testing, and dressing are standard.</p></div>
+                <div class="card"><i class="fas fa-shield-alt"></i><h3>INTEGRITY</h3><p>Honest communication, transparent pricing, and unwavering commitment to your facility's security.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-dark">
+        <div class="container" style="text-align:center;"><h2 class="section-title anim">WHY PARTNER WITH USS?</h2></div>
+        <div class="grid-auto">
+            <div class="card anim"><i class="fas fa-handshake"></i><h3>Reliable Subcontracting</h3><p>The preferred Smart Hands partner for national MSPs looking for high-fidelity field work in the Midwest.</p></div>
+            <div class="card anim"><i class="fas fa-tools"></i><h3>Certified Expertise</h3><p>Certified technicians in Structured Cabling, CCTV, Network Engineering, and Access Control.</p></div>
+            <div class="card anim"><i class="fas fa-clock"></i><h3>Mission-Critical Uptime</h3><p>Security doesn't sleep. Our deployments are engineered for 24/7 reliability and rapid failover.</p></div>
+        </div>
+    </section>
+</Page>
+
+<style>
+    @media (max-width:768px) {
+        section.section .container { display:block!important; }
+    }
+</style>

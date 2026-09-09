@@ -1,0 +1,97 @@
+---
+import Page from '../layouts/Page.astro';
+---
+
+<Page title="Ultimate Security Solutions | Elite Security & IT Infrastructure">
+    <header style="position:relative; min-height:92vh; display:flex; align-items:center; z-index:1;">
+        <div style="position:absolute; bottom:0; left:0; right:0; height:200px; background:linear-gradient(to top, var(--primary), transparent); z-index:2; pointer-events:none;"></div>
+        <div class="container" style="display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:center; position:relative; z-index:3; padding:8rem 2rem 4rem;">
+            <div style="animation: fadeUp 0.8s ease both;">
+                <div style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--accent-dim); color:var(--accent); padding:0.5rem 1.25rem; border:1px solid var(--border-hover); font-weight:700; font-size:0.7rem; letter-spacing:2px; border-radius:100px; margin-bottom:2rem;">
+                    <i class="fas fa-shield-halved"></i> VETERAN OWNED &bull; COMMERCIAL ONLY
+                </div>
+                <h1 style="margin-bottom:1.5rem; background:linear-gradient(135deg, #fff 40%, var(--accent) 100%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">
+                    ULTIMATE<br><span class="text-accent">SECURITY</span><br>SOLUTIONS
+                </h1>
+                <p style="font-size:1.15rem; color:var(--muted); max-width:560px; margin-bottom:2.5rem; line-height:1.8;">
+                    Specialized subcontracting for MSPs and enterprise clients. White-label smart hands, structured cabling, and physical security infrastructure with military-grade precision.
+                </p>
+                <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+                    <a href="/ordering-system" class="btn btn-primary"><i class="fas fa-bolt"></i> Hardware Catalog</a>
+                    <a href="/contact" class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Request a Quote</a>
+                </div>
+            </div>
+            <div style="display:flex; justify-content:center; animation: float 6s ease-in-out infinite;">
+                <div style="width:280px; height:280px; border-radius:50%; background:radial-gradient(circle at 30% 30%, rgba(255,215,0,0.1), transparent 60%); border:2px solid var(--border-hover); display:flex; justify-content:center; align-items:center; position:relative;">
+                    <div style="position:absolute; inset:-20px; border-radius:50%; border:1px solid var(--border); animation:pulse 3s ease-in-out infinite;"></div>
+                    <i class="fas fa-shield-halved" style="font-size:7rem; color:var(--accent); opacity:0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="stats-grid" style="border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+        <div class="stat-block"><div class="stat-num">500+</div><div class="stat-label">Deployments</div></div>
+        <div class="stat-block"><div class="stat-num">100mi</div><div class="stat-label">Service Radius</div></div>
+        <div class="stat-block"><div class="stat-num">99.9%</div><div class="stat-label">Uptime SLA</div></div>
+        <div class="stat-block"><div class="stat-num">24/7</div><div class="stat-label">Rapid Response</div></div>
+    </div>
+
+    <section class="section">
+        <div class="container" style="text-align:center;">
+            <h2 class="section-title anim">CORE CAPABILITIES</h2>
+            <p class="anim" style="color:var(--accent); max-width:700px; margin:-0.5rem auto 0; font-weight:700; font-size:1.1rem; letter-spacing:1px;">We take the jobs most companies can't even figure out how to accomplish.</p>
+            <p class="anim" style="color:var(--muted); max-width:600px; margin:0.5rem auto 0;">Mission-critical infrastructure built on discipline, precision, and technical mastery.</p>
+        </div>
+        <div class="grid-auto">
+            <a href="/accomplishments" class="card anim"><i class="fas fa-network-wired"></i><h3>Structured Cabling</h3><p>Cat6 infrastructure with certified testing and TIA-606-C labeling for data centers and commercial spaces.</p></a>
+            <a href="/ordering-system?cat=camera" class="card anim"><i class="fas fa-video"></i><h3>CCTV Surveillance</h3><p>AI-powered analytics, LPR, and commercial NVR deployment for 24/7 asset protection.</p></a>
+            <a href="/ordering-system?cat=ubiquiti" class="card anim"><i class="fas fa-server"></i><h3>Network Engineering</h3><p>IDF/MDF cleanups, rack stack, and enterprise switching. Smart hands for MSPs.</p></a>
+            <a href="/ordering-system?cat=access" class="card anim"><i class="fas fa-shield-alt"></i><h3>Access Control</h3><p>Biometric, card-based, and mobile entry systems for secure facilities.</p></a>
+            <div class="card anim"><i class="fas fa-signal"></i><h3>DAS / Cellular Coverage</h3><p>Distributed Antenna Systems for in-building cellular amplification and dead-zone elimination.</p></div>
+            <div class="card anim"><i class="fas fa-shield-virus"></i><h3>EAS / Asset Protection</h3><p>Electronic Article Surveillance and loss prevention system design, installation, and integration.</p></div>
+            <div class="card anim"><i class="fas fa-tower-broadcast"></i><h3>Complex RF Installations</h3><p>LoRa, mmWave, cellular backhaul, and 802.11 point-to-point wireless links for mission-critical connectivity.</p></div>
+            <div class="card anim"><i class="fas fa-wave-square"></i><h3>SDR Analysis & RF Mapping</h3><p>Software-Defined Radio analysis and RF propagation mapping to identify interference and optimize wireless performance.</p></div>
+            <a href="/system-design" class="card anim"><i class="fas fa-wifi"></i><h3>WiFi Heat Mapping</h3><p>Physics-based signal propagation with wall attenuation modeling for concrete, drywall, glass, and wood.</p></a>
+        </div>
+    </section>
+
+    <section class="section section-glow" style="text-align:center;">
+        <h2 class="anim" style="color:var(--accent);">READY TO UPGRADE?</h2>
+        <p class="anim" style="color:var(--muted); max-width:600px; margin:0 auto 2rem;">From single-site installs to multi-location rollouts, we deliver on time and on budget.</p>
+        <div class="anim" style="display:flex; justify-content:center; gap:1rem; flex-wrap:wrap;">
+            <a href="/contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get Started</a>
+            <a href="/system-design" class="btn btn-secondary"><i class="fas fa-drafting-compass"></i> USS Suite</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align:center;"><h2 class="section-title anim">MISSION SUCCESS</h2></div>
+        <div class="container">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:1.5rem; margin-top:3rem;">
+                <div class="testimonial anim"><i class="fas fa-quote-left" style="color:var(--accent); opacity:0.4; margin-bottom:1rem;"></i><p class="quote">"Ultimate Security Solutions was the perfect partner to have on our Access Control project. They went above and beyond."</p><p class="author">- Zachary Harmison</p></div>
+                <div class="testimonial anim"><i class="fas fa-quote-left" style="color:var(--accent); opacity:0.4; margin-bottom:1rem;"></i><p class="quote">"Consistently excellent work. Very knowledgeable with electronics, electrical and networking."</p><p class="author">- Senior IT Support, Video Mining Corp</p></div>
+                <div class="testimonial anim"><i class="fas fa-quote-left" style="color:var(--accent); opacity:0.4; margin-bottom:1rem;"></i><p class="quote">"They accommodate our tight schedule with ease. A very diligent team, knowledgeable and thorough!"</p><p class="author">- Operations Manager</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="text-align:center;">
+        <h2 class="section-title anim">SECURE YOUR ASSETS</h2>
+        <div class="anim" style="display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; max-width:800px; margin:3rem auto 0;">
+            <div><i class="fas fa-phone-alt" style="font-size:1.5rem; color:var(--accent); margin-bottom:0.75rem; display:block;"></i><h3 style="font-size:0.85rem; margin-bottom:0.25rem;">Call Us</h3><p style="color:var(--muted); font-size:0.9rem;">816-787-2061</p></div>
+            <div><i class="fas fa-envelope" style="font-size:1.5rem; color:var(--accent); margin-bottom:0.75rem; display:block;"></i><h3 style="font-size:0.85rem; margin-bottom:0.25rem;">Email</h3><p style="color:var(--muted); font-size:0.9rem;">admin@usstech.net</p></div>
+            <div><i class="fas fa-map-marker-alt" style="font-size:1.5rem; color:var(--accent); margin-bottom:0.75rem; display:block;"></i><h3 style="font-size:0.85rem; margin-bottom:0.25rem;">Service Area</h3><p style="color:var(--muted); font-size:0.9rem;">KC Metro (100mi)</p></div>
+        </div>
+        <a href="/contact" class="btn btn-primary anim" style="margin-top:2rem;"><i class="fas fa-arrow-right"></i> Request a Quote</a>
+    </section>
+</Page>
+
+<style>
+    @media (max-width:1024px) {
+        header div.container { grid-template-columns:1fr!important; text-align:center; }
+        header div.container > div:first-child { max-width:700px; margin:0 auto; }
+        header div.container > div:first-child p { margin:0 auto 2.5rem; }
+        header div.container > div:last-child { display:none; }
+    }
+</style>

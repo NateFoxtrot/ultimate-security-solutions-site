@@ -1,0 +1,82 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/service-area', label: 'Service Area' },
+    { href: '/ordering-system', label: 'Hardware', dropdown: [
+        { href: '/ordering-system', label: 'All Products' },
+        { href: '/ordering-system?cat=platinum', label: 'Platinum Series' },
+        { href: '/ordering-system?cat=pro', label: 'Pro Series' },
+        { href: '/ordering-system?cat=nvr', label: 'NVR Systems' },
+        { href: '/ordering-system?cat=camera', label: 'IP Cameras' },
+    ]},
+    { href: '/accomplishments', label: 'Our Work' },
+    { href: '/system-design', label: 'USS Suite' },
+    { href: '/partners', label: 'Partners' },
+    { href: '/reviews', label: 'Reviews' },
+    { href: '/beta-tester', label: 'Beta Test' },
+];
+---
+
+<nav class="nav" id="main-nav">
+    <div class="nav-inner">
+        <a href="/" class="nav-logo">
+            <img src="/assets/images/logo.jpeg" alt="USS" class="nav-logo-img" />
+        </a>
+        <ul class="nav-links">
+            {links.map(link => (
+                link.dropdown ? (
+                    <li class="dropdown" data-dropdown>
+                        <a href={link.href} class="dropdown-trigger" class:list={[{active: currentPath.startsWith(link.href)}]} data-dropdown-trigger>
+                            {link.label} <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            {link.dropdown.map(sub => (
+                                <a href={sub.href}>{sub.label}</a>
+                            ))}
+                        </div>
+                    </li>
+                ) : (
+                    <li>
+                        <a href={link.href} class:list={[{active: currentPath === link.href || (link.href !== '/' && currentPath.startsWith(link.href))}]}>
+                            {link.label}
+                        </a>
+                    </li>
+                )
+            ))}
+            <li><a href="/contact" class:list={[{active: currentPath === '/contact'}]}>{links.find(l => l.href === '/contact') ? '' : ''}Get a Quote</a></li>
+            <li><a href="/portal" class="nav-right">FE Portal</a></li>
+        </ul>
+    </div>
+</nav>
+
+<script>
+    const nav = document.getElementById('main-nav');
+    window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
+
+    document.querySelectorAll('[data-dropdown]').forEach(dd => {
+        const trigger = dd.querySelector('[data-dropdown-trigger]');
+        let closeTimer;
+
+        const open = () => { clearTimeout(closeTimer); dd.classList.add('open'); };
+        const close = () => { closeTimer = setTimeout(() => dd.classList.remove('open'), 150); };
+
+        dd.addEventListener('mouseenter', open);
+        dd.addEventListener('mouseleave', close);
+
+        if (trigger) {
+            trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                dd.classList.toggle('open');
+            });
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('[data-dropdown]')) {
+            document.querySelectorAll('[data-dropdown]').forEach(dd => dd.classList.remove('open'));
+        }
+    });
+</script>
