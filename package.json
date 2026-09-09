@@ -2,9 +2,6 @@
   "name": "home-nate-foxtrot-desktop-ultimate-security-solutions-uss-astro",
   "type": "module",
   "version": "0.0.1",
-  "engines": {
-    "node": ">=22.12.0"
-  },
   "scripts": {
     "dev": "astro dev",
     "build": "cd uss-astro && npm install --no-audit --no-fund && npm run build && cd .. && rm -rf dist && cp -r uss-astro/dist dist",
