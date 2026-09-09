@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "cd uss-astro && npm run build && cd .. && rm -rf dist && cp -r uss-astro/dist dist",
     "preview": "astro preview",
     "astro": "astro"
   },
